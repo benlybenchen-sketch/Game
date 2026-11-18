@@ -22,4 +22,4 @@ Gợi ý: số 2 + số 3 (khác kiểu kinh dị và khác kiểu câu đố).
 
 ## Ảnh còn thiếu cho Hồ sơ 01
 Đã có: cover, studio, ending. Còn: ha, lua, gam, khanh, luc, bong, tung, ben_vong, thuyen, ve_tung, le_cung, cctv, vo_lua,
-lang_chim, go_mieu, tram_bom, ma, tay (prompt nằm trong PROMPTS_ANH.md, gửi kèm trong chat).
+lang_chim, go_mieu, tram_bom, ma, tay (prompt: docs/PROMPTS_ANH.md).
