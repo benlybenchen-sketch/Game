@@ -29,13 +29,13 @@ for m in reversed(blocks):
         if "sfx:" not in rest and os.path.exists(mp3):
             d = math.ceil((length(mp3) + 0.4) * 10) / 10
         t = t if cursor is None else round(cursor, 1)
-        cursor = t + d + 1.0
+        cursor = t + d + (2.6 if tid == "loi_nhan" and "sfx:" not in rest else 1.0)
         if "rev: true" in rest:
-            rev_span = (max(0, t - 1), t + d + 1)
+            rev_span = (max(0, t - 6), t + d + 6)
         lines[k] = f"{sm.group(1)}{t:g}, d: {d:g},{rest}"
         i += 1
     body2 = "\n".join(lines)
-    dur = math.ceil(cursor + 2)
+    dur = math.ceil(max(cursor + 2, rev_span[1] + 1 if rev_span else 0))
     body2 = re.sub(r"dur: [\d.]+", f"dur: {dur}", body2, count=1)
     if rev_span:
         body2 = re.sub(r"hidden: \{ t0: [\d.]+, t1: [\d.]+,", f"hidden: {{ t0: {rev_span[0]:g}, t1: {rev_span[1]:g},", body2, count=1)

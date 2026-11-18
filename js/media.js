@@ -88,6 +88,11 @@ function tapePlayer(el, id) {
   const $ = (s) => el.querySelector(s);
   const btn = (k) => el.querySelector(`[data-t="${k}"]`);
   const heardKey = () => `${id}:${mode}`;
+  // seconds actually played, per direction, kept as a string of 0/1 so it survives reloads
+  const heardMap = () => { let m = state.heard[heardKey()]; if (typeof m !== "string" || m.length !== tape.dur + 1) m = state.heard[heardKey()] = "0".repeat(tape.dur + 1); return m; };
+  const markHeard = (sec) => { const m = heardMap(), k = Math.floor(sec); if (m[k] === "0") state.heard[heardKey()] = m.slice(0, k) + "1" + m.slice(k + 1); };
+  const wasHeard = (seg) => { const m = heardMap(); for (let k = Math.floor(seg.t); k < Math.min(tape.dur, seg.t + Math.min(seg.d, 2)); k++) if (m[k] === "1") return true; return false; };
+  const heardCount = () => (heardMap().match(/1/g) || []).length;
   const plays = () => state.plays[id] || 0;
   const ghostOk = (s) => !s.ghost || plays() >= 3 || level() >= s.ghost + 1;
 
@@ -103,8 +108,7 @@ function tapePlayer(el, id) {
   }
 
   function renderTranscript() {
-    const heard = state.heard[heardKey()] || 0;
-    const segs = timeline().filter((s) => s.t <= Math.max(heard, pos));
+    const segs = timeline().filter((s) => wasHeard(s));
     $(".transcript").innerHTML = segs.length ? segs.map((s) => {
       const cur = pos >= s.t && pos < s.t + s.d;
       return `<li class="${s.sfx ? "sfx" : ""} ${s.garble ? "garble" : ""} ${cur ? "cur" : ""} ${s.ghost ? "ghost" : ""}"><span class="ts">${fmt(s.t)}</span>${s.who ? `<b>${s.who}:</b> ` : ""}${s.text}</li>`;
@@ -114,7 +118,7 @@ function tapePlayer(el, id) {
 
   function renderBar() {
     $(".tape-fill").style.width = `${(pos / tape.dur) * 100}%`;
-    $(".tape-heard").style.width = `${((state.heard[heardKey()] || 0) / tape.dur) * 100}%`;
+    $(".tape-heard").style.width = `${(heardCount() / tape.dur) * 100}%`;
     $(".tape-count").textContent = `${fmt(pos)} / ${fmt(tape.dur)}`;
     el.querySelector(".tape").classList.toggle("playing", playing);
     el.querySelector(".tape").classList.toggle("reverse", mode === "rev");
@@ -177,8 +181,7 @@ function tapePlayer(el, id) {
   let lastCur = -1;
   function tick() {
     pos = Math.min(tape.dur, startPos + (now() - startAt) * speed);
-    const k = heardKey();
-    if (pos > (state.heard[k] || 0)) state.heard[k] = pos;
+    markHeard(pos);
     const cur = timeline().findIndex((s) => pos >= s.t && pos < s.t + s.d);
     if (cur !== lastCur) { lastCur = cur; renderTranscript(); save(); }
     renderBar();
