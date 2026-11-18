@@ -9,6 +9,7 @@ export default [
     <div class="doc doc--memo">
       <div class="memo-head"><b>ĐÀI PHÁT THANH – TRUYỀN HÌNH SƠN KHÊ</b><br>Chương trình <i>Chuyện Lúc Nửa Đêm</i> · phát trực tiếp 23:00 – 01:00 · tần số FM 97,5</div>
       <p class="right"><i>Phòng thu số 2, 22 giờ 07, thứ Ba 19/8/2003</i></p>
+      ${pic("studio", "Phòng thu số 2, đêm 19/8. Phong bì và cuộn băng vẫn nằm trên bàn.", "")}
       <p>Gửi cộng tác viên mới,</p>
       <p>Chiều nay phòng văn thư đưa tôi một phong bì ẩm, mùi bùn, không ghi người gửi, dấu bưu điện <b>Vọng Thủy</b> ngày 14/8.
         Bên trong là một cuộn băng cát-sét. Giọng trên băng là cô <b>Trịnh Thu Hà</b>, giáo viên điểm trường Vọng Thủy,
