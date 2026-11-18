@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hồ đòi người · Hồ sơ Nửa Đêm</title>
+  <meta name="description" content="Game hồ sơ điều tra kinh dị trên trình duyệt: nghe băng cát-sét, tua video camera, rửa ảnh phòng tối, đọc lời khai, và tìm cô giáo mất tích đêm rằm tháng Bảy trước khi nước hồ dâng.">
+  <meta name="theme-color" content="#07090a">
+  <meta property="og:title" content="Hồ đòi người · Hồ sơ Nửa Đêm">
+  <meta property="og:description" content="Cứ bảy năm, hồ lại đòi một người. Game điều tra kinh dị, đa phương tiện, tiếng Việt.">
+  <meta property="og:image" content="img/cover.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2307090a'/%3E%3Ccircle cx='32' cy='30' r='14' fill='%238a1c14'/%3E%3Cpath d='M8 46 Q20 40 32 46 T56 46' stroke='%235a8a8a' stroke-width='4' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;700&family=Patrick+Hand&family=Dancing+Script:wght@500;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-dread="0" data-screen="cover">
+  <div id="cover"></div>
+
+  <div id="desk" hidden>
+    <header class="top">
+      <div class="brand"><b>Hồ sơ Nửa Đêm</b> · Hồ đòi người</div>
+      <div class="top-mid"><span class="top-clock">22:07</span><span class="top-progress"></span></div>
+      <div class="top-btns">
+        <button class="btn btn--ghost btn--small" data-top="settings">⚙ Cài đặt</button>
+        <button class="btn btn--ghost btn--small" data-top="cover">Bìa</button>
+      </div>
+    </header>
+    <main class="cols">
+      <aside id="folder" class="panel"></aside>
+      <section id="reader" class="panel">
+        <div class="reader-head"></div>
+        <div class="reader-body"></div>
+      </section>
+      <aside id="inquiry" class="panel">
+        <div class="inq"></div>
+        <div class="notes">
+          <h3>Sổ tay</h3>
+          <div class="ghost-note" hidden></div>
+          <textarea placeholder="Ghi chú của bạn: giờ giấc, tên người, số thuyền…"></textarea>
+        </div>
+      </aside>
+    </main>
+    <nav class="tabs">
+      <button data-panel="folder">Hồ sơ</button>
+      <button data-panel="reader">Tài liệu</button>
+      <button data-panel="inquiry">Sổ công tác</button>
+    </nav>
+  </div>
+
+  <div id="fx" aria-hidden="true"><div class="vignette"></div><div class="grain"></div></div>
+  <div id="dialog" hidden></div>
+  <div id="toast" role="status"></div>
+  <noscript>Trò chơi cần bật JavaScript.</noscript>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
