@@ -160,7 +160,7 @@ export default [
     html: () => `
     <div class="doc doc--plain">
       ${pic("anh_nhom", "Trước cổng biệt thự Bạch Lan, tháng 9/1971. Mặt sau ghi: “Đủ bảy đứa. Dung ký sổ khách, Lan đứng sát bên.”")}
-      <p class="note">Ảnh đen trắng, góc bị cháy sém. Một cô gái tóc dài cúi ký vào cuốn sổ đặt trên trụ cổng, cây bút cầm ở <b>tay trái</b>. Cô gái đứng sát bên giống cô ta tới mức bạn phải nhìn hai lần. Gương mặt cô thứ hai bị vết cháy che mất một nửa.</p>
+      <p class="note">Ảnh màu đã phai, mép trái bị cháy sém. Một cô gái tóc dài, áo dài xanh lục nhạt, cúi ký vào cuốn sổ đặt trên trụ cổng, cây bút cầm ở <b>tay trái</b>. Cô gái áo bà ba hoa tím đứng sát sau lưng, đặt tay lên vai cô ta, giống cô ta tới mức bạn phải nhìn hai lần. Cô ấy không nhìn ống kính. Cô ấy nhìn người đang ký.</p>
     </div>`,
   },
 
