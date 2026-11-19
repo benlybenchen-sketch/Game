@@ -62,9 +62,9 @@ Match the costumes and face paint of the attached reference sheet exactly. [STYL
 [STYLE VHS] [STAGE] The stage is empty during an interval, the red curtain half drawn. A guandao halberd with a silver crescent blade leans against a wooden chair center stage. On the left edge, two musicians in shadow beat a large war drum. The right wing of the stage is pitch black, and deep inside that blackness there is a faint red oval like a painted face, almost invisible. Dust floating in the bulb light. No text, no letters, no numbers, no watermark.
 ```
 
-### 5. `vhs_lop2.jpg`, tỉ lệ 4:3
+### 5. `vhs_lop2.jpg`, tỉ lệ 4:3 (⚠ Châu Thương KHÔNG có băng tay: đây là người đóng thế)
 ```
-Match the costumes and face paint of the attached reference sheet exactly. [STYLE VHS] [STAGE] Battle scene, motion blur: [QUAN CONG] deep crimson red face, long straight black beard, dark green brocade robe and helmet with red pompoms, sweeping an arm toward [KHONG TU] chalk white face, purple robe, who stumbles back. Behind them [CHAU THUONG] glossy black face, thick white eyebrows, dark royal blue robe, black turban with one red pompom, holding the guandao halberd, standing stiffly and awkwardly as if unsure of his part. Two court ladies in pale pink and white robes at the back. No text, no letters, no numbers, no watermark.
+Match the costumes and face paint of the attached reference sheet exactly. [STYLE VHS] [STAGE] Battle scene, motion blur: [QUAN CONG] deep crimson red face, long straight black beard, dark green brocade robe and helmet with red pompoms, sweeping an arm toward [KHONG TU] chalk white face, purple robe, who stumbles back. Behind them [CHAU THUONG] glossy black face, thick white eyebrows, dark royal blue robe, black turban with one red pompom, holding the guandao halberd in his RIGHT hand (on the LEFT side of the picture as he faces the camera), BOTH HANDS BARE, NO BANDAGE AT ALL, standing stiffly and awkwardly as if unsure of his part. Two court ladies in pale pink and white robes at the back. No text, no letters, no numbers, no watermark.
 ```
 
 ### 6. `vhs_lop3.jpg`, tỉ lệ 4:3
