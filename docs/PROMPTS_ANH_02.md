@@ -175,10 +175,29 @@ Horror close-up: a tarnished wooden-framed mirror in a dark bamboo dressing room
 Match the costumes and face paint of the attached reference sheet. Horror image: a tarnished mirror in a dark bamboo dressing room; reflected in it, right behind the viewer's shoulder, leaning very close, [QUAN CONG] deep crimson red face, long straight black beard, dark green helmet with red pompoms, black eyes, smiling. Dim candle light, heavy grain. No text, no letters, no numbers, no watermark.
 ```
 
-### 24. `quan_cong.jpg`, tỉ lệ 1:1 (doạ chính)
+### 24. `quan_cong.jpg`, tỉ lệ 1:1 (doạ chính, bản chi tiết)
+Đây là cảnh doạ chính, bật lên toàn màn hình kèm tiếng hét. Có hai bản: thử **bản A** trước; nếu AI từ chối vì quá ghê thì dùng **bản B** (nhẹ máu hơn, vẫn rợn).
+
+**Bản A (ghê nhất):**
 ```
-Match the face paint of the attached reference sheet. Horror close-up on pure black: the face of a dead opera actor in deep crimson red Quan Cong paint, lit from below, the paint scratched away in long strips by his own fingernails showing raw pale skin beneath, dark blood at the corners of a rigid grin, eyes rolled up showing only the whites, long straight black beard wet and clumped, dark green helmet with red pompoms. Shocking but not overly gory. No text, no letters, no numbers, no watermark.
+Match the face paint of the attached reference sheet. Extreme close-up horror photograph, the face fills the whole square frame, shot from slightly below, lit by a single kerosene lamp from under the chin so the light hits the jaw and nostrils and the eye sockets fall into shadow, pure black background.
+The face of a dead hát bội opera actor in Quan Cong make-up: the deep crimson red face paint is thick and glossy, cracked like dried riverbed mud, and has been torn away in four long parallel strips by his own fingernails, from the forehead down across one cheek to the jaw; underneath the paint the skin is raw, pale grey-white and wet, the edges of the scratches curling. Red paint and dark clotted blood are packed under the fingernail marks.
+The eyes are rolled up so far that only bloodshot whites show, tiny burst blood vessels, the lower eyelids pulled down; red paint has run into the eyes like tears.
+The jaw is locked rigid in a wide unnatural grin pulled too far toward the ears, the lips split at the corners, the teeth clenched so hard two front teeth have cracked; through the teeth the tip of a bitten, half-severed tongue, dark blood and saliva hanging in strings down the long black beard.
+The long straight black beard is wet, clumped and matted with blood and red paint. The black painted eyebrows sweep up into the shadow. The edge of a dark green helmet with a red velvet pompom is visible at the top, slightly askew; a few strands of real grey hair stick out from under it, wet with sweat.
+Neck tendons strained like cords, veins bulging at the temples, beads of sweat mixed with paint.
+Photorealistic, 35mm film grain, harsh contrast, deep crimson and sickly green tones, nauseating and terrifying, like a forensic photo taken seconds after death. No text, no letters, no numbers, no watermark.
 ```
+
+**Bản B (khi bản A bị từ chối):**
+```
+Match the face paint of the attached reference sheet. Extreme close-up horror portrait filling the square frame, lit from below by a single oil lamp, pure black background. The face of a dead opera actor in deep crimson red Quan Cong paint, the paint cracked like dry mud and scraped away in long finger-width strips that reveal pale grey skin beneath. Eyes rolled up showing only bloodshot whites, red paint running from them like tears. The jaw locked in a wide rigid grin stretched toward the ears, teeth clenched, dark red stains at the corners of the mouth dripping into the long matted black beard. Dark green helmet with a red pompom slightly askew, wet grey hair escaping beneath it, veins standing out at the temples. Photorealistic, film grain, harsh contrast, crimson and sickly green tones, deeply disturbing. No text, no letters, no numbers, no watermark.
+```
+
+**Mẹo khi tạo:**
+- Ảnh ra còn "đẹp" quá thì gõ thêm trong cùng cuộc trò chuyện: *"Make it more disturbing: deeper scratches, more raw skin, the grin wider and more unnatural, darker lighting."*
+- Ảnh ra bị hoạt hình thì gõ: *"Photorealistic forensic photograph, not illustration."*
+- Mặt phải **lấp kín khung hình** thì cảnh doạ mới hiệu quả: khi bật toàn màn hình, gương mặt sẽ lao thẳng vào người chơi.
 
 ### 25. `anh_19_ma.jpg`, tỉ lệ 1:1 (doạ)
 ```
