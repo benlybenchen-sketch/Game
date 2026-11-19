@@ -24,7 +24,7 @@ export default [
     html: () => `
     <div class="doc doc--plain">
       ${pic("bia_moi", "Tấm bia đã được khắc lại.", tombArt("LÂM HẠNH DUNG", "1952 – 1971"))}
-      <p class="note">Tấm bia cũ được mài đi, khắc lại: <b>LÂM HẠNH DUNG · 1952–1971</b>. Bên cạnh là một ngôi mộ mới đắp, chưa có bia. Không ai đặt sen. Chỉ có một nén nhang cắm thẳng, cháy tới chân, tàn không rơi.</p>
+      <p class="note">Tấm bia cũ được mài đi, khắc lại: <b>LÂM HẠNH DUNG · 1952–1971</b>. Bên cạnh là một ngôi mộ mới đắp, chưa có bia. Không ai đặt sen. Dưới chân bia có một ngọn nến nhỏ không biết ai thắp. Trên mộ mới chỉ có một nén nhang cắm thẳng, cháy tới chân, tàn không rơi.</p>
     </div>`,
   },
 
