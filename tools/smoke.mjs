@@ -16,6 +16,8 @@ page.on("console", (m) => { if (m.type() === "error" && !/Failed to load resourc
 await page.goto(URL);
 await page.screenshot({ path: `${out}/0_cover.png` });
 await page.click('[data-cv="go"]');
+await page.waitForTimeout(200);
+if (await page.isVisible("input[data-sign]")) { await page.fill("input[data-sign]", process.env.NAME || "Nguyễn Thị Thư"); await page.screenshot({ path: `${out}/contract.png` }); await page.click('[data-dlg="ok"]'); await page.waitForTimeout(300); }
 const open = async (id) => { await page.click(`[data-doc="${id}"]`); await page.waitForTimeout(150); };
 // open every doc of stage 0 to check rendering
 for (const [i, q] of QUESTIONS.entries()) {
@@ -49,11 +51,12 @@ for (const [i, q] of QUESTIONS.entries()) {
   await page.click('[data-dlg="ok"]');
   await page.waitForTimeout(400);
 }
-for (const d of DOCS.filter((d) => d.stage === 5)) await open(d.id);
+for (const d of DOCS.filter((d) => d.stage === QUESTIONS.length)) await open(d.id);
 await page.screenshot({ path: `${out}/end.png` });
 const m = await browser.newPage({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1 });
 m.on("pageerror", (e) => errors.push("mobile pageerror: " + e.message));
 await m.goto(URL); await m.click('[data-cv="go"]'); await m.waitForTimeout(300);
+if (await m.isVisible("input[data-sign]")) { await m.click('[data-dlg="ok"]'); await m.waitForTimeout(300); }
 await m.screenshot({ path: `${out}/m_reader.png` });
 const sw = await m.evaluate(() => document.documentElement.scrollWidth);
 console.log("mobile scrollWidth", sw);

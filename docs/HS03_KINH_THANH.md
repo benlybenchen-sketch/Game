@@ -47,7 +47,7 @@ Nỗi sợ của hồ sơ này **không đến từ ma hiện ra**, mà từ **c
    - **Quốc** (đêm 3): thạch tín lấy từ chính hiệu thuốc nhà Quốc, bỏ vào bình trà. Lời báo là một bài **thơ tàng đầu** con cơ "đọc": chữ đầu các câu ghép thành **QUỐC UỐNG THUỐC**.
    - **Khiêm** (đêm 4): bị đánh ngất rồi treo lên tay vịn cầu thang; dưới chân có câu Kiều. Lời báo bằng **số Tô Châu** đổi theo bảng chữ cái tiếng Việt 29 chữ: **KHIÊM TREO**.
    - **Nghi** (đêm 5): bị đẩy ngã cầu thang gác. Lời báo bằng **mã sách Kiều**: **NGHI NGÃ**. Lan dùng **cuốn Kiều in ở Huế của cha mình**, chứ không dùng cuốn của Khiêm. Cuốn Huế thiếu hai câu sau câu 1000, nên số câu lệch 2. Đây là sơ hở chí mạng của Lan.
-   - **Dung** (đêm 6): Lan giết Dung trên gác thượng, mặc áo và đeo nhẫn của mình vào xác Dung, rồi đốt. Lời báo cho đêm này Lan dùng mật mã dễ nhất, Telex: `LAN CHEETS CHASY` = **LAN CHẾT CHÁY**, tức tự báo tử chính mình. Từ đêm đó, **Lan là "Dung"**.
+   - **Dung** (đêm 6): Lan giết Dung trên gác thượng, mặc áo và đeo nhẫn của mình vào xác Dung, rồi đốt. Lời báo cho đêm này Lan dùng mật mã dễ nhất, Telex: `LAN CHEETS CHAYS` = **LAN CHẾT CHÁY**, tức tự báo tử chính mình. Từ đêm đó, **Lan là "Dung"**.
 4. **Đêm 7 (13/11/1971):** "Dung" (tức Lan) ngồi cầu cơ một mình "để từ biệt các bạn". Con cơ chạy, nhưng ra một chuỗi **quẻ bát quái** mà Lan không đọc được. Lan bỏ chạy, khóa biệt thự.
 5. **Ba sơ hở năm 1971 Lan không xoá được:**
    - (a) Biên bản khám nghiệm "xác Lan": **xương đòn trái từng gãy, đã liền**. Lan chưa từng gãy xương; Dung gãy xương đòn trái năm 1966.
@@ -102,7 +102,7 @@ Nỗi sợ của hồ sơ này **không đến từ ma hiện ra**, mà từ **c
 - **Ảnh nhóm 1971** (7 người trước biệt thự): Dung cầm bút **tay trái** ký sổ; Lan đứng cạnh, giống đến lạ.
 - **Nhật ký tiếng Pháp của bà Diệp** (1958): chìa khoá quẻ; có câu *"Ma petite Dung lit le miroir."* (Bé Dung của tôi đọc được gương).
 - **Thư của bà chủ nhà mỗi sáng**, ký **tay phải** bằng nét chữ nghiêng sang phải: lịch sự, quan tâm, và càng về sau càng biết những gì người chơi ghi.
-- **Bia mộ** ở nghĩa trang Đô Thành: "Hà Ngọc Lan 1952–1971". Bà chủ nhà đêm nào cũng đặt hoa sen ở đó.
+- **Bia mộ** ở nghĩa trang Thiên Phước, Gò Vấp (hư cấu): "Hà Ngọc Lan 1952–1971". Bà chủ nhà đêm nào cũng đặt hoa sen ở đó.
 
 ## 7. Lớp kinh dị (tăng dần theo đêm)
 - **Đêm 1–2:** tiếng con cơ (chén sứ) trượt trên gỗ, nến chập chờn, tiếng nước nhỏ giọt từ phía hồ sen. Con cơ đôi lúc **chạy trước khi người chơi kịp đặt tay**.
@@ -141,8 +141,19 @@ Nỗi sợ của hồ sơ này **không đến từ ma hiện ra**, mà từ **c
 - **Bảng cơ** là bảng do Tùng vẽ năm 1971 theo kiểu bảng điện báo: **26 chữ cái Latinh A–Z**, số 0–9, CÓ / KHÔNG, TẠM BIỆT. Không có chữ cái có dấu, nên mọi lời cơ có dấu đều đánh theo **kiểu Telex** (W, F, J… đều có trên bảng). Bảng 29 chữ tiếng Việt của Quốc (đêm 4) là một chìa khoá riêng, không phải mặt bảng cơ.
 - **Tên xuất hiện ở đâu** (đổi tự động theo tên đã nhập):
   1. Thư buổi sáng mở đầu bằng tên: *"Minh à,…"*.
-  2. **Đêm 3**, con cơ đánh tên người chơi bằng Telex **trước khi** đánh lời chính. Ví dụ "Thư" đánh ra `THUW`, "Hạnh" ra `HAJNH`, "Minh" ra `MINH`. Đêm đó bà chủ nhà hỏi: *"Cháu có nói tên cháu cho ai trong nhà này đâu?"* (thật ra có, chính với bà).
-  3. **Đêm 6**, lời cơ năm 2004 thêm tên: `<TÊN> NGUOWFI MANG TEEN EM KHOONG PHAIR EM`.
+  2. **Đêm 3**, con cơ đánh tên người chơi bằng Telex **trước khi** đánh lời chính. Ví dụ "Thư" đánh ra `THUW`, "Hạnh" ra `HANHJ`, "Minh" ra `MINH`. Đêm đó bà chủ nhà hỏi: *"Cháu có nói tên cháu cho ai trong nhà này đâu?"* (thật ra có, chính với bà).
+  3. **Đêm 6**, lời cơ năm 2004 thêm tên: `<TÊN> NGUWOWIF MANG TEEN EM KHOONG PHAIR EM` (con cơ đánh ngược từ cuối lên).
   4. **Đêm 7**, bản giải quẻ họ Lâm mở đầu bằng **tên người chơi** (mã hoá đúng tên đã gõ, bỏ dấu thanh, giữ chữ cái riêng của tiếng Việt theo bảng 29 chữ), rồi mới tới `MỘ LAN LÀ EM · ĐỪNG UỐNG TRÀ · VÀNG DƯỚI HỒ SEN`. Đáp án trọng điểm 7 chấp nhận dòng có tên.
   5. **Bia mộ ở kết:** tấm bia "Hà Ngọc Lan 1952–1971" được khắc lại thành "Lâm Hạnh Dung 1952–1971". Bên cạnh là một ngôi mộ mới đắp, chưa có bia, cắm một nén nhang. Lá thư cuối không ký tên, gửi đúng tên người chơi.
 - **Xử lý tên:** chuẩn hoá Unicode, cắt còn 2 chữ cuối nếu tên quá dài, bỏ ký tự lạ. Đổi sang Telex theo quy ước điện báo (ă→AW, â→AA, đ→DD, ê→EE, ô→OO, ơ→OW, ư→UW; sắc S, huyền F, hỏi R, ngã X, nặng J, dấu thanh đặt cuối chữ).
+
+## 11. Ghi chú triển khai (khớp với game, ưu tiên mục này nếu chỗ trên lệch)
+- **Telex:** dấu thanh luôn đặt ở cuối chữ. TÙNG RƠI = `TUNGF ROWI`; CHỊ LAN ĐÂU = `CHIJ LAN DDAAU`; YẾN XUỐNG HỒ = `YEENS XUOONGS HOOF`; EM LẠNH = `EM LANHJ`; LAN CHẾT CHÁY = `LAN CHEETS CHAYS`.
+- **Đêm 2:** năm 1971 tiếng gót guốc gỗ gõ Morse trên băng (Yến chép được YEENS XU rồi bỏ); năm 2004 con cơ nhấc lên gõ Morse `EM LANHJ` (gõ ngắn = chấm, gõ kéo lê = gạch). Bằng chứng nguồn gõ: tiếng ngón tay thử máy trên mặt bàn (khô, gắt, sát micro) khác tiếng gõ trong buổi cơ (trầm, dội, kéo lê); Yến: "ở dưới chân mình"; thư Nghi: dưới gầm bàn Lan không mang guốc.
+- **Đêm 3:** lời 2004 = tên người chơi rồi `TIMF AI YEEN TRAWNG ROIJ AO IM` ("Tìm ai yên? Trăng rọi ao im."), tàng đầu ra TAY TRÁI.
+- **Đêm 4:** tờ giấy dưới chén 23/10/1971: 〡三 〡一 〡二 〩 〡〥 / 〢〤 〢二 〨 〡〧 (13 11 12 9 15 / 24 22 8 17). Con cơ 2004 chạy số 4 1 · 23 26 1 · 10 12 3 29 = BÀ SỬA GIẤY. Từ đêm 4 câu tay thuận trong nhật ký bị sửa; từ đêm 6 câu sẹo cằm bị sửa thêm.
+- **Đêm 5 (mã Kiều):** mỗi chữ cái = số câu · số chữ · số mẫu tự (không kể dấu, lời giải không dấu). Game in câu 1–42 và đoạn Kiều ở lầu Ngưng Bích (cuốn Khiêm: 1033–1054; cuốn Huế: 1031–1052). Lời 1971 (soạn bằng cuốn Huế của Lan) `1033·1·3 1037·2·2 1046·1·2 1042·6·2 1052·4·3 1042·8·1 1051·5·2` = NGHI NGA; tra cuốn Khiêm ra UAOITPA. Lời 2004 (soạn bằng cuốn Khiêm) ra CAM ON EM DA DOC LAI. Lý do Lan dùng sách của mình: đêm 30/10 sách của Khiêm đang bị cảnh sát giữ làm tang vật (trả lại năm 1972).
+- **Đêm 6:** bằng chứng tráo người thêm: CMND năm 1979 của "bà Dung" ghi dấu vết riêng là nốt ruồi trên đuôi mày phải (không có sẹo cằm); thẻ căn cước 1970 của Dung ghi sẹo 1,5 phân dưới cằm. Khám nghiệm: không có muội than trong khí quản, nứt sọ vùng chẩm (chết trước khi bị đốt).
+- **Đêm 7:** con cơ chạy giữa CÓ (vạch liền) và KHÔNG (vạch đứt), sáu lần một quẻ, vạch đầu tiên là vạch dưới cùng. Chìa khoá tiếng Pháp nói rõ trọng số 32-16-8-4-2-1 từ dưới lên, quẻ sáu vạch đứt là khoảng trắng. Sổ quẻ 1971–2003 có 43 quẻ; đêm 2004 con cơ đánh thêm các quẻ tên người chơi ở đầu.
+- **Nét chữ:** Lan viết nghiêng về phía trước (giao kèo, thư buổi sáng, nhãn băng cuộn 2, dòng cuối các trang sổ cơ, sổ cơ buổi 7, sổ quẻ). Dung viết ngả về phía sau, lem mực mép trái (sổ cơ buổi 6, trang gương, lá thư cuối).
+- **Kết:** trong một chung trà trên bàn cơ có thạch tín. Lá thư cuối không ký tên, nét chữ của Dung.

@@ -7,7 +7,7 @@ const LEGACY = { "01": "ho-doi-nguoi.v1" };   // case 01 was released before the
 const freshSettings = () => ({ sound: true, fear: "full", flash: true, voice: false });
 const fresh = () => ({
   started: false, stage: 0, resp: {}, seen: {}, heard: {}, plays: {}, hints: {}, peeked: {}, tries: {},
-  notes: "", lastDoc: null, scared: {},
+  notes: "", lastDoc: null, scared: {}, board: {}, letters: {}, player: "", signed: false,
 });
 
 const read = (k) => { try { const v = JSON.parse(localStorage.getItem(k)); return v && typeof v === "object" ? v : null; } catch { return null; } };

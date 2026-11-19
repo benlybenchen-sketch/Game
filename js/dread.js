@@ -53,6 +53,11 @@ export function glitchText() {
   const ps = [...document.querySelectorAll(".reader-body p")].filter((p) => !p.querySelector(".ln, .media, canvas, svg, figure") && p.textContent.length > 30);
   if (!ps.length) return;
   const p = ps[Math.floor(Math.random() * ps.length)];
+  if (cfg().mirror && Math.random() < 0.55) {      // the sentence turns into mirror writing for a blink
+    p.classList.add("mirror-blink");
+    setTimeout(() => p.classList.remove("mirror-blink"), 380);
+    return;
+  }
   const orig = p.innerHTML;
   p.classList.add("glitch");
   const ph = cfg().phrases || ["…"];

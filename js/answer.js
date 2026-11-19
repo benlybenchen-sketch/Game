@@ -24,7 +24,11 @@ export function checkPart(part, answer, value) {
     case "choice": return value === answer;
     case "number": { const n = parseNumber(value); return answer.some((a) => Math.abs(a - n) < 1e-6); }
     case "time": return answer.some((t) => parseTime(t) === parseTime(value));
-    case "text": return answer.some((t) => normalizeText(t) === normalizeText(value));
+    case "text": {
+      // part.prefix (optional): words the player may write before the answer, e.g. their own name.
+      const v = normalizeText(value), pres = [].concat(part.prefix ? part.prefix() : []).map(normalizeText).filter(Boolean);
+      return answer.some((t) => normalizeText(t) === v || pres.some((p) => p + normalizeText(t) === v));
+    }
     case "line": return answer.includes(value);
     case "pins": return matchPins(answer, value);
     default: throw new Error("Unknown part type " + part.type);

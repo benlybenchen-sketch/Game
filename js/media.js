@@ -3,7 +3,7 @@
 // mountMedia(root) finds every .media placeholder in a rendered document and returns a cleanup function.
 import { state, save } from "./store.js";
 import { C, base } from "./case.js";
-import { ctx, out, sfx, voice, speak, hush, tapeBed, tapeOut, motor, now } from "./audio.js";
+import { ctx, out, sfx, voice, speak, hush, tapeBed, tapeOut, motor, now, morseKnocks } from "./audio.js";
 import { level } from "./dread.js";
 
 export function mountMedia(root) {
@@ -150,6 +150,18 @@ function tapePlayer(el, id) {
         else if (s.sfx === "motor") nodes.push(...motor(when, (s.d - skip) / speed, dest));
         else if (s.sfx === "chat") timers.push(setTimeout(() => sfx.chat(), when * 1000));
         else if (s.sfx === "tom") timers.push(setTimeout(() => sfx.tom(), when * 1000));
+        else if (s.sfx === "slide") timers.push(setTimeout(() => sfx.slide(Math.min(1.2, s.d)), when * 1000));
+        else if (s.sfx === "knuckle") for (let k = 0; k < 3; k++) timers.push(setTimeout(() => sfx.knuckle(), (when + k * 0.3) * 1000));
+        else if (s.sfx === "morse") {
+          // knocks are scheduled one by one so a seek into the middle of the code plays only the rest
+          const unit = (s.unit || 0.22) / speed;
+          let t = 0;
+          for (const c of s.code) {
+            const at = t - skip / speed;
+            if ((c === "." || c === "-") && at >= -0.01) timers.push(setTimeout(() => morseKnocks(c, { unit, kind: s.kind || "heel", dest }), (when + at) * 1000));
+            t += c === "." ? unit * 2 : c === "-" ? unit * 4 : c === " " ? unit * 2 : unit * 3;
+          }
+        }
         continue;
       }
       const buf = await loadLine(id, s.i);
@@ -222,6 +234,7 @@ function tapePlayer(el, id) {
         }
         if (s && s.sfx === "hum") v += Math.exp(-((fy - 52 - Math.sin(t * 3) * 3) ** 2) / 6) * 0.9;
         if (s && s.sfx === "knock" && (Math.floor(t * 2.4) % 3 === 0) && (t * 2.4) % 1 < 0.2) v += 0.7 * (fy < 70 ? 1 : 0.3);
+        if (s && (s.sfx === "morse" || s.sfx === "knuckle") && Math.sin(t * 9) > 0.7) v += (s.sfx === "morse" ? (fy < 50 ? 0.8 : 0.15) : (fy > 60 && fy < 120 ? 0.6 : 0.1));
         if (s && s.sfx === "water" && r() < 0.012) v += 0.8;
         if (s && s.sfx === "chime") v += Math.exp(-(((fy % 37) - 18) ** 2) / 4) * 0.5;
         if (mask[(y * W + x) * 4] > 100) v += 0.24 + r() * 0.12;

@@ -6,4 +6,7 @@ export const CASES = [
   { id: "02", number: "Hồ sơ 02", title: "Đêm giỗ Tổ", place: "Gánh hát bội Phước Hưng Ban, 1993", cover: "cover",
     short: "Quan Công gục chết giữa sân khấu, lưng uốn cong như cánh cung, mặt cười. Ba mươi năm trước, đúng đêm ấy, đúng vai ấy, cũng y như vậy.",
     level: "Rất khó", time: "4–6 giờ", questions: 6 },
+  { id: "03", number: "Hồ sơ 03", title: "Cầu cơ", place: "Biệt thự Bạch Lan, Sài Gòn, 1971 · 2004", cover: "cover",
+    short: "Bảy tối thứ Bảy năm 1971, con cơ báo tử sáu người. Ba mươi ba năm sau, người sống sót thuê bạn giải những mật thư nó vẫn còn đánh ra. Bà ấy pha trà cho bạn mỗi đêm.",
+    level: "Cực khó · giải mật mã", time: "5–7 giờ", questions: 7 },
 ];

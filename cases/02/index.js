@@ -25,6 +25,8 @@ export const META = {
   time: "4–6 giờ",
   level: "Rất khó · có cảnh ghê rợn",
   boss: "Ông Tám Kỷ",
+  narrator: "Ông Tám Kỷ",
+  solver: "ông Tám Kỷ",
   firstDoc: "thu_tam_ky",
   cover: "cover",
   folders: ["Gói đồ của ông Tám", "Hồ sơ công an huyện", "Cuộn phim và lời khai", "Rương của Ba Thông", "Sổ thuốc độc", "Trước khi trời sáng", "Kết thúc"],

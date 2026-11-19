@@ -122,6 +122,32 @@ export const sfx = {
     noiseHit({ dur: 0.9, freq: 2500, q: 0.5, gain: 0.35 });
     tone({ freq: 45, dur: 1.4, gain: 0.5 });
   },
+  /** A porcelain cup sliding on a paper board over wood (the cầu cơ planchette). */
+  slide(dur = 0.8, when = 0) {
+    noiseHit({ when, dur, freq: 900, q: 1.4, gain: 0.16 });
+    noiseHit({ when, dur: dur * 0.9, freq: 2600, q: 3, gain: 0.05 });
+  },
+  /** The cup stops on a letter: a small porcelain clink on wood. */
+  clink(when = 0) {
+    tone({ when, freq: 2630, dur: 0.18, gain: 0.05, attack: 0.002 });
+    tone({ when, freq: 3950, dur: 0.1, gain: 0.025, attack: 0.002 });
+    noiseHit({ when, dur: 0.03, freq: 700, q: 2, gain: 0.25 });
+  },
+  /** A wooden clog heel on a wooden floor: deep, booming. */
+  heel(when = 0, dest = null) {
+    tone({ when, freq: 82, to: 48, dur: 0.32, gain: 0.7, dest: dest || reverb() || master });
+    noiseHit({ when, dur: 0.12, freq: 260, type: "lowpass", gain: 0.8, dest: dest || master });
+  },
+  /** The heel dragged along the floor boards. */
+  scrape(when = 0, dur = 0.45, dest = null) {
+    noiseHit({ when, dur, freq: 420, q: 0.9, gain: 0.28, dest: dest || master });
+    noiseHit({ when, dur: dur * 0.8, freq: 1100, q: 4, gain: 0.07, dest: dest || master });
+  },
+  /** A knuckle on a table top: short and dry. */
+  knuckle(when = 0, dest = null) {
+    noiseHit({ when, dur: 0.035, freq: 1500, q: 3, gain: 0.5, dest: dest || master });
+    tone({ when, freq: 640, to: 420, dur: 0.05, gain: 0.12, dest: dest || master });
+  },
   /** Trống chầu: "tom" is the drum face (praise), "chát" the wooden rim (blame). */
   tom(when = 0, dest = null) {
     tone({ when, freq: 120, to: 62, dur: 0.55, gain: 0.55, dest: dest || master });
@@ -219,6 +245,13 @@ const VOICES = {
   oldman: { f0: 100, spread: 14, trem: 5, speak: { pitch: 0.55, rate: 0.8 } },
   man2: { f0: 122, spread: 18, speak: { pitch: 0.75, rate: 0.9 } },
   lanh: { f0: 108, spread: 12, speak: { pitch: 0.6, rate: 0.8 } },
+  tung: { f0: 125, spread: 18, speak: { pitch: 0.8, rate: 0.95 } },
+  quoc: { f0: 118, spread: 15, speak: { pitch: 0.7, rate: 0.9 } },
+  khiem: { f0: 130, spread: 20, speak: { pitch: 0.85, rate: 1 } },
+  lan: { f0: 205, spread: 22, speak: { pitch: 1, rate: 0.9 } },
+  yen: { f0: 225, spread: 30, speak: { pitch: 1.15, rate: 0.9 } },
+  dung: { f0: 200, spread: 25, speak: { pitch: 0.95, rate: 0.9 } },
+  nghi: { f0: 240, spread: 35, speak: { pitch: 1.25, rate: 0.95 } },
 };
 const VOWELS = [[730, 1090], [530, 1840], [270, 2290], [570, 840], [300, 870], [440, 1020], [660, 1700]];
 
@@ -302,3 +335,18 @@ export function tapeOut() {
 }
 
 export const now = () => (ac ? ac.currentTime : 0);
+
+/**
+ * Plays Morse code ("-.. / .") as knocks: a dot is one tap, a dash a tap and a drag. kind "heel" | "cup".
+ * Returns the duration in seconds. unit = length of a dot.
+ */
+export function morseKnocks(code, { when = 0, unit = 0.22, kind = "heel", dest = null } = {}) {
+  let t = when;
+  for (const c of code) {
+    if (c === ".") { kind === "heel" ? sfx.heel(t, dest) : sfx.clink(t); t += unit * 2; }
+    else if (c === "-") { kind === "heel" ? sfx.heel(t, dest) : sfx.clink(t); kind === "heel" ? sfx.scrape(t + 0.08, unit * 2.4, dest) : sfx.slide(unit * 2.4, t + 0.05); t += unit * 4; }
+    else if (c === " ") t += unit * 2;
+    else if (c === "/") t += unit * 3;
+  }
+  return t - when;
+}

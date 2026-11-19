@@ -13,6 +13,7 @@ let DOCS = [], QUESTIONS = [], META = {}, START_CLOCK = "", END_CLOCK = "", SECR
 
 const $ = (s, r = document) => r.querySelector(s);
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 const finished = () => state.stage >= QUESTIONS.length;
 const visibleDocs = () => DOCS.filter((d) => d.stage <= state.stage);
 const currentQ = () => QUESTIONS[state.stage] || null;
@@ -130,12 +131,25 @@ function applySetting(k, v) {
 
 function startDesk() {
   ctx(); ambience(level());
+  if (META.contract && !state.signed) return contract();
   if (!state.started) { state.started = true; save(); setLevel(0); }
   document.body.dataset.screen = "desk";
   $("#cover").hidden = true;
   $("#desk").hidden = false;
   renderAll();
   openDoc(state.lastDoc && byId.has(state.lastDoc) && byId.get(state.lastDoc).stage <= state.stage ? state.lastDoc : META.firstDoc);
+}
+
+/** A case can open with a contract the player signs with their own name (kept only in this browser). */
+function contract() {
+  let name = state.player || "";
+  dialog(META.contract.html(), "Ký", () => {
+    state.player = name.normalize("NFC").replace(/[^\p{L}\s'-]/gu, "").replace(/\s+/g, " ").trim().slice(0, 40);
+    state.signed = true; save(); sfx.stamp();
+    startDesk();
+  });
+  const inp = $("#dialog input[data-sign]");
+  if (inp) { inp.value = name; inp.addEventListener("input", () => { name = inp.value; }); setTimeout(() => inp.focus(), 50); }
 }
 
 // ---------------------------------------------------------------- render
@@ -170,7 +184,7 @@ function openDoc(id) {
   const pinned = q ? (resp(q.id).pins || []).includes(id) : false;
   $(".reader-head").innerHTML = `
     <div><span class="kind">${d.kind}</span><h2>${d.label}</h2></div>
-    ${pinPart && d.stage < 5 ? `<button class="btn ${pinned ? "btn--on" : ""}" data-pin="${id}">📌 ${pinned ? "Bỏ ghim" : "Ghim làm bằng chứng"}</button>` : ""}`;
+    ${pinPart && d.stage < QUESTIONS.length ? `<button class="btn ${pinned ? "btn--on" : ""}" data-pin="${id}">📌 ${pinned ? "Bỏ ghim" : "Ghim làm bằng chứng"}</button>` : ""}`;
   const body = $(".reader-body");
   body.innerHTML = d.html();
   body.querySelectorAll(".dread-only").forEach((e) => { if (Number(e.dataset.min) > level()) e.remove(); });
@@ -197,7 +211,7 @@ function solvedCard(q, i) {
   return `<div class="q-card solved">
     <span class="q-stamp ${state.peeked[q.id] ? "peek" : ""}">${state.peeked[q.id] ? "XEM GIẢI" : "ĐÃ RÕ"}</span>
     <div class="q-head"><span class="q-no">Trọng điểm ${i + 1}</span><span class="q-title">${q.title}</span></div>
-    <details><summary>Lời giải của anh Quân</summary><p>${esc(SECRETS[q.id].solution)}</p></details>
+    <details><summary>${META.solutionLabel || `Lời giải của ${META.solver || "anh Quân"}`}</summary><p>${esc(SECRETS[q.id].solution)}</p></details>
   </div>`;
 }
 
@@ -275,8 +289,8 @@ function solved(q, peeked) {
     dialog(META.finale.html, "Đọc hồ sơ kết thúc", () => { openDoc(META.finale.open); fireScare(state.stage); });
     return;
   }
-  const clock = q.clock;
-  dialog(`<h3>${clock} · Anh Quân</h3>${q.memo.split("\n").map((l) => `<p>${l.trim()}</p>`).join("")}<p class="small muted">Thư mục mới: “${FOLDERS[state.stage]}”.</p>`,
+  const clock = q.clock, memo = typeof q.memo === "function" ? q.memo() : q.memo;
+  dialog(`<h3>${clock} · ${META.narrator || "Anh Quân"}</h3>${memo.split("\n").map((l) => `<p>${l.trim()}</p>`).join("")}<p class="small muted">Thư mục mới: “${FOLDERS[state.stage]}”.</p>`,
     "Mở hồ sơ mới", () => {
       const first = DOCS.find((d) => d.stage === state.stage);
       if (first) openDoc(first.id);
@@ -303,7 +317,7 @@ function hint() {
 
 function solve() {
   const q = currentQ();
-  dialog(`<h3>Xem lời giải?</h3><p>Anh Quân sẽ viết ra toàn bộ suy luận cho trọng điểm này, và bạn đi tiếp. Trọng điểm sẽ bị đóng dấu “XEM GIẢI”.</p>`,
+  dialog(`<h3>Xem lời giải?</h3><p>${META.solveIntro || `${cap(META.solver || "anh Quân")} sẽ viết ra toàn bộ suy luận cho trọng điểm này, và bạn đi tiếp.`} Trọng điểm sẽ bị đóng dấu “XEM GIẢI”.</p>`,
     "Xem lời giải", () => {
       const s = SECRETS[q.id];
       dialog(`<h3>Lời giải · ${q.title}</h3><p>${esc(s.solution)}</p>`, "Đi tiếp", () => solved(q, true));
