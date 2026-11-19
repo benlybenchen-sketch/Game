@@ -287,7 +287,7 @@ function solved(q, peeked) {
 /** Jump scares tied to a stage opening: META.scares = { stage: [key, picture, delayMs?] } */
 function fireScare(stage) {
   const sc = (META.scares || {})[stage];
-  if (sc) setTimeout(() => jumpScare(sc[0], sc[1]), sc[2] ?? 2500);
+  if (sc) setTimeout(() => jumpScare(sc[0], sc[1], sc[3] || {}), sc[2] ?? 2500);
 }
 
 /** Dread level for a stage: META.dreadLevels if given, else 0..4, and 5 (calm) once the case is closed. */

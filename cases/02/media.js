@@ -14,14 +14,14 @@ const hms = (t) => [Math.floor(t / 3600), Math.floor((t % 3600) / 60), t % 60].m
 // Every voiced line is a recorded clip in audio/02/vhs_<v>.mp3. Captions repeat each sound in words.
 const COMMON = [
   { t: "22:28:03", sfx: "tom", text: "Trống chầu: TOM" },
-  { t: "22:28:06", v: "v10", text: "Quan Công khựng lại, ưỡn ngực ra sau, người cong dần như cánh cung: “Á… á… cái lưng… cái lưng tôi…”" },
+  { t: "22:28:06", v: "v10", text: "Quan Công khựng lại, ưỡn ngực ra sau, người cong dần như cánh cung: “Hự… hự… Lưng tôi… nó bẻ lưng tôi… Ai… ai đứng ở cánh gà kia…”" },
   { t: "22:28:30", v: "v11", text: "Quan Công rú lên, hai tay cào mặt. Khán giả tưởng diễn, vỗ tay: “Hay! Diễn hay quá!”" },
   { t: "22:29:10", sfx: "tom", text: "Trống chầu: TOM. Quan Công giật nảy, đầu đập xuống sàn gỗ" },
   { t: "22:29:40", v: "v12", text: "“Ảnh không diễn đâu! Ảnh bị gì rồi!” · “Trời đất ơi!” · “Ngừng trống! Ngừng trống lại!”" },
   { t: "22:31:00", text: "Trống chầu ngừng hẳn. Cả gánh chạy ra sân khấu" },
   { t: "22:31:05", v: "v13", text: "Bà bầu Tư Lựu: “Kiệt! Kiệt ơi! Kêu y sĩ! Kêu y sĩ mau lên!”" },
   { t: "22:33:20", v: "v14", text: "“Đừng đụng vô ảnh! Đụng vô là giật!” · “Ảnh cười kìa… ảnh đang cười kìa…”" },
-  { t: "22:35:00", v: "v15", text: "Quan Công cười. Cười không dứt, qua hàm răng cắn chặt" },
+  { t: "22:35:00", v: "v15", text: "Quan Công cười khặc khặc qua hàm răng cắn chặt: “Tổ… Tổ tới rồi…”" },
 ];
 const VHS = {
   dem: {
@@ -99,9 +99,12 @@ function loadClip(v) {
 function engine() {
   const ac = ctx(); if (!ac) return null;
   const nodes = [];
-  const bus = ac.createGain(); bus.gain.value = 1.15;
-  const comp = ac.createDynamicsCompressor(); comp.threshold.value = -16; comp.ratio.value = 5; comp.attack.value = 0.003;
-  bus.connect(comp).connect(out());
+  const G = 2.6;                                                     // loud: the tape should hit hard
+  const bus = ac.createGain(); bus.gain.value = G;
+  const clip = ac.createWaveShaper();                                  // soft clipper: loudness without harsh digital clipping
+  clip.curve = Float32Array.from({ length: 1024 }, (_, i) => Math.tanh((i / 511.5 - 1) * 2.2));
+  const comp = ac.createDynamicsCompressor(); comp.threshold.value = -9; comp.knee.value = 8; comp.ratio.value = 3; comp.attack.value = 0.002; comp.release.value = 0.15;
+  bus.connect(clip).connect(comp).connect(out());
   const verb = reverb();
   const send = ac.createGain(); send.gain.value = 0.35; bus.connect(send); if (verb) send.connect(verb);
   const loopNoise = (filter, freq, q, gain, dest) => {
@@ -125,21 +128,21 @@ function engine() {
     const env = (g, a, peak, d) => { g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(peak, t + a); g.gain.exponentialRampToValueAtTime(0.0001, t + a + d); };
     const osc = (f0, f1, d, peak, type = "sine") => { const o = ac.createOscillator(); o.type = type; o.frequency.setValueAtTime(f0, t); o.frequency.exponentialRampToValueAtTime(f1, t + d); const g = ac.createGain(); env(g, 0.004, peak * vol, d); o.connect(g).connect(bus); o.start(t); o.stop(t + d + 0.1); nodes.push(o); };
     const nz = (type, f, q, d, peak) => { const s = ac.createBufferSource(); s.buffer = noiseBuf(ac); const fl = ac.createBiquadFilter(); fl.type = type; fl.frequency.value = f; fl.Q.value = q; const g = ac.createGain(); env(g, 0.002, peak * vol, d); s.connect(fl).connect(g).connect(bus); s.start(t, Math.random()); s.stop(t + d + 0.1); nodes.push(s); };
-    if (kind === "boom") { osc(78, 46, 0.42, 0.9); nz("lowpass", 520, 1, 0.12, 0.5); }
-    if (kind === "rim") nz("bandpass", 1900, 5, 0.05, 0.35);
-    if (kind === "tom") { osc(96, 40, 1.1, 1.6); osc(150, 70, 0.3, 0.5, "triangle"); nz("lowpass", 340, 1, 0.3, 1.0); }
-    if (kind === "chat") { nz("bandpass", 2900, 7, 0.09, 1.6); osc(1500, 1350, 0.06, 0.25, "square"); nz("highpass", 5000, 1, 0.03, 0.6); }
-    if (kind === "heart") { osc(60, 38, 0.18, 1.1); setTimeout(() => {}, 0); }
+    if (kind === "boom") { osc(78, 44, 0.5, 1.4); nz("lowpass", 600, 1, 0.14, 0.9); }
+    if (kind === "rim") nz("bandpass", 1900, 5, 0.06, 0.7);
+    if (kind === "tom") { osc(96, 38, 1.3, 2.4); osc(150, 70, 0.35, 0.9, "triangle"); nz("lowpass", 360, 1, 0.35, 1.6); }
+    if (kind === "chat") { nz("bandpass", 2900, 6, 0.11, 2.6); osc(1500, 1350, 0.07, 0.45, "square"); nz("highpass", 4500, 1, 0.04, 1.2); }
+    if (kind === "heart") { osc(60, 36, 0.22, 1.8); }
     if (kind === "clap") for (let i = 0; i < 70; i++) { const s = ac.createBufferSource(); s.buffer = noiseBuf(ac); const fl = ac.createBiquadFilter(); fl.type = "bandpass"; fl.frequency.value = 1200 + Math.random() * 1600; fl.Q.value = 1.5; const g = ac.createGain(); const tt = t + Math.random() * 2.2; g.gain.setValueAtTime(0.0001, tt); g.gain.exponentialRampToValueAtTime(0.25 * vol, tt + 0.002); g.gain.exponentialRampToValueAtTime(0.0001, tt + 0.03); s.connect(fl).connect(g).connect(bus); s.start(tt, Math.random()); s.stop(tt + 0.05); nodes.push(s); }
   };
   const voice = async (v, when, offset = 0) => {
     const b = await loadClip(v); if (!b || offset >= b.duration) return;
-    const s = ac.createBufferSource(); s.buffer = b; const g = ac.createGain(); g.gain.value = 1.6;
+    const s = ac.createBufferSource(); s.buffer = b; const g = ac.createGain(); g.gain.value = 1.4;
     s.connect(g).connect(bus); s.start(Math.max(ac.currentTime, when), offset); nodes.push(s);
   };
   const glitch = () => {   // the tape chews: sound drops out, then a burst of noise
     const t = ac.currentTime;
-    bus.gain.setValueAtTime(1.15, t); bus.gain.linearRampToValueAtTime(0.0001, t + 0.02); bus.gain.setValueAtTime(0.0001, t + 0.12); bus.gain.linearRampToValueAtTime(1.15, t + 0.16);
+    bus.gain.setValueAtTime(G, t); bus.gain.linearRampToValueAtTime(0.0001, t + 0.02); bus.gain.setValueAtTime(0.0001, t + 0.12); bus.gain.linearRampToValueAtTime(G, t + 0.16);
     hit(t + 0.13, "chat", 0.5);
   };
   return { ac, crowd, drone, hit, voice, glitch, stop() { nodes.forEach((n) => { try { n.stop(); } catch { /* not started */ } }); bus.disconnect(); } };
@@ -228,7 +231,7 @@ export function vhs(el, id) {
       const vt = k * grid, s = sceneAt(T0 + vt); if (!s.drum) continue;
       const kind = PAT[k % PAT.length]; if (!kind) continue;
       if (speed === 4 && k % 4) continue;
-      eng.hit(acTime(vt), kind, s.drum === "soft" ? 0.35 : 0.85);
+      eng.hit(acTime(vt), kind, s.drum === "soft" ? 0.6 : 1);
     }
     for (const e of events) {
       const vt = e.t - T0; if (vt <= from || vt > to) continue;
@@ -265,7 +268,7 @@ export function vhs(el, id) {
   function scareCheck(prev, cur) {
     const sc = cfg.scare; if (!sc) return;
     const at = sec(sc.t) - T0;
-    if (prev / 4 < at && cur >= at) jumpScare(sc.key, sc.pic, { fallback: ghostFace(), hold: 900 });
+    if (prev / 4 < at && cur >= at) jumpScare(sc.key, sc.pic, { fallback: ghostFace() });
   }
   function start() {
     eng = engine(); if (!eng) return;
@@ -331,7 +334,7 @@ export function room(el) {
     el.querySelectorAll(".spot").forEach((x) => x.classList.toggle("on", x === b));
     el.querySelector(".room-note").innerHTML = `<b>${s.label}.</b> ${s.text}`;
     if (s.id === "guong" && level() >= 1) {
-      if (jumpScare("guong", "guong", { fallback: ghostFace(), sound: "scream", hold: 650 }))
+      if (jumpScare("guong", "guong", { fallback: ghostFace(), sound: "scream" }))
         setTimeout(() => { el.querySelector(".room-note").innerHTML += `<br><i class="ghost-ink">Trong gương, sau lưng bạn, có một khuôn mặt đỏ.</i>`; }, 1200);
     }
   });
@@ -388,6 +391,6 @@ export function roll(el) {
     big.innerHTML = `<div class="roll-big-pic">${img ? `<img src="${base.img}${img}.jpg" alt="" onerror="this.outerHTML=decodeURIComponent('${encodeURIComponent(frameArt(kind, n))}')">` : frameArt(kind, n)}</div>
       <p><b>Kiểu ${n}</b> · ${time} · ${cap}</p><p class="small muted">Bấm vào ảnh để đóng.</p>`;
     big.hidden = false;
-    if (n === 19 && level() >= 3) jumpScare("frame19", "anh_19_ma", { fallback: ghostFace(), hold: 600 });
+    if (n === 19 && level() >= 3) jumpScare("frame19", "anh_19_ma", { fallback: ghostFace() });
   });
 }

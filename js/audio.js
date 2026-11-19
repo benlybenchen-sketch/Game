@@ -11,7 +11,7 @@ export function ctx() {
     if (!AC) return null;
     ac = new AC();
     master = ac.createGain();
-    master.gain.value = state.sound ? 0.9 : 0;
+    master.gain.value = state.sound ? 1 : 0;
     master.connect(ac.destination);
   }
   if (ac.state === "suspended") ac.resume();
@@ -20,7 +20,7 @@ export function ctx() {
 export const out = () => (ctx(), master);
 
 export function setSound(on) {
-  if (master) master.gain.setTargetAtTime(on ? 0.9 : 0, ac.currentTime, 0.05);
+  if (master) master.gain.setTargetAtTime(on ? 1 : 0, ac.currentTime, 0.05);
 }
 
 function noise() {

@@ -366,3 +366,18 @@ body[data-fear="soft"] .apparition { display: none; }
 @media (max-width: 700px) { .compare { grid-template-columns: 1fr; } }
 body[data-case="02"][data-dread="3"] .reader-body, body[data-case="02"][data-dread="4"] .reader-body { background: radial-gradient(ellipse at 50% 120%, rgba(120,8,4,.25), transparent 60%); }
 body[data-case="02"] .apparition { background: radial-gradient(ellipse 30px 36px at 50% 18%, rgba(160,18,12,.95) 60%, transparent 62%), radial-gradient(ellipse 46px 110px at 50% 62%, rgba(20,70,30,.85) 55%, transparent 58%); }
+
+/* ---------- scares: click to close; the main one is graded sick, shakes and creeps closer ---------- */
+.scare { pointer-events: auto; cursor: pointer; }
+.scare--main { background: #050402; overflow: hidden; }
+.scare--main img, .scare--main .scare-fb svg {
+  filter: sepia(.3) saturate(1.9) hue-rotate(16deg) contrast(1.8) brightness(.95);
+  animation: scareZoom 5.5s cubic-bezier(.2,.6,.2,1) forwards, scareShake .09s steps(2) infinite; }
+.scare--main::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; mix-blend-mode: multiply;
+  background: radial-gradient(ellipse at 50% 45%, rgba(200,225,90,.75), rgba(110,130,30,.85) 55%, rgba(0,0,0,.97) 100%); }
+.scare--main::after { content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,.25) 0 2px, transparent 2px 4px), rgba(140,0,0,.0);
+  animation: scareBlood .6s steps(2) infinite; }
+@keyframes scareZoom { from { transform: scale(1.02); } to { transform: scale(1.22); } }
+@keyframes scareShake { 0% { translate: 0 0; } 50% { translate: 3px -2px; } 100% { translate: -3px 2px; } }
+@keyframes scareBlood { 0% { background-color: rgba(140,0,0,0); } 50% { background-color: rgba(140,0,0,.18); } 100% { background-color: rgba(140,0,0,0); } }

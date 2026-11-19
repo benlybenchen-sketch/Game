@@ -36,7 +36,7 @@ export const META = {
   ],
   finale: { html: `<h3>05:47 · Đình Phú Lễ</h3><p>Thượng úy Huỳnh gọi lại: “Khởi tố Lê Văn Thông. Thả thằng Hòa. Ông già Sáu Bé thì… ông ấy cứ ngồi ôm cái rương Tổ, không chịu buông.”</p>
       <p>Trời hửng sáng. Tôi gấp cuốn sổ, nghe từ phía đình vọng lại một tiếng trống chầu. Chỉ một tiếng. Tom.</p><p class="sign-off">— Tám Kỷ</p>`, open: "bao_ket" },
-  scares: { 2: ["mat_do", "mat_do", 3000], 5: ["jump", "quan_cong", 2500], 6: ["ket", "ket_scare", 6000] },
+  scares: { 2: ["mat_do", "mat_do", 3000], 5: ["jump", "quan_cong", 2500, { main: true, hold: 5000 }], 6: ["ket", "ket_scare", 6000] },
   dreadLevels: [0, 1, 2, 3, 4, 4],
   dread: {
     phrases: ["Tổ đang coi", "trả vai cho tao", "chát", "tom tom tom", "đắng nghét", "ba mươi năm", "chung ở giữa", "mặt tao đâu"],

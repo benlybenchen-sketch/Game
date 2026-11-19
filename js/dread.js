@@ -121,12 +121,12 @@ export function ghostWrite(text) {
  * A jump scare (full fear mode only), shown once per key. pic: picture name in the case folder,
  * fallback: SVG/HTML shown if the picture is missing, sound: an sfx name.
  */
-export function jumpScare(key = "jump", pic = cfg().scare, { fallback = C?.ART?.ghostFace?.() || "", sound = "scream", hold = 750 } = {}) {
+export function jumpScare(key = "jump", pic = cfg().scare, { fallback = C?.ART?.ghostFace?.() || "", sound = "scream", hold = 3000, main = false } = {}) {
   if (!full() || state.scared[key]) return false;
   state.scared[key] = true; save();
   const fx = document.getElementById("fx");
   const d = document.createElement("div");
-  d.className = "scare" + (state.flash ? "" : " scare--slow");
+  d.className = "scare" + (main ? " scare--main" : "") + (state.flash ? "" : " scare--slow");
   const img = new Image();
   img.alt = "";
   img.onerror = () => { const f = document.createElement("div"); f.className = "scare-fb"; f.innerHTML = fallback; img.replaceWith(f); };
@@ -134,7 +134,12 @@ export function jumpScare(key = "jump", pic = cfg().scare, { fallback = C?.ART?.
   d.appendChild(img);
   fx.appendChild(d);
   sfx[sound]?.();
-  setTimeout(() => d.classList.add("out"), state.flash ? hold : hold + 1450);
-  setTimeout(() => d.remove(), state.flash ? hold + 750 : hold + 2650);
+  if (main) { setTimeout(() => sfx.scream(), 900); for (let i = 0; i < 5; i++) sfx.heartbeat(1.2 + i * 0.55); }
+  // it stays until the player clicks, or until `hold` runs out, whichever comes first
+  let gone = false;
+  const close = () => { if (gone) return; gone = true; d.classList.add("out"); setTimeout(() => d.remove(), 700); };
+  const t0 = performance.now();
+  d.addEventListener("pointerdown", (e) => { e.stopPropagation(); if (performance.now() - t0 > 250) close(); });
+  setTimeout(close, (state.flash ? 0 : 900) + hold);
   return true;
 }
