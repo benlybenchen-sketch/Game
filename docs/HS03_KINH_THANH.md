@@ -157,3 +157,4 @@ Nỗi sợ của hồ sơ này **không đến từ ma hiện ra**, mà từ **c
 - **Đêm 7:** con cơ chạy giữa CÓ (vạch liền) và KHÔNG (vạch đứt), sáu lần một quẻ, vạch đầu tiên là vạch dưới cùng. Chìa khoá tiếng Pháp nói rõ trọng số 32-16-8-4-2-1 từ dưới lên, quẻ sáu vạch đứt là khoảng trắng. Sổ quẻ 1971–2003 có 43 quẻ; đêm 2004 con cơ đánh thêm các quẻ tên người chơi ở đầu.
 - **Nét chữ:** Lan viết nghiêng về phía trước (giao kèo, thư buổi sáng, nhãn băng cuộn 2, dòng cuối các trang sổ cơ, sổ cơ buổi 7, sổ quẻ). Dung viết ngả về phía sau, lem mực mép trái (sổ cơ buổi 6, trang gương, lá thư cuối).
 - **Kết:** trong một chung trà trên bàn cơ có thạch tín. Lá thư cuối không ký tên, nét chữ của Dung.
+- **Giọng bà Dung 2004:** chính giọng của Lan trên băng cối 1971 (cùng một giọng đọc), làm già đi: chậm hơn, trầm xuống gần 2 cung, hơi run. Người nghe kỹ sẽ nhận ra. Mỗi buổi cơ bà nói một câu (audio/03/ba_n1…n7).

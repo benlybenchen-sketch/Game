@@ -1,7 +1,8 @@
 // Case 03 widgets: the cầu cơ board, the Morse pad, the side-by-side comparison of the diary,
 // the mirror behind bà Diệp's portrait and the Kiều line finder.
 import { state, save } from "../../js/store.js";
-import { ctx, sfx, morseKnocks } from "../../js/audio.js";
+import { ctx, sfx, morseKnocks, out } from "../../js/audio.js";
+import { base } from "../../js/case.js";
 import { jumpScare, level } from "../../js/dread.js";
 import { MORSE, morse, telex, hexagrams } from "./cipher.js";
 import { coName, hexName } from "./name.js";
@@ -33,6 +34,16 @@ export const BOARDS = {
     intro: "Đêm cuối. Con cơ chỉ chạy qua lại giữa hai góc bàn: CÓ, KHÔNG, CÓ, KHÔNG. Cứ sáu lần nó về giữa bàn một lần. Bà Dung không đặt tay. Bà ngồi nhìn bạn, chén trà trước mặt bạn đã nguội." }),
 };
 
+/** Plays one recorded line (audio/03/<name>.mp3); returns the source node, or null. */
+async function playClip(name) {
+  const ac = ctx(); if (!ac) return null;
+  try {
+    const r = await fetch(`${base.audio}${name}.mp3`); if (!r.ok) return null;
+    const src = ac.createBufferSource(); src.buffer = await ac.decodeAudioData(await r.arrayBuffer());
+    src.connect(out()); src.start(); return src;
+  } catch { return null; }
+}
+
 // ------------------------------------------------------------------ board layout (percent of the board)
 const POS = (() => {
   const p = {};
@@ -61,7 +72,7 @@ export function board(el, id) {
 
   el.innerHTML = `
   <div class="cb">
-    <p class="cb-intro">${B.intro}</p>
+    <p class="cb-intro">${B.intro} <button class="btn btn--small btn--ghost" data-cb="say" title="Nghe bà Dung">🔊 Bà Dung</button></p>
     <div class="cb-date">${B.date}</div>
     <div class="cb-board" title="Giữ chuột (hoặc giữ ngón tay) trên bàn cơ để con cơ chạy">
       <div class="cb-candle cb-candle--l"></div><div class="cb-candle cb-candle--r"></div>
@@ -136,9 +147,15 @@ export function board(el, id) {
   el.addEventListener("click", (e) => {
     const b = e.target.closest("[data-cb]"); if (!b) return;
     ctx(); sfx.click();
+    if (b.dataset.cb === "say") { say(); return; }
     if (b.dataset.cb === "speed") { speed = speed === 1 ? 2 : 1; b.textContent = `×${speed}`; }
     if (b.dataset.cb === "reset") { timers.forEach(clearTimeout); timers = []; busy = false; finished = false; idx = 0; place("_", 0.6); render(); note(""); el.querySelector(".cb").classList.remove("alive"); }
   });
+
+  // bà Dung speaks her line the first time the board is opened (and on the button)
+  let voice = null;
+  const say = async () => { try { voice?.stop(); } catch { /* ended */ } voice = await playClip("ba_" + id); if (dead) try { voice?.stop(); } catch { /* ended */ } };
+  if (!state.board[key + "_v"]) { state.board[key + "_v"] = 1; save(); timers.push(setTimeout(say, 700)); }
 
   // where the cup stands now
   place(idx > 0 && idx < B.tokens.length && B.mode !== "knock" ? B.tokens[idx - 1] : "_");
@@ -152,7 +169,7 @@ export function board(el, id) {
   }, 2200));
   else if (auto() && idx < B.tokens.length) timers.push(setTimeout(pump, 2400));
 
-  return () => { dead = true; timers.forEach(clearTimeout); window.removeEventListener("pointerup", up); };
+  return () => { dead = true; timers.forEach(clearTimeout); window.removeEventListener("pointerup", up); try { voice?.stop(); } catch { /* ended */ } };
 }
 
 // ------------------------------------------------------------------ Morse pad (Tùng's notebook)
