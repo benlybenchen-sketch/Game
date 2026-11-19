@@ -12,13 +12,19 @@ export function ctx() {
     ac = new AC();
     master = ac.createGain();
     master.gain.value = state.sound ? 1 : 0;
-    master.connect(ac.destination);
+    const safe = ac.createDynamicsCompressor();
+    safe.threshold.value = -3; safe.knee.value = 0; safe.ratio.value = 20; safe.attack.value = 0.001; safe.release.value = 0.1;
+    const ceil = ac.createWaveShaper(); ceil.oversample = "4x";
+    const curve = new Float32Array(2049);
+    for (let i = 0; i < curve.length; i++) { const x = (i / 1024) - 1, a = Math.abs(x); curve[i] = Math.sign(x) * (a < 0.75 ? a : 0.75 + 0.24 * Math.tanh((a - 0.75) / 0.24)); }
+    ceil.curve = curve;
+    master.connect(safe).connect(ceil).connect(ac.destination);
     // Every sound effect goes through one loud bus: a big gain into a limiter, so effects sit at the top
     // of the range without cracking. Voices and tapes stay on the master at their own level.
     fx = ac.createGain(); fx.gain.value = 3.2;
     const lim = ac.createDynamicsCompressor();
     lim.threshold.value = -6; lim.knee.value = 3; lim.ratio.value = 20; lim.attack.value = 0.002; lim.release.value = 0.12;
-    const post = ac.createGain(); post.gain.value = 1.15;
+    const post = ac.createGain(); post.gain.value = 1;
     fx.connect(lim).connect(post).connect(master);
   }
   if (ac.state === "suspended") ac.resume();
@@ -90,14 +96,14 @@ function tone({ when = 0, freq = 440, to = null, dur = 0.3, type = "sine", gain 
 
 // ---------- desk sounds ----------
 export const sfx = {
-  paper() { noiseHit({ dur: 0.16, freq: 2400, q: 0.7, gain: 0.12 }); noiseHit({ when: 0.07, dur: 0.12, freq: 1600, gain: 0.08 }); },
+  paper() { noiseHit({ dur: 0.16, freq: 2400, q: 0.7, gain: 0.216 }); noiseHit({ when: 0.07, dur: 0.12, freq: 1600, gain: 0.144 }); },
   pin() { tone({ freq: 1800, to: 900, dur: 0.06, type: "triangle", gain: 0.08 }); noiseHit({ dur: 0.03, freq: 3000, gain: 0.1 }); },
-  click() { noiseHit({ dur: 0.02, freq: 1800, q: 4, gain: 0.12 }); },
+  click() { noiseHit({ dur: 0.02, freq: 1800, q: 4, gain: 0.216 }); },
   wrong() { tone({ freq: 140, to: 90, dur: 0.5, type: "sawtooth", gain: 0.06 }); },
   stamp() { noiseHit({ dur: 0.12, freq: 180, type: "lowpass", gain: 0.6 }); tone({ freq: 70, to: 40, dur: 0.25, gain: 0.3 }); },
   gong() {
     const v = reverb();
-    [98, 147.3, 196.5, 262].forEach((f, i) => tone({ freq: f, dur: 4 - i * 0.6, type: "sine", gain: 0.12 / (i + 1), dest: v || master, attack: 0.005 }));
+    [98, 147.3, 196.5, 262].forEach((f, i) => tone({ freq: f, dur: 4 - i * 0.6, type: "sine", gain: 0.264 / (i + 1), dest: v || master, attack: 0.005 }));
   },
   knock(n = 3, when = 0) {
     for (let i = 0; i < n; i++) {
@@ -111,7 +117,7 @@ export const sfx = {
   },
   drip(when = 0) {
     const f = 900 + Math.random() * 900;
-    tone({ when, freq: f, to: f * 0.35, dur: 0.09, gain: 0.07, dest: reverb() || master });
+    tone({ when, freq: f, to: f * 0.35, dur: 0.09, gain: 0.168, dest: reverb() || master });
   },
   whisper(dur = 2.5) {
     if (!ctx()) return;
@@ -119,7 +125,7 @@ export const sfx = {
     const syll = Math.floor(dur / 0.22);
     const pan = Math.random() * 1.6 - 0.8;
     for (let i = 0; i < syll; i++) {
-      noiseHit({ when: i * 0.22 + Math.random() * 0.05, dur: 0.16, freq: 1800 + Math.random() * 2600, q: 6, gain: 0.05, dest: v, pan });
+      noiseHit({ when: i * 0.22 + Math.random() * 0.05, dur: 0.16, freq: 1800 + Math.random() * 2600, q: 6, gain: 0.13, dest: v, pan });
     }
   },
   scream() {
@@ -143,8 +149,8 @@ export const sfx = {
   },
   /** A porcelain cup sliding on a paper board over wood (the cầu cơ planchette). */
   slide(dur = 0.8, when = 0) {
-    noiseHit({ when, dur, freq: 900, q: 1.4, gain: 0.16 });
-    noiseHit({ when, dur: dur * 0.9, freq: 2600, q: 3, gain: 0.05 });
+    noiseHit({ when, dur, freq: 900, q: 1.4, gain: 0.32 });
+    noiseHit({ when, dur: dur * 0.9, freq: 2600, q: 3, gain: 0.1 });
   },
   /** The cup stops on a letter: a small porcelain clink on wood. */
   clink(when = 0) {
@@ -154,13 +160,13 @@ export const sfx = {
   },
   /** A wooden clog heel on a wooden floor: deep, booming. */
   heel(when = 0, dest = null) {
-    tone({ when, freq: 82, to: 48, dur: 0.32, gain: 0.7, dest: dest || reverb() || master });
-    noiseHit({ when, dur: 0.12, freq: 260, type: "lowpass", gain: 0.8, dest: dest || master });
+    tone({ when, freq: 82, to: 48, dur: 0.32, gain: 1.54, dest: dest || reverb() || master });
+    noiseHit({ when, dur: 0.12, freq: 260, type: "lowpass", gain: 1.76, dest: dest || master });
   },
   /** The heel dragged along the floor boards. */
   scrape(when = 0, dur = 0.45, dest = null) {
-    noiseHit({ when, dur, freq: 420, q: 0.9, gain: 0.28, dest: dest || master });
-    noiseHit({ when, dur: dur * 0.8, freq: 1100, q: 4, gain: 0.07, dest: dest || master });
+    noiseHit({ when, dur, freq: 420, q: 0.9, gain: 0.56, dest: dest || master });
+    noiseHit({ when, dur: dur * 0.8, freq: 1100, q: 4, gain: 0.14, dest: dest || master });
   },
   /** A knuckle on a table top: short and dry. */
   knuckle(when = 0, dest = null) {
@@ -173,8 +179,8 @@ export const sfx = {
     noiseHit({ when, dur: 0.18, freq: 180, type: "lowpass", gain: 0.45, dest: dest || master });
   },
   chat(when = 0, dest = null) {
-    noiseHit({ when, dur: 0.07, freq: 2600, q: 8, gain: 0.55, dest: dest || master });
-    tone({ when, freq: 1450, to: 1300, dur: 0.06, type: "square", gain: 0.06, dest: dest || master });
+    noiseHit({ when, dur: 0.07, freq: 2600, q: 8, gain: 0.88, dest: dest || master });
+    tone({ when, freq: 1450, to: 1300, dur: 0.06, type: "square", gain: 0.096, dest: dest || master });
   },
   /** The kèn (oboe) of the troupe, wailing a few notes, a little out of tune. */
   ken(when = 0, dur = 3, dest = null) {
@@ -186,7 +192,7 @@ export const sfx = {
       const t = ac.currentTime + when + i * (dur / n), f = notes[(i * 3 + 1) % notes.length] * (1 + (Math.random() - 0.5) * 0.02);
       const o = ac.createOscillator(); o.type = "sawtooth"; o.frequency.setValueAtTime(f, t); o.frequency.linearRampToValueAtTime(f * 0.97, t + dur / n);
       const bp = ac.createBiquadFilter(); bp.type = "bandpass"; bp.frequency.value = 1400; bp.Q.value = 2.5;
-      const g = ac.createGain(); env(g, t, 0.04, 0.05, dur / n);
+      const g = ac.createGain(); env(g, t, 0.04, 0.14, dur / n);
       o.connect(bp).connect(g).connect(v); o.start(t); o.stop(t + dur / n + 0.1); nodes.push(o);
     }
     return nodes;
@@ -204,7 +210,7 @@ export const sfx = {
       const o = ac.createOscillator(); o.type = "sine"; o.frequency.setValueAtTime(f * 0.99, t);
       const lfo = ac.createOscillator(); lfo.frequency.value = 5.5;
       const lg = ac.createGain(); lg.gain.value = 6; lfo.connect(lg).connect(o.frequency);
-      const g = ac.createGain(); env(g, t, 0.12, 0.06, step * 0.95);
+      const g = ac.createGain(); env(g, t, 0.12, 0.14, step * 0.95);
       o.connect(g).connect(v); o.start(t); lfo.start(t); o.stop(t + step + 0.2); lfo.stop(t + step + 0.2);
       nodes.push(o, lfo);
     });
