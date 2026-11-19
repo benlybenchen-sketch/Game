@@ -8,6 +8,7 @@ import { ghostFace } from "../case/art.js";
 
 let lv = 0;
 let timers = [];
+let preloaded = null;
 export const level = () => lv;
 const full = () => state.fear === "full";
 
@@ -23,6 +24,7 @@ export function setLevel(n, { quiet = false } = {}) {
   document.body.dataset.fear = state.fear;
   ambience(n);
   schedule();
+  if (n >= 3 && n < 5 && !preloaded) { preloaded = new Image(); preloaded.src = "img/ma.jpg"; }   // the scare must appear instantly
   if (!quiet && NOTES[n] && !state.scared["note" + n]) {
     state.scared["note" + n] = true; save();
     setTimeout(() => ghostWrite(NOTES[n]), 9000);
