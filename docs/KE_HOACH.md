@@ -31,7 +31,13 @@ Gợi ý: số 2 + số 3 (khác kiểu kinh dị và khác kiểu câu đố).
 Kinh thánh vụ án: docs/HS03_KINH_THANH.md. Giải mã là lối chơi trung tâm: 7 đêm, 7 tầng mật mã (Telex, Morse, tàng đầu,
 số Tô Châu kèm bảng 29 chữ, mã sách Kiều, chữ gương, quẻ họ Lâm). Có cơ chế "bản chép của bạn" để phát hiện giấy tờ bị sửa.
 
+## Hồ sơ 04: "Người mẹ khác" (đang thiết kế)
+Kinh thánh vụ án: docs/HS04_KINH_THANH.md. Đà Lạt 1996, hội chứng Capgras, sinh đôi soi gương. Người chơi là bác sĩ nội trú Vân (tên cố định, không có màn ký tên).
+Lối chơi mới: y lệnh có hậu quả (kết luận sai thì băng Thảo chậm và lè nhè dần), chồng ảnh và lật ngang, so vân tay, bản giám định cuối cùng.
+
 ## Ý tưởng khác đã đề xuất (chưa làm)
+Hồ sơ cuối series (để dành): "Hồ sơ của chính bạn" (meta, dùng dữ liệu chơi các hồ sơ trước, chỉ đọc trên máy).
+Thôi miên lần thứ bảy (trí nhớ giả), Người thứ năm (Fansipan), Bóng đè (ký túc xá 1991), Băng NightShot (Hang Khe Sim), Tổng đài 108, Thợ ảnh thờ, Nhà số 13 Hàng Mã.
 Tổng đài 108, Thợ ảnh thờ, Nhà xác ca 3, Tin nhắn lúc 3 giờ, Bùa ngải, Mù (chỉ âm thanh).
 
 ## Quy tắc âm thanh và cảnh doạ (áp dụng cho mọi hồ sơ từ nay về sau)
