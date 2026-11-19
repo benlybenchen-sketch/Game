@@ -21,5 +21,5 @@ Gợi ý: số 2 + số 3 (khác kiểu kinh dị và khác kiểu câu đố).
 - Cách B (nâng cấp): vài clip video AI 5–8 giây (Veo, Kling…) do người dùng tạo; code chồng lớp MiniDV và manh mối lên.
 
 ## Ảnh còn thiếu cho Hồ sơ 01
-Đã có: cover, studio, ending. Còn: ha, lua, gam, khanh, luc, bong, tung, ben_vong, thuyen, ve_tung, le_cung, cctv, vo_lua,
+Đã có: cover, studio, ending, thuyen, ve_tung, le_cung, cctv, vo_lua. Còn: ha, lua, gam, khanh, luc, bong, tung, ben_vong,
 lang_chim, go_mieu, tram_bom, ma, tay (prompt: docs/PROMPTS_ANH.md).

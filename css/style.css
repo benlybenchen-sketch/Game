@@ -124,9 +124,10 @@ h2 { font-family: var(--mono); font-size: 13px; letter-spacing: .15em; text-tran
 .doc--ledger { background-image: repeating-linear-gradient(transparent 0 27px, rgba(70,90,140,.18) 27px 28px); }
 .doc--notebook { background: transparent; box-shadow: none; padding: 0; color: var(--ink); }
 .vo { background: #efe7cf; color: var(--paper-ink); padding: 30px 34px; position: relative;
-  background-image: repeating-linear-gradient(transparent 0 23px, rgba(110,80,170,.28) 23px 24px), repeating-linear-gradient(90deg, transparent 0 23px, rgba(110,80,170,.12) 23px 24px);
+  background-image: url(../img/vo_lua.jpg), repeating-linear-gradient(transparent 0 23px, rgba(110,80,170,.28) 23px 24px), repeating-linear-gradient(90deg, transparent 0 23px, rgba(110,80,170,.12) 23px 24px);
+  background-size: 100% 100%, auto, auto; max-width: 600px; margin: 0 auto; aspect-ratio: 896 / 1200; padding: 14% 10% 12% 25%;
   box-shadow: 0 20px 50px rgba(0,0,0,.6); filter: sepia(.25); }
-.vo::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 40%; background: linear-gradient(transparent, rgba(110,80,40,.28)); pointer-events: none; }
+
 .ghost-ink { color: #8e1010 !important; font-family: var(--script); font-size: 22px; text-shadow: 0 0 1px rgba(142,16,16,.6); animation: bleed 4s ease-out both; }
 @keyframes bleed { from { opacity: 0; filter: blur(3px); } to { opacity: 1; filter: blur(.2px); } }
 
@@ -310,3 +311,4 @@ body[data-fear="soft"] .apparition { display: none; }
 @media (prefers-reduced-motion: reduce) {
   .grain, .tape.playing .reel, .cam-rec { animation: none !important; }
 }
+.vo .hand.child { font-size: clamp(15px, 2.4vw, 20px); line-height: 1.55; }

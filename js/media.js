@@ -332,8 +332,10 @@ function cctv(el) {
 
   function boat(tt) {
     const p = (tt - CAM.boat[0]) / (CAM.boat[1] - CAM.boat[0]);
-    const x = 600 - p * 760, y = 228 + Math.sin(tt * 1.3) * 2;
-    g.save(); g.translate(x, y);
+    const x = bg ? 660 - p * 560 : 600 - p * 760, y = (bg ? 268 : 228) + Math.sin(tt * 1.3) * 2;
+    g.save();
+    if (bg) { g.beginPath(); g.rect(262, 0, 400, 360); g.clip(); }   // the wall on the left hides the boat
+    g.translate(x, y);
     // wake
     g.strokeStyle = "rgba(70,74,70,.6)"; g.lineWidth = 2;
     for (let i = 0; i < 4; i++) { g.beginPath(); g.moveTo(150 + i * 25, 18 + i * 3); g.lineTo(190 + i * 40, 14 + i * 8); g.stroke(); }
@@ -358,7 +360,7 @@ function cctv(el) {
 
   function ghost(tt, big) {
     g.save();
-    const x = big ? 330 : 300, y = big ? 200 : 214, s = big ? 3.2 : 1;
+    const x = big ? 360 : bg ? 452 : 300, y = big ? 250 : bg ? 238 : 214, s = big ? 3.2 : 1;
     g.translate(x, y); g.scale(s, s);
     g.fillStyle = "rgb(36,37,36)";
     g.beginPath(); g.arc(0, -16, 4, 0, Math.PI * 2); g.fill();
@@ -461,7 +463,17 @@ function darkroom(el) {
     }
   }
 
+  // Plates on four of the real posts in img/le_cung.jpg (canvas coords). The 0712 post has only a slack rope under it.
+  function photoPlates() {
+    [["0318", 405, true], ["0215", 448, true], ["0792", 507, true], ["0712", 649, false]].forEach(([n, x, boat]) => {
+      g.fillStyle = "rgb(16,15,13)"; g.fillRect(x - 13, 114, 26, 10);
+      g.fillStyle = "rgb(30,29,27)"; g.font = "bold 8px 'IBM Plex Mono', monospace"; g.fillText(n, x - 11, 122);
+      if (!boat) { g.strokeStyle = "rgb(24,22,20)"; g.lineWidth = 1; g.beginPath(); g.moveTo(x + 2, 124); g.quadraticCurveTo(x + 14, 150, x + 30, 146); g.stroke(); }
+    });
+  }
+
   function overlay(rand) {
+    if (bg) { photoPlates(); face(230, 345); stampDate(); return; }
     // far side of the cove: the bến Mới jetty with numbered mooring posts
     g.fillStyle = "rgba(9,9,9,.85)"; g.fillRect(380, 168, 470, 52);
     g.fillStyle = "rgb(17,15,13)"; g.fillRect(380, 200, 470, 6);           // jetty planks
@@ -480,16 +492,19 @@ function darkroom(el) {
         g.beginPath(); g.moveTo(x + 6, 190); g.quadraticCurveTo(x + 20, 214, x + 34, 212); g.stroke();
       }
     });
-    // a pale face just under the water among the lanterns, only for those who look hard (negative + high exposure)
-    const fx = 470, fy = 400;
+    face(470, 400); stampDate();
+  }
+
+  // a pale face just under the water among the lanterns, only for those who look hard (negative + high exposure)
+  function face(fx, fy) {
     const fg = g.createRadialGradient(fx, fy, 2, fx, fy, 26);
     fg.addColorStop(0, "rgba(26,27,28,.9)"); fg.addColorStop(1, "rgba(14,14,15,0)");
     g.fillStyle = fg; g.beginPath(); g.ellipse(fx, fy, 20, 26, 0, 0, Math.PI * 2); g.fill();
     g.fillStyle = "rgb(9,9,10)"; g.beginPath(); g.ellipse(fx - 7, fy - 4, 4, 3, 0, 0, Math.PI * 2); g.ellipse(fx + 7, fy - 4, 4, 3, 0, 0, Math.PI * 2); g.fill();
-    // date imprint of the film camera
+  }
+  function stampDate() {  // date imprint of the film camera
     g.fillStyle = "rgba(255,150,40,.9)"; g.font = "bold 22px 'IBM Plex Mono', monospace";
     g.fillText("'03 8 12", 760, 575);
-    void rand;
   }
 
   function draw() {
