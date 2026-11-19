@@ -1,7 +1,7 @@
 # Hồ sơ 04 · "NGƯỜI MẸ KHÁC" · KINH THÁNH VỤ ÁN
 Tài liệu nội bộ, chứa toàn bộ lời giải. Mọi tài liệu, băng ghi âm và câu hỏi trong game phải khớp với file này.
 
-> **Một câu:** Đà Lạt, 1996. Một cô gái bị đưa vào bệnh viện tâm thần vì khăng khăng người mẹ đi Sài Gòn về "không phải mạ". Người chơi là **bác sĩ nội trú Vân**, được giao ký giấy giám định cho cô. Chữ ký ấy sẽ quyết định cô bị nhốt suốt đời, hay người đàn bà kia bị lột mặt nạ. Mọi bằng chứng đều nói cô bệnh. Và cô đúng là bệnh. Nhưng cô cũng nói đúng.
+> **Một câu:** Đà Lạt, 1996. Một cô gái bị đưa vào bệnh viện tâm thần vì khăng khăng người mẹ đi Sài Gòn về "không phải mạ". Người chơi là **bác sĩ nội trú Lê Bích Vân**, được giao ký giấy giám định cho cô. Chữ ký ấy sẽ quyết định cô bị nhốt suốt đời, hay người đàn bà kia bị lột mặt nạ. Mọi bằng chứng đều nói cô bệnh. Và cô đúng là bệnh. Nhưng cô cũng nói đúng.
 
 ---
 
@@ -30,7 +30,7 @@ Nỗi sợ của hồ sơ này là **không biết ai điên**: người bệnh,
 
 | Người | Tuổi | Mô tả | Vai trò thật |
 |---|---|---|---|
-| **Bác sĩ Nguyễn Thanh Vân** (người chơi) | 27 | Bác sĩ nội trú tâm thần năm 2, mới về khoa Nữ 2 từ 14/10 | Người ký giám định |
+| **Bác sĩ Lê Bích Vân** (người chơi) | 27 | Bác sĩ nội trú tâm thần năm 2, mới về khoa Nữ 2 từ 14/10 | Người ký giám định |
 | **Trần Ngọc Thảo** | 24 | Bán hoa ở chợ Đà Lạt, đàn piano giỏi, gầy, tóc ngắn ngang vai. Tai nạn xe máy ở đèo Prenn ngày 15/2/1996 | **Thật sự mắc Capgras** (với người yêu cũ, với con chó lúc đầu), **và nói đúng về mẹ** |
 | **Lê Thị Hoa** | 52 (sinh 14/3/1944, Huế) | Mẹ Thảo, thợ may áo dài ở đường Phan Đình Phùng. Giọng Huế, gọi mình là **"mạ"**. Góa chồng từ 1975, vẫn đeo nhẫn cưới. Dị ứng tôm nặng từ 1985. Mổ ruột thừa năm 1970. Nốt ruồi ở **khoé miệng trái**, xoáy tóc **xoay theo chiều kim đồng hồ**, thuận tay phải | **Đã chết** ở Sài Gòn ngày 18/6/1996 |
 | **Phạm Thị Huệ** (khai sinh Lê Thị Huệ) | 52 | **Em sinh đôi cùng trứng của Hoa**, cho làm con nuôi năm 1945. Lớn lên ở Khánh Hội, Sài Gòn. Nợ nần, chồng chết. Nốt ruồi ở **khoé miệng phải**, xoáy tóc **ngược chiều kim đồng hồ**, **thuận tay trái** (sinh đôi soi gương) | **"Bà Hoa" hiện tại.** Hung thủ |
