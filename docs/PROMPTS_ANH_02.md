@@ -1,164 +1,197 @@
-# Ảnh cho Hồ sơ 02 "Đêm giỗ Tổ": prompt để dán vào Google AI Studio (Nano Banana Pro)
+# Ảnh cho Hồ sơ 02 "Đêm giỗ Tổ" · bản 2 (đồng bộ nhân vật, tăng kinh dị)
 
-**Cách làm giống Hồ sơ 01:** dán prompt tiếng Anh, chọn đúng tỉ lệ, tải ảnh về, đổi đúng tên file, rồi gửi lên chat. Thiếu ảnh nào thì game dùng hình vẽ thay thế.
-Mỗi prompt đã có sẵn câu "no text, no letters, no numbers, no watermark". Giữ nguyên câu đó.
-
-**Bối cảnh chung:** hát bội (tuồng) miền Tây Nam Bộ năm 1993, đình làng lợp ngói, sân khấu gỗ dựng tạm, đèn măng-sông và bóng điện vàng.
-**Vẽ mặt:** Quan Công mặt đỏ, râu dài đen, áo bào xanh lá; Châu Thương mặt đen, áo xanh dương, cầm đại đao; Khổng Tú và Tần Kỳ mặt trắng.
-
-## ⚠ Ba ảnh quan trọng nhất cho câu đố (ảnh 11, 12, 13)
-Đây là ảnh **Châu Thương cầm đao**. Manh mối nằm ở **bàn tay phải**: ảnh 11 và 13 tay phải **quấn băng gạc trắng**, ảnh 12 tay phải **để trần**.
-Khi nhân vật quay mặt ra máy ảnh, tay phải của anh ta nằm **bên trái khung hình**. AI hay vẽ sai tay, nên bạn kiểm tra kỹ, sai thì tạo lại.
+## Cách làm để ảnh không lệch nhau
+1. **Tạo ảnh mẫu trước (bước 0).** Tạo ảnh `00_mau_nhan_vat` bên dưới. Ảnh này không đưa vào game, chỉ dùng làm mẫu.
+2. **Ở mọi ảnh có nhân vật hát bội**, bấm nút **đính kèm ảnh** trong AI Studio và gắn ảnh mẫu đó vào. Prompt đã có câu *"Match the costumes and face paint of the attached reference sheet exactly"*.
+3. **Không sửa các đoạn viết HOA** ([QUAN CONG], [CHAU THUONG], [STYLE VHS]…). Các đoạn đó được chép y nguyên vào mọi prompt để AI giữ đúng màu và trang phục.
+4. Tạo ảnh trong **cùng một cuộc trò chuyện** trên AI Studio. Ảnh sau sẽ "nhớ" ảnh trước. Ảnh nào lệch màu áo hay sai tay cầm đao thì bảo AI: *"Same image but fix: …"*.
+5. Đổi tên file đúng như ghi ở từng mục rồi gửi lên chat.
 
 ---
 
-## A. Bìa và băng VHS (đêm diễn 27/9/1993)
-Ảnh VHS nên trông như hình chụp từ băng video gia đình đời 1990: màu lem, nhiễu, hơi mờ. Giao diện REC, giờ, ngày do code tự vẽ, **đừng để AI vẽ chữ**.
+## Bảng nhân vật (đã được chép sẵn vào các prompt bên dưới)
+
+| Nhân vật | Mặt | Trang phục | Đạo cụ |
+|---|---|---|---|
+| **Quan Công** (Kép Kiệt) | Son **đỏ thẫm** phủ kín mặt, mày đen vẽ xếch lên, **râu đen thẳng dài tới ngực** | Áo bào **xanh lá đậm** thêu rồng vàng, mũ kim khôi xanh lá có **quả cầu nhung đỏ**, sau lưng 4 lá **cờ tam giác xanh lá viền vàng** | tay không |
+| **Châu Thương** (Ba Thông / Tư Hòa) | Sơn **đen bóng** kín mặt, **mày trắng dày**, viền mắt trắng, râu xồm đen ngắn | Áo bào **xanh dương đậm** viền bạc, khăn chít đầu đen có **một quả cầu nhung đỏ** | cầm **Thanh Long đao**: cán gỗ nâu sẫm, lưỡi bạc hình trăng khuyết, đầu rồng xanh ở chân lưỡi |
+| **Khổng Tú / Tần Kỳ** (Lợi) | Phấn **trắng bệch**, mày đen mảnh, môi đỏ | Áo bào **tím** | gươm |
+| **Phu nhân** (Út Nhàn) | Phấn hồng nhạt | Áo cung đình **hồng phấn và trắng**, mũ kết hạt cườm | |
+| **Sân khấu** | | Sàn ván gỗ; phông **nhung đỏ sẫm viền tua vàng**; hai bóng đèn tròn vàng treo trần và đèn dầu; cánh gà trái có trống chiến lớn; trước sân khấu là trống chầu trên giá ba chân, ông già áo dài đen khăn đóng ngồi cạnh | |
+
+---
+
+### 00. `00_mau_nhan_vat.jpg`, tỉ lệ 16:9 (ảnh mẫu, không đưa vào game)
+```
+Character reference sheet, plain dark grey background, full body front view, three Vietnamese hát bội (classical opera) actors standing side by side, 1993:
+[QUAN CONG] face fully painted deep crimson red, black eyebrows painted sweeping upward, long straight black beard reaching the chest, dark green brocade robe with gold dragon embroidery, dark green helmet with red velvet pompoms, four triangular dark green flags with gold borders on his back, empty hands.
+[CHAU THUONG] face fully painted glossy black, thick white eyebrows, white outlines around the eyes, short bushy black beard, dark royal blue robe with silver trim, black cloth turban with one red velvet pompom, holding a guandao halberd in his right hand: dark brown wooden shaft, silver crescent blade, green dragon head at the base of the blade.
+[KHONG TU] face painted chalk white, thin black eyebrows, red lips, purple robe, holding a sword.
+Even studio light, sharp, realistic, accurate costumes. No text, no letters, no numbers, no watermark.
+```
+
+---
+
+## Đoạn phong cách dùng chung (đã chép vào từng prompt)
+- **[STYLE VHS]** = `Frame grabbed from a 1993 home VHS camcorder tape, 4:3, filmed from the audience, soft focus, color bleeding, horizontal noise lines, crushed blacks, warm yellow tungsten light from bare bulbs, highlights slightly blown out, ominous and unsettling atmosphere.`
+- **[STYLE FLASH]** = `35mm Konica color negative film snapshot, harsh on-camera flash, subject lit flat while the background falls into deep black, heavy grain, slightly warm color cast, 1993.`
+- **[STAGE]** = `a makeshift wooden opera stage inside a Mekong Delta village communal house at night: wooden plank floor, dark red velvet backdrop curtain with gold fringe, two bare yellow light bulbs hanging from the roof, kerosene lamps at the edge, incense smoke drifting.`
+- Kết thúc mọi prompt bằng: `No text, no letters, no numbers, no watermark.`
+
+---
+
+## A. Băng VHS đêm diễn
 
 ### 1. `cover.jpg`, tỉ lệ 16:9
 ```
-Cinematic horror film still, 1993, a village communal house (đình) in the Mekong Delta at night, a makeshift wooden theater stage lit by yellow bulbs and kerosene lamps. On the stage a hát bội (Vietnamese classical opera) actor playing Quan Công, face painted deep red, long black beard, green embroidered robe, is bent backwards like a bow, rigid, arms clawing at his face, his mouth stretched into a terrible grin. In the foreground, out of focus, a large wooden ceremonial drum on a stand with two drumsticks lying on it. Dark red curtains, smoke of incense, the audience as black silhouettes. Film grain, deep shadows, red and green palette, deeply unsettling. No text, no letters, no numbers, no watermark.
+Match the costumes and face paint of the attached reference sheet exactly. Cinematic horror film still. [STAGE] Center stage: [QUAN CONG] face fully painted deep crimson red, long straight black beard, dark green brocade robe with gold dragons, dark green helmet with red pompoms, four dark green flags on his back. He is bent backwards rigidly like a bow, only head and heels touching the floor, fingers clawed toward his own face, mouth stretched into a terrible frozen grin, eyes wide open staring at the dark right wing of the stage. In the right wing, barely visible in the shadow, a second identical Quan Cong figure stands perfectly still. Foreground left, out of focus: a ceremonial drum on a tripod with two drumsticks lying on it. Deep shadows, red and green palette, film grain. No text, no letters, no numbers, no watermark.
 ```
 
 ### 2. `vhs_dinh.jpg`, tỉ lệ 4:3
 ```
-Frame grabbed from a 1993 home VHS camcorder recording at night: the yard of a Vietnamese village communal house in the Mekong Delta, hundreds of villagers sitting on wooden benches and mats facing a lit wooden stage, children, conical hats, smoke, string lights. Washed-out colors, VHS noise and color bleeding, slight blur. No text, no timestamp, no letters, no numbers, no watermark.
+[STYLE VHS] The yard of a Vietnamese village communal house with a curved tiled roof at night, hundreds of villagers on wooden benches and straw mats facing a lit opera stage in the distance, children, conical hats, strings of small bulbs, incense smoke. Faces of the crowd half in shadow, one old woman in the foreground turned around staring straight into the camera. No text, no letters, no numbers, no watermark.
 ```
 
 ### 3. `vhs_lop1.jpg`, tỉ lệ 4:3
 ```
-Frame grabbed from a 1993 VHS camcorder recording, filmed from the audience: a hát bội Vietnamese classical opera stage, three actors in heavy traditional face paint and embroidered costumes with flags on their backs: one with a red face and long black beard in green (Quan Công), one with a black painted face in blue holding a long guandao halberd, one with a chalk-white painted face in purple. Red curtains, yellow bulbs. VHS noise, color bleeding. No text, no timestamp, no letters, no numbers, no watermark.
+Match the costumes and face paint of the attached reference sheet exactly. [STYLE VHS] [STAGE] Three actors: on the left [QUAN CONG] deep crimson red face, long straight black beard, dark green brocade robe, dark green helmet with red pompoms, dark green flags on his back; in the middle [CHAU THUONG] glossy black face, thick white eyebrows, dark royal blue robe, black turban with one red pompom, holding a guandao halberd with a silver crescent blade in his right hand, his right hand wrapped in white gauze bandage; on the right [KHONG TU] chalk white face, purple robe. No text, no letters, no numbers, no watermark.
 ```
 
 ### 4. `vhs_nghi.jpg`, tỉ lệ 4:3
 ```
-Frame from a 1993 VHS camcorder recording: an empty wooden opera stage during an interval, dark red curtains half closed, a long halberd leaning on a wooden chair, at the left side of the stage two musicians in shadow beating a war drum, the right wing of the stage completely dark. Yellow bulbs, dust in the light. VHS noise, color bleeding, eerie stillness. No text, no timestamp, no letters, no numbers, no watermark.
+[STYLE VHS] [STAGE] The stage is empty during an interval, the red curtain half drawn. A guandao halberd with a silver crescent blade leans against a wooden chair center stage. On the left edge, two musicians in shadow beat a large war drum. The right wing of the stage is pitch black, and deep inside that blackness there is a faint red oval like a painted face, almost invisible. Dust floating in the bulb light. No text, no letters, no numbers, no watermark.
 ```
 
 ### 5. `vhs_lop2.jpg`, tỉ lệ 4:3
 ```
-Frame from a 1993 VHS camcorder recording of a hát bội battle scene: a red-faced general with a long beard in green robes swings a guandao halberd at a white-faced enemy general, a black-faced warrior in blue stands behind, two women in court costumes at the back. Motion blur, red curtains, yellow bulbs. VHS noise and color bleeding. No text, no timestamp, no letters, no numbers, no watermark.
+Match the costumes and face paint of the attached reference sheet exactly. [STYLE VHS] [STAGE] Battle scene, motion blur: [QUAN CONG] deep crimson red face, long straight black beard, dark green brocade robe and helmet with red pompoms, sweeping an arm toward [KHONG TU] chalk white face, purple robe, who stumbles back. Behind them [CHAU THUONG] glossy black face, thick white eyebrows, dark royal blue robe, black turban with one red pompom, holding the guandao halberd, standing stiffly and awkwardly as if unsure of his part. Two court ladies in pale pink and white robes at the back. No text, no letters, no numbers, no watermark.
 ```
 
 ### 6. `vhs_lop3.jpg`, tỉ lệ 4:3
 ```
-Frame from a 1993 VHS camcorder recording: hát bội opera, the red-faced Quan Công actor in green armor standing center stage singing, sweat shining on the red face paint, a black-faced warrior in blue with a halberd behind him, a white-faced enemy general kneeling. Yellow bulbs, smoke. VHS noise, color bleeding. No text, no timestamp, no letters, no numbers, no watermark.
+Match the costumes and face paint of the attached reference sheet exactly. [STYLE VHS] [STAGE] [QUAN CONG] deep crimson red face, long straight black beard, now in dark green armor with gold scales and the same dark green helmet with red pompoms, singing center stage, sweat running through the red paint, his eyes strangely unfocused. Behind him [CHAU THUONG] glossy black face, thick white eyebrows, dark royal blue robe, black turban with one red pompom, holding the guandao halberd, right hand wrapped in white gauze. [TAN KY] chalk white face, purple robe, kneeling. No text, no letters, no numbers, no watermark.
 ```
 
 ### 7. `vhs_guc.jpg`, tỉ lệ 4:3 (kinh dị)
 ```
-Frame from a 1993 VHS camcorder recording, horror: on a wooden opera stage the red-faced Quan Công actor lies on his back, his body arched rigidly upward like a bow, only his head and heels touching the floor, fingers clawed, red face paint smeared with scratches, mouth pulled into a rigid grin. Other actors in painted faces rush in from the sides, some frozen in fear, the audience standing up in silhouette. Motion blur, harsh yellow light, VHS noise. Disturbing but not gory. No text, no timestamp, no letters, no numbers, no watermark.
+Match the costumes and face paint of the attached reference sheet exactly. [STYLE VHS] [STAGE] Horror: [QUAN CONG] deep crimson red face paint smeared and scratched with long finger marks, long black beard, dark green armor and helmet with red pompoms, lies on the wooden floor with his back arched rigidly upward like a bow, only his head and heels touching the boards, his fingers clawed, his jaw locked in a wide rigid grin, eyes rolled toward the right wing. Actors in painted faces (glossy black face in royal blue, chalk white face in purple) rush in but freeze a step away, afraid to touch him. The audience stands up as dark silhouettes. Harsh yellow light, motion blur. Disturbing, not gory. No text, no letters, no numbers, no watermark.
 ```
 
 ### 8. `vhs_ma.jpg`, tỉ lệ 4:3 (kinh dị)
 ```
-Frame from a 1993 VHS camcorder recording, extremely dark: the right wing of a wooden opera stage, almost black, and standing in the darkness a tall figure in a full old-fashioned Quan Công costume, green robe, long black beard, face painted blood red, perfectly still, staring straight into the camera with black empty eyes. Heavy VHS noise and tracking lines. Terrifying, minimal. No text, no timestamp, no letters, no numbers, no watermark.
+Match the costumes and face paint of the attached reference sheet exactly. [STYLE VHS] The camera has panned to the right wing of the stage, almost completely black. Standing in the darkness, lit only by a thin slice of yellow bulb light: [QUAN CONG] face fully painted deep crimson red, long straight black beard, dark green brocade robe with gold dragons faded and old, dark green helmet with red pompoms, perfectly still, arms at his sides, staring straight into the lens with completely black eyes. The robe looks old and damp. Heavy VHS noise and tracking lines. No text, no letters, no numbers, no watermark.
 ```
 
 ---
 
-## B. Ảnh hiện trường và bằng chứng
+## B. Ảnh phim của Phát (chụp flash, 3 ảnh quan trọng nhất)
+**⚠ Kiểm tra kỹ:** Châu Thương quay mặt ra máy ảnh, nên **tay phải nằm bên trái khung hình**. Đao phải nằm trong tay đó.
 
-### 9. `buong_tro.jpg`, tỉ lệ 16:9
+### 11. `anh_09.jpg`, tỉ lệ 4:3 (QUAN TRỌNG: tay phải có băng)
 ```
-Police evidence photograph taken in the morning, 1993: the inside of a makeshift dressing room of a Vietnamese traditional opera troupe, a thatched-roof shed with bamboo walls. At the center back a high wooden altar to the patron saint of theater with three small blue-and-white porcelain tea cups in a row, an incense bowl, betel leaves. Left of the altar a roast pig head offering on a tray, rotting. On the far left a small wooden mirror on the wall and a low makeup table with many little dishes of red, black and white face paint. On the right a heavy old wooden trunk with a brass padlock. A long guandao halberd leaning on the wall. In the bottom right corner a rolled straw mat and a blanket. A back door of woven bamboo, half open, on the far right. Flat flash light, documentary style. No text, no letters, no numbers, no watermark.
-```
-
-### 10. `cho_chet.jpg`, tỉ lệ 4:3 (ghê)
-```
-Grim documentary photograph, 1993, rural Vietnam, morning: a dead yellow village dog lying on its side in wet mud behind a bamboo wall, body rigid, legs stretched stiffly backwards, neck bent back, lips pulled back baring all its teeth as if grinning. A line of red fire ants crawling into its mouth and nostrils. Tea leaves in the mud. Flat flash light. Disturbing, not bloody. No text, no letters, no numbers, no watermark.
+Match the costumes and face paint of the attached reference sheet exactly. [STYLE FLASH] Medium shot from the audience: [CHAU THUONG] face fully painted glossy black, thick white eyebrows, white outlines around the eyes, short bushy black beard, dark royal blue robe with silver trim, black turban with one red velvet pompom. He faces the camera and holds the guandao halberd (dark brown wooden shaft, silver crescent blade, green dragon head) raised diagonally in his RIGHT hand, which appears on the LEFT side of the picture. That right hand is wrapped completely in thick white gauze bandage, only the fingertips showing. His left hand is bare. Dark red curtain behind, falling to black. No text, no letters, no numbers, no watermark.
 ```
 
-### 11. `anh_09.jpg`, tỉ lệ 4:3 (QUAN TRỌNG)
+### 12. `anh_14.jpg`, tỉ lệ 4:3 (QUAN TRỌNG: tay phải để trần)
 ```
-35mm color film snapshot taken with flash from the audience in 1993: a hát bội opera actor playing Châu Thương, face fully painted glossy black with white eyebrows, blue embroidered costume with flags on his back, holding a long guandao halberd raised. His RIGHT hand (on the left side of the picture, as he faces the camera) is wrapped completely in a thick white gauze bandage, only the fingertips showing, gripping the halberd shaft. Red curtain background. Film grain, slight motion blur. No text, no letters, no numbers, no watermark.
-```
-
-### 12. `anh_14.jpg`, tỉ lệ 4:3 (QUAN TRỌNG)
-```
-35mm color film snapshot taken with flash from the audience in 1993: a young hát bội opera actor playing Châu Thương, face painted black with white eyebrows (the paint a little uneven), blue embroidered costume with flags on his back, holding a long guandao halberd. His RIGHT hand (on the left side of the picture, as he faces the camera) is bare, no bandage, clearly visible skin gripping the halberd shaft. His eyes look nervous. Red curtain background. Film grain. No text, no letters, no numbers, no watermark.
+Match the costumes and face paint of the attached reference sheet exactly. [STYLE FLASH] Medium shot from the audience: [CHAU THUONG] face painted glossy black but slightly uneven and patchy at the jaw, thick white eyebrows, white outlines around the eyes, short bushy black beard, dark royal blue robe with silver trim, black turban with one red velvet pompom. He faces the camera and holds the guandao halberd (dark brown wooden shaft, silver crescent blade, green dragon head) raised diagonally in his RIGHT hand, which appears on the LEFT side of the picture. Both hands are BARE, no bandage at all, skin clearly visible gripping the shaft. Behind the black paint his eyes look young and frightened. Dark red curtain behind, falling to black. No text, no letters, no numbers, no watermark.
 ```
 
-### 13. `anh_17.jpg`, tỉ lệ 4:3 (QUAN TRỌNG)
+### 13. `anh_17.jpg`, tỉ lệ 4:3 (QUAN TRỌNG: tay phải có băng)
 ```
-35mm color film snapshot taken with flash in 1993: a hát bội opera actor playing Châu Thương, face painted glossy black with white eyebrows, blue costume, swinging a guandao halberd in a confident pose, his RIGHT hand (on the left side of the picture) wrapped in a white gauze bandage, slightly stained. Behind him the red-faced Quan Công in green. Red curtain, yellow light. Film grain. No text, no letters, no numbers, no watermark.
+Match the costumes and face paint of the attached reference sheet exactly. [STYLE FLASH] Medium shot from the audience: [CHAU THUONG] face fully painted glossy black, thick white eyebrows, white outlines around the eyes, short bushy black beard, dark royal blue robe with silver trim, black turban with one red velvet pompom, in a confident fighting pose, holding the guandao halberd in his RIGHT hand (on the LEFT side of the picture). That right hand is wrapped in white gauze bandage, slightly stained. His eyes are calm and cold. Behind him, out of focus, [QUAN CONG] deep crimson red face, black beard, dark green armor, swaying unsteadily. No text, no letters, no numbers, no watermark.
 ```
 
 ### 14. `anh_19.jpg`, tỉ lệ 4:3
 ```
-Accidental 35mm flash photograph, almost completely black: the dark right wing of a wooden stage, a sliver of red curtain at the edge, and deep in the darkness, barely visible, a pale red oval like a painted face. Underexposed, heavy grain. No text, no letters, no numbers, no watermark.
+[STYLE FLASH] An accidental, badly underexposed photo of the dark right wing of the stage: almost entirely black, a sliver of dark red curtain at the left edge, and deep in the darkness, catching the very edge of the flash, a red painted face and a long black beard, too high up, as if the figure were standing on something. Heavy grain. No text, no letters, no numbers, no watermark.
+```
+
+---
+
+## C. Hiện trường và bằng chứng
+
+### 9. `buong_tro.jpg`, tỉ lệ 16:9
+```
+[STYLE FLASH] Police evidence photograph at dawn: interior of a makeshift dressing room of a traditional opera troupe, a thatched shed with bamboo-strip walls, wide angle, everything visible. Back center: a high wooden altar with three small blue-and-white porcelain tea cups in a row, the middle cup with grey residue, an incense bowl with burnt-out sticks, betel leaves, two oil lamps. Left of the altar: a roasted pig head on a tray, rotting, flies on it. Far left on the wall: a small wooden-framed mirror with tarnished silvering, below it a low makeup table covered with little dishes of red, black and white face paint and brushes. On the right: a heavy old dark wooden trunk with a brass padlock. Upper middle: a guandao halberd leaning on the wall. Bottom right corner: a rolled straw mat and a crumpled blanket. Far right: a back door of woven bamboo half open onto darkness. Flat flash, harsh shadows, oppressive. No text, no letters, no numbers, no watermark.
+```
+
+### 10. `cho_chet.jpg`, tỉ lệ 4:3 (ghê)
+```
+[STYLE FLASH] Grim police evidence photo, early morning: a dead yellow village dog on wet mud behind a bamboo wall, body rigid, legs stretched stiffly backward, neck bent back toward its spine, lips pulled back baring all the teeth in a grin, eyes open and dull. A line of red fire ants crawling into its mouth and nostrils. Wet tea leaves in the mud. On the bamboo wall behind, a faint red handprint. Disturbing, not bloody. No text, no letters, no numbers, no watermark.
 ```
 
 ### 15. `chuot.jpg`, tỉ lệ 4:3 (ghê)
 ```
-Close-up police evidence photograph: an old glass jar with a rusty tin lid on a wooden table, inside three dead dried rats, their bodies rigidly arched backwards, legs stretched stiff, mouths open baring teeth, bread crumbs and grey powder at the bottom. Flat flash, disgusting, documentary. No text, no letters, no numbers, no label, no watermark.
+[STYLE FLASH] Close-up police evidence photo on a wooden table: an old glass jar with a rusty tin lid, inside three dead dried rats, bodies arched rigidly backward, legs stiff, mouths open baring yellow teeth, fur matted, bread crumbs and grey powder at the bottom, condensation on the glass. Repulsive, documentary. No text, no letters, no numbers, no label, no watermark.
 ```
 
 ### 16. `thuy_ve.jpg`, tỉ lệ 4:3
 ```
-A child's colored-pencil drawing on cheap school paper by a 12-year-old: a dark room with a small altar holding three tea cups, the middle cup colored grey, and a tall man standing barefoot in a blue robe whose face is a completely blank white oval with no eyes, no nose, no mouth; his right hand is wrapped in white cloth and his left hand sprinkles something into the middle cup. In the corner a small girl lying under a blanket with big frightened eyes. Shaky childish lines, eerie. No text, no letters, no numbers, no watermark.
+A child's colored-pencil drawing on cheap lined school paper by a frightened 12-year-old girl: a dark room colored with heavy black pencil, a small brown altar with three tea cups, the middle cup colored grey. A tall barefoot man in a dark blue robe whose face is a completely blank white oval with NO eyes, NO nose, NO mouth; his right hand is wrapped in white cloth, his left hand sprinkles grey dots into the middle cup. In the corner a tiny girl under a blanket, only her big eyes showing. Shaky lines, some red pencil scribbles, the paper wrinkled and smudged. No text, no letters, no numbers, no watermark.
 ```
 
 ---
 
-## C. Chân dung
+## D. Chân dung
 
 ### 17. `kiet.jpg`, tỉ lệ 3:4
 ```
-1990s Vietnamese color portrait photograph, slightly faded: a handsome 38-year-old Vietnamese stage actor from the Mekong Delta, confident smile, slicked-back hair, white shirt, studio background. Not a real person. No text, no letters, no numbers, no watermark.
+1990s Vietnamese studio portrait photo, slightly faded color: a handsome 38-year-old Mekong Delta opera actor, confident charming smile, slicked-back black hair, white shirt with an open collar, light blue backdrop. Not a real person. No text, no letters, no numbers, no watermark.
 ```
 
 ### 18. `thong.jpg`, tỉ lệ 3:4
 ```
-1993 Vietnamese police record photograph: a 35-year-old Vietnamese man, a traditional opera actor, lean face, calm cold eyes, a small red mole about one centimeter below the outer corner of his LEFT eye, his right hand wrapped in white gauze held near his chest, plain grey wall. Flat flash, realistic, unsettling calm. Not a real person. No text, no letters, no numbers, no watermark.
+[STYLE FLASH] 1993 police record photo against a plain grey wall: a 35-year-old Vietnamese man, lean face, short black hair, plain light grey shirt, a small bright red mole one centimeter below the outer corner of his LEFT eye (right side of the picture), a horizontal scar across the back of his left hand, his right hand wrapped in white gauze held against his chest. Expression completely calm, eyes cold, the faintest smile. Not a real person. No text, no letters, no numbers, no watermark.
 ```
 
 ### 19. `hai_lanh.jpg`, tỉ lệ 3:4
 ```
-Very old 1962 black-and-white photograph, scratched and water-stained: a Vietnamese hát bội opera actor in full Quan Công costume, painted face (dark in black and white), long black beard, ornate helmet with pompoms, staring intensely into the camera. Studio portrait, deep shadows, slightly creepy. Not a real person. No text, no letters, no numbers, no watermark.
+Very old 1962 black-and-white photograph, scratched, water-stained, corners torn: a Vietnamese hát bội actor in the full Quan Cong costume (painted face appearing dark grey, long straight black beard, embroidered robe, helmet with pompoms, triangular flags behind), studio portrait, staring intensely at the viewer, the eyes slightly too bright. Not a real person. No text, no letters, no numbers, no watermark.
 ```
 
 ---
 
-## D. Kết và các cảnh doạ (chỉ hiện khi chọn "Mức rợn: Đầy đủ")
+## E. Kết và các cảnh doạ (chỉ hiện khi chọn "Mức rợn: Đầy đủ")
+Các ảnh doạ dùng chung khuôn mặt Quan Công cho nhất quán: **son đỏ thẫm, râu đen thẳng, mắt đen đặc**.
 
 ### 20. `ket.jpg`, tỉ lệ 16:9
 ```
-Night, an empty Vietnamese village communal house (đình) after a festival, the wooden stage dark and deserted, a single oil lamp burning. In the foreground a large traditional ceremonial drum on a wooden stand; on its pale drum skin, three fresh bloody red handprints. Incense smoke drifting. Silent, haunting, film grain. No text, no letters, no numbers, no watermark.
+[STAGE] The same stage now empty and dark after midnight, only one kerosene lamp still burning. Foreground center: a large ceremonial drum on a wooden tripod; on its pale drum skin, three fresh red handprints, dripping. Behind it, at the back of the stage, a dark green Quan Cong robe hangs from a beam like a person, its sleeves moving slightly. Incense smoke, silence, film grain. No text, no letters, no numbers, no watermark.
 ```
 
 ### 21. `vhs_ma_close.jpg`, tỉ lệ 1:1 (doạ)
 ```
-Extreme close-up horror image with VHS noise: the face of a hát bội opera actor painted blood red, the paint cracked like dry earth, long black beard, eyes completely black and glossy, mouth stretched into a rigid grin showing teeth, staring straight into the lens out of total darkness. Terrifying, not gory. No text, no letters, no numbers, no watermark.
+Match the face paint of the attached reference sheet. [STYLE VHS] Extreme close-up out of total darkness: the Quan Cong face, deep crimson red paint cracked like dry mud, long straight black beard, dark green helmet edge with a red pompom, eyes completely black and wet, mouth stretched into a rigid grin showing teeth, pressed almost against the lens. Heavy VHS noise. Terrifying, not gory. No text, no letters, no numbers, no watermark.
 ```
 
 ### 22. `mat_do.jpg`, tỉ lệ 1:1 (doạ)
 ```
-Horror close-up: a face reflected in an old stained wooden-framed mirror in a dark dressing room, the face covered in dripping wet red face paint running down like blood from the eyes, the eyes white and blank, the mouth open in a silent scream. Candle light. Terrifying, not gory. No text, no letters, no numbers, no watermark.
+Horror close-up: a tarnished wooden-framed mirror in a dark bamboo dressing room lit by one candle; in the mirror a face covered in wet crimson red face paint that runs down from the eyes like blood, long straight black beard, eyes milky white and blank, mouth open in a silent scream. Not gory. No text, no letters, no numbers, no watermark.
 ```
 
 ### 23. `guong.jpg`, tỉ lệ 1:1 (doạ)
 ```
-Horror image: an old tarnished mirror in a dark bamboo dressing room; reflected in it, just behind the viewer's shoulder, a man in a green Quan Công opera robe with a blood-red painted face and black eyes, leaning very close, smiling. Dim candle light, heavy grain. No text, no letters, no numbers, no watermark.
+Match the costumes and face paint of the attached reference sheet. Horror image: a tarnished mirror in a dark bamboo dressing room; reflected in it, right behind the viewer's shoulder, leaning very close, [QUAN CONG] deep crimson red face, long straight black beard, dark green helmet with red pompoms, black eyes, smiling. Dim candle light, heavy grain. No text, no letters, no numbers, no watermark.
 ```
 
 ### 24. `quan_cong.jpg`, tỉ lệ 1:1 (doạ chính)
 ```
-Horror: the face of a dead opera actor in Quan Công red face paint, lit from below, the paint scratched off in strips by his own fingernails revealing raw pale skin underneath, black blood at the corners of a rigid grin, eyes rolled up showing whites, long wet black beard. Pure black background. Terrifying, shocking, not overly gory. No text, no letters, no numbers, no watermark.
+Match the face paint of the attached reference sheet. Horror close-up on pure black: the face of a dead opera actor in deep crimson red Quan Cong paint, lit from below, the paint scratched away in long strips by his own fingernails showing raw pale skin beneath, dark blood at the corners of a rigid grin, eyes rolled up showing only the whites, long straight black beard wet and clumped, dark green helmet with red pompoms. Shocking but not overly gory. No text, no letters, no numbers, no watermark.
 ```
 
 ### 25. `anh_19_ma.jpg`, tỉ lệ 1:1 (doạ)
 ```
-A pale blood-red painted face emerging from pure darkness, very close to the lens, black eyes, cracked paint, film grain and flash glare. Horror. No text, no letters, no numbers, no watermark.
+[STYLE FLASH] Out of pure darkness, very close to the lens, the crimson red painted Quan Cong face with long black beard and completely black eyes, caught in the edge of the flash, paint cracked, a hand with long fingernails reaching toward the camera. Heavy grain and flash glare. No text, no letters, no numbers, no watermark.
 ```
 
 ### 26. `ket_scare.jpg`, tỉ lệ 1:1 (doạ cuối)
 ```
-Horror close-up in pitch darkness: an old man's hands, wrinkled and trembling, clutching a faded green opera robe embroidered with gold dragons; from inside the collar of the empty robe a red-painted face with black eyes rises toward the viewer. Candle light from below. No text, no letters, no numbers, no watermark.
+Horror close-up in pitch darkness lit by a candle from below: an old man's wrinkled trembling hands clutching a faded dark green opera robe with gold dragon embroidery; rising from inside the empty collar of the robe, a crimson red painted face with long straight black beard and black eyes, smiling at the viewer. No text, no letters, no numbers, no watermark.
 ```
 
 ---
 
 ## Ưu tiên
-**Quan trọng nhất:** 11, 12, 13 (câu đố bàn tay), 9 `buong_tro`, 3–7 (băng VHS), 1 `cover`, 24 `quan_cong`.
-**Thêm không khí:** phần còn lại.
+- **Làm đầu tiên:** 00 (ảnh mẫu), rồi 11, 12, 13 (câu đố bàn tay), 9 (buồng trò), 3 đến 8 (băng VHS), 1 (bìa), 24 (doạ chính).
+- **Sau đó:** phần còn lại.
