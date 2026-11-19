@@ -134,3 +134,15 @@ Nỗi sợ của hồ sơ này **không đến từ ma hiện ra**, mà từ **c
 - **Vì sao không ai phát hiện tráo người năm 1971?** Cha mẹ Dung đã mất. Người họ hàng duy nhất là bà Diệp, đã chết. Mọi người thân thiết với Dung đều đã bị giết. Người trông nhà là một ông già mắt kém.
 - **Vì sao 33 năm Lan không tìm ra vàng?** Vàng chôn dưới đáy hồ sen; Lan không bao giờ dám lại gần cái hồ nơi Yến chết.
 - **Ngày tháng:** 7 đêm cầu cơ năm 1971 đều là thứ Bảy (2/10, 9/10, 16/10, 23/10, 30/10, 6/11, 13/11). Khung 2004 là 7/11 (Chủ Nhật) tới 13/11 (thứ Bảy), đêm cuối tròn 33 năm. Bà Diệp chết đêm 13/11/1958.
+
+## 10. Tên người chơi (cách 2: người chơi tự nhập)
+- **Màn mở đầu:** tờ **"Giao kèo"** viết tay của bà chủ nhà: *"Tôi, Lâm Hạnh Dung, thuê cháu ________ đọc và giải các mật thư trong nhà, bảy đêm, từ 7 đến 13 tháng 11 năm 2004…"*. Người chơi gõ tên rồi bấm **Ký**. Bỏ trống thì game gọi là "cháu" và con cơ gọi là "EM".
+- Tên chỉ lưu trên máy (localStorage), không gửi đi đâu.
+- **Bảng cơ** là bảng do Tùng vẽ năm 1971 theo kiểu bảng điện báo: **26 chữ cái Latinh A–Z**, số 0–9, CÓ / KHÔNG, TẠM BIỆT. Không có chữ cái có dấu, nên mọi lời cơ có dấu đều đánh theo **kiểu Telex** (W, F, J… đều có trên bảng). Bảng 29 chữ tiếng Việt của Quốc (đêm 4) là một chìa khoá riêng, không phải mặt bảng cơ.
+- **Tên xuất hiện ở đâu** (đổi tự động theo tên đã nhập):
+  1. Thư buổi sáng mở đầu bằng tên: *"Minh à,…"*.
+  2. **Đêm 3**, con cơ đánh tên người chơi bằng Telex **trước khi** đánh lời chính. Ví dụ "Thư" đánh ra `THUW`, "Hạnh" ra `HAJNH`, "Minh" ra `MINH`. Đêm đó bà chủ nhà hỏi: *"Cháu có nói tên cháu cho ai trong nhà này đâu?"* (thật ra có, chính với bà).
+  3. **Đêm 6**, lời cơ năm 2004 thêm tên: `<TÊN> NGUOWFI MANG TEEN EM KHOONG PHAIR EM`.
+  4. **Đêm 7**, bản giải quẻ họ Lâm mở đầu bằng **tên người chơi** (mã hoá đúng tên đã gõ, bỏ dấu thanh, giữ chữ cái riêng của tiếng Việt theo bảng 29 chữ), rồi mới tới `MỘ LAN LÀ EM · ĐỪNG UỐNG TRÀ · VÀNG DƯỚI HỒ SEN`. Đáp án trọng điểm 7 chấp nhận dòng có tên.
+  5. **Bia mộ ở kết:** tấm bia "Hà Ngọc Lan 1952–1971" được khắc lại thành "Lâm Hạnh Dung 1952–1971". Bên cạnh là một ngôi mộ mới đắp, chưa có bia, cắm một nén nhang. Lá thư cuối không ký tên, gửi đúng tên người chơi.
+- **Xử lý tên:** chuẩn hoá Unicode, cắt còn 2 chữ cuối nếu tên quá dài, bỏ ký tự lạ. Đổi sang Telex theo quy ước điện báo (ă→AW, â→AA, đ→DD, ê→EE, ô→OO, ơ→OW, ư→UW; sắc S, huyền F, hỏi R, ngã X, nặng J, dấu thanh đặt cuối chữ).
