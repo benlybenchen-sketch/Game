@@ -1,5 +1,5 @@
 // First folder: what the program receives on Tuesday night 19/8/2003.
-import { ln, stamp, pic, hand, media } from "../js/kit.js";
+import { ln, stamp, pic, hand, media } from "../../js/kit.js";
 import { envelope } from "./art.js";
 
 export default [

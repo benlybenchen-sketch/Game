@@ -1,5 +1,5 @@
 // Second folder (after question 1): statements, the boat register, the dam camera, the ceremony photo.
-import { ln, stamp, pic, hand, media } from "../js/kit.js";
+import { ln, stamp, pic, hand, media } from "../../js/kit.js";
 import { tungDrawing } from "./art.js";
 
 const formHead = (who) => `<div class="form-head"><div>CÔNG AN TỈNH SƠN KHÊ<br><b>${who}</b></div><div><b>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</b><br>Độc lập – Tự do – Hạnh phúc</div></div>`;

@@ -1,5 +1,5 @@
 // Fourth folder (after question 3): the death of Phạm Văn Bổng, rằm tháng Bảy 1996 (Wednesday 28/8/1996).
-import { ln, stamp, pic, hand, media, dread } from "../js/kit.js";
+import { ln, stamp, pic, hand, media, dread } from "../../js/kit.js";
 
 const xaHead = `<div class="form-head"><div>CÔNG AN HUYỆN NẬM KHÊ<br><b>CÔNG AN XÃ VỌNG THỦY</b></div><div><b>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</b><br>Độc lập – Tự do – Hạnh phúc</div></div>`;
 

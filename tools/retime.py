@@ -2,12 +2,13 @@
 
 Each spoken line gets d = audio length + 0.4 s; lines and sound effects are laid out in order with a 1 s gap;
 the tape length and the hidden spectrogram text follow. Run after (re)generating audio:
-    python3 tools/retime.py
+    python3 tools/retime.py <case>     (e.g. 01, 02)
 """
-import json, math, os, re, subprocess
+import json, math, os, re, subprocess, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-path = os.path.join(ROOT, "case", "tapes.js")
+CASE = sys.argv[1] if len(sys.argv) > 1 else "01"
+path = os.path.join(ROOT, "cases", CASE, "tapes.js")
 src = open(path, encoding="utf-8").read()
 
 def length(mp3):
@@ -25,7 +26,7 @@ for m in reversed(blocks):
             continue
         t, d = float(sm.group(2)), float(sm.group(3))
         rest = sm.group(4)
-        mp3 = os.path.join(ROOT, "audio", f"{tid}_{i}.mp3")
+        mp3 = os.path.join(ROOT, "audio", CASE, f"{tid}_{i}.mp3")
         if "sfx:" not in rest and os.path.exists(mp3):
             d = math.ceil((length(mp3) + 0.4) * 10) / 10
         t = t if cursor is None else round(cursor, 1)

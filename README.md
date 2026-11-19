@@ -1,4 +1,13 @@
-# Hồ đòi người · Hồ sơ Nửa Đêm
+# Hồ sơ Nửa Đêm
+
+Series game hồ sơ điều tra kinh dị, mỗi hồ sơ một vụ án và bộ nhân vật riêng. Trang chủ có danh sách hồ sơ; vào thẳng một hồ sơ bằng `?case=01`, `?case=02`.
+
+| Hồ sơ | Bối cảnh | Độ khó |
+|---|---|---|
+| 01 · Hồ đòi người | Hồ thủy điện Nậm Khê, 2003 | Khó, 5 trọng điểm |
+| 02 · Đêm giỗ Tổ | Gánh hát bội Phước Hưng Ban, 1993 | Rất khó, 6 trọng điểm, có cảnh ghê rợn |
+
+## Hồ sơ 01 · Hồ đòi người
 
 Game **hồ sơ điều tra kinh dị** chạy trên trình duyệt, bằng tiếng Việt. Người chơi đọc giấy tờ, nghe băng, xem video, ghim bằng chứng và trả lời từng trọng điểm.
 
@@ -43,10 +52,10 @@ Settings → Pages → Build and deployment → Source: *Deploy from a branch* �
 ## Cấu trúc
 - `index.html`, `css/style.css`
 - `js/`: `main.js` (bàn điều tra), `media.js` (băng, camera, phòng tối, bản đồ), `audio.js` (âm thanh tổng hợp bằng Web Audio), `dread.js` (lớp kinh dị), `answer.js` (chấm đáp án), `store.js` (lưu tiến trình), `kit.js`
-- `case/`: nội dung vụ án: tài liệu theo từng chặng (`docs0.js` … `docs4.js`), câu hỏi, băng ghi âm, hình vẽ SVG. Đáp án được mã hoá nhẹ trong `case/secret.js` (công cụ: `tools/secret.mjs`).
-- `img/`: ảnh minh hoạ (tạo bằng AI). Thiếu ảnh nào thì game tự dùng hình vẽ thay thế.
-- `audio/`: giọng đọc từng câu trên băng.
-- `tools/smoke.mjs`: chơi thử toàn bộ vụ án bằng trình duyệt tự động.
+- `cases/<số>/`: nội dung từng vụ án (`cases/list.js` là danh sách): tài liệu theo từng chặng (`docs0.js` … `docs4.js`), câu hỏi, băng ghi âm, hình vẽ SVG. Đáp án được mã hoá nhẹ trong `case/secret.js` (công cụ: `tools/secret.mjs encode <số hồ sơ> answers.json`).
+- `img/<số>/`: ảnh minh hoạ (tạo bằng AI). Thiếu ảnh nào thì game tự dùng hình vẽ thay thế.
+- `audio/<số>/`: giọng đọc từng câu trên băng (GenMax). `tools/retime.py <số>` căn thời gian băng theo độ dài thật.
+- `tools/smoke.mjs`: chơi thử toàn bộ một vụ án bằng trình duyệt tự động (`CASE=02 node tools/smoke.mjs`).
 
 ## Ghi chú
 Mọi nhân vật, địa danh, tờ báo, đài phát thanh đều hư cấu. Lấy cảm hứng từ thể loại game “hồ sơ điều tra” trên trình duyệt. Cốt truyện, mã nguồn và hình vẽ đều viết mới.

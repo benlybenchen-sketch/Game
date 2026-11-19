@@ -4,7 +4,7 @@
 // "soft" fear mode keeps the sounds and the writing but drops flicker, the figure and the jump scare.
 import { state, save } from "./store.js";
 import { sfx, ambience } from "./audio.js";
-import { ghostFace } from "../case/art.js";
+import { C, base } from "./case.js";
 
 let lv = 0;
 let timers = [];
@@ -12,11 +12,8 @@ let preloaded = null;
 export const level = () => lv;
 const full = () => state.fear === "full";
 
-const PHRASES = ["trả nhà cho em", "nước lên rồi cô ơi", "em vẫn ở đây", "cô Hà lạnh lắm", "đừng lên cái thuyền ấy", "mẹ ơi", "bảy năm"];
-const NOTES = {
-  3: "chỗ nước không tới",
-  4: "cô Hà ở chỗ có cái máy to. nhanh lên",
-};
+// Per-case horror config: META.dread = { phrases, notes: {level: text}, scare: picture name, extra: [{ min, full, every: [ms, ms], sfx }] }
+const cfg = () => C?.META?.dread || {};
 
 export function setLevel(n, { quiet = false } = {}) {
   lv = n;
@@ -24,10 +21,11 @@ export function setLevel(n, { quiet = false } = {}) {
   document.body.dataset.fear = state.fear;
   ambience(n);
   schedule();
-  if (n >= 3 && n < 5 && !preloaded) { preloaded = new Image(); preloaded.src = "img/ma.jpg"; }   // the scare must appear instantly
-  if (!quiet && NOTES[n] && !state.scared["note" + n]) {
+  if (n >= 3 && n < 5 && cfg().scare && preloaded !== base.img) { preloaded = base.img; new Image().src = `${base.img}${cfg().scare}.jpg`; }   // the scare must appear instantly
+  const note = (cfg().notes || {})[n];
+  if (!quiet && note && !state.scared["note" + n]) {
     state.scared["note" + n] = true; save();
-    setTimeout(() => ghostWrite(NOTES[n]), 9000);
+    setTimeout(() => ghostWrite(note), 9000);
   }
 }
 
@@ -47,6 +45,7 @@ function schedule() {
   loop(lv >= 3 && full(), 45000, 90000, flicker);
   loop(lv >= 4, 50000, 100000, () => sfx.knock(3));
   loop(lv >= 4 && full(), 70000, 140000, apparition);
+  for (const x of cfg().extra || []) loop(lv >= x.min && (!x.full || full()), x.every[0], x.every[1], () => sfx[x.sfx]?.());
 }
 
 /** A sentence in the open document turns into something else for a blink. */
@@ -56,7 +55,8 @@ export function glitchText() {
   const p = ps[Math.floor(Math.random() * ps.length)];
   const orig = p.innerHTML;
   p.classList.add("glitch");
-  p.textContent = PHRASES[Math.floor(Math.random() * PHRASES.length)];
+  const ph = cfg().phrases || ["…"];
+  p.textContent = ph[Math.floor(Math.random() * ph.length)];
   setTimeout(() => { p.innerHTML = orig; p.classList.remove("glitch"); }, 420);
 }
 
@@ -117,16 +117,24 @@ export function ghostWrite(text) {
   step();
 }
 
-/** The one jump scare (full fear mode only), shown once when the last folder opens. */
-export function jumpScare() {
-  if (!full() || state.scared.jump) return;
-  state.scared.jump = true; save();
+/**
+ * A jump scare (full fear mode only), shown once per key. pic: picture name in the case folder,
+ * fallback: SVG/HTML shown if the picture is missing, sound: an sfx name.
+ */
+export function jumpScare(key = "jump", pic = cfg().scare, { fallback = C?.ART?.ghostFace?.() || "", sound = "scream", hold = 750 } = {}) {
+  if (!full() || state.scared[key]) return false;
+  state.scared[key] = true; save();
   const fx = document.getElementById("fx");
   const d = document.createElement("div");
   d.className = "scare" + (state.flash ? "" : " scare--slow");
-  d.innerHTML = `<img src="img/ma.jpg" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'scare-fb',innerHTML:this.dataset.fb}))" data-fb='${ghostFace().replace(/'/g, "&#39;")}'>`;
+  const img = new Image();
+  img.alt = "";
+  img.onerror = () => { const f = document.createElement("div"); f.className = "scare-fb"; f.innerHTML = fallback; img.replaceWith(f); };
+  img.src = `${base.img}${pic}.jpg`;
+  d.appendChild(img);
   fx.appendChild(d);
-  sfx.scream();
-  setTimeout(() => d.classList.add("out"), state.flash ? 750 : 2200);
-  setTimeout(() => d.remove(), state.flash ? 1500 : 3400);
+  sfx[sound]?.();
+  setTimeout(() => d.classList.add("out"), state.flash ? hold : hold + 1450);
+  setTimeout(() => d.remove(), state.flash ? hold + 750 : hold + 2650);
+  return true;
 }

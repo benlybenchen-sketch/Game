@@ -1,4 +1,5 @@
 // Small HTML helpers for writing case documents.
+import { base } from "./case.js";
 
 /** A clickable statement line (for "point at the lie" questions). */
 export const ln = (id, text) => `<span class="ln" data-line="${id}">${text}</span>`;
@@ -12,7 +13,7 @@ export const stamp = (html, style = "", color = "red") => `<div class="stamp sta
  */
 export const pic = (name, cap = "", fallback = "", cls = "") => `
   <figure class="pic ${cls}">
-    <img src="img/${name}.jpg" alt="" loading="lazy" data-fallback>
+    <img src="${base.img}${name}.jpg" alt="" loading="lazy" data-fallback>
     <div class="pic-fb">${fallback || `<div class="pic-empty">ảnh mờ, không rõ hình</div>`}</div>
     ${cap ? `<figcaption>${cap}</figcaption>` : ""}
   </figure>`;

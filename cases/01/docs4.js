@@ -1,5 +1,5 @@
 // Fifth folder (after question 4) and the ending documents.
-import { ln, stamp, pic, hand, media, dread } from "../js/kit.js";
+import { ln, stamp, pic, hand, media, dread } from "../../js/kit.js";
 
 export default [
   {

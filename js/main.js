@@ -1,21 +1,15 @@
 // The investigation desk: cover, folder list, document reader, the notebook of staged questions,
 // unlocking new folders, the ending. Loaded by index.html as an ES module.
-import { state, save, resetAll } from "./store.js";
-import { DOCS, QUESTIONS, META, SECRET, SECRET_KEY, START_CLOCK, END_CLOCK } from "../case/index.js";
+import { state, save, resetAll, loadState, peek } from "./store.js";
+import { C, loadCase, CASE_ID, base } from "./case.js";
+import { CASES } from "../cases/list.js";
 import { decode, checkQuestion } from "./answer.js";
 import { mountMedia } from "./media.js";
 import { ctx, sfx, setSound, ambience } from "./audio.js";
 import { setLevel, level, jumpScare } from "./dread.js";
 
-const SECRETS = decode(SECRET, SECRET_KEY);
-const byId = new Map(DOCS.map((d) => [d.id, d]));
-const FOLDERS = ["Phong bì gửi tới đài", "Chị Nga gửi · lần 1", "Túi giấy của bà Thoa", "Hồ sơ năm 1996", "Gần sáng", "Kết thúc"];
-const WRONG = [
-  "Anh Quân lắc đầu: “Chưa khớp. Đọc lại đi, chị Nga sẽ không mở hồ sơ vì một linh cảm.”",
-  "“Có chỗ chưa đúng. Đừng đoán, hãy tìm tờ giấy nói điều đó.”",
-  "“Không. Nghe lại băng, xem lại ảnh. Bằng chứng phải khớp với từng câu trả lời.”",
-  "“Gần rồi, nhưng ‘gần’ thì không cứu được ai.”",
-];
+// Data of the open case (set by openCase).
+let DOCS = [], QUESTIONS = [], META = {}, START_CLOCK = "", END_CLOCK = "", SECRETS = {}, byId = new Map(), FOLDERS = [], WRONG = [];
 
 const $ = (s, r = document) => r.querySelector(s);
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -29,10 +23,54 @@ let cleanupMedia = () => {};
 
 // ---------------------------------------------------------------- boot
 function boot() {
-  document.title = `${META.title} · ${META.series}`;
   bindChrome();
-  setLevel(state.started ? Math.min(state.stage, 5) : 0, { quiet: true });
+  const id = new URLSearchParams(location.search).get("case");
+  if (id && CASES.some((c) => c.id === id)) openCase(id); else showHome();
+}
+
+/** Loads a case and shows its cover. */
+async function openCase(id) {
+  cleanupMedia();
+  await loadCase(id);
+  ({ DOCS, QUESTIONS, META, START_CLOCK, END_CLOCK } = C);
+  SECRETS = decode(C.SECRET, C.SECRET_KEY);
+  byId = new Map(DOCS.map((d) => [d.id, d]));
+  FOLDERS = META.folders; WRONG = META.wrong;
+  loadState(id);
+  picking = null;
+  document.body.dataset.case = id;
+  document.title = `${META.title} · ${META.series}`;
+  history.replaceState(null, "", `?case=${id}`);
+  document.querySelector(".brand").innerHTML = `<b>${META.series}</b> · ${META.title}`;
+  document.querySelector(".ghost-note").innerHTML = "";
+  setLevel(state.started ? dreadFor(state.stage) : 0, { quiet: true });
   showCover();
+}
+
+// ---------------------------------------------------------------- case list
+function showHome() {
+  cleanupMedia();
+  document.body.dataset.screen = "home";
+  document.body.dataset.case = "";
+  document.title = "Hồ sơ Nửa Đêm";
+  history.replaceState(null, "", location.pathname);
+  $("#desk").hidden = true;
+  const c = $("#cover");
+  c.hidden = false;
+  c.innerHTML = `
+  <div class="home">
+    <header class="home-head"><div class="cover-series">Series game hồ sơ điều tra kinh dị</div><h1 class="cover-title">Hồ sơ Nửa Đêm</h1>
+      <p class="cover-blurb">Mỗi hồ sơ là một vụ án riêng, một bộ nhân vật riêng. Tự đọc giấy tờ, nghe băng, xem phim, ghim bằng chứng và phá án. Càng gần sự thật, đêm càng dài.</p></header>
+    <div class="home-list">${CASES.map((k) => {
+      const p = peek(k.id), status = p.stage >= k.questions ? "Đã khép hồ sơ" : p.started ? `Đang điều tra · trọng điểm ${p.stage + 1}/${k.questions}` : "Chưa mở";
+      return `<button class="case-card" data-case="${k.id}" style="--cover:url(../img/${k.id}/${k.cover}.jpg)">
+        <span class="case-art"></span>
+        <span class="case-body"><span class="cover-series">${k.number} · ${k.place}</span><b class="case-title">${k.title}</b>
+        <span class="case-blurb">${k.short}</span>
+        <span class="case-facts">${k.level} · ${k.time} · ${k.questions} trọng điểm</span><span class="case-status">${status}</span></span></button>`;
+    }).join("")}</div>
+    <p class="credit">Truyện và nhân vật hoàn toàn hư cấu. Có yếu tố kinh dị, tâm linh: nên đeo tai nghe.</p>
+  </div>`;
 }
 
 // ---------------------------------------------------------------- cover
@@ -44,8 +82,9 @@ function showCover() {
   const resume = state.started && !finished();
   c.innerHTML = `
   <div class="cover">
-    <div class="cover-art" style="background-image:url(img/cover.jpg)"></div>
+    <div class="cover-art" style="background-image:url(${base.img}${META.cover}.jpg)"></div>
     <div class="cover-card">
+      <button class="link back-home" data-cv="home">← Tất cả hồ sơ</button>
       <div class="cover-series">${META.series} · ${META.number}</div>
       <h1 class="cover-title">${META.title}</h1>
       <div class="cover-place">${META.place}</div>
@@ -61,7 +100,7 @@ function showCover() {
         <li>Đọc, nghe, xem mọi thứ trong <b>hồ sơ</b> bên trái: thư, báo, biên bản, băng ghi âm, video camera, ảnh phòng tối, bản đồ.</li>
         <li>Mở <b>sổ công tác</b> bên phải, trả lời <b>trọng điểm</b> đang mở. Mỗi kết luận phải <b>ghim tài liệu làm bằng chứng</b> (nút 📌 trên đầu tài liệu).</li>
         <li>Một số câu hỏi bắt bạn <b>chỉ ra câu nói dối</b>: bấm “Chọn câu”, rồi bấm vào đúng câu trong lời khai.</li>
-        <li>Trả lời đúng thì chị Nga gửi thêm hồ sơ. Mỗi lần như thế, đêm lại khuya hơn, và trong phòng thu… có thêm thứ gì đó.</li>
+        <li>Trả lời đúng thì hồ sơ mới mở ra. Mỗi lần như thế, đêm lại khuya hơn… và quanh bạn có thêm thứ gì đó.</li>
         <li>Bí quá thì dùng <b>gợi ý</b>. Đến lúc tuyệt vọng thì có <b>lời giải</b>.</li>
       </ol><p class="small muted">Tiến trình được lưu trên trình duyệt này.</p></details>
       <p class="credit">Truyện và nhân vật hoàn toàn hư cấu. Lấy cảm hứng từ thể loại game hồ sơ điều tra trên trình duyệt.</p>
@@ -105,7 +144,7 @@ function renderAll() { renderFolder(); renderInquiry(); renderTop(); $(".notes t
 function renderTop() {
   const clock = finished() ? END_CLOCK : state.stage === 0 ? START_CLOCK : QUESTIONS[state.stage - 1].clock;
   $(".top-clock").textContent = clock;
-  $(".top-clock").title = "Giờ trong truyện: đêm 19 rạng sáng 20/8/2003";
+  $(".top-clock").title = `Giờ trong truyện: ${META.place}`;
   $(".top-progress").textContent = finished() ? "Đã khép hồ sơ" : `Trọng điểm ${state.stage + 1}/${QUESTIONS.length}`;
 }
 
@@ -230,12 +269,10 @@ function solved(q, peeked) {
   state.stage++;
   save();
   sfx.stamp(); setTimeout(() => sfx.gong(), 250);
-  setLevel(Math.min(state.stage, 5));
+  setLevel(dreadFor(state.stage));
   renderAll();
   if (finished()) {
-    dialog(`<h3>05:20 · Gò Miếu</h3><p>Chị Nga gọi lại, giọng lạc đi: “Cắt được khóa rồi. Cô ấy còn sống. Nước chỉ còn cách sàn một gang tay.”</p>
-      <p>Ngoài cửa sổ phòng thu, trời bắt đầu hửng. Lần đầu tiên trong đêm, tôi không nghe thấy tiếng nước nhỏ giọt.</p><p class="sign-off">— Quân</p>`,
-      "Đọc hồ sơ kết thúc", () => openDoc("bao_ket"));
+    dialog(META.finale.html, "Đọc hồ sơ kết thúc", () => { openDoc(META.finale.open); fireScare(state.stage); });
     return;
   }
   const clock = q.clock;
@@ -243,8 +280,20 @@ function solved(q, peeked) {
     "Mở hồ sơ mới", () => {
       const first = DOCS.find((d) => d.stage === state.stage);
       if (first) openDoc(first.id);
-      if (state.stage === 4) setTimeout(jumpScare, 2500);
+      fireScare(state.stage);
     });
+}
+
+/** Jump scares tied to a stage opening: META.scares = { stage: [key, picture, delayMs?] } */
+function fireScare(stage) {
+  const sc = (META.scares || {})[stage];
+  if (sc) setTimeout(() => jumpScare(sc[0], sc[1]), sc[2] ?? 2500);
+}
+
+/** Dread level for a stage: META.dreadLevels if given, else 0..4, and 5 (calm) once the case is closed. */
+function dreadFor(stage) {
+  if (stage >= QUESTIONS.length) return 5;
+  return META.dreadLevels ? META.dreadLevels[stage] : Math.min(stage, 4);
 }
 
 function hint() {
@@ -301,9 +350,12 @@ function bindChrome() {
     if (cv) {
       ctx();
       if (cv.dataset.cv === "go") startDesk();
+      if (cv.dataset.cv === "home") showHome();
       if (cv.dataset.cv === "reset") dialog("<h3>Chơi lại từ đầu?</h3><p>Mọi câu trả lời, ghim và ghi chú sẽ bị xoá.</p>", "Xoá và chơi lại", () => { resetAll(); setLevel(0, { quiet: true }); document.querySelector(".ghost-note").innerHTML = ""; showCover(); }, "Thôi");
       return;
     }
+    const kc = t.closest(".case-card");
+    if (kc && document.body.dataset.screen === "home") { ctx(); openCase(kc.dataset.case); return; }
     const set = t.closest("[data-set]"); if (set) { ctx(); applySetting(set.dataset.set, Number(set.dataset.v)); return; }
     const doc = t.closest("[data-doc]"); if (doc) return openDoc(doc.dataset.doc);
     const go = t.closest("[data-goto]"); if (go) return openDoc(go.dataset.goto);

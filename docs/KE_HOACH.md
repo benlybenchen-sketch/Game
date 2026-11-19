@@ -7,7 +7,10 @@
 - Giọng nói: GenMax. ElevenLabs v3 giọng Bắc cho người lớn, MiniMax cho trẻ em. Chọn giọng bằng cách đo: cho máy nhận dạng giọng nói nghe lại để chấm độ rõ lời, cộng với đo cao độ.
 - Ảnh: người dùng tự tạo bằng Nano Banana Pro trong AI Studio theo prompt có sẵn. Khoá API Google gói miễn phí không tạo được ảnh.
 
-## Chờ chọn: 2 trong 4 ý tưởng
+## Hồ sơ 02: Gánh hát bội "Đêm giỗ Tổ" (đã làm)
+Kinh thánh vụ án: docs/HS02_KINH_THANH.md. Prompt ảnh: docs/PROMPTS_ANH_02.md. Giọng: GenMax, giọng miền Nam (Can Cau, Tung, Quang Toan).
+
+## Ý tưởng còn lại
 1. **Chuyến tàu đêm SE7** (1997, đèo Hải Vân): khoang khoá trái, 40 giây trong hầm. Câu đố thời gian: lịch tàu, độ dài hầm, ảnh in giờ, bộ đàm.
 2. **Ngôi nhà số 13 Hàng Mã** (Hà Nội 1985, bao cấp): tiếng guốc mộc, gác xép. Câu đố không gian: mặt cắt nhà, ống thông hơi, sổ gạo, tem phiếu, đồ hàng mã.
 3. **Hang Khe Sim** (Trường Sơn, phát hiện 2008): bệnh viện dã chiến, đội quy tập hài cốt. Video MiniDV (NightShot, đèn pin, chụp khung hình), nhật ký y tá 1971, danh tính bị đánh tráo.

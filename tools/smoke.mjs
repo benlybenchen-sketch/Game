@@ -2,11 +2,12 @@
 //   python3 -m http.server 8063 &   then   node tools/smoke.mjs [outdir]
 import { createRequire } from "node:module";
 const { chromium } = createRequire(import.meta.url)("playwright");
-import { DOCS, QUESTIONS, SECRET, SECRET_KEY } from "../case/index.js";
+const CASE = process.env.CASE || "01";
+const { DOCS, QUESTIONS, SECRET, SECRET_KEY } = await import(`../cases/${CASE}/index.js`);
 import { decode } from "../js/answer.js";
 const S = decode(SECRET, SECRET_KEY);
 const out = process.argv[2] || "/tmp";
-const URL = "http://localhost:8063/";
+const URL = `http://localhost:8063/?case=${CASE}`;
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
 const errors = [];
@@ -19,10 +20,10 @@ const open = async (id) => { await page.click(`[data-doc="${id}"]`); await page.
 // open every doc of stage 0 to check rendering
 for (const [i, q] of QUESTIONS.entries()) {
   for (const d of DOCS.filter((d) => d.stage === i)) { await open(d.id); }
-  if (i === 1) { await open("video_dap"); await page.fill(".cam-slider", "1370"); await page.dispatchEvent(".cam-slider", "input"); await page.click('[data-c="boost"]'); await page.screenshot({ path: `${out}/v_cam.png` }); }
-  if (i === 1) { await open("anh_le"); await page.fill('[data-d="exp"]', "4"); await page.dispatchEvent('[data-d="exp"]', "input"); await page.screenshot({ path: `${out}/v_dark.png` }); }
-  if (i === 0) { await open("bang_1"); await page.click('[data-t="spec"]'); await page.click('[data-t="play"]'); await page.waitForTimeout(1500); await page.click('[data-t="play"]'); await page.screenshot({ path: `${out}/v_tape.png` }); }
-  if (i === 0) { await open("ban_do"); await page.screenshot({ path: `${out}/v_map.png` }); }
+  if (CASE === "01" && i === 1) { await open("video_dap"); await page.fill(".cam-slider", "1370"); await page.dispatchEvent(".cam-slider", "input"); await page.click('[data-c="boost"]'); await page.screenshot({ path: `${out}/v_cam.png` }); }
+  if (CASE === "01" && i === 1) { await open("anh_le"); await page.fill('[data-d="exp"]', "4"); await page.dispatchEvent('[data-d="exp"]', "input"); await page.screenshot({ path: `${out}/v_dark.png` }); }
+  if (CASE === "01" && i === 0) { await open("bang_1"); await page.click('[data-t="spec"]'); await page.click('[data-t="play"]'); await page.waitForTimeout(1500); await page.click('[data-t="play"]'); await page.screenshot({ path: `${out}/v_tape.png` }); }
+  if (CASE === "01" && i === 0) { await open("ban_do"); await page.screenshot({ path: `${out}/v_map.png` }); }
   const s = S[q.id];
   for (const p of q.parts) {
     const sel = `[data-part="${p.id}"]`;

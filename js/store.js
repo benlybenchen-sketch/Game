@@ -1,43 +1,47 @@
-// Saved progress (localStorage). Every read/write is guarded: private windows may block storage.
-const KEY = "ho-doi-nguoi.v1";
+// Saved progress, one slot per case (localStorage), plus player settings shared by all cases.
+// Every read/write is guarded: private windows may block storage.
+const SETTINGS_KEY = "hsnd.settings";
+const caseKey = (id) => `hsnd.case.${id}`;
+const LEGACY = { "01": "ho-doi-nguoi.v1" };   // case 01 was released before the case list existed
 
+const freshSettings = () => ({ sound: true, fear: "full", flash: true, voice: false });
 const fresh = () => ({
-  started: false,
-  stage: 0,          // index of the open question; QUESTIONS.length = case closed
-  resp: {},          // answers typed per question
-  seen: {},          // doc id -> true once opened
-  heard: {},         // tape id + mode -> furthest second heard
-  plays: {},         // tape id -> number of times play was pressed
-  hints: {},         // question id -> hints shown
-  peeked: {},        // question id -> solution used
-  tries: {},         // question id -> wrong tries
-  notes: "",
-  lastDoc: null,
-  scared: {},        // one-shot scares already shown
-  sound: true,
-  fear: "full",      // "soft" | "full"
-  flash: true,       // allow fast flashes
-  voice: false,      // read tape lines aloud with the browser voice
+  started: false, stage: 0, resp: {}, seen: {}, heard: {}, plays: {}, hints: {}, peeked: {}, tries: {},
+  notes: "", lastDoc: null, scared: {},
 });
 
-function load() {
-  try {
-    const s = JSON.parse(localStorage.getItem(KEY));
-    if (s && typeof s === "object") return Object.assign(fresh(), s);
-  } catch { /* storage blocked */ }
-  return fresh();
-}
+const read = (k) => { try { const v = JSON.parse(localStorage.getItem(k)); return v && typeof v === "object" ? v : null; } catch { return null; } };
+const write = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* ignore */ } };
 
-export const state = load();
+/** Progress of the open case, with the shared settings mixed in (state.sound, state.fear, ...). */
+export const state = Object.assign(fresh(), freshSettings(), read(SETTINGS_KEY) || {});
+let current = null;
+
+export function loadState(id) {
+  current = id;
+  const saved = read(caseKey(id)) || (LEGACY[id] && read(LEGACY[id])) || {};
+  const settings = { ...freshSettings(), ...(read(SETTINGS_KEY) || {}) };
+  for (const k of Object.keys(state)) delete state[k];
+  Object.assign(state, fresh(), saved, settings);
+}
 
 export function save() {
-  try { localStorage.setItem(KEY, JSON.stringify(state)); } catch { /* ignore */ }
+  const s = {}, p = {};
+  for (const [k, v] of Object.entries(state)) (k in freshSettings() ? s : p)[k] = v;
+  write(SETTINGS_KEY, s);
+  if (current) write(caseKey(current), p);
 }
 
-/** Starts the case over, keeping the player's settings. */
+/** Progress summary of any case without opening it (for the case list). */
+export function peek(id) {
+  const p = read(caseKey(id)) || (LEGACY[id] && read(LEGACY[id])) || {};
+  return { started: !!p.started, stage: p.stage || 0 };
+}
+
+/** Starts the open case over, keeping the settings. */
 export function resetAll() {
-  const keep = { sound: state.sound, fear: state.fear, flash: state.flash, voice: state.voice };
+  const settings = { sound: state.sound, fear: state.fear, flash: state.flash, voice: state.voice };
   for (const k of Object.keys(state)) delete state[k];
-  Object.assign(state, fresh(), keep);
+  Object.assign(state, fresh(), settings);
   save();
 }

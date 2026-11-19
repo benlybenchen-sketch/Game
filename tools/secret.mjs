@@ -1,11 +1,11 @@
 // Encodes the answers so they are not readable at a glance in the page source (not real security).
-//   node tools/secret.mjs encode answers.json   -> writes case/secret.js
-//   node tools/secret.mjs decode                -> prints the JSON back (to edit it)
+//   node tools/secret.mjs encode <case> answers.json   -> writes cases/<case>/secret.js
+//   node tools/secret.mjs decode <case>                -> prints the JSON back (to edit it)
 import { readFileSync, writeFileSync } from "node:fs";
 const KEY = "ho-doi-nguoi-2003";
-const out = new URL("../case/secret.js", import.meta.url);
 const xor = (buf) => { const k = Buffer.from(KEY); return buf.map((b, i) => b ^ k[i % k.length]); };
-const [cmd, file] = process.argv.slice(2);
+const [cmd, kase, file] = process.argv.slice(2);
+const out = new URL(`../cases/${kase}/secret.js`, import.meta.url);
 if (cmd === "encode") {
   const json = JSON.stringify(JSON.parse(readFileSync(file, "utf8")));
   const b64 = Buffer.from(xor(Buffer.from(json, "utf8"))).toString("base64");
@@ -15,4 +15,4 @@ if (cmd === "encode") {
   const src = readFileSync(out, "utf8");
   const b64 = /SECRET = "([^"]+)"/.exec(src)[1];
   console.log(JSON.stringify(JSON.parse(Buffer.from(xor(Buffer.from(b64, "base64"))).toString("utf8")), null, 2));
-} else console.log("usage: node tools/secret.mjs encode <answers.json> | decode");
+} else console.log("usage: node tools/secret.mjs encode <case> <answers.json> | decode <case>");

@@ -122,6 +122,32 @@ export const sfx = {
     noiseHit({ dur: 0.9, freq: 2500, q: 0.5, gain: 0.35 });
     tone({ freq: 45, dur: 1.4, gain: 0.5 });
   },
+  /** Trống chầu: "tom" is the drum face (praise), "chát" the wooden rim (blame). */
+  tom(when = 0, dest = null) {
+    tone({ when, freq: 120, to: 62, dur: 0.55, gain: 0.55, dest: dest || master });
+    noiseHit({ when, dur: 0.18, freq: 180, type: "lowpass", gain: 0.45, dest: dest || master });
+  },
+  chat(when = 0, dest = null) {
+    noiseHit({ when, dur: 0.07, freq: 2600, q: 8, gain: 0.55, dest: dest || master });
+    tone({ when, freq: 1450, to: 1300, dur: 0.06, type: "square", gain: 0.06, dest: dest || master });
+  },
+  /** The kèn (oboe) of the troupe, wailing a few notes, a little out of tune. */
+  ken(when = 0, dur = 3, dest = null) {
+    if (!ctx()) return [];
+    const v = dest || reverb() || master, nodes = [];
+    const notes = [587, 659, 523, 494, 440, 392];
+    const n = Math.max(2, Math.round(dur / 0.55));
+    for (let i = 0; i < n; i++) {
+      const t = ac.currentTime + when + i * (dur / n), f = notes[(i * 3 + 1) % notes.length] * (1 + (Math.random() - 0.5) * 0.02);
+      const o = ac.createOscillator(); o.type = "sawtooth"; o.frequency.setValueAtTime(f, t); o.frequency.linearRampToValueAtTime(f * 0.97, t + dur / n);
+      const bp = ac.createBiquadFilter(); bp.type = "bandpass"; bp.frequency.value = 1400; bp.Q.value = 2.5;
+      const g = ac.createGain(); env(g, t, 0.04, 0.05, dur / n);
+      o.connect(bp).connect(g).connect(v); o.start(t); o.stop(t + dur / n + 0.1); nodes.push(o);
+    }
+    return nodes;
+  },
+  /** Far-off chầu: one random praise or blame from an empty stage. */
+  chau() { Math.random() < 0.6 ? sfx.tom(0, reverb() || master) : (sfx.chat(0), sfx.chat(0.33)); },
   /** A small child humming a pentatonic lullaby, far away. Returns the nodes so a tape can stop it. */
   hum(when = 0, dur = 8, dest = null) {
     if (!ctx()) return [];
@@ -190,6 +216,9 @@ const VOICES = {
   old: { f0: 165, spread: 22, trem: 6, speak: { pitch: 0.7, rate: 0.82 } },
   man: { f0: 112, spread: 15, speak: { pitch: 0.6, rate: 0.85 } },
   child: { f0: 330, spread: 50, speak: { pitch: 1.6, rate: 0.85 } },
+  oldman: { f0: 100, spread: 14, trem: 5, speak: { pitch: 0.55, rate: 0.8 } },
+  man2: { f0: 122, spread: 18, speak: { pitch: 0.75, rate: 0.9 } },
+  lanh: { f0: 108, spread: 12, speak: { pitch: 0.6, rate: 0.8 } },
 };
 const VOWELS = [[730, 1090], [530, 1840], [270, 2290], [570, 840], [300, 870], [440, 1020], [660, 1700]];
 

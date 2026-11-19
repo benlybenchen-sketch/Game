@@ -1,5 +1,5 @@
 // Third folder (after question 2): the 1989 resettlement papers.
-import { stamp, pic, hand, media, dread } from "../js/kit.js";
+import { stamp, pic, hand, media, dread } from "../../js/kit.js";
 
 // Page 3 of both lists (households 29–42). unpaid = what Bổng's true ledger says.
 const ROWS = [
