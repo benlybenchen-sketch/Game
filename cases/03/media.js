@@ -104,6 +104,9 @@ export function board(el, id) {
   const auto = () => B.autoFrom != null && idx >= B.autoFrom;
 
   function step(tok, done) {
+    try { stepInner(tok, done); } catch (e) { console.error(e); timers.push(setTimeout(done, 300)); }   // a missing sound must never freeze the cup
+  }
+  function stepInner(tok, done) {
     const t = T();
     if (B.mode === "knock") {
       cup.classList.remove("tap", "drag"); void cup.offsetWidth;

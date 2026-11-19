@@ -141,6 +141,32 @@ export const sfx = {
     tone({ freq: 62, to: 30, dur: 1.6, gain: 1 });
     tone({ freq: 3100, to: 2400, dur: 0.5, type: "square", gain: 0.12 });
   },
+  /** A porcelain cup sliding on a paper board over wood (the cầu cơ planchette). */
+  slide(dur = 0.8, when = 0) {
+    noiseHit({ when, dur, freq: 900, q: 1.4, gain: 0.16 });
+    noiseHit({ when, dur: dur * 0.9, freq: 2600, q: 3, gain: 0.05 });
+  },
+  /** The cup stops on a letter: a small porcelain clink on wood. */
+  clink(when = 0) {
+    tone({ when, freq: 2630, dur: 0.18, gain: 0.05, attack: 0.002 });
+    tone({ when, freq: 3950, dur: 0.1, gain: 0.025, attack: 0.002 });
+    noiseHit({ when, dur: 0.03, freq: 700, q: 2, gain: 0.25 });
+  },
+  /** A wooden clog heel on a wooden floor: deep, booming. */
+  heel(when = 0, dest = null) {
+    tone({ when, freq: 82, to: 48, dur: 0.32, gain: 0.7, dest: dest || reverb() || master });
+    noiseHit({ when, dur: 0.12, freq: 260, type: "lowpass", gain: 0.8, dest: dest || master });
+  },
+  /** The heel dragged along the floor boards. */
+  scrape(when = 0, dur = 0.45, dest = null) {
+    noiseHit({ when, dur, freq: 420, q: 0.9, gain: 0.28, dest: dest || master });
+    noiseHit({ when, dur: dur * 0.8, freq: 1100, q: 4, gain: 0.07, dest: dest || master });
+  },
+  /** A knuckle on a table top: short and dry. */
+  knuckle(when = 0, dest = null) {
+    noiseHit({ when, dur: 0.035, freq: 1500, q: 3, gain: 0.5, dest: dest || master });
+    tone({ when, freq: 640, to: 420, dur: 0.05, gain: 0.12, dest: dest || master });
+  },
   /** Trống chầu: "tom" is the drum face (praise), "chát" the wooden rim (blame). */
   tom(when = 0, dest = null) {
     tone({ when, freq: 120, to: 62, dur: 0.55, gain: 0.55, dest: dest || master });

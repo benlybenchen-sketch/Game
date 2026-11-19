@@ -26,6 +26,13 @@ for (const [i, q] of QUESTIONS.entries()) {
   if (CASE === "01" && i === 1) { await open("anh_le"); await page.fill('[data-d="exp"]', "4"); await page.dispatchEvent('[data-d="exp"]', "input"); await page.screenshot({ path: `${out}/v_dark.png` }); }
   if (CASE === "01" && i === 0) { await open("bang_1"); await page.click('[data-t="spec"]'); await page.click('[data-t="play"]'); await page.waitForTimeout(1500); await page.click('[data-t="play"]'); await page.screenshot({ path: `${out}/v_tape.png` }); }
   if (CASE === "01" && i === 0) { await open("ban_do"); await page.screenshot({ path: `${out}/v_map.png` }); }
+  if (CASE === "03" && i === 0) {   // the cầu cơ board must move while the finger is held on it
+    await open("ban_co_1"); await page.locator(".cb-board").scrollIntoViewIfNeeded(); await page.waitForTimeout(3000);
+    const r = await page.locator(".cb-board").boundingBox();
+    await page.mouse.move(r.x + r.width / 2, r.y + r.height * 0.8); await page.mouse.down(); await page.waitForTimeout(4000); await page.mouse.up();
+    const got = (await page.textContent(".cb-out")).replace(/\s/g, "");
+    console.log("board", got.length >= 3 ? "MOVES " + got : "STUCK"); if (got.length < 3) errors.push("board does not move");
+  }
   const s = S[q.id];
   for (const p of q.parts) {
     const sel = `[data-part="${p.id}"]`;
