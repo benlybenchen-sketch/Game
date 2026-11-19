@@ -27,8 +27,9 @@ for m in reversed(blocks):
         t, d = float(sm.group(2)), float(sm.group(3))
         rest = sm.group(4)
         mp3 = os.path.join(ROOT, "audio", CASE, f"{tid}_{i}.mp3")
+        slow = mp3.replace(".mp3", "_d3.mp3")   # lines with sedated variants take the length of the slowest one
         if "sfx:" not in rest and os.path.exists(mp3):
-            d = math.ceil((length(mp3) + 0.4) * 10) / 10
+            d = math.ceil((length(slow if os.path.exists(slow) else mp3) + 0.4) * 10) / 10
         t = t if cursor is None else round(cursor, 1)
         cursor = t + d + (2.6 if tid == "loi_nhan" and "sfx:" not in rest else 1.0)
         if "rev: true" in rest:

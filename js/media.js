@@ -25,11 +25,12 @@ const flipText = (s) => Array.from(s).reverse().join("");
 // Decoded recorded voice lines, shared between mounts: key "bang_1/3" -> AudioBuffer | null
 const bufCache = new Map();
 async function loadLine(id, i) {
-  const key = `${id}/${i}`;
+  const suf = C.tapeSuffix?.(id, i) || "";      // a case may swap a line for another take (case 04: sedated voices)
+  const key = `${id}/${i}${suf}`;
   if (bufCache.has(key)) return bufCache.get(key);
   const p = (async () => {
     try {
-      const r = await fetch(`${base.audio}${id}_${i}.mp3`);
+      const r = await fetch(`${base.audio}${id}_${i}${suf}.mp3`);
       if (!r.ok) return null;
       const ac = ctx(); if (!ac) return null;
       return await ac.decodeAudioData(await r.arrayBuffer());

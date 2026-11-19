@@ -9,4 +9,7 @@ export const CASES = [
   { id: "03", number: "Hồ sơ 03", title: "Cầu cơ", place: "Biệt thự Bạch Lan, Sài Gòn, 1971 · 2004", cover: "cover",
     short: "Bảy tối thứ Bảy năm 1971, con cơ báo tử sáu người. Ba mươi ba năm sau, người sống sót thuê bạn giải những mật thư nó vẫn còn đánh ra. Bà ấy pha trà cho bạn mỗi đêm.",
     level: "Cực khó · giải mật mã", time: "5–7 giờ", questions: 7 },
+  { id: "04", number: "Hồ sơ 04", title: "Người mẹ khác", place: "Bệnh viện Tâm thần Cam Ly, Đà Lạt, 1996", cover: "cover",
+    short: "Cô gái khăng khăng người mẹ đi Sài Gòn về không phải mạ. Bệnh của cô có thật. Lời cô nói cũng thật. Chữ ký của bạn quyết định ai bị nhốt.",
+    level: "Rất khó · tâm lý", time: "4–6 giờ", questions: 6 },
 ];
