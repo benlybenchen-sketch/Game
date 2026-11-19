@@ -26,3 +26,10 @@ Gợi ý: số 2 + số 3 (khác kiểu kinh dị và khác kiểu câu đố).
 ## Ảnh còn thiếu cho Hồ sơ 01
 Đã có: đủ 21/21 ảnh.
 (prompt: docs/PROMPTS_ANH.md)
+
+## Hồ sơ 03: "Cầu cơ" (đang thiết kế)
+Kinh thánh vụ án: docs/HS03_KINH_THANH.md. Giải mã là lối chơi trung tâm: 7 đêm, 7 tầng mật mã (Telex, Morse, tàng đầu,
+số Tô Châu kèm bảng 29 chữ, mã sách Kiều, chữ gương, quẻ họ Lâm). Có cơ chế "bản chép của bạn" để phát hiện giấy tờ bị sửa.
+
+## Ý tưởng khác đã đề xuất (chưa làm)
+Tổng đài 108, Thợ ảnh thờ, Nhà xác ca 3, Tin nhắn lúc 3 giờ, Bùa ngải, Mù (chỉ âm thanh).
