@@ -28,6 +28,7 @@ export default [
     <div class="doc doc--form">
       ${formHead("PHÒNG CẢNH SÁT HÌNH SỰ")}
       <h2 class="form-title">BIÊN BẢN GHI LỜI KHAI<br><small>Người khai chưa thành niên, có mẹ là bà Lò Thị Mai đi cùng</small></h2>
+      ${pic("tung", "Lò Văn Tùng lúc lấy lời khai, tay ôm hình vẽ", "", "pic--small pic--left")}
       <p>Hồi 16 giờ 30 ngày 18/8/2003. Người khai: <b>Lò Văn Tùng</b>, 11 tuổi, học sinh lớp 5 điểm trường Vọng Thủy.</p>
       <p>${ln("tung_1", "Tối rằm cháu trốn mẹ đi xem thả đèn. Mưa to quá, cháu trú trong cái lán cá ở bến Mới.")}
         ${ln("tung_2", "Cháu thấy cô Hà đi tới, cô mặc áo mưa xanh, cô đứng chờ ở đầu cầu gỗ.")}

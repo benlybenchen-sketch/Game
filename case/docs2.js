@@ -114,6 +114,7 @@ export default [
     html: () => `
     <div class="doc doc--notebook">
       <p class="note">Tùng nhặt được ở nền một nhà cũ lộ ra khi hồ cạn hồi tháng 4/2003, đưa cho cô Hà. Cô Hà gửi kèm trong túi giấy bà Thoa giữ hộ.</p>
+      ${pic("lang_chim", "Làng cũ Vọng Thủy lộ ra khi hồ cạn, tháng 4/2003 (ảnh cô Hà chụp). Mái đình nhô lên giữa nước.", "")}
       <div class="vo">
         ${hand(`<p class="right">Thứ tư, ngày 16 tháng 8 năm 1989</p>
         <p class="center"><b>Tập làm văn: Tả ngôi nhà của em</b></p>
