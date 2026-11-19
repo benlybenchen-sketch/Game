@@ -139,12 +139,12 @@ export function jumpScare(key = "jump", pic = cfg().scare, { fallback = C?.ART?.
   d.appendChild(img);
   fx.appendChild(d);
   sfx[sound]?.();
-  if (main) { setTimeout(() => sfx.scream(), 900); for (let i = 0; i < 5; i++) sfx.heartbeat(1.2 + i * 0.55); }
+  if (main) { setTimeout(() => sfx.scream(), 900); setTimeout(() => sfx.scream(), 2600); for (let i = 0; i < 7; i++) sfx.heartbeat(1.2 + i * 0.55); }
   // it stays until the player clicks, or until `hold` runs out, whichever comes first
   let gone = false;
   const close = () => { if (gone) return; gone = true; d.classList.add("out"); setTimeout(() => d.remove(), 700); };
   const t0 = performance.now();
-  d.addEventListener("pointerdown", (e) => { e.stopPropagation(); if (performance.now() - t0 > 250) close(); });
-  setTimeout(close, (state.flash ? 0 : 900) + hold);
+  d.addEventListener("pointerdown", (e) => { e.stopPropagation(); if (performance.now() - t0 > 600) close(); });
+  setTimeout(close, (state.flash ? 0 : 900) + hold + 1200);   // every scare lingers a little longer than asked
   return true;
 }

@@ -158,7 +158,7 @@ function tapePlayer(el, id) {
           let t = 0;
           for (const c of s.code) {
             const at = t - skip / speed;
-            if ((c === "." || c === "-") && at >= -0.01) timers.push(setTimeout(() => morseKnocks(c, { unit, kind: s.kind || "heel", dest }), (when + at) * 1000));
+            if ((c === "." || c === "-") && at >= -0.01) timers.push(setTimeout(() => morseKnocks(c, { unit, kind: s.kind || "heel" }), (when + at) * 1000));
             t += c === "." ? unit * 2 : c === "-" ? unit * 4 : c === " " ? unit * 2 : unit * 3;
           }
         }

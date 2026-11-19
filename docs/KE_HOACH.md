@@ -33,3 +33,8 @@ số Tô Châu kèm bảng 29 chữ, mã sách Kiều, chữ gương, quẻ họ
 
 ## Ý tưởng khác đã đề xuất (chưa làm)
 Tổng đài 108, Thợ ảnh thờ, Nhà xác ca 3, Tin nhắn lúc 3 giờ, Bùa ngải, Mù (chỉ âm thanh).
+
+## Quy tắc âm thanh và cảnh doạ (áp dụng cho mọi hồ sơ từ nay về sau)
+- Mọi hiệu ứng âm thanh đi qua bus `fx` trong `js/audio.js` (khuếch đại lớn, có limiter): luôn ở mức tối đa mà không vỡ tiếng. Hiệu ứng mới chỉ cần gọi `tone`/`noiseHit`/`sfx.*` là tự to.
+- Giọng đọc và băng giữ ở master, không đẩy theo hiệu ứng.
+- Cảnh doạ: luôn có tiếng thét lớn (`sfx.scream`, ba lớp giọng rít + tiếng nổ trầm); mỗi cảnh doạ giữ lâu hơn thời gian ghi trong case thêm 1,2 giây; bấm vào màn hình để tắt (sau 0,6 giây). Cảnh doạ chính thét hai lần.

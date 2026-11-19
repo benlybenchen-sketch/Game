@@ -372,7 +372,7 @@ body[data-case="02"] .apparition { background: radial-gradient(ellipse 30px 36px
 .scare--main { background: #050402; overflow: hidden; }
 .scare--main img, .scare--main .scare-fb svg {
   filter: saturate(1.55) contrast(1.65) brightness(.95);
-  animation: scareZoom 5.5s cubic-bezier(.2,.6,.2,1) forwards, scareShake .09s steps(2) infinite; }
+  animation: scareZoom 7s cubic-bezier(.2,.6,.2,1) forwards, scareShake .09s steps(2) infinite; }
 .scare--main::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; mix-blend-mode: soft-light;
   background: radial-gradient(ellipse at 50% 45%, rgba(170,220,90,.65), rgba(60,110,40,.8) 60%, rgba(0,0,0,1) 100%); }
 .scare--main::after { content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
@@ -493,3 +493,6 @@ body[data-case="03"] .doc--notebook .note, body[data-case="03"] .doc--diary .not
 .mirror-blink { transform: scaleX(-1); display: block; }
 body[data-case="03"][data-dread="3"] .reader-body, body[data-case="03"][data-dread="4"] .reader-body { background: radial-gradient(ellipse at 50% 120%, rgba(30,60,50,.28), transparent 60%); }
 body[data-case="03"] .apparition { background: radial-gradient(ellipse 26px 32px at 50% 18%, rgba(20,16,14,.95) 60%, transparent 62%), linear-gradient(180deg, rgba(10,10,10,.95) 0 46%, transparent 46%) 50% 10% / 70px 160px no-repeat, radial-gradient(ellipse 40px 110px at 50% 62%, rgba(210,205,190,.7) 55%, transparent 58%); }
+/* every scare lunges at the viewer when it appears */
+.scare:not(.scare--main) img, .scare:not(.scare--main) .scare-fb svg { animation: scareJolt .45s cubic-bezier(.1,.9,.2,1) both, scareShake .12s steps(2) 4; }
+@keyframes scareJolt { from { transform: scale(.82); filter: contrast(2) brightness(1.8); } to { transform: scale(1.04); } }

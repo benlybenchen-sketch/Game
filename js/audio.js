@@ -2,7 +2,7 @@
 // heartbeat, whispers, a child's humming, and the speech-like "voices" on the tapes. No audio files.
 import { state } from "./store.js";
 
-let ac = null, master = null, noiseBuf = null, verb = null;
+let ac = null, master = null, fx = null, noiseBuf = null, verb = null;
 const amb = { on: false, nodes: null, timers: [] };
 
 export function ctx() {
@@ -13,11 +13,20 @@ export function ctx() {
     master = ac.createGain();
     master.gain.value = state.sound ? 1 : 0;
     master.connect(ac.destination);
+    // Every sound effect goes through one loud bus: a big gain into a limiter, so effects sit at the top
+    // of the range without cracking. Voices and tapes stay on the master at their own level.
+    fx = ac.createGain(); fx.gain.value = 3.2;
+    const lim = ac.createDynamicsCompressor();
+    lim.threshold.value = -6; lim.knee.value = 3; lim.ratio.value = 20; lim.attack.value = 0.002; lim.release.value = 0.12;
+    const post = ac.createGain(); post.gain.value = 1.15;
+    fx.connect(lim).connect(post).connect(master);
   }
   if (ac.state === "suspended") ac.resume();
   return ac;
 }
 export const out = () => (ctx(), master);
+/** The loud sound-effect bus. */
+export const fxOut = () => (ctx(), fx);
 
 export function setSound(on) {
   if (master) master.gain.setTargetAtTime(on ? 1 : 0, ac.currentTime, 0.05);
@@ -43,7 +52,7 @@ export function reverb() {
     }
     verb = ac.createConvolver(); verb.buffer = buf;
     const g = ac.createGain(); g.gain.value = 0.55;
-    verb.connect(g).connect(master);
+    verb.connect(g).connect(fx);
   }
   return verb;
 }
@@ -54,8 +63,9 @@ function env(g, t, a, peak, d) {
   g.gain.exponentialRampToValueAtTime(0.0001, t + a + d);
 }
 
-function noiseHit({ when = 0, dur = 0.1, freq = 800, q = 1, type = "bandpass", gain = 0.3, dest = master, pan = 0 }) {
+function noiseHit({ when = 0, dur = 0.1, freq = 800, q = 1, type = "bandpass", gain = 0.3, dest = null, pan = 0 }) {
   if (!ctx()) return;
+  dest = dest && dest !== master ? dest : fx;
   const t = ac.currentTime + when;
   const s = ac.createBufferSource(); s.buffer = noise();
   const f = ac.createBiquadFilter(); f.type = type; f.frequency.value = freq; f.Q.value = q;
@@ -67,8 +77,9 @@ function noiseHit({ when = 0, dur = 0.1, freq = 800, q = 1, type = "bandpass", g
   return s;
 }
 
-function tone({ when = 0, freq = 440, to = null, dur = 0.3, type = "sine", gain = 0.2, dest = master, attack = 0.01 }) {
+function tone({ when = 0, freq = 440, to = null, dur = 0.3, type = "sine", gain = 0.2, dest = null, attack = 0.01 }) {
   if (!ctx()) return;
+  dest = dest && dest !== master ? dest : fx;
   const t = ac.currentTime + when;
   const o = ac.createOscillator(); o.type = type; o.frequency.setValueAtTime(freq, t);
   if (to) o.frequency.exponentialRampToValueAtTime(to, t + dur);
@@ -114,39 +125,21 @@ export const sfx = {
   scream() {
     if (!ctx()) return;
     const t = ac.currentTime;
-    const o = ac.createOscillator(); o.type = "sawtooth";
-    o.frequency.setValueAtTime(900, t); o.frequency.exponentialRampToValueAtTime(1600, t + 0.15); o.frequency.exponentialRampToValueAtTime(500, t + 1);
-    const f = ac.createBiquadFilter(); f.type = "bandpass"; f.frequency.value = 1400; f.Q.value = 2;
-    const g = ac.createGain(); env(g, t, 0.01, 0.35, 1);
-    o.connect(f).connect(g).connect(master); o.start(t); o.stop(t + 1.1);
-    noiseHit({ dur: 0.9, freq: 2500, q: 0.5, gain: 0.35 });
-    tone({ freq: 45, dur: 1.4, gain: 0.5 });
-  },
-  /** A porcelain cup sliding on a paper board over wood (the cầu cơ planchette). */
-  slide(dur = 0.8, when = 0) {
-    noiseHit({ when, dur, freq: 900, q: 1.4, gain: 0.16 });
-    noiseHit({ when, dur: dur * 0.9, freq: 2600, q: 3, gain: 0.05 });
-  },
-  /** The cup stops on a letter: a small porcelain clink on wood. */
-  clink(when = 0) {
-    tone({ when, freq: 2630, dur: 0.18, gain: 0.05, attack: 0.002 });
-    tone({ when, freq: 3950, dur: 0.1, gain: 0.025, attack: 0.002 });
-    noiseHit({ when, dur: 0.03, freq: 700, q: 2, gain: 0.25 });
-  },
-  /** A wooden clog heel on a wooden floor: deep, booming. */
-  heel(when = 0, dest = null) {
-    tone({ when, freq: 82, to: 48, dur: 0.32, gain: 0.7, dest: dest || reverb() || master });
-    noiseHit({ when, dur: 0.12, freq: 260, type: "lowpass", gain: 0.8, dest: dest || master });
-  },
-  /** The heel dragged along the floor boards. */
-  scrape(when = 0, dur = 0.45, dest = null) {
-    noiseHit({ when, dur, freq: 420, q: 0.9, gain: 0.28, dest: dest || master });
-    noiseHit({ when, dur: dur * 0.8, freq: 1100, q: 4, gain: 0.07, dest: dest || master });
-  },
-  /** A knuckle on a table top: short and dry. */
-  knuckle(when = 0, dest = null) {
-    noiseHit({ when, dur: 0.035, freq: 1500, q: 3, gain: 0.5, dest: dest || master });
-    tone({ when, freq: 640, to: 420, dur: 0.05, gain: 0.12, dest: dest || master });
+    const bp = ac.createBiquadFilter(); bp.type = "bandpass"; bp.frequency.value = 1500; bp.Q.value = 1.4;
+    const g = ac.createGain(); env(g, t, 0.006, 0.9, 1.7);
+    bp.connect(g).connect(fx);
+    [1, 1.013, 0.987].forEach((k) => {
+      const o = ac.createOscillator(); o.type = "sawtooth";
+      o.frequency.setValueAtTime(820 * k, t); o.frequency.exponentialRampToValueAtTime(1750 * k, t + 0.12);
+      o.frequency.exponentialRampToValueAtTime(1300 * k, t + 0.7); o.frequency.exponentialRampToValueAtTime(420 * k, t + 1.7);
+      const vib = ac.createOscillator(); vib.frequency.value = 11; const vg = ac.createGain(); vg.gain.value = 40 * k;
+      vib.connect(vg).connect(o.frequency); vib.start(t); vib.stop(t + 1.8);
+      o.connect(bp); o.start(t); o.stop(t + 1.8);
+    });
+    noiseHit({ dur: 1.3, freq: 2600, q: 0.6, gain: 0.8 });
+    noiseHit({ dur: 0.25, freq: 120, type: "lowpass", gain: 1 });
+    tone({ freq: 62, to: 30, dur: 1.6, gain: 1 });
+    tone({ freq: 3100, to: 2400, dur: 0.5, type: "square", gain: 0.12 });
   },
   /** Trống chầu: "tom" is the drum face (praise), "chát" the wooden rim (blame). */
   tom(when = 0, dest = null) {
@@ -220,8 +213,8 @@ export function ambience(level) {
   }
   amb.level = level;
   const t = ac.currentTime;
-  amb.nodes.rg.gain.setTargetAtTime(level >= 5 ? 0.02 : 0.045, t, 1.5);
-  amb.nodes.dg.gain.setTargetAtTime(level >= 5 ? 0.01 : 0.03 + level * 0.012, t, 2);
+  amb.nodes.rg.gain.setTargetAtTime(level >= 5 ? 0.035 : 0.075, t, 1.5);
+  amb.nodes.dg.gain.setTargetAtTime(level >= 5 ? 0.018 : 0.05 + level * 0.02, t, 2);
   amb.nodes.oscs[3].detune.setTargetAtTime(level * -35, t, 3);   // the high voice slides into dissonance
   amb.nodes.df.frequency.setTargetAtTime(380 + level * 60, t, 2);
 }
