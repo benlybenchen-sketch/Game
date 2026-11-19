@@ -101,7 +101,7 @@ export default [
       </table>
       ${hand(`Dấu thanh luôn đánh ở <u>cuối chữ</u>. Thí dụ: “Sài Gòn” → <b>SAIF GOFN</b>. “Bạch Lan” → <b>BACHJ LAN</b>. “Thư” → <b>THUW</b>.`)}
       <h4>2. Morse (cho tụi bây chơi gõ cửa)</h4>
-      <table class="tbl tbl--morse">${Object.entries(MORSE).slice(0, 26).reduce((rows, [k, v], i) => { if (i % 6 === 0) rows.push([]); rows[rows.length - 1].push(`<td><b>${k}</b> ${v.replace(/\./g, "·").replace(/-/g, "—")}</td>`); return rows; }, []).map((r) => `<tr>${r.join("")}</tr>`).join("")}</table>
+      <div class="morse-grid">${Object.entries(MORSE).slice(0, 26).map(([k, v]) => `<span><b>${k}</b> ${v.replace(/\./g, "·").replace(/-/g, "—")}</span>`).join("")}</div>
       ${hand(`Chấm là gõ ngắn, gạch là gõ dài. Giữa hai chữ cái nghỉ một nhịp, giữa hai chữ nghỉ lâu hơn. Chữ có dấu thì cũng gõ theo kiểu điện báo ở trên.`)}
       ${media("morsepad", "pad")}
       <h4>3. Cách ngồi cơ</h4>

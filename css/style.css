@@ -124,7 +124,7 @@ h2 { font-family: var(--mono); font-size: 13px; letter-spacing: .15em; text-tran
 .doc--ledger { background-image: repeating-linear-gradient(transparent 0 27px, rgba(70,90,140,.18) 27px 28px); }
 .doc--notebook { background: transparent; box-shadow: none; padding: 0; color: var(--ink); }
 .vo { background: #efe7cf; color: var(--paper-ink); padding: 30px 34px; position: relative;
-  background-image: url(../img/vo_lua.jpg), repeating-linear-gradient(transparent 0 23px, rgba(110,80,170,.28) 23px 24px), repeating-linear-gradient(90deg, transparent 0 23px, rgba(110,80,170,.12) 23px 24px);
+  background-image: url(../img/01/vo_lua.jpg), repeating-linear-gradient(transparent 0 23px, rgba(110,80,170,.28) 23px 24px), repeating-linear-gradient(90deg, transparent 0 23px, rgba(110,80,170,.12) 23px 24px);
   background-size: 100% 100%, auto, auto; max-width: 600px; margin: 0 auto; aspect-ratio: 896 / 1200; padding: 14% 10% 12% 25%;
   box-shadow: 0 20px 50px rgba(0,0,0,.6); filter: sepia(.25); }
 
@@ -278,7 +278,10 @@ body.dim #desk { animation: dim 3.2s ease-in-out; }
 .foot::before { content: ""; position: absolute; left: 2px; top: -9px; width: 14px; height: 8px; background: radial-gradient(circle, rgba(140,170,180,.35) 40%, transparent 42%) 0 0/5px 8px repeat-x; }
 @keyframes dry { 0% { opacity: 0; } 8% { opacity: 1; } 100% { opacity: 0; } }
 .scare { position: absolute; inset: 0; background: #000; display: grid; place-items: center; z-index: 90; animation: scarein .08s steps(1); }
-.scare img, .scare-fb, .scare-fb svg { width: min(92vw, 92vh); height: min(92vw, 92vh); object-fit: cover; filter: contrast(1.3) brightness(.9); }
+.scare-fb, .scare-fb svg { width: min(92vw, 92vh); height: min(92vw, 92vh); object-fit: cover; filter: contrast(1.3) brightness(.9); }
+/* the scare fills the screen: whole picture at full height on wide screens, cropped to fill a phone held upright */
+.scare img { height: 100vh; width: auto; max-width: 100vw; object-fit: contain; filter: contrast(1.3) brightness(.9); }
+@media (orientation: portrait) { .scare img { width: 100vw; height: 100vh; max-width: none; object-fit: cover; } }
 .scare--slow { animation: scareslow 1.4s ease-in; }
 .scare.out { opacity: 0; transition: opacity .6s; }
 @keyframes scareslow { from { opacity: 0; } to { opacity: 1; } }
@@ -392,9 +395,10 @@ body[data-case="03"] .doc--notebook .note, body[data-case="03"] .doc--diary .not
 .report-head { font: 700 11px/1.5 var(--mono); letter-spacing: .05em; text-align: center; border-bottom: 2px solid #2b2620; padding-bottom: 8px; margin-bottom: 12px; }
 .book-head { font: 12px/1.5 var(--mono); border-bottom: 1px solid #6d5f48; padding-bottom: 8px; margin-bottom: 12px; }
 .ledger-head { font: 700 13px var(--mono); text-align: center; margin-bottom: 10px; color: #6d1a12; }
-.hand.fwd { font-family: var(--script); font-size: 22px; color: #1d2a5a; transform: skewX(-14deg); transform-origin: left; }
-.hand.back { font-family: var(--hand); color: #2a2a5a; transform: skewX(13deg); transform-origin: left; padding-left: 10px;
-  text-shadow: -2px 0 1px rgba(40,40,90,.18); }
+.hand.fwd { font-family: var(--script); font-size: 22px; color: #1d2a5a; }   /* the script face already leans forward */
+/* backhand: each paragraph leans back on its own, so a long page never slides out of the reader */
+.hand.back { font-family: var(--hand); color: #2a2a5a; text-shadow: -2px 0 1px rgba(40,40,90,.18); padding: 0 12px; }
+.hand.back > p { transform: skewX(9deg); margin: 0 0 6px; }
 .hand.mine { font-family: var(--hand); color: #0e4a3a; }
 .hand.fr { font-family: var(--script); font-size: 21px; color: #3a2414; }
 .hand.sign.fwd, .hand.sign.mine { display: block; }
@@ -411,7 +415,8 @@ body[data-case="03"] .doc--notebook .note, body[data-case="03"] .doc--diary .not
 .su { font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", "Noto Sans CJK TC", sans-serif; font-size: 1.25em; color: #6d1a12; letter-spacing: .05em; }
 .paper-note .su { font-size: 30px; line-height: 1.6; }
 .tbl--code td, .tbl--code th { text-align: center; font-family: var(--mono); }
-.tbl--morse td { font: 13px var(--mono); white-space: nowrap; }
+.morse-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 2px 10px; font: 14px var(--mono); margin: 6px 0 12px; }
+.morse-grid b { display: inline-block; width: 1.3em; }
 .tbl--alpha, .tbl--su { table-layout: fixed; }
 .tbl--alpha td, .tbl--su td { text-align: center; padding: 3px 1px; font-family: var(--mono); }
 .tbl--alpha td b, .tbl--su td .su { display: block; font-size: 16px; } .tbl--alpha td span, .tbl--su td span { display: block; font-size: 10px; color: #6b604c; }
@@ -484,7 +489,7 @@ body[data-case="03"] .doc--notebook .note, body[data-case="03"] .doc--diary .not
 
 /* mirror writing and the mirror */
 .mirror-src { transform: scaleX(-1); background: #efe7d2; padding: 18px 22px; box-shadow: 0 10px 26px rgba(0,0,0,.45); color: #2a2a5a; }
-.mirror-src.hand.back { transform: scaleX(-1) skewX(13deg); }
+.mirror-src.hand.back { transform: scaleX(-1); }
 .mir { margin: 10px 0; }
 .mir-glass { position: relative; padding: 18px 22px; border: 10px solid #6b5326; border-radius: 4px; background: linear-gradient(135deg, #b9c3c6, #8f9a9e 45%, #c6cfd1 60%, #7d888c); box-shadow: inset 0 0 40px rgba(0,0,0,.45), 0 10px 26px rgba(0,0,0,.5); }
 .mir-glass::after { content: ""; position: absolute; inset: 0; background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,.25) 40%, transparent 50%); pointer-events: none; }

@@ -32,11 +32,11 @@ export default [
     id: "bien_ban_6", stage: 5, kind: "Sổ cơ", icon: "📓", label: "Sổ cơ · buổi 6 · 6/11/1971 (Dung ghi)",
     html: () => `
     <div class="doc doc--notebook">
-      ${hand(`<b>Buổi cơ thứ sáu.</b> Thứ Bảy 6/11/1971.<br>
-        Ngồi: chị Lan (tay chủ), Dung (ghi sổ).<br>
-        ${ln("bb6_tay", "Mình không đặt tay. Con cơ vẫn chạy, theo đúng ngón tay chị Lan.")}<br>
-        <span class="code-line">L A N &nbsp; C H E E T S &nbsp; C H A Y S</span><br>
-        Chị Lan cười. Chị nói: “Thấy chưa Dung, bà gọi tới chị rồi.” Chị rủ mình lên gác thượng thắp nhang cho bà trẻ. Mình đi, vì mình muốn`, "back")}
+      ${hand(`<p><b>Buổi cơ thứ sáu.</b> Thứ Bảy 6/11/1971.</p>
+        <p>Ngồi: chị Lan (tay chủ), Dung (ghi sổ).</p>
+        <p>${ln("bb6_tay", "Mình không đặt tay. Con cơ vẫn chạy, theo đúng ngón tay chị Lan.")}</p>
+        <p><span class="code-line">L A N &nbsp; C H E E T S &nbsp; C H A Y S</span></p>
+        <p>Chị Lan cười. Chị nói: “Thấy chưa Dung, bà gọi tới chị rồi.” Chị rủ mình lên gác thượng thắp nhang cho bà trẻ. Mình đi, vì mình muốn</p>`, "back")}
       <p class="note">Câu viết dở. Nét chữ cả trang ngả về phía sau, mực lem ở cạnh trái mỗi dòng như bàn tay trái quẹt qua mực còn ướt. Trang kế tiếp là buổi cơ thứ bảy.</p>
     </div>`,
   },
