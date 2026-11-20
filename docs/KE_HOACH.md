@@ -44,3 +44,6 @@ Tổng đài 108, Thợ ảnh thờ, Nhà xác ca 3, Tin nhắn lúc 3 giờ, B�
 - Mọi hiệu ứng âm thanh đi qua bus `fx` trong `js/audio.js` (khuếch đại lớn, có limiter): luôn ở mức tối đa mà không vỡ tiếng. Hiệu ứng mới chỉ cần gọi `tone`/`noiseHit`/`sfx.*` là tự to.
 - Giọng đọc và băng giữ ở master, không đẩy theo hiệu ứng.
 - Cảnh doạ: luôn có tiếng thét lớn (`sfx.scream`, ba lớp giọng rít + tiếng nổ trầm); mỗi cảnh doạ giữ lâu hơn thời gian ghi trong case thêm 1,2 giây; bấm vào màn hình để tắt (sau 0,6 giây). Cảnh doạ chính thét hai lần.
+
+## Đưa bản mới lên web
+Trước mỗi lần commit: `node tools/stamp.mjs`. Lệnh này gắn mã phiên bản theo nội dung cho từng file JS (import map trong index.html) và cho CSS, nên trình duyệt người chơi luôn tải đúng file vừa sửa, không bị giữ bản cũ.
