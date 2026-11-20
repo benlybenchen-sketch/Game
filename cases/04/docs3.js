@@ -23,13 +23,13 @@ export default [
     html: () => `
     <div class="doc doc--memo">
       ${hand(`<p>Sài Gòn, 20/5/1996</p>
-        <p>Thảo con, chuyện lớn mạ muốn kể là: ${ln("t2_di", "mạ tìm lại được dì của con, người mạ tưởng đã mất từ hồi nạn đói.")} Dì đọc báo nhắn tin tìm mạ.
-        ${ln("t2_duc", "Dì giống mạ như đúc, con mà thấy chắc con không phân biệt được.")} Dì nghèo, đau ốm, mạ ở lại chăm dì ít lâu.</p>
-        <p>${ln("t2_ke", "Tối nào hai chị em cũng ngồi kể chuyện tới khuya. Mạ kể cho dì nghe hết chuyện nhà mình, chuyện con, chuyện con Mực, chuyện khách may. Dì thương con lắm.")}</p>
+        <p>Thảo con, chuyện lớn mẹ muốn kể là: ${ln("t2_di", "mẹ tìm lại được dì của con, người mẹ tưởng đã mất từ hồi nạn đói.")} Dì đọc báo nhắn tin tìm mẹ.
+        ${ln("t2_duc", "Dì giống mẹ như đúc, con mà thấy chắc con không phân biệt được.")} Dì nghèo, đau ốm, mẹ ở lại chăm dì ít lâu.</p>
+        <p>${ln("t2_ke", "Tối nào hai chị em cũng ngồi kể chuyện tới khuya. Mẹ kể cho dì nghe hết chuyện nhà mình, chuyện con, chuyện con Mực, chuyện khách may. Dì thương con lắm.")}</p>
         <p>Sài Gòn, 12/6/1996</p>
-        <p>${ln("t2_nau", "Dì nấu ăn khéo lắm, ngày nào cũng nấu cho mạ. Mạ dặn dì mạ dị ứng tôm, dì nhớ kỹ lắm.")} Cuối tháng mạ về. Mạ thương con.</p>
-        <p class="right">Mạ</p>`)}
-      <p class="note">Thảo cất hai lá thư trong tủ. Thảo nói chưa từng nghe mạ nhắc tới một người dì nào.</p>
+        <p>${ln("t2_nau", "Dì nấu ăn khéo lắm, ngày nào cũng nấu cho mẹ. Mẹ dặn dì mẹ dị ứng tôm, dì nhớ kỹ lắm.")} Cuối tháng mẹ về. Mẹ thương con.</p>
+        <p class="right">Mẹ</p>`)}
+      <p class="note">Thảo cất hai lá thư trong tủ. Thảo nói chưa từng nghe mẹ nhắc tới một người dì nào.</p>
     </div>`,
   },
 

@@ -40,7 +40,7 @@ export default [
       <p>Họ tên: <b>TRẦN NGỌC THẢO</b> · Nữ · Sinh 1972 · Nghề: bán hoa, chợ Đà Lạt · Địa chỉ: nhà bà Lê Thị Hoa, đường Phan Đình Phùng, Đà Lạt.</p>
       <p>Vào viện: 9 giờ ngày 20/8/1996. Người đưa vào: mẹ ruột <b>Lê Thị Hoa</b>, 52 tuổi.</p>
       <h4>Lý do vào viện (mẹ khai)</h4>
-      <p>${ln("ba_ve", "Bà Hoa đi Sài Gòn thăm họ hàng từ 2/4/1996, về Đà Lạt ngày 5/7/1996.")} ${ln("ba_ngay", "Ngay tối 5/7, con gái nhìn bà rồi hét “bà không phải mạ”, từ đó không cho mẹ lại gần.")}
+      <p>${ln("ba_ve", "Bà Hoa đi Sài Gòn thăm họ hàng từ 2/4/1996, về Đà Lạt ngày 5/7/1996.")} ${ln("ba_ngay", "Ngay tối 5/7, con gái nhìn bà rồi hét “bà không phải mẹ”, từ đó không cho mẹ lại gần.")}
         ${ln("ba_cho", "Ngày 9/8 con chó của nhà chết, bệnh nhân khóc, đập phá, nói “bà giết con Mực”.")}</p>
       <h4>Tiền sử</h4>
       <p>${ln("ts_te", "Ngày 15/2/1996 té xe máy ở đèo Prenn, chấn thương sọ não, điều trị ở Bệnh viện Lâm Đồng 10 ngày.")} ${ln("ts_khoa", "Tháng 3/1996, theo mẹ, bệnh nhân có nói người yêu là anh Khoa “là người khác”, sau đó hai người chia tay.")}
@@ -101,18 +101,18 @@ export default [
     <div class="doc doc--memo">
       ${hand(`<p>Sài Gòn, ngày 6 tháng 4 năm 1996</p>
         <p>Thảo con,</p>
-        <p>Mạ vô tới nơi rồi, xe đò đi mười hai tiếng, mạ say xe ói mấy lần. Mạ ở nhà người bà con dưới Khánh Hội, gần bến tàu.</p>
-        <p>Con ở nhà nhớ cho con Mực ăn đúng giờ, đừng cho nó ăn đồ lạ. Con nhớ đừng ăn tôm, mạ dị ứng thì con cũng dị ứng.</p>
-        <p>Mạ có chuyện lớn muốn kể con nghe mà để mạ về rồi mạ kể. Mạ thương con.</p>
-        <p class="right">Mạ</p>`)}
-      <p class="note">Thư Thảo cất trong ví. Nét chữ mềm, nghiêng phải. Ký “Mạ”.</p>
+        <p>Mẹ vô tới nơi rồi, xe đò đi mười hai tiếng, mẹ say xe ói mấy lần. Mẹ ở nhà người bà con dưới Khánh Hội, gần bến tàu.</p>
+        <p>Con ở nhà nhớ cho con Mực ăn đúng giờ, đừng cho nó ăn đồ lạ. Con nhớ đừng ăn tôm, mẹ dị ứng thì con cũng dị ứng.</p>
+        <p>Mẹ có chuyện lớn muốn kể con nghe mà để mẹ về rồi mẹ kể. Mẹ thương con.</p>
+        <p class="right">Mẹ</p>`)}
+      <p class="note">Thư Thảo cất trong ví. Nét chữ mềm, nghiêng phải. Ký “Mẹ”.</p>
     </div>`,
   },
 
   {
     id: "anh_tet", stage: 0, kind: "Ảnh", icon: "🖼", label: "Ảnh Tết 1990 Thảo giữ trong ví",
     html: () => `<div class="doc doc--plain">${pic("tet_1990", "Tết Canh Ngọ 1990. Bà Hoa áo dài tím, Thảo 18 tuổi, con Mực.")}
-      <p class="note">Mặt sau ảnh, nét chữ Thảo: <i>“Mạ với con với Mực. Đừng bao giờ đổi.”</i></p></div>`,
+      <p class="note">Mặt sau ảnh, nét chữ Thảo: <i>“Mẹ với con với Mực. Đừng bao giờ đổi.”</i></p></div>`,
   },
   tape("tet90", 0, "Băng cassette Tết 1990 của nhà Thảo", "Cuộn băng Thảo xin đem theo vào viện. Khoa giữ trong tủ đồ cá nhân."),
   {

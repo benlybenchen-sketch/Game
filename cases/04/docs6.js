@@ -25,7 +25,7 @@ export default [
       ${hand(`<p>Chị Vân,</p>
         <p>Em về nhà rồi. Nhà trống lắm, không còn con Mực. Anh Khoa có tới, em vẫn không thấy ảnh. Bác sĩ nói cái đó là bệnh thật, có thể lâu lắm mới hết. Em chịu được.</p>
         <p>Chị ký cho em cái câu “lời khai về mẹ là sự thật”. Cả đời em sẽ nhớ câu đó.</p>
-        <p>Chị đừng nói với ai nghe. Mạ về rồi. Đêm nào mạ cũng đứng cuối giường ru con, bài “Bồng bồng mẹ bế con sang”. Nốt ruồi của mạ nằm đúng bên cũ.</p>
+        <p>Chị đừng nói với ai nghe. Mẹ về rồi. Đêm nào mẹ cũng đứng cuối giường ru con, bài “Bồng bồng mẹ bế con sang”. Nốt ruồi của mẹ nằm đúng bên cũ.</p>
         <p>Nói ra người ta lại bảo em điên.</p>
         <p class="right">Thảo</p>`, "mine")}
       <p class="note">Trong phong bì có kèm một cuộn băng cassette nhỏ, nhãn viết tay: “đêm 13/11”.</p>

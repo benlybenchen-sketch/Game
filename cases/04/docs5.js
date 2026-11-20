@@ -69,7 +69,7 @@ export default [
       return `
     <div class="doc doc--plain">
       ${pic("hop_banh", "Hộp bánh trên bàn trực, 22 giờ 15.")}
-      <p class="note">Nhãn giấy dán nắp, nét chữ nghiêng: <i>“Bánh ít đậu xanh. Mạ làm cho con.”</i></p>
+      <p class="note">Nhãn giấy dán nắp, nét chữ nghiêng: <i>“Bánh ít đậu xanh. Mẹ làm cho con.”</i></p>
       <p class="note">${ln("hb_mo", "Y tá Sương bẻ thử một cái: nhân bên trong màu hồng cam, tơi, thơm mùi tôm khô. Không phải đậu xanh.")}</p>
       <p class="note">${ln("hb_thao", "22 giờ 40: y tá Sương phát hiện Thảo đã lấy được một cái lúc đi ngang bàn trực, ăn mất nửa. Mặt và môi sưng phù, khó thở. Tiêm adrenalin kịp thời.")}</p>
     </div>`;

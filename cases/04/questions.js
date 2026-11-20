@@ -8,12 +8,12 @@ const log = (lines) => () => [...lines, `Phòng 7: ${doseNote()}`].join("\n");
 export const QUESTIONS = [
   {
     id: "q1", stage: 0, title: "Hồ sơ phòng 7",
-    ask: "Đọc hồ sơ nhập viện của Trần Ngọc Thảo. BS. Kha chẩn đoán gì? Thảo bị chấn thương sọ não ngày nào? Bà Hoa ở Sài Gòn bao nhiêu ngày, và ngày đầu tiên Thảo nói “bà không phải mạ” là ngày nào?",
+    ask: "Đọc hồ sơ nhập viện của Trần Ngọc Thảo. BS. Kha chẩn đoán gì? Thảo bị chấn thương sọ não ngày nào? Bà Hoa ở Sài Gòn bao nhiêu ngày, và ngày đầu tiên Thảo nói “bà không phải mẹ” là ngày nào?",
     parts: [
       { id: "dx", type: "choice", label: "Chẩn đoán của BS. Kha", options: ["Tâm thần phân liệt thể hoang tưởng", "Hội chứng Capgras sau chấn thương sọ não", "Hội chứng Fregoli", "Trầm cảm có loạn thần", "Rối loạn phân ly"] },
       { id: "inj", type: "text", label: "Ngày Thảo bị chấn thương sọ não (ngày/tháng)", placeholder: "vd 1/1" },
       { id: "days", type: "number", label: "Số ngày bà Hoa ở Sài Gòn (tính từ ngày đi tới ngày về)", unit: "ngày" },
-      { id: "first", type: "text", label: "Ngày đầu tiên Thảo nói “bà không phải mạ” (ngày/tháng)", placeholder: "vd 1/1" },
+      { id: "first", type: "text", label: "Ngày đầu tiên Thảo nói “bà không phải mẹ” (ngày/tháng)", placeholder: "vd 1/1" },
       pins,
     ],
     memo: log([
@@ -70,8 +70,8 @@ export const QUESTIONS = [
     id: "q4", stage: 3, title: "Tiếng ru",
     ask: "Nghe băng Tết 1990 và băng buổi thăm 19/10. Thảo gọi mẹ bằng chữ gì, và người phụ nữ lỡ miệng xưng bằng chữ gì? Bà Hoa ru bài gì, người phụ nữ ru bài gì? Người phụ nữ lớn lên ở đâu? Theo gia phả, bà Hoa có người em tên gì?",
     parts: [
-      { id: "goi", type: "choice", label: "Chữ Thảo và bà Hoa trong băng 1990 dùng để gọi mẹ", options: ["Mẹ", "Má", "Mạ", "U", "Bầm"] },
-      { id: "lo", type: "choice", label: "Chữ người phụ nữ lỡ miệng xưng ngày 19/10", options: ["Mẹ", "Má", "Mạ", "U", "Bầm"] },
+      { id: "goi", type: "choice", label: "Chữ Thảo và bà Hoa trong băng 1990 dùng để gọi mẹ", options: ["Mẹ", "Má", "Mẹ", "U", "Bầm"] },
+      { id: "lo", type: "choice", label: "Chữ người phụ nữ lỡ miệng xưng ngày 19/10", options: ["Mẹ", "Má", "Mẹ", "U", "Bầm"] },
       { id: "ru_hoa", type: "choice", label: "Bài ru của bà Hoa (băng 1990)", options: ["Ví dầu cầu ván đóng đinh", "Bồng bồng mẹ bế con sang", "Ầu ơ… Gió mùa thu mẹ ru con ngủ", "Con cò bé bé"] },
       { id: "ru_la", type: "choice", label: "Bài ru của người phụ nữ (băng 19/10)", options: ["Ví dầu cầu ván đóng đinh", "Bồng bồng mẹ bế con sang", "Ầu ơ… Gió mùa thu mẹ ru con ngủ", "Con cò bé bé"] },
       { id: "where", type: "choice", label: "Người phụ nữ lớn lên ở đâu", options: ["Đà Nẵng", "Đà Lạt", "Sài Gòn", "Hà Nội"] },

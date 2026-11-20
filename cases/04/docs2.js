@@ -35,7 +35,7 @@ export default [
     html: () => `
     <div class="doc doc--plain">
       <div class="compare">
-        ${pic("tay_nhan_1995", "Thảo giữ trong ví: tay mạ đạp máy may, năm 1995.")}
+        ${pic("tay_nhan_1995", "Thảo giữ trong ví: tay mẹ đạp máy may, năm 1995.")}
         ${pic("tay_1996", "Y tá Sương chụp ở căng tin ngày 12/10/1996.")}
       </div>
       <p class="note">Ông Minh, chồng bà Hoa, cưới bà năm <b>1965</b>. Ông mất năm 1975. Theo lời Thảo và hàng xóm, bà chưa từng tháo nhẫn cưới.

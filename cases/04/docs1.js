@@ -30,7 +30,7 @@ export default [
         <p>14/3. Mình không chỉ ra được ảnh khác chỗ nào. Mình chỉ thấy lạnh.</p>
         <p>15/3. Anh Khoa gọi điện. Nghe giọng thì đúng là ảnh, mình khóc. Gặp mặt lại thấy lạ.</p>
         <p>20/3. Con Mực cũng lạ. Mấy hôm sau thì hết.</p>
-        <p>28/3. Anh Khoa nói thôi. Mạ ôm mình. Mạ thì vẫn là mạ.</p>`, "mine")}
+        <p>28/3. Anh Khoa nói thôi. Mẹ ôm mình. Mẹ thì vẫn là mẹ.</p>`, "mine")}
       <p class="note">Bà Hoa nộp cuốn nhật ký này lúc nhập viện “để bác sĩ thấy con tôi bệnh từ tháng Ba”.</p>
     </div>`,
   },
@@ -45,9 +45,9 @@ export default [
       <p><b>Hỏi:</b> Căn cứ vào đâu chị cho rằng người đến thăm không phải mẹ chị?</p>
       <p><b>Đáp:</b></p>
       <ol>
-        <li>${ln("pv_ruoi", "“Nốt ruồi của mạ chạy sang bên kia miệng.”")}</li>
-        <li>${ln("pv_nhan", "“Mạ đeo nhẫn ba mươi năm, ngón tay có vết hằn. Bà đó không có vết hằn.”")}</li>
-        <li>${ln("pv_tom", "“Bà đó ăn tôm. Mạ em ăn tôm là chết.”")}</li>
+        <li>${ln("pv_ruoi", "“Nốt ruồi của mẹ chạy sang bên kia miệng.”")}</li>
+        <li>${ln("pv_nhan", "“Mẹ đeo nhẫn ba mươi năm, ngón tay có vết hằn. Bà đó không có vết hằn.”")}</li>
+        <li>${ln("pv_tom", "“Bà đó ăn tôm. Mẹ em ăn tôm là chết.”")}</li>
         <li>${ln("pv_ru", "“Bà đó ru em bài khác.”")}</li>
       </ol>
       <p><b>Hỏi:</b> Còn anh Khoa?</p>
@@ -62,7 +62,7 @@ export default [
     <div class="doc doc--ledger">
       <table class="tbl tbl--hand">
         <tr><th>Ngày, giờ</th><th>Người gọi</th><th>Ghi chú</th></tr>
-        <tr><td>3/9 · 19:10</td><td>Bà Hoa (mẹ BN P7)</td><td>${ln("dt_hoa", "Cho BN nghe máy theo đề nghị của bà Hoa. BN nghe khoảng 10 giây thì hét: “Không phải giọng mạ!” rồi buông máy.")}</td></tr>
+        <tr><td>3/9 · 19:10</td><td>Bà Hoa (mẹ BN P7)</td><td>${ln("dt_hoa", "Cho BN nghe máy theo đề nghị của bà Hoa. BN nghe khoảng 10 giây thì hét: “Không phải giọng mẹ!” rồi buông máy.")}</td></tr>
         <tr><td>7/9 · 20:30</td><td>Anh Khoa (bạn BN P7)</td><td>${ln("dt_khoa", "BN nghe máy, khóc, nói chuyện bình thường với anh Khoa gần 15 phút.")}</td></tr>
         <tr><td>12/9 · 08:00</td><td>Bà Hoa</td><td>Hỏi thăm, không cho nghe máy (BS. Kha dặn).</td></tr>
       </table>
