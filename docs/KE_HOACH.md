@@ -35,6 +35,10 @@ số Tô Châu kèm bảng 29 chữ, mã sách Kiều, chữ gương, quẻ họ
 Kinh thánh vụ án: docs/HS04_KINH_THANH.md. Đà Lạt 1996, hội chứng Capgras, sinh đôi soi gương. Người chơi là bác sĩ nội trú Lê Bích Vân (tên cố định, không có màn ký tên).
 Lối chơi mới: y lệnh có hậu quả (kết luận sai thì băng Thảo chậm và lè nhè dần), chồng ảnh và lật ngang, so vân tay, bản giám định cuối cùng.
 
+## Hồ sơ 05: "Người giữ vợ" (đang thiết kế)
+Kinh thánh vụ án: docs/HS05_KINH_THANH.md. Cam Đường, Lào Cai 1991, rối loạn loạn thần chia sẻ (folie à deux), đảo vai: con gái 15 tuổi là người khởi phát. Người chơi là Lê Bích Vân lúc còn là sinh viên y năm 5 (tiền truyện của hồ sơ 04).
+Lối chơi mới: sơ đồ, bắt mâu thuẫn, đèn pin, xếp dòng thời gian, băng chạy chậm, ghép thư xé, tra lịch âm. Hồ sơ đầu tiên có BƯỚC NGOẶT: một câu chỉ trả lời một lần, sai là kết thúc xấu, dấu "THẤT BẠI", chơi lại từ đầu.
+
 ## Ý tưởng khác đã đề xuất (chưa làm)
 Hồ sơ cuối series (để dành): "Hồ sơ của chính bạn" (meta, dùng dữ liệu chơi các hồ sơ trước, chỉ đọc trên máy).
 Thôi miên lần thứ bảy (trí nhớ giả), Người thứ năm (Fansipan), Bóng đè (ký túc xá 1991), Băng NightShot (Hang Khe Sim), Tổng đài 108, Thợ ảnh thờ, Nhà số 13 Hàng Mã.
