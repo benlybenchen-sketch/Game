@@ -16,11 +16,12 @@ Nỗi sợ của hồ sơ này là **không biết ai điên**: người bệnh,
 | **Kẻ thù dịu dàng** | Bà "Hoa" thăm con mỗi tuần, mang bánh, khóc trước mặt bác sĩ, cảm ơn bác sĩ Vân rất lễ phép. Bà là người lịch sự nhất trong game. |
 | **Điều điên nhất là điều đúng** | Sách giáo khoa nói người Capgras "không chỉ ra được khác biệt cụ thể". Thảo chỉ ra được: nốt ruồi, vết nhẫn, món tôm, tiếng ru. Chính sự **cụ thể** ấy là manh mối người chơi phải nhận ra. |
 | **Người ngoài cuộc thấy trước** | Con chó Mực sủa người mẹ, không cho lại gần, rồi chết. Trẻ con và động vật không bị lừa bởi khuôn mặt. |
-| **Lớp tâm linh (không giải thích)** | 3 giờ sáng, băng ghi âm phòng Thảo bắt được tiếng một người đàn bà ru "Bồng bồng mẹ bế con sang", giọng Huế, trong khi cửa phòng khoá và không ai được thăm đêm. Y tá thấy một người mặc áo dài tím đứng cuối giường. |
+| **Lớp tâm linh (không giải thích)** | 3 giờ sáng, băng ghi âm phòng Thảo bắt được tiếng một người đàn bà ru "Bồng bồng mẹ bế con sang", giọng Quảng, trong khi cửa phòng khoá và không ai được thăm đêm. Y tá thấy một người mặc áo dài tím đứng cuối giường. |
 
 ---
 
 ## 1. Bối cảnh
+- **Gốc gia đình:** họ Lê ở làng Phong Lệ, huyện Hoà Vang, ven Đà Nẵng. Người Quảng gọi mẹ là "mạ", cô là "o", hay nói "răng, rứa, chi, ni, nớ, hè"; món nhà là mì Quảng, bánh xèo, bánh ít lá gai. Bà Hoa giữ nguyên giọng Quảng suốt 30 năm ở Đà Lạt.
 - **Bệnh viện Tâm thần Cam Ly**, Đà Lạt (hư cấu): khu nhà Pháp cũ hai tầng giữa đồi thông, hành lang lát gạch bông, cửa sắt, phòng cách ly có ô kính quan sát. Sương mù, mưa phùn, lò sưởi củi ở phòng trực.
 - **Khoa Nữ 2**, nơi Thảo nằm, phòng 7 (phòng đơn, có ô kính).
 - **Thời gian khung:** 6 đêm trực của bác sĩ Vân, từ thứ Hai 14/10 đến thứ Năm 24/10/1996 (đêm trực cách ngày). Phiên toà xét đơn **tuyên bố Thảo mất năng lực hành vi dân sự** mở ngày **28/10/1996**. Toà chờ bản giám định pháp y tâm thần do khoa ký, trong đó có chữ ký của bác sĩ điều trị là Vân.
@@ -32,7 +33,7 @@ Nỗi sợ của hồ sơ này là **không biết ai điên**: người bệnh,
 |---|---|---|---|
 | **Bác sĩ Lê Bích Vân** (người chơi) | 27 | Bác sĩ nội trú tâm thần năm 2, mới về khoa Nữ 2 từ 14/10 | Người ký giám định |
 | **Trần Ngọc Thảo** | 24 | Bán hoa ở chợ Đà Lạt, đàn piano giỏi, gầy, tóc ngắn ngang vai. Tai nạn xe máy ở đèo Prenn ngày 15/2/1996 | **Thật sự mắc Capgras** (với người yêu cũ, với con chó lúc đầu), **và nói đúng về mẹ** |
-| **Lê Thị Hoa** | 52 (sinh 14/3/1944, Huế) | Mẹ Thảo, thợ may áo dài ở đường Phan Đình Phùng. Giọng Huế, gọi mình là **"mạ"**. Góa chồng từ 1975, vẫn đeo nhẫn cưới. Dị ứng tôm nặng từ 1985. Mổ ruột thừa năm 1970. Nốt ruồi ở **khoé miệng trái**, xoáy tóc **xoay theo chiều kim đồng hồ**, thuận tay phải | **Đã chết** ở Sài Gòn ngày 18/6/1996 |
+| **Lê Thị Hoa** | 52 (sinh 14/3/1944, Đà Nẵng) | Mẹ Thảo, thợ may áo dài ở đường Phan Đình Phùng. Giọng Quảng (Đà Nẵng), gọi mình là **"mạ"**, nói "răng, rứa, chi, ni, hè". Góa chồng từ 1975, vẫn đeo nhẫn cưới. Dị ứng tôm nặng từ 1985. Mổ ruột thừa năm 1970. Nốt ruồi ở **khoé miệng trái**, xoáy tóc **xoay theo chiều kim đồng hồ**, thuận tay phải | **Đã chết** ở Sài Gòn ngày 18/6/1996 |
 | **Phạm Thị Huệ** (khai sinh Lê Thị Huệ) | 52 | **Em sinh đôi cùng trứng của Hoa**, cho làm con nuôi năm 1945. Lớn lên ở Khánh Hội, Sài Gòn. Nợ nần, chồng chết. Nốt ruồi ở **khoé miệng phải**, xoáy tóc **ngược chiều kim đồng hồ**, **thuận tay trái** (sinh đôi soi gương) | **"Bà Hoa" hiện tại.** Hung thủ |
 | **BS. Đặng Quốc Kha** | 55 | Trưởng khoa Nữ 2. Giỏi, tự tin, ghét bị cãi. Đã chẩn đoán Capgras từ tháng 8 | Không phải đồng phạm. Ông đúng về bệnh, sai về sự thật |
 | **Y tá Lâm Thị Sương** | 45 | Trực đêm 20 năm, tin chuyện tâm linh, ghi sổ giao ca rất kỹ | Người kể chuyện (sổ giao ca sau mỗi đêm) |
@@ -42,18 +43,18 @@ Nỗi sợ của hồ sơ này là **không biết ai điên**: người bệnh,
 ## 3. Sự thật
 
 ### 3.1. Trước 1996
-- **14/3/1944**, Huế: hai chị em sinh đôi Hoa và Huệ ra đời trong một nhà nghèo ở Kim Long. Hai đứa là **sinh đôi soi gương**: Huệ thuận tay trái, nốt ruồi và xoáy tóc nằm ngược bên với Hoa.
+- **14/3/1944**, Đà Nẵng: hai chị em sinh đôi Hoa và Huệ ra đời trong một nhà nghèo ở làng Phong Lệ, Hoà Vang. Hai đứa là **sinh đôi soi gương**: Huệ thuận tay trái, nốt ruồi và xoáy tóc nằm ngược bên với Hoa.
 - **1945**: nạn đói. Cha mẹ cho Huệ làm con nuôi một gia đình buôn vải họ Phạm ở Sài Gòn. Gia phả họ Lê ghi một dòng: *"Thứ nữ Huệ, cho họ Phạm, Ất Dậu."*
 - **1965**: Hoa lấy ông Trần Văn Minh, lên Đà Lạt. Nhẫn cưới vàng, đeo ngón áp út tay trái suốt 31 năm.
 - **1970**: Hoa mổ ruột thừa ở Bệnh viện Đà Lạt (sẹo nhỏ bụng dưới phải).
 - **1972**: Thảo ra đời. **1975**: ông Minh mất.
 - **1985**: Hoa ăn gỏi tôm, sốc phản vệ, cấp cứu suýt chết. Từ đó tuyệt đối không ăn tôm. **1990**: Thảo cũng nổi mề đay sau khi ăn tôm (bệnh án ghi "dị ứng tôm như mẹ").
-- **Tết 1990**: Thảo thu băng cassette cả nhà đón Tết. Trong băng Hoa hát ru **"Bồng bồng mẹ bế con sang"** giọng Huế, gọi mình là "mạ".
+- **Tết 1990**: Thảo thu băng cassette cả nhà đón Tết. Trong băng Hoa hát ru **"Bồng bồng mẹ bế con sang"** giọng Quảng, gọi mình là "mạ".
 
 ### 3.2. Năm 1996
 - **15/2**: Thảo té xe ở đèo Prenn, dập nhẹ **thuỳ thái dương phải**, nằm viện 10 ngày.
 - **Tháng 3**: Thảo nói với bạn: *"Anh Khoa hôm nay lạ lắm. Mặt vẫn là mặt ảnh mà mình không thấy ảnh."* Khoa chia tay. Thảo cũng nói con Mực "là con chó khác" trong một tuần rồi thôi. **Đây là Capgras thật, đúng sách: chỉ "cảm thấy", không nêu được khác biệt nào.**
-- **10/3**: Huệ đăng mục nhắn tin tìm người trên báo, tìm "chị sinh đôi Lê Thị Hoa, quê Kim Long". Hoa đọc được, khóc cả đêm.
+- **10/3**: Huệ đăng mục nhắn tin tìm người trên báo, tìm "chị sinh đôi Lê Thị Hoa, quê Phong Lệ, Hoà Vang". Hoa đọc được, khóc cả đêm.
 - **2/4**: Hoa vào Sài Gòn gặp em, ở lại nhà Huệ ở Khánh Hội "chăm em bệnh". Ba tháng hai chị em kể cho nhau nghe cả đời mình. Huệ học từng chi tiết của Hoa: tên hàng xóm, khách may, tên chó, món ăn, cách Hoa gọi con.
 - **18/6**: Huệ nấu **cháo tôm băm nhuyễn** cho Hoa, nói là cháo thịt. Hoa sốc phản vệ, môi và mặt sưng phù, chết trong đêm. Huệ báo phường: **"chị Huệ chết vì đột quỵ"**. Một y sĩ phường ký giấy chứng tử cho **Phạm Thị Huệ**, chôn ở nghĩa trang Phước Lộc, Bình Chánh (hư cấu). Không ai ở Sài Gòn biết có hai người.
 - **5/7**: "Hoa" về Đà Lạt, gầy đi, giọng khàn "vì viêm họng trong Sài Gòn", nói mất nhẫn cưới ở bến xe. Ngay tối đó Thảo hét: **"Bà không phải mạ!"**
@@ -70,7 +71,7 @@ Huệ thăm Thảo mỗi chiều thứ Bảy và Chủ Nhật, có băng ghi âm
 | **1** | T2 14/10 | Hồ sơ nhập viện: chẩn đoán Capgras, ngày chấn thương, mẹ đi Sài Gòn 94 ngày, lời khai Thảo | Mọi thứ khớp với bệnh. Nhưng Thảo chỉ nói "không phải mạ" **sau** ngày 5/7, không phải ngay sau tai nạn |
 | **2** | T4 16/10 | Sách giáo khoa Capgras + nhật ký Thảo tháng 3 (về Khoa) + biên bản phỏng vấn Thảo về mẹ | Về Khoa: chỉ "cảm thấy". Về mẹ: nêu **khác biệt cụ thể**. Hai kiểu nói khác nhau |
 | **3** | T6 18/10 | Bệnh án dị ứng 1985; sổ căng tin: "bà Hoa" ăn **gỏi tôm**; ảnh tay năm 1995 có nhẫn, ảnh tay hôm nay **không có vết hằn**; giấy chó Mực chết | Bằng chứng nghiêng hẳn về Thảo đúng |
-| **4** | CN 20/10 | Băng Tết 1990 (giọng Huế, "mạ", ru "Bồng bồng") vs băng buổi thăm (lỡ nói "**má**", ru "**Ví dầu cầu ván đóng đinh**"); BS. Kha phản bác: "người ta đổi giọng sau ba tháng ở Sài Gòn là chuyện thường, còn bà ấy biết hết chuyện nhà" | Lật lại: một người lạ không thể biết hết chuyện nhà. Cuối đêm: **gia phả họ Lê từ Huế**: Hoa có em sinh đôi |
+| **4** | CN 20/10 | Băng Tết 1990 (giọng Quảng, "mạ", ru "Bồng bồng") vs băng buổi thăm (lỡ nói "**má**", ru "**Ví dầu cầu ván đóng đinh**"); BS. Kha phản bác: "người ta đổi giọng sau ba tháng ở Sài Gòn là chuyện thường, còn bà ấy biết hết chuyện nhà" | Lật lại: một người lạ không thể biết hết chuyện nhà. Cuối đêm: **gia phả họ Lê từ Đà Nẵng**: Hoa có em sinh đôi |
 | **5** | T3 22/10 | Ảnh Tết 1990 và ảnh hôm nay: **lật ngang** ảnh hôm nay thì nốt ruồi, xoáy tóc trùng khớp. Sách về **sinh đôi soi gương**. Y tá: bà Hoa cầm đũa tay trái khi tưởng không ai nhìn | Câu "điên" nhất của Thảo là sự thật. Người phụ nữ là **Huệ** |
 | **6** | T5 24/10 | Giấy chứng tử "Phạm Thị Huệ" (môi, mặt sưng phù; **sẹo mổ ruột thừa**); vân tay CMND của Hoa (móc) vs dấu điểm chỉ giấy nhập viện (xoáy); hộp bánh gửi vào khoa | Người chết ở Sài Gòn là Hoa. Hộp bánh là án mạng thứ hai đang tới |
 
@@ -93,7 +94,7 @@ Huệ thăm Thảo mỗi chiều thứ Bảy và Chủ Nhật, có băng ghi âm
 - **Ảnh**: Tết 1990 cả nhà; ảnh bàn tay Hoa đeo nhẫn đạp máy may (1995); ảnh "bà Hoa" chụp trong buổi thăm tháng 10.
 - **Băng cassette Tết 1990** và **băng ghi âm các buổi thăm** (thứ Bảy, Chủ Nhật).
 - **Băng ghi âm đêm phòng 7** (tiếng ru lúc 3 giờ).
-- **Gia phả họ Lê** (chép tay chữ Quốc ngữ, Kim Long, Huế).
+- **Gia phả họ Lê** (chép tay chữ Quốc ngữ, làng Phong Lệ, Hoà Vang, Đà Nẵng).
 - **CMND của Lê Thị Hoa** (cấp 1980, ngón trỏ phải vân **móc**).
 - **Giấy chứng tử Phạm Thị Huệ** (phường 2, quận 4, ngày 18/6/1996): "đột quỵ; mặt, môi sưng phù; sẹo mổ cũ bụng dưới phải".
 - **Sổ giao ca của y tá Sương**: kể chuyện mỗi đêm, và là "thư" sau mỗi trọng điểm.
@@ -114,10 +115,10 @@ Huệ thăm Thảo mỗi chiều thứ Bảy và Chủ Nhật, có băng ghi âm
 ## 7. Lớp kinh dị (tăng dần)
 - **Đêm 1–2:** hành lang gạch bông, tiếng mưa trên mái tôn, tiếng xe đẩy thuốc, tiếng cửa sắt. Một bệnh nhân khác hát một mình. Tranh của Thảo: mặt mẹ bị tô đen.
 - **Đêm 3:** ảnh con Mực chết ói bọt (cảnh ghê). Sổ giao ca: "BN đứng ở ô kính suốt đêm nhìn ra hành lang."
-- **Đêm 4:** băng 3 giờ sáng: tiếng ru "Bồng bồng mẹ bế con sang" giọng Huế trong phòng khoá. Cảnh doạ: khuôn mặt người mẹ áp sát ô kính.
+- **Đêm 4:** băng 3 giờ sáng: tiếng ru "Bồng bồng mẹ bế con sang" giọng Quảng trong phòng khoá. Cảnh doạ: khuôn mặt người mẹ áp sát ô kính.
 - **Đêm 5 (cảnh doạ chính):** ảnh lật ngang chồng lên nhau, hai khuôn mặt **nhập làm một**, rồi mắt của tấm thứ hai mở ra.
 - **Đêm 6:** hộp bánh. Nếu người chơi mở tài liệu hộp bánh trước khi giải, sổ giao ca ghi Thảo đã ăn **nửa cái**, mặt bắt đầu sưng (cảnh ghê, không chết). Cảnh doạ: mặt Thảo sưng phù sau ô kính.
-- **Kết:** công an khai quật mộ ở Phước Lộc. Lá thư cuối của Thảo gửi bác sĩ Vân: *"Mạ về rồi. Đêm nào mạ cũng đứng cuối giường ru con. Chị đừng nói với ai, người ta lại bảo con điên."* Băng cuối: tiếng ru, rồi một giọng Huế rất gần micro: *"Cảm ơn bác sĩ."*
+- **Kết:** công an khai quật mộ ở Phước Lộc. Lá thư cuối của Thảo gửi bác sĩ Vân: *"Mạ về rồi. Đêm nào mạ cũng đứng cuối giường ru con. Chị đừng nói với ai, người ta lại bảo con điên."* Băng cuối: tiếng ru, rồi một giọng Quảng rất gần micro: *"Cảm ơn bác sĩ."*
 
 ## 8. Kiểm tra logic (không được hở)
 - **Sinh đôi cùng trứng thì sao vân tay khác?** Vân tay hình thành trong bụng mẹ do va chạm và áp lực từng vùng, nên **sinh đôi cùng trứng vẫn có vân tay khác nhau** (sự thật khoa học). ADN thì giống, nên năm 1996 xét nghiệm máu không phân biệt được hai người, chỉ vân tay và đặc điểm soi gương mới phân biệt được.
@@ -130,7 +131,7 @@ Huệ thăm Thảo mỗi chiều thứ Bảy và Chủ Nhật, có băng ghi âm
 - **Ngày tháng:** 14/10/1996 là thứ Hai; đêm trực cách ngày 14, 16, 18, 20, 22, 24/10. Từ 2/4 tới 5/7/1996 là 94 ngày. Nhẫn đeo từ 1965 tới 1996 là 31 năm. Hoa và Huệ sinh 1944, năm 1996 tròn 52 tuổi.
 
 ## 9. Âm thanh và giọng (dự kiến)
-- **Hoa** (băng Tết 1990): giọng Huế "Dao" trên model eleven_v4, làm trầm và già đi (khoảng 2 cung, hơi run) cho đúng tuổi 46. **Huệ**: cùng giọng đó, già hơn và khàn hơn, nói từ ngữ Sài Gòn. Hai người giống nhau ở chất giọng, khác nhau ở cách nói.
+- **Hoa** (băng Tết 1990) và **Huệ** (băng thăm nuôi): cùng một giọng **"Ngoc An"**, nữ trung niên miền Trung gốc Đà Nẵng, model eleven_v4. Hai chị em sinh đôi nên chất giọng giống nhau. Hoa nói giọng Quảng với từ "mạ, răng, rứa, chi, ni, hè"; Huệ lớn lên ở Sài Gòn nên dù cố bắt chước vẫn lọt "tui, vậy, má", và hơi khàn.
 - **Thảo**: giọng nữ trẻ miền Nam nhẹ nhàng ("Trang"), hợp người lớn lên ở Đà Lạt; ba mức thuốc an thần (bình thường / chậm / lè nhè).
 - **BS. Kha**: nam trung niên, giọng Bắc. **Y tá Sương**: nữ, giọng Đà Lạt.
 - Tiếng nền: mưa mái tôn, gió đồi thông, cửa sắt, xe đẩy thuốc, đồng hồ quả lắc phòng trực, tiếng hát của bệnh nhân phòng bên.

@@ -37,7 +37,7 @@ export default [
       <div class="idcard id-vn">
         <div class="id-head">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM<br><b>GIẤY CHỨNG MINH NHÂN DÂN</b></div>
         <div class="id-photo">ảnh 3×4<br>(bản chụp mờ)</div>
-        <div class="id-body"><p>Họ tên: <b>LÊ THỊ HOA</b></p><p>Sinh ngày: 14-3-1944</p><p>Nguyên quán: Kim Long, Huế</p><p>Thường trú: Phan Đình Phùng, Đà Lạt</p></div>
+        <div class="id-body"><p>Họ tên: <b>LÊ THỊ HOA</b></p><p>Sinh ngày: 14-3-1944</p><p>Nguyên quán: Hoà Vang, Quảng Nam – Đà Nẵng</p><p>Thường trú: Phan Đình Phùng, Đà Lạt</p></div>
         <div class="id-back"><p>${ln("cm_dau", "Dấu vết riêng: nốt ruồi khoé miệng trái.")}</p><p>Ngày cấp: 10-6-1980 · Công an Lâm Đồng</p></div>
       </div>
       <p class="note">Công an phường cho chụp lại dấu vân tay ngón trỏ phải lưu trên chỉ bản. Đặt cạnh dấu điểm chỉ trên giấy cam đoan nhập viện ngày 20/8.</p>

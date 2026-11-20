@@ -34,10 +34,10 @@ export default [
   },
 
   {
-    id: "gia_pha", stage: 3, kind: "Gia phả", icon: "📜", label: "Gia phả họ Lê, làng Kim Long, Huế",
+    id: "gia_pha", stage: 3, kind: "Gia phả", icon: "📜", label: "Gia phả họ Lê, làng Phong Lệ, Hoà Vang (Đà Nẵng)",
     html: () => `
     <div class="doc doc--book">
-      <div class="book-head">GIA PHẢ HỌ LÊ · chi thứ ba · Kim Long, Huế · bản chép tay năm 1978, bà con bên ngoại gửi vào theo thư hỏi của bác sĩ</div>
+      <div class="book-head">GIA PHẢ HỌ LÊ · chi thứ ba · làng Phong Lệ, huyện Hoà Vang, Quảng Nam – Đà Nẵng · bản chép tay năm 1978, bà con bên ngoại gửi vào theo thư hỏi của bác sĩ</div>
       <p>Đời thứ sáu: ông Lê Văn Thuận (1910–1968), bà Nguyễn Thị Lài (1915–1970).</p>
       <p>Con:</p>
       <ul>
@@ -46,7 +46,7 @@ export default [
         <li>${ln("gp_cho", "Thứ nữ Huệ, cho họ Phạm ở Sài Gòn, năm Ất Dậu (1945), lúc đói.")}</li>
       </ul>
       <p>Lê Thị Hoa lấy chồng họ Trần năm Ất Tỵ (1965), lên ở Đà Lạt. Con: Trần Ngọc Thảo (1972).</p>
-      <p class="small">Thư kèm của người cô họ ở Huế: <i>“Hai chị em giống nhau như hai giọt nước, mà một đứa ăn bằng tay trái, mệ nội đánh hoài không sửa được.”</i></p>
+      <p class="small">Thư kèm của người o họ ở Đà Nẵng: <i>“Hai chị em giống nhau như hai giọt nước, mà một đứa ăn bằng tay trái, bà nội đánh hoài không sửa được.”</i></p>
     </div>`,
   },
 

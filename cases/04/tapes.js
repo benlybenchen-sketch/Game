@@ -1,20 +1,20 @@
-// Case 04 tapes. Voices: hoa (Huế, 1990), hue (the same voice, 1996), thao, thao18 (1990), van (the player), kha, suong.
+// Case 04 tapes. Voices: hoa (Đà Nẵng, 1990), hue (the same voice, 1996), thao, thao18 (1990), van (the player), kha, suong.
 // Lines marked dose: 1 have sedated takes (<tape>_<i>_d1..d3.mp3) chosen by how many wrong conclusions the player made.
 // Timings are laid out by tools/retime.py 04 from the real recordings.
 export const TAPES = {
   tet90: {
-    title: "Cassette · Maxell UR60", label: "Tết Canh Ngọ 1990", dur: 63,
-    hidden: { t0: 53.8, t1: 58.8, text: "MẠ" },
+    title: "Cassette · Maxell UR60", label: "Tết Canh Ngọ 1990", dur: 61,
+    hidden: { t0: 51.8, t1: 56.8, text: "MẠ" },
     segs: [
       { t: 1, d: 3, sfx: "water", text: "[tiếng pháo xa, tiếng ly chén, tiếng chó sủa mừng]" },
       { t: 5, d: 4.7, who: "Thảo (18 tuổi)", voice: "thao18", text: "Mạ ơi, mạ hát ru một bài đi, con thu băng để dành." },
-      { t: 10.7, d: 6.2, who: "Bà Hoa", voice: "hoa", text: "Lớn tướng rồi còn ru chi nữa con. Thôi được, một bài thôi nghe." },
-      { t: 17.9, d: 10.6, who: "Bà Hoa", voice: "hoa", text: "Bồng bồng mẹ bế con sang. Đò dọc quan cấm, đò ngang không chèo." },
-      { t: 29.5, d: 4.2, who: "Bà Hoa", voice: "hoa", text: "Mạ ru con bài ni từ hồi con còn đỏ hỏn." },
-      { t: 34.7, d: 2.8, who: "Thảo (18 tuổi)", voice: "thao18", text: "Con Mực cũng đòi nghe nữa nè mạ." },
-      { t: 38.5, d: 7, who: "Bà Hoa", voice: "hoa", text: "Năm mới mạ chỉ mong con mạnh giỏi. Mạ già thì mạ ở với con, rứa thôi." },
-      { t: 46.5, d: 5.8, who: "Bà Hoa", voice: "hoa", text: "Ê, cái tô gỏi tôm kia đem ra xa mạ chút, mạ dị ứng đó." },
-      { t: 53.3, d: 6, sfx: "water", text: "[cả nhà cười. Tiếng băng hết]" },
+      { t: 10.7, d: 5.5, who: "Bà Hoa", voice: "hoa", text: "Lớn tướng rồi còn ru chi nữa con. Thôi được, một bài thôi nghe." },
+      { t: 17.2, d: 10, who: "Bà Hoa", voice: "hoa", text: "Bồng bồng mẹ bế con sang. Đò dọc quan cấm, đò ngang không chèo." },
+      { t: 28.2, d: 3.8, who: "Bà Hoa", voice: "hoa", text: "Mạ ru con bài ni từ hồi con còn đỏ hỏn." },
+      { t: 33, d: 2.8, who: "Thảo (18 tuổi)", voice: "thao18", text: "Con Mực cũng đòi nghe nữa nè mạ." },
+      { t: 36.8, d: 7.6, who: "Bà Hoa", voice: "hoa", text: "Năm mới mạ chỉ mong con mạnh giỏi. Mạ già thì mạ ở với con, rứa thôi hè." },
+      { t: 45.4, d: 4.9, who: "Bà Hoa", voice: "hoa", text: "Ê, cái tô gỏi tôm kia đem ra xa mạ chút, mạ dị ứng đó." },
+      { t: 51.3, d: 6, sfx: "water", text: "[cả nhà cười. Tiếng băng hết]" },
     ],
   },
 
@@ -60,16 +60,16 @@ export const TAPES = {
   },
 
   tham_1: {
-    title: "Băng ghi âm buổi thăm", label: "Thăm BN P7 · thứ Bảy 12/10/96", dur: 60,
-    hidden: { t0: 36.7, t1: 55.7, text: "TUI" },
+    title: "Băng ghi âm buổi thăm", label: "Thăm BN P7 · thứ Bảy 12/10/96", dur: 58,
+    hidden: { t0: 35.5, t1: 54.5, text: "TUI" },
     segs: [
       { t: 1, d: 2, sfx: "knock", text: "[tiếng cửa phòng thăm nuôi]" },
-      { t: 4, d: 5.3, who: "Bà “Hoa”", voice: "hue", text: "Mạ mang bánh cho con nè. Bánh bò, con thích nhất mà." },
-      { t: 10.3, d: 4.8, who: "Thảo", voice: "thao", dose: 1, text: "Bà đi đi. Bà không phải mạ." },
-      { t: 16.1, d: 8.7, who: "Bà “Hoa”", voice: "hue", text: "Bác sĩ coi đó, con nó cứ vậy hoài. Tui khổ lắm bác sĩ ơi. Tui nuôi nó hai mươi bốn năm." },
-      { t: 25.8, d: 4.1, who: "Y tá Sương", voice: "suong", text: "Bác ra căng tin ngồi nghỉ chút đi bác, tôi dắt bác ra." },
-      { t: 30.9, d: 4.3, who: "Bà “Hoa”", voice: "hue", text: "Dạ, cảm ơn cô. Để tui ăn chút gì." },
-      { t: 36.2, d: 20, sfx: "water", text: "[tiếng bước chân xa dần. Thảo thở gấp]" },
+      { t: 4, d: 5, who: "Bà “Hoa”", voice: "hue", text: "Mạ mang bánh cho con nè. Bánh bò, con thích nhất mà." },
+      { t: 10, d: 4.8, who: "Thảo", voice: "thao", dose: 1, text: "Bà đi đi. Bà không phải mạ." },
+      { t: 15.8, d: 8.4, who: "Bà “Hoa”", voice: "hue", text: "Bác sĩ coi đó, con nó cứ vậy hoài. Tui khổ lắm bác sĩ ơi. Tui nuôi nó hai mươi bốn năm." },
+      { t: 25.2, d: 4.1, who: "Y tá Sương", voice: "suong", text: "Bác ra căng tin ngồi nghỉ chút đi bác, tôi dắt bác ra." },
+      { t: 30.3, d: 3.7, who: "Bà “Hoa”", voice: "hue", text: "Dạ, cảm ơn cô. Để tui ăn chút gì." },
+      { t: 35, d: 20, sfx: "water", text: "[tiếng bước chân xa dần. Thảo thở gấp]" },
     ],
   },
 
@@ -85,29 +85,29 @@ export const TAPES = {
   },
 
   tham_2: {
-    title: "Băng ghi âm buổi thăm", label: "Thăm BN P7 · thứ Bảy 19/10/96", dur: 66,
-    hidden: { t0: 42.8, t1: 61.8, text: "MÁ" },
+    title: "Băng ghi âm buổi thăm", label: "Thăm BN P7 · thứ Bảy 19/10/96", dur: 60,
+    hidden: { t0: 37.5, t1: 56.5, text: "MÁ" },
     segs: [
-      { t: 1, d: 5.9, who: "Bà “Hoa”", voice: "hue", text: "Con ngồi yên, để mạ ru con ngủ một chút, con mệt rồi." },
-      { t: 7.9, d: 8.5, who: "Bà “Hoa”", voice: "hue", text: "Ví dầu cầu ván đóng đinh. Cầu tre lắc lẻo gập ghềnh khó đi." },
-      { t: 17.4, d: 5.5, who: "Thảo", voice: "thao", dose: 1, text: "Không phải bài đó! Không phải bài đó!" },
-      { t: 23.9, d: 6.3, who: "Bà “Hoa”", voice: "hue", text: "Thảo, nghe lời má đi con, ngồi xuống, người ta nhìn kìa." },
-      { t: 31.2, d: 5.1, who: "Thảo", voice: "thao", dose: 1, text: "Bà nghe chưa bác sĩ? Bà nghe chưa?" },
-      { t: 37.3, d: 4, who: "Bà “Hoa”", voice: "hue", text: "Bác sĩ thông cảm, con nó lên cơn rồi." },
-      { t: 42.3, d: 20, sfx: "water", text: "[tiếng giằng co, tiếng y tá, cửa đóng]" },
+      { t: 1, d: 4.5, who: "Bà “Hoa”", voice: "hue", text: "Con ngồi yên, để mạ ru con ngủ một chút, con mệt rồi." },
+      { t: 6.5, d: 6, who: "Bà “Hoa”", voice: "hue", text: "Ví dầu cầu ván đóng đinh. Cầu tre lắc lẻo gập ghềnh khó đi." },
+      { t: 13.5, d: 5.5, who: "Thảo", voice: "thao", dose: 1, text: "Không phải bài đó! Không phải bài đó!" },
+      { t: 20, d: 5.1, who: "Bà “Hoa”", voice: "hue", text: "Thảo, nghe lời má đi con, ngồi xuống, người ta nhìn kìa." },
+      { t: 26.1, d: 5.1, who: "Thảo", voice: "thao", dose: 1, text: "Bà nghe chưa bác sĩ? Bà nghe chưa?" },
+      { t: 32.2, d: 3.8, who: "Bà “Hoa”", voice: "hue", text: "Bác sĩ thông cảm, con nó lên cơn rồi." },
+      { t: 37, d: 20, sfx: "water", text: "[tiếng giằng co, tiếng y tá, cửa đóng]" },
     ],
   },
 
   dem_3h: {
-    title: "Máy ghi âm đặt trong phòng 7", label: "Đêm 19 rạng 20/10/96 · 02:40–03:20", dur: 68,
-    hidden: { t0: 45.2, t1: 64.2, text: "MẠ VỀ" },
+    title: "Máy ghi âm đặt trong phòng 7", label: "Đêm 19 rạng 20/10/96 · 02:40–03:20", dur: 64,
+    hidden: { t0: 41, t1: 60, text: "MẠ VỀ" },
     segs: [
       { t: 1, d: 10, sfx: "water", text: "[tiếng thở đều của Thảo. Mưa nhỏ. Đồng hồ hành lang điểm ba tiếng]" },
       { t: 12, d: 12, sfx: "hum", ghost: 1, text: "[tiếng một người đàn bà ngân nga rất khẽ, ngay sát micro. Cửa phòng vẫn khoá]" },
-      { t: 25, d: 11.4, who: "Giọng đàn bà", voice: "hoa", ghost: 1, text: "Bồng bồng mẹ bế con sang. Đò dọc quan cấm, đò ngang không chèo." },
-      { t: 37.4, d: 3.3, who: "Thảo (nói mớ)", voice: "thao", text: "Mạ… mạ về rồi hả mạ." },
-      { t: 41.7, d: 2, sfx: "knock", text: "[ba tiếng gõ lên ô kính cửa]" },
-      { t: 44.7, d: 20, sfx: "water", text: "[im lặng]" },
+      { t: 25, d: 7.2, who: "Giọng đàn bà", voice: "hoa", ghost: 1, text: "Bồng bồng mẹ bế con sang. Đò dọc quan cấm, đò ngang không chèo." },
+      { t: 33.2, d: 3.3, who: "Thảo (nói mớ)", voice: "thao", text: "Mạ… mạ về rồi hả mạ." },
+      { t: 37.5, d: 2, sfx: "knock", text: "[ba tiếng gõ lên ô kính cửa]" },
+      { t: 40.5, d: 20, sfx: "water", text: "[im lặng]" },
     ],
   },
 
@@ -144,12 +144,12 @@ export const TAPES = {
   },
 
   cuoi: {
-    title: "Máy ghi âm đặt trong phòng 7", label: "Đêm 13 rạng 14/11/96", dur: 34,
-    hidden: { t0: 15.6, t1: 29.6, text: "CẢM ƠN" },
+    title: "Máy ghi âm đặt trong phòng 7", label: "Đêm 13 rạng 14/11/96", dur: 33,
+    hidden: { t0: 15.2, t1: 29.2, text: "CẢM ƠN" },
     segs: [
       { t: 1, d: 10, sfx: "hum", text: "[tiếng ngân nga “Bồng bồng mẹ bế con sang”, rất khẽ]" },
-      { t: 12, d: 2.1, who: "Giọng đàn bà, sát micro", voice: "hoa", text: "Cảm ơn bác sĩ." },
-      { t: 15.1, d: 15, sfx: "water", text: "[im lặng]" },
+      { t: 12, d: 1.7, who: "Giọng đàn bà, sát micro", voice: "hoa", text: "Cảm ơn bác sĩ." },
+      { t: 14.7, d: 15, sfx: "water", text: "[im lặng]" },
     ],
   },
 };
