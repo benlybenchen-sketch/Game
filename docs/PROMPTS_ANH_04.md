@@ -134,10 +134,11 @@ Aspect ratio 1:1. A single black ink fingerprint impression of a right index fin
 ```
 
 ### 10. `van_tay_xoay.jpg`
-**Đính kèm:** `van_tay_moc.jpg` (để cùng kiểu chụp).
-**Kiểm tra:** kiểu **xoáy** (các vòng tròn đồng tâm ở giữa, hai điểm tam giác hai bên).
+**Đính kèm:** **Không** (đính kèm ảnh số 9 thì AI sẽ chép lại y hệt dấu vân tay đó). Nên tạo ảnh này trong **một cuộc trò chuyện mới**.
+**Kiểm tra:** kiểu **xoáy**: ở giữa là các vòng tròn khép kín đồng tâm như xoắn ốc, **hai** điểm tam giác ở hai bên dưới. Phải khác hẳn ảnh số 9 (ảnh 9 là kiểu móc: vân đi vào và quay ra cùng một bên).
+**Nếu sai:** *"Same image but fix: the ridges at the center must form closed concentric circles like a target or a spiral, with two triangular deltas, one at the lower left and one at the lower right. No hairpin loop."*
 ```
-Aspect ratio 1:1. Same photographic style as the attached image: a single black ink fingerprint impression of a right index finger, this time pressed on a 1996 hospital admission form of thin white paper, photographed straight from above, sharp macro detail. The ridge pattern is a clear WHORL: concentric circular ridges spiraling around the center, with two deltas, one on each side. Slightly heavier ink. No text, no letters, no numbers, no watermark.
+Aspect ratio 1:1. Forensic close-up photograph, straight from above, of a single black ink fingerprint of a right index finger pressed on thin white hospital form paper from 1996, slightly bluish-white paper with faint printed ruled lines, sharp macro detail. The ridge pattern is a classic WHORL: at the center the ridges form closed concentric circles, like a bullseye target that turns into a tight spiral; around them the ridges sweep in full circles. There are exactly two deltas, small triangular meeting points of ridges, one at the lower left and one at the lower right of the print. The print is a little rounder and wider than average, heavier ink on the right side, a small smudge at the top. Not a loop, no hairpin turn. No text, no letters, no numbers, no watermark.
 ```
 
 ### 11. `hop_banh.jpg`
