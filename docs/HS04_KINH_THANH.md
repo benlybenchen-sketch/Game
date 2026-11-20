@@ -130,8 +130,8 @@ Huệ thăm Thảo mỗi chiều thứ Bảy và Chủ Nhật, có băng ghi âm
 - **Ngày tháng:** 14/10/1996 là thứ Hai; đêm trực cách ngày 14, 16, 18, 20, 22, 24/10. Từ 2/4 tới 5/7/1996 là 94 ngày. Nhẫn đeo từ 1965 tới 1996 là 31 năm. Hoa và Huệ sinh 1944, năm 1996 tròn 52 tuổi.
 
 ## 9. Âm thanh và giọng (dự kiến)
-- **Hoa** (băng Tết 1990): giọng nữ trung niên, **giọng Huế**, ấm. **Huệ**: cùng một giọng gốc (cùng giọng đọc như Hoa, để người nghe kỹ thấy giống), nhưng nói theo từ ngữ Sài Gòn, cố gắn giọng Huế, khàn hơn. Hai người giống nhau ở chất giọng, khác nhau ở cách nói.
-- **Thảo**: nữ trẻ, ba mức liều thuốc (bình thường / chậm / lè nhè).
+- **Hoa** (băng Tết 1990): giọng Huế "Dao" trên model eleven_v4, làm trầm và già đi (khoảng 2 cung, hơi run) cho đúng tuổi 46. **Huệ**: cùng giọng đó, già hơn và khàn hơn, nói từ ngữ Sài Gòn. Hai người giống nhau ở chất giọng, khác nhau ở cách nói.
+- **Thảo**: giọng nữ trẻ miền Nam nhẹ nhàng ("Trang"), hợp người lớn lên ở Đà Lạt; ba mức thuốc an thần (bình thường / chậm / lè nhè).
 - **BS. Kha**: nam trung niên, giọng Bắc. **Y tá Sương**: nữ, giọng Đà Lạt.
 - Tiếng nền: mưa mái tôn, gió đồi thông, cửa sắt, xe đẩy thuốc, đồng hồ quả lắc phòng trực, tiếng hát của bệnh nhân phòng bên.
 
