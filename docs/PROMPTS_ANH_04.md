@@ -34,10 +34,10 @@ Aspect ratio 16:9. Character reference sheet on a plain mid-grey background, eve
 
 ### 00c. `00_mau_hue.jpg`
 **Đính kèm:** `00_mau_hoa.jpg`.
-**Kiểm tra:** cùng một khuôn mặt với bà Hoa nhưng già hơn 6 tuổi; nốt ruồi **bên trái người xem**; tóc búi, rẽ ngôi **bên trái người xem**; không đeo nhẫn.
+**Kiểm tra:** cùng một khuôn mặt với bà Hoa nhưng trông già hơn (Hoa và Huệ sinh đôi, cùng tuổi; ảnh mẫu bà Hoa là bà năm 1990, 46 tuổi; ảnh Huệ là năm 1996, 52 tuổi); nốt ruồi **bên trái người xem**; tóc búi, rẽ ngôi **bên trái người xem**; không đeo nhẫn.
 **Nếu sai:** *"Same image but fix: move the mole to the corner of her mouth on the viewer's LEFT side, part the hair on the viewer's LEFT, no ring."*
 ```
-Aspect ratio 16:9. Character reference sheet on a plain mid-grey background, even soft studio light, realistic photograph. The exact same face as the woman in the attached reference, but six years older (52), thinner cheeks, a few grey strands, as if she were her mirror image: exactly one small round black mole at the corner of her mouth on the viewer's LEFT side, black hair pulled into a low bun and parted on the viewer's LEFT side. Shown three times side by side: front view head and shoulders, three-quarter view, half body. She wears a brown hand-knitted cardigan over a pale blue blouse, black trousers. No ring on any finger. A warm, polite, slightly too fixed smile. No text, no letters, no numbers, no watermark.
+Aspect ratio 16:9. Character reference sheet on a plain mid-grey background, even soft studio light, realistic photograph. The exact same face as the woman in the attached reference (her identical twin sister), photographed six years later, now 52, thinner cheeks, a few grey strands, as if she were her mirror image: exactly one small round black mole at the corner of her mouth on the viewer's LEFT side, black hair pulled into a low bun and parted on the viewer's LEFT side. Shown three times side by side: front view head and shoulders, three-quarter view, half body. She wears a brown hand-knitted cardigan over a pale blue blouse, black trousers. No ring on any finger. A warm, polite, slightly too fixed smile. No text, no letters, no numbers, no watermark.
 ```
 
 ---

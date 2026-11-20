@@ -128,6 +128,7 @@ Huệ thăm Thảo mỗi chiều thứ Bảy và Chủ Nhật, có băng ghi âm
 - **Vì sao không ai ở Sài Gòn nghi ngờ?** Người chết có khuôn mặt của Huệ, trong nhà Huệ. Một y sĩ phường ký giấy cho một bà già "đột quỵ" là chuyện thường năm 1996. Chôn trong 24 giờ.
 - **Vì sao không giết Thảo ngay?** Cái chết thứ hai liền sau sẽ gây chú ý. Đưa Thảo vào viện và xin làm giám hộ là cách lấy tài sản êm nhất, nhờ Bộ luật Dân sự vừa có hiệu lực. Chỉ khi bác sĩ Vân đến gần sự thật, Huệ mới liều gửi hộp bánh.
 - **BS. Kha có sai không?** Ông đúng: Thảo có Capgras (với Khoa, với con chó lúc đầu). Ông sai vì gộp tất cả vào một chẩn đoán và gạch bỏ những câu cụ thể của bệnh nhân. Kết luận đúng của người chơi phải giữ được cả hai: **bệnh có thật, lời khai cũng thật**.
+- **Vì sao ảnh hai chị em trông chênh tuổi?** Hai người sinh cùng ngày 14/3/1944. Chân dung bà Hoa chụp Tết 1990 (46 tuổi), chân dung Huệ chụp tháng 10/1996 (52 tuổi): cách nhau 6 năm, cộng ba tháng Huệ sống trong căng thẳng. Khi chồng ảnh, khuôn mặt khớp, chỉ có nếp nhăn và tóc bạc khác, đúng như một người chụp lại sau 6 năm, và đó cũng là lý do không ai nghi.
 - **Ngày tháng:** 14/10/1996 là thứ Hai; đêm trực cách ngày 14, 16, 18, 20, 22, 24/10. Từ 2/4 tới 5/7/1996 là 94 ngày. Nhẫn đeo từ 1965 tới 1996 là 31 năm. Hoa và Huệ sinh 1944, năm 1996 tròn 52 tuổi.
 
 ## 9. Âm thanh và giọng (dự kiến)
