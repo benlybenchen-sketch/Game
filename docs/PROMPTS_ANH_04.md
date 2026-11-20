@@ -154,8 +154,19 @@ Aspect ratio 4:3. Realistic photograph on a hospital ward desk at night under a 
 Cả 6 tấm: **Đính kèm** tấm tranh trước đó (tấm 1 thì không đính kèm), để cùng giấy, cùng nét bút sáp. Mình sẽ tự làm thêm bản mờ nhoè cho cơ chế tăng liều thuốc.
 
 ### 12. `tranh_1.jpg`
+**Đính kèm:** Không.
+**Kiểm tra:** nét vẽ trẻ con nhưng có những chỗ "sai" làm rợn người: người đàn bà áo tím cao quá khổ, cổ dài, mặt bị tô đen tới rách giấy, bóng đổ không khớp; cô gái không có miệng; con chó nhe răng; nhiều lớp chữ bị tẩy và vẽ đè.
+**Nếu chưa đủ rợn:** *"Same image but make it more disturbing: the tall woman's neck longer and bent at a wrong angle, her blacked-out face torn through the paper, dozens of tiny repeated faces drawn faintly in the background, and red crayon dripping from her hands."*
 ```
-Aspect ratio 3:4. A crayon drawing by an adult psychiatric patient on cheap grey hospital paper, photographed flat, slightly wrinkled, taped corners. Childlike style: a small house among pine trees, a girl with short hair, and a tall woman in a purple dress. The tall woman's face is scribbled over completely with heavy black crayon, pressed so hard the paper is torn. A black dog stands between them barking. No text, no letters, no numbers, no watermark.
+Aspect ratio 3:4. Photograph, flat from above, of a crayon drawing made by an adult psychiatric patient on cheap thin grey hospital paper, wrinkled, taped to a cracked plaster wall with yellowed tape, a small water stain in one corner. At first glance a childlike scene, but every detail is wrong:
+– a small house among pine trees, its windows drawn as black squares scribbled so hard the crayon flakes;
+– a thin girl with short black hair standing in front of the house, with no mouth, only two very wide eyes, holding a black dog by a rope;
+– beside her, a tall woman in a purple dress, unnaturally tall, twice the height of the house, with a long thin neck bent slightly sideways and arms that reach down to her knees, long fingers like twigs; her face is scribbled over with heavy black crayon pressed so hard that the paper is torn through, the tear showing the wall behind;
+– the woman casts a shadow that does not match her body: the shadow is a second, smaller woman with a hair bun, turned the other way;
+– the black dog is drawn with its teeth bared, barking at the tall woman, its hackles standing up;
+– in the sky, a sun with a tiny frowning face, and in the corner the same tall woman drawn again, very small and faint, as if erased many times and drawn back;
+– smudges of red crayon on the woman's long fingers, and faint fingernail scratches across the paper.
+Waxy crayon texture, uneven pressure, eraser marks, cold flat light, unsettling and sad. No text, no letters, no numbers, no watermark.
 ```
 
 ### 13. `tranh_2.jpg`
