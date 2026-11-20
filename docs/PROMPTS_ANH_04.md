@@ -45,10 +45,31 @@ Aspect ratio 16:9. Character reference sheet on a plain mid-grey background, eve
 ## A. Bệnh viện và bìa
 
 ### 1. `cover.jpg`
-**Đính kèm:** `00_mau_hue.jpg` và `00_mau_thao.jpg`.
-**Kiểm tra:** người mẹ có nốt ruồi bên trái người xem; trong ô kính phản chiếu là một gương mặt có nốt ruồi bên phải người xem (người mẹ thật).
+**Đính kèm:** `00_mau_hue.jpg`, `00_mau_hoa.jpg` và `00_mau_thao.jpg` (cả ba).
+**Kiểm tra:**
+- Nhìn vào là biết ngay **khoa bệnh viện tâm thần**: hành lang dài, một dãy cửa sắt có ô kính, xe đẩy thuốc, ghế băng, song sắt cửa sổ, tường sơn hai màu.
+- Chỉ có **hai người thật**: Thảo sau ô kính, và người phụ nữ áo len nâu ở tiền cảnh. **Không** có ai mặc áo tím đứng ngoài hành lang.
+- Bà Hoa (áo tím) chỉ là **bóng mờ phản chiếu trong mặt kính**, tóc **uốn xoã**, **không cười**, nốt ruồi **bên phải người xem**.
+- Người phụ nữ tiền cảnh: tóc búi, nốt ruồi **bên trái người xem**, không nhẫn.
+
+**Nếu sai:**
+- Có người áo tím đứng ngoài hành lang: *"Same image but fix: remove the purple áo dài woman from the corridor; she exists only as a faint reflection inside the observation window glass."*
+- Không ra bệnh viện: *"Same image but fix: make it unmistakably a 1990s psychiatric hospital ward: a long corridor with a row of identical iron doors with small barred observation windows, a medicine trolley, a wooden bench, barred windows, two-tone painted walls."*
+- Nốt ruồi sai bên hoặc thừa nốt ruồi: gửi ảnh cho mình sửa.
 ```
-Aspect ratio 16:9. Cinematic horror film still, Đà Lạt 1996, a corridor of an old French colonial psychiatric hospital at night: patterned cement floor tiles, peeling pale green walls, a heavy iron door with a small square observation window, one bare bulb. Through the observation window we see the pale face of the young woman from the attached reference sheet (short hair, striped hospital pajamas) staring out. In the foreground, slightly out of focus, the woman from the other attached reference (brown cardigan, low bun, mole at the mouth corner on the viewer's left) stands with her back half turned, holding a tin box of homemade cakes and smiling politely toward the camera. On the glass of the observation window, a faint reflection of a third face: the same mother's face but with the mole on the viewer's right side and wearing a purple áo dài. Cold blue-green moonlight mixed with weak tungsten light, mist drifting in from a broken window, deep shadows, film grain. No text, no letters, no numbers, no watermark.
+Aspect ratio 16:9. Cinematic horror film still, 35mm, Đà Lạt, Vietnam, October 1996, 3 a.m. Location: the night corridor of the women's ward of an old French colonial psychiatric hospital, and it must be instantly readable as a psychiatric ward:
+– a long straight corridor in one-point perspective receding into darkness, lined on the left with a row of six identical heavy grey iron doors, each with a small square observation window crossed by thin iron bars, each door with a sliding bolt and a padlock;
+– walls painted in two tones, dull institutional green on the lower half and dirty cream on the upper half, paint peeling, damp stains;
+– patterned cement floor tiles in faded green and cream, wet and reflective;
+– on the right wall, tall windows with iron bars and wire-mesh glass, one pane broken, pine trees and fog outside, cold blue moonlight falling in stripes across the floor;
+– a metal medicine trolley parked by the wall with rows of small paper medicine cups, brown glass bottles, an enamel kidney dish and glass syringes;
+– a worn wooden bench, a folded grey hospital blanket on it, a pair of plastic slippers left in front of one door;
+– a single bare light bulb hanging from a cord at the far end, a small night nurse's desk with a green-shaded lamp glowing at the very end of the corridor, empty chair;
+– a faint painted red cross symbol on the wall, mostly flaked away.
+Composition: the third iron door from the camera is in sharp focus in the middle of the frame. Behind its small barred observation window, pressed close to the glass, the pale face of the young woman from the THAO reference (24, very thin, short black hair cut at the jaw, striped light blue hospital pajamas), dark circles, staring straight at the camera, not blinking. On the same glass, overlapping her face slightly to the right, a very faint ghostly REFLECTION (not a person in the room) of the woman from the HOA reference: deep purple áo dài collar, shoulder-length wavy permed black hair worn loose, long narrow face, exactly one small mole below the mouth corner on the viewer's RIGHT, grey bloodless skin, sad empty eyes, lips slightly parted, wet strands of hair on her cheeks. She does NOT smile.
+Foreground right, in shallow focus, waist up, three-quarter view turned toward the camera: the woman from the HUE reference (52, low bun with grey strands, brown hand-knitted cardigan over a pale blue collared blouse, exactly one small mole below the mouth corner on the viewer's LEFT, no ring), holding a rusty round tin cake box against her chest with both hands, smiling politely at the viewer, her smile a little too fixed.
+Only two living people in the image: the girl behind the glass and the woman with the cake box. Nobody else stands in the corridor.
+Lighting: cold green-blue moonlight and one weak warm bulb, deep shadows, light mist drifting along the floor, heavy film grain, muted desaturated colors, quiet dread. No text, no letters, no numbers, no watermark.
 ```
 
 ### 2. `benh_vien.jpg`
