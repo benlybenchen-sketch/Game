@@ -271,7 +271,7 @@ function submit() {
   if (!res.complete) { fb.textContent = "Bạn chưa điền đủ mọi mục (kể cả đủ số tài liệu ghim)."; fb.className = "q-feedback warn"; sfx.wrong(); return; }
   if (res.ok) return solved(q, false);
   const n = (state.tries[q.id] = (state.tries[q.id] || 0) + 1); save();
-  let msg = WRONG[(n - 1) % WRONG.length];
+  let msg = META.wrongFor ? META.wrongFor(n) : WRONG[(n - 1) % WRONG.length];   // a case may word its own reaction
   if (n >= 3) msg += ` (Đúng ${res.right}/${res.total} mục.)`;
   fb.textContent = msg; fb.className = "q-feedback bad"; sfx.wrong();
   if (level() >= 2 && Math.random() < 0.35) setTimeout(() => sfx.whisper(1.4), 700);

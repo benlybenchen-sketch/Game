@@ -59,19 +59,19 @@ export const QUESTIONS = [
       pins,
     ],
     memo: log([
-      "Sổ giao ca, sáng 19/10. Hôm qua là thứ Bảy, bà Hoa vào thăm. Có ghi băng như mọi lần.",
+      "Sổ giao ca, trưa Chủ Nhật 20/10, để lại cho ca trực tối nay của BS. Vân. Chiều hôm qua, thứ Bảy, bà Hoa vào thăm. Có ghi băng như mọi lần.",
       "BS. Kha đọc ghi chú của BS. Vân, rồi viết vào sổ một trang cho bác sĩ. Ông nói thẳng: ba tháng ở Sài Gòn người ta đổi giọng đổi khẩu vị là chuyện thường; còn bà ấy biết hết chuyện nhà, một người lạ thì biết sao được.",
-      "Đêm qua tôi để máy ghi âm trong phòng 7 như bác sĩ dặn. Tôi chưa dám nghe lại. Lúc ba giờ tôi đi ngang, có nghe tiếng ai ru.",
+      "Đêm qua, rạng sáng nay, tôi để máy ghi âm trong phòng 7 như bác sĩ dặn. Tôi chưa dám nghe lại. Lúc ba giờ tôi đi ngang, có nghe tiếng ai ru.",
       "Bưu điện có chuyển tới mấy lá thư bà Hoa gửi từ Sài Gòn hồi tháng Năm tháng Sáu mà con Thảo cất trong tủ. Và một gói từ Đà Nẵng, bà con bên ngoại con Thảo gửi vào theo thư bác sĩ hỏi.",
     ]),
-    clock: "06:20",
+    clock: "12:00",
   },
   {
     id: "q4", stage: 3, title: "Tiếng ru",
     ask: "Nghe băng Tết 1990 và băng buổi thăm 19/10. Thảo gọi mẹ bằng chữ gì, và người phụ nữ lỡ miệng xưng bằng chữ gì? Bà Hoa ru bài gì, người phụ nữ ru bài gì? Người phụ nữ lớn lên ở đâu? Theo gia phả, bà Hoa có người em tên gì?",
     parts: [
-      { id: "goi", type: "choice", label: "Chữ Thảo và bà Hoa trong băng 1990 dùng để gọi mẹ", options: ["Mẹ", "Má", "Mẹ", "U", "Bầm"] },
-      { id: "lo", type: "choice", label: "Chữ người phụ nữ lỡ miệng xưng ngày 19/10", options: ["Mẹ", "Má", "Mẹ", "U", "Bầm"] },
+      { id: "goi", type: "choice", label: "Chữ Thảo và bà Hoa trong băng 1990 dùng để gọi mẹ", options: ["Mẹ", "Má", "U", "Bầm", "Mợ"] },
+      { id: "lo", type: "choice", label: "Chữ người phụ nữ lỡ miệng xưng ngày 19/10", options: ["Mẹ", "Má", "U", "Bầm", "Mợ"] },
       { id: "ru_hoa", type: "choice", label: "Bài ru của bà Hoa (băng 1990)", options: ["Ví dầu cầu ván đóng đinh", "Bồng bồng mẹ bế con sang", "Ầu ơ… Gió mùa thu mẹ ru con ngủ", "Con cò bé bé"] },
       { id: "ru_la", type: "choice", label: "Bài ru của người phụ nữ (băng 19/10)", options: ["Ví dầu cầu ván đóng đinh", "Bồng bồng mẹ bế con sang", "Ầu ơ… Gió mùa thu mẹ ru con ngủ", "Con cò bé bé"] },
       { id: "where", type: "choice", label: "Người phụ nữ lớn lên ở đâu", options: ["Đà Nẵng", "Đà Lạt", "Sài Gòn", "Hà Nội"] },
@@ -95,11 +95,11 @@ export const QUESTIONS = [
       pins,
     ],
     memo: log([
-      "Sổ giao ca, sáng 23/10. Phòng hành chính nhận được thư hồi âm của phường 2, quận 4, thành phố Hồ Chí Minh, theo công văn BS. Vân gửi tuần trước. Có giấy chứng tử bản sao.",
+      "Sổ giao ca, chiều 24/10, để lại cho ca trực tối nay của BS. Vân. Hôm qua phòng hành chính nhận được thư hồi âm của phường 2, quận 4, thành phố Hồ Chí Minh, theo công văn BS. Vân gửi tuần trước. Có giấy chứng tử bản sao.",
       "Hồ sơ cũ của bà Hoa ở bệnh viện tỉnh tôi lục thêm được tờ mổ ruột thừa năm 1970. Công an phường cho chụp lại chứng minh nhân dân của bà Hoa, cấp năm 1980.",
       "Chiều nay bà Hoa gửi vào khoa một hộp bánh cho con Thảo, nói là bánh ít đậu xanh nhà làm. Tôi để hộp bánh trên bàn trực.",
     ]),
-    clock: "06:00",
+    clock: "17:30",
   },
   {
     id: "q6", stage: 5, title: "Bản giám định",

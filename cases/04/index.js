@@ -9,6 +9,7 @@ import d6 from "./docs6.js";
 import { overlay, prints, doselog } from "./media.js";
 import { ghostFace } from "./art.js";
 import { dose } from "./dose.js";
+import { state } from "../../js/store.js";
 import { TAPES } from "./tapes.js";
 export { QUESTIONS, START_CLOCK, END_CLOCK } from "./questions.js";
 export { SECRET, SECRET_KEY } from "./secret.js";
@@ -43,6 +44,14 @@ export const META = {
     "Chưa khớp. Một chi tiết cụ thể nằm đâu đó trong giấy tờ bạn đã đọc. Đọc lại.",
     "Thảo nhìn bạn qua ô kính rất lâu, rồi quay mặt vào tường.",
   ],
+  /** Called after state.tries was raised: dose() already counts this wrong conclusion. */
+  wrongFor: (n) => {
+    const all = Object.values(state.tries || {}).reduce((a, b) => a + (b || 0), 0);
+    if (all <= 3) return `Y lệnh của bạn đã được thực hiện: tăng liều Haloperidol cho phòng 7 (lần ${all}). Nghe lại băng của Thảo đi.`;
+    return ["BS. Kha gõ bút xuống bàn: “Tôi đã dặn cô rồi. Đừng sa vào.” Liều thuốc của phòng 7 đã ở mức cao nhất ông cho phép.",
+      "Chưa khớp. Một chi tiết cụ thể nằm đâu đó trong giấy tờ bạn đã đọc. Đọc lại.",
+      "Thảo nhìn bạn qua ô kính rất lâu, rồi quay mặt vào tường."][(all - 4) % 3];
+  },
   finale: {
     html: `<h3>06:30 · Sáng 25/10/1996</h3>
       <p>Bạn ký bản giám định: <b>Trần Ngọc Thảo có hội chứng Capgras đối với một số người quen, nhưng vẫn đủ năng lực hành vi dân sự. Lời khai của bệnh nhân về mẹ là sự thật.</b></p>

@@ -30,7 +30,7 @@ export default [
     id: "so_giao_ca_dua", stage: 4, kind: "Sổ giao ca", icon: "📓", label: "Sổ giao ca: bà Hoa cầm đũa",
     html: () => `
     <div class="doc doc--notebook">
-      ${hand(`<p>21/10, chiều. Bà Hoa ngồi căng tin một mình. ${ln("sg_trai", "Tôi đứng sau cửa kính nhìn: bà cầm đũa tay trái, gắp rất khéo.")}</p>
+      ${hand(`<p>Chủ Nhật 20/10, 16 giờ, sau buổi thăm. Bà Hoa ngồi căng tin một mình. ${ln("sg_trai", "Tôi đứng sau cửa kính nhìn: bà cầm đũa tay trái, gắp rất khéo.")}</p>
         <p>${ln("sg_doi", "Tôi bước vào, bà thấy tôi thì đặt đũa xuống, cầm lại bằng tay phải, gắp rơi hai lần.")}</p>
         <p>Bà hỏi tôi bác sĩ Vân dạo này có hỏi gì về bà không. Tôi nói không.</p>
         <p class="right">Sương</p>`)}

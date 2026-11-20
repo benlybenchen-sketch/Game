@@ -87,6 +87,6 @@ export default [
     </div>`,
   },
 
-  tape("hoi_6", 5, "Băng: hỏi chuyện Thảo chiều 24/10", "Ghi trước khi hộp bánh được gửi vào."),
+  tape("hoi_6", 5, "Băng: hỏi chuyện Thảo chiều 24/10", "Ghi lúc 18 giờ, sau khi hộp bánh được gửi vào khoa và để trên bàn trực."),
   tranh(6, 5, "Tranh Thảo vẽ đêm 24/10", "Một hộp bánh hình tam giác, đường hồng chảy ra từ một cái. Góc tranh: một bác sĩ tóc dài giữ hộp bánh tránh xa cô gái."),
 ];
