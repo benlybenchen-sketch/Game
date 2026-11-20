@@ -151,7 +151,6 @@ Aspect ratio 4:3. Realistic photograph on a hospital ward desk at night under a 
 ---
 
 ## C. Tranh Thảo vẽ (6 tấm, cùng kiểu)
-Cả 6 tấm: **Đính kèm** tấm tranh trước đó (tấm 1 thì không đính kèm), để cùng giấy, cùng nét bút sáp. Mình sẽ tự làm thêm bản mờ nhoè cho cơ chế tăng liều thuốc.
 
 ### 12. `tranh_1.jpg`
 **Đính kèm:** Không.
@@ -169,32 +168,42 @@ Aspect ratio 3:4. Photograph, flat from above, of a crayon drawing made by an ad
 Waxy crayon texture, uneven pressure, eraser marks, cold flat light, unsettling and sad. No text, no letters, no numbers, no watermark.
 ```
 
+Cả 5 tấm đều đính kèm **`tranh_1.jpg`** (tấm số 12 đã chốt) để giữ đúng giấy, đúng nét, đúng nhân vật. Mình sẽ tự làm thêm bản mờ nhoè cho cơ chế tăng liều thuốc.
+
 ### 13. `tranh_2.jpg`
+**Đính kèm:** `tranh_1.jpg` (ảnh số 12 đã chốt).
+**Kiểm tra:** hai khuôn mặt giống hệt nhau; chấm nốt ruồi ở hai bên khác nhau, một bị khoanh đỏ, một bị gạch chéo.
 ```
-Aspect ratio 3:4. Same paper and crayon style as the attached drawing. A large drawing of one woman's face, very carefully drawn, with one black dot at the corner of the mouth on the viewer's right side, circled several times in red crayon. Next to it, a second identical face whose black dot is on the viewer's left side, crossed out with red X marks. Arrows between the two dots. No text, no letters, no numbers, no watermark.
+Aspect ratio 3:4. Exactly the same style as the attached drawing: a photograph, flat from above, of a crayon drawing by the same adult psychiatric patient on the same cheap thin grey hospital paper, wrinkled, taped to the same cracked plaster wall with yellowed masking tape, the same naive black pencil and crayon line, the same wide-eyed mouthless girl with short black hair, the same unnaturally tall woman in a purple dress with a long bent neck, twig fingers and a face scribbled black. Waxy texture, eraser marks, faint fingernail scratches, cold flat light. This drawing: two identical large faces of the tall woman drawn side by side, facing each other like a reflection, filling the page. Their faces are NOT blacked out this time: the same long narrow face, the same wide staring eyes, the same thin smile, drawn over and over until the lines are thick and shiny. The left face has one black dot below the corner of the mouth on the viewer's right, circled again and again in red crayon until the paper is shiny and dented. The right face has the black dot on the viewer's left, crossed out with violent red X marks that tear the paper, and its smile is drawn slightly too wide, with too many small teeth. Red arrows connect the two dots. Between the faces, a thin vertical line like the edge of a mirror. In the bottom corner, the small mouthless girl with her hands over her ears. No text, no letters, no numbers, no watermark.
 ```
 
 ### 14. `tranh_3.jpg`
+**Đính kèm:** `tranh_1.jpg` (ảnh số 12 đã chốt).
+**Kiểm tra:** con chó đen nằm chết, bọt trắng ở miệng; một bàn tay áo nâu cầm cái chén phía trên.
 ```
-Aspect ratio 3:4. Same paper and crayon style as the attached drawing. A black dog lying on its side with its tongue out and white foam drawn coming from its mouth, a woman's hand in a brown sleeve holding a bowl above it. Grey rain lines over everything. No text, no letters, no numbers, no watermark.
+Aspect ratio 3:4. Exactly the same style as the attached drawing: a photograph, flat from above, of a crayon drawing by the same adult psychiatric patient on the same cheap thin grey hospital paper, wrinkled, taped to the same cracked plaster wall with yellowed masking tape, the same naive black pencil and crayon line, the same wide-eyed mouthless girl with short black hair, the same unnaturally tall woman in a purple dress with a long bent neck, twig fingers and a face scribbled black. Waxy texture, eraser marks, faint fingernail scratches, cold flat light. This drawing: the black dog lying stiff on its side, legs straight out, its eyes drawn as two crosses, thick white crayon foam pouring from its mouth, pooling on the ground. Above it, only an arm and a hand reach in from the edge of the page: a sleeve of a brown knitted cardigan, long twig fingers holding a small bowl tilted toward the dog. The hand has dark red crayon on its fingertips. Grey rain lines drawn over the whole page. The mouthless girl stands far away behind a window of the house, both hands pressed on the glass. A small bun-haired shadow is drawn behind the house, watching. No text, no letters, no numbers, no watermark.
 ```
 
 ### 15. `tranh_4.jpg`
+**Đính kèm:** `tranh_1.jpg` (ảnh số 12 đã chốt).
+**Kiểm tra:** người đàn bà áo dài tím đứng cuối giường bệnh, chân không chạm đất; cô gái nằm ngủ, mỉm cười.
 ```
-Aspect ratio 3:4. Same paper and crayon style as the attached drawing. A woman in a purple áo dài standing at the foot of a hospital bed at night, drawn very faintly in light purple, with musical notes floating from her mouth. In the bed, a small girl with short hair asleep, smiling. The window shows a crescent moon and pine trees. No text, no letters, no numbers, no watermark.
+Aspect ratio 3:4. Exactly the same style as the attached drawing: a photograph, flat from above, of a crayon drawing by the same adult psychiatric patient on the same cheap thin grey hospital paper, wrinkled, taped to the same cracked plaster wall with yellowed masking tape, the same naive black pencil and crayon line, the same wide-eyed mouthless girl with short black hair, the same unnaturally tall woman in a purple dress with a long bent neck, twig fingers and a face scribbled black. Waxy texture, eraser marks, faint fingernail scratches, cold flat light. This drawing: a hospital room at night, an iron bed with a grey blanket, a barred window with a crescent moon and pine trees. The mouthless girl lies asleep in the bed, and for the first time she has a mouth, a small peaceful smile. At the foot of the bed stands the tall woman in a purple áo dài, drawn very faintly in pale lilac crayon, almost transparent, her feet not touching the floor, her long hair hanging loose and wet with blue crayon drops falling from it. Her face is not scribbled out: it is a gentle sad face with one black dot below the mouth corner on the viewer's right. Small crayon music notes float from her mouth over the girl. In the dark doorway, barely visible, a second figure with a hair bun is watching. No text, no letters, no numbers, no watermark.
 ```
 
 ### 16. `tranh_5.jpg`
+**Đính kèm:** `tranh_1.jpg` (ảnh số 12 đã chốt).
+**Kiểm tra:** hai người đàn bà giống hệt nhau quay lưng vào nhau như qua gương; người áo tím có chân chôn dưới đất trong hình quan tài.
 ```
-Aspect ratio 3:4. Same paper and crayon style as the attached drawing. Two identical women standing back to back like a reflection in a mirror, one in a purple dress, one in a brown cardigan. Between them a long vertical line like the edge of a mirror. The purple one's feet are drawn under the ground, inside a coffin shape. No text, no letters, no numbers, no watermark.
+Aspect ratio 3:4. Exactly the same style as the attached drawing: a photograph, flat from above, of a crayon drawing by the same adult psychiatric patient on the same cheap thin grey hospital paper, wrinkled, taped to the same cracked plaster wall with yellowed masking tape, the same naive black pencil and crayon line, the same wide-eyed mouthless girl with short black hair, the same unnaturally tall woman in a purple dress with a long bent neck, twig fingers and a face scribbled black. Waxy texture, eraser marks, faint fingernail scratches, cold flat light. This drawing: two identical tall women standing back to back, like a reflection in a mirror, a long vertical black line between them like the edge of a mirror. The left one wears a purple dress, hair loose, sad face, mole dot on the viewer's right; her legs go down through the ground line into a coffin shape drawn under the earth, her feet inside the coffin, worms drawn around it. The right one wears a brown cardigan, hair in a bun, mole dot on the viewer's left, smiling, holding a small tin box; her shadow falls across the left woman. Above them, the two women are drawn again as two tiny babies in one cradle, one baby being carried away by a faceless figure toward the edge of the page. No text, no letters, no numbers, no watermark.
 ```
 
 ### 17. `tranh_6.jpg`
+**Đính kèm:** `tranh_1.jpg` (ảnh số 12 đã chốt).
+**Kiểm tra:** một hộp bánh thiếc đầy bánh hình tam giác, một cái bị bẻ ra có nhân hồng chảy ra, dấu X đỏ lớn; góc tranh có một bác sĩ tóc dài giữ hộp bánh tránh xa cô gái.
 ```
-Aspect ratio 3:4. Same paper and crayon style as the attached drawing. A tin box full of small green triangles (cakes), with pink lines coming out of one of them, and a large red crayon cross over the box. In the corner, a small figure of a woman doctor with long hair holding the box away from a girl. No text, no letters, no numbers, no watermark.
+Aspect ratio 3:4. Exactly the same style as the attached drawing: a photograph, flat from above, of a crayon drawing by the same adult psychiatric patient on the same cheap thin grey hospital paper, wrinkled, taped to the same cracked plaster wall with yellowed masking tape, the same naive black pencil and crayon line, the same wide-eyed mouthless girl with short black hair, the same unnaturally tall woman in a purple dress with a long bent neck, twig fingers and a face scribbled black. Waxy texture, eraser marks, faint fingernail scratches, cold flat light. This drawing: a large round tin box full of small green triangular cakes wrapped in leaves, drawn in the center. One cake is broken open, and pink crayon lines spill out of it like worms. A huge red crayon X is slashed over the box, the crayon pressed through the paper. On the left, the mouthless girl reaches for the box, her face drawn swollen and round like a balloon, her eyes shut. On the right, a small woman doctor with long hair and a white coat grabs the box away from her. Behind the box, coming out of the dark, the brown-cardigan sleeve and long twig fingers offering it. The tall purple woman is drawn very faintly behind the girl, her hands on the girl's shoulders. No text, no letters, no numbers, no watermark.
 ```
-
----
 
 ## D. Cảnh ghê và cảnh doạ
 
