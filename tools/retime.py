@@ -30,6 +30,9 @@ for m in reversed(blocks):
         slow = mp3.replace(".mp3", "_d3.mp3")   # lines with sedated variants take the length of the slowest one
         if "sfx:" not in rest and os.path.exists(mp3):
             d = math.ceil((length(slow if os.path.exists(slow) else mp3) + 0.4) * 10) / 10
+            alt = mp3.replace(".mp3", "_slow.mp3")   # a slowed take plays at ×0.6: its length must fit in d / 0.6
+            if os.path.exists(alt):
+                d = max(d, math.ceil((length(alt) * 0.6 + 0.4) * 10) / 10)
         t = t if cursor is None else round(cursor, 1)
         cursor = t + d + (2.6 if tid == "loi_nhan" and "sfx:" not in rest else 1.0)
         if "rev: true" in rest:

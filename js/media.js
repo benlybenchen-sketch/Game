@@ -24,8 +24,8 @@ const flipText = (s) => Array.from(s).reverse().join("");
 
 // Decoded recorded voice lines, shared between mounts: key "bang_1/3" -> AudioBuffer | null
 const bufCache = new Map();
-async function loadLine(id, i) {
-  const suf = C.tapeSuffix?.(id, i) || "";      // a case may swap a line for another take (case 04: sedated voices)
+async function loadLine(id, i, extra = "") {
+  const suf = extra || C.tapeSuffix?.(id, i) || "";      // a case may swap a line for another take (case 04: sedated voices)
   const key = `${id}/${i}${suf}`;
   if (bufCache.has(key)) return bufCache.get(key);
   const p = (async () => {
@@ -98,7 +98,8 @@ function tapePlayer(el, id) {
   const ghostOk = (s) => !s.ghost || plays() >= 3 || level() >= s.ghost + 1;
 
   function timeline() {
-    const segs = tape.segs.map((s, i) => ({ ...s, i })).filter(ghostOk);
+    const segs = tape.segs.map((s, i) => ({ ...s, i })).filter(ghostOk)
+      .map((s) => (s.slow && speed < 1 ? { ...s, who: s.slowWho || s.who, text: s.slow, alt: true } : s));   // a slowed tape reveals what normal speed hides
     if (mode === "fwd") return segs.map((s) => s.rev ? { ...s, who: "???", text: "[tiếng thì thầm, méo mó, nghe như bị quay ngược]", garble: true } : s);
     return segs.map((s) => ({
       ...s, t: tape.dur - s.t - s.d,
@@ -165,12 +166,12 @@ function tapePlayer(el, id) {
         }
         continue;
       }
-      const buf = await loadLine(id, s.i);
+      const buf = await loadLine(id, s.i, s.alt ? "_slow" : "");
       if (!playing) return;
       if (buf) {
         const src = ac.createBufferSource();
         src.buffer = mode === "rev" ? reversed(buf) : buf;
-        src.playbackRate.value = speed;
+        src.playbackRate.value = s.alt ? 1 : speed;     // the slowed take is recorded at its slowed pace
         src.connect(dest);
         const offset = mode === "rev" ? Math.max(0, buf.duration - s.d) + skip : skip;
         if (offset < buf.duration - 0.2) { src.start(now() + Math.max(0, when - (now() - startAt)), offset); nodes.push(src); }
@@ -275,7 +276,7 @@ function tapePlayer(el, id) {
       if (k === "play") playing ? stop() : play();
       if (k === "start") { const was = playing; stop(); pos = 0; renderBar(); if (was) play(); }
       if (k === "rev") { const was = playing; stop(); mode = mode === "fwd" ? "rev" : "fwd"; pos = tape.dur - pos; renderBar(); renderTranscript(); if (was) play(); }
-      if (k === "speed") { const was = playing; stop(); speed = speed === 1 ? 1.5 : speed === 1.5 ? 2 : 1; b.textContent = `×${speed}`; if (was) play(); }
+      if (k === "speed") { const was = playing; stop(); const sp = tape.slow ? [1, 0.6, 1.5, 2] : [1, 1.5, 2]; speed = sp[(sp.indexOf(speed) + 1) % sp.length]; b.textContent = `×${String(speed).replace(".", ",")}`; if (was) play(); }
       if (k === "spec") { specOn = !specOn; $(".spec-wrap").hidden = !specOn; renderBar(); }
       return;
     }

@@ -1,5 +1,5 @@
 // Pure answer checking for the staged questions. No DOM, no storage.
-// Part types: choice | number | time | text | line | pins (see checkPart).
+// Part types: choice | number | time | text | line | pins | order | spot | set (see checkPart).
 
 export function checkQuestion(question, answers, response) {
   let ok = true, complete = true, right = 0;
@@ -16,6 +16,8 @@ export function isFilled(part, value) {
   if (part.type === "number") return value != null && value !== "" && !Number.isNaN(parseNumber(value));
   if (part.type === "time") return typeof value === "string" && !Number.isNaN(parseTime(value));
   if (part.type === "text") return typeof value === "string" && normalizeText(value).length > 0;
+  if (part.type === "order") return Array.isArray(value) && value.length === part.items.length;
+  if (part.type === "set") return Array.isArray(value) && value.length === part.count;
   return typeof value === "string" && value.length > 0;
 }
 
@@ -31,6 +33,9 @@ export function checkPart(part, answer, value) {
     }
     case "line": return answer.includes(value);
     case "pins": return matchPins(answer, value);
+    case "order": return Array.isArray(value) && value.join("|") === answer.join("|");
+    case "spot": return answer.includes(value);
+    case "set": return new Set(value).size === value.length && value.every((v) => answer.includes(v));
     default: throw new Error("Unknown part type " + part.type);
   }
 }

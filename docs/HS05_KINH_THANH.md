@@ -49,7 +49,7 @@ Nỗi sợ của hồ sơ này là **tình thương biến thành nhà giam**. K
 - **1988**: Khải nghỉ mỏ, mở hiệu ảnh. Phòng hoá nghiệm cũ cho ông mang về một can **formol** (formalin) và vôi bột, dùng trong buồng tối để làm cứng phim, ảnh. Đây là chi tiết có thật của nghề rửa ảnh thời đó.
 
 ### 3.2. Đêm 22/12/1989 (đông chí, 25 tháng Một năm Kỷ Tỵ)
-- Ông Khải xuống Hà Nội mua giấy ảnh, đi tàu đêm, sáng 23 mới về.
+- Ông Khải xuống Hà Nội mua giấy ảnh từ tối 21, mua xong lên tàu đêm 22/12 (19 giờ) về Lào Cai, 7 giờ sáng 23 mới tới.
 - Tối 22, Hằng và Ngân cãi nhau to: Ngân, 13 tuổi, muốn đi trại hè văn học ở Hà Nội, Hằng không cho vì không có tiền. Ngân khoá cửa phòng, **lấy hai tay bịt tai**.
 - Khoảng 2 giờ sáng, Hằng lên cơn. Lọ thuốc **rơi xuống gầm giường**. Hằng gõ vách, gọi: *"Ngân ơi, lấy thuốc cho mẹ."* Ngân nghe thấy. Ngân tưởng mẹ giả vờ để làm lành. **Ngân không mở cửa.**
 - Sáng 23, ông Khải về, thấy vợ chết ngồi tựa thành giường. Ngân ngồi cạnh mẹ, chải tóc cho mẹ, nói: **"Mẹ ngủ. Bố đừng đánh thức mẹ."**
@@ -86,7 +86,7 @@ Ngân sắp 16 tuổi. Cô chủ nhiệm muốn gặp bà Hằng. Trạm y tế 
 2. **Hai lời kể:** đánh dấu hai câu mâu thuẫn trong lời kể của ông Khải và Ngân; mùi lạ là chất gì (formol) và vì sao nhà có sẵn (hiệu ảnh, buồng tối); ai trả lời trước mỗi khi Vân hỏi về mẹ (Ngân).
 3. **Người trong ảnh:** soi ảnh tìm ba chi tiết cho thấy người ngồi không phải bà Hằng (mặt trong kính, tay không nhẫn, sẹo cổ tay trái); ai viết các giấy xin nghỉ (Ngân), bằng chứng nét chữ.
 4. **Ai tin trước:** xếp 6 sự kiện "mẹ ho, mẹ ăn cháo, mẹ dặn đóng cửa…" theo ngày ghi ở hai cuốn sổ; ai là người khởi phát (Ngân); tiếng ho trong băng là của ai (Ngân); điều gì xảy ra với người tiếp nhận khi bị tách khỏi người khởi phát (thường tỉnh dần).
-5. **Đêm đông chí:** bà Hằng chết vì gì (cơn hở van hai lá, không có thuốc); đêm đó ông Khải ở đâu (trên tàu đi Hà Nội); câu trong trang nhật ký bị xé; ngày âm lịch Ngân chọn (25 tháng Một); thứ ông Khải đã mua (10 cân than hoa) và nguy cơ (ngộ độc khí than khi đóng kín cửa).
+5. **Đêm đông chí:** bà Hằng chết vì gì (cơn hở van hai lá, không có thuốc); đêm đó ông Khải ở đâu (trên tàu đêm từ Hà Nội về); câu trong trang nhật ký bị xé; ngày âm lịch Ngân chọn (25 tháng Một); thứ ông Khải đã mua (10 cân than hoa) và nguy cơ (ngộ độc khí than khi đóng kín cửa).
 6. **Đêm nay:** ngày 30/12/1991 là ngày âm nào (25 tháng Một, Tân Mùi); rồi **BƯỚC NGOẶT** (mục 6); rồi **biên bản cuối**: bà Hằng chết thế nào, ai giữ thi thể, ai khởi phát, hướng điều trị cho từng người.
 
 ## 5. Bằng chứng then chốt (phải có trong game)
@@ -97,7 +97,7 @@ Ngân sắp 16 tuổi. Cô chủ nhiệm muốn gặp bà Hằng. Trạm y tế 
 - **Ảnh cưới 1975** (Hằng đeo nhẫn tay trái), **ảnh Hằng 1988** chấm bài bên cửa sổ (áo len đỏ đô, khăn kem, nhẫn, người đầy đặn) và **ảnh "Vợ tôi, Tết 1991"** (cùng cửa sổ, cùng áo, cùng khăn) (người gầy, nhỏ, áo len rộng thùng thình, tay đặt trên bậu cửa).
 - **Sổ tay ông Khải** (1990–1991) và **nhật ký Ngân** (một phần, Vân chỉ được đọc vài trang Ngân cho xem; trang 22/12/1989 bị xé thành 6 mảnh, tìm thấy trong sọt rác buồng tối).
 - **Bệnh án Bạch Mai 1985**: Phạm Thị Hằng, hở van hai lá, dặn "để thuốc đầu giường, lên cơn ban đêm phải uống ngay".
-- **Sổ bán vé ga Lào Cai** (bản trích của công an): Đỗ Văn Khải, tàu đêm 22/12/1989 đi Hà Nội.
+- **Sổ bán vé ga Lào Cai** (bản trích của công an): Đỗ Văn Khải đi tàu đêm 21/12/1989 xuống Hà Nội, về bằng tàu đêm 22/12/1989 (tới Lào Cai 7 giờ sáng 23/12).
 - **Băng ghi âm** Vân thu trong các lần thăm (máy cassette mượn của trạm, dùng cho phỏng vấn sức khoẻ cộng đồng) và **băng ho đêm** (Vân để quên máy ghi âm ở gian giữa qua đêm 23/12, với sự đồng ý của ông Khải).
 - **Sách "Tâm thần học" (Đại học Y Hà Nội)**, trang về rối loạn loạn thần chia sẻ.
 - **Tờ rơi "Phòng ngộ độc khí than mùa rét"** của sở y tế (sự thật: thời đó các tỉnh miền núi phía Bắc đều phát loại tờ rơi này).
@@ -153,6 +153,11 @@ Biên bản họp chiều 30/12 tại trạm: trung uý Bảo đề nghị **đ�
 ### 6.5. Kết thúc ẩn
 Nếu người chơi trả lời đúng **tất cả** câu hỏi ở lần đầu (không sai câu nào) rồi mới đến bước ngoặt và chọn E:
 - Có thêm **băng cuối**: máy ghi âm Vân để quên trong buồng trống đêm 2/1/1992, sau khi thi thể bà Hằng đã được đưa đi. Băng chỉ có tiếng gió, rồi một tiếng ho khan của **một người đàn bà**, rồi giọng rất nhẹ, giọng Bắc: *"Ngân ơi… thôi, mẹ tự lấy được rồi."*
+
+## 6.6. Ghi chú khi dựng game
+- Lần thăm 2: tiếng ho chỉ nghe được **trước khi** Ngân ra mở cửa (lần 1 và lần 2). Khi Ngân ngồi cùng Vân, không có tiếng ho; Ngân hỏi “cô có nghe thấy không” và ông Khải nói “có”.
+- Trang vở trong bao than bị bụi than làm nhoè ngày, chỉ còn “tháng Một”: người chơi phải tự tra ngày âm của đêm bà Hằng mất (lịch vạn niên 1989), rồi tìm ngày đó trên lịch bloc 1991.
+- Câu bước ngoặt là trọng điểm 7, tách riêng; trọng điểm 6 là tra lịch.
 
 ## 7. Kiểu nhiệm vụ mới (viết thêm vào engine, dùng lại được cho các hồ sơ sau)
 

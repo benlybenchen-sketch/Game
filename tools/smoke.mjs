@@ -44,6 +44,16 @@ for (const [i, q] of QUESTIONS.entries()) {
       await page.click(`[data-pick="${p.id}"]`);
       await open(d.id);
       await page.click(`.ln[data-line="${lineId}"]`);
+    } else if (p.type === "spot" || p.type === "set") {
+      for (const v of [].concat(s[p.id]).slice(0, p.count || 1)) await page.evaluate(([part, value]) => document.dispatchEvent(new CustomEvent("hdn:answer", { detail: { part, value, text: value } })), [p.id, v]);
+    } else if (p.type === "order") {
+      for (let k = 0; k < s[p.id].length; k++) {
+        for (;;) {
+          const cur = await page.evaluate(([q, part]) => window.__hdn.state.resp[q][part], [q.id, p.id]);
+          const j = cur.indexOf(s[p.id][k]); if (j <= k) break;
+          await page.click(`[data-ord="${p.id}"][data-k="${j}"][data-dir="-1"]`);
+        }
+      }
     } else if (p.type === "pins") {
       for (const g of s.pins) { await open(g[0]); await page.click(`[data-pin="${g[0]}"]`); }
     }
@@ -51,6 +61,7 @@ for (const [i, q] of QUESTIONS.entries()) {
   await page.screenshot({ path: `${out}/q${i + 1}_filled.png` });
   await page.click('[data-act="submit"]');
   await page.waitForTimeout(300);
+  if (q.fatal) { await page.screenshot({ path: `${out}/q${i + 1}_warn.png` }); await page.click('[data-dlg="ok"]'); await page.waitForTimeout(400); }
   const ok = await page.isVisible("#dialog");
   console.log(q.id, ok ? "SOLVED" : "FAILED: " + (await page.textContent(".q-feedback")));
   if (!ok) break;

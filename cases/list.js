@@ -12,4 +12,7 @@ export const CASES = [
   { id: "04", number: "Hồ sơ 04", title: "Người mẹ khác", place: "Bệnh viện Tâm thần Cam Ly, Đà Lạt, 1996", cover: "cover",
     short: "Cô gái khăng khăng người mẹ đi Sài Gòn về không phải mẹ mình. Bệnh của cô có thật. Lời cô nói cũng thật. Chữ ký của bạn quyết định ai bị nhốt.",
     level: "Rất khó · tâm lý", time: "4–6 giờ", questions: 6 },
+  { id: "05", number: "Hồ sơ 05", title: "Người giữ vợ", place: "Thị trấn Cam Đường, Lào Cai, 1991", cover: "cover",
+    short: "Hai năm, cửa buồng dán kín, đêm nào cũng có tiếng ho. Cả thị trấn thương cô con gái của ông thợ ảnh hoá dở. Một quyết định sai, và sẽ có người chết.",
+    level: "Rất khó · tâm lý · có kết thúc xấu", time: "4–6 giờ", questions: 7 },
 ];
