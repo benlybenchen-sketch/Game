@@ -46,45 +46,45 @@ export const TAPES = {
   },
 
   bang_hang: {
-    title: "Cassette · Sony C60", label: "Lớp 7A · cô Hằng đọc thơ · 1988", dur: 44,
+    title: "Cassette · Sony C60", label: "Lớp 7A · cô Hằng đọc thơ · 1988", dur: 46,
     hidden: { t0: 48, t1: 58, text: "MẸ" },
     segs: [
       { t: 1, d: 2, sfx: "chat", text: "[tiếng học trò, tiếng ghế kéo]" },
-      { t: 4, d: 4, who: "Cô Hằng", voice: "hang", text: "Các em trật tự. Cô đọc bài thơ cô viết, các em nghe rồi chép lại nhé." },
-      { t: 9, d: 9, who: "Cô Hằng", voice: "hang", text: "Mẹ ngồi bên cửa sổ, chấm bài đến khuya. Đèn dầu leo lét, gió núi lùa qua. Con ngủ đi con, mẹ còn ngồi đây." },
-      { t: 19, d: 5, who: "Cô Hằng", voice: "hang", text: "Ngân, con đứng dậy đọc lại cho các anh chị nghe nào." },
-      { t: 25, d: 7, who: "Ngân (12 tuổi)", voice: "ngan12", text: "Mẹ ngồi bên cửa sổ, chấm bài đến khuya. Con ngủ đi con, mẹ còn ngồi đây." },
-      { t: 33, d: 4, who: "Cô Hằng", voice: "hang", text: "Giỏi lắm. Cả lớp vỗ tay cho em Ngân." },
-      { t: 38, d: 3, sfx: "chat", text: "[tiếng vỗ tay. Tiếng băng hết]" },
+      { t: 4, d: 6.3, who: "Cô Hằng", voice: "hang", text: "Các em trật tự. Cô đọc bài thơ cô viết, các em nghe rồi chép lại nhé." },
+      { t: 11.3, d: 9.8, who: "Cô Hằng", voice: "hang", text: "Mẹ ngồi bên cửa sổ, chấm bài đến khuya. Đèn dầu leo lét, gió núi lùa qua. Con ngủ đi con, mẹ còn ngồi đây." },
+      { t: 22.1, d: 4.3, who: "Cô Hằng", voice: "hang", text: "Ngân, con đứng dậy đọc lại cho các anh chị nghe nào." },
+      { t: 27.4, d: 6.3, who: "Ngân (12 tuổi)", voice: "ngan12", text: "Mẹ ngồi bên cửa sổ, chấm bài đến khuya. Con ngủ đi con, mẹ còn ngồi đây." },
+      { t: 34.7, d: 3.7, who: "Cô Hằng", voice: "hang", text: "Giỏi lắm. Cả lớp vỗ tay cho em Ngân." },
+      { t: 39.4, d: 3, sfx: "chat", text: "[tiếng vỗ tay. Tiếng băng hết]" },
     ],
   },
 
   bang_hop: {
-    title: "Cassette · TDK D60 · máy của trạm", label: "Họp ở trạm · 15 giờ 30/12/91", dur: 36,
+    title: "Cassette · TDK D60 · máy của trạm", label: "Họp ở trạm · 15 giờ 30/12/91", dur: 38,
     hidden: { t0: 52, t1: 62, text: "ĐÊM NAY" },
     segs: [
-      { t: 1, d: 9, who: "Trung uý Bảo", voice: "bao", text: "Tôi nói thẳng. Ông Khải giấu xác vợ hai năm. Tối nay tôi đưa ông ấy về đồn. Con bé cho ngủ nhờ nhà bà Lụa, sáng mai mở buồng." },
-      { t: 11, d: 6, who: "Y sĩ Sinh", voice: "sinh", text: "Tội con bé. Bố nó khổ quá hoá dở, con nó khổ theo. Tôi đồng ý với anh Bảo." },
-      { t: 18, d: 7, who: "Trung uý Bảo", voice: "bao", text: "Ngày mất của bà ấy là hôm đông chí, hai mươi hai, qua rồi, có chuyện gì đâu. Chẳng có gì phải vội." },
-      { t: 26, d: 7, who: "Y sĩ Sinh", voice: "sinh", text: "Cô Vân. Cô là người đọc hết hồ sơ nhà ấy. Cô nói đi, đêm nay làm thế nào thì tôi làm thế ấy." },
+      { t: 1, d: 9.3, who: "Trung uý Bảo", voice: "bao", text: "Tôi nói thẳng. Ông Khải giấu xác vợ hai năm. Tối nay tôi đưa ông ấy về đồn. Con bé cho ngủ nhờ nhà bà Lụa, sáng mai mở buồng." },
+      { t: 11.3, d: 6.4, who: "Y sĩ Sinh", voice: "sinh", text: "Tội con bé. Bố nó khổ quá hoá dở, con nó khổ theo. Tôi đồng ý với anh Bảo." },
+      { t: 18.7, d: 7.2, who: "Trung uý Bảo", voice: "bao", text: "Ngày mất của bà ấy là hôm đông chí, hai mươi hai, qua rồi, có chuyện gì đâu. Chẳng có gì phải vội." },
+      { t: 26.9, d: 7.8, who: "Y sĩ Sinh", voice: "sinh", text: "Cô Vân. Cô là người đọc hết hồ sơ nhà ấy. Cô nói đi, đêm nay làm thế nào thì tôi làm thế ấy." },
     ],
   },
 
   bang_khai_cuoi: {
-    title: "Cassette · TDK D60 · máy của trạm", label: "Đồn công an thị trấn · 31/12/91", dur: 16,
+    title: "Cassette · TDK D60 · máy của trạm", label: "Đồn công an thị trấn · 31/12/91", dur: 15,
     hidden: { t0: 16, t1: 24, text: "GIỮ" },
     segs: [
-      { t: 1, d: 12, who: "Ông Khải", voice: "khai", text: "Cô Vân ơi. Hai năm nay tôi biết. Tôi biết nhà tôi mất rồi. Tôi chỉ cần một người bảo tôi giữ con bé lại. Chỉ một người thôi." },
+      { t: 1, d: 10.7, who: "Ông Khải", voice: "khai", text: "Cô Vân ơi. Hai năm nay tôi biết. Tôi biết nhà tôi mất rồi. Tôi chỉ cần một người bảo tôi giữ con bé lại. Chỉ một người thôi." },
     ],
   },
 
   bang_buong: {
-    title: "Cassette · TDK D60 · chế độ tự ghi", label: "Buồng trong, đã trống · đêm 2/1/92", dur: 21,
+    title: "Cassette · TDK D60 · chế độ tự ghi", label: "Buồng trong, đã trống · đêm 2/1/92", dur: 18,
     hidden: { t0: 20, t1: 28, text: "THUỐC" },
     segs: [
       { t: 1, d: 4, sfx: "hum", text: "[máy tự bật. Gió]" },
-      { t: 6, d: 4, who: "???", voice: "hangcough", text: "[một tiếng ho khan. Giọng đàn bà]" },
-      { t: 11, d: 7, who: "???", voice: "hang", ghost: 0, text: "Ngân ơi… thôi, mẹ tự lấy được rồi. Con ngủ đi." },
+      { t: 6, d: 1.6, who: "???", voice: "hangcough", text: "[một tiếng ho khan. Giọng đàn bà]" },
+      { t: 8.6, d: 5.9, who: "???", voice: "hang", ghost: 0, text: "Ngân ơi… thôi, mẹ tự lấy được rồi. Con ngủ đi." },
     ],
   },
 };
