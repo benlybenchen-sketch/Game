@@ -340,6 +340,11 @@ body[data-fear="soft"] .apparition { display: none; }
 .case-facts { font-family: var(--mono); font-size: 12px; color: var(--muted); }
 .case-status { font-family: var(--mono); font-size: 12px; color: var(--red2); margin-top: auto; }
 .back-home { font-family: var(--mono); font-size: 12px; margin-bottom: 10px; }
+.case-card--soon { cursor: default; opacity: .72; filter: grayscale(.6); }
+.case-card--soon:hover { border-color: #2a3438; transform: none; }
+.case-card--soon .case-art { display: grid; place-items: center; background: repeating-linear-gradient(135deg, #111719 0 14px, #0c1113 14px 28px); }
+.soon-lock { font-size: 42px; opacity: .55; }
+.case-status--soon { color: #c9a45a; letter-spacing: .08em; }
 @media (max-width: 700px) { .case-card { grid-template-columns: 1fr; } .case-art { min-height: 160px; } }
 
 /* ---------- case 02: VHS, room, film roll, ID cards ---------- */

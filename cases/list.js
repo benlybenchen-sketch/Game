@@ -1,4 +1,5 @@
 // Every case in the series, in order, for the home screen. Details of each case live in cases/<id>/index.js.
+// soon: true locks a case that is still missing its pictures (open it anyway with ?case=<id>&preview=1).
 export const CASES = [
   { id: "01", number: "Hồ sơ 01", title: "Hồ đòi người", place: "Hồ thủy điện Nậm Khê, 2003", cover: "cover",
     short: "Đêm rằm tháng Bảy, một cô giáo biến mất bên hồ. Làng nói cứ bảy năm hồ lại đòi một người.",
@@ -14,5 +15,5 @@ export const CASES = [
     level: "Rất khó · tâm lý", time: "4–6 giờ", questions: 6 },
   { id: "05", number: "Hồ sơ 05", title: "Người giữ vợ", place: "Thị trấn Cam Đường, Lào Cai, 1991", cover: "cover",
     short: "Hai năm, cửa buồng dán kín, đêm nào cũng có tiếng ho. Cả thị trấn thương cô con gái của ông thợ ảnh hoá dở. Một quyết định sai, và sẽ có người chết.",
-    level: "Rất khó · tâm lý · có kết thúc xấu", time: "4–6 giờ", questions: 7 },
+    level: "Rất khó · tâm lý · có kết thúc xấu", time: "4–6 giờ", questions: 7, soon: true },
 ];

@@ -27,8 +27,9 @@ let cleanupMedia = () => {};
 // ---------------------------------------------------------------- boot
 function boot() {
   bindChrome();
-  const id = new URLSearchParams(location.search).get("case");
-  if (id && CASES.some((c) => c.id === id)) openCase(id); else showHome();
+  const q = new URLSearchParams(location.search), id = q.get("case");
+  const k = CASES.find((c) => c.id === id);
+  if (k && (!k.soon || q.has("preview"))) openCase(id); else showHome();
 }
 
 /** Loads a case and shows its cover. */
@@ -43,7 +44,7 @@ async function openCase(id) {
   picking = null;
   document.body.dataset.case = id;
   document.title = `${META.title} · ${META.series}`;
-  history.replaceState(null, "", `?case=${id}`);
+  history.replaceState(null, "", `?case=${id}${new URLSearchParams(location.search).has("preview") ? "&preview=1" : ""}`);
   document.querySelector(".brand").innerHTML = `<b>${META.series}</b> · ${META.title}`;
   document.querySelector(".ghost-note").innerHTML = "";
   setLevel(state.started ? dreadFor(state.stage) : 0, { quiet: true });
@@ -65,6 +66,11 @@ function showHome() {
     <header class="home-head"><div class="cover-series">Series game hồ sơ điều tra kinh dị</div><h1 class="cover-title">Hồ sơ Nửa Đêm</h1>
       <p class="cover-blurb">Mỗi hồ sơ là một vụ án riêng, một bộ nhân vật riêng. Tự đọc giấy tờ, nghe băng, xem phim, ghim bằng chứng và phá án. Càng gần sự thật, đêm càng dài.</p></header>
     <div class="home-list">${CASES.map((k) => {
+      if (k.soon) return `<div class="case-card case-card--soon" aria-disabled="true">
+        <span class="case-art"><span class="soon-lock">🔒</span></span>
+        <span class="case-body"><span class="cover-series">${k.number} · ${k.place}</span><b class="case-title">${k.title}</b>
+        <span class="case-blurb">${k.short}</span>
+        <span class="case-facts">${k.level} · ${k.time} · ${k.questions} trọng điểm</span><span class="case-status case-status--soon">ĐANG HOÀN THÀNH · Sắp ra mắt</span></span></div>`;
       const p = peek(k.id), status = p.failed ? "THẤT BẠI · mở lại để điều tra lại" : p.stage >= k.questions ? "Đã khép hồ sơ" : p.started ? `Đang điều tra · trọng điểm ${p.stage + 1}/${k.questions}` : "Chưa mở";
       return `<button class="case-card" data-case="${k.id}" style="--cover:url(../img/${k.id}/${k.cover}.jpg)">
         <span class="case-art"></span>
@@ -413,7 +419,7 @@ function bindChrome() {
       return;
     }
     const kc = t.closest(".case-card");
-    if (kc && document.body.dataset.screen === "home") { ctx(); openCase(kc.dataset.case); return; }
+    if (kc && kc.dataset.case && document.body.dataset.screen === "home") { ctx(); openCase(kc.dataset.case); return; }
     const set = t.closest("[data-set]"); if (set) { ctx(); applySetting(set.dataset.set, Number(set.dataset.v)); return; }
     const doc = t.closest("[data-doc]"); if (doc) return openDoc(doc.dataset.doc);
     const go = t.closest("[data-goto]"); if (go) return openDoc(go.dataset.goto);

@@ -7,7 +7,7 @@ const { DOCS, QUESTIONS, SECRET, SECRET_KEY } = await import(`../cases/${CASE}/i
 import { decode } from "../js/answer.js";
 const S = decode(SECRET, SECRET_KEY);
 const out = process.argv[2] || "/tmp";
-const URL = `http://localhost:8063/?case=${CASE}`;
+const URL = `http://localhost:8063/?case=${CASE}&preview=1`;
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
 const errors = [];
