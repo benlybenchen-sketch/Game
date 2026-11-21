@@ -115,7 +115,7 @@ export default [
     html: () => `
     <div class="doc doc--notebook">
       ${hand(`<b>Buổi cơ thứ nhất.</b> Thứ Bảy 2/10/1971, 21 giờ. Phòng khách tầng hai, nhà bà Diệp.<br>
-        Ngồi (theo chiều kim đồng hồ, từ đầu bàn): <b>Lan (tay chủ)</b>, Dung, Yến, Khiêm, Nghi, Quốc, Tùng (ghi sổ).<br>
+        Ngồi (theo chiều kim đồng hồ, từ đầu bàn): Lan, Dung, Yến, Khiêm, Nghi, Quốc, Tùng (ghi sổ). Tay chủ: như mọi khi.<br>
         Yến khấn mời bà Diệp. Chén chạy sau chừng năm phút.`)}
       ${hand(`Chữ con cơ dừng: <span class="code-line">T U N G F &nbsp; R O W I</span>`)}
       ${hand(`Cả bọn cười. Khiêm nói “rơi vô lưới tình”. Dung hỏi Lan có đẩy không. Lan nói không.<br>

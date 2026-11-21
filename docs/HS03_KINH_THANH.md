@@ -80,14 +80,28 @@ Nỗi sợ của hồ sơ này **không đến từ ma hiện ra**, mà từ **c
 | **6** · T6 12/11 | **Chữ gương** (những trang nhật ký giấu sau di ảnh bà Diệp; dùng tấm gương trong game để lật) | LAN CHẾT CHÁY (Telex) | **NGƯỜI MANG TÊN EM KHÔNG PHẢI EM** | Trang gương của Dung: *"Nếu mình chết, đừng tin ai mang tên mình."* Biên bản khám nghiệm "xác Lan": **xương đòn trái từng gãy**. Hồ sơ y tế năm 1966 của Dung: gãy xương đòn trái. **Xác cháy là Dung.** |
 | **7** · T7 13/11 | **Mật mã họ Lâm: quẻ bát quái** (6 vạch, đọc từ dưới lên, vạch liền là 1, ra số nhị phân rồi tra bảng chữ cái 29 chữ). Chìa khoá: trang nhật ký tiếng Pháp của bà Diệp: *"Lisez de bas en haut. Le trait plein vaut un."* | (con cơ đêm 7 năm 1971 cũng ra quẻ, Lan không đọc được) | **MỘ LAN LÀ EM · ĐỪNG UỐNG TRÀ · VÀNG DƯỚI HỒ SEN** | Bà chủ nhà chính là **Hà Ngọc Lan**. |
 
-### Câu hỏi từng trọng điểm (dự kiến)
-1. Giải hai lời cơ của đêm 1; ai luôn ngồi tay chủ (theo biên bản của Tùng).
-2. Giải Morse; tiếng gõ phát ra từ đâu (mặt bàn / gầm bàn); ai đã bật băng ghi âm đêm 2.
-3. Giải tàng đầu của bài báo tử và của bài thơ cuối của Yến; ai đẩy con cơ.
-4. Giải số Tô Châu; **chỉ ra câu nhật ký đã bị sửa** (bấm vào câu trong bản hiện tại, rồi đối chiếu với bản chép); ai sửa.
-5. Giải mã Kiều; cuốn Kiều nào khớp, của ai; người soạn các lời báo tử năm 1971.
-6. Lật chữ gương; xác cháy đêm 6 là của ai; bằng chứng (xương đòn, tay thuận, sẹo cằm).
-7. Giải quẻ họ Lâm; kết luận: thân phận thật của bà chủ nhà, động cơ, số người bị giết (6), chỗ vàng, vì sao bà ta thuê người chơi.
+### Câu hỏi từng trọng điểm (bản 2, khó hơn)
+Nguyên tắc bản 2: **Lan là đáp án "ai" ở năm câu** của bản 1, giải xong câu 1 là đoán được hết. Bản 2 chỉ hỏi tên Lan ở câu 1 và câu 7; các câu giữa đổi thành **bấm vào đúng câu bằng chứng** trong tài liệu, không đoán được.
+1. Giải hai lời cơ đêm 1 (TÙNG RƠI · CHỊ LAN ĐÂU). Ai ngồi tay chủ: **Lan**. *Bản 2:* sổ cơ buổi 1 bỏ chữ "Lan (tay chủ)", chỉ ghi "tay chủ: như mọi khi". Phải ghép: sổ Tùng (tay chủ ngồi đầu bàn) + thứ tự chỗ ngồi "từ đầu bàn: Lan…", hoặc nhật ký Dung ("chị Lan đòi ngồi tay chủ"), hoặc băng cuộn 1 (Lan: "để em ngồi tay chủ").
+2. Giải Morse (YẾN XUỐNG HỒ · EM LẠNH). Tiếng gõ phát ra từ **gót guốc gỗ dưới gầm bàn**. *Bản 2:* bỏ câu "ai bật máy" (sổ cơ ghi sẵn). Thay bằng: **bấm câu cho biết ai đi guốc gỗ**: câu nhật ký Dung "Chị đi đôi guốc gỗ ba chị mua ở Huế…" (chấp nhận cả câu trong thư Nghi).
+3. Giải tàng đầu (QUỐC UỐNG THUỐC · TAY CHỦ ĐẨY CƠ · TAY TRÁI). *Bản 2:* bỏ câu chọn "ai đẩy cơ". Thay bằng: **bấm câu trong sổ cơ buổi 3 cho thấy cách Quốc bị đầu độc**: "Lan pha một bình trà nóng mời mọi người…".
+4. Giải số Tô Châu (KHIÊM TREO · BÀ SỬA GIẤY), chỉ câu nhật ký bị sửa (câu tay thuận), ai sửa: **bà chủ nhà**. *Bản 2, bẫy:* thêm phương án **"Ông Bảy gác dan, người giữ chìa khóa nhà"** (nhật ký có câu "chìa khóa ông Bảy gác giữ") và "Cảnh sát lúc lưu hồ sơ 1971". Lối thoát: bản chép là của chính người chơi, chép đêm 7/11/2004, nên câu bị sửa **sau** đêm đó, trong lúc cuốn nhật ký nằm trong tủ của bà chủ nhà.
+5. Giải mã Kiều (NGHI NGÃ · CẢM ƠN EM ĐÃ ĐỌC LẠI), cuốn Kiều khớp năm 1971: **bản Huế của Lan**. *Bản 2:* bỏ câu chọn "ai soạn lời báo tử". Thay bằng: **bấm câu trong sổ cơ buổi 5**: "Chị Lan đi lên lầu lấy cuốn Kiều của chị xuống, ngồi dò một mình…".
+6. Lật chữ gương (NGƯỜI MANG TÊN EM KHÔNG PHẢI EM). Xác cháy là **Dung**. *Bản 2:*
+   - Phương án xác cháy thêm Nghi, bà Diệp (bản 1 chỉ có Lan, Dung, người lạ).
+   - Bằng chứng đổi từ chọn sang **bấm câu trong biên bản khám nghiệm**. Bẫy: câu "không có muội than" và "nứt sọ" chỉ chứng minh **án mạng**; câu "nhẫn H.N.L., áo hoa tím" chỉ là **đồ đeo vào xác**. Câu đúng duy nhất: **"Xương đòn trái: có can xương cũ… ước trên ba năm"**.
+   - **Phần mới:** từ đêm 6 bà chủ nhà sửa nhật ký **lần thứ hai** (câu về sẹo dưới cằm, nay thành sẹo của Lan). Người chơi phải tự đối chiếu lại bản chép và bấm đúng câu đó.
+7. Giải quẻ họ Lâm; bà chủ nhà là **Lan**; giết **6** người; động cơ; vì sao thuê người chơi. *Bản 2:* các phương án động cơ và lý do thuê viết dài ngang nhau, có phương án nhiễu hợp lý (trả thù cho cha chết ở Huế 1968; bịt miệng sau một tai nạn; cần người giải Morse của Tùng).
+
+### Bẫy của bản 2 (tóm tắt)
+| Bẫy | Đánh lừa | Lối thoát |
+|---|---|---|
+| Sổ cơ buổi 1 bỏ tên tay chủ | Không biết ai dẫn con cơ | Sổ Tùng + thứ tự chỗ ngồi, nhật ký, băng cuộn 1 |
+| Ông Bảy giữ chìa khóa | Chọn ông Bảy là người sửa nhật ký | Câu bị sửa sau đêm 7/11/2004 |
+| Câu "không có muội than", "nứt sọ" | Chọn bằng chứng án mạng thay cho danh tính | Chỉ xương đòn trái khớp hồ sơ 1966 của Dung |
+| Câu "nhẫn H.N.L., áo hoa tím" | Tin xác là Lan | Đồ đeo vào xác, người nhận dạng chính là "Dung" |
+| Nhật ký bị sửa lần hai | Người chơi chỉ đối chiếu một lần ở đêm 4 | Phải đối chiếu lại ở đêm 6 |
+| Phương án dài ngang nhau ở câu 7 | Không đoán theo độ dài được | Phải hiểu cả vụ án |
 
 ## 6. Bằng chứng then chốt (phải có trong game)
 - **Sổ của Tùng:** bảng mã điện báo Telex, bảng Morse, **biên bản 6 buổi cơ** (ngày, người ngồi, vị trí "tay chủ: Lan", chữ con cơ chạy ra).
