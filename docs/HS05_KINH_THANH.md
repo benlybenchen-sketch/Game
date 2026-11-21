@@ -108,17 +108,17 @@ Bản 2 sửa hết các chỗ trên, và thêm **một lớp sự thật mới*
 6. Khoanh tờ lịch **30/12/1991**. Bỏ câu "vì sao trung uý Bảo nghĩ đã qua" (đáp án lộ). Thay bằng:
    - **số than không thu được nếu không mở buồng: 5 cân**;
    - **lối Ngân vào buồng: cửa ngách sau chạn bát trong bếp** (*bẫy:* cửa sổ gian giữa, buồng tối, lỗ thông gió).
-7. **Bước ngoặt: bảy phương án A–G, viết dài ngang nhau, cùng giọng điệu.** Chỉ **E** đúng. Mỗi phương án sai có một lỗ hổng phải suy ra từ hồ sơ:
+7. **Bước ngoặt: bảy phương án A–G, cùng một khuôn câu** (bốn vế ngăn bằng dấu chấm phẩy, dài 109–115 ký tự, E thuộc nhóm ngắn nhất). Cả bảy đều "thu than ở gian giữa". **E có hai bản gần giống (D và F)**, mỗi bản khác đúng một chi tiết chết người, nên không đoán được theo kiểu "cặp câu giống nhau thì đáp án nằm trong cặp". Chỉ **E** đúng:
 
 | Phương án | Nghe hợp lý vì | Lỗ hổng chết người |
 |---|---|---|
-| A. Theo trung uý Bảo, Ngân ngủ nhà bà Lụa | có người lớn trông | nhà bà Lụa **sát vách** buồng trong (sơ đồ); Ngân lẻn về qua sân sau, vào bếp |
-| B. Mở buồng chiều nay, có cán bộ chứng kiến | sự thật được phơi ra | Ngân ôm lò chạy vào buồng, chốt cửa; trong buồng đã có **5 cân than** |
-| C. Nói thật với Ngân, có thầy Sinh ngồi cùng | nhân văn | Ngân "biết rồi" (băng chạy chậm), chỉ hành động sớm hơn |
-| D. Thu hết than, hoãn mở buồng, hỏi thăm trong đêm | than đã thu | **5 cân trong buồng** chưa thu; Ngân vẫn ở nhà |
-| **E. Ngân lên viện có người ngồi cạnh; thu than; ông Khải ở nhà với cán bộ** | | **đúng**: tách người khởi phát khỏi nhà, có người canh, người tiếp nhận tự tỉnh |
-| F. Ngân lên viện, **ông Khải đi cùng** ngồi cạnh con | ông là bố, Ngân yên tâm | ông Khải là **người tiếp nhận**: Ngân bảo gì ông làm nấy; 23 giờ ông xin cho con về thắp hương |
-| G. Ngân ở nhà, **cán bộ thức ở gian giữa**; ông Khải lên viện | có người canh, tách được hai người | Ngân vào buồng qua **cửa ngách trong bếp**, không đi qua gian giữa |
+| A. Ông Khải về đồn; Ngân ngủ nhà bà Lụa có người trông; thu than; sáng mai mở buồng | đúng ý công an, có người lớn trông | nhà bà Lụa **sát vách** buồng trong (sơ đồ); Ngân lẻn qua sân sau, vào bếp |
+| B. Mở buồng chiều nay; có công an chứng kiến; thu than; hai cha con ở nhà với cán bộ | sự thật được phơi ra | Ngân vẫn ngủ ở nhà; **5 cân than** trong buồng, vào qua bếp |
+| C. Thầy Sinh nói thật với Ngân; thu than; chưa mở buồng; cán bộ trông nhà | nhân văn | Ngân "biết rồi" (băng chạy chậm); vẫn ở nhà, đi qua cửa ngách |
+| D. Thu than; chưa mở buồng; **sáng mai** đưa Ngân lên viện; cán bộ trông nhà | gần giống E | **đêm nay** mới là đêm 25 tháng Một (lịch bloc) |
+| **E. Tối nay đưa Ngân lên viện, có người ngồi cạnh; thu than; chưa mở buồng; ông Khải ở nhà** | | **đúng**: tách người khởi phát khỏi nhà ngay đêm nay, có nhân viên canh; người tiếp nhận tự tỉnh |
+| F. Tối nay đưa Ngân lên viện, **có bố ngồi cạnh**; thu than; chưa mở buồng | gần giống E, bố cho con yên tâm | ông Khải là **người tiếp nhận**: Ngân bảo gì ông làm nấy; 23 giờ ông xin cho con về |
+| G. Tối nay đưa ông Khải lên viện; thu than; chưa mở buồng; Ngân ngủ ở nhà, cán bộ thức canh | tách được hai người, có người canh | tách nhầm người: Ngân vào buồng qua **cửa ngách trong bếp**, không đi qua gian giữa |
 
 Lời dẫn kết thúc xấu có thêm hai bản cho F và G. Biên bản sáng 31/12 ghi thêm: cửa ngách trong bếp chèn chăn, chốt từ bên trong; trong buồng có vỏ bao than năm cân. Kết thúc tốt ghi: bao 5 cân vẫn nằm sau cửa dán kín, không ai đốt.
 

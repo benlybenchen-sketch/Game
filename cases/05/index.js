@@ -19,9 +19,9 @@ export const ART = { ghostFace };
 /** Wording of the bad ending, by the option the player chose (A–D). */
 const LOST_LINE = {
   A: "Ông Khải bị đưa về đồn lúc 19 giờ. Cháu Ngân được gửi sang nhà bà Lụa, cách buồng mẹ một bức vách.",
-  B: "Cửa buồng vừa mở, cháu Ngân ôm lò than lao vào trong và chốt cửa lại.",
+  B: "Cửa buồng mở rồi, sự thật phơi ra rồi. Đêm ấy cháu Ngân vẫn ngủ ở nhà, cách buồng mẹ một cái bếp.",
   C: "Cháu Ngân nghe hết, cười rất ngoan: “Vâng, cháu biết rồi ạ.” Rồi xin đi ngủ sớm.",
-  D: "Người ta thu mười cân than ở gian giữa, rồi về. Nhà ông Khải tắt đèn từ 20 giờ.",
+  D: "Người ta thu mười cân than ở gian giữa, hẹn sáng mai đưa cháu Ngân đi viện. Sáng mai đã muộn.",
   F: "Lúc 23 giờ, cháu Ngân xin bố cho về thắp hương cho mẹ. Ông Khải chưa bao giờ biết từ chối con.",
   G: "Cán bộ trạm thức suốt đêm ở gian giữa. Không ai nhớ trong bếp có một cánh cửa ngách.",
 };

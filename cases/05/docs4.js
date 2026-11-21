@@ -6,10 +6,10 @@ import { tape } from "./docs0.js";
 /** What happened that night after a wrong decision; keyed by the first words of the chosen option. */
 const LOST = {
   A: "Ông Khải được đưa về đồn lúc 19 giờ. Cháu Ngân ngủ nhờ nhà bà Lụa, bà Lụa thức trông tới nửa đêm. Khoảng 0 giờ 30, cháu Ngân lẻn qua sân sau về nhà, vào bếp.",
-  B: "Lúc 16 giờ, cán bộ bóc băng keo, mở cửa buồng trong trước mặt hai cha con. Cháu Ngân không khóc. Cháu ôm cái lò than chạy vào buồng, chốt cửa từ bên trong, chặn bằng giường. Công an quyết định chờ cháu bình tĩnh, ngồi canh ngoài cửa.",
-  C: "Lúc 17 giờ, sinh viên Vân và y sĩ Sinh nói với cháu Ngân rằng mẹ cháu đã mất hai năm. Cháu Ngân cười, nói “vâng, cháu biết rồi ạ”, rồi xin đi ngủ sớm. Ông Khải ngồi ở hiệu đến khuya.",
-  D: "Cán bộ trạm thu 10 cân than ở gian giữa. Việc mở buồng hoãn đến sau Tết Dương lịch. Người của trạm ghé hỏi thăm lúc 21 giờ và 23 giờ; nhà đã tắt đèn, không có gì lạ.",
-  F: "19 giờ 40, cháu Ngân được đưa lên viện tỉnh, ông Khải đi cùng. Khoảng 23 giờ, cháu Ngân nói muốn về thắp hương cho mẹ. Ông Khải là bố, ký giấy xin cho con về; không ai giữ được. 0 giờ 30, hai bố con về tới nhà.",
+  B: "Lúc 16 giờ, cán bộ bóc băng keo, mở cửa buồng trong trước mặt hai cha con. Cháu Ngân không khóc. Đêm đó cháu ngủ ở nhà với bố, cán bộ trạm ngồi gian giữa. Khoảng 1 giờ, cháu Ngân đi xuống bếp.",
+  C: "Lúc 17 giờ, y sĩ Sinh nói với cháu Ngân rằng mẹ cháu đã mất hai năm. Cháu Ngân cười, nói “vâng, cháu biết rồi ạ”, rồi xin đi ngủ sớm. Cán bộ trạm ngồi ở gian giữa đến sáng, không nghe thấy gì.",
+  D: "Cán bộ trạm thu 10 cân than ở gian giữa, hẹn sáng mai đưa cháu Ngân lên viện tỉnh. Cán bộ trạm ngồi ở gian giữa đến sáng. Nhà tắt đèn từ 20 giờ, không có gì lạ.",
+  F: "19 giờ 40, cháu Ngân được đưa lên viện tỉnh, ông Khải đi cùng, ngồi cạnh con. Khoảng 23 giờ, cháu Ngân nói muốn về thắp hương cho mẹ. Ông Khải là bố, ký giấy xin cho con về; không ai giữ được. 0 giờ 30, hai bố con về tới nhà.",
   G: "Ông Khải được đưa lên viện tỉnh lúc 19 giờ. Cán bộ trạm thu 10 cân than ở gian giữa rồi thức ở đó đến sáng, không nghe thấy gì. Cửa buồng trong vẫn nguyên băng keo.",
 };
 const lostKey = () => {
@@ -29,13 +29,13 @@ export default [
       <p>Y sĩ Sinh: đồng ý về nguyên tắc. ${ln("bh_sinh", "Đề nghị sinh viên Vân, người đã đọc toàn bộ hồ sơ gia đình, đưa ra phương án cho đêm nay. Trạm sẽ làm theo.")}</p>
       <p>Phương án được đưa ra để chọn:</p>
       <ol type="A">
-        <li>Theo trung uý Bảo: tối nay đưa ông Khải về đồn, cháu Ngân ngủ nhờ nhà bà Lụa có người lớn trông, sáng mai mở buồng.</li>
-        <li>Mở buồng ngay chiều nay, có cán bộ y tế và công an chứng kiến, để hai cha con đối diện sự thật trước khi trời tối.</li>
-        <li>Nói thật với cháu Ngân rằng mẹ đã mất hai năm, có thầy Sinh ngồi cùng, rồi để hai cha con tự quyết việc mở buồng.</li>
-        <li>Thu hết than, hoãn việc mở buồng đến sau Tết Dương lịch, cử người ghé nhà ông Khải hỏi thăm vài lần trong đêm.</li>
-        <li>Đưa cháu Ngân lên viện tỉnh ngay tối nay, có người ngồi cạnh cả đêm; thu than; ông Khải ở nhà với cán bộ trạm.</li>
-        <li>Đưa cháu Ngân lên viện tỉnh ngay tối nay, ông Khải đi cùng ngồi cạnh con cả đêm cho con yên tâm; thu hết than.</li>
-        <li>Cháu Ngân ở nhà ngủ, cán bộ trạm thức cả đêm ở gian giữa; thu hết than ngoài gian giữa; đưa ông Khải lên viện tỉnh.</li>
+        <li>Ông Khải về đồn tối nay; cháu Ngân ngủ nhờ nhà bà Lụa, có người lớn trông; thu than ở gian giữa; sáng mai mở buồng.</li>
+        <li>Mở buồng ngay chiều nay; có công an chứng kiến; thu than ở gian giữa; tối nay hai cha con ở nhà với cán bộ trạm.</li>
+        <li>Thầy Sinh nói thật với cháu Ngân rằng mẹ đã mất; thu than ở gian giữa; chưa mở buồng; cán bộ trạm ở lại trông nhà.</li>
+        <li>Thu than ở gian giữa; chưa mở buồng; sáng mai đưa cháu Ngân lên viện tỉnh; đêm nay cán bộ trạm ở lại trông nhà.</li>
+        <li>Tối nay đưa cháu Ngân lên viện tỉnh, có người ngồi cạnh; thu than ở gian giữa; chưa mở buồng; ông Khải ở nhà.</li>
+        <li>Tối nay đưa cháu Ngân lên viện tỉnh, có bố ngồi cạnh; thu than ở gian giữa; chưa mở buồng; cán bộ trạm trông nhà.</li>
+        <li>Tối nay đưa ông Khải lên viện tỉnh; thu than ở gian giữa; chưa mở buồng; cháu Ngân ngủ ở nhà, cán bộ thức canh.</li>
       </ol>
       <p class="small">Biên bản dừng ở đây, chờ ý kiến của sinh viên Vân.</p>
     </div>`,
