@@ -26,6 +26,7 @@ export default [
         <tr><td>10:20</td><td>2 người nhà BN khoa Nam 1</td><td>2 phở bò</td><td>14.000</td></tr>
         <tr><td>15:40</td><td>${ln("ct_ba", "bà Hoa, mẹ BN phòng 7 (cô Sương dắt ra)")}</td><td>${ln("ct_mon", "1 dĩa gỏi tôm, 1 ly trà đá. Ăn hết.")}</td><td>9.000</td></tr>
         <tr><td>16:05</td><td>BS. Kha</td><td>1 cà phê sữa</td><td>2.000</td></tr>
+        <tr><td>17:10</td><td>bà Tư Lài, mẹ BN phòng 5</td><td>1 tô cháo tôm, 1 bánh bò</td><td>6.000</td></tr>
       </table>
     </div>`,
   },
@@ -38,7 +39,7 @@ export default [
         ${pic("tay_nhan_1995", "Thảo giữ trong ví: tay mẹ đạp máy may, năm 1995.")}
         ${pic("tay_1996", "Y tá Sương chụp ở căng tin ngày 12/10/1996.")}
       </div>
-      <p class="note">Ông Minh, chồng bà Hoa, cưới bà năm <b>1965</b>. Ông mất năm 1975. Theo lời Thảo và hàng xóm, bà chưa từng tháo nhẫn cưới.
+      <p class="note">Mặt sau tấm ảnh 1995, Thảo chép lại dòng chữ trên ảnh cưới của cha mẹ: <i>“Minh – Hoa, rằm tháng Giêng năm Ất Tỵ”</i>. Ông Minh mất năm 1975. Theo lời Thảo và hàng xóm, bà chưa từng tháo nhẫn cưới.
         Bà Hoa hiện nay nói đã <i>“đánh rơi nhẫn ở bến xe Miền Đông”</i>.</p>
     </div>`,
   },
@@ -49,6 +50,7 @@ export default [
     <div class="doc doc--memo">
       <p class="note">Y tá Sương ghi lại khi về thăm nhà Thảo theo lời nhờ của bác sĩ Vân.</p>
       ${hand(`<p>Bà Tư, nhà sát vách: ${ln("bt_sua", "“Từ hôm chị Hoa ở Sài Gòn về, con Mực sủa chỉ suốt, gầm gừ, không cho lại gần. Con chó đó theo chỉ mười năm, chỉ đi đâu nó theo đó.”")}</p>
+        <p>${ln("bt_ba", "“Hồi tháng Bảy nhà tui có rải bả chuột ngoài vườn, mà tui dọn sạch từ bữa mười lăm tháng Bảy rồi, con Mực không có qua vườn tui.”")}</p>
         <p>${ln("bt_thit", "“Tối mồng tám tháng Tám tui thấy chỉ ra sau hè, đưa con Mực miếng thịt. Sáng ra nó chết, ói bọt trắng.”")}</p>
         <p>“Chỉ về rồi chỉ nói chuyện lạ lắm, có bữa chỉ gọi tui là ‘chị Tư’, trước giờ chỉ kêu tui là ‘o Tư’ theo kiểu người Quảng.”</p>`, "")}
       ${pic("cho_muc", "Ảnh bà Tư chụp sáng 9/8/1996.")}

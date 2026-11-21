@@ -33,6 +33,7 @@ export default [
       ${hand(`<p>Chủ Nhật 20/10, 16 giờ, sau buổi thăm. Bà Hoa ngồi căng tin một mình. ${ln("sg_trai", "Tôi đứng sau cửa kính nhìn: bà cầm đũa tay trái, gắp rất khéo.")}</p>
         <p>${ln("sg_doi", "Tôi bước vào, bà thấy tôi thì đặt đũa xuống, cầm lại bằng tay phải, gắp rơi hai lần.")}</p>
         <p>Bà hỏi tôi bác sĩ Vân dạo này có hỏi gì về bà không. Tôi nói không.</p>
+        <p>Tôi may đồ ở tiệm bà Hoa mười mấy năm. Hồi trước bà cầm kéo, xỏ kim, cầm đũa đều bằng tay phải.</p>
         <p class="right">Sương</p>`)}
     </div>`,
   },

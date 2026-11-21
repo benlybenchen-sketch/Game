@@ -83,6 +83,7 @@ export default [
       ${hand(`<p>Phòng kế hoạch tổng hợp tóm tắt cho bác sĩ:</p>
         <p>Bộ luật Dân sự có hiệu lực từ ngày 1/7/1996. Khi một người bị bệnh tâm thần không nhận thức, làm chủ được hành vi, Toà có thể tuyên bố người đó mất năng lực hành vi dân sự, căn cứ vào <b>kết luận giám định</b>.</p>
         <p>Khi đó Toà cử người giám hộ, thường là cha mẹ. ${ln("lu_gh", "Người giám hộ thay mặt người được giám hộ quản lý và giao dịch tài sản, kể cả nhà đất.")}</p>
+        <p>Luật còn có mức “hạn chế năng lực hành vi dân sự”, nhưng chỉ áp dụng cho người nghiện ma tuý hoặc chất kích thích khác dẫn đến phá tán tài sản, không áp dụng cho bệnh tâm thần.</p>
         <p>Nếu kết luận giám định là người bệnh vẫn đủ năng lực, Toà bác đơn.</p>`)}
     </div>`,
   },

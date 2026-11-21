@@ -75,13 +75,43 @@ Huệ thăm Thảo mỗi chiều thứ Bảy và Chủ Nhật, có băng ghi âm
 | **5** | T3 22/10 | Ảnh Tết 1990 và ảnh hôm nay: **lật ngang** ảnh hôm nay thì nốt ruồi, xoáy tóc trùng khớp. Sách về **sinh đôi soi gương**. Y tá: bà Hoa cầm đũa tay trái khi tưởng không ai nhìn | Câu "điên" nhất của Thảo là sự thật. Người phụ nữ là **Huệ** |
 | **6** | T5 24/10 | Giấy chứng tử "Phạm Thị Huệ" (môi, mặt sưng phù; **sẹo mổ ruột thừa**); vân tay CMND của Hoa (móc) vs dấu điểm chỉ giấy nhập viện (xoáy); hộp bánh gửi vào khoa | Người chết ở Sài Gòn là Hoa. Hộp bánh là án mạng thứ hai đang tới |
 
-### Câu hỏi từng trọng điểm (dự kiến)
-1. **Hồ sơ nhập viện:** chẩn đoán BS. Kha đưa ra; ngày chấn thương; số ngày mẹ ở Sài Gòn (94); ngày đầu tiên Thảo nói "không phải mẹ" (5/7). Ghim 3 tài liệu.
-2. **Hai kiểu "không phải":** chọn câu trong biên bản phỏng vấn mà Thảo nêu một **khác biệt cụ thể** về mẹ (câu nốt ruồi); kết luận lời kể về mẹ "không khớp kiểu Capgras điển hình"; y lệnh đúng: **giữ liều, chưa kết luận**.
-3. **Ba thứ cơ thể không giả được:** chất gây sốc phản vệ năm 1985 (tôm); số năm đeo nhẫn (31); món "bà Hoa" ăn ở căng tin ngày 12/10 (gỏi tôm); ai giết con Mực (chọn "người cho nó ăn cuối cùng").
-4. **Tiếng ru:** chữ Thảo dùng gọi mẹ (mẹ) và chữ người phụ nữ lỡ nói (má); bài ru của Hoa và bài ru của người phụ nữ; người phụ nữ lớn lên ở đâu (Sài Gòn); trong gia phả, Hoa có người em tên gì (Huệ).
-5. **Soi gương:** loại sinh đôi (cùng trứng, soi gương); ba đặc điểm bị đảo bên (nốt ruồi, xoáy tóc, tay thuận); người phụ nữ là ai (Lê Thị Huệ, tên con nuôi Phạm Thị Huệ).
-6. **Bản giám định:** người được chôn ở Phước Lộc là ai (Hoa); nguyên nhân chết thật (sốc phản vệ do tôm); hai dấu vân tay khác loại (móc / xoáy); thứ trong hộp bánh (tôm chấy) và **phải làm gì ngay** (giữ hộp bánh, báo công an, không cho Thảo ăn); động cơ (làm giám hộ để bán nhà và vườn); **kết luận giám định**: *Thảo có hội chứng Capgras đối với một số người quen, nhưng vẫn đủ năng lực hành vi dân sự; lời khai của Thảo về mẹ là đúng sự thật.*
+### Câu hỏi từng trọng điểm (bản 2, khó hơn)
+Lỗi của bản 1: đáp án đúng hầu như luôn là phương án **dài nhất, cụ thể nhất** ("Giữ liều, chưa kết luận, kiểm chứng…", "Có hội chứng Capgras… nhưng vẫn đủ năng lực…", "Nốt ruồi, đường rẽ ngôi, tay thuận"). Câu hỏi cũng nói trước đáp án ("người phụ nữ **lỡ miệng**", "bà Hoa có **người em** tên gì"). Bản 2 tách các câu đó thành nhiều ô trung tính, đổi phương án thành dài ngang nhau và cài bẫy bằng giấy tờ chữ. Không cần ảnh mới, giọng mới.
+
+1. **Hồ sơ phòng 7.** Chẩn đoán: Capgras sau chấn thương sọ não. Chấn thương **15/2**. Bà Hoa ở Sài Gòn **94 ngày** (2/4 → 5/7). Lần đầu nói "bà không phải mẹ": **5/7**. **Ô mới:** từ chấn thương tới hôm đó là **141 ngày**. *Bẫy:* 1996 là năm nhuận (tháng 2 có 29 ngày), ai tính tháng 2 có 28 ngày sẽ ra 140. *Bẫy cũ giữ nguyên:* tháng 3 Thảo nói anh Khoa "là người khác", dễ nhầm là ngày bắt đầu nghi mẹ.
+2. **Hai kiểu "không phải".** Bỏ hai câu chọn dễ đoán (khớp Capgras hay không; y lệnh). Thay bằng ba ô:
+   - bấm **một câu Thảo nói về mẹ** nêu khác biệt cụ thể (nốt ruồi, vết nhẫn, tôm, bài ru);
+   - bấm **câu Thảo nói về anh Khoa** đúng kiểu sách ("Mặt vẫn là mặt ảnh. Mà em không thấy ảnh…");
+   - **ngày Thảo nghe giọng "bà Hoa" qua điện thoại mà không nhận ra: 3/9** (ngày 7/9 là anh Khoa, nghe thì nhận ra, đó là bẫy).
+3. **Ba thứ không giả được.**
+   - Sốc phản vệ năm 1985 vì **tôm**.
+   - Đeo nhẫn **31 năm**. *Bẫy:* tài liệu không còn ghi "cưới năm 1965", chỉ còn dòng chữ trên ảnh cưới "rằm tháng Giêng năm **Ất Tỵ**". Phải tự đổi Ất Tỵ ra **1965**.
+   - Món ăn ngày 12/10: **gỏi tôm**. *Bẫy:* sổ căng tin thêm một dòng **"bà Tư Lài, mẹ BN phòng 5: 1 tô cháo tôm, 1 bánh bò"**, và phương án mới "Cháo tôm". Phải chọn đúng dòng của mẹ BN phòng 7.
+   - Ai giết con Mực: **bà Hoa (người từ Sài Gòn về)**. Phương án bản 2 chỉ là tên người, không còn câu "người phụ nữ xưng là bà Hoa" lộ đáp án. *Bẫy:* bà Tư khai nhà bà **có rải bả chuột hồi tháng Bảy** (đã dọn từ 15/7, con Mực chết 9/8 sau miếng thịt tối 8/8).
+4. **Tiếng ru.** Câu hỏi bỏ chữ "lỡ miệng" và "người em". Đáp án giữ nguyên: băng 1990 "**Mẹ**", người phụ nữ xưng "**Má**"; bà Hoa ru "**Bồng bồng mẹ bế con sang**", người phụ nữ ru "**Ví dầu cầu ván đóng đinh**". Người phụ nữ lớn lên ở **Sài Gòn**. *Bẫy:* thêm **Cần Thơ, Huế**. "Má" và "Ví dầu" chỉ chốt được là Nam Bộ; muốn chọn Sài Gòn phải đọc gia phả ("cho họ Phạm ở Sài Gòn"). Người có thể biết hết chuyện nhà: **Huệ**.
+5. **Soi gương.** Quan hệ: **sinh đôi cùng trứng kiểu soi gương**. Người phụ nữ là **Lê Thị Huệ (Phạm Thị Huệ)**. Câu chọn "các đặc điểm bị đảo bên" (lộ đáp án) đổi thành **bốn ô riêng**, mỗi ô chọn: *cùng bên / ngược bên / hồ sơ hiện có chưa cho biết*:
+   - nốt ruồi khoé miệng: **ngược bên**;
+   - đường rẽ ngôi: **ngược bên**;
+   - tay cầm đũa: **ngược bên** (sổ giao ca thêm câu: bà Hoa trước đây cầm kéo, kim, đũa tay phải);
+   - sẹo mổ ruột thừa: **hồ sơ hiện có chưa cho biết**. *Bẫy:* bệnh án mổ ruột thừa năm 1970 chỉ hiện ở đêm sau; ai đoán "ngược bên" cho đủ bộ là sai.
+6. **Bản giám định.** Người được chôn là **Lê Thị Hoa**, chết vì **sốc phản vệ do ăn tôm** (*bẫy:* giấy chứng tử ghi "đột quỵ"; thêm phương án "nhồi máu cơ tim"). Vân tay CMND: **móc**; dấu điểm chỉ giấy cam đoan: **xoáy**. Nhân bánh: **tôm chấy** (*bẫy:* thêm "ruốc thịt heo", "đậu phộng rang"). Động cơ: **làm giám hộ để bán nhà và vườn** (bốn phương án dài ngang nhau, có "lấy lại đất hương hoả họ Lê", "sống bên đứa cháu gái duy nhất"). Câu kết luận dài lộ đáp án đổi thành **ba ô**:
+   - Capgras: **có, đối với một số người quen** (không phải "không có", không phải "tất cả người thân");
+   - năng lực hành vi dân sự: **đủ**. *Bẫy:* thêm "hạn chế năng lực". Ghi chú pháp lý bản 2 nói rõ mức này chỉ dành cho người nghiện ma tuý, chất kích thích;
+   - lời khai về mẹ: **sự thật** (*bẫy:* "một phần đúng, một phần hoang tưởng").
+
+### Bẫy của bản 2 (tóm tắt)
+| Bẫy | Đánh lừa | Lối thoát |
+|---|---|---|
+| Năm nhuận 1996 | Đếm ra 140 ngày | Tháng 2/1996 có 29 ngày |
+| Cuộc gọi của anh Khoa 7/9 | Chọn sai ngày nghe điện thoại | Ngày 3/9 là "bà Hoa" |
+| Ảnh cưới ghi năm Ất Tỵ | Không biết năm cưới | Đổi can chi: Ất Tỵ = 1965 |
+| Bà Tư Lài phòng 5 ăn cháo tôm | Chọn "cháo tôm" | Chỉ dòng mẹ BN phòng 7 |
+| Bả chuột nhà bà Tư | Tin con Mực ăn bả | Bả đã dọn từ 15/7; con Mực chết sau miếng thịt tối 8/8 |
+| Cần Thơ | Chỉ dựa vào giọng Nam Bộ | Gia phả: Sài Gòn |
+| Sẹo mổ ruột thừa | Đoán "ngược bên" cho đủ bộ | Đêm đó hồ sơ chưa có |
+| Giấy chứng tử ghi đột quỵ | Chọn đột quỵ | Mặt môi sưng phù, nốt đỏ: sốc phản vệ |
+| "Hạn chế năng lực" | Chọn mức nửa vời | Luật: chỉ cho người nghiện |
+| "Một phần đúng" | Chọn kết luận nửa vời | Mọi chi tiết Thảo nêu về mẹ đều kiểm chứng đúng |
 
 ## 5. Bằng chứng then chốt (phải có trong game)
 - **Bệnh án nhập viện 20/8/1996** (BS. Kha): chẩn đoán "Hội chứng Capgras sau chấn thương sọ não", y lệnh Haloperidol. Giấy cam đoan có **dấu điểm chỉ ngón trỏ phải** của "Lê Thị Hoa".
