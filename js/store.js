@@ -7,7 +7,7 @@ const LEGACY = { "01": "ho-doi-nguoi.v1" };   // case 01 was released before the
 const freshSettings = () => ({ sound: true, fear: "full", flash: true, voice: false });
 const fresh = () => ({
   started: false, stage: 0, resp: {}, seen: {}, heard: {}, plays: {}, hints: {}, peeked: {}, tries: {},
-  notes: "", lastDoc: null, scared: {}, board: {}, letters: {}, player: "", signed: false, failed: null, runs: 0,
+  notes: "", lastDoc: null, scared: {}, board: {}, letters: {}, player: "", signed: false, failed: null, runs: 0, endings: [],
 });
 
 const read = (k) => { try { const v = JSON.parse(localStorage.getItem(k)); return v && typeof v === "object" ? v : null; } catch { return null; } };
@@ -35,13 +35,13 @@ export function save() {
 /** Progress summary of any case without opening it (for the case list). */
 export function peek(id) {
   const p = read(caseKey(id)) || (LEGACY[id] && read(LEGACY[id])) || {};
-  return { started: !!p.started, stage: p.stage || 0, failed: !!p.failed };
+  return { started: !!p.started, stage: p.stage || 0, failed: !!p.failed, endings: Array.isArray(p.endings) ? p.endings.length : 0 };
 }
 
-/** Starts the open case over, keeping the settings. After a lost run (state.failed) the read marks are kept too. */
+/** Starts the open case over, keeping the settings and the endings already reached. After a lost run (state.failed) the read marks are kept too. */
 export function resetAll() {
   const settings = { sound: state.sound, fear: state.fear, flash: state.flash, voice: state.voice };
-  const keep = state.failed ? { seen: state.seen, runs: (state.runs || 0) + 1 } : {};
+  const keep = { endings: state.endings || [], ...(state.failed ? { seen: state.seen, runs: (state.runs || 0) + 1 } : {}) };
   for (const k of Object.keys(state)) delete state[k];
   Object.assign(state, fresh(), settings, keep);
   save();

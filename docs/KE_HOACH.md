@@ -44,6 +44,15 @@ Hồ sơ cuối series (để dành): "Hồ sơ của chính bạn" (meta, dùng
 Thôi miên lần thứ bảy (trí nhớ giả), Người thứ năm (Fansipan), Bóng đè (ký túc xá 1991), Băng NightShot (Hang Khe Sim), Tổng đài 108, Thợ ảnh thờ, Nhà số 13 Hàng Mã.
 Tổng đài 108, Thợ ảnh thờ, Nhà xác ca 3, Tin nhắn lúc 3 giờ, Bùa ngải, Mù (chỉ âm thanh).
 
+## Hồ sơ 06: "Âm Hôn" (đang làm, xem HS06_KINH_THANH.md)
+Sơn Tây 1936, tục cưới vợ cho người chết. Độ khó mức 5. Bốn kết thúc, có nút "Kết thúc đã mở".
+
+## Kịch bản đã lưu cho Hồ sơ 07: "Canh Mạnh Bà"
+Tô Châu 1937, trà quán đầu cầu đá bán "canh quên" cho người tị nạn; khách uống xong thì quên sạch rồi biến mất. Người chơi **đã uống canh từ đêm đầu**: hồ sơ toàn ghi chép của chính mình, mâu thuẫn nhau, có trang không phải chữ mình.
+- Nỗi sợ: ký ức bị cài sai (Loftus), bị thao túng tâm lý (gaslighting), tự bịa ký ức lấp chỗ trống, không còn tin được bản thân.
+- Cơ chế: **game xoá thật** (qua mỗi đêm một số tài liệu đã đọc bị viết lại, không báo trước); mỗi đêm chỉ được **"khắc lên tay" 3 sự thật** không bị xoá; câu cuối ghép các sự thật người chơi đã chọn giữ.
+- Kết thúc: Nhớ lại / Quên êm (uống bát thứ bảy) / Người bán canh (bạn đứng sau quầy) / Ẩn (giữ đúng 3 sự thật từ đêm đầu đến cuối).
+
 ## Quy tắc độ khó (bắt buộc từ Hồ sơ 06 trở đi)
 Người chơi chê hồ sơ 01 "dễ đoán". Hồ sơ 02–05 đã được làm lại (bản 2). **Từ Hồ sơ 06, mọi hồ sơ phải ở mức khó cực đại ngay từ bản đầu**, theo các luật sau:
 1. **Không có phương án "dài nhất là đúng".** Mọi phương án trong một câu chọn phải dài ngang nhau, cùng giọng điệu, và mỗi phương án sai phải nghe hợp lý.

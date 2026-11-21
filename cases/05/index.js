@@ -57,8 +57,14 @@ export const META = {
       <p>Đó là lần đầu tiên ông nói câu ấy thành tiếng.</p>`,
     open: "bb_dem",
   },
+  endings: [
+    { id: "tot", good: true, name: "Không ai ho", how: "Đưa cháu Ngân lên viện đêm 25 tháng Một. Sáng ra ông Khải tự bóc băng keo cửa buồng.", hint: "Đi hết hồ sơ và chọn đúng ở bước ngoặt." },
+    { id: "xau", name: "Cả nhà ngủ cùng mẹ", how: "Một quyết định sai ở bước ngoặt. Sáng 31/12 người ta phá cửa buồng.", hint: "Có những đêm không được phép sai." },
+    { id: "an", hidden: true, name: "Buồng trống", how: "Khép hồ sơ không sai một lần, không xem gợi ý: cuộn băng cuối cùng trong buồng trống.", hint: "Kết thúc ẩn. Chỉ dành cho người không sai lần nào." },
+  ],
   /** The one-shot decision of question 7. */
   fatal: {
+    ending: () => "xau",
     warn: `<h3 class="fatal-h">QUYẾT ĐỊNH KHÔNG THỂ RÚT LẠI</h3>
       <p>Đề xuất của bạn sẽ được thực hiện ngay đêm nay. Không có gợi ý, không có lời giải, không trả lời lại được.</p>
       <p>Nếu chưa chắc, hãy đọc lại hồ sơ: ai cần được giữ an toàn đêm nay, và vì sao.</p>`,

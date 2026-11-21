@@ -601,3 +601,37 @@ body[data-case="05"][data-dread="3"] .reader-body, body[data-case="05"][data-dre
 .hw-c { font-family: "Dancing Script", cursive; font-size: 19px; color: #3b2a6a; }
 .hw-g { position: relative; display: inline-block; }
 .hw-g::after { content: ""; position: absolute; left: -.28em; bottom: -.12em; width: .38em; height: .3em; border: 2px solid currentColor; border-top: 0; border-right: 0; border-radius: 0 0 0 .5em; transform: rotate(18deg); }
+
+/* endings reached (cases with several routes) */
+.endings { margin: 10px 0; padding-left: 22px; }
+.endings li { margin: 8px 0; }
+.endings li b { display: block; }
+.endings li.off b { color: #777; letter-spacing: .2em; }
+.endings li.on b { color: #8e1b1b; }
+
+/* case 06: betrothal card, four pillars, bank draft, Thousand Character Classic, abacus, riddle */
+.red-card { background: #8e1b1b; color: #f6e7c8; border: 3px double #e3c77a; padding: 18px; border-radius: 4px; max-width: 520px; margin: 0 auto; }
+.red-card-h { text-align: center; letter-spacing: .2em; font-weight: bold; margin-bottom: 12px; }
+.pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; text-align: center; margin: 8px 0 12px; }
+.pillar { border: 1px solid #e3c77a66; padding: 8px 4px; }
+.pillar small { display: block; opacity: .75; }
+.pillar b { display: block; font-size: 30px; line-height: 1.2; }
+.pillar span { display: block; font-size: 13px; }
+.doc--red { border-top: 6px solid #8e1b1b; }
+.draft { position: relative; background: #f3ead2; border: 2px solid #6a4a25; padding: 18px 20px; color: #2b2118; }
+.draft-h { text-align: center; font-weight: bold; letter-spacing: .12em; margin-bottom: 10px; }
+.draft-code { font-size: 26px; }
+ruby rt { font-size: 11px; opacity: .8; }
+.ttv td.han { font-size: 24px; letter-spacing: .25em; }
+.ttv td.muted { white-space: nowrap; width: 1%; }
+td.han { font-size: 24px; }
+.riddle { font-size: 1.15em; margin: 12px 0; }
+.abacus { width: 190px; max-width: 100%; display: block; }
+.doc .tbl td .media[data-media="abacus"] { min-width: 190px; }
+.abacus .frame { fill: #4a2e18; stroke: #2a190c; stroke-width: 3; }
+.abacus .rod { stroke: #c9b48a; stroke-width: 2; }
+.abacus .beam { fill: #2a190c; }
+.abacus .bead { fill: #b6602f; stroke: #5a2a10; stroke-width: 1.2; }
+.abacus .dot { fill: #e0302a; }
+.tbl tr.hl td { background: #f2e3b5; font-weight: bold; }
+.tbl--small td, .tbl--small th { font-size: 13px; padding: 3px 6px; }

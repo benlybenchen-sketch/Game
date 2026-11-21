@@ -17,7 +17,27 @@ const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 const finished = () => state.stage >= QUESTIONS.length;
 // d.fail: shown only after a lost run (META.fatal); d.secret: only in the closed case of a flawless run.
 const flawless = () => !Object.values(state.tries || {}).some(Boolean) && !Object.keys(state.peeked || {}).length;
-const visibleDocs = () => DOCS.filter((d) => d.fail ? !!state.failed : d.secret ? finished() && flawless() : d.stage <= state.stage);
+// d.fail may also be a list of ending ids (META.endings): then the doc shows only after a lost run that reached one of them.
+const lostEnding = () => state.failed ? (META.fatal?.ending ? META.fatal.ending(state.failed.choice || "") : "bad") : null;
+const failShows = (d) => !!state.failed && (d.fail === true || (Array.isArray(d.fail) && d.fail.includes(lostEnding())));
+const visibleDocs = () => DOCS.filter((d) => d.fail ? failShows(d) : d.secret ? finished() && flawless() : d.stage <= state.stage);
+
+// ---------------------------------------------------------------- endings (cases with several routes: META.endings)
+/** Records an ending as reached; endings survive "play again". */
+function unlock(id) {
+  if (!META.endings || !id) return;
+  state.endings = state.endings || [];
+  if (!state.endings.includes(id)) state.endings.push(id);
+  save();
+}
+function endingsHtml() {
+  const got = state.endings || [];
+  return `<h3>Kết thúc đã mở: ${got.filter((id) => META.endings.some((e) => e.id === id)).length}/${META.endings.length}</h3>
+    <ol class="endings">${META.endings.map((e) => got.includes(e.id)
+      ? `<li class="on"><b>${e.name}</b><span class="small">${e.how}</span></li>`
+      : `<li class="off"><b>???</b><span class="small">${e.hint || "Chưa mở."}</span></li>`).join("")}</ol>
+    <p class="small muted">Kết thúc đã mở được giữ lại kể cả khi bạn chơi lại từ đầu.</p>`;
+}
 const currentQ = () => QUESTIONS[state.stage] || null;
 const resp = (qid) => (state.resp[qid] ||= {});
 const isMobile = () => matchMedia("(max-width: 980px)").matches;
@@ -71,12 +91,12 @@ function showHome() {
         <span class="case-body"><span class="cover-series">${k.number} · ${k.place}</span><b class="case-title">${k.title}</b>
         <span class="case-blurb">${k.short}</span>
         <span class="case-facts">${k.level} · ${k.time} · ${k.questions} trọng điểm</span><span class="case-status case-status--soon">ĐANG HOÀN THÀNH · Sắp ra mắt</span></span></div>`;
-      const p = peek(k.id), status = p.failed ? "THẤT BẠI · mở lại để điều tra lại" : p.stage >= k.questions ? "Đã khép hồ sơ" : p.started ? `Đang điều tra · trọng điểm ${p.stage + 1}/${k.questions}` : "Chưa mở";
+      const p = peek(k.id), status = p.failed ? (k.endings ? "Đã đi hết một tuyến · mở lại để đi tuyến khác" : "THẤT BẠI · mở lại để điều tra lại") : p.stage >= k.questions ? "Đã khép hồ sơ" : p.started ? `Đang điều tra · trọng điểm ${p.stage + 1}/${k.questions}` : "Chưa mở";
       return `<button class="case-card" data-case="${k.id}" style="--cover:url(../img/${k.id}/${k.cover}.jpg)">
         <span class="case-art"></span>
         <span class="case-body"><span class="cover-series">${k.number} · ${k.place}</span><b class="case-title">${k.title}</b>
         <span class="case-blurb">${k.short}</span>
-        <span class="case-facts">${k.level} · ${k.time} · ${k.questions} trọng điểm</span><span class="case-status">${status}</span></span></button>`;
+        <span class="case-facts">${k.level} · ${k.time} · ${k.questions} trọng điểm${k.endings ? ` · ${k.endings} kết thúc` : ""}</span><span class="case-status">${status}${k.endings ? ` · 🏁 ${p.endings}/${k.endings}` : ""}</span></span></button>`;
     }).join("")}</div>
     <p class="credit">Truyện và nhân vật hoàn toàn hư cấu. Có yếu tố kinh dị, tâm linh: nên đeo tai nghe.</p>
   </div>`;
@@ -104,6 +124,7 @@ function showCover() {
       <div class="cover-actions">
         <button class="btn btn--red" data-cv="go">${resume ? "Tiếp tục điều tra" : state.started ? "Xem lại hồ sơ" : "Mở phong bì"}</button>
         ${state.started ? `<button class="btn btn--ghost" data-cv="reset">Chơi lại từ đầu</button>` : ""}
+        ${META.endings ? `<button class="btn btn--ghost" data-cv="endings">🏁 Kết thúc đã mở: ${(state.endings || []).length}/${META.endings.length}</button>` : ""}
       </div>
       <details class="howto"><summary>Cách chơi</summary><ol>
         <li>Đọc, nghe, xem mọi thứ trong <b>hồ sơ</b> bên trái: thư, báo, biên bản, băng ghi âm, video camera, ảnh phòng tối, bản đồ.</li>
@@ -318,12 +339,13 @@ function decide(q, ok) {
     const part = q.parts.find((p) => p.type === "choice") || q.parts[0];
     state.failed = { q: q.id, choice: resp(q.id)[part.id] || "" };
     picking = null; save();
+    unlock(lostEnding());
     sfx.wrong();
     renderAll();
     setLevel(4);
     const [key, pic, hold] = META.fatal.scare;
     jumpScare(key, pic, { main: true, hold });
-    setTimeout(() => dialog(META.fatal.html(), "Đọc biên bản", () => openDoc(META.fatal.open)), hold + 1800);
+    setTimeout(() => dialog(META.fatal.html(), "Đọc biên bản", () => openDoc(typeof META.fatal.open === "function" ? META.fatal.open() : META.fatal.open)), hold + 1800);
   }, "Tôi đọc lại hồ sơ");
 }
 
@@ -336,6 +358,8 @@ function solved(q, peeked) {
   setLevel(dreadFor(state.stage));
   renderAll();
   if (finished()) {
+    unlock(META.endings?.find((e) => e.good)?.id);
+    if (flawless()) unlock(META.endings?.find((e) => e.hidden)?.id);
     dialog(META.finale.html, "Đọc hồ sơ kết thúc", () => { openDoc(META.finale.open); fireScare(state.stage); });
     return;
   }
@@ -415,6 +439,7 @@ function bindChrome() {
       ctx();
       if (cv.dataset.cv === "go") startDesk();
       if (cv.dataset.cv === "home") showHome();
+      if (cv.dataset.cv === "endings") dialog(endingsHtml(), "Đóng", () => {});
       if (cv.dataset.cv === "reset") dialog("<h3>Chơi lại từ đầu?</h3><p>Mọi câu trả lời, ghim và ghi chú sẽ bị xoá.</p>", "Xoá và chơi lại", () => { resetAll(); setLevel(0, { quiet: true }); document.querySelector(".ghost-note").innerHTML = ""; showCover(); }, "Thôi");
       return;
     }
