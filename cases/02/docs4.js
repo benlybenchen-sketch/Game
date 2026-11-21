@@ -8,6 +8,7 @@ const CARDS = [
   ["Phan Văn Hòa", "9/11/1974", "Phú Lễ, Cửu Giang", "Nốt ruồi son dưới đuôi mắt trái."],
   ["Huỳnh Văn Chánh", "1/1/1943", "Giồng Cát, Cửu Giang", "Sẹo ngang mu bàn tay trái. Nốt ruồi đen trên cánh mũi phải."],
   ["Lâm Tấn Phát", "20/5/1969", "Phú Lễ, Cửu Giang", "Sẹo dài 3 cm ở cằm."],
+  ["Trần Văn Lửa", "3/2/1971", "An Hội, Cửu Giang", "Nốt ruồi son dưới đuôi mắt trái. Sẹo dọc mu bàn tay trái, dài 4 cm."],
   ["Đặng Văn Bé", "1923", "Phú Lễ, Cửu Giang", "Sẹo chấm cách 2 cm dưới đuôi mắt trái. (Lăn tay, không ký)"],
 ];
 
@@ -21,10 +22,10 @@ export default [
         <tr><th>Ngày</th><th>Tên thuốc</th><th>Lượng</th><th>Người mua</th><th>Địa chỉ</th><th>Ký nhận</th></tr>
         <tr><td>6/9</td><td>Phụ tử chế</td><td>30 g</td><td>Lò Văn Kiên</td><td>Chợ Lách</td><td>${hand("Kiên", "inline sig")}</td></tr>
         <tr><td>11/9</td><td>Hạt mã tiền chế</td><td>10 g</td><td>Nguyễn Thị Sáu</td><td>An Hội</td><td>${hand("Sáu", "inline sig")}</td></tr>
-        <tr class="red"><td>18/9</td><td>Hạt mã tiền chế (tán bột)</td><td>20 g</td><td>Đặng Văn Bé</td><td>ấp Phú Lễ, Cồn Ngựa</td><td>${signature()}</td></tr>
+        <tr class="red"><td>1<span class="smudge" style="display:inline-block;width:.55em;height:1em;margin:0 1px 0 3px;vertical-align:middle"></span>/9</td><td>Hạt mã tiền chế (tán bột)</td><td>20 g</td><td>Đặng Văn Bé</td><td>ấp Phú Lễ, Cồn Ngựa</td><td>${signature()}</td></tr>
         <tr><td>23/9</td><td>Thạch tín</td><td>5 g</td><td>Trại heo Tư Bền</td><td>Giồng Cát</td><td>${hand("Bền", "inline sig")}</td></tr>
       </table>
-      <p class="small muted">Ghi chú của cán bộ: dòng ngày 18/9 không ghi số chứng minh nhân dân, ô ký nhận có chữ ký “Bé” bằng bút bi xanh, nét kéo dài.</p>
+      <p class="small muted">Ghi chú của cán bộ: dòng này bị nước làm nhòe, chữ số thứ hai của ngày không đọc được; sổ ghi theo thứ tự ngày; không ghi số chứng minh nhân dân, ô ký nhận có chữ ký “Bé” bằng bút bi xanh, nét kéo dài.</p>
     </div>`,
   },
 
@@ -35,7 +36,7 @@ export default [
       <div class="form-head"><div>CÔNG AN TỈNH CỬU GIANG<br><b>CÔNG AN THỊ XÃ CỬU GIANG</b></div><div><i>Ngày 4/10/1993</i></div></div>
       <h2 class="form-title">BIÊN BẢN GHI LỜI KHAI</h2>
       <p>Người khai: <b>Quách Bửu Lai</b>, 51 tuổi, chủ tiệm thuốc bắc Vạn An Đường.</p>
-      <p>${ln("lai_1", "Chiều thứ Bảy 18/9 có một người đàn ông chừng ba mấy tuổi tới mua hai chục gam mã tiền chế, nhờ tán thành bột. Nói mua cho ông già trị phong thấp.")}</p>
+      <p>${ln("lai_1", "Một chiều thứ Bảy giữa tháng Chín, ngày nào tôi không nhớ, có một người đàn ông chừng ba mấy tuổi tới mua hai chục gam mã tiền chế, nhờ tán thành bột. Nói mua cho ông già trị phong thấp.")}</p>
       <p>${ln("lai_2", "Tôi đòi chứng minh, ổng nói để quên ở nhà, xưng tên Đặng Văn Bé, ở Phú Lễ. Tôi nể nên bán, bắt ký sổ. Ổng ký bằng tay phải, ký lẹ lắm.")}</p>
       <p>${ln("lai_3", "Tôi nhớ rõ mặt ổng: dưới đuôi con mắt bên trái có một nốt ruồi son đỏ chót. Lúc ổng đưa tiền bằng tay trái, tôi thấy trên mu bàn tay trái có một cái sẹo nằm ngang.")}</p>
       <p>${ln("lai_4", "Giọng ổng ồ, nói chuyện nghe như ca. Tôi nghĩ ổng là dân hát, vì tuần đó có gánh hát bội về rạp Hưng Ca gần tiệm.")}</p>
@@ -60,7 +61,7 @@ export default [
   },
 
   {
-    id: "cmnd", stage: 4, kind: "Giấy tờ", icon: "☰", label: "Chứng minh nhân dân của sáu người đàn ông trong gánh (bản sao)",
+    id: "cmnd", stage: 4, kind: "Giấy tờ", icon: "☰", label: "Chứng minh nhân dân của bảy người đàn ông trong gánh (bản sao)",
     html: () => `
     <div class="doc doc--plain">
       <p class="note">Bản sao mặt sau chứng minh nhân dân, công an huyện thu khi lập danh sách gánh hát. Mục “dấu vết riêng và dị hình” ghi như sau.</p>
@@ -81,8 +82,7 @@ export default [
         <tr><th>Ngày</th><th>Nơi diễn</th><th>Ghi chú</th></tr>
         <tr><td>1–12/9</td><td>Chợ Lách, An Hội</td><td></td></tr>
         <tr><td>13–15/9</td><td>Nghỉ ở Phú Lễ</td><td></td></tr>
-        <tr><td><b>16–20/9</b></td><td><b>Rạp Hưng Ca, thị xã Cửu Giang</b></td><td>Cả gánh ở trọ sau rạp. Ông Sáu nằm viện Mỏ Cày, dì Bảy đi nuôi</td></tr>
-        <tr><td>18/9 (thứ Bảy)</td><td>Rạp Hưng Ca</td><td>Chiều nghỉ, tối diễn. Thông, Lợi, Hòa, Năm Chánh chiều đi chợ thị xã</td></tr>
+        <tr><td><b>16–20/9</b></td><td><b>Rạp Hưng Ca, thị xã Cửu Giang</b></td><td>Cả gánh ở trọ sau rạp. Ông Sáu nằm viện Mỏ Cày, dì Bảy đi nuôi. Chiều nào cũng nghỉ, anh em đi chợ thị xã</td></tr>
         <tr><td>21–24/9</td><td>Giồng Cát</td><td></td></tr>
         <tr><td>25–27/9</td><td>Đình Phú Lễ</td><td>Ba đêm giỗ Tổ</td></tr>
       </table>

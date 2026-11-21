@@ -85,9 +85,10 @@ export default [
       <p><b>Ghi nhận của y sĩ tại chỗ (22:52–22:58):</b> nạn nhân <b>tỉnh táo hoàn toàn</b>, mắt mở, nghe và hiểu được lời nói. Toàn thân co cứng từng cơn,
         lưng <b>ưỡn cong như cánh cung</b>, chỉ đầu và gót chân chạm sàn. Cơ mặt co rút kéo hai mép miệng lên thành <b>nụ cười nhăn</b>. Mỗi khi có tiếng động
         (tiếng trống, tiếng la, tiếng ghế đổ) hoặc khi bị chạm vào thì lên cơn mới. Không nôn, không tiêu chảy. Không sụp mi. Da không đỏ.</p>
+      <p><b>Lời bà bầu Tư Lựu (ghi kèm):</b> chiều 27 Kiệt vẫn tập tuồng, ăn uống, nói cười bình thường, hàm không cứng, không than đau. Từ lúc ra lớp 3 đến lúc tắt thở chưa tới nửa giờ.</p>
       <p><b>Khám ngoài:</b> mặt còn lớp son đỏ vẽ vai Quan Công. Hai bên má và trán có nhiều vết cào sâu do nạn nhân tự cào trong cơn;
         khi lau son, da mặt bong theo từng mảng, lẫn với son thành một lớp nhão đỏ sậm. Lưỡi bị cắn đứt gần một nửa, máu đông lẫn son chảy vào hai hốc mắt.
-        Các ngón tay co quắp, ba móng tay bật gốc. Tử thi co cứng sớm và rất mạnh: lúc 23 giờ 30, không duỗi thẳng được lưng.</p>
+        Các ngón tay co quắp, ba móng tay bật gốc. Ngoài các vết tự cào trong cơn, <b>không có vết thương hở hay vết đâm, vết bỏng nào</b> trên người. Tử thi co cứng sớm và rất mạnh: lúc 23 giờ 30, không duỗi thẳng được lưng.</p>
       <p><b>Khám trong:</b> dạ dày chứa khoảng 150 ml dịch nâu nhạt, mùi trà. Phổi phù, xuất huyết điểm. Không thấy thương tích do vật tày hay vật sắc.</p>
       <p><b>Kết luận sơ bộ:</b> tử vong do ngạt vì co cứng cơ hô hấp. Nghi ngộ độc. <b>Gửi mẫu dịch dạ dày đi xét nghiệm độc chất</b>, chờ kết quả.</p>
       <div class="sign-row"><div>Giám định viên<br>${hand("Tường", "sign")}BS. Lê Minh Tường</div><div>Thủ trưởng đơn vị<br>${hand("Phúc", "sign")}</div></div>
@@ -107,6 +108,7 @@ export default [
         <tr><td><b>Hạt mã tiền</b> (strychnin)</td><td>Co cứng cơ, cơn giật toàn thân, <b>lưng ưỡn cong như cánh cung</b>, mặt co rút thành <b>“cười nhăn”</b>. Cơn bị khơi lên bởi <b>tiếng động, ánh sáng, đụng chạm</b>. Chết do ngạt</td><td><b>15 – 30 phút</b></td><td><b>Tỉnh táo hoàn toàn</b> đến lúc chết</td></tr>
         <tr><td><b>Phốt-phua kẽm</b> (thuốc chuột)</td><td>Nôn, hơi thở mùi cá ươn, khó thở, sốc</td><td>15 phút – 4 giờ</td><td>Vật vã, lơ mơ</td></tr>
         <tr><td><b>Cà độc dược</b></td><td>Da đỏ, khô, nóng; đồng tử giãn to; mê sảng, ảo giác, la hét</td><td>30 phút – 1 giờ</td><td>Lú lẫn</td></tr>
+        <tr><td><b>Uốn ván</b> (không phải chất độc: vi trùng vào qua <b>vết thương bẩn</b>, vết bỏng)</td><td><b>Cứng hàm</b> (khít hàm) xuất hiện trước tiên; sau đó co cứng toàn thân, <b>lưng ưỡn cong như cánh cung</b>, mặt <b>“cười nhăn”</b>; cơn giật bị khơi lên bởi <b>tiếng động, ánh sáng, đụng chạm</b>. Bệnh kéo dài nhiều ngày</td><td>Ủ bệnh <b>3 – 21 ngày</b> sau khi bị thương</td><td><b>Tỉnh táo hoàn toàn</b></td></tr>
         <tr><td><b>Nọc rắn hổ</b></td><td>Có vết cắn; sụp mi, khó nuốt, liệt</td><td>15 phút – vài giờ</td><td>Tỉnh lúc đầu</td></tr>
       </table>
       <p class="small">Ghi chú của sách: hạt mã tiền chế (đã sao tẩm) bán ở tiệm thuốc bắc làm thuốc trị phong thấp, liều cao rất độc. <b>Thuốc độc bảng A: người bán phải ghi sổ tên, địa chỉ người mua và lấy chữ ký.</b></p>
@@ -123,6 +125,7 @@ export default [
       <p>Tối: theo lệ đình, đêm giỗ Tổ đúng 10 giờ phải đánh chuông ba hồi, mỗi hồi bảy tiếng, mời Tổ về ngự. Tôi mở cái đài, chờ đài Tiếng nói Việt Nam báo giờ,
         tiếng “tít” cuối cùng là 22 giờ đúng, tôi đánh tiếng chuông đầu. Đánh xong ba hồi mất chừng nửa phút.</p>
       <p>Chuông vang thì sân khấu đang nghỉ giữa lớp, trống chiến đánh nhỏ. Bà con đều nghe.</p>
+      <p>(Chùa Phước Long bên kia sông tối nào cũng đánh chuông, có hồi sớm hồi muộn, tiếng vọng qua tới đình. Bà con quen rồi, không ai để ý.)</p>
       <p>Gần 11 giờ: kép Kiệt mất trên sân khấu. Tôi thắp nhang cho Tổ, khấn xin Tổ tha.</p>
       <p>Sáng 13: con chó vàng của đình chết sau buồng trò, người cứng như khúc cây, nhe răng. Kiến bu đầy mồm.</p>`)}
     </div>`,

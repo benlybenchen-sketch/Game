@@ -103,25 +103,26 @@ export default [
   },
 
   {
-    id: "bang_ke", stage: 1, kind: "Bảng kê", icon: "☰", label: "Bảng kê vị trí từng người, 22:00–22:15 (theo lời khai)",
+    id: "bang_ke", stage: 1, kind: "Bảng kê", icon: "☰", label: "Bảng kê vị trí từng người trong lớp 2 (theo lời khai)",
     html: () => `
     <div class="doc doc--form">
       ${caHead()}
-      <h2 class="form-title">BẢNG TỔNG HỢP VỊ TRÍ TỪNG NGƯỜI<br><small>Từ 22:00 tới 22:15 ngày 27/9/1993, theo lời khai và người làm chứng</small></h2>
+      <h2 class="form-title">BẢNG TỔNG HỢP VỊ TRÍ TỪNG NGƯỜI<br><small>Từ lúc chuông đình tới hết lớp 2, đêm 27/9/1993, theo lời khai và người làm chứng. Giờ giấc chưa đối chiếu.</small></h2>
       <table class="tbl">
         <tr><th>Người</th><th>Tự khai</th><th>Người làm chứng</th></tr>
-        <tr><td>Châu Văn Kiệt</td><td>(nạn nhân) Trên sân khấu lớp 2; 22:13 vô buồng trò thay áo</td><td>Cả đình; Út Nhàn</td></tr>
+        <tr><td>Châu Văn Kiệt</td><td>(nạn nhân) Trên sân khấu lớp 2; hết lớp 2 vô buồng trò thay áo</td><td>Cả đình; Út Nhàn</td></tr>
         <tr><td>Lê Văn Thông (Ba Thông)</td><td>Trên sân khấu, đóng Châu Thương lớp 2</td><td>“Cả đình thấy Châu Thương”</td></tr>
-        <tr><td>Lý Thị Nhàn (Út Nhàn)</td><td>Trên sân khấu lớp 2; 22:13 vô buồng trò với Kiệt</td><td>Cả đình; Kiệt</td></tr>
-        <tr><td>Đoàn Văn Lợi</td><td>Trên sân khấu đóng Khổng Tú; 22:12 bị “chém”, ra cánh gà trái đứng tới hết lớp 3</td><td>Cả đình; ông Sáu Bé; Năm Chánh</td></tr>
-        <tr><td>Đặng Văn Bé (ông Sáu Bé)</td><td>22:00 rót trà; từ 22:02 ở cánh gà trái nhắc tuồng</td><td>Năm Chánh; Đoàn Văn Lợi; bé Thủy (lúc rót trà)</td></tr>
+        <tr><td>Lý Thị Nhàn (Út Nhàn)</td><td>Trên sân khấu lớp 2; hết lớp 2 vô buồng trò với Kiệt</td><td>Cả đình; Kiệt</td></tr>
+        <tr><td>Đoàn Văn Lợi</td><td>Trên sân khấu đóng Khổng Tú; bị “chém” cuối lớp 2, ra cánh gà trái; có ghé buồng trò lấy áo Tần Kỳ</td><td>Cả đình; ông Sáu Bé; Năm Chánh</td></tr>
+        <tr><td>Đặng Văn Bé (ông Sáu Bé)</td><td>Chuông dứt thì rót trà; rồi ra cánh gà trái nhắc tuồng tới hết lớp 3</td><td>Năm Chánh; Đoàn Văn Lợi; bé Thủy (lúc rót trà)</td></tr>
         <tr><td>Huỳnh Văn Chánh (Năm Chánh)</td><td>Đánh trống chiến ở cánh gà trái</td><td>Ông Sáu Bé; tiếng trống không dứt (có trên băng VHS)</td></tr>
+        <tr><td>Trần Văn Lửa (Bảy Lửa)</td><td>Không có vai lớp 2; ngồi coi hát dưới khán giả</td><td>Vợ là Mười Hương (khi Hương không diễn)</td></tr>
         <tr><td>Nguyễn Thị Lựu (bà Tư Lựu)</td><td>Ngồi nhà trước với ban tế đình</td><td>Ban tế (5 người)</td></tr>
         <tr><td>Võ Văn Đáng (ông Hương cả)</td><td>Ngồi trống chầu trước sân khấu</td><td>Cả đình</td></tr>
         <tr><td>Lâm Tấn Phát</td><td>Quay phim, chụp ảnh ở hàng ghế khán giả</td><td>Ông Tám Kỷ ngồi cạnh</td></tr>
-        <tr><td>Trương Thị Hên (Bảy Hên)</td><td>Trong bếp</td><td>Không có (bếp riêng)</td></tr>
-        <tr><td>Phan Văn Hòa (Tư Hòa)</td><td>“Ở sau bếp nấu cháo”</td><td><b>Không ai xác nhận</b></td></tr>
-        <tr><td>Mai Thị Thủy (bé Thủy, 12 tuổi)</td><td>Ngủ trong góc buồng trò</td><td>Ông Sáu Bé (lúc 22:00); Út Nhàn (lúc 22:13)</td></tr>
+        <tr><td>Trương Thị Hên (Bảy Hên)</td><td>Trong bếp nấu cháo khuya</td><td>Không có</td></tr>
+        <tr><td>Phan Văn Hòa (Tư Hòa)</td><td>Ở sau bếp nấu cháo</td><td>Không có</td></tr>
+        <tr><td>Mai Thị Thủy (bé Thủy, 12 tuổi)</td><td>Ngủ trong góc buồng trò</td><td>Ông Sáu Bé (lúc rót trà); Út Nhàn (hết lớp 2)</td></tr>
       </table>
       <p class="small muted">Ghi chú: bếp nằm cách buồng trò 40 m, phía sau đình. Từ bếp không thấy được buồng trò.</p>
     </div>`,

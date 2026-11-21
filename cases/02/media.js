@@ -44,8 +44,9 @@ const VHS = {
       { t: "21:36:40", sfx: "tom", text: "Trống chầu: TOM" },
       { t: "21:41:05", sfx: "tom2", v: "v03", text: "Trống chầu: TOM TOM. Châu Thương múa đao. “Hay quá!” · “Thưởng! Thưởng!”" },
       { t: "21:45:30", sfx: "tom", text: "Trống chầu: TOM" },
+      { t: "21:44:20", sfx: "bell", n: 9, g: 9, dur: 11, text: "Tiếng chuông vọng tới, xa: một hồi, chín tiếng" },
       { t: "21:47:00", text: "Hết lớp 1. Nghỉ. Trống chiến đánh nhỏ" },
-      { t: "21:52:00", sfx: "bell", dur: 26, text: "Chuông đình: ba hồi, mỗi hồi bảy tiếng" },
+      { t: "21:52:00", sfx: "bell", dur: 26, text: "Tiếng chuông vọng tới: ba hồi, mỗi hồi bảy tiếng" },
       { t: "21:55:00", text: "Lớp 2 · Ải Đông Lãnh. Trống chiến nổi lớn" },
       { t: "21:57:10", sfx: "tom", text: "Trống chầu: TOM" },
       { t: "21:59:30", v: "v04", text: "Khổng Tú: “Quan Vân Trường! Có văn bằng qua ải hay chưa?”" },
@@ -240,7 +241,7 @@ export function vhs(el, id) {
       if (e.sfx === "tom2") { eng.hit(when, "tom"); eng.hit(when + 0.45, "tom"); }
       if (e.sfx === "chat") eng.hit(when, "chat");
       if (speed > 1) continue;
-      if (e.sfx === "bell") for (let i = 0; i < 21; i++) setTimeout(() => sfx.gong(), (when - eng.ac.currentTime + i * 1.1 + Math.floor(i / 7) * 1.5) * 1000);
+      if (e.sfx === "bell") for (let i = 0; i < (e.n || 21); i++) setTimeout(() => sfx.gong(), (when - eng.ac.currentTime + i * 1.1 + Math.floor(i / (e.g || 7)) * 1.5) * 1000);
       if (e.sfx === "ken") setTimeout(() => sfx.ken(0, 4), (when - eng.ac.currentTime) * 1000);
       if (e.v) { eng.voice(e.v, when); if (/vỗ tay|Hay/.test(e.text)) eng.hit(when + 1.2, "clap", 0.7); }
     }
@@ -310,7 +311,7 @@ export function vhs(el, id) {
 const SPOTS = [
   { id: "ban_to", x: 43, y: 38, label: "Bàn Tổ", text: "Bàn Tổ kê cao ngang ngực. Ba chung trà sứ men lam đặt hàng ngang. Hai chung hai bên đã cạn. <b>Chung ở giữa</b> còn lớp cặn bột màu xám dính đáy, đã niêm phong gửi giám định. Bát nhang, đĩa trầu cau, hai cây đèn dầu đã tắt." },
   { id: "heo", x: 34, y: 60, label: "Đầu heo quay", text: "Đầu heo quay cúng Tổ từ chiều 27. Mới một đêm đã bốc mùi tanh lợm. Hai hốc mắt lúc nhúc dòi trắng, da quay phồng rộp, nhớt chảy thành vệt xuống mâm. Cán bộ ghi: “dòi nhiều bất thường, như để cả tuần”." },
-  { id: "ban_ve", x: 21, y: 86, label: "Bàn vẽ mặt", text: "Mỗi kép một dĩa màu dán tên. <b>Kiệt</b>: đỏ, đen, đã dùng. <b>Thông</b>: đen, trắng, đã dùng. <b>Lợi</b>: trắng mốc, đã dùng. <b>Tư Hòa</b>: trắng, hồng (vai lính cờ), đã dùng; <b>màu đen cũng đã dùng gần hết</b>. Theo trình tự đêm diễn, tối đó Hòa không có vai mặt đen nào." },
+  { id: "ban_ve", x: 21, y: 86, label: "Bàn vẽ mặt", text: "Mỗi kép một dĩa màu dán tên. <b>Kiệt</b>: đỏ, đen, đã dùng. <b>Thông</b>: đen, trắng, đã dùng. <b>Lợi</b>: trắng mốc, đã dùng; đen chỉ dùng một ít (kẻ chân mày, viền mắt). <b>Tư Hòa</b>: trắng, hồng (vai lính cờ), đã dùng; <b>màu đen cũng đã dùng gần hết</b>. Theo trình tự đêm diễn, tối đó Hòa không có vai mặt đen nào." },
   { id: "ruong", x: 67, y: 66, label: "Rương Tổ", text: "Rương gỗ lim, khóa đồng gỉ sét. Theo ông Sáu Bé, trong rương là bộ áo Quan Công năm 1963, không ai mở từ ba chục năm nay. Chìa khóa ông đeo ở cổ. Ổ khóa còn nguyên, không có dấu cạy." },
   { id: "chieu", x: 89, y: 90, label: "Chiếc chiếu trong góc", text: "Chiếu và mền của bé Thủy. Từ chỗ nằm nhìn thẳng ra bàn Tổ và cánh cửa sau. Mền ướt đẫm mồ hôi." },
   { id: "cua_sau", x: 86, y: 42, label: "Cửa sau", text: "Cửa liếp mở ra cầu ao. Bản lề kêu kẽo kẹt. Dưới chân cầu ao: <b>một chiếc khăn vải dính màu đen và vệt phấn trắng</b>, chưa ai nhận là của mình. Trên ván cầu có dấu bàn chân trần, bùn đã khô." },

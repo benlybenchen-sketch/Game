@@ -73,6 +73,22 @@ export default [
   },
 
   {
+    id: "lk_hoa_3", stage: 3, kind: "Lời khai", icon: "✎", label: "Lời khai Tư Hòa, lần 3 (sau khi thấy ảnh số 14)",
+    html: () => `
+    <div class="doc doc--form">
+      <div class="form-head"><div>CÔNG AN TỈNH CỬU GIANG<br><b>CÔNG AN HUYỆN GIỒNG CÁT</b></div><div><b>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</b><br>Độc lập – Tự do – Hạnh phúc</div></div>
+      <h2 class="form-title">BIÊN BẢN HỎI CUNG BỊ CAN</h2>
+      <p>Ngày 5/10/1993, 1 giờ sáng. Bị can: <b>Phan Văn Hòa</b>, 19 tuổi.</p>
+      <p>${ln("hoa3_1", "Con xin khai lại. Con khai hết. Ảnh đó là con.")}</p>
+      <p>${ln("hoa3_2", "Hết lớp 1, anh Ba Thông kéo con ra chái sau, đưa con năm chục ngàn, nói tay anh đau quá, nhờ con đóng Châu Thương lớp 2 giùm, đừng cho bà bầu biết kẻo bà trừ lương anh.")}</p>
+      <p>${ln("hoa3_3", "Con lấy dĩa màu đen của con vẽ mặt ở chái sau, mặc đồ Châu Thương của anh, ra đứng sân khấu. Con không thuộc bài nên bị ông Hương cả chát hai lần.")}</p>
+      <p>${ln("hoa3_4", "Hết lớp 2 con chạy về chái sau chùi mặt. Anh Thông đã ngồi đó, đang vẽ lại mặt đen, tay phải vẫn quấn băng. Anh lấy lại đồ, dặn con nói là ở dưới bếp.")}</p>
+      <p>${ln("hoa3_5", "Con không bỏ thuốc. Con không biết gì về thuốc.")}</p>
+      <div class="sign-row"><div>Bị can<br>${hand("Hòa", "sign")}</div><div>Điều tra viên<br>${hand("Tâm", "sign")}</div></div>
+      <p class="small muted">Ý kiến của điều tra viên: bị can khai sau khi được cho xem ảnh số 14. Lê Văn Thông phủ nhận toàn bộ. <b>Cần thêm chứng cứ độc lập về chất độc.</b></p>
+    </div>`,
+  },
+  {
     id: "ly_lich_thong", stage: 3, kind: "Hồ sơ", icon: "☰", label: "Lý lịch nghệ sĩ: Lê Văn Thông",
     html: () => `
     <div class="doc doc--form">
@@ -80,8 +96,9 @@ export default [
       <table class="tbl">
         <tr><td>Họ tên</td><td><b>Lê Văn Thông</b> (nghệ danh Ba Thông)</td></tr>
         <tr><td>Sinh</td><td>14/3/1958 tại Phú Lễ</td></tr>
-        <tr><td>Cha</td><td><b>Lê Văn Lành</b>, nghệ sĩ hát bội, mất ngày 29/9/1963</td></tr>
+        <tr><td>Cha</td><td><i>(bỏ trống)</i> · ghi chú: “mất năm 1963 tại Phú Lễ”</td></tr>
         <tr><td>Mẹ</td><td>Võ Thị Sen, mất năm 1960</td></tr>
+        <tr><td>Hoàn cảnh</td><td>Mồ côi cả cha lẫn mẹ năm 5 tuổi, gánh hát nhận nuôi</td></tr>
         <tr><td>Người nuôi dưỡng</td><td><b>Đặng Văn Bé</b>, thầy tuồng gánh Phước Hưng Ban, từ năm 1963</td></tr>
         <tr><td>Vào nghề</td><td>1966, đóng kép con; từ 1980 là kép nhì</td></tr>
         <tr><td>Vai sở trường</td><td>Châu Thương, Trương Phi (mặt đen)</td></tr>

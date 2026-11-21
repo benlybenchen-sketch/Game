@@ -92,12 +92,29 @@ export default [
       <h2 class="form-title">BIÊN BẢN HỎI CUNG BỊ CAN</h2>
       <p>Ngày 4/10/1993, 16 giờ. Bị can: <b>Phan Văn Hòa</b>, 19 tuổi.</p>
       <p>${ln("hoa2_1", "Con xin khai lại. Lần trước con nói ở sau bếp là con nói dối.")}</p>
-      <p>${ln("hoa2_2", "Hết lớp 1, anh Ba Thông kéo con ra chái sau, đưa con năm chục ngàn, nói tay anh đau quá, nhờ con đóng Châu Thương lớp 2 giùm, đừng cho bà bầu biết kẻo bà trừ lương anh.")}</p>
-      <p>${ln("hoa2_3", "Con lấy dĩa màu đen của con vẽ mặt ở chái sau, mặc đồ Châu Thương của anh, ra đứng sân khấu. Con không thuộc bài nên bị ông Hương cả chát hai lần.")}</p>
-      <p>${ln("hoa2_4", "Hết lớp 2 con chạy về chái sau chùi mặt. Anh Thông đã ngồi đó, đang vẽ lại mặt đen, tay phải vẫn quấn băng. Anh lấy lại đồ, dặn con nói là ở dưới bếp.")}</p>
-      <p>${ln("hoa2_5", "Con không bỏ thuốc. Con không biết gì về thuốc.")}</p>
+      <p>${ln("hoa2_2", "Lớp 2 con ở đâu thì con không nói được. Con hứa với một người rồi. Người ta tốt với con.")}</p>
+      <p>${ln("hoa2_3", "Con không vô buồng trò. Con thề trước bàn Tổ là con không đụng tới chung trà.")}</p>
+      <p>${ln("hoa2_4", "Quý anh hỏi ông Hương cả đi. Đêm đó ổng chát con hai lần, ổng biết.")}</p>
+      <p>${ln("hoa2_5", "Con không biết gì về thuốc.")}</p>
       <div class="sign-row"><div>Bị can<br>${hand("Hòa", "sign")}</div><div>Điều tra viên<br>${hand("Tâm", "sign")}</div></div>
-      <p class="small muted">Ý kiến của điều tra viên: bị can thay đổi lời khai sau khi bị bắt, có dấu hiệu đổ tội cho người khác để chạy tội. Lê Văn Thông phủ nhận toàn bộ. <b>Cần chứng cứ độc lập.</b></p>
+      <p class="small muted">Ý kiến của điều tra viên: bị can thừa nhận nói dối nhưng không chịu khai đã ở đâu, lời lẽ vô lý (ông Hương cả ngồi trống chầu trước sân khấu, không thể biết ai ở sau bếp). Giữ nguyên tạm giam.</p>
+    </div>`,
+  },
+
+  {
+    id: "lk_loi", stage: 2, kind: "Lời khai", icon: "✎", label: "Lời khai Đoàn Văn Lợi (kép mùi)",
+    html: () => `
+    <div class="doc doc--form">
+      ${caHead}
+      <h2 class="form-title">BIÊN BẢN GHI LỜI KHAI</h2>
+      <p>Ngày 30/9/1993. Người khai: <b>Đoàn Văn Lợi</b>, 29 tuổi, kép mùi gánh Phước Hưng Ban.</p>
+      <p>${ln("loi_1", "Đêm đó tôi đóng Khổng Tú lớp 2, Tần Kỳ lớp 3. Hai vai đều mặt trắng mốc, kẻ chân mày đen xếch, viền mắt đen, đội mão, mang hia.")}</p>
+      <p>${ln("loi_2", "Cả lớp 2 tôi đứng trên sân khấu chặn ải. Tới lúc anh Kiệt chém Khổng Tú thì tôi lăn vô cánh gà trái.")}</p>
+      <p>${ln("loi_3", "Rồi tôi chạy vô buồng trò lấy cái áo Tần Kỳ. Anh Kiệt với Út Nhàn đã ở trong đó. Tôi lấy áo rồi ra cánh gà thay, không đụng tới bàn Tổ.")}</p>
+      <p>${ln("loi_4", "Tôi xin bà bầu vai Quan Công ba năm nay. Anh Kiệt không chịu nhường. Chuyện đó cả gánh biết.")}</p>
+      <p>${ln("loi_5", "Anh Kiệt mất thì năm sau chắc tôi được đóng Quan Công. Quý anh cứ ghi vậy, tôi không giấu. Nhưng tôi không giết ảnh.")}</p>
+      <div class="sign-row"><div>Người khai<br>${hand("Lợi", "sign")}</div><div>Cán bộ ghi<br>${hand("Tâm", "sign")}</div></div>
+      <p class="small muted">Ghi chú của cán bộ ghi: người khai bình tĩnh, có động cơ rõ, đã vào buồng trò trong đêm. Đề nghị theo dõi.</p>
     </div>`,
   },
 ];
