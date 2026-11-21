@@ -59,7 +59,7 @@ Tầng kinh dị (không bao giờ giải thích): tiếng người gọi "Tú N
 | Ngày âm | Dương lịch | Việc |
 |---|---|---|
 | 7 | 23/8 | Chiều Thất tịch, Thuý Nhi lỡ miệng chuyện bỏ trốn. Phu nhân lập **hối phiếu Nghĩa Thịnh Xương 120 đồng bạc** (mật áp) để mua Tú Nương từ tay ông bố say, tách đôi trẻ. Đêm ấy Lưu Phúc chặn xe ở bến đò. |
-| 8 | 24/8 | Ôn Lão Tam điểm chỉ **khế ước bán con**, nhận hối phiếu. Tú Nương vào phủ chiều mồng 8. Lưu Phúc mua **nha phiến** ở hiệu thuốc Hồi Xuân Đường. |
+| 8 | 24/8 | Ôn Lão Tam điểm chỉ **khế ước bán con**, nhận hối phiếu (lĩnh bạc ngày 9). Tú Nương vào phủ chiều mồng 8. Lưu Phúc mua **nha phiến** ở hiệu thuốc Hồi Xuân Đường. |
 | 9 | 25/8 | Phu nhân đặt bà mối âm Hoàng Tứ Nương **cô dâu chết Lý Xuân Hoa**, giá **40 đồng**. **Lúc này chưa ai tìm thấy xác.** |
 | 10 | 26/8 | Xác vớt ở bãi Hạ Than, trương phềnh, mặc áo xanh của Thừa Tự. Phu nhân nhận ngay "con tôi". Ngỗ tác Mã khám ngoài, bị cấm mổ, bị ép ghi "chết đuối". |
 | 11 | 27/8 | **Phát tang.** Tú Nương (nha hoàn mới) nhìn thấy sợi chỉ đỏ ở cổ tay xác chết, biết đó là anh mình. Cô lén buộc **một dải vải gai thô có viền (tư thôi)** trong áo: để tang anh. Thuý Nhi thấy. Phu nhân mặc **áo trắng trơn (tố y)**, không đội mũ gai, không khóc. |
@@ -151,7 +151,7 @@ Bảy phương án, **cùng một khuôn bốn vế, dài 115–122 ký tự**; 
 ## 6. Kiểm tra logic (không được hở)
 - Ai biết xác là Ôn Thạch? Lưu Phúc, phu nhân (biết vì ra lệnh), Tú Nương (nhận ra chỉ đỏ ngày 11). Lão gia **không biết** (để tang đúng lệ, đúng là kẻ chi phí chìm).
 - Vì sao phu nhân lập hối phiếu ngày 7 (trước đêm bỏ trốn)? Chiều Thất tịch bà biết chuyện từ Thuý Nhi, định mua cô gái từ tay ông bố say để tách đôi trẻ. Đêm ấy mới xảy ra án mạng. Sau đó bà giữ Tú Nương trong phủ để giữ nhân chứng trong tay. Chỉ sau ngày 11 (thấy cô để tang anh) mới đổi kế hoạch: trả Lý Xuân Hoa ngày 12.
-- Vì sao đặt cô dâu chết ngày 9, trước khi có xác? Vì phu nhân biết sẽ có xác "Thừa Tự" (Lưu Phúc đã ném xuống sông). Đây là bằng chứng biết trước, độc lập với hối phiếu ngày 8.
+- Vì sao đặt cô dâu chết ngày 9, trước khi có xác? Vì phu nhân biết sẽ có xác "Thừa Tự" (Lưu Phúc đã ném xuống sông). Đây là bằng chứng biết trước, độc lập với hối phiếu ngày 7.
 - Vì sao Tú Nương đồng ý làm cô dâu âm? Cô biết trong quan tài là anh mình, nhà cô không có tiền chôn anh, cô tin Thừa Tự đã bỏ rơi cô. Cô muốn nằm cạnh anh. Cô **không biết** Thừa Tự còn sống.
 - Tiếng gọi "Tú Nương" ở Đông viện: Thừa Tự lúc tỉnh thuốc. Phu nhân nói với cả phủ đó là "hồn cậu chủ về". Đông viện niêm phong, dán bùa, chìa khoá phu nhân đeo.
 - Vì sao mở quan tài không đủ (D)? Xác ngâm nước 3 ngày, đã chôn trong quan tài 11 ngày, không nhận được mặt; chỉ người trong nhà mới chỉ ra được chỉ đỏ và vết chai, mà phu nhân và tộc trưởng có thể cãi. Người sống trong Đông viện thì không ai cãi được.
