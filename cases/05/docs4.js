@@ -5,14 +5,16 @@ import { tape } from "./docs0.js";
 
 /** What happened that night after a wrong decision; keyed by the first words of the chosen option. */
 const LOST = {
-  A: "Ông Khải được đưa về đồn lúc 19 giờ. Cháu Ngân ngủ nhờ nhà bà Lụa. Khoảng 0 giờ 30, cháu Ngân lẻn qua cửa sau về nhà.",
-  B: "Lúc 16 giờ, cán bộ bóc băng keo, phá cửa buồng trong. Cửa vừa mở, cháu Ngân lao vào buồng, chốt cánh cửa ngách phía trong lại. Phải đến 22 giờ mới phá được cánh cửa thứ hai.",
-  C: "Lúc 17 giờ, sinh viên Vân nói với cháu Ngân rằng mẹ cháu đã mất hai năm. Cháu Ngân cười, nói “vâng, cháu biết rồi ạ”, rồi xin đi ngủ sớm. Ông Khải ngồi ở hiệu đến khuya.",
-  D: "Trạm và công an hoãn việc mở buồng đến sau Tết Dương lịch. Đêm 30/12, nhà ông Khải tắt đèn từ 20 giờ.",
+  A: "Ông Khải được đưa về đồn lúc 19 giờ. Cháu Ngân ngủ nhờ nhà bà Lụa, bà Lụa thức trông tới nửa đêm. Khoảng 0 giờ 30, cháu Ngân lẻn qua sân sau về nhà, vào bếp.",
+  B: "Lúc 16 giờ, cán bộ bóc băng keo, mở cửa buồng trong trước mặt hai cha con. Cháu Ngân không khóc. Cháu ôm cái lò than chạy vào buồng, chốt cửa từ bên trong, chặn bằng giường. Công an quyết định chờ cháu bình tĩnh, ngồi canh ngoài cửa.",
+  C: "Lúc 17 giờ, sinh viên Vân và y sĩ Sinh nói với cháu Ngân rằng mẹ cháu đã mất hai năm. Cháu Ngân cười, nói “vâng, cháu biết rồi ạ”, rồi xin đi ngủ sớm. Ông Khải ngồi ở hiệu đến khuya.",
+  D: "Cán bộ trạm thu 10 cân than ở gian giữa. Việc mở buồng hoãn đến sau Tết Dương lịch. Người của trạm ghé hỏi thăm lúc 21 giờ và 23 giờ; nhà đã tắt đèn, không có gì lạ.",
+  F: "19 giờ 40, cháu Ngân được đưa lên viện tỉnh, ông Khải đi cùng. Khoảng 23 giờ, cháu Ngân nói muốn về thắp hương cho mẹ. Ông Khải là bố, ký giấy xin cho con về; không ai giữ được. 0 giờ 30, hai bố con về tới nhà.",
+  G: "Ông Khải được đưa lên viện tỉnh lúc 19 giờ. Cán bộ trạm thu 10 cân than ở gian giữa rồi thức ở đó đến sáng, không nghe thấy gì. Cửa buồng trong vẫn nguyên băng keo.",
 };
 const lostKey = () => {
   const c = state.failed?.choice || "";
-  return ["A", "B", "C", "D"].find((k) => c.startsWith(k)) || "A";
+  return ["A", "B", "C", "D", "F", "G"].find((k) => c.startsWith(k)) || "A";
 };
 
 export default [
@@ -26,12 +28,14 @@ export default [
       <p>${ln("bh_qua", "Trung uý Bảo cho rằng không có gì phải vội: ngày mất của bà Hằng là 22/12 (đông chí), đã qua tám hôm mà không có chuyện gì.")}</p>
       <p>Y sĩ Sinh: đồng ý về nguyên tắc. ${ln("bh_sinh", "Đề nghị sinh viên Vân, người đã đọc toàn bộ hồ sơ gia đình, đưa ra phương án cho đêm nay. Trạm sẽ làm theo.")}</p>
       <p>Phương án được đưa ra để chọn:</p>
-      <ol>
-        <li>Theo đề nghị của trung uý Bảo.</li>
-        <li>Phá cửa buồng ngay chiều nay, trước mặt hai cha con.</li>
-        <li>Nói thẳng với cháu Ngân, rồi để gia đình tự quyết.</li>
-        <li>Hoãn đến sau Tết Dương lịch.</li>
-        <li>Đưa cháu Ngân vào viện tỉnh ngay tối nay, có người túc trực; thu than; để ông Khải ở nhà với cán bộ trạm.</li>
+      <ol type="A">
+        <li>Theo trung uý Bảo: tối nay đưa ông Khải về đồn, cháu Ngân ngủ nhờ nhà bà Lụa có người lớn trông, sáng mai mở buồng.</li>
+        <li>Mở buồng ngay chiều nay, có cán bộ y tế và công an chứng kiến, để hai cha con đối diện sự thật trước khi trời tối.</li>
+        <li>Nói thật với cháu Ngân rằng mẹ đã mất hai năm, có thầy Sinh ngồi cùng, rồi để hai cha con tự quyết việc mở buồng.</li>
+        <li>Thu hết than, hoãn việc mở buồng đến sau Tết Dương lịch, cử người ghé nhà ông Khải hỏi thăm vài lần trong đêm.</li>
+        <li>Đưa cháu Ngân lên viện tỉnh ngay tối nay, có người ngồi cạnh cả đêm; thu than; ông Khải ở nhà với cán bộ trạm.</li>
+        <li>Đưa cháu Ngân lên viện tỉnh ngay tối nay, ông Khải đi cùng ngồi cạnh con cả đêm cho con yên tâm; thu hết than.</li>
+        <li>Cháu Ngân ở nhà ngủ, cán bộ trạm thức cả đêm ở gian giữa; thu hết than ngoài gian giữa; đưa ông Khải lên viện tỉnh.</li>
       </ol>
       <p class="small">Biên bản dừng ở đây, chờ ý kiến của sinh viên Vân.</p>
     </div>`,
@@ -45,7 +49,7 @@ export default [
     <div class="doc doc--report">
       <div class="report-head">TRẠM Y TẾ CAM ĐƯỜNG · BIÊN BẢN SỰ VIỆC · đêm 30 rạng sáng 31/12/1991</div>
       <p>19 giờ 40: cháu Đỗ Thị Ngân được đưa lên khoa tâm thần Bệnh viện tỉnh Lào Cai bằng xe của công an, có y sĩ Sinh và sinh viên Vân đi cùng. Cháu không chống cự. Trên xe cháu chỉ hỏi một câu: “Ai ngủ với mẹ cháu?”</p>
-      <p>20 giờ 30: cán bộ trạm thu 10 cân than hoa và một lò than tại nhà ông Khải. Không phá cửa buồng.</p>
+      <p>20 giờ 30: cán bộ trạm thu 10 cân than hoa và một lò than tại nhà ông Khải. Không phá cửa buồng; bao than năm cân Ngân mang vào buồng vẫn nằm sau cánh cửa dán kín, không ai đốt.</p>
       <p>Cả đêm, ông Khải ngồi một mình ở gian giữa. Cán bộ trạm ngồi ở hiệu ảnh.</p>
       <p>5 giờ 50 sáng 31/12: ông Khải tự bóc băng keo cửa buồng trong, rồi ra trạm báo tin vợ ông mất.</p>
       ${pic("buong_mo", "Căn buồng trong, sáng 31/12/1991.")}
@@ -90,7 +94,7 @@ export default [
     <div class="doc doc--report">
       <div class="report-head">CÔNG AN THỊ TRẤN CAM ĐƯỜNG · BIÊN BẢN SỰ VIỆC<br>6 giờ 15 ngày 31/12/1991 · nhà ông Đỗ Văn Khải</div>
       <p>${LOST[lostKey()]}</p>
-      <p>6 giờ 15 sáng 31/12, phá cửa buồng trong. Khe cửa chèn chăn kín, quanh khung cửa dán băng keo ba lớp. Trong buồng có một lò than đã tắt, mùi khí than rất nặng.</p>
+      <p>6 giờ 15 sáng 31/12, phá cửa buồng trong. Khe cửa chèn chăn kín. Cánh cửa ngách sau chạn bát trong bếp cũng chèn chăn, chốt từ bên trong. Trong buồng có một lò than đã tắt và vỏ một bao than năm cân, mùi khí than rất nặng.</p>
       <p>Phát hiện cháu <b>Đỗ Thị Ngân</b>, 15 tuổi, đã tử vong, nằm nghiêng trên giường, ôm thi thể đã khô của bà <b>Phạm Thị Hằng</b>. Trên tay cháu Ngân có một lọ thuốc trợ tim, nắp đã mở.</p>
       <p>Nguyên nhân sơ bộ: ngộ độc khí than (CO).</p>
       ${stamp("THẤT BẠI", "right:26px;top:50px", "red")}

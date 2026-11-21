@@ -18,10 +18,12 @@ export const ART = { ghostFace };
 
 /** Wording of the bad ending, by the option the player chose (A–D). */
 const LOST_LINE = {
-  A: "Ông Khải bị đưa về đồn lúc 19 giờ. Cháu Ngân được gửi sang nhà bà Lụa, cách nhà mình một bức vách.",
-  B: "Cửa buồng vừa bị phá, cháu Ngân lao vào trong và chốt cánh cửa ngách lại.",
-  C: "Cháu Ngân nghe bạn nói hết, cười rất ngoan: “Vâng, cháu biết rồi ạ.” Rồi xin đi ngủ sớm.",
-  D: "Mọi người về nhà, hẹn sau Tết Dương lịch. Nhà ông Khải tắt đèn từ 20 giờ.",
+  A: "Ông Khải bị đưa về đồn lúc 19 giờ. Cháu Ngân được gửi sang nhà bà Lụa, cách buồng mẹ một bức vách.",
+  B: "Cửa buồng vừa mở, cháu Ngân ôm lò than lao vào trong và chốt cửa lại.",
+  C: "Cháu Ngân nghe hết, cười rất ngoan: “Vâng, cháu biết rồi ạ.” Rồi xin đi ngủ sớm.",
+  D: "Người ta thu mười cân than ở gian giữa, rồi về. Nhà ông Khải tắt đèn từ 20 giờ.",
+  F: "Lúc 23 giờ, cháu Ngân xin bố cho về thắp hương cho mẹ. Ông Khải chưa bao giờ biết từ chối con.",
+  G: "Cán bộ trạm thức suốt đêm ở gian giữa. Không ai nhớ trong bếp có một cánh cửa ngách.",
 };
 
 export const META = {
@@ -62,7 +64,7 @@ export const META = {
       <p>Nếu chưa chắc, hãy đọc lại hồ sơ: ai cần được giữ an toàn đêm nay, và vì sao.</p>`,
     scare: ["khoithan", "khoi_than_scare", 6500],
     html: () => {
-      const k = ["A", "B", "C", "D"].find((x) => (state.failed?.choice || "").startsWith(x)) || "A";
+      const k = ["A", "B", "C", "D", "F", "G"].find((x) => (state.failed?.choice || "").startsWith(x)) || "A";
       return `<h3>06:15 · Sáng 31/12/1991</h3>
         <p>${LOST_LINE[k]}</p>
         <p>Đêm 25 tháng Một, đúng đêm cô Hằng gọi con lấy thuốc hai năm trước, có người đốt một lò than trong căn buồng dán kín.</p>
@@ -76,7 +78,7 @@ export const META = {
   dreadLevels: [0, 1, 2, 3, 4, 4, 4],
   dread: {
     phrases: ["mẹ cháu ngủ rồi", "cô nói khẽ thôi", "ngân ơi lấy thuốc cho mẹ", "đóng hết cửa", "mẹ sợ gió", "con bịt tai", "cả nhà ngủ cùng mẹ", "khụ khụ"],
-    notes: { 2: "mẹ cháu không ra được đâu cô", 3: "cô vân nghe thấy rồi à", 4: "lần này con mở cửa" },
+    notes: { 2: "mẹ cháu không ra được đâu cô", 3: "con ngủ với mẹ nhé", 4: "lần này con mở cửa" },
     scare: "ngan_khan_scare",
     extra: [{ min: 2, every: [60000, 120000], sfx: "hum" }, { min: 3, every: [45000, 90000], sfx: "knuckle" }],
   },

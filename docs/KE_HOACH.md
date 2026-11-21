@@ -44,6 +44,16 @@ Hồ sơ cuối series (để dành): "Hồ sơ của chính bạn" (meta, dùng
 Thôi miên lần thứ bảy (trí nhớ giả), Người thứ năm (Fansipan), Bóng đè (ký túc xá 1991), Băng NightShot (Hang Khe Sim), Tổng đài 108, Thợ ảnh thờ, Nhà số 13 Hàng Mã.
 Tổng đài 108, Thợ ảnh thờ, Nhà xác ca 3, Tin nhắn lúc 3 giờ, Bùa ngải, Mù (chỉ âm thanh).
 
+## Quy tắc độ khó (bắt buộc từ Hồ sơ 06 trở đi)
+Người chơi chê hồ sơ 01 "dễ đoán". Hồ sơ 02–05 đã được làm lại (bản 2). **Từ Hồ sơ 06, mọi hồ sơ phải ở mức khó cực đại ngay từ bản đầu**, theo các luật sau:
+1. **Không có phương án "dài nhất là đúng".** Mọi phương án trong một câu chọn phải dài ngang nhau, cùng giọng điệu, và mỗi phương án sai phải nghe hợp lý.
+2. **Không hỏi một tên người làm đáp án ở nhiều câu.** Hung thủ chỉ được là đáp án chọn tên tối đa 2 lần; các câu khác đòi **bấm đúng câu bằng chứng**, tự gõ, tính toán hoặc sắp thứ tự.
+3. **Câu hỏi và ghi chép giữa các câu không được nói trước đáp án**: không có các chữ như "lỡ miệng", "người em", "có hai…"; dòng chữ ma không được trùng đáp án câu đang mở.
+4. **Mỗi câu ít nhất một bẫy bằng giấy tờ**: nghi phạm giả có động cơ, tài liệu bị nhoè hoặc sửa, đồng hồ lệch, năm nhuận, can chi, chiều tàu, hai người trùng tên hoặc trùng dấu vết.
+5. **Ít nhất một câu cần ghép từ 3 tài liệu trở lên**, và ít nhất một câu có phương án "hồ sơ hiện có chưa cho biết" là đáp án đúng.
+6. **Câu cuối phải suy luận thật**, không chọn theo đạo đức hay cảm tính: mỗi phương án sai có một lỗ hổng chỉ tìm thấy trong hồ sơ.
+7. Gợi ý cấp 1 và 2 chỉ chỉ chỗ, không giải hộ; chỉ cấp 3 mới ra đáp án.
+
 ## Quy tắc âm thanh và cảnh doạ (áp dụng cho mọi hồ sơ từ nay về sau)
 - Mọi hiệu ứng âm thanh đi qua bus `fx` trong `js/audio.js` (khuếch đại lớn, có limiter): luôn ở mức tối đa mà không vỡ tiếng. Hiệu ứng mới chỉ cần gọi `tone`/`noiseHit`/`sfx.*` là tự to.
 - Giọng đọc và băng giữ ở master, không đẩy theo hiệu ứng.

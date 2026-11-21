@@ -86,10 +86,11 @@ export default [
     html: () => `
     <div class="doc doc--form">
       <div class="report-head">HÀNG THAN CỦI BÀ TÁM · CHỢ CAM ĐƯỜNG</div>
-      <p>Ngày 26/12/1991. Người mua: ông Khải hiệu ảnh.</p>
-      <table class="tbl"><tr><th>Hàng</th><th>Số lượng</th></tr>
-        <tr><td>${ln("hd_than", "Than hoa")}</td><td>10 cân</td></tr><tr><td>Lò than đất nung, cỡ to</td><td>1 cái</td></tr></table>
-      <p class="small">Bà Tám nói với Vân: “Ông ấy mua gấp đôi mọi năm. Tôi hỏi nhà có cỗ à, ông ấy bảo con gái dặn.”</p>
+      <table class="tbl"><tr><th>Ngày</th><th>Người mua</th><th>Hàng</th><th>Số lượng</th></tr>
+        <tr><td>20/12/1991</td><td>${ln("hd_ngan", "cháu gái nhà hiệu ảnh")}</td><td>Than hoa</td><td>5 cân</td></tr>
+        <tr><td>26/12/1991</td><td>ông Khải hiệu ảnh</td><td>${ln("hd_than", "Than hoa")}</td><td>10 cân</td></tr>
+        <tr><td>26/12/1991</td><td>ông Khải hiệu ảnh</td><td>Lò than đất nung, cỡ to</td><td>1 cái</td></tr></table>
+      <p class="small">Bà Tám nói với Vân: “Ông ấy mua gấp đôi mọi năm. Tôi hỏi nhà có cỗ à, ông ấy bảo con gái dặn. Tuần trước con bé ấy cũng ra mua năm cân, trả toàn tiền lẻ, cõng về một mình.”</p>
     </div>`,
   },
 
@@ -122,7 +123,9 @@ export default [
   diary("nk_6", 5, "Nhật ký thực tập: sáng 30/12", null, `
     <p>Thứ Hai 30/12/1991. Tôi đến sớm. Ngân không đi học.</p>
     <p>Ngân vui lắm. Ngân mặc áo len đỏ của mẹ, buộc tóc giống tóc mẹ trong ảnh 1988. Ngân pha trà mời tôi, rồi nói: “Tối nay mẹ cháu khỏi bệnh rồi cô ạ. Cô đừng đến nữa nhé.”</p>
-    <p>Bao than đã được kéo vào sát cửa buồng. Băng keo mới dán thêm một lớp quanh khung cửa sổ gian giữa.</p>
+    <p>Bao than mười cân đã được kéo vào sát cửa buồng. Băng keo mới dán thêm một lớp quanh khung cửa sổ gian giữa.</p>
+    <p>Tôi hỏi bao than năm cân Ngân mua hôm 20. Ngân cười: “Cháu mang vào cho mẹ rồi. Mẹ cất trong buồng.” Tôi nhìn cửa buồng: băng keo ba lớp, bụi bám đều, không ai bóc.</p>
+    <p>Trong bếp, sau cái chạn bát kê lệch, có một cánh cửa ngách nhỏ bằng gỗ thông sang buồng trong. Ông Khải nói cửa ấy đóng đinh từ năm 1990. Mấy cái đinh đã bị nhổ ra, cắm lại vào lỗ cho có. Ông Khải không biết.</p>
     <p>Trên tường bếp treo cuốn lịch bloc của năm 1991, xé dở. Ông Khải nói: “Nhà tôi vẫn xem ngày theo cuốn này. Hằng dặn: giỗ chạp nhà mình tính theo âm.”</p>
     <p>Chiều nay 15 giờ, thầy Sinh họp với trung uý Bảo ở trạm. Thầy dặn tôi phải có mặt.</p>`),
 

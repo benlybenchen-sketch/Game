@@ -81,13 +81,46 @@ Ngân sắp 16 tuổi. Cô chủ nhiệm muốn gặp bà Hằng. Trạm y tế 
 | **5** | T6 27/12 | Bệnh án hở van hai lá 1985; lời khai của người bán vé tàu (ông Khải đi Hà Nội đêm 22/12/1989); trang nhật ký bị xé; tờ rơi "ngộ độc khí than"; hoá đơn 10 cân than | **Ghép thư xé**: "Mẹ gọi con lấy thuốc. Con bịt tai." Tội lỗi là gốc của hoang tưởng. Kế hoạch "đêm 25 tháng Một" |
 | **6** | T2 30/12 | Lịch vạn niên 1991; biên bản họp của trạm và công an; phương án của trung uý Bảo | **Tra lịch âm**: 25 tháng Một là **hôm nay**. Bước ngoặt: Vân đề xuất phương án cho **đêm nay** |
 
-### Câu hỏi từng trọng điểm (dự kiến)
-1. **Người không ai thấy:** ngày cuối cùng có người ngoài gặp bà Hằng (22/12/1989); bệnh bà Hằng bị đăng ký (nghi lao); trên sơ đồ nhà, bấm vào chỗ bà Lụa nói mùi nặng nhất (vách buồng trong).
-2. **Hai lời kể:** đánh dấu hai câu mâu thuẫn trong lời kể của ông Khải và Ngân; mùi lạ là chất gì (formol) và vì sao nhà có sẵn (hiệu ảnh, buồng tối); ai trả lời trước mỗi khi Vân hỏi về mẹ (Ngân).
-3. **Người trong ảnh:** soi ảnh tìm ba chi tiết cho thấy người ngồi không phải bà Hằng (mặt trong kính, tay không nhẫn, sẹo cổ tay trái); ai viết các giấy xin nghỉ (Ngân), bằng chứng nét chữ.
-4. **Ai tin trước:** xếp 6 sự kiện "mẹ ho, mẹ ăn cháo, mẹ dặn đóng cửa…" theo ngày ghi ở hai cuốn sổ; ai là người khởi phát (Ngân); tiếng ho trong băng là của ai (Ngân); điều gì xảy ra với người tiếp nhận khi bị tách khỏi người khởi phát (thường tỉnh dần).
-5. **Đêm đông chí:** bà Hằng chết vì gì (cơn hở van hai lá, không có thuốc); đêm đó ông Khải ở đâu (trên tàu đêm từ Hà Nội về); câu trong trang nhật ký bị xé; ngày âm lịch Ngân chọn (25 tháng Một); thứ ông Khải đã mua (10 cân than hoa) và nguy cơ (ngộ độc khí than khi đóng kín cửa).
-6. **Đêm nay:** ngày 30/12/1991 là ngày âm nào (25 tháng Một, Tân Mùi); rồi **BƯỚC NGOẶT** (mục 6); rồi **biên bản cuối**: bà Hằng chết thế nào, ai giữ thi thể, ai khởi phát, hướng điều trị cho từng người.
+### Câu hỏi từng trọng điểm (bản 2, khó hơn)
+Lỗi của bản 1:
+- câu bước ngoặt có phương án đúng (E) **dài và chi tiết nhất**, nhìn là chọn được;
+- nhiều câu chọn có đáp án đúng là câu cụ thể nhất ("Cùng viết “trăm”… cùng chữ g móc ngược", "Nghe mẹ gọi lấy thuốc nhưng bịt tai…", "Ngộ độc khí than trong buồng đóng kín…");
+- ghi chép buổi sáng nói trước đáp án câu sau ("Nhà này giỗ theo âm", "Ông Khải biết vợ mất từ 23/12");
+- dòng chữ ma hiện lên khi đang ở câu 4 chính là đáp án câu 4 ("cô vân nghe thấy rồi à").
+
+Bản 2 sửa hết các chỗ trên, và thêm **một lớp sự thật mới** khiến câu bước ngoặt phải suy luận thật.
+
+**Sự thật thêm (không đổi cốt truyện):**
+- **20/12/1991, Ngân tự mua 5 cân than** ở hàng bà Tám (phiếu bán hàng có hai lần mua; bà Tám: "con bé ấy cũng ra mua năm cân, trả toàn tiền lẻ").
+- Ngân mang bao 5 cân **vào buồng trong qua cánh cửa ngách sau chạn bát trong bếp**. Ông Khải tưởng cửa ấy đã đóng đinh từ năm 1990; đinh đã bị nhổ, cắm lại cho có. Băng keo cửa buồng chính vẫn nguyên.
+- Hệ quả: **thu 10 cân than ở gian giữa không làm nhà an toàn**. Chỉ cần Ngân còn ở trong nhà hoặc sát vách, hoặc có thể quay về, Ngân vẫn làm được.
+
+**Từng câu:**
+1. Không đổi (ngày cuối có người thấy bà Hằng; danh sách nghi lao; đánh dấu buồng trong trên sơ đồ).
+2. Không đổi (cặp câu mâu thuẫn; formol; Ngân trả lời trước).
+3. Ba chi tiết trong ảnh (mặt trong kính, không nhẫn, sẹo và dây chun). Người viết giấy xin nghỉ: **Ngân**. Câu chọn dấu vết (lộ đáp án) đổi thành **hai ô tự gõ**: từ sai chính tả chung **"trăm"**, chữ cái có nét riêng **"g"**.
+4. Sắp xếp sáu dòng; người khởi phát **Ngân**; tiếng ho là **Ngân**. Câu nghe được khi băng chạy chậm đổi từ chọn sang **tự chép lại**: "Cô Vân nghe thấy rồi à?". Dòng chữ ma ở câu 4 đổi thành "con ngủ với mẹ nhé". Câu "tách ra thì sao" thêm hai phương án nhiễu.
+5. Các phương án viết ngắn, dài ngang nhau.
+   - Nguyên nhân chết: thêm "nhồi máu cơ tim", "ngộ độc formol". Đáp án: cơn khó thở do bệnh van tim, không có thuốc.
+   - Chỗ ông Khải: *bẫy* thêm **chiều tàu ngược lại** (Lào Cai đi Hà Nội) và "nhà khách Bạch Mai". Đáp án: tàu đêm Hà Nội về Lào Cai.
+   - Ngày âm 25 tháng Một; 10 cân than.
+   - Câu "nguy hiểm thế nào" (lộ) đổi thành: **theo trang vở, ai sẽ ngủ trong buồng: Ngân và ông Khải** ("cả nhà ngủ cùng mẹ"). *Bẫy:* "chỉ Ngân".
+6. Khoanh tờ lịch **30/12/1991**. Bỏ câu "vì sao trung uý Bảo nghĩ đã qua" (đáp án lộ). Thay bằng:
+   - **số than không thu được nếu không mở buồng: 5 cân**;
+   - **lối Ngân vào buồng: cửa ngách sau chạn bát trong bếp** (*bẫy:* cửa sổ gian giữa, buồng tối, lỗ thông gió).
+7. **Bước ngoặt: bảy phương án A–G, viết dài ngang nhau, cùng giọng điệu.** Chỉ **E** đúng. Mỗi phương án sai có một lỗ hổng phải suy ra từ hồ sơ:
+
+| Phương án | Nghe hợp lý vì | Lỗ hổng chết người |
+|---|---|---|
+| A. Theo trung uý Bảo, Ngân ngủ nhà bà Lụa | có người lớn trông | nhà bà Lụa **sát vách** buồng trong (sơ đồ); Ngân lẻn về qua sân sau, vào bếp |
+| B. Mở buồng chiều nay, có cán bộ chứng kiến | sự thật được phơi ra | Ngân ôm lò chạy vào buồng, chốt cửa; trong buồng đã có **5 cân than** |
+| C. Nói thật với Ngân, có thầy Sinh ngồi cùng | nhân văn | Ngân "biết rồi" (băng chạy chậm), chỉ hành động sớm hơn |
+| D. Thu hết than, hoãn mở buồng, hỏi thăm trong đêm | than đã thu | **5 cân trong buồng** chưa thu; Ngân vẫn ở nhà |
+| **E. Ngân lên viện có người ngồi cạnh; thu than; ông Khải ở nhà với cán bộ** | | **đúng**: tách người khởi phát khỏi nhà, có người canh, người tiếp nhận tự tỉnh |
+| F. Ngân lên viện, **ông Khải đi cùng** ngồi cạnh con | ông là bố, Ngân yên tâm | ông Khải là **người tiếp nhận**: Ngân bảo gì ông làm nấy; 23 giờ ông xin cho con về thắp hương |
+| G. Ngân ở nhà, **cán bộ thức ở gian giữa**; ông Khải lên viện | có người canh, tách được hai người | Ngân vào buồng qua **cửa ngách trong bếp**, không đi qua gian giữa |
+
+Lời dẫn kết thúc xấu có thêm hai bản cho F và G. Biên bản sáng 31/12 ghi thêm: cửa ngách trong bếp chèn chăn, chốt từ bên trong; trong buồng có vỏ bao than năm cân. Kết thúc tốt ghi: bao 5 cân vẫn nằm sau cửa dán kín, không ai đốt.
 
 ## 5. Bằng chứng then chốt (phải có trong game)
 - **Danh sách rà soát lao 1990–1991** của trạm (tên Phạm Thị Hằng, "chưa khám, người nhà từ chối, BN nằm buồng").
