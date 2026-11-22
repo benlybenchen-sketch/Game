@@ -56,13 +56,33 @@ Aspect ratio 16:9. Character reference sheet, realistic photograph, plain mid-gr
 
 ## A. Thị trấn, ngôi nhà và bìa
 
-### 1. `cover.jpg`
-**Đính kèm:** `00_mau_ngan.jpg`.
-**Bố cục:** khung dọc. Cánh cửa dán kín chiếm **giữa** khung, cao gần hết khung. Ngân đứng **bên phải cửa**, nghiêng người, tai và lòng bàn tay áp vào cửa. Cửa sổ nhỏ ở **bên trái** cho ánh trăng xanh. Ánh lò than đỏ cam lọt ra **khe dưới cửa**.
-**Kiểm tra:** cửa dán băng keo nâu và giấy báo quanh mọi mép, khe dưới nhét chăn hoa; Ngân mặc **áo len đỏ đô của mẹ rộng thùng thình** (tay áo dài che kín bàn tay) và khăn kem; không có ai khác; không có chữ trên giấy báo.
-**Nếu sai:** *"Same image, but: the door must be sealed with brown packing tape and yellowed newspaper along EVERY edge and over the keyhole; a folded floral quilt stuffed under the door; a thin red-orange charcoal glow leaking from under it; the newspaper must show no readable text."*
+### 1. `cover.jpg` (bản ghê hơn: chọn **một** trong ba phương án)
+**Đính kèm:** `00_mau_ngan.jpg` (phương án C đính kèm thêm `00_mau_hang.jpg`).
+**Vì sao bản cũ không ghê:** ánh sáng dịu, Ngân hiền, không có gì "sai". Ba bản dưới đều có: **ánh đỏ lò than hắt từ dưới lên mặt**, **ánh mắt nhìn thẳng người xem**, và **một thứ không được phép có ở đó**.
+
+#### Phương án A · "Bón cháo cho mẹ" (mình khuyên chọn)
+**Bố cục:** khung dọc, góc máy **thấp sát sàn**. Cánh cửa dán kín chiếm nửa trên. Ngân **quỳ dưới sàn, tiền cảnh**, đang đưa một thìa cháo vào **khe dưới cửa**. Trong khe tối đen, **một lọn tóc dài đen** thò ra. Ngân **ngẩng mặt nhìn thẳng ống kính**, cười.
+**Kiểm tra:** cửa dán băng keo nâu và giấy báo quanh mép; khe dưới cửa **tối đen, không có ánh lò** (chăn đã kéo ra để đưa thìa); **lọn tóc đen** từ trong khe; mặt Ngân **sáng từ dưới lên** bởi lò than đặt cạnh cô; nụ cười ngoan nhưng mắt trống rỗng.
+**Nếu sai:**
+- *"Same image, but a long strand of black hair must slip out from the dark gap under the door, touching the spoon."*
+- *"Same image, but the girl must look straight into the camera, lit only from below by the red charcoal glow."*
 ```
-Aspect ratio 3:4. Cinematic horror film still shot on 35mm colour film, northern mountain town of Vietnam, December 1991, night. A narrow room of a poor brick house: lime-washed walls with grey damp stains, a bare yellow incandescent bulb hanging on a wire, concrete floor. Centre of the frame, almost full height: an old dark wooden inner door, completely sealed shut with strips of brown packing tape and yellowed newspaper pasted along every edge and over the keyhole (the newspaper print is blurred, unreadable); a folded floral cotton quilt is stuffed into the gap under the door, and a thin red-orange glow of burning charcoal leaks out beneath it, with faint grey smoke curling up. To the RIGHT of the door stands the 15-year-old girl from the attached reference (thin, pale, pointed chin, long black hair in a low ponytail), leaning sideways, pressing her ear and her open palm gently against the sealed door, eyes half closed, listening, a faint tender smile. She wears a burgundy cable-knit wool sweater far too big for her, the sleeves covering her hands, and a cream knitted wool scarf. On the LEFT wall a small window lets in cold blue moonlight. Warm red glow from below the door, deep shadows elsewhere, breath vapour visible in the cold air. Quiet, intimate, deeply wrong. Film grain. No other people. No text, no letters, no numbers, no watermark.
+Aspect ratio 3:4. Cinematic horror film still on 35mm colour film, northern Vietnam, December 1991, night. Extremely low camera angle, almost at floor level, slightly tilted. The upper half of the frame is an old dark wooden inner door, completely sealed with strips of brown packing tape and yellowed newspaper along every edge (newspaper print blurred, unreadable). The floral quilt that normally blocks the gap under the door has been pulled aside, and the gap is pitch black. In the foreground, kneeling on the cold concrete floor, is the 15-year-old girl from the attached reference (very pale, thin, pointed chin, long black hair in a low ponytail), wearing a burgundy cable-knit wool sweater far too big for her and a cream knitted scarf. She holds a small porcelain bowl of rice porridge in one hand and, with the other, pushes a spoonful of porridge into the black gap under the door, as if feeding someone lying on the other side. From that dark gap, a single long strand of black woman's hair has slipped out and lies across the spoon. The girl is looking up straight into the camera with a sweet, obedient smile; her eyes are empty and unblinking. Her face is lit only from below by the red-orange glow of a clay charcoal brazier on the floor beside her; everything above her eyes falls into deep shadow. Cold blue moonlight touches only the tape on the door. Breath vapour in the cold air, film grain, crushed blacks. No other visible person. No text, no letters, no numbers, no watermark.
+```
+
+#### Phương án B · "Ho cho bố nghe"
+**Bố cục:** khung dọc. Ngân **trùm khăn len kem của mẹ** kín đầu như mạng che, **ép mặt vào khe cửa**, miệng há như đang ho; **mắt liếc sang nhìn thẳng ống kính**. Phía sau, **xa và mờ**, ông Khải nằm ngủ trên phản, quay lưng.
+**Nếu sai:** *"Same image, but her eyes must turn toward the camera while her mouth is pressed to the door crack, as if caught in the act."*
+```
+Aspect ratio 3:4. Cinematic horror film still on 35mm colour film, northern Vietnam, December 1991, 2 a.m. Close medium shot of an old wooden inner door sealed with brown packing tape and yellowed newspaper (print unreadable). The 15-year-old girl from the attached reference stands pressed against the door, a cream knitted wool scarf draped over her head and around her face like a veil, the burgundy sweater hanging off her thin shoulders. Her lips are pressed to the narrow crack between the door and the frame, her mouth open wide in the middle of a forced, rasping cough, her hand cupped around her mouth to push the sound into the crack. Her eyes have turned sideways and look straight into the camera, wide, caught. A faint red glow from a charcoal brazier lights her from below. In the far background, out of focus, a thin man sleeps on a wooden plank bed with his back turned, under a quilt. Dark, cramped, cold blue moonlight, film grain. No text, no letters, no numbers, no watermark.
+```
+
+#### Phương án C · "Cả nhà ngủ cùng mẹ"
+**Đính kèm thêm:** `00_mau_hang.jpg`.
+**Bố cục:** khung dọc. Ngân **nằm nghiêng trên sàn trước cửa**, đầu gối lên cánh tay, mắt mở nhìn ống kính. Từ **khe dưới cửa**, **một bàn tay người đàn bà gầy, xám, có nhẫn cưới vàng ở ngón áp út tay trái**, thò ra nắm hờ những ngón tay của Ngân.
+**Nếu sai:** *"Same image, but the hand reaching from under the door must be a thin grey adult woman's LEFT hand with a plain gold wedding ring, gently holding the girl's fingers."*
+```
+Aspect ratio 3:4. Cinematic horror film still on 35mm colour film, northern Vietnam, December 1991, night, top-down three-quarter angle. On the cold concrete floor in front of an old wooden door sealed with brown packing tape and yellowed newspaper (print unreadable), the 15-year-old girl from the first attached reference lies curled on her side under a thin floral quilt, her head resting on her arm, wearing the oversized burgundy sweater, eyes wide open and staring straight into the camera, calm and content. Her free hand rests on the floor near the gap under the door. From that gap, a thin, grey, bloodless adult woman's LEFT hand reaches out and gently holds the girl's fingers; on its ring finger, a plain gold wedding band, the same as the woman in the second attached reference. A red-orange charcoal glow seeps from under the door and lights both hands from below. Everything else is cold blue darkness. Tender and unbearable. Film grain. No gore. No text, no letters, no numbers, no watermark.
 ```
 
 ### 2. `cam_duong.jpg`
