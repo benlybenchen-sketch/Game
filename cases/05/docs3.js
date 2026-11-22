@@ -44,9 +44,9 @@ export default [
     <div class="doc doc--form">
       <div class="report-head">TRẠM Y TẾ CAM ĐƯỜNG · SỔ THỦ THUẬT</div>
       <p>5/1/1990, 21 giờ. Đỗ Thị Ngân, 13 tuổi. Người đưa đến: bố.</p>
-      <p>${ln("pk_vet", "Vết cắt mặt trong cổ tay trái, dài 4 cm, gọn, sâu, theo chiều ngang. Khâu 6 mũi.")}</p>
+      <p>${ln("pk_vet", "Vết cắt mặt trong cổ tay phải, dài 4 cm, gọn, sâu, theo chiều ngang. Khâu 6 mũi.")}</p>
       <p>Bố khai: con gái cắt phim, dao cạo trượt.</p>
-      <p class="small">${ln("pk_sinh", "Ghi chú của y sĩ Sinh, viết thêm năm 1991 khi đọc lại sổ: “Dao cạo trượt thì không cắt ngang cổ tay trái gọn như thế. Hồi ấy tôi không hỏi. Tôi có lỗi.”")}</p>
+      <p class="small">${ln("pk_sinh", "Ghi chú của y sĩ Sinh, viết thêm năm 1991 khi đọc lại sổ: “Dao cạo trượt thì không cắt ngang cổ tay phải gọn như thế. Hồi ấy tôi không hỏi. Tôi có lỗi.”")}</p>
     </div>`,
   },
 

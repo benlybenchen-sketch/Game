@@ -33,7 +33,7 @@ Nỗi sợ của hồ sơ này là **tình thương biến thành nhà giam**. K
 |---|---|---|---|
 | **Lê Bích Vân** (người chơi) | 22 | Sinh viên Y Hà Nội năm 5, thực tập y tế cộng đồng 6 tuần ở Cam Đường. Đây là ca bệnh khiến Vân chọn ngành tâm thần (nối với hồ sơ 04) | Người đề xuất phương án đêm cuối |
 | **Đỗ Văn Khải** | 47 | Thợ ảnh, trước 1988 là kỹ thuật viên phòng hoá nghiệm mỏ apatit. Hiền, ít nói, gầy rộc, nghiện rượu ngô từ 1990. Giọng Bắc (gốc Nam Định) | **Người tiếp nhận.** Giấu xác vợ vì con. Dần tin thật vợ còn sống |
-| **Đỗ Thị Ngân** | 15 (sinh 1976) | Con gái duy nhất, học lớp 9. Học giỏi văn, chữ đẹp, rất lễ phép, hay cười. Cổ tay trái có **sẹo rạch** (tháng 1/1990), luôn đeo dây chun tóc che | **Người khởi phát.** Tin mẹ còn sống, giữ cả nhà trong niềm tin đó |
+| **Đỗ Thị Ngân** | 15 (sinh 1976) | Con gái duy nhất, học lớp 9. Học giỏi văn, chữ đẹp, rất lễ phép, hay cười. Cổ tay phải có **sẹo rạch** (tháng 1/1990), luôn đeo dây chun tóc che | **Người khởi phát.** Tin mẹ còn sống, giữ cả nhà trong niềm tin đó |
 | **Phạm Thị Hằng** | chết lúc 41 | Cô giáo dạy văn cấp 2, bệnh **hở van hai lá** từ 1985, có thuốc trợ tim để đầu giường. Đeo nhẫn cưới tay trái | **Đã chết** đêm 22/12/1989, thi thể nằm trong buồng suốt 2 năm |
 | **Y sĩ Lò Văn Sinh** | 50 | Trạm trưởng, người Giáy, làm y tế ở Cam Đường 25 năm, quý nhà ông Khải | Người giao việc. Tin rằng ông Khải "khổ quá hoá dở" |
 | **Trung uý Phùng Quang Bảo** | 35 | Công an thị trấn, thực tế, nóng ruột | Người đưa ra phương án sai mà ai cũng thấy hợp lý: đưa ông Khải về đồn |
@@ -55,7 +55,7 @@ Nỗi sợ của hồ sơ này là **tình thương biến thành nhà giam**. K
 - Sáng 23, ông Khải về, thấy vợ chết ngồi tựa thành giường. Ngân ngồi cạnh mẹ, chải tóc cho mẹ, nói: **"Mẹ ngủ. Bố đừng đánh thức mẹ."**
 
 ### 3.3. Năm 1990–1991: căn buồng
-- **23/12/1989 – 5/1/1990**: Ông Khải định báo trạm y tế. Lần nào nhắc tới, Ngân cũng gào khóc, đập đầu vào tường. **Ngày 5/1/1990**, Ngân rạch cổ tay trái bằng dao cạo phim. Ông Khải băng cho con, rồi hứa: **"Mẹ không đi đâu cả."**
+- **23/12/1989 – 5/1/1990**: Ông Khải định báo trạm y tế. Lần nào nhắc tới, Ngân cũng gào khóc, đập đầu vào tường. **Ngày 5/1/1990**, Ngân rạch cổ tay phải bằng dao cạo phim. Ông Khải băng cho con, rồi hứa: **"Mẹ không đi đâu cả."**
 - Ông dùng formol, vôi bột và than củi để giữ xác vợ trong buồng (trời lạnh, khô). Dán kín cửa. Mùi formol lẫn với mùi hoá chất của hiệu ảnh và mùi hương đốt cả ngày. Hàng xóm chỉ thấy "nhà ấy lúc nào cũng hương khói".
 - Ông khai với thị trấn rằng Hằng "lên cơn tim, ho, đi Hà Nội chữa", rồi từ tháng 3/1990 là "về rồi, nhưng yếu, nằm buồng, không tiếp ai". Trạm y tế ghi tên Hằng vào danh sách nghi lao.
 - **Ngân** viết giấy xin phép nghỉ dạy, rồi giấy xin nghỉ không lương, gửi trường của mẹ, bắt chước chữ mẹ. Ngân cũng viết thư "của mẹ" gửi cô chủ nhiệm, xin cho Ngân "được nghỉ sớm để chăm mẹ".
@@ -76,7 +76,7 @@ Ngân sắp 16 tuổi. Cô chủ nhiệm muốn gặp bà Hằng. Trạm y tế 
 |---|---|---|---|
 | **1** | T5 19/12 | Hồ sơ trạm y tế: danh sách nghi lao, ghi chép của y sĩ Sinh, đơn phản ánh "mùi lạ" của bà Lụa, sơ đồ nhà, giấy xin nghỉ của bà Hằng ở trường | Bà Hằng không ai thấy mặt từ 22/12/1989. Mọi giấy tờ đều do người nhà chuyển |
 | **2** | T7 21/12 | Lần đầu vào nhà: ông Khải và Ngân kể về mẹ; băng ghi âm tiếng ho sau cửa; mùi formol; lời kể của bà Lụa | **Bắt mâu thuẫn**: hai cha con kể khác nhau về cùng một ngày (mẹ ăn gì, mẹ mặc gì). Cả hai đều tin, nhưng chỉ một người "biết trước" |
-| **3** | T2 23/12 | Ảnh "Vợ tôi, Tết 1991"; ảnh cưới 1975; nét chữ trên giấy xin nghỉ so với bài văn của Ngân; giấy cửa hàng than | **Đèn pin**: bóng trong kính là mặt một đứa trẻ, tay trong ảnh không đeo nhẫn và có vết sẹo ở cổ tay trái. Giấy tờ "của mẹ" do Ngân viết. Người chơi nghiêng sang: ông Khải ép con đóng vai mẹ |
+| **3** | T2 23/12 | Ảnh "Vợ tôi, Tết 1991"; ảnh cưới 1975; nét chữ trên giấy xin nghỉ so với bài văn của Ngân; giấy cửa hàng than | **Đèn pin**: bóng trong kính là mặt một đứa trẻ, tay trong ảnh không đeo nhẫn và có vết sẹo ở cổ tay phải. Giấy tờ "của mẹ" do Ngân viết. Người chơi nghiêng sang: ông Khải ép con đóng vai mẹ |
 | **4** | T4 25/12 | Sách giáo khoa về folie à deux; sổ tay ông Khải; nhật ký Ngân (một phần); băng ho đêm, cho chạy chậm | **Xếp dòng thời gian**: mọi điều "mẹ làm" đều xuất hiện ở Ngân trước. Tiếng ho là giọng Ngân. **Ngân là người khởi phát** |
 | **5** | T6 27/12 | Bệnh án hở van hai lá 1985; lời khai của người bán vé tàu (ông Khải đi Hà Nội đêm 22/12/1989); trang nhật ký bị xé; tờ rơi "ngộ độc khí than"; hoá đơn 10 cân than | **Ghép thư xé**: "Mẹ gọi con lấy thuốc. Con bịt tai." Tội lỗi là gốc của hoang tưởng. Kế hoạch "đêm 25 tháng Một" |
 | **6** | T2 30/12 | Lịch vạn niên 1991; biên bản họp của trạm và công an; phương án của trung uý Bảo | **Tra lịch âm**: 25 tháng Một là **hôm nay**. Bước ngoặt: Vân đề xuất phương án cho **đêm nay** |

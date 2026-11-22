@@ -64,14 +64,15 @@ export function map(el) {
 // ------------------------------------------------------------------ flashlight on a photograph
 // Spots in % of the picture (x, y, w, h). Right ones: mat, nhan, seo. The rest are ordinary details.
 export const SPOTS = [
-  { id: "mat", x: 38, y: 8, w: 26, h: 30, text: "Bóng một khuôn mặt trẻ con trong mặt kính cửa sổ" },
-  { id: "nhan", x: 44, y: 54, w: 22, h: 10, text: "Hai bàn tay trên bậu cửa không đeo nhẫn" },
-  { id: "seo", x: 30, y: 54, w: 13, h: 14, text: "Dây chun đen và vết sẹo ở cổ tay trái" },
-  { id: "khan", x: 24, y: 20, w: 14, h: 26, text: "Khăn len kem trùm kín đầu" },
-  { id: "ao", x: 20, y: 46, w: 10, h: 38, text: "Áo len đỏ rộng thùng thình" },
-  { id: "tra", x: 70, y: 48, w: 14, h: 14, text: "Chén trà nguội trên bậu cửa" },
-  { id: "ghe", x: 22, y: 84, w: 40, h: 16, text: "Ghế đẩu gỗ, giống trong ảnh 1988" },
-  { id: "khung", x: 66, y: 4, w: 30, h: 40, text: "Khung cửa sổ gỗ, giống trong ảnh 1988" },
+  // Laid out on the real photo (img/05/vo_toi_tet_1991.jpg). Checked in order, so small spots come before the large ones around them.
+  { id: "seo", x: 53, y: 55, w: 7, h: 9, text: "Dây chun đen và vết sẹo ở cổ tay phải" },
+  { id: "mat", x: 40, y: 16, w: 18, h: 26, text: "Bóng một khuôn mặt trẻ con trong mặt kính cửa sổ" },
+  { id: "nhan", x: 44, y: 48, w: 20, h: 10, text: "Hai bàn tay trên bậu cửa không đeo nhẫn" },
+  { id: "tra", x: 73, y: 44, w: 9, h: 10, text: "Chén trà nguội trên bậu cửa" },
+  { id: "khan", x: 23, y: 16, w: 19, h: 28, text: "Khăn len kem trùm kín đầu" },
+  { id: "ao", x: 19, y: 44, w: 26, h: 48, text: "Áo len đỏ rộng thùng thình" },
+  { id: "ghe", x: 23, y: 92, w: 25, h: 8, text: "Ghế đẩu gỗ, giống trong ảnh 1988" },
+  { id: "khung", x: 60, y: 0, w: 38, h: 54, text: "Khung cửa sổ gỗ, giống trong ảnh 1988" },
 ];
 export function torch(el) {
   el.innerHTML = `

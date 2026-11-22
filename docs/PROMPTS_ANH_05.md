@@ -19,7 +19,7 @@
 | Ai | Dấu |
 |---|---|
 | **Bà Hằng** (40 tuổi) | Mặt tròn đầy, tóc ngang vai buộc thấp. **Nhẫn cưới vàng trơn ở ngón áp út tay trái.** Áo len đỏ đô vặn thừng, khăn len màu kem. |
-| **Ngân** (15 tuổi) | Gầy, cằm nhọn, da rất tái, tóc dài buộc thấp. **Cổ tay trái, mặt trong: một vết sẹo mảnh nằm ngang, che một phần bằng dây chun buộc tóc màu đen.** Không đeo nhẫn hay trang sức. |
+| **Ngân** (15 tuổi) | Gầy, cằm nhọn, da rất tái, tóc dài buộc thấp. **Cổ tay phải, mặt trong: một vết sẹo mảnh nằm ngang, che một phần bằng dây chun buộc tóc màu đen.** Không đeo nhẫn hay trang sức. |
 | **Ông Khải** (47 tuổi) | Rất gầy, má hóp, râu lún phún bạc, mắt đỏ, đốt tay nứt nẻ ố nâu (hoá chất ảnh). Áo bông kaki bạc màu. |
 | **Áo của mẹ** | Áo len **đỏ đô** (burgundy), đan tay, vặn thừng. Khăn len **màu kem**. Hai món này phải giống nhau ở ảnh 1988 và ảnh "Vợ tôi, Tết 1991". |
 | **Cửa buồng** | Cửa gỗ cũ, **dán kín băng keo nâu và giấy báo vàng quanh mọi mép**, khe dưới cửa nhét chăn hoa. |
@@ -38,10 +38,10 @@ Aspect ratio 16:9. Character reference sheet, realistic photograph, plain mid-gr
 
 ### 00b. `00_mau_ngan.jpg`
 **Đính kèm:** `00_mau_hang.jpg`.
-**Kiểm tra:** cô bé 15 tuổi có đôi mắt giống mẹ nhưng gầy, cằm nhọn; đồng phục học sinh miền Bắc đầu 90 (áo sơ mi trắng, quần xanh than, khăn quàng đỏ, áo len xám cũ khoác ngoài); **cổ tay trái có dây chun đen và vết sẹo mảnh** thấy rõ ở dáng toàn thân (tay giơ ra trước); không trang sức.
-**Nếu sai:** *"Same sheet, but in the full-body view she holds her LEFT forearm forward, inside of the wrist toward camera: a thin pale horizontal healed scar, half covered by a black hair elastic. No ring, no jewellery."*
+**Kiểm tra:** cô bé 15 tuổi có đôi mắt giống mẹ nhưng gầy, cằm nhọn; đồng phục học sinh miền Bắc đầu 90 (áo sơ mi trắng, quần xanh than, khăn quàng đỏ, áo len xám cũ khoác ngoài); **cổ tay phải có dây chun đen và vết sẹo mảnh** thấy rõ ở dáng toàn thân (tay giơ ra trước); không trang sức.
+**Nếu sai:** *"Same sheet, but in the full-body view she holds her RIGHT forearm forward, inside of the wrist toward camera: a thin pale horizontal healed scar, half covered by a black hair elastic. No ring, no jewellery."*
 ```
-Aspect ratio 16:9. Character reference sheet, realistic photograph, plain mid-grey seamless studio background, soft even daylight, no dramatic shadows. The SAME 15-year-old Vietnamese girl shown three times side by side, equal size: (1) front view head and shoulders, (2) three-quarter view head and shoulders, (3) full body standing, holding her LEFT forearm slightly forward with the inside of the wrist turned toward the camera. She is the daughter of the woman in the attached reference: the same dark eyes, but a much thinner face, narrow pointed chin, very pale skin, chapped lips from the cold, long straight black hair in a low ponytail. She wears an early-1990s northern Vietnamese secondary school uniform: white long-sleeved cotton shirt, dark navy trousers, a red Young Pioneer scarf knotted at the neck, a worn, pilled grey cardigan on top, black plastic sandals with socks. On the inside of her LEFT wrist: a thin pale horizontal healed scar, partly covered by a black fabric hair elastic. No ring, no jewellery. Polite, sweet smile, but the eyes do not smile. Natural skin texture. No text, no letters, no numbers, no labels, no watermark.
+Aspect ratio 16:9. Character reference sheet, realistic photograph, plain mid-grey seamless studio background, soft even daylight, no dramatic shadows. The SAME 15-year-old Vietnamese girl shown three times side by side, equal size: (1) front view head and shoulders, (2) three-quarter view head and shoulders, (3) full body standing, holding her RIGHT forearm slightly forward with the inside of the wrist turned toward the camera. She is the daughter of the woman in the attached reference: the same dark eyes, but a much thinner face, narrow pointed chin, very pale skin, chapped lips from the cold, long straight black hair in a low ponytail. She wears an early-1990s northern Vietnamese secondary school uniform: white long-sleeved cotton shirt, dark navy trousers, a red Young Pioneer scarf knotted at the neck, a worn, pilled grey cardigan on top, black plastic sandals with socks. On the inside of her RIGHT wrist: a thin pale horizontal healed scar, partly covered by a black fabric hair elastic. No ring, no jewellery. Polite, sweet smile, but the eyes do not smile. Natural skin texture. No text, no letters, no numbers, no labels, no watermark.
 ```
 
 ### 00c. `00_mau_khai.jpg`
@@ -153,7 +153,7 @@ Aspect ratio 4:3. Realistic photograph on faded late-1980s colour film, warm lat
 | **Bóng mặt cô bé trong kính cửa sổ** (rất mờ) | ngang 38–64%, cao 8–38% (ô kính giữa) |
 | Khung cửa sổ gỗ | ngang 66–96%, cao 4–44% |
 | **Đầu trùm khăn len kem** (quay lưng) | ngang 24–38%, cao 20–46% |
-| **Cổ tay trái có dây chun đen và sẹo** | ngang 30–43%, cao 54–68% |
+| **Cổ tay phải có dây chun đen và sẹo** | ngang 30–43%, cao 54–68% |
 | **Hai bàn tay trên bậu cửa, không nhẫn** | ngang 44–66%, cao 54–64% |
 | Chén trà nguội | ngang 70–84%, cao 48–62% |
 | Áo len đỏ đô rộng thùng thình (lưng, vai) | ngang 20–30%, cao 46–84% |
@@ -162,17 +162,17 @@ Aspect ratio 4:3. Realistic photograph on faded late-1980s colour film, warm lat
 **Kiểm tra:**
 - Cùng cửa sổ, ghế, góc máy như ảnh 7.
 - Người ngồi **quay lưng hẳn**, đầu **trùm** khăn len kem (không thấy tóc), áo len đỏ đô **quá rộng**, vai nhỏ.
-- Hai tay đặt trên bậu cửa: **không có nhẫn**; ở **cổ tay trái (bên trái người xem)**: dây chun đen, vết sẹo mảnh.
+- Hai tay đặt trên bậu cửa: **không có nhẫn**; ở **cổ tay phải (bên trái người xem)**: dây chun đen, vết sẹo mảnh.
 - Trong **ô kính giữa** có bóng phản chiếu **rất mờ** của mặt một cô bé (mặt Ngân), phải nhìn kỹ mới thấy.
 - Ảnh tối hơn ảnh 7, ánh sáng mùa đông xám, hơi nhoè.
 
 **Nếu sai:**
 - Không thấy bóng trong kính: *"Same image, but add a very faint ghostly reflection of the teenage girl's face in the middle window pane, upper centre of the frame, subtle like a real glass reflection."*
 - Bóng quá rõ: *"Same image, but make the face reflection in the glass much fainter, almost invisible at first glance."*
-- Có nhẫn, hoặc thiếu sẹo: *"Same image, but no ring on any finger; on the inside of her LEFT wrist (viewer's left) a black hair elastic and a thin pale scar line."*
+- Có nhẫn, hoặc thiếu sẹo: *"Same image, but no ring on any finger; on the inside of her RIGHT wrist (viewer's right) a black hair elastic and a thin pale scar line."*
 - Sai góc máy: *"Same scene, but match the attached 1988 photo exactly: same window position in the upper middle-right, same windowsill height, same stool, same camera angle."*
 ```
-Aspect ratio 4:3. Realistic photograph on faded early-1990s colour film, dim grey winter light, Tết 1991. EXACTLY the same room, window, windowsill, wooden stool and camera angle as the first attached photograph: the camera behind and slightly to the left of the seated person, at shoulder height; the four-pane wooden window in the upper middle-to-right of the frame; the windowsill running horizontally at about 55% of the frame height; the low wooden stool at the bottom, slightly left of centre. Sitting on the stool, with her back FULLY turned to the camera and facing the window, is a small, thin girl wearing the same burgundy cable-knit wool sweater, but far too big for her: drooping shoulders, sleeves pushed up. The cream knitted wool scarf is draped over her head like a hood, so no hair is visible; the hooded head is in the left-centre of the frame. Both her hands rest on the windowsill in the centre of the frame: young, thin, pale hands, with NO ring on any finger. On the inside of her LEFT wrist (on the viewer's left), a black fabric hair elastic and a thin pale horizontal scar line. In the MIDDLE window pane, in the upper centre of the frame, a very faint ghostly reflection of the face of the teenage girl from the second attached reference (pale, pointed chin), looking back toward the camera, subtle like a real reflection in glass, almost invisible at first glance. A small white tea cup, cold, untouched, stands on the windowsill to the right. Slightly underexposed, soft focus, visible film grain. Melancholic and quietly disturbing. No text, no letters, no numbers, no date stamp, no watermark.
+Aspect ratio 4:3. Realistic photograph on faded early-1990s colour film, dim grey winter light, Tết 1991. EXACTLY the same room, window, windowsill, wooden stool and camera angle as the first attached photograph: the camera behind and slightly to the left of the seated person, at shoulder height; the four-pane wooden window in the upper middle-to-right of the frame; the windowsill running horizontally at about 55% of the frame height; the low wooden stool at the bottom, slightly left of centre. Sitting on the stool, with her back FULLY turned to the camera and facing the window, is a small, thin girl wearing the same burgundy cable-knit wool sweater, but far too big for her: drooping shoulders, sleeves pushed up. The cream knitted wool scarf is draped over her head like a hood, so no hair is visible; the hooded head is in the left-centre of the frame. Both her hands rest on the windowsill in the centre of the frame: young, thin, pale hands, with NO ring on any finger. On the inside of her RIGHT wrist (on the viewer's right), a black fabric hair elastic and a thin pale horizontal scar line. In the MIDDLE window pane, in the upper centre of the frame, a very faint ghostly reflection of the face of the teenage girl from the second attached reference (pale, pointed chin), looking back toward the camera, subtle like a real reflection in glass, almost invisible at first glance. A small white tea cup, cold, untouched, stands on the windowsill to the right. Slightly underexposed, soft focus, visible film grain. Melancholic and quietly disturbing. No text, no letters, no numbers, no date stamp, no watermark.
 ```
 
 ### 9. `buong_toi.jpg`
