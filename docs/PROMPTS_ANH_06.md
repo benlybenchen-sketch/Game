@@ -111,13 +111,35 @@ Aspect ratio 16:9. Realistic night photograph, late summer 1936, the ferry landi
 Aspect ratio 4:3. 1930s police forensic photograph, black and white, grainy silver gelatin print with slightly burned edges, shot straight down from above. The LEFT hand and forearm of a drowned young man's body lying on a rough wooden plank on a muddy riverbank. Palm facing up, so the thumb points toward the right side of the image. The hand is broad, strong and working-class, the skin pale, swollen and wrinkled from days in water. Across the palm, a thick diagonal callus line runs from the base of the index finger down to the heel of the hand, like a mark worn by reins. Around the wrist is tied a single thin thread knotted in a small bow: the ONLY coloured element in the whole photograph, bright red. A wet, dark silk sleeve covers the forearm. Clinical, quiet, disturbing, not gory. No text, no letters, no Chinese characters, no numbers, no scale ruler, no watermark.
 ```
 
-### 06. `linh_duong.jpg` (lời tộc trưởng, sáng 21)
-**Đính kèm:** `cover.jpg`, `00_mau_hinh_nhan.jpg`.
-**Bố cục:** nhìn ngang vào linh đường; quan tài đỏ **giữa khung**; bàn thờ với **bài vị trơn** phía sau quan tài; hình nhân giấy đứng **bên trái** quan tài; **một ô cửa tối ở mép phải khung**.
-**Kiểm tra:** cùng linh đường như ảnh bìa; **mặt hình nhân quay hẳn sang phải, nhìn về ô cửa tối ở mép phải**, không nhìn ống kính; vải trắng và lụa đỏ treo cạnh nhau; không người.
-**Nếu sai:** *"Same image, but the paper effigy's painted face must be turned sideways to the right, staring at the dark doorway at the right edge of the frame, not at the camera."*
+### 06. `linh_duong.jpg` (lời tộc trưởng, sáng 21) · bản chi tiết
+**Vì sao phải làm lại:** lời Thuý Nhi kể "sáng nào hình nhân cũng quay mặt về phía Đông viện". Ảnh linh đường phải cho thấy điều đó: **đầu hình nhân quay hẳn sang phải, nhìn ra ô cửa tối ở mép phải**. Bản trước hình nhân nhìn thẳng ống kính.
+
+#### Cách 1 (nhanh nhất): sửa ảnh đang có
+**Đính kèm:** `linh_duong.jpg` (ảnh hiện tại), `00_mau_hinh_nhan.jpg`.
+**Kiểm tra:**
+- Mọi thứ khác **giữ y nguyên**: quan tài, bàn thờ, bài vị, nến, vải trắng và đỏ, ô cửa bên phải.
+- **Chỉ đầu hình nhân** xoay khoảng 90 độ sang phải người xem. Ta thấy **nửa mặt bên trái** của nó (một má đỏ, một mắt vẽ, sống mũi), mắt nhìn về ô cửa.
+- **Thân vẫn hướng ra trước**, hai tay buông thõng: đầu xoay mà thân không xoay, như cổ bị vặn.
+
+**Nếu sai:**
+- Thân xoay theo đầu: *"Keep the body facing forward exactly as before; ONLY the head is turned, like a twisted neck."*
+- Vẫn nhìn ống kính: *"The painted eyes must NOT look at the camera; the face is in strict side profile, looking at the doorway on the right."*
 ```
-Aspect ratio 16:9. Realistic horror photograph, 1936, the same ancestral mourning hall as the first attached image, prepared for a ghost wedding, seen from the front at eye level. In the centre, the large deep-red lacquered coffin on wooden trestles. Behind it, an altar table with a plain blank wooden ancestral tablet, two tall red candles, an incense burner with smoking sticks, plates of fruit and steamed buns. To the LEFT of the coffin stands the life-size paper bridegroom effigy from the second attached reference (blue paper gown, white face, round red cheeks), but its head is turned sideways to the RIGHT, its painted eyes staring at a dark open doorway at the right edge of the frame. Long strips of white funeral cloth and red wedding silk hang side by side from the roof beams. Warm candlelight, deep black shadows, a thin blue light from the doorway. No people. Film grain. No text, no letters, no Chinese characters, no couplets, no numbers, no watermark.
+Edit the first attached image. Keep EVERYTHING exactly the same: the same mourning hall, the same red lacquered coffin on trestles, the altar with the blank wooden tablet, the candles, fruit and steamed buns, the hanging strips of white funeral cloth and red silk, the open dark doorway with blue light at the right edge of the frame, the same camera angle, lighting and colours. Change ONLY the head of the paper bridegroom effigy on the left (the same effigy as in the second attached reference): turn its head about 90 degrees toward the right side of the image, into a strict side profile, so we see only the left half of its painted face, one round red cheek, one painted black eye and the profile of the nose, and its painted eye stares at the dark doorway on the right edge of the frame. Its body, blue paper gown and hanging arms stay facing forward, unchanged, so the head looks unnaturally twisted on the neck. A slight crease and a small tear in the paper at the side of the neck where it has turned. The painted eyes must not look at the camera. No text, no letters, no Chinese characters, no watermark.
+```
+
+#### Cách 2: tạo mới hoàn toàn
+**Đính kèm:** `cover.jpg`, `00_mau_hinh_nhan.jpg`.
+**Bố cục:** nhìn ngang, máy ngang tầm ngực.
+- Quan tài đỏ **giữa khung**, trên hai mễ gỗ.
+- Bàn thờ và bài vị **trơn** phía sau quan tài.
+- Hình nhân đứng **bên trái**, cách quan tài một bước.
+- **Ô cửa gỗ mở, tối, có ánh xanh** sát **mép phải** khung.
+- Vải trắng và lụa đỏ treo xen nhau **dọc xà trên**.
+
+**Kiểm tra:** giống phần kiểm tra ở cách 1. Thêm: không có người, không chữ trên bài vị và vải.
+```
+Aspect ratio 16:9. Realistic horror photograph, 1936, the ancestral mourning hall of a wealthy Shanxi family prepared for a ghost wedding, the same hall as in the first attached image. Eye-level camera at chest height, looking straight in. In the centre of the frame, the large deep-red glossy lacquered coffin on two wooden trestles. Behind it an altar table with a plain blank wooden ancestral tablet, two tall red candles, a bronze incense burner with smoking sticks, plates of apples and steamed buns. Long strips of white funeral cloth and red wedding silk hang side by side in rows from the roof beams across the top of the frame. At the right edge of the frame, a tall wooden lattice door stands open onto darkness with a faint cold blue light. On the LEFT side of the frame, one step from the coffin, stands the life-size paper bridegroom effigy from the second attached reference: dark blue paper gown, black paper shoes, black skullcap, white powdered paper face with round red cheeks. Its body and arms face forward toward the camera, stiff, but its HEAD is turned about 90 degrees to the right into a strict side profile, so we see only the left half of its painted face, one round red cheek and one painted black eye staring at the dark open doorway on the right edge of the frame; the paper at the side of its neck is creased and slightly torn where the head has twisted. The painted eye does not look at the camera. Warm candlelight, deep black shadows, incense smoke drifting toward the doorway. No people. Film grain. No text, no letters, no Chinese characters on the tablet, cloth or couplets, no watermark.
 ```
 
 ### 07. `dong_vien.jpg` (lời người gác đêm, đêm 21)

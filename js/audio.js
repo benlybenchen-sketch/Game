@@ -220,7 +220,8 @@ export const sfx = {
 
 // ---------- ambience ----------
 /** Picks the background of the open case: "rain" (default: rain + low drone) or "ghostWedding" (case 06). */
-export function setAmbience(style = "rain") {
+export function setAmbience(style = "rain", fallback = "rain") {
+  amb.fallback = fallback;
   if (amb.style === style) return;
   amb.style = style;
   if (amb.on) {
@@ -236,6 +237,7 @@ export function setAmbience(style = "rain") {
 export function ambience(level) {
   amb.level = level;
   if (!ac || !ctx()) return;          // wait for the first click (browser autoplay rules)
+  if (amb.style?.startsWith("file:")) return musicFile(amb.style.slice(5), level);
   if (amb.style === "ghostWedding") return ghostWedding(level);
   if (!amb.on) {
     amb.on = true;
@@ -263,6 +265,26 @@ export function ambience(level) {
   amb.nodes.dg.gain.setTargetAtTime(level >= 5 ? 0.018 : 0.05 + level * 0.02, t, 2);
   amb.nodes.oscs[3].detune.setTargetAtTime(level * -35, t, 3);   // the high voice slides into dissonance
   amb.nodes.df.frequency.setTargetAtTime(380 + level * 60, t, 2);
+}
+
+// ---------- a case's own music file (META.music) ----------
+// Loops the file under everything else, a little louder and darker with each dread level.
+// If the file cannot be loaded, falls back to the case's synthesized ambience (META.ambience) or the rain.
+function musicFile(url, level) {
+  if (!amb.on) {
+    amb.on = true;
+    const bus = ac.createGain(); bus.gain.value = 0; bus.connect(master);
+    const lp = ac.createBiquadFilter(); lp.type = "lowpass"; lp.frequency.value = 9000; lp.connect(bus);
+    amb.nodes = { out: bus, lp, all: [] };
+    fetch(url).then((r) => (r.ok ? r.arrayBuffer() : Promise.reject(r.status))).then((b) => ac.decodeAudioData(b)).then((buf) => {
+      if (amb.style !== "file:" + url) return;
+      const src = ac.createBufferSource(); src.buffer = buf; src.loop = true; src.connect(lp); src.start();
+      amb.nodes.all.push(src); ambience(amb.level);
+    }).catch(() => { if (amb.style === "file:" + url) setAmbience(amb.fallback || "rain"); });
+  }
+  const t = ac.currentTime;
+  amb.nodes.out.gain.setTargetAtTime(0.28 + level * 0.05, t, 2);
+  amb.nodes.lp.frequency.setTargetAtTime(9000 - level * 1100, t, 2);   // the music gets muffled, as if heard through a wall
 }
 
 // ---------- ghost wedding (case 06) ----------

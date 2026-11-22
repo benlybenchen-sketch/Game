@@ -63,7 +63,8 @@ async function openCase(id) {
   loadState(id);
   picking = null;
   document.body.dataset.case = id;
-  setAmbience(META.ambience || "rain");
+  // META.music: a music file in the case's audio folder (only files we have the right to publish); else META.ambience.
+  setAmbience(META.music ? "file:" + base.audio + META.music : META.ambience || "rain", META.ambience || "rain");
   document.title = `${META.title} · ${META.series}`;
   history.replaceState(null, "", `?case=${id}${new URLSearchParams(location.search).has("preview") ? "&preview=1" : ""}`);
   document.querySelector(".brand").innerHTML = `<b>${META.series}</b> · ${META.title}`;
