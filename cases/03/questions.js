@@ -83,7 +83,7 @@ export const QUESTIONS = [
     parts: [
       { id: "m71", type: "text", label: "Lời cơ 30/10/1971" },
       { id: "m04", type: "text", label: "Lời con cơ đêm nay, 11/11/2004" },
-      { id: "book", type: "choice", label: "Cuốn Kiều khớp với lời cơ năm 1971", options: ["Cuốn chú giải của Khiêm (3.254 câu)", "Cuốn in ở Huế năm 1968 của Hà Ngọc Lan (3.252 câu)", "Cả hai cuốn đều khớp"] },
+      { id: "book", type: "choice", label: "Cuốn Kiều khớp với lời cơ năm 1971", options: ["Cuốn chú giải của Khiêm, bản 3.254 câu", "Cuốn in ở Huế của Lan, bản 3.252 câu", "Cả hai cuốn đều khớp với lời cơ", "Không cuốn nào khớp với lời cơ"] },
       { id: "sach", type: "line", label: "Câu trong sổ cơ cho thấy ai đã dò lời năm 1971, và bằng sách nào (bấm vào câu đó)" },
       pins,
     ],
@@ -119,11 +119,7 @@ export const QUESTIONS = [
       { id: "who", type: "choice", label: "Bà chủ nhà thật ra là", options: PEOPLE.slice(5, 7).concat(["Bà Lâm Ngọc Diệp", "Chị của Nghi"]) },
       { id: "n", type: "number", label: "Số người bà ta đã giết năm 1971", unit: "người" },
       { id: "why", type: "choice", label: "Động cơ năm 1971", options: ["Trả thù cho người cha chết ở Huế năm 1968", "Chiếm thân phận, căn nhà và số vàng của Lâm Hạnh Dung", "Ghen vì Yến được bà Diệp và cả nhóm thương hơn", "Bịt miệng cả nhóm sau một tai nạn năm 1970", "Bị hồn bà Diệp nhập trong buổi cơ đầu tiên"] },
-      { id: "hire", type: "choice", label: "Vì sao bà ta thuê bạn", options: [
-        "Để có một người lạ làm chứng rằng con cơ tự chạy",
-        "Vì cần người đọc tiếng Pháp để giải quẻ họ Lâm, tìm chỗ giấu vàng",
-        "Vì cần người giải mã Morse và mã điện báo của Tùng",
-        "Để đầu độc thêm một người cho đủ bảy mạng"] },
+      { id: "hire", type: "choice", label: "Vì sao bà ta thuê bạn", options: ["Để có một người lạ làm chứng rằng con cơ tự chạy", "Vì cần người đọc tiếng Pháp để giải quẻ, tìm vàng", "Vì cần người giải được mã Morse và mã của Tùng", "Để đầu độc thêm một người cho đủ bảy mạng người"] },
       pins,
     ],
     memo: "",

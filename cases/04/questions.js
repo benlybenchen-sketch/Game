@@ -86,7 +86,7 @@ export const QUESTIONS = [
       { id: "ngoi", type: "choice", label: "Đường rẽ ngôi", options: ["Cùng bên với bà Hoa năm 1990", "Ngược bên", "Hồ sơ hiện có chưa cho biết"] },
       { id: "tay", type: "choice", label: "Tay cầm đũa", options: ["Cùng bên với bà Hoa năm 1990", "Ngược bên", "Hồ sơ hiện có chưa cho biết"] },
       { id: "seo", type: "choice", label: "Sẹo mổ ruột thừa", options: ["Cùng bên với bà Hoa năm 1990", "Ngược bên", "Hồ sơ hiện có chưa cho biết"] },
-      { id: "who", type: "choice", label: "Người phụ nữ xưng là bà Hoa thật ra là", options: ["Lê Thị Hoa", "Lê Thị Huệ (tên con nuôi Phạm Thị Huệ)", "Bà Tư hàng xóm", "Một người lạ ở Sài Gòn"] },
+      { id: "who", type: "choice", label: "Người phụ nữ xưng là bà Hoa thật ra là", options: ["Lê Thị Hoa, đã đổi khác sau ba tháng", "Lê Thị Huệ, tên con nuôi là Phạm Thị Huệ", "Bà Tư hàng xóm, đóng giả bà Hoa", "Một người lạ ở Sài Gòn, được thuê đóng giả"] },
       pins,
     ],
     memo: log([
@@ -105,7 +105,7 @@ export const QUESTIONS = [
       { id: "fp_cmnd", type: "choice", label: "Vân tay ngón trỏ phải trên CMND của bà Hoa (1980)", options: ["Cung", "Móc", "Xoáy"] },
       { id: "fp_form", type: "choice", label: "Dấu điểm chỉ trên giấy cam đoan nhập viện (20/8/1996)", options: ["Cung", "Móc", "Xoáy"] },
       { id: "cake", type: "choice", label: "Nhân thật của bánh trong hộp", options: ["Đậu xanh", "Tôm chấy", "Ruốc thịt heo", "Đậu phộng rang", "Dừa", "Thuốc an thần nghiền"] },
-      { id: "why", type: "choice", label: "Động cơ", options: ["Trả thù vì năm 1945 bị cho đi làm con nuôi", "Được toà cử làm giám hộ để bán nhà và vườn đứng tên Thảo", "Muốn được sống bên đứa cháu gái duy nhất", "Lấy lại phần đất hương hoả họ Lê ở Phong Lệ"] },
+      { id: "why", type: "choice", label: "Động cơ", options: ["Trả thù vì năm 1945 bị gia đình cho đi làm con nuôi", "Làm người giám hộ để bán nhà và vườn của Thảo", "Muốn được sống bên đứa cháu gái duy nhất của mình", "Lấy lại phần đất hương hoả họ Lê ở làng Phong Lệ"] },
       { id: "capgras", type: "choice", label: "Kết luận 1 · Hội chứng Capgras ở Trần Ngọc Thảo", options: ["Không có", "Có, đối với một số người quen", "Có, đối với tất cả người thân"] },
       { id: "nangluc", type: "choice", label: "Kết luận 2 · Năng lực hành vi dân sự", options: ["Mất năng lực hành vi dân sự", "Hạn chế năng lực hành vi dân sự", "Đủ năng lực hành vi dân sự"] },
       { id: "loikhai", type: "choice", label: "Kết luận 3 · Lời khai của Thảo về mẹ", options: ["Hoang tưởng", "Một phần đúng, một phần hoang tưởng", "Sự thật", "Chưa đủ cơ sở kết luận"] },

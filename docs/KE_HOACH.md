@@ -70,3 +70,11 @@ Người chơi chê hồ sơ 01 "dễ đoán". Hồ sơ 02–05 đã được l�
 
 ## Đưa bản mới lên web
 Trước mỗi lần commit: `node tools/stamp.mjs`. Lệnh này gắn mã phiên bản theo nội dung cho từng file JS (import map trong index.html) và cho CSS, nên trình duyệt người chơi luôn tải đúng file vừa sửa, không bị giữ bản cũ.
+
+## Kiểm tra trước khi mở một hồ sơ (bắt buộc, nhất là khi vừa nhận đủ ảnh)
+1. `node tools/audit.mjs <id>`: đáp án khớp phương án; câu bấm và tài liệu ghim đều có thật và đã mở ở đúng trọng điểm; không còn phương án đúng dài hơn hẳn; mỗi giai đoạn có tài liệu.
+2. `CASE=<id> node tools/smoke.mjs <thư mục>`: chơi tự động hết hồ sơ (máy tính và điện thoại).
+3. `CASE=<id> node tools/docs_ui.cjs`: mở từng tài liệu trên máy tính và điện thoại, cả sau khi thắng lẫn sau khi thua; bấm chạy từng băng; báo lỗi và tràn màn hình.
+4. Thử các đáp án bẫy chính phải bị từ chối.
+5. Ảnh có vùng soi, vùng bấm (như ảnh đèn pin hồ sơ 05): vẽ khung vùng lên ảnh thật để kiểm, chỉnh toạ độ cho khớp ảnh.
+6. Nhìn bìa trên máy tính: ảnh dọc phải hiện trọn (META.coverStyle), không để chi tiết đáng sợ bị thẻ chữ che.
