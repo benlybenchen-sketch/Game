@@ -234,7 +234,7 @@ function renderInquiry() {
     if (i === state.stage) return state.failed ? failedCard(q, i) : openCard(q, i);
     return `<div class="q-card locked"><div class="q-head"><span class="q-no">Trọng điểm ${i + 1}</span><span class="q-title">· · ·</span></div></div>`;
   }).join("");
-  $(".inq").innerHTML = `<h2>Sổ công tác</h2>${html}${finished() ? `<div class="q-card end"><b>Hồ sơ đã khép.</b> Đọc thư mục “Kết thúc” bên trái.</div>` : ""}`;
+  $(".inq").innerHTML = `<h2>Sổ công tác</h2>${html}${finished() ? `<div class="q-card end"><b>Hồ sơ đã khép.</b> Đọc thư mục “${FOLDERS[QUESTIONS.length] || "Kết thúc"}” bên trái.</div>` : ""}`;
 }
 
 function solvedCard(q, i) {
