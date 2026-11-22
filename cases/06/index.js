@@ -43,6 +43,8 @@ export const META = {
   solutionLabel: "Lời giải",
   firstDoc: "thu_moi",
   cover: "cover",
+  // Portrait cover: show it whole on the right (bride, coffin and paper groom stay in view).
+  coverStyle: "background-size:auto 100%;background-position:right center;background-repeat:no-repeat;background-color:#07090a",
   ambience: "ghostWedding",   // distant suona wedding tune, funeral woodblock, gong, night wind (js/audio.js)
   folders: ["Đêm 17 · Canh thiếp", "Đêm 18 · Ngõ Liễu", "Đêm 19 · Phiếu hiệu", "Đêm 20 · Phiếu khám xác", "Sáng 21 · Lễ phát tang",
     "Đêm 21 · Tân phòng", "Đêm 22 · Giờ Hợi", "Rạng sáng 23", "Sau đêm 22"],
