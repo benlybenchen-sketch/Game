@@ -1,139 +1,197 @@
-# Ảnh cho Hồ sơ 06 "Âm Hôn"
+# Ảnh cho Hồ sơ 06 "Âm Hôn" · bản chi tiết
 
-## Cách dùng file này
-- Mỗi ô ảnh có **một prompt duy nhất**: chép nguyên khối, dán vào AI Studio là xong. Tỉ lệ khung hình đã ghi sẵn trong prompt (câu *Aspect ratio …*). Nếu AI Studio có ô chọn tỉ lệ thì chọn giống như vậy cho chắc.
-- Dòng **Đính kèm** ghi ảnh nào phải gắn kèm trước khi gửi prompt. Ghi "Không" thì không gắn gì.
-- Dòng **Kiểm tra** là những điểm phải đúng. Sai điểm nào thì gõ tiếp câu ở dòng **Nếu sai** trong cùng cuộc trò chuyện.
-- Tạo theo đúng thứ tự từ trên xuống, trong **cùng một cuộc trò chuyện**.
-- Đổi tên file đúng như tên ghi ở đầu mỗi ô, rồi gửi lên chat.
+## Cách dùng
+1. Tạo **theo đúng thứ tự** từ trên xuống, trong **một cuộc trò chuyện AI Studio duy nhất**.
+2. Mỗi ô có **một prompt duy nhất**: chép nguyên khối, dán vào là xong. Tỉ lệ khung hình ghi trong prompt; nếu AI Studio có ô chọn tỉ lệ thì chọn y như vậy.
+3. **Đính kèm** đúng ảnh ghi trong ô. Prompt đã tả lại nhân vật đầy đủ, nên dù AI "quên" ảnh đính kèm thì vẫn ra đúng người.
+4. Đối chiếu ảnh với mục **Kiểm tra**. Sai điểm nào thì gõ câu ở mục **Nếu sai** (cùng cuộc trò chuyện, đính kèm lại ảnh vừa tạo).
+5. Đổi tên file đúng tên ở đầu ô rồi gửi lên chat.
 
-> **Mình tự làm, bạn không cần tạo:** canh thiếp, vạn niên lịch, sách tứ trụ, sổ bà mối kèm **bàn tính**, bảng giá, hối phiếu mật áp, Thiên Tự Văn, phiếu khám xác, Tẩy Oan Tập Lục, Ngũ phục đồ, sổ phát tang, tự điển bộ thủ, quá kế thư, gia phả, hôn thư. Những thứ có chữ Hán, chữ Việt và con số phải chính xác tuyệt đối, nên mình dựng bằng code.
->
-> **Không có chữ trong ảnh:** AI vẽ chữ Hán hay sai. Mọi prompt đều cấm chữ. Đèn lồng, câu đối, bùa đều để trơn hoặc có nét mờ không đọc được.
->
-> **Quy ước bên trái, bên phải:** "tay trái của anh ấy" là tay trái của nhân vật.
-> - **Ôn Thạch (xác chết):** sợi **chỉ đỏ** buộc ở **cổ tay trái**; lòng bàn tay trái có vệt chai chéo; người vạm vỡ, vai rộng.
-> - **Áo của Thừa Tự:** trường sam lụa **xanh lam đậm**, may cho người gầy.
-> - **Tú Nương:** áo cưới đỏ, khăn trùm đầu đỏ, đi chân không. Không bao giờ lộ rõ mặt trong ảnh game (chỉ ảnh mẫu).
+> **Mình tự làm bằng code, bạn không cần tạo:** canh thiếp, vạn niên lịch, sách tứ trụ, sổ bà mối kèm **bàn tính**, bảng giá, hối phiếu mật áp, Thiên Tự Văn, phiếu khám xác, Tẩy Oan Tập Lục, Ngũ phục đồ, sổ phát tang, tự điển bộ thủ, quá kế thư, gia phả, hôn thư. Những thứ này có chữ Hán, chữ Việt và con số phải đúng tuyệt đối.
+
+### Luật chung (đã viết sẵn trong từng prompt)
+- **Thời đại:** trấn nhỏ tỉnh Sơn Tây, miền Bắc Trung Quốc, năm 1936. Nhà tứ hợp viện gạch xám, đất hoàng thổ vàng, cây dương khô. Không có đồ hiện đại, không điện (chỉ đèn dầu, nến, đèn lồng, đuốc).
+- **Chất ảnh:** ảnh phim, màu trầm, hạt phim, ánh nến ấm và ánh trăng lạnh. Ảnh pháp y là đen trắng.
+- **KHÔNG CHỮ:** AI viết chữ Hán hay sai. Đèn lồng trơn, câu đối trơn, bùa có nét mờ không đọc được, thẻ tên để trống. Mọi prompt đều cấm chữ.
+- **Không máu me:** rợn bằng không khí, ánh nhìn, sự tĩnh lặng.
+- **Bên trái, bên phải:** "tay trái của anh ấy" là tay trái của nhân vật.
+
+### Dấu nhận dạng (không được sai, người chơi dùng để giải đố)
+| Ai / vật | Dấu |
+|---|---|
+| **Tú Nương** (16 tuổi) | Gầy, da rám nắng, gò má cao, **một bím tóc đen dài sau lưng**, mí mắt sưng đỏ. Khi làm cô dâu: áo và váy cưới đỏ thêu, **khăn trùm đầu đỏ che kín mặt**, **đi chân không**. Trong ảnh game **không bao giờ lộ rõ mặt** (trừ ảnh doạ số 11, chỉ lộ nửa dưới). |
+| **Thừa Tự** (19 tuổi) | Rất gầy, vai hẹp, da trắng xanh, tóc ngắn, **kính gọng tròn**. Áo **trường sam lụa xanh lam đậm**. Khi bị nhốt: gầy rộc, áo lót trắng bẩn, **chân trái bị xích vào chân giường**, đồng tử co nhỏ vì thuốc phiện. |
+| **Triệu phu nhân** (49 tuổi) | Búi tóc thấp chặt, **một trâm bạc**, môi mỏng, mặt bình thản. **Áo và váy lụa trắng trơn** (không phải đồ tang gai). **Vòng ngọc ở cổ tay phải**, **chìa khoá đồng nhỏ đeo dây đỏ ở cổ**. |
+| **Xác trong quan tài (Ôn Thạch)** | Vai rộng, tay to. **Cổ tay TRÁI buộc sợi chỉ đỏ.** Lòng bàn tay trái có vệt chai chéo. Mặc áo xanh lam **chật căng ở vai, đường may vai bục chỉ**. |
+| **Hình nhân giấy chú rể** | Cao bằng người thật, khung tre bọc giấy, **áo giấy xanh lam**, mặt giấy trắng phấn, **hai má tròn đỏ**, mắt vẽ mực đen, miệng cười đỏ nhỏ. |
+| **Quan tài** | Sơn son đỏ thẫm, bóng, đặt trên hai mễ gỗ. |
+| **Đèn lồng** | Đèn lồng giấy **trắng** (tang) treo **xen lẫn** đèn lồng **đỏ** (cưới), tất cả trơn, không chữ. |
 
 ---
 
-## Bước 0: ảnh mẫu nhân vật (không đưa vào game)
+## Bước 0: ảnh mẫu (không đưa vào game)
 
 ### 00a. `00_mau_tu_nuong.jpg`
 **Đính kèm:** Không.
-**Kiểm tra:** cô gái 16 tuổi miền Bắc Trung Hoa thập niên 1930, nghèo, gầy, tóc tết một bím dài, mắt sưng, môi nứt; áo vải thô xanh chàm.
+**Kiểm tra:** cô gái nông thôn Sơn Tây 16 tuổi, gầy, một bím tóc dài; áo vải thô xanh chàm; chân không; mắt sưng, nét mặt cam chịu.
+**Nếu sai:** *"Same sheet, but she must look poor and thin: one single long black braid, faded indigo coarse cotton clothes, barefoot, swollen red eyelids."*
 ```
-Aspect ratio 16:9. Character reference sheet on a plain mid-grey background, even soft studio light, realistic photograph. The same 16-year-old Chinese peasant girl from Shanxi province in 1936 shown three times side by side: front view head and shoulders, three-quarter view, full body. Thin face, high cheekbones, sun-darkened skin, swollen red eyelids from crying, chapped bitten lower lip, one long black braid down her back. She wears a faded indigo-blue coarse cotton jacket with cloth knot buttons and black cotton trousers, barefoot. A thin red thread is tied around nothing; her hands are empty and rough. Expression: blank, resigned, eyes looking slightly past the camera. No text, no letters, no numbers, no watermark.
+Aspect ratio 16:9. Character reference sheet, realistic photograph, plain mid-grey seamless studio background, soft even daylight, no dramatic shadows. The SAME girl shown three times side by side, equal size: (1) front view head and shoulders, (2) three-quarter view head and shoulders, (3) full body standing. She is a 16-year-old Chinese peasant girl from rural Shanxi province, 1936: thin face, high cheekbones, sun-darkened skin, swollen red eyelids from crying, a chapped bitten lower lip, ONE long thick black braid hanging down her back to her waist. She wears a faded indigo-blue coarse cotton jacket fastened with cloth knot buttons on the right side, black cotton trousers, barefoot with dusty feet. Rough working hands, no jewellery. Expression: blank, resigned, eyes looking slightly past the camera. Natural skin texture, photographic realism. No text, no letters, no Chinese characters, no numbers, no labels, no watermark.
 ```
 
 ### 00b. `00_mau_thua_tu.jpg`
 **Đính kèm:** Không.
-**Kiểm tra:** thanh niên 19 tuổi, thư sinh, rất gầy, da tái, trường sam lụa xanh lam đậm; vai hẹp.
+**Kiểm tra:** thanh niên 19 tuổi, thư sinh nhà giàu, rất gầy, kính gọng tròn, trường sam lụa xanh lam đậm vừa khít người gầy.
+**Nếu sai:** *"Same sheet, but he must be very thin with narrow shoulders, round wire-rimmed glasses, and a dark sapphire-blue silk changshan that fits his slim body exactly."*
 ```
-Aspect ratio 16:9. Character reference sheet on a plain mid-grey background, even soft studio light, realistic photograph. The same 19-year-old Chinese young man, son of a wealthy Shanxi banking family in 1936, shown three times side by side: front view head and shoulders, three-quarter view, full body. Very thin, narrow shoulders, pale scholar's skin, short neat black hair, round wire glasses held in his hand, soft hands with an ink callus on the right middle finger. He wears a dark sapphire-blue silk long gown (changshan) that fits his slim body exactly. Shy, gentle expression. No text, no letters, no numbers, no watermark.
+Aspect ratio 16:9. Character reference sheet, realistic photograph, plain mid-grey seamless studio background, soft even daylight. The SAME young man shown three times side by side, equal size: (1) front view head and shoulders, (2) three-quarter view head and shoulders, (3) full body standing. He is a 19-year-old Chinese scholar, the only son of a wealthy Shanxi banking family, 1936: very thin, narrow sloping shoulders, pale scholar's skin, short neat black hair parted on the side, round thin wire-rimmed glasses, soft delicate hands. He wears a dark sapphire-blue silk long gown (changshan) with a high collar and cloth knot buttons, fitting his slim body exactly, and black cloth shoes. Shy, gentle, slightly anxious expression. Natural skin texture. No text, no letters, no Chinese characters, no numbers, no labels, no watermark.
 ```
 
 ### 00c. `00_mau_phu_nhan.jpg`
 **Đính kèm:** Không.
-**Kiểm tra:** phụ nữ 49 tuổi, nhà giàu, búi tóc chặt, áo trắng trơn (không phải đồ tang gai), mặt bình thản lạnh lẽo.
+**Kiểm tra:** phụ nữ 49 tuổi nhà giàu; búi tóc chặt với một trâm bạc; **áo và váy lụa trắng trơn**; vòng ngọc tay phải; chìa khoá đồng đeo dây đỏ ở cổ; mặt bình thản, lạnh.
+**Nếu sai:** *"Same sheet, but she wears plain white silk (not coarse hemp mourning clothes), a jade bangle on her RIGHT wrist and a small brass key on a red cord around her neck."*
 ```
-Aspect ratio 16:9. Character reference sheet on a plain mid-grey background, even soft studio light, realistic photograph. The same 49-year-old Chinese woman, mistress of a wealthy Shanxi household in 1936, shown three times side by side: front view head and shoulders, three-quarter view, full body. Tight low bun with a single silver hairpin, thin plucked eyebrows, thin lips, perfectly calm face, eyes that do not blink. She wears a plain white silk jacket and skirt with no decoration (not coarse hemp mourning clothes), a jade bracelet on her right wrist, a small brass key on a red cord around her neck. No text, no letters, no numbers, no watermark.
+Aspect ratio 16:9. Character reference sheet, realistic photograph, plain mid-grey seamless studio background, soft even daylight. The SAME woman shown three times side by side, equal size: (1) front view head and shoulders, (2) three-quarter view head and shoulders, (3) full body standing with hands folded in front. She is the 49-year-old mistress of a wealthy Shanxi household, 1936: hair pulled back into a tight low bun held by a single plain silver hairpin, thin plucked eyebrows, thin lips, smooth pale skin, a perfectly calm face and eyes that do not blink. She wears a plain white silk jacket with a high collar and a long plain white silk skirt, no embroidery, no decoration (this is NOT coarse hemp mourning dress). A green jade bangle on her RIGHT wrist. A small brass key on a red silk cord around her neck, resting on her chest. Cold, composed, motherly in a frightening way. No text, no letters, no Chinese characters, no numbers, no labels, no watermark.
+```
+
+### 00d. `00_mau_hinh_nhan.jpg`
+**Đính kèm:** Không.
+**Kiểm tra:** hình nhân giấy chú rể cao bằng người thật, áo giấy xanh lam, mặt phấn trắng, má tròn đỏ, mắt vẽ mực; đứng thẳng đờ trên nền xám.
+```
+Aspect ratio 16:9. Prop reference sheet, realistic photograph, plain mid-grey seamless studio background, soft even light. The SAME object shown twice side by side: (1) full front view, (2) three-quarter view. A life-size traditional Chinese paper funeral effigy of a young bridegroom (paper offering figure), about 170 cm tall, built on a bamboo frame covered with paper: a dark blue paper long gown with painted folds, black paper shoes, a small black paper skullcap. The face is flat white powdered paper with two perfectly round red painted cheeks, thin painted black eyebrows, two painted black eyes looking straight ahead, a tiny painted red smile. The arms hang stiffly. Slightly creased paper, a small tear at one sleeve showing bamboo ribs. No text, no letters, no Chinese characters, no numbers, no labels, no watermark.
 ```
 
 ---
 
 ## Bước 1: ảnh trong game
 
-### 01. `cover.jpg`
-**Đính kèm:** `00_mau_tu_nuong.jpg`.
-**Kiểm tra:** cô dâu áo đỏ trùm khăn đỏ, chân không, đứng giữa linh đường tối; bên cạnh là quan tài sơn son và hình nhân giấy chú rể; đèn lồng trắng và đỏ lẫn lộn. Không thấy mặt cô dâu.
-**Nếu sai:** *"Same image but the bride's face must be completely hidden under the red veil, and she must be barefoot."*
+### 01. `cover.jpg` (bìa)
+**Đính kèm:** `00_mau_tu_nuong.jpg`, `00_mau_hinh_nhan.jpg`.
+**Bố cục:** khung dọc. Cô dâu đứng **chính giữa**, toàn thân. Quan tài đỏ ở **bên trái** cô, ngang hông. Hình nhân giấy đứng **bên phải** quan tài, phía sau cô dâu một chút. Đèn lồng treo **mép trên**. Cửa mở phía sau cho ánh trăng xanh.
+**Kiểm tra:** khăn đỏ **che kín mặt**; **chân không** trên nền đá; quan tài sơn son; hình nhân giống ảnh mẫu; đèn trắng và đỏ **xen lẫn**, trơn không chữ; không ai khác.
+**Nếu sai:**
+- *"Same image, but the bride's face must be completely hidden under the red veil, and her bare feet must be visible on the stone floor."*
+- *"Same image, but the lanterns must be plain, with no characters or symbols on them."*
 ```
-Aspect ratio 3:4. Cinematic horror photograph, 1930s rural Shanxi China, night, inside a traditional ancestral hall lit only by candles and paper lanterns. In the centre stands a young bride in a traditional red embroidered wedding dress, her head and face completely covered by a red silk veil, barefoot on cold stone tiles, the girl from the attached reference. Beside her a large coffin lacquered deep red. On the other side of the coffin, a life-size paper effigy of a bridegroom in a blue paper gown, painted face, standing stiffly. Overhead, white funeral lanterns and red wedding lanterns hang mixed together. Smoke from incense, deep shadows, cold blue moonlight from a doorway behind. Dread, stillness. No text, no letters, no Chinese characters, no numbers, no watermark.
+Aspect ratio 3:4. Cinematic horror film still, 1936 rural Shanxi, China, night, inside a traditional ancestral hall of a rich family, lit only by candles and paper lanterns. In the exact centre stands a young bride, full body, the thin girl from the first attached reference: she wears a traditional red embroidered wedding jacket and long red pleated skirt, her head and face COMPLETELY covered by a square red silk veil hanging to her chest, her hands hidden in her sleeves, BAREFOOT on cold grey stone floor tiles. To her LEFT, at hip height, a large coffin lacquered deep glossy red, on two wooden trestles. To the RIGHT of the coffin, slightly behind the bride, stands the life-size paper bridegroom effigy from the second attached reference (blue paper gown, white face, round red cheeks, painted eyes), stiff and upright. Along the top edge of the frame, plain white paper funeral lanterns and plain red wedding lanterns hang mixed together, glowing. Behind, an open wooden door lets in cold blue moonlight and mist. Incense smoke drifting, deep shadows, warm candlelight against cold blue. Dread and total stillness. Film grain. No other people. No text, no letters, no Chinese characters, no symbols on lanterns, no numbers, no watermark.
 ```
 
-### 02. `phu_trieu.jpg`
+### 02. `phu_trieu.jpg` (thư mời, đêm 1)
 **Đính kèm:** Không.
-**Kiểm tra:** cổng nhà giàu Sơn Tây, tường gạch xám cao, đèn lồng trắng (tang) treo cạnh đèn lồng đỏ (cưới), buổi chiều tối.
+**Kiểm tra:** cổng tứ hợp viện nhà giàu Sơn Tây: tường gạch xám cao, cửa gỗ sơn đen nặng có vòng đồng, hai sư tử đá; **trên cổng: hai đèn lồng trắng treo sát cạnh hai đèn lồng đỏ**, tất cả trơn; một xe la đỗ sát tường; hoàng hôn bụi vàng.
+**Nếu sai:** *"Same image, but above the gate there must be two plain WHITE lanterns hanging right next to two plain RED lanterns, no writing on any of them."*
 ```
-Aspect ratio 16:9. Realistic photograph, 1936, a wealthy merchant family's courtyard house gate in a small town in Shanxi, northern China: tall grey brick walls, heavy black lacquered wooden doors with brass knockers, stone lions. Above the gate, two white paper funeral lanterns hang right next to two red wedding lanterns. Dusty street, dry poplar leaves, dusk light, a lone mule cart parked by the wall. Slightly faded vintage photo colours. No text, no letters, no Chinese characters on the lanterns or the gate, no watermark.
+Aspect ratio 16:9. Realistic photograph, dusk, autumn 1936, the main gate of a wealthy merchant family's courtyard house in a small town in Shanxi, northern China. Tall grey brick walls with a tiled roof ridge, a heavy double door lacquered black with two round brass knockers, a pair of weathered stone lions on low plinths. Hanging above the gate under the eaves: two plain WHITE paper funeral lanterns right next to two plain RED wedding lanterns, all four lit, none with any writing. A dusty yellow loess street, dry fallen poplar leaves, a wooden mule cart without a mule parked against the wall. Low golden-grey dusk light, slightly faded vintage colours, film grain. No people. No text, no letters, no Chinese characters, no couplets, no numbers, no watermark.
 ```
 
-### 03. `tiem_hoang.jpg`
+### 03. `tiem_hoang.jpg` (sổ bà mối, đêm 2)
 **Đính kèm:** Không.
-**Kiểm tra:** kho tối, hàng áo cưới đỏ treo thành dãy, mỗi áo một thẻ gỗ trơn; một chiếc bàn tính trên quầy; không có xác người.
+**Kiểm tra:** kho tối của bà mối âm: **một hàng dài áo cưới đỏ** treo trên sào như người đứng xếp hàng, **mỗi áo một thẻ gỗ trơn** (không chữ); quầy gỗ có **bàn tính**; một ngọn đèn dầu; góc tối thấp thoáng mép một quan tài gỗ mộc; không có người, không có xác.
+**Nếu sai:** *"Same image, but the wooden tags on the gowns must be completely blank, and there must be no bodies or people."*
 ```
-Aspect ratio 16:9. Realistic horror photograph, 1930s northern China, the dim back storeroom of a matchmaker for ghost marriages. A long row of red bridal gowns hang from a wooden rail like people standing in line, each with a small blank wooden tag on a string. Paper coins scattered on the floor, a wooden abacus on a worn counter, a single oil lamp. In the darkness at the back, the edge of a plain unpainted coffin. No people, no corpses visible. Cold, musty atmosphere. No text, no letters, no Chinese characters, no numbers on tags, no watermark.
+Aspect ratio 16:9. Realistic horror photograph, 1936 northern China, the dim back storeroom of a matchmaker who arranges ghost marriages. A long row of red embroidered bridal gowns hangs from a wooden pole across the room, at the height of a person, like a line of people standing and waiting; each gown has a small blank wooden tag hanging from a string, with nothing written on it. In the foreground, a worn wooden counter with a traditional Chinese abacus and a small oil lamp, its flame the only warm light. White paper funeral money scattered on the dirt floor. In the darkness at the back, the edge of a plain unpainted wooden coffin. No people, no bodies. Cold, musty, airless. Film grain. No text, no letters, no Chinese characters, no numbers, no watermark.
 ```
 
-### 04. `ben_do.jpg`
+### 04. `ben_do.jpg` (lời Ôn Lão Tam, đêm 3)
 **Đính kèm:** Không.
-**Kiểm tra:** bến đò sông Phần ban đêm, nước đục vàng, bờ đất; bên kia sông là một miếu nhỏ có đèn; một chiếc xe la trống bỏ lại.
+**Bố cục:** bờ đất ở **tiền cảnh bên trái**; xe la trống ở mép nước **giữa tiền cảnh**; sông nước vàng đục **giữa khung**; bên kia sông, **góc phải phía xa**, một miếu nhỏ có một ngọn đèn.
+**Kiểm tra:** ban đêm, trăng mờ sau mây; **xe la bỏ trống, dây cương thả lỏng, không có con la**; thuyền đò gỗ buộc vào cọc; sương trên mặt nước; không người.
 ```
-Aspect ratio 16:9. Realistic night photograph, 1936, a ferry landing on the muddy yellow Fen River in Shanxi, China. Earthen bank, a wooden ferry boat tied to a post, reeds. An empty mule cart stands abandoned at the water's edge, its reins hanging loose, no mule. Across the river a tiny roadside shrine with one faint lamp. Faint moon behind thin clouds, mist on the water. Quiet, ominous. No people, no text, no letters, no Chinese characters, no watermark.
+Aspect ratio 16:9. Realistic night photograph, late summer 1936, the ferry landing on the muddy yellow Fen River in Shanxi, China. Left foreground: an earthen bank with reeds and a wooden mooring post with a small wooden ferry boat tied to it. Centre foreground, at the water's edge: an empty two-wheeled wooden mule cart, abandoned, its leather reins hanging loose on the ground, NO mule. The wide river fills the middle of the frame, flat and dark with yellow-brown tints, thin mist on the water. Far across the river, in the right background, a tiny roadside shrine with one faint orange lamp. A dim moon behind thin clouds. Quiet, ominous, empty. Film grain. No people. No text, no letters, no Chinese characters, no numbers, no watermark.
 ```
 
-### 05. `tay_xac.jpg`
+### 05. `tay_xac.jpg` (phiếu khám xác, đêm 4)
 **Đính kèm:** Không.
-**Kiểm tra:** ảnh đen trắng kiểu hồ sơ cảnh sát 1930s: bàn tay **trái** của xác đàn ông, da nhợt trương, lòng bàn tay có vệt chai chéo, **cổ tay trái buộc sợi chỉ đỏ** (chỉ sợi chỉ có màu đỏ, phần còn lại đen trắng); tay áo lụa xanh đậm.
-**Nếu sai:** *"Same image but it must be the LEFT hand, palm up, with a thin red thread tied around the wrist; the rest of the photo stays black and white."*
+**Kiểm tra:** ảnh **đen trắng** kiểu hồ sơ cảnh sát 1930s chụp từ trên xuống; **bàn tay TRÁI** to khoẻ, da nhợt trương nước, **ngửa lòng**, có **vệt chai chéo** từ gốc ngón trỏ xuống mô ngón út; **cổ tay buộc sợi chỉ đỏ: thứ DUY NHẤT có màu**; ống tay áo lụa sẫm ướt; không máu.
+**Nếu sai:**
+- *"Same photo, but it must be the LEFT hand, palm up (thumb on the right side of the image)."*
+- *"Same photo, but everything stays black and white except the thin thread around the wrist, which is bright red."*
 ```
-Aspect ratio 4:3. 1930s police forensic photograph, black and white, grainy, shot from above: the LEFT hand of a drowned man's body lying on a wooden board on a muddy riverbank. The hand is broad and strong, the skin pale, swollen and wrinkled from water, palm turned up, showing a thick diagonal callus line across the palm from the base of the index finger to the heel of the hand, like a mark from reins. Around the wrist is tied a thin thread, the ONLY coloured element in the photo: bright red. A wet dark silk sleeve covers the forearm. Clinical, disturbing, not gory. No text, no letters, no numbers, no watermark.
+Aspect ratio 4:3. 1930s police forensic photograph, black and white, grainy silver gelatin print with slightly burned edges, shot straight down from above. The LEFT hand and forearm of a drowned young man's body lying on a rough wooden plank on a muddy riverbank. Palm facing up, so the thumb points toward the right side of the image. The hand is broad, strong and working-class, the skin pale, swollen and wrinkled from days in water. Across the palm, a thick diagonal callus line runs from the base of the index finger down to the heel of the hand, like a mark worn by reins. Around the wrist is tied a single thin thread knotted in a small bow: the ONLY coloured element in the whole photograph, bright red. A wet, dark silk sleeve covers the forearm. Clinical, quiet, disturbing, not gory. No text, no letters, no Chinese characters, no numbers, no scale ruler, no watermark.
 ```
 
-### 06. `linh_duong.jpg`
+### 06. `linh_duong.jpg` (lời tộc trưởng, sáng 21)
+**Đính kèm:** `cover.jpg`, `00_mau_hinh_nhan.jpg`.
+**Bố cục:** nhìn ngang vào linh đường; quan tài đỏ **giữa khung**; bàn thờ với **bài vị trơn** phía sau quan tài; hình nhân giấy đứng **bên trái** quan tài; **một ô cửa tối ở mép phải khung**.
+**Kiểm tra:** cùng linh đường như ảnh bìa; **mặt hình nhân quay hẳn sang phải, nhìn về ô cửa tối ở mép phải**, không nhìn ống kính; vải trắng và lụa đỏ treo cạnh nhau; không người.
+**Nếu sai:** *"Same image, but the paper effigy's painted face must be turned sideways to the right, staring at the dark doorway at the right edge of the frame, not at the camera."*
+```
+Aspect ratio 16:9. Realistic horror photograph, 1936, the same ancestral mourning hall as the first attached image, prepared for a ghost wedding, seen from the front at eye level. In the centre, the large deep-red lacquered coffin on wooden trestles. Behind it, an altar table with a plain blank wooden ancestral tablet, two tall red candles, an incense burner with smoking sticks, plates of fruit and steamed buns. To the LEFT of the coffin stands the life-size paper bridegroom effigy from the second attached reference (blue paper gown, white face, round red cheeks), but its head is turned sideways to the RIGHT, its painted eyes staring at a dark open doorway at the right edge of the frame. Long strips of white funeral cloth and red wedding silk hang side by side from the roof beams. Warm candlelight, deep black shadows, a thin blue light from the doorway. No people. Film grain. No text, no letters, no Chinese characters, no couplets, no numbers, no watermark.
+```
+
+### 07. `dong_vien.jpg` (lời người gác đêm, đêm 21)
 **Đính kèm:** Không.
-**Kiểm tra:** linh đường: quan tài sơn son, bài vị trơn không chữ, hình nhân giấy chú rể **quay mặt sang một bên** (về phía cửa bên phải), đèn trắng và đỏ.
+**Kiểm tra:** cửa gỗ đôi của một viện nhỏ trong phủ, ban đêm; **ổ khoá đồng to và xích** ngang tay nắm; **ba lá bùa giấy vàng** dán ngang khe cửa, nét đỏ mờ **không đọc được**; **ánh đèn dầu lọt qua khe chân cửa**; **một khay với bát cơm đã ăn hết** đặt dưới đất cạnh cửa.
+**Nếu sai:** *"Same image, but the three yellow talismans must have only blurry red strokes, no readable characters."*
 ```
-Aspect ratio 16:9. Realistic horror photograph, 1936, the mourning hall of a wealthy Shanxi family prepared for a ghost wedding. A deep red lacquered coffin on trestles, a blank wooden ancestral tablet on an altar with candles and incense, offerings of fruit and steamed buns. A life-size paper bridegroom effigy in a blue paper gown stands beside the coffin, but its painted face is turned sideways, staring toward a dark doorway on the right edge of the frame. White funeral cloth and red wedding silk hang side by side from the beams. Candlelight, deep shadows. No people, no text, no letters, no Chinese characters, no watermark.
-```
-
-### 07. `dong_vien.jpg`
-**Đính kèm:** Không.
-**Kiểm tra:** cửa gỗ đôi của một viện nhỏ, khoá đồng to, dán ba lá bùa vàng trơn; ánh đèn dầu lọt qua khe chân cửa; ban đêm.
-```
-Aspect ratio 16:9. Realistic night photograph, 1936 Shanxi China, the closed double wooden door of a small side courtyard building inside a rich family compound. A large old brass padlock and chain across the door handles. Three yellow paper talismans pasted across the gap of the door, their markings blurred and unreadable. Warm oil-lamp light leaks from the crack under the door onto the stone threshold. A tray with an empty rice bowl sits on the ground beside the door. Silence, dread. No people, no text, no readable letters or Chinese characters, no watermark.
+Aspect ratio 16:9. Realistic night photograph, autumn 1936, Shanxi China, inside a rich family compound: the closed double wooden door of a small side courtyard building, seen straight on. A large old brass padlock and an iron chain wrapped across the two door handles. Three long yellow paper talismans pasted vertically across the gap between the doors, their red brush strokes blurred and unreadable. Warm orange oil-lamp light leaks from the narrow crack under the door onto the worn stone threshold. On the ground beside the door, a lacquered wooden tray with an empty rice bowl and a pair of chopsticks, the bowl scraped clean. Moonlight on the grey brick wall and a bare jujube tree branch. Silence, dread. Film grain. No people. No text, no readable letters or Chinese characters, no numbers, no watermark.
 ```
 
-### 08. `hinh_nhan_scare.jpg`
-**Đính kèm:** Không.
-**Kiểm tra:** cận mặt hình nhân giấy chú rể, mặt vẽ phấn trắng má đỏ, mắt vẽ mực **nhìn thẳng ống kính**; ảnh doạ.
+### 08. `hinh_nhan_scare.jpg` (cảnh doạ, đêm 19)
+**Đính kèm:** `00_mau_hinh_nhan.jpg`.
+**Kiểm tra:** cận mặt hình nhân giấy **lấp đầy khung**, mắt vẽ **nhìn thẳng ống kính**, nến từ dưới hắt lên, nền đen; giấy rách ở thái dương lộ nan tre.
 ```
-Aspect ratio 1:1. Extreme close-up horror image: the face of a Chinese paper funeral effigy of a bridegroom, made of paper and bamboo, white powdered paper skin, two round red painted cheeks, thin painted black eyebrows, painted black eyes staring straight into the camera, a tiny painted red smile. The paper is slightly torn at the temple, showing bamboo ribs inside. Candlelight from below, black background. Uncanny, frightening. No text, no letters, no Chinese characters, no watermark.
+Aspect ratio 1:1. Extreme close-up horror image: the face of the paper bridegroom effigy from the attached reference fills the whole frame. White powdered paper skin, two perfectly round red painted cheeks, thin painted black eyebrows, two painted black eyes staring straight into the camera, a tiny painted red smile. The paper is torn at the left temple, showing the bamboo ribs inside. Lit from below by a single candle, pitch-black background. Uncanny, frightening, as if it has just turned its head toward the viewer. Film grain. No text, no letters, no Chinese characters, no numbers, no watermark.
 ```
 
-### 09. `dong_vien_scare.jpg`
+### 09. `dong_vien_scare.jpg` (cảnh doạ chính, đêm 21)
 **Đính kèm:** `00_mau_thua_tu.jpg`.
-**Kiểm tra:** qua khe cửa hẹp thấy một con mắt người thanh niên gầy, đỏ ngầu, đồng tử co nhỏ (thuốc phiện), nhìn ra; ảnh doạ.
+**Kiểm tra:** qua **khe dọc hẹp giữa hai cánh cửa gỗ** thấy **một con mắt** của thanh niên gầy, đỏ ngầu, **đồng tử co nhỏ như đầu kim**, quầng mắt thâm; ánh đèn dầu yếu phía sau; không kính (kính đã bị lấy).
+**Nếu sai:** *"Same image, but only ONE eye visible through a narrow vertical crack between two wooden door panels, no glasses, pupil shrunk to a pinpoint."*
 ```
-Aspect ratio 1:1. Horror close-up: through a narrow vertical crack between two old wooden door panels, a single human eye of the young man in the attached reference stares out at the camera from darkness. The eye is bloodshot, the pupil shrunk to a pinpoint from opium, dark hollow skin around it, a few strands of unwashed hair. Weak oil-lamp glow behind him. Desperate, haunted. No text, no letters, no Chinese characters, no watermark.
+Aspect ratio 1:1. Horror close-up: a narrow vertical crack between two old dark wooden door panels runs down the centre of the frame; everything else is wood grain in deep shadow. Through the crack, a single human eye of the young man from the attached reference (no glasses now) stares out at the camera from darkness. The eye is bloodshot, the pupil shrunk to a pinpoint from opium, deep dark hollows around it, a few strands of unwashed hair across the brow. A weak oil-lamp glow behind him. Desperate, haunted, pleading. Film grain. No text, no letters, no Chinese characters, no numbers, no watermark.
 ```
 
-### 10. `co_dau_scare.jpg`
-**Đính kèm:** `00_mau_tu_nuong.jpg`.
-**Kiểm tra:** khăn trùm đỏ của cô dâu bị vén lên một nửa; dưới khăn là khuôn mặt tái nhợt, môi thâm tím (độc), mắt mở trừng; ảnh doạ, không máu me.
+### 10. `co_dau_scare.jpg` (cảnh doạ khi chọn ở giờ Tý)
+**Đính kèm:** `cover.jpg`, `00_mau_tu_nuong.jpg`.
+**Kiểm tra:** **khăn trùm đỏ bị vén lên một nửa**: lộ **nửa dưới mặt** và **một con mắt** mở trừng không chớp; da trắng bệch, **môi tím thâm**, một vệt nước sẫm ở khoé miệng; cổ áo cưới đỏ thêu; nền đen; không máu me.
+**Nếu sai:** *"Same image, but less gore: no blood, only very pale skin, dark bluish-purple lips and a thin line of dark liquid at the corner of the mouth."*
 ```
-Aspect ratio 1:1. Horror close-up in candlelight: a red silk bridal veil lifted halfway, revealing the lower half of a young bride's face, the girl from the attached reference: deathly pale skin, lips dark bluish-purple, a thin line of dark liquid at the corner of the mouth, and one wide-open unblinking eye visible under the edge of the veil. Red embroidered collar. Black background. Disturbing, not gory. No text, no letters, no Chinese characters, no watermark.
+Aspect ratio 1:1. Horror close-up in candlelight: the same red silk bridal veil and red embroidered collar as the bride in the first attached image, the veil lifted halfway up from below, revealing the lower half of the face of the girl from the second attached reference and one of her eyes: deathly pale grey-white skin, lips dark bluish-purple, a thin line of dark liquid at one corner of the mouth, the visible eye wide open and unblinking, staring straight into the camera. Pitch-black background. Disturbing and sad, not gory, no blood. Film grain. No text, no letters, no Chinese characters, no numbers, no watermark.
 ```
 
 ### 11. `tan_phong_mo.jpg` (kết thúc Chân tướng)
 **Đính kèm:** `00_mau_thua_tu.jpg`.
-**Kiểm tra:** cửa vừa phá, ánh đuốc từ ngoài rọi vào phòng tân hôn bày đồ đỏ; trên giường một thanh niên gầy rộc ngồi co, chân xích vào chân giường, bàn đèn thuốc phiện; nhìn từ cửa, thấy người từ xa.
+**Bố cục:** nhìn từ **ngưỡng cửa vừa phá** vào trong; mảnh gỗ cửa vỡ ở **mép trái**; giường chạm gỗ ở **giữa, phía sau**; bàn nhỏ có bàn đèn thuốc phiện ở **bên phải** giường.
+**Kiểm tra:** phòng tân hôn bày lụa đỏ đã bám bụi; ánh **đuốc** từ ngoài rọi vào; thanh niên **gầy rộc, áo lót trắng bẩn, ngồi co gối trên giường, chân TRÁI bị xích vào chân giường**, nheo mắt nhìn ra ánh sáng; thấy từ xa, không cận mặt; không máu.
+**Nếu sai:** *"Same image, but the chain must be on his LEFT ankle, fastened to the bed leg, and an opium lamp and long pipe must be on the small table next to the bed."*
 ```
-Aspect ratio 16:9. Realistic photograph, night, 1936 Shanxi: view from a broken-open doorway into a bridal chamber decorated in red silk that has gone dusty. Torchlight from outside floods in. On a carved wooden bed sits the thin young man from the attached reference, emaciated, hollow-cheeked, in a dirty white undershirt, hugging his knees, his left ankle chained to the bed leg. An opium lamp and pipe on a small table beside the bed. He looks toward the light, squinting, confused. Seen from a distance, no gore. No text, no letters, no Chinese characters, no watermark.
+Aspect ratio 16:9. Realistic photograph, night, autumn 1936, Shanxi: the view from a broken-open doorway into a bridal chamber. Splintered pieces of the wooden door at the left edge of the frame. Inside, a room once decorated for a wedding: faded red silk hangings and a red double-happiness paper cut on the wall, all grey with dust (the paper cut is a plain red shape, no readable character). Bright flickering torchlight from outside floods in across the floor. In the middle background, on a carved wooden canopy bed, sits the young man from the attached reference, now emaciated, hollow-cheeked, unshaven, in a dirty white cotton undershirt and loose trousers, hugging his knees; an iron chain runs from his LEFT ankle to the bed leg. On a small table to the right of the bed: an opium oil lamp and a long opium pipe. He squints toward the light, confused, his lips forming a name. Seen from a distance, no close-up, no gore. Film grain. No text, no letters, no Chinese characters, no numbers, no watermark.
 ```
 
 ### 12. `hop_tang.jpg` (kết thúc Hỉ tang)
-**Đính kèm:** Không.
-**Kiểm tra:** buổi sáng sương, một huyệt mộ đất mới, hai quan tài nằm cạnh nhau (một sơn son, một mộc trắng), giấy tiền trắng và giấy đỏ rải lẫn.
+**Đính kèm:** `cover.jpg` (để quan tài đỏ giống).
+**Kiểm tra:** sáng sớm sương xám trên đồi hoàng thổ; **một huyệt mới**, trong đó **hai quan tài nằm cạnh nhau**: một **sơn son đỏ** (giống ảnh bìa), một **gỗ mộc trắng**; giấy tiền trắng và giấy đỏ rải lẫn trên đất vàng; xẻng cắm đất; không người.
 ```
-Aspect ratio 16:9. Realistic photograph, early grey misty morning, 1936, a family graveyard on a loess hillside in Shanxi. A freshly dug grave pit with two coffins lying side by side inside it: one lacquered deep red, one plain unpainted wood. White funeral paper money and red wedding paper scattered together on the yellow earth. Shovels stuck in the dirt, nobody around. Desolate, silent. No people, no text, no letters, no Chinese characters, no watermark.
+Aspect ratio 16:9. Realistic photograph, early grey misty morning, autumn 1936, a family graveyard on a yellow loess hillside in Shanxi, with old grave mounds and bare jujube trees. In the centre foreground, a freshly dug rectangular grave pit; lying side by side inside it, two coffins: on the left, a deep-red lacquered coffin identical to the one in the attached image; on the right, a plain unpainted pale wooden coffin. White funeral paper money and torn red wedding paper are scattered together over the yellow earth around the pit. Two shovels stuck upright in the dirt pile. Nobody around. Desolate, silent, cold. Film grain. No people. No text, no letters, no Chinese characters, no numbers, no watermark.
 ```
 
 ### 13. `cho_thua_an.jpg` (kết thúc Cứu dâu)
-**Đính kèm:** `00_mau_thua_tu.jpg`, `00_mau_phu_nhan.jpg`.
-**Kiểm tra:** chợ trấn nhỏ buổi sáng; thanh niên gầy mặc áo gấm mới đi giữa bà phu nhân áo trắng và một ông quản gia; mắt trống rỗng; chụp từ xa, hơi chéo.
+**Đính kèm:** `00_mau_thua_tu.jpg`, `00_mau_phu_nhan.jpg`, `00_mau_tu_nuong.jpg`.
+**Bố cục:** phố chợ nhìn dọc; ba người đi **giữa phố, cỡ vừa, hơi xa**; **tiền cảnh bên phải, mờ nét: gáy và bím tóc dài** của một cô gái đang nhìn theo.
+**Kiểm tra:** thanh niên gầy **mặc áo gấm mới**, mặt trắng, mắt trống rỗng, **không kính**; bên trái anh là phu nhân áo lụa trắng **nắm chặt cánh tay anh**; bên phải là một quản gia béo áo đen; người dân cúi chào; cô gái ở tiền cảnh **không thấy mặt**.
+**Nếu sai:** *"Same image, but the girl in the foreground must be seen only from behind (back of her head and her long braid), out of focus, on the right."*
 ```
-Aspect ratio 16:9. Realistic photograph, morning, 1936, the dusty market street of a small Shanxi town with vegetable stalls and mule carts. Walking down the middle of the street, seen from a distance: the thin young man from the first attached reference, now in a new expensive brocade jacket, his face pale and blank, eyes empty; on one side of him the woman from the second attached reference in plain white silk, holding his arm firmly; on the other side a stout middle-aged steward in a black jacket. Townspeople bow to them. In the foreground, out of focus, the back of a peasant girl's head with a long braid, watching. No text, no letters, no Chinese characters, no watermark.
+Aspect ratio 16:9. Realistic photograph, morning, autumn 1936, the dusty market street of a small Shanxi town: vegetable stalls, baskets of persimmons, a mule cart, grey brick shopfronts with no signs. Walking down the middle of the street toward the camera, medium distance: in the centre, the thin young man from the first attached reference, without glasses, wearing a new expensive dark brocade jacket, his face pale and blank, eyes empty and unfocused; on his LEFT, the woman from the second attached reference in plain white silk, gripping his arm firmly; on his RIGHT, a stout middle-aged steward in a black jacket and skullcap. Townspeople on both sides bow slightly to them. In the RIGHT foreground, out of focus, the back of the head and the long single braid of the girl from the third attached reference, standing still, watching them pass; her face is not visible. Film grain. No text, no letters, no Chinese characters, no shop signs, no numbers, no watermark.
 ```
+
+---
+
+## Danh sách file
+| # | Tên file | Dùng ở | Tỉ lệ |
+|---|---|---|---|
+| 00a–00d | `00_mau_tu_nuong`, `00_mau_thua_tu`, `00_mau_phu_nhan`, `00_mau_hinh_nhan` | (không vào game) | 16:9 |
+| 01 | `cover.jpg` | Bìa | 3:4 |
+| 02 | `phu_trieu.jpg` | Đêm 17 | 16:9 |
+| 03 | `tiem_hoang.jpg` | Đêm 18 | 16:9 |
+| 04 | `ben_do.jpg` | Đêm 19 | 16:9 |
+| 05 | `tay_xac.jpg` | Đêm 20 | 4:3 |
+| 06 | `linh_duong.jpg` | Sáng 21 | 16:9 |
+| 07 | `dong_vien.jpg` | Đêm 21 | 16:9 |
+| 08 | `hinh_nhan_scare.jpg` | Doạ, mở đêm 19 | 1:1 |
+| 09 | `dong_vien_scare.jpg` | Doạ chính, mở đêm 21 | 1:1 |
+| 10 | `co_dau_scare.jpg` | Doạ khi chọn ở giờ Tý | 1:1 |
+| 11 | `tan_phong_mo.jpg` | Kết thúc Chân tướng | 16:9 |
+| 12 | `hop_tang.jpg` | Kết thúc Hỉ tang | 16:9 |
+| 13 | `cho_thua_an.jpg` | Kết thúc Cứu dâu | 16:9 |

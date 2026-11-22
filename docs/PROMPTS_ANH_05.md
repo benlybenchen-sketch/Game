@@ -1,18 +1,28 @@
-# Ảnh cho Hồ sơ 05 "Người giữ vợ"
+# Ảnh cho Hồ sơ 05 "Người giữ vợ" · bản chi tiết
 
-## Cách dùng file này
-- Mỗi ô ảnh có **một prompt duy nhất**: chép nguyên khối, dán vào AI Studio là xong. Tỉ lệ khung hình đã ghi sẵn trong prompt (câu *Aspect ratio …*). Nếu AI Studio có ô chọn tỉ lệ thì chọn giống như vậy cho chắc.
-- Dòng **Đính kèm** ghi ảnh nào phải gắn kèm trước khi gửi prompt. Ghi "Không" thì không gắn gì.
-- Dòng **Kiểm tra** là những điểm phải đúng. Sai điểm nào thì gõ tiếp trong cùng cuộc trò chuyện câu sửa ghi ở dòng **Nếu sai**.
-- Tạo theo đúng thứ tự từ trên xuống, trong **cùng một cuộc trò chuyện**.
-- Đổi tên file đúng như tên ghi ở đầu mỗi ô, rồi gửi lên chat.
+## Cách dùng
+1. Tạo **theo đúng thứ tự** từ trên xuống, trong **một cuộc trò chuyện AI Studio duy nhất** (để AI nhớ nhân vật).
+2. Mỗi ô có **một prompt duy nhất**: chép nguyên khối (từ dòng đầu tới dòng cuối của khung), dán vào là xong. Tỉ lệ khung hình đã ghi trong prompt; nếu AI Studio có ô chọn tỉ lệ thì chọn y như vậy.
+3. **Đính kèm** đúng các ảnh ghi trong ô trước khi gửi. Prompt đã tả lại nhân vật đầy đủ, nên dù AI "quên" ảnh đính kèm thì vẫn ra đúng người.
+4. Đối chiếu ảnh với mục **Kiểm tra**. Sai điểm nào thì gõ câu sửa ở mục **Nếu sai** (cùng cuộc trò chuyện, đính kèm lại ảnh vừa tạo).
+5. Đổi tên file đúng tên ở đầu ô rồi gửi lên chat.
 
-> **Mình tự làm, bạn không cần tạo:** sơ đồ nhà, giấy xin nghỉ và bài văn (hai mẫu chữ), trang nhật ký xé 6 mảnh, cuốn lịch tờ, tờ rơi khí than, hoá đơn than, bệnh án, danh sách lao. Những thứ có chữ tiếng Việt AI hay viết sai dấu, nên mình dựng bằng code.
->
-> **Quy ước bên trái, bên phải:** "tay trái của cô ấy" là tay trái của nhân vật. Trong ảnh chụp từ sau lưng, tay trái của nhân vật nằm **bên trái người xem**.
-> - **Ngân:** vết sẹo rạch nằm ở **cổ tay trái** của Ngân, mặt trong, có dây chun buộc tóc màu đen che một phần.
-> - **Bà Hằng:** nhẫn cưới vàng ở **ngón áp út tay trái**.
-> - **Đồ của mẹ:** áo len **đỏ đô** đan tay, vặn thừng (cable knit), và khăn len **màu kem**. Ảnh bà Hằng 1988 và ảnh "Vợ tôi, Tết 1991" phải dùng đúng hai món này để người chơi so được.
+> **Mình tự làm bằng code, bạn không cần tạo:** sơ đồ nhà, giấy xin nghỉ và bài văn, trang nhật ký xé, lịch bloc, tờ rơi khí than, hoá đơn than, bệnh án, danh sách lao.
+
+### Luật chung (đã viết sẵn trong từng prompt)
+- **Thời đại:** miền núi phía Bắc Việt Nam, tháng 12/1991. Không có điện thoại, xe máy đời mới, nhựa màu sặc sỡ, đèn LED, biển hiệu, chữ.
+- **Chất ảnh:** ảnh phim màu đầu thập niên 1990 (Konica, Fuji), hạt phim, màu hơi ngả, không HDR, không kiểu ảnh quảng cáo.
+- **Không chữ:** mọi prompt đều cấm chữ, số, hình mờ. AI hay viết sai tiếng Việt.
+- **Bên trái, bên phải:** "tay trái của cô ấy" là tay trái của nhân vật. Ảnh chụp sau lưng thì tay trái nhân vật nằm **bên trái người xem**.
+
+### Dấu nhận dạng (không được sai, vì người chơi dùng để giải đố)
+| Ai | Dấu |
+|---|---|
+| **Bà Hằng** (40 tuổi) | Mặt tròn đầy, tóc ngang vai buộc thấp. **Nhẫn cưới vàng trơn ở ngón áp út tay trái.** Áo len đỏ đô vặn thừng, khăn len màu kem. |
+| **Ngân** (15 tuổi) | Gầy, cằm nhọn, da rất tái, tóc dài buộc thấp. **Cổ tay trái, mặt trong: một vết sẹo mảnh nằm ngang, che một phần bằng dây chun buộc tóc màu đen.** Không đeo nhẫn hay trang sức. |
+| **Ông Khải** (47 tuổi) | Rất gầy, má hóp, râu lún phún bạc, mắt đỏ, đốt tay nứt nẻ ố nâu (hoá chất ảnh). Áo bông kaki bạc màu. |
+| **Áo của mẹ** | Áo len **đỏ đô** (burgundy), đan tay, vặn thừng. Khăn len **màu kem**. Hai món này phải giống nhau ở ảnh 1988 và ảnh "Vợ tôi, Tết 1991". |
+| **Cửa buồng** | Cửa gỗ cũ, **dán kín băng keo nâu và giấy báo vàng quanh mọi mép**, khe dưới cửa nhét chăn hoa. |
 
 ---
 
@@ -20,24 +30,26 @@
 
 ### 00a. `00_mau_hang.jpg`
 **Đính kèm:** Không.
-**Kiểm tra:** phụ nữ miền Bắc khoảng 40 tuổi, mặt tròn đầy đặn, đeo nhẫn cưới tay trái, mặc áo len đỏ đô vặn thừng và khăn len kem.
+**Kiểm tra:** ba dáng của cùng một người; mặt tròn, hiền, mệt; **nhẫn vàng ở ngón áp út tay trái thấy rõ** ở dáng nửa người; áo len đỏ đô vặn thừng, khăn kem.
+**Nếu sai:** *"Same sheet, but the plain gold wedding ring must be clearly visible on the ring finger of her LEFT hand in the half-body view, hand raised near her chest."*
 ```
-Aspect ratio 16:9. Character reference sheet on a plain mid-grey background, even soft studio light, realistic photograph. The same Vietnamese woman shown three times side by side: front view head and shoulders, three-quarter view, and front view half body. She is 40 years old, a northern Vietnamese literature schoolteacher from Nam Định: round full face, soft cheeks, kind tired eyes, slightly pale lips, shoulder-length straight black hair tied low at the nape. She wears a hand-knitted burgundy (dark red) cable-knit wool sweater and a cream-coloured knitted wool scarf loosely around her neck. A plain thin gold wedding ring on the ring finger of her LEFT hand, clearly visible. Gentle, slightly breathless expression. No text, no letters, no numbers, no watermark.
+Aspect ratio 16:9. Character reference sheet, realistic photograph, plain mid-grey seamless studio background, soft even daylight from the front, no dramatic shadows. The SAME woman shown three times side by side, equal size: (1) front view head and shoulders, (2) three-quarter view head and shoulders, (3) front view from the waist up with her LEFT hand raised to her chest. She is a 40-year-old Vietnamese literature teacher from northern Vietnam, early 1990s: round, full face with soft cheeks; kind, tired dark eyes with faint shadows underneath; slightly pale lips; straight black shoulder-length hair tied low at the nape with a plain black band; no makeup, no earrings. She wears a hand-knitted burgundy (deep dark red) wool sweater with vertical cable-knit braids, and a cream-coloured knitted wool scarf loosely around her neck. A plain thin gold wedding band on the ring finger of her LEFT hand, clearly visible in view (3). Gentle, slightly breathless expression of someone with a weak heart. Photographic realism, natural skin texture. No text, no letters, no numbers, no labels, no watermark.
 ```
 
 ### 00b. `00_mau_ngan.jpg`
-**Đính kèm:** `00_mau_hang.jpg` (để Ngân có nét giống mẹ).
-**Kiểm tra:** cô bé 15 tuổi, giống mẹ ở mắt, nhưng gầy và mặt nhọn hơn; đồng phục học sinh miền Bắc đầu thập niên 90; cổ tay trái có dây chun đen và vết sẹo mảnh lộ ra một phần.
-**Nếu sai:** *"Same image but fix: a thin pale healed scar across the inside of her LEFT wrist, partly covered by a black hair elastic; no ring, no jewellery."*
+**Đính kèm:** `00_mau_hang.jpg`.
+**Kiểm tra:** cô bé 15 tuổi có đôi mắt giống mẹ nhưng gầy, cằm nhọn; đồng phục học sinh miền Bắc đầu 90 (áo sơ mi trắng, quần xanh than, khăn quàng đỏ, áo len xám cũ khoác ngoài); **cổ tay trái có dây chun đen và vết sẹo mảnh** thấy rõ ở dáng toàn thân (tay giơ ra trước); không trang sức.
+**Nếu sai:** *"Same sheet, but in the full-body view she holds her LEFT forearm forward, inside of the wrist toward camera: a thin pale horizontal healed scar, half covered by a black hair elastic. No ring, no jewellery."*
 ```
-Aspect ratio 16:9. Character reference sheet on a plain mid-grey background, even soft studio light, realistic photograph. A 15-year-old Vietnamese girl shown three times side by side: front view head and shoulders, three-quarter view, full body. She is the daughter of the woman in the attached reference: the same eyes, but thinner, a narrow pointed chin, very pale skin, chapped lips from cold, long straight black hair in a low ponytail. She wears an early-1990s northern Vietnamese secondary school uniform: white long-sleeved shirt, dark navy trousers, a red Young Pioneer scarf tied at the neck, a worn grey cardigan on top. On the inside of her LEFT wrist a thin pale healed scar line, partly covered by a black hair elastic. No ring, no jewellery. Polite, sweet smile, but the eyes do not smile. No text, no letters, no numbers, no watermark.
+Aspect ratio 16:9. Character reference sheet, realistic photograph, plain mid-grey seamless studio background, soft even daylight, no dramatic shadows. The SAME 15-year-old Vietnamese girl shown three times side by side, equal size: (1) front view head and shoulders, (2) three-quarter view head and shoulders, (3) full body standing, holding her LEFT forearm slightly forward with the inside of the wrist turned toward the camera. She is the daughter of the woman in the attached reference: the same dark eyes, but a much thinner face, narrow pointed chin, very pale skin, chapped lips from the cold, long straight black hair in a low ponytail. She wears an early-1990s northern Vietnamese secondary school uniform: white long-sleeved cotton shirt, dark navy trousers, a red Young Pioneer scarf knotted at the neck, a worn, pilled grey cardigan on top, black plastic sandals with socks. On the inside of her LEFT wrist: a thin pale horizontal healed scar, partly covered by a black fabric hair elastic. No ring, no jewellery. Polite, sweet smile, but the eyes do not smile. Natural skin texture. No text, no letters, no numbers, no labels, no watermark.
 ```
 
 ### 00c. `00_mau_khai.jpg`
 **Đính kèm:** Không.
-**Kiểm tra:** đàn ông miền Bắc 47 tuổi, rất gầy, râu lún phún, mắt đỏ, áo bông cũ; trông hiền và kiệt sức, không dữ.
+**Kiểm tra:** đàn ông 47 tuổi rất gầy, má hóp, râu lún phún bạc, mắt đỏ, áo bông kaki bạc màu; hiền và kiệt sức, không dữ.
+**Nếu sai:** *"Same sheet, but make him look gentle and exhausted, not threatening: soft apologetic eyes, slightly hunched shoulders."*
 ```
-Aspect ratio 16:9. Character reference sheet on a plain mid-grey background, even soft studio light, realistic photograph. The same Vietnamese man shown three times side by side: front view head and shoulders, three-quarter view, full body. He is 47, a small-town photographer in the northern mountains: very thin, hollow cheeks, grey stubble, short greying hair, reddened tired eyes of a heavy drinker, cracked knuckles stained brown by photo chemicals. He wears a faded khaki padded winter jacket over a grey wool vest, old trousers, rubber sandals with socks. Gentle, exhausted, apologetic expression. No text, no letters, no numbers, no watermark.
+Aspect ratio 16:9. Character reference sheet, realistic photograph, plain mid-grey seamless studio background, soft even daylight. The SAME man shown three times side by side, equal size: (1) front view head and shoulders, (2) three-quarter view head and shoulders, (3) full body standing, slightly hunched. He is a 47-year-old Vietnamese small-town photographer in the northern mountains, early 1990s: very thin, hollow cheeks, prominent cheekbones, grey stubble, short greying black hair, reddened tired eyes of a heavy drinker, cracked knuckles stained brown by darkroom chemicals. He wears a faded khaki cotton padded winter jacket over a grey knitted wool vest and a collared shirt, old dark trousers, rubber sandals over grey socks. Gentle, exhausted, apologetic expression, not threatening. Natural skin texture. No text, no letters, no numbers, no labels, no watermark.
 ```
 
 ---
@@ -46,150 +58,176 @@ Aspect ratio 16:9. Character reference sheet on a plain mid-grey background, eve
 
 ### 1. `cover.jpg`
 **Đính kèm:** `00_mau_ngan.jpg`.
-**Kiểm tra:**
-- Nhìn vào là thấy ngay **cánh cửa gỗ dán kín** bằng băng keo nâu và giấy báo, khe dưới cửa nhét chăn, ánh **đỏ cam của lò than** hắt ra từ khe.
-- Ngân đứng nghiêng bên cửa, áp tai vào cánh cửa, mặc **áo len đỏ đô của mẹ** rộng thùng thình.
-- Không có ai khác. Không có chữ.
-
-**Nếu sai:** *"Same image but fix: the door must be completely sealed with brown packing tape and old newspapers along every edge, a folded quilt stuffed under the door, a thin red-orange glow from a charcoal brazier leaking through the gap."*
+**Bố cục:** khung dọc. Cánh cửa dán kín chiếm **giữa** khung, cao gần hết khung. Ngân đứng **bên phải cửa**, nghiêng người, tai và lòng bàn tay áp vào cửa. Cửa sổ nhỏ ở **bên trái** cho ánh trăng xanh. Ánh lò than đỏ cam lọt ra **khe dưới cửa**.
+**Kiểm tra:** cửa dán băng keo nâu và giấy báo quanh mọi mép, khe dưới nhét chăn hoa; Ngân mặc **áo len đỏ đô của mẹ rộng thùng thình** (tay áo dài che kín bàn tay) và khăn kem; không có ai khác; không có chữ trên giấy báo.
+**Nếu sai:** *"Same image, but: the door must be sealed with brown packing tape and yellowed newspaper along EVERY edge and over the keyhole; a folded floral quilt stuffed under the door; a thin red-orange charcoal glow leaking from under it; the newspaper must show no readable text."*
 ```
-Aspect ratio 3:4. Cinematic horror film still, 35mm, northern mountain town of Vietnam, December 1991, night. A narrow room of a poor brick house: lime-washed walls with damp stains, a bare yellow bulb. At the center an old wooden inner door, completely sealed shut with strips of brown packing tape and yellowed newspaper pasted along every edge and over the keyhole; a folded quilt is stuffed into the gap under the door, and a thin red-orange glow of burning charcoal leaks out from under it, faint grey smoke curling. To the right of the door stands the 15-year-old girl from the attached reference, pressing her ear and her palm gently against the sealed door, eyes half closed, listening, a faint tender smile. She wears a burgundy cable-knit wool sweater far too big for her, sleeves covering her hands, a cream knitted scarf. Cold blue moonlight from a small window on the left, warm red glow from below the door, deep shadows. Breath visible in the cold air. Quiet, intimate, deeply wrong. No text, no letters, no numbers, no watermark.
+Aspect ratio 3:4. Cinematic horror film still shot on 35mm colour film, northern mountain town of Vietnam, December 1991, night. A narrow room of a poor brick house: lime-washed walls with grey damp stains, a bare yellow incandescent bulb hanging on a wire, concrete floor. Centre of the frame, almost full height: an old dark wooden inner door, completely sealed shut with strips of brown packing tape and yellowed newspaper pasted along every edge and over the keyhole (the newspaper print is blurred, unreadable); a folded floral cotton quilt is stuffed into the gap under the door, and a thin red-orange glow of burning charcoal leaks out beneath it, with faint grey smoke curling up. To the RIGHT of the door stands the 15-year-old girl from the attached reference (thin, pale, pointed chin, long black hair in a low ponytail), leaning sideways, pressing her ear and her open palm gently against the sealed door, eyes half closed, listening, a faint tender smile. She wears a burgundy cable-knit wool sweater far too big for her, the sleeves covering her hands, and a cream knitted wool scarf. On the LEFT wall a small window lets in cold blue moonlight. Warm red glow from below the door, deep shadows elsewhere, breath vapour visible in the cold air. Quiet, intimate, deeply wrong. Film grain. No other people. No text, no letters, no numbers, no watermark.
 ```
 
 ### 2. `cam_duong.jpg`
 **Đính kèm:** Không.
-**Kiểm tra:** thị trấn mỏ miền núi phía Bắc buổi sáng sương muối: nhà gạch một tầng mái fibro xi măng, đồi trọc, ống khói, cỏ trắng sương. Không có nhà cao tầng, xe hơi hiện đại hay biển hiệu.
+**Kiểm tra:** sáng sương muối trắng xoá; nhà gạch một tầng mái fibro xám; đồi trọc có vết mỏ apatit; đường đất; một người đội nón quang gánh, một xe đạp. Không ô tô, không nhà cao tầng, không biển hiệu.
+**Nếu sai:** *"Same image, but remove every modern object, car and sign; only low brick houses with grey corrugated fibre-cement roofs."*
 ```
-Aspect ratio 16:9. Realistic documentary photograph on faded 1990s colour film, early morning, December 1991, a small mining town in the mountains of Lào Cai, northern Vietnam. Heavy hoarfrost: grass, roofs and rails covered in white frost crystals, thick fog in the valleys. Rows of low single-storey brick houses with grey corrugated fibre-cement roofs, smoke rising from a few chimneys, bare hills scarred by an open-pit apatite mine in the background, a muddy road with a lone bicycle and a woman in a conical hat carrying a shoulder pole. Muted cold blue-grey palette, grain, slight light leak. No modern cars, no signs, no text, no letters, no numbers, no watermark.
+Aspect ratio 16:9. Realistic documentary landscape photograph on faded early-1990s colour negative film, early morning, December 1991, a small mining town in the mountains of Lào Cai province, northern Vietnam. Heavy hoarfrost: grass, roofs and fences covered in white frost crystals, thick fog filling the valleys. In the middle ground, rows of low single-storey brick houses with grey corrugated fibre-cement roofs, thin smoke rising from a few kitchen chimneys. In the background, bare reddish hills scarred by terraces of an open-pit apatite mine. In the foreground, a muddy dirt road with frozen puddles, one old black bicycle leaning on a post, and a small woman in a conical hat and a padded jacket carrying a bamboo shoulder pole with two baskets, walking away from the camera. Muted cold blue-grey palette, soft fog, film grain, slight light leak at the edge. No cars, no motorbikes, no shop signs, no text, no letters, no numbers, no watermark.
 ```
 
 ### 3. `hieu_anh.jpg`
 **Đính kèm:** Không.
-**Kiểm tra:** mặt tiền hiệu ảnh nhỏ trong nhà gạch: tủ kính bày ảnh, **tấm biển gỗ để trống** (mình sẽ tự viết chữ "ẢNH HẰNG" lên). Cửa gỗ khép hờ, bên trong tối.
-**Nếu sai:** *"Same image but fix: the wooden sign board above the door must be completely blank, no letters at all."*
+**Kiểm tra:** mặt tiền hiệu ảnh nhỏ; **tấm biển gỗ trên cửa hoàn toàn trống** (mình tự viết chữ sau); tủ kính bày ảnh chân dung nhỏ đã phai; cửa gỗ xếp mở hé vào bóng tối; một bóng đèn vàng yếu bên trong; nén hương cắm trong lon ở bậc cửa.
+**Nếu sai:** *"Same image, but the wooden sign board above the door must be completely blank: plain painted wood, no letters, no numbers, no symbols."*
 ```
-Aspect ratio 4:3. Realistic photograph on faded 1990s colour film, dusk, December 1991, northern Vietnamese mountain town. The front of a tiny family photo studio in an old single-storey brick house with a fibre-cement roof: a narrow wooden glass-front display cabinet beside the door showing small faded portrait photos, a blank painted wooden sign board above the door with NO lettering at all, a folding wooden door half open onto darkness, a burning incense stick in a can by the doorstep, frost on the step. A single bare bulb inside casts a weak yellow light. Lonely, cold, slightly unsettling. No text, no letters, no numbers, no watermark.
+Aspect ratio 4:3. Realistic street photograph on faded early-1990s colour film, dusk, December 1991, a small northern Vietnamese mountain town. Straight-on view of the front of a tiny family photo studio in an old single-storey brick house with a grey fibre-cement roof. Above the door, a rectangular wooden sign board painted pale green, COMPLETELY BLANK, no lettering at all. To the left of the door a narrow wooden display cabinet with a glass front showing a dozen small faded portrait photographs (faces too small to recognise). The folding wooden shutter door is half open onto darkness; one bare yellow bulb glows weakly deep inside. On the doorstep, a burning incense stick in an old tin can, frost on the concrete step. Lonely, cold, slightly unsettling. Film grain. No people. No text, no letters, no numbers, no watermark.
 ```
 
 ### 4. `gian_giua.jpg`
 **Đính kèm:** `00_mau_khai.jpg`.
-**Kiểm tra:** gian giữa nghèo: bàn thờ gia tiên có lư hương **nhưng không có ảnh thờ của bà Hằng**, cạnh đó là cửa buồng dán kín; ông Khải ngồi bên bàn nước rót chè, nhìn về phía cửa buồng. Hai cái bát cháo và đôi đũa để sẵn trên khay trước cửa buồng.
+**Bố cục:** bàn thờ ở **tường sau, giữa khung**; cửa buồng dán kín ở **bên phải**; ông Khải ngồi bàn nước thấp ở **tiền cảnh bên trái**, nhìn sang phải về phía cửa buồng.
+**Kiểm tra:** bàn thờ có lư hương và ảnh tổ tiên cũ nhưng **không có ảnh bà Hằng** (có một chỗ trống rõ ràng); khay cháo và đũa đặt **trên sàn trước cửa buồng**, như dọn cho người bên trong; ông Khải rót chè vào **hai** chén.
+**Nếu sai:** *"Same image, but put a small wooden tray on the floor right in front of the sealed door, with a bowl of rice porridge, a pair of chopsticks and a cup of tea, as if served to someone inside."*
 ```
-Aspect ratio 16:9. Cinematic still, realistic, 35mm, a winter evening in December 1991 inside a poor brick house in the northern Vietnamese mountains. The central living room: a small ancestral altar shelf on the back wall with a brass incense burner thick with burning incense sticks, old ancestor photos but an obvious empty space with no portrait of a woman. To the right, an inner wooden door completely sealed with brown packing tape and newspaper, a folded quilt stuffed under it. On the floor in front of the sealed door, a small wooden tray with a bowl of rice porridge, chopsticks and a cup of tea, as if served to someone inside. At a low wooden table in the foreground sits the thin man from the attached reference in his khaki padded jacket, pouring tea into two small cups, looking toward the sealed door with tender patience. A charcoal brazier glows at his feet. Thick incense haze, yellow bulb, cold blue window light. No text, no letters, no numbers, no watermark.
+Aspect ratio 16:9. Cinematic still, realistic, 35mm colour film, a winter evening in December 1991 inside a poor brick house in the northern Vietnamese mountains. The central living room. On the back wall, centre: a small wooden ancestral altar shelf with a brass incense burner thick with burning incense sticks, two old black-and-white ancestor photos of elderly people, and an obvious empty space with a clean rectangle on the wall where a third portrait is missing. On the RIGHT side of the frame: an inner wooden door completely sealed with brown packing tape and yellowed newspaper along every edge, a folded floral quilt stuffed under it; on the floor right in front of that door, a small wooden tray with a bowl of rice porridge, a pair of chopsticks and a cup of tea, as if served to someone inside. In the LEFT foreground, at a low wooden table, sits the thin man from the attached reference (hollow cheeks, grey stubble, reddened eyes, faded khaki padded jacket) pouring tea into two small cups, his head turned toward the sealed door with tender patience. A clay charcoal brazier glows at his feet. Thick incense haze, one yellow bulb, cold blue light from a small window. Film grain. No other people. No text, no letters, no numbers, no watermark.
 ```
 
 ### 5. `hai_cha_con.jpg`
-**Đính kèm:** `00_mau_khai.jpg` và `00_mau_ngan.jpg`.
-**Kiểm tra:** ảnh Vân chụp hai cha con ngồi ở gian giữa. Ngân ngồi sát bố, tay Ngân **nắm cổ tay bố**. Ông Khải nhìn con, không nhìn ống kính. Ngân nhìn thẳng ống kính, cười ngoan.
+**Đính kèm:** `00_mau_khai.jpg`, `00_mau_ngan.jpg`.
+**Bố cục:** hai người ngồi ghế băng sát tường; **bố bên trái, Ngân bên phải**; mép phải khung thấy một phần cửa dán băng keo.
+**Kiểm tra:** ảnh chụp có đèn flash nghiệp dư (bóng cứng trên tường, hơi đỏ mắt); **tay Ngân nắm chặt cổ tay bố**; bố nhìn con, không nhìn ống kính; Ngân nhìn thẳng ống kính, cười ngoan; Ngân mặc đồng phục và áo len xám.
+**Nếu sai:** *"Same photo, but the girl's hand must firmly hold her father's wrist, and the father must look at her, not at the camera."*
 ```
-Aspect ratio 4:3. Realistic amateur photograph on faded early-1990s colour film with on-camera flash, slight red-eye, December 1991. Inside a poor brick house in the northern Vietnamese mountains, a father and his teenage daughter sit side by side on a wooden bench against a lime-washed wall, in front of a corner of an incense-hazed ancestral altar. The father is the thin man from the first attached reference, in his khaki padded jacket, his face turned toward his daughter, worried and obedient. The daughter is the girl from the second attached reference, in her school uniform and grey cardigan, sitting very close to him, her hand firmly holding his wrist; she looks straight into the camera with a sweet polite smile. Harsh flash, hard shadow on the wall behind them, the right edge of the frame shows the edge of a door covered in brown tape. No text, no letters, no numbers, no watermark.
+Aspect ratio 4:3. Realistic amateur snapshot on faded early-1990s colour film taken with a cheap on-camera flash: harsh frontal light, hard black shadow on the wall behind, slight red-eye, December 1991. Inside a poor brick house in the northern Vietnamese mountains, a father and his teenage daughter sit side by side on a wooden bench against a lime-washed wall, with the corner of an incense-hazed ancestral altar behind them. LEFT: the father, the thin man from the first attached reference (hollow cheeks, grey stubble, faded khaki padded jacket), his face turned toward his daughter, worried and obedient. RIGHT: the daughter, the girl from the second attached reference (pale, pointed chin, low ponytail, white school shirt, red scarf, worn grey cardigan), sitting very close to him, her hand firmly gripping his wrist; she looks straight into the camera with a sweet polite smile that does not reach her eyes. At the right edge of the frame, part of a door covered in brown packing tape. Film grain. No text, no letters, no numbers, no date stamp, no watermark.
 ```
 
 ---
 
-## B. Ảnh gia đình (bằng chứng so sánh)
+## B. Ảnh gia đình (bằng chứng để so sánh)
 
 ### 6. `anh_cuoi_1975.jpg`
-**Đính kèm:** `00_mau_hang.jpg` và `00_mau_khai.jpg`.
-**Kiểm tra:** ảnh cưới đen trắng ở hiệu ảnh năm 1975; hai người trẻ (khoảng 27–28 tuổi); tay trái cô dâu đặt lên tay chú rể, **thấy rõ nhẫn ở ngón áp út tay trái**.
+**Đính kèm:** `00_mau_hang.jpg`, `00_mau_khai.jpg`.
+**Kiểm tra:** ảnh cưới đen trắng ở hiệu ảnh năm 1975, viền giấy trắng răng cưa; hai người khoảng 27–28 tuổi, trẻ hơn ảnh mẫu; **tay trái cô dâu đặt lên cẳng tay chú rể, thấy rõ nhẫn ở ngón áp út tay trái**.
+**Nếu sai:** *"Same photo, but the bride's LEFT hand rests on the groom's forearm, facing the camera, with the plain wedding ring clearly visible on her ring finger."*
 ```
-Aspect ratio 3:4. Vintage black-and-white studio wedding portrait, northern Vietnam, 1975, slightly yellowed paper with a white deckled border and a few scratches. A young couple in their late twenties, younger versions of the two people in the attached references: the bride with round full face, hair tied back, white blouse with a small paper flower pinned on the chest; the groom thin, short hair, white shirt and dark trousers. They stand stiffly side by side in front of a painted studio backdrop. The bride's LEFT hand rests on the groom's forearm, a plain wedding ring clearly visible on her left ring finger. Shy, hopeful faces. No text, no letters, no numbers, no watermark.
+Aspect ratio 3:4. Vintage black-and-white studio wedding portrait, northern Vietnam, 1975, printed on slightly yellowed photo paper with a white deckled border, a few fine scratches and a small crease in one corner. A young couple in their late twenties, clearly younger versions of the two people in the attached references, standing stiffly side by side in front of a painted studio backdrop of a lake and a pagoda. The bride: round full face, hair tied back neatly, white áo dài-style blouse with a small paper flower pinned on her chest. The groom: thin, short neat hair, white shirt buttoned to the collar, dark trousers. The bride's LEFT hand rests on the groom's forearm, back of the hand toward the camera, a plain wedding ring clearly visible on her left ring finger. Shy, hopeful, slightly awkward faces. No text, no letters, no numbers, no studio stamp, no watermark.
 ```
 
-### 7. `hang_1988.jpg`
+### 7. `hang_1988.jpg` (ảnh gốc để so với ảnh 8)
 **Đính kèm:** `00_mau_hang.jpg`.
-**Kiểm tra:** bà Hằng năm 1988 chấm bài bên cửa sổ, mặc áo len đỏ đô và khăn kem, **ngồi nghiêng thấy mặt**, tay trái đặt trên bậu cửa có **nhẫn**. Bố cục giống ảnh số 8 (cùng cửa sổ, cùng ghế đẩu) để người chơi so.
+**Bố cục (rất quan trọng, ảnh 8 phải chụp y hệt góc này):**
+- Máy ảnh đứng **sau lưng chéo bên trái** người ngồi, ngang tầm vai.
+- **Cửa sổ** khung gỗ 4 ô kính chiếm **phía trên, từ giữa sang phải** khung hình (khoảng 40% đến 95% bề ngang, 5% đến 45% chiều cao). Kính trong, nhìn ra trời xám.
+- **Bậu cửa sổ** chạy ngang ở **khoảng 55% chiều cao**.
+- **Ghế đẩu gỗ** thấp ở **đáy khung, lệch trái**.
+- **Chén trà** trên bậu cửa ở **bên phải** (khoảng 70–80% bề ngang).
+**Kiểm tra:** bà Hằng **ngồi nghiêng ba phần tư, thấy rõ mặt** đang chấm bài; áo len đỏ đô vặn thừng, khăn kem; **tay trái đặt trên bậu cửa, nhẫn vàng thấy rõ**.
+**Nếu sai:** *"Same composition, but her LEFT hand must rest flat on the windowsill with the gold wedding ring clearly visible, and her face must be visible in three-quarter profile."*
 ```
-Aspect ratio 4:3. Realistic photograph on faded late-1980s colour film, warm afternoon light, 1988, inside a modest brick house in the northern Vietnamese mountains. The woman from the attached reference, aged 40, sits on a low wooden stool beside a small wooden-framed glass window, in three-quarter profile so her face is clearly visible, marking a stack of school notebooks on her lap with a red pen. She wears her burgundy cable-knit sweater and cream knitted scarf. Her LEFT hand rests on the windowsill, the gold wedding ring clearly visible. A cup of tea on the sill. Calm, warm, ordinary family moment, gentle smile. Same window, same stool, same angle as a later photo will use. No text, no letters, no numbers, no watermark.
+Aspect ratio 4:3. Realistic photograph on faded late-1980s colour film, warm late-afternoon light, 1988, inside a modest brick house in the northern Vietnamese mountains. Fixed composition: the camera is behind and slightly to the left of a seated woman, at shoulder height. A wooden-framed window with four glass panes fills the upper middle-to-right part of the frame (from about 40% to 95% of the width, from 5% to 45% of the height), showing a pale grey sky. The wooden windowsill runs horizontally across the frame at about 55% of the height. A low wooden stool sits at the bottom of the frame, slightly left of centre. A small white tea cup stands on the windowsill on the right (about 70–80% of the width). On the stool sits the woman from the attached reference, aged 40, turned in three-quarter profile so her round face is clearly visible, marking a stack of school notebooks on her lap with a red pen. She wears her burgundy cable-knit wool sweater and her cream knitted wool scarf around her neck (not over her head); her hair is tied low. Her LEFT hand rests flat on the windowsill, the plain gold wedding ring clearly visible. Calm, warm, ordinary family moment, gentle smile. Film grain. No text, no letters, no numbers, no watermark.
 ```
 
-### 8. `vo_toi_tet_1991.jpg`
-**Đính kèm:** `hang_1988.jpg` (cùng cửa sổ, ghế, góc chụp) và `00_mau_ngan.jpg`.
-**Kiểm tra (quan trọng, đây là ảnh soi bằng đèn pin):**
-- Cùng cửa sổ, ghế đẩu, góc chụp như ảnh 7, nhưng người ngồi **quay lưng hẳn** về phía người xem, đầu trùm khăn len kem, áo len đỏ đô **rộng thùng thình**, vai nhỏ.
-- Hai tay đặt trên bậu cửa: **không có nhẫn**; ở **cổ tay trái (bên trái người xem)** có dây chun đen và một vệt sẹo mảnh.
-- Trong **mặt kính cửa sổ** có bóng phản chiếu mờ của **khuôn mặt một cô bé** (mặt Ngân), rất nhạt, phải nhìn kỹ mới thấy.
-- Ảnh tối, hơi nhoè, ánh sáng mùa đông xám.
+### 8. `vo_toi_tet_1991.jpg` (ẢNH SOI ĐÈN PIN, quan trọng nhất)
+**Đính kèm:** `hang_1988.jpg` (bắt buộc, để giữ đúng cửa sổ, ghế, góc máy) và `00_mau_ngan.jpg`.
+**Bố cục (game đã đặt sẵn vùng soi đèn theo đúng các toạ độ này, chỉ lệch chút ít thì vẫn soi được; tính theo % bề ngang × % chiều cao, gốc ở góc trên bên trái):**
+| Chi tiết | Vị trí trong ảnh |
+|---|---|
+| **Bóng mặt cô bé trong kính cửa sổ** (rất mờ) | ngang 38–64%, cao 8–38% (ô kính giữa) |
+| Khung cửa sổ gỗ | ngang 66–96%, cao 4–44% |
+| **Đầu trùm khăn len kem** (quay lưng) | ngang 24–38%, cao 20–46% |
+| **Cổ tay trái có dây chun đen và sẹo** | ngang 30–43%, cao 54–68% |
+| **Hai bàn tay trên bậu cửa, không nhẫn** | ngang 44–66%, cao 54–64% |
+| Chén trà nguội | ngang 70–84%, cao 48–62% |
+| Áo len đỏ đô rộng thùng thình (lưng, vai) | ngang 20–30%, cao 46–84% |
+| Ghế đẩu gỗ | ngang 22–62%, cao 84–100% |
+
+**Kiểm tra:**
+- Cùng cửa sổ, ghế, góc máy như ảnh 7.
+- Người ngồi **quay lưng hẳn**, đầu **trùm** khăn len kem (không thấy tóc), áo len đỏ đô **quá rộng**, vai nhỏ.
+- Hai tay đặt trên bậu cửa: **không có nhẫn**; ở **cổ tay trái (bên trái người xem)**: dây chun đen, vết sẹo mảnh.
+- Trong **ô kính giữa** có bóng phản chiếu **rất mờ** của mặt một cô bé (mặt Ngân), phải nhìn kỹ mới thấy.
+- Ảnh tối hơn ảnh 7, ánh sáng mùa đông xám, hơi nhoè.
 
 **Nếu sai:**
-- Không thấy bóng trong kính: *"Same image but fix: add a faint ghostly reflection of a young teenage girl's face in the window glass, very subtle, as a real glass reflection."*
-- Có nhẫn: *"Same image but fix: no ring on any finger; a thin pale scar and a black hair elastic on the inside of the left wrist (viewer's left)."*
+- Không thấy bóng trong kính: *"Same image, but add a very faint ghostly reflection of the teenage girl's face in the middle window pane, upper centre of the frame, subtle like a real glass reflection."*
+- Bóng quá rõ: *"Same image, but make the face reflection in the glass much fainter, almost invisible at first glance."*
+- Có nhẫn, hoặc thiếu sẹo: *"Same image, but no ring on any finger; on the inside of her LEFT wrist (viewer's left) a black hair elastic and a thin pale scar line."*
+- Sai góc máy: *"Same scene, but match the attached 1988 photo exactly: same window position in the upper middle-right, same windowsill height, same stool, same camera angle."*
 ```
-Aspect ratio 4:3. Realistic photograph on faded early-1990s colour film, grey winter light, Tết 1991, the exact same window, wooden stool and camera angle as the first attached photo. A small, thin figure sits on the stool with her back fully turned to the camera, facing the window, wearing the same burgundy cable-knit sweater but far too big for her, shoulders narrow, and the cream knitted scarf draped over her head like a hood so no hair is visible. Both her hands rest on the windowsill: young, thin hands, NO ring on any finger; on the inside of her LEFT wrist (viewer's left) a black hair elastic and a thin pale scar line. In the window glass, very faint, a ghostly reflection of the face of the teenage girl from the second attached reference, looking back at the camera. A cold untouched cup of tea on the sill. Slightly underexposed, soft focus, film grain. Melancholic and quietly disturbing. No text, no letters, no numbers, no watermark.
+Aspect ratio 4:3. Realistic photograph on faded early-1990s colour film, dim grey winter light, Tết 1991. EXACTLY the same room, window, windowsill, wooden stool and camera angle as the first attached photograph: the camera behind and slightly to the left of the seated person, at shoulder height; the four-pane wooden window in the upper middle-to-right of the frame; the windowsill running horizontally at about 55% of the frame height; the low wooden stool at the bottom, slightly left of centre. Sitting on the stool, with her back FULLY turned to the camera and facing the window, is a small, thin girl wearing the same burgundy cable-knit wool sweater, but far too big for her: drooping shoulders, sleeves pushed up. The cream knitted wool scarf is draped over her head like a hood, so no hair is visible; the hooded head is in the left-centre of the frame. Both her hands rest on the windowsill in the centre of the frame: young, thin, pale hands, with NO ring on any finger. On the inside of her LEFT wrist (on the viewer's left), a black fabric hair elastic and a thin pale horizontal scar line. In the MIDDLE window pane, in the upper centre of the frame, a very faint ghostly reflection of the face of the teenage girl from the second attached reference (pale, pointed chin), looking back toward the camera, subtle like a real reflection in glass, almost invisible at first glance. A small white tea cup, cold, untouched, stands on the windowsill to the right. Slightly underexposed, soft focus, visible film grain. Melancholic and quietly disturbing. No text, no letters, no numbers, no date stamp, no watermark.
 ```
 
 ### 9. `buong_toi.jpg`
 **Đính kèm:** `vo_toi_tet_1991.jpg`.
-**Kiểm tra:** buồng tối rửa ảnh dưới ánh đèn đỏ: khay hoá chất, can nhựa, dây phơi ảnh. Trên dây là **nhiều bản in của cùng một ảnh** người quay lưng bên cửa sổ (giống ảnh 8). Không có chữ đọc được trên can.
+**Kiểm tra:** buồng tối rửa ảnh dưới **một bóng đèn đỏ**; khay men, chai thuỷ tinh nâu, **can nhựa trắng 20 lít** (không chữ), máy phóng ảnh cũ, xô vôi bột; hai dây phơi ảnh với khoảng mười bản in **của cùng một ảnh** người quay lưng bên cửa sổ.
+**Nếu sai:** *"Same image, but every print hanging on the lines must be a copy of the same photo: a hooded figure with her back turned, sitting at a window."*
 ```
-Aspect ratio 16:9. Cinematic still, a tiny home photographic darkroom in a poor northern Vietnamese house, 1991, lit only by a single deep red safelight bulb. Enamel developing trays on a wooden bench, brown glass bottles, a large white plastic jerrycan, an old enlarger, a bucket of white lime powder on the floor. Across the room hang two clotheslines with wooden pegs holding a dozen wet black-and-white prints, all copies of the same photo as the attached reference: a figure in a sweater with a scarf over her head, back turned, sitting at a window. Dripping water, red light, black shadows, claustrophobic. No readable labels, no text, no letters, no numbers, no watermark.
+Aspect ratio 16:9. Cinematic still, a tiny home photographic darkroom in a poor northern Vietnamese house, 1991, lit only by a single deep red safelight bulb hanging from the ceiling. On a wooden workbench along the left wall: three white enamel developing trays with liquid, brown glass chemical bottles, an old metal photo enlarger. On the floor: a large white 20-litre plastic jerrycan with no label, and a bucket of white lime powder. Across the room, two clotheslines with wooden pegs hold about ten wet black-and-white prints, ALL copies of the same photograph as the attached reference: a figure with a scarf over her head, back turned, sitting at a window. Water drips from the prints into a tray. Deep red light, black shadows, claustrophobic. No readable labels, no text, no letters, no numbers, no watermark.
 ```
 
 ### 10. `lo_than.jpg`
 **Đính kèm:** Không.
-**Kiểm tra:** góc nhà: một lò than đất nung, cạnh đó **bao tải than hoa** mới, vài cuộn băng keo nâu và một cái chăn gấp. Ánh sáng ban ngày xám.
+**Kiểm tra:** góc nhà sàn xi măng; một **lò than đất nung chưa đốt**; cạnh đó **bao tải than hoa mới** (vài cục than rơi ra), **ba cuộn băng keo nâu**, **một cái chăn hoa gấp vuông**; đôi dép nhựa con gái ở chân tường; ánh sáng ban ngày xám.
 ```
-Aspect ratio 4:3. Realistic photograph on faded early-1990s colour film, grey daylight, December 1991, the corner of a poor brick house in the northern Vietnamese mountains. On the concrete floor: an unlit clay charcoal brazier, beside it a new jute sack filled with black lump charcoal, a few charcoal pieces spilled on the floor, three rolls of brown packing tape and a folded floral quilt stacked neatly next to it, as if prepared for something. A small pair of girl's plastic sandals by the wall. Still, ordinary, ominous. No text, no letters, no numbers, no watermark.
+Aspect ratio 4:3. Realistic photograph on faded early-1990s colour film, flat grey daylight from a small window, December 1991, the corner of a poor brick house in the northern Vietnamese mountains, concrete floor, lime-washed walls. Arranged neatly in the corner: an unlit round clay charcoal brazier (Vietnamese "lò đất"), beside it a new jute sack filled with black lump charcoal with a few pieces spilled on the floor, three rolls of brown packing tape stacked on top of each other, and a floral cotton quilt folded into a neat square. A small pair of girl's pink plastic sandals stands by the wall. Everything looks carefully prepared, as for an occasion. Still, ordinary, ominous. Film grain. No people. No text, no letters, no numbers, no watermark.
 ```
 
 ### 11. `buong_mo.jpg` (kết thúc tốt)
 **Đính kèm:** Không.
-**Kiểm tra:** căn buồng đã mở, buổi sáng: băng keo bóc dở rủ xuống, giường gỗ màn buông, **không thấy thi thể rõ** (chỉ một hình người dưới chăn, mờ sau màn). Trên tủ đầu giường: lược chải tóc, bát cháo đã khô, lọ thuốc nhỏ. Ánh sáng sớm lọt qua cửa sổ vừa mở.
+**Kiểm tra:** buổi sáng, căn buồng vừa mở: băng keo và giấy báo bóc dở rủ xuống khung cửa; giường gỗ **buông màn trắng**, sau màn chỉ là **một hình dáng mờ dưới chăn**, không thấy thi thể; tủ đầu giường có lược gỗ, bát cháo khô, lọ thuốc nhỏ mở nắp; vôi bột trắng dọc chân tường; nắng sớm và bụi bay.
+**Nếu sai:** *"Same image, but nothing of a body is visible: only a vague shape under the quilt behind the closed white mosquito net."*
 ```
-Aspect ratio 16:9. Cinematic still, early morning, December 31st 1991, a small bedroom in a poor brick house in the northern Vietnamese mountains, just opened after two years. Torn strips of brown packing tape and newspaper hang from the open door frame. A wooden bed with a closed white mosquito net; behind the net, only a vague shape under a quilt, not clearly visible. On the bedside table: a wooden hairbrush with long black hairs, a bowl of dried old porridge, a small medicine bottle with its cap off, dust everywhere, white lime powder along the walls. Pale cold sunlight enters through a window that has just been thrown open, dust floating in the light. Grief, not gore. No text, no letters, no numbers, no watermark.
+Aspect ratio 16:9. Cinematic still, early morning of December 31st 1991, a small bedroom in a poor brick house in the northern Vietnamese mountains, just opened after two years. In the foreground, torn strips of brown packing tape and yellowed newspaper hang from the open door frame. A wooden bed with a closed white mosquito net; behind the net only a vague shape under a quilt, not clearly visible. On a small bedside table: a wooden hairbrush with long black hairs, a bowl of old dried porridge, a small brown medicine bottle with its cap off lying on its side. Thick dust everywhere, a line of white lime powder along the base of the walls. Pale cold sunlight enters through a window that has just been thrown open, dust floating in the beam. Grief, not gore. Film grain. No people visible. No text, no letters, no numbers, no watermark.
 ```
 
 ---
 
 ## C. Cảnh doạ
 
-### 12. `mat_kinh_scare.jpg` (cảnh doạ lần 3)
-**Đính kèm:** `vo_toi_tet_1991.jpg` và `00_mau_ngan.jpg`.
-**Kiểm tra:** cùng ảnh số 8 nhưng bóng mặt trong kính **rõ hẳn**, mắt mở to **nhìn thẳng người xem**, cười.
+### 12. `mat_kinh_scare.jpg` (doạ khi soi trúng bóng trong kính)
+**Đính kèm:** `vo_toi_tet_1991.jpg`, `00_mau_ngan.jpg`.
+**Kiểm tra:** **y hệt ảnh 8** (cùng người quay lưng, cùng cửa sổ), chỉ khác: bóng mặt trong ô kính giữa giờ **rõ hẳn**, mắt mở to **nhìn thẳng người xem**, mỉm cười cứng.
 ```
-Aspect ratio 4:3. The exact same photograph as the first attached reference, same window, same figure with her back turned, but now the reflection in the window glass is sharp and clear: the face of the teenage girl from the second attached reference, eyes wide open, staring straight into the camera, a small fixed smile, as if she had noticed the viewer. Underexposed, grain, cold grey light. Horror photo. No text, no letters, no numbers, no watermark.
+Aspect ratio 4:3. The exact same photograph as the first attached reference: same window, same windowsill, same stool, same hooded figure in the oversized burgundy sweater with her back turned, same hands on the sill, same camera angle and lighting. The ONLY change: the reflection in the middle window pane is now sharp and clear: the face of the teenage girl from the second attached reference, eyes wide open, staring straight into the camera, a small fixed smile, as if she has just noticed the viewer. Underexposed, film grain, cold grey light. Horror photograph. No text, no letters, no numbers, no watermark.
 ```
 
-### 13. `ngan_khan_scare.jpg` (cảnh doạ chính lần 4)
+### 13. `ngan_khan_scare.jpg` (cảnh doạ chính, lần thăm 4)
 **Đính kèm:** `00_mau_ngan.jpg`.
-**Kiểm tra:** cận cảnh mặt Ngân trùm khăn len kem của mẹ, sát ống kính, ánh lò than đỏ từ dưới hắt lên, mắt mở to, miệng hé như vừa nói.
+**Kiểm tra:** cận cảnh mặt Ngân **sát ống kính**, trùm khăn len kem của mẹ, ánh lò than đỏ hắt từ dưới lên, mắt mở to không chớp, môi hé như vừa thì thầm, có hơi thở trắng.
 ```
-Aspect ratio 1:1. Extreme close-up horror film still, the face of the teenage girl from the attached reference pressed very close to the lens, a cream knitted wool scarf draped over her head like a hood, framing her pale face. Lit only from below by the red-orange glow of a charcoal brazier, deep black shadows above. Her eyes wide open, unblinking, pupils huge, lips slightly parted as if she just whispered something; a thread of breath vapour in the cold air. Shallow depth of field, grain, slight motion blur at the edges. No text, no letters, no numbers, no watermark.
+Aspect ratio 1:1. Extreme close-up horror film still: the face of the teenage girl from the attached reference (pale, thin, pointed chin) pressed very close to the lens, filling most of the frame, a cream knitted wool scarf draped over her head like a hood and framing her face. Lit only from below by the red-orange glow of a charcoal brazier; deep black shadows above her eyes and in the background. Her eyes are wide open and unblinking, pupils huge; her lips slightly parted as if she just whispered something; a thin thread of breath vapour in the cold air. Shallow depth of field, film grain, slight motion blur at the edges. No text, no letters, no numbers, no watermark.
 ```
 
-### 14. `bong_ba_scare.jpg` (cảnh doạ lần 5)
+### 14. `bong_ba_scare.jpg` (cảnh doạ lần thăm 5)
 **Đính kèm:** `00_mau_hang.jpg`.
-**Kiểm tra:** buồng tối om, chỉ một vệt sáng xanh; bóng một **người đàn bà ngồi tựa thành giường**, đầu nghiêng, một tay buông xuống gầm giường như đang với. Không thấy rõ mặt.
+**Kiểm tra:** buồng tối om, chỉ một vệt trăng xanh; **bóng đen** một người đàn bà ngồi tựa thành giường, đầu nghiêng lệch, một tay buông xuống mép giường với về phía **lọ thuốc nằm lăn dưới gầm**; không thấy rõ mặt.
 ```
-Aspect ratio 16:9. Horror film still, a pitch-dark bedroom at 2 a.m., lit only by a thin strip of cold blue moonlight through a crack. On an old wooden bed, the dark silhouette of the woman from the attached reference sitting up against the headboard, head tilted sideways at an unnatural angle, one arm hanging down over the edge of the bed, fingers reaching toward the floor underneath, where a small medicine bottle lies on its side. Her face is lost in shadow, only the faint shape of a cardigan and loose hair. Heavy grain, crushed blacks. No text, no letters, no numbers, no watermark.
+Aspect ratio 16:9. Horror film still, a pitch-dark bedroom at 2 a.m., lit only by a thin vertical strip of cold blue moonlight through a crack in a shutter. On an old wooden bed, the dark silhouette of the woman from the attached reference sitting up against the headboard, head tilted sideways at an unnatural angle, one arm hanging down over the edge of the bed, fingers reaching toward the floor underneath, where a small brown medicine bottle lies on its side just out of reach. Her face is lost in shadow; only the faint outline of a sweater and loose hair. Heavy grain, crushed blacks. No text, no letters, no numbers, no watermark.
 ```
 
 ### 15. `khoi_than_scare.jpg` (kết thúc xấu)
 **Đính kèm:** `cover.jpg`.
-**Kiểm tra:** cùng cánh cửa dán kín như bìa, nhưng **không còn ai đứng ngoài**; khói xám đặc luồn ra từ khe chăn; một **bàn tay con gái** thò ra từ khe dưới cửa, buông lỏng trên sàn, cổ tay trái có dây chun đen.
+**Kiểm tra:** **cùng cánh cửa dán kín** như bìa, cùng góc nhìn, nhưng **không còn ai đứng ngoài**; trời rạng sáng xám xanh; khói xám luồn ra từ các mép; **một bàn tay con gái** thò ra từ khe dưới cửa, buông trên sàn, ngửa lòng, **cổ tay có dây chun đen và sẹo**; ánh lò đã tắt.
 ```
-Aspect ratio 16:9. Horror film still, the exact same sealed wooden door as in the attached reference, now with nobody standing outside. Dawn, cold grey-blue light. Thick grey smoke has seeped out around the edges of the tape and from under the door, now dissipating. From the gap under the door, a pale thin girl's hand lies limp on the concrete floor, palm up, a black hair elastic and a thin scar on the inside of the wrist. The red glow under the door has died out. Silent, final. No gore. No text, no letters, no numbers, no watermark.
+Aspect ratio 16:9. Horror film still, the exact same sealed wooden door as in the attached reference, same tape, same newspaper, same quilt stuffed underneath, seen from the same side, but now nobody is standing outside. Dawn, cold grey-blue light from the small window. Thick grey smoke has seeped out around the edges of the tape and from under the door, now thinning out. From the gap under the door, a pale thin girl's hand lies limp on the concrete floor, palm up; on the inside of the wrist a black hair elastic and a thin pale scar. The red glow under the door has died out. Silent, final. No gore. Film grain. No text, no letters, no numbers, no watermark.
 ```
 
 ---
 
 ## Danh sách file
-
-| # | Tên file | Dùng ở | Ghi chú |
+| # | Tên file | Dùng ở | Tỉ lệ |
 |---|---|---|---|
-| 00a–00c | `00_mau_hang`, `00_mau_ngan`, `00_mau_khai` | (không vào game) | Ảnh mẫu nhân vật |
+| 00a–00c | `00_mau_hang`, `00_mau_ngan`, `00_mau_khai` | (không vào game) | 16:9 |
 | 1 | `cover.jpg` | Bìa | 3:4 |
 | 2 | `cam_duong.jpg` | Lần 1 | 16:9 |
-| 3 | `hieu_anh.jpg` | Lần 1 | 4:3, biển để trống |
+| 3 | `hieu_anh.jpg` | Lần 1 (biển để trống) | 4:3 |
 | 4 | `gian_giua.jpg` | Lần 2 | 16:9 |
 | 5 | `hai_cha_con.jpg` | Lần 2 | 4:3 |
 | 6 | `anh_cuoi_1975.jpg` | Lần 3 | 3:4 |
 | 7 | `hang_1988.jpg` | Lần 3 | 4:3 |
-| 8 | `vo_toi_tet_1991.jpg` | Lần 3, đèn pin | 4:3, ảnh quan trọng nhất |
+| 8 | `vo_toi_tet_1991.jpg` | Lần 3, soi đèn pin | 4:3 |
 | 9 | `buong_toi.jpg` | Lần 3 | 16:9 |
 | 10 | `lo_than.jpg` | Lần 5 | 4:3 |
 | 11 | `buong_mo.jpg` | Kết thúc tốt | 16:9 |
-| 12 | `mat_kinh_scare.jpg` | Cảnh doạ lần 3 | 4:3 |
-| 13 | `ngan_khan_scare.jpg` | Cảnh doạ chính lần 4 | 1:1 |
-| 14 | `bong_ba_scare.jpg` | Cảnh doạ lần 5 | 16:9 |
+| 12 | `mat_kinh_scare.jpg` | Doạ khi soi bóng kính | 4:3 |
+| 13 | `ngan_khan_scare.jpg` | Doạ chính, lần 4 | 1:1 |
+| 14 | `bong_ba_scare.jpg` | Doạ lần 5 | 16:9 |
 | 15 | `khoi_than_scare.jpg` | Kết thúc xấu | 16:9 |
