@@ -75,6 +75,6 @@ Trước mỗi lần commit: `node tools/stamp.mjs`. Lệnh này gắn mã phiê
 1. `node tools/audit.mjs <id>`: đáp án khớp phương án; câu bấm và tài liệu ghim đều có thật và đã mở ở đúng trọng điểm; không còn phương án đúng dài hơn hẳn; mỗi giai đoạn có tài liệu.
 2. `CASE=<id> node tools/smoke.mjs <thư mục>`: chơi tự động hết hồ sơ (máy tính và điện thoại).
 3. `CASE=<id> node tools/docs_ui.cjs`: mở từng tài liệu trên máy tính và điện thoại, cả sau khi thắng lẫn sau khi thua; bấm chạy từng băng; báo lỗi và tràn màn hình.
-4. Thử các đáp án bẫy chính phải bị từ chối.
+4. `node tools/traps.mjs`: các đáp án bẫy chính phải bị từ chối (thêm bẫy của hồ sơ mới vào danh sách trong file).
 5. Ảnh có vùng soi, vùng bấm (như ảnh đèn pin hồ sơ 05): vẽ khung vùng lên ảnh thật để kiểm, chỉnh toạ độ cho khớp ảnh.
 6. Nhìn bìa trên máy tính: ảnh dọc phải hiện trọn (META.coverStyle), không để chi tiết đáng sợ bị thẻ chữ che.
