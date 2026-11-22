@@ -5,7 +5,7 @@ import { C, loadCase, CASE_ID, base } from "./case.js";
 import { CASES } from "../cases/list.js";
 import { decode, checkQuestion } from "./answer.js";
 import { mountMedia } from "./media.js";
-import { ctx, sfx, setSound, ambience } from "./audio.js";
+import { ctx, sfx, setSound, ambience, setAmbience } from "./audio.js";
 import { setLevel, level, jumpScare } from "./dread.js";
 
 // Data of the open case (set by openCase).
@@ -63,6 +63,7 @@ async function openCase(id) {
   loadState(id);
   picking = null;
   document.body.dataset.case = id;
+  setAmbience(META.ambience || "rain");
   document.title = `${META.title} · ${META.series}`;
   history.replaceState(null, "", `?case=${id}${new URLSearchParams(location.search).has("preview") ? "&preview=1" : ""}`);
   document.querySelector(".brand").innerHTML = `<b>${META.series}</b> · ${META.title}`;

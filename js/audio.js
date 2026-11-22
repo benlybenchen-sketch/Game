@@ -219,17 +219,32 @@ export const sfx = {
 };
 
 // ---------- ambience ----------
-/** Starts (once) and tunes the background: rain + low drone, darker with each level 0..5. */
+/** Picks the background of the open case: "rain" (default: rain + low drone) or "ghostWedding" (case 06). */
+export function setAmbience(style = "rain") {
+  if (amb.style === style) return;
+  amb.style = style;
+  if (amb.on) {
+    (amb.nodes?.all || []).forEach((n) => { try { n.stop(); } catch { /* already stopped */ } });
+    amb.timers.forEach(clearTimeout); amb.timers = [];
+    amb.nodes?.out?.disconnect();
+    amb.on = false; amb.nodes = null;
+  }
+  if (ac && amb.level !== undefined) ambience(amb.level);
+}
+
+/** Starts (once) and tunes the background, darker with each level 0..5. */
 export function ambience(level) {
   amb.level = level;
   if (!ac || !ctx()) return;          // wait for the first click (browser autoplay rules)
+  if (amb.style === "ghostWedding") return ghostWedding(level);
   if (!amb.on) {
     amb.on = true;
+    const bus = ac.createGain(); bus.connect(master);
     const rain = ac.createBufferSource(); rain.buffer = noise(); rain.loop = true;
     const lp = ac.createBiquadFilter(); lp.type = "lowpass"; lp.frequency.value = 1400;
     const hp = ac.createBiquadFilter(); hp.type = "highpass"; hp.frequency.value = 350;
     const rg = ac.createGain(); rg.gain.value = 0;
-    rain.connect(hp).connect(lp).connect(rg).connect(master); rain.start();
+    rain.connect(hp).connect(lp).connect(rg).connect(bus); rain.start();
     const dg = ac.createGain(); dg.gain.value = 0;
     const lfo = ac.createOscillator(); lfo.frequency.value = 0.06;
     const lg = ac.createGain(); lg.gain.value = 0.015; lfo.connect(lg).connect(dg.gain); lfo.start();
@@ -239,16 +254,114 @@ export function ambience(level) {
       o.connect(g).connect(dg); o.start(); return o;
     });
     const df = ac.createBiquadFilter(); df.type = "lowpass"; df.frequency.value = 400;
-    dg.disconnect(); dg.connect(df).connect(master);
-    amb.nodes = { rg, dg, oscs, df };
+    dg.connect(df).connect(bus);
+    amb.nodes = { rg, dg, oscs, df, out: bus, all: [rain, lfo, ...oscs] };
     dripLoop();
   }
-  amb.level = level;
   const t = ac.currentTime;
   amb.nodes.rg.gain.setTargetAtTime(level >= 5 ? 0.035 : 0.075, t, 1.5);
   amb.nodes.dg.gain.setTargetAtTime(level >= 5 ? 0.018 : 0.05 + level * 0.02, t, 2);
   amb.nodes.oscs[3].detune.setTargetAtTime(level * -35, t, 3);   // the high voice slides into dissonance
   amb.nodes.df.frequency.setTargetAtTime(380 + level * 60, t, 2);
+}
+
+// ---------- ghost wedding (case 06) ----------
+// A distant suona (shrill double-reed horn) plays a slow pentatonic wedding tune of our own over night wind, a funeral
+// woodblock and a gong. The higher the dread, the more out of tune and slow it gets; from level 3 a second procession
+// plays the same tune a beat late and sharp, as if a wedding and a funeral were passing each other.
+const D4 = 293.66, N = { B3: D4 * 0.8409, D4, E4: D4 * 1.1225, Fs4: D4 * 1.2599, A4: D4 * 1.4983, B4: D4 * 1.6818, D5: D4 * 2 };
+const PHRASES = [
+  [["A4", .5], ["B4", .5], ["A4", .25], ["Fs4", .25], ["E4", 1], ["D4", .5], ["E4", .5], ["Fs4", 1.5]],
+  [["D5", .75], ["B4", .25], ["A4", .5], ["Fs4", .5], ["A4", .5], ["E4", .5], ["D4", 2]],
+  [["Fs4", .5], ["A4", .5], ["B4", 1], ["A4", .5], ["Fs4", .25], ["E4", .25], ["D4", 1], ["B3", 2]],
+];
+function ghostWedding(level) {
+  if (!amb.on) {
+    amb.on = true;
+    const bus = ac.createGain(); bus.gain.value = 1; bus.connect(master);
+    const wind = ac.createBufferSource(); wind.buffer = noise(); wind.loop = true;
+    const bp = ac.createBiquadFilter(); bp.type = "bandpass"; bp.frequency.value = 520; bp.Q.value = 0.8;
+    const wl = ac.createOscillator(); wl.frequency.value = 0.045; const wd = ac.createGain(); wd.gain.value = 260; wl.connect(wd).connect(bp.frequency);
+    const wg = ac.createGain(); wg.gain.value = 0;
+    wind.connect(bp).connect(wg).connect(bus); wind.start(); wl.start();
+    const dg = ac.createGain(); dg.gain.value = 0;
+    const dlp = ac.createBiquadFilter(); dlp.type = "lowpass"; dlp.frequency.value = 300;
+    const drone = [73.42, 73.9, 110].map((f) => { const o = ac.createOscillator(); o.type = "triangle"; o.frequency.value = f; o.connect(dlp); o.start(); return o; });
+    dlp.connect(dg).connect(bus);
+    amb.nodes = { wg, dg, out: bus, all: [wind, wl, ...drone] };
+    weddingLoop(); blockLoop(); gongLoop();
+  }
+  const t = ac.currentTime;
+  amb.nodes.wg.gain.setTargetAtTime(0.05 + level * 0.008, t, 2);
+  amb.nodes.dg.gain.setTargetAtTime(0.02 + level * 0.012, t, 2);
+}
+/** One note of the suona: nasal reed (saw + square through a narrow band), vibrato, a glide in from below. */
+function suona(when, f, dur, { cents = 0, vol = 0.05, wail = false, dest }) {
+  const k = Math.pow(2, cents / 1200);
+  const g = ac.createGain(); g.gain.setValueAtTime(0.0001, when);
+  g.gain.exponentialRampToValueAtTime(vol, when + 0.05); g.gain.setValueAtTime(vol, when + dur * 0.8);
+  g.gain.exponentialRampToValueAtTime(0.0001, when + dur + (wail ? 0.9 : 0.12));
+  const bp = ac.createBiquadFilter(); bp.type = "bandpass"; bp.frequency.value = 1500; bp.Q.value = 1.1;
+  const vib = ac.createOscillator(); vib.frequency.value = 5.8; const vd = ac.createGain(); vd.gain.value = f * 0.012; vib.connect(vd);
+  [["sawtooth", 1], ["square", 0.35]].forEach(([type, mix]) => {
+    const o = ac.createOscillator(); o.type = type;
+    o.frequency.setValueAtTime(f * k * 0.94, when); o.frequency.exponentialRampToValueAtTime(f * k, when + 0.06);
+    if (wail) o.frequency.exponentialRampToValueAtTime(f * k * 0.82, when + dur + 0.9);
+    vd.connect(o.frequency);
+    const m = ac.createGain(); m.gain.value = mix; o.connect(m).connect(bp);
+    o.start(when); o.stop(when + dur + 1.1);
+  });
+  vib.start(when); vib.stop(when + dur + 1.1);
+  bp.connect(g).connect(dest);
+}
+function cymbal(when, vol) {
+  const s = ac.createBufferSource(); s.buffer = noise();
+  const hp = ac.createBiquadFilter(); hp.type = "highpass"; hp.frequency.value = 5200;
+  const g = ac.createGain(); env(g, when, 0.005, vol, 1.6);
+  s.connect(hp).connect(g).connect(amb.nodes.out); s.start(when, Math.random()); s.stop(when + 1.8);
+}
+function weddingLoop() {
+  const next = () => {
+    if (!amb.on || amb.style !== "ghostWedding") return;
+    const lv = amb.level ?? 0, t0 = ac.currentTime + 0.1;
+    const far = ac.createBiquadFilter(); far.type = "lowpass"; far.frequency.value = 2600 - lv * 220;
+    const dry = ac.createGain(); dry.gain.value = 0.55; far.connect(dry).connect(amb.nodes.out);
+    const v = reverb(); if (v) far.connect(v);
+    const ph = PHRASES[Math.floor(Math.random() * PHRASES.length)];
+    const beat = 0.62 * (1 + lv * 0.12);
+    const play = (start, cents, vol) => {
+      let t = start;
+      ph.forEach(([n, len], i) => { suona(t, N[n], len * beat, { cents: cents + (Math.random() - 0.5) * lv * 14, vol, wail: lv >= 4 && i === ph.length - 1, dest: far }); t += len * beat; });
+      return t;
+    };
+    if (lv >= 2) cymbal(t0, 0.05);
+    const end = play(t0, -lv * 22, 0.045 + lv * 0.004);
+    if (lv >= 3) play(t0 + beat * 0.6, 38 + lv * 10, 0.03);
+    const gap = Math.max(8, 26 - lv * 3) + Math.random() * 14;
+    amb.timers.push(setTimeout(next, (end - ac.currentTime + gap) * 1000));
+  };
+  amb.timers.push(setTimeout(next, 2500));
+}
+function blockLoop() {
+  const next = () => {
+    if (!amb.on || amb.style !== "ghostWedding") return;
+    const lv = amb.level ?? 0;
+    if (lv >= 1) noiseHit({ dur: 0.05, freq: 1100 - lv * 60, q: 9, gain: 0.05 + lv * 0.01, dest: amb.nodes.out });
+    amb.timers.push(setTimeout(next, 2600 + Math.random() * 1400 - lv * 200));
+  };
+  next();
+}
+function gongLoop() {
+  const next = () => {
+    if (!amb.on || amb.style !== "ghostWedding") return;
+    const t = ac.currentTime + 0.05, lv = amb.level ?? 0;
+    [[98, 1], [131.5, 0.6], [207, 0.35], [289, 0.2]].forEach(([f, m]) => {
+      const o = ac.createOscillator(); o.type = "sine"; o.frequency.setValueAtTime(f * 1.02, t); o.frequency.exponentialRampToValueAtTime(f, t + 0.4);
+      const g = ac.createGain(); env(g, t, 0.01, (0.05 + lv * 0.01) * m, 5); o.connect(g).connect(amb.nodes.out); o.start(t); o.stop(t + 5.2);
+    });
+    amb.timers.push(setTimeout(next, 28000 + Math.random() * 30000 - lv * 3000));
+  };
+  amb.timers.push(setTimeout(next, 9000));
 }
 
 function dripLoop() {
