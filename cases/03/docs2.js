@@ -19,7 +19,7 @@ export default [
         Dấu không tính: Ơ, Ô cũng là O, Ư là U, Đ là D. Bài này mình làm tặng nhóm mình, tụi bây thử đọc coi:`)}
       ${poem(["Bảy người ngồi dưới trăng thanh,", "Áo ai trắng muốt bên cành sen xa.", "Chén trà mời bóng trăng tà,", "Hồn thơ gửi lại mái nhà Hàng Me.",
         "Lá rơi gió thổi bờ tre,", "Ai về thì nhớ đêm hè năm xưa.", "Nhớ nhau dẫu nắng dẫu mưa."])}
-      ${hand(`(B-A-C-H-L-A-N. Dễ ợt. Anh Khiêm đọc ra trong một phút, còn chê thơ mình non.)`)}
+      ${hand(`(Dễ ợt. Anh Khiêm đọc ra trong một phút, còn chê thơ mình non.)`)}
     </div>`,
   },
 

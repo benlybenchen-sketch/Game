@@ -172,3 +172,13 @@ Nguyên tắc bản 2: **Lan là đáp án "ai" ở năm câu** của bản 1, g
 - **Nét chữ:** Lan viết nghiêng về phía trước (giao kèo, thư buổi sáng, nhãn băng cuộn 2, dòng cuối các trang sổ cơ, sổ cơ buổi 7, sổ quẻ). Dung viết ngả về phía sau, lem mực mép trái (sổ cơ buổi 6, trang gương, lá thư cuối).
 - **Kết:** trong một chung trà trên bàn cơ có thạch tín. Lá thư cuối không ký tên, nét chữ của Dung.
 - **Giọng bà Dung 2004:** chính giọng của Lan trên băng cối 1971 (cùng một giọng đọc), làm già đi: chậm hơn, trầm xuống gần 2 cung, hơi run. Người nghe kỹ sẽ nhận ra. Mỗi buổi cơ bà nói một câu (audio/03/ba_n1…n7).
+
+## Rà lộ đáp án (bản 3)
+Đọc lại toàn văn, bỏ những chỗ nói hộ người chơi:
+- Giao kèo: ghi chú của người nhận việc không còn tả tay ký và độ nghiêng chữ của bà chủ nhà (chỉ còn đôi găng len). Độ nghiêng phải tự nhìn từ nét chữ trong thư.
+- Nhật ký 1971: bỏ "Chị Lan đòi ngồi tay chủ". Tay chủ phải suy ra từ sổ của Tùng (tay chủ ngồi đầu bàn), thứ tự chỗ ngồi buổi 1 và băng cuộn 1.
+- Sổ cơ buổi 2: bỏ "Tiếng gõ không ở trên bàn. Nó ở dưới chân mình."; sổ cơ buổi 4: bỏ "đếm theo kiểu Tây".
+- Tập thơ Yến: bỏ lời giải mẫu B-A-C-H-L-A-N. Sổ thuốc: bỏ "nói giọng Huế". Cuốn Kiều của Lan: bỏ "như ai lật đi lật lại".
+- Thư Nghi: không còn "gọi nhầm là chị Dung" và "tập ký tên Hạnh Dung bằng tay trái"; chỉ còn Lan mặc áo dài của Dung và ký nháp kín một trang.
+- Trang chữ gương của Dung: không còn kể lại từng cái chết, không còn "đừng tin ai mang tên mình", không còn tự liệt kê tay trái, sẹo cằm, xương đòn. Người chơi phải tự lấy hồ sơ bệnh viện 1966 và thẻ căn cước 1970 đối chiếu với biên bản khám nghiệm.
+- Sổ quẻ: bỏ "Phải tìm người đọc được tiếng Tây" (lý do thuê bạn phải tự suy ra).

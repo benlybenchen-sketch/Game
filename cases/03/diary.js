@@ -11,7 +11,7 @@ const ORIGINAL = [
   ["nk_phap", "Chị Lan không đọc được một chữ tiếng Pháp. Bữa trước chị cầm cuốn sổ của bà trẻ lật tới lật lui rồi hỏi: Dung, cái này đọc sao?"],
   ["nk_guoc", "Chị đi đôi guốc gỗ ba chị mua ở Huế, đi đâu cũng nghe cộp cộp, ông Bảy nghe tiếng guốc là biết chị về."],
   ["nk_que", "Hồi nhỏ bà trẻ dạy mình một trò: viết thư bằng quẻ. Mình chỉ còn nhớ là đọc từ dưới lên. Bà trẻ nói chìa khóa nằm trong sổ của bà, viết bằng tiếng Tây cho người làm khỏi đọc trộm."],
-  ["nk_tung", "Anh Tùng rủ cả nhóm cầu cơ ở nhà bà trẻ, bảy người, bảy tối thứ Bảy. Chị Lan đòi ngồi tay chủ, nói hồi ở Huế chị ngồi hoài, con cơ nghe lời chị."],
+  ["nk_tung", "Anh Tùng rủ cả nhóm cầu cơ ở nhà bà trẻ, bảy người, bảy tối thứ Bảy. Chị Lan nói hồi ở Huế chị ngồi cơ hoài, con cơ nghe lời chị."],
   ["nk_vang", "Nếu có vàng thật thì mình chia cho cả nhóm. Chị Lan cười, nói: chia sao cho hết, Dung."],
 ];
 

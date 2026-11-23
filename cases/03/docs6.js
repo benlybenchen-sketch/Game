@@ -37,7 +37,7 @@ export default [
       ${hand(`Sổ quẻ. Đêm 13 tháng 11 hằng năm, con cơ tự chạy giữa CÓ và KHÔNG, sáu lần một quẻ, CÓ là vạch liền, KHÔNG là vạch đứt. Vạch đầu tiên con cơ chạy là vạch dưới cùng.`, "fwd")}
       ${hand(`1971, 1972, 1973 … 2003. Ba mươi ba năm, năm nào cũng y như vầy, không sai một vạch:`, "fwd")}
       <div class="hx-seq">${SEQ().map((h) => hexDraw(h)).join("")}</div>
-      ${hand(`Bốn mươi ba quẻ. Bà Diệp chỉ chỗ vàng. Phải tìm người đọc được tiếng Tây.`, "fwd")}
+      ${hand(`Bốn mươi ba quẻ.`, "fwd")}
       <p class="note">Mỗi năm một dòng ngày tháng, cùng một nét chữ ngả về phía trước. Năm 1983 có một dòng mực đỏ: “đứng ngoài hồ sen nửa tiếng. Không dám.”</p>
     </div>`,
   },

@@ -36,7 +36,7 @@ export default [
         <tr><th>Ngày / tháng</th><th>Vị thuốc</th><th>Lượng</th><th>Người lấy</th></tr>
         <tr><td>${su(suzhou(12))} / ${su(suzhou(10))}</td><td>當歸 đương quy</td><td>${su(suzhou(3))}</td><td>bà Tư chợ Bình Tây</td></tr>
         <tr><td>${su(suzhou(13))} / ${su(suzhou(10))}</td><td>甘草 cam thảo</td><td>${su(suzhou(5))}</td><td>thầy Lương, Phú Lâm</td></tr>
-        <tr><td>${su(suzhou(14))} / ${su(suzhou(10))}</td><td>砒霜 thạch tín</td><td>${su(suzhou(1))}</td><td>${ln("st_ban", "Bạn học của A Quốc, nói A Quốc dặn lấy về đánh bả chuột ở nhà Hàng Me. Con gái tóc dài, nói giọng Huế, đi guốc gỗ. Không ghi tên.")}</td></tr>
+        <tr><td>${su(suzhou(14))} / ${su(suzhou(10))}</td><td>砒霜 thạch tín</td><td>${su(suzhou(1))}</td><td>${ln("st_ban", "Bạn học của A Quốc, nói A Quốc dặn lấy về đánh bả chuột ở nhà Hàng Me. Con gái tóc dài, đi guốc gỗ. Không ghi tên.")}</td></tr>
         <tr><td>${su(suzhou(15))} / ${su(suzhou(10))}</td><td>人參 nhân sâm</td><td>${su(suzhou(2))}</td><td>ông Hứa, tiệm vàng Kim Thành</td></tr>
         <tr><td>${su(suzhou(17))} / ${su(suzhou(10))}</td><td colspan="3">A Quốc mất. Đóng cửa tiệm ba ngày.</td></tr>
       </table>
@@ -67,7 +67,7 @@ export default [
         Con cơ không chạy tới chữ nào. Nó chạy lên hàng số rồi về giữa bàn, rồi lại lên hàng số, rồi đứng im.<br>
         ${ln("bb4_giay", "Lúc dọn bàn, Lan lật chén lên. Dưới chén có một tờ giấy gấp đôi, viết số kiểu sổ thuốc nhà Quốc:")}`)}
       <div class="paper-note">${su("〡三 &nbsp;〡一 &nbsp;〡二 &nbsp;〩 &nbsp;〡〥 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 〢〤 &nbsp;〢二 &nbsp;〨 &nbsp;〡〧")}</div>
-      ${hand(`Tôi thử đếm theo kiểu Tây, ra chữ vô nghĩa. Thôi, mai tính. Đi ngủ.`)}
+      ${hand(`Tôi thử đếm, ra chữ vô nghĩa. Thôi, mai tính. Đi ngủ.`)}
       <p class="note">Dòng cuối trang, nét khác (Nghi), run rẩy:</p>
       ${hand(`Anh Khiêm thắt cổ ở tay vịn cầu thang lúc gần sáng. Dưới chân anh có tờ giấy chép hai câu: “Trăm năm trong cõi người ta / Chữ tài chữ mệnh khéo là ghét nhau.”`)}
     </div>`,

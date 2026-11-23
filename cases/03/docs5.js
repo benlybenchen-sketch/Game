@@ -19,11 +19,10 @@ export default [
       ${media("mirror", "trang_guong")}
       <div class="mirror-src hand back">
         <p>4/11/71. Mình viết ngược cho chị Lan không đọc được. Chị không đọc được tiếng Pháp, cũng không đọc được gương.</p>
-        <p>Chị Lan mặc áo mình, kẹp tóc của mình, tập ký tên mình. Chị hỏi mình có tính bán cái nhà này không.</p>
-        <p>Mình nghĩ lại từng đêm. Đêm anh Tùng chết, chị Lan ra ban công trước anh. Đêm Yến chết, chị dìu Yến ra hồ. Đêm anh Quốc chết, chị pha trà. Anh Khiêm chết sau khi chị lật tờ giấy dưới chén. Nghi ngã ở cầu thang gác, mà chỉ có chị ngủ trên gác.</p>
+        <p>Chị Lan hỏi mình có tính bán cái nhà này không.</p>
+        <p>Mình đã đọc lại sổ cơ từ đêm đầu. Mình sợ những gì mình đọc ra.</p>
         <p>Thứ Bảy này chỉ còn hai đứa mình. Mình sẽ ngồi cơ nhưng không đặt tay. Mình muốn tận mắt thấy con cơ chạy một mình hay chạy theo tay chị.</p>
-        <p>Nếu mình chết, đừng tin ai mang tên mình.</p>
-        <p>Ai đọc được trang này: mình là Lâm Hạnh Dung. Mình thuận tay trái. Mình có cái sẹo dưới cằm. Xương đòn trái của mình gãy năm 1966. Giấy tờ để kèm đây.</p>
+        <p>Ai đọc được trang này: giấy tờ của mình để kèm đây.</p>
       </div>
     </div>`,
   },

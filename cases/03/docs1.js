@@ -17,7 +17,7 @@ export default [
         ${ln("bb2_may", "Chị Lan bật máy Akai của anh Tùng, nói để ghi lại cho đúng.")}`)}
       ${hand(`Con cơ không chạy. Mười phút. Rồi có tiếng gõ. Mình chép theo:`)}
       ${hand(`<span class="code-line">— · — —&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;— ·&nbsp;&nbsp;&nbsp;· · · &nbsp;/&nbsp; — · · —&nbsp;&nbsp;&nbsp;· · —</span>`)}
-      ${hand(`${ln("bb2_chan", "Mình không chép nữa. Không ai nhấc tay khỏi chén. Tiếng gõ không ở trên bàn. Nó ở dưới chân mình.")}`)}
+      ${hand(`${ln("bb2_chan", "Mình không chép nữa. Không ai nhấc tay khỏi chén. Tiếng gõ nghe gần lắm.")}`)}
       <p class="note">Phần còn lại của trang trống. Mép giấy có vệt nước loang, đã khô thành màu vàng.</p>
     </div>`,
   },

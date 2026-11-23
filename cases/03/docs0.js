@@ -29,7 +29,7 @@ export default [
       ${contractHtml(false)}
       <p class="right" style="margin-top:14px">Sài Gòn, ngày 7 tháng 11 năm 2004<br>${hand("Hạnh Dung", "sign fwd")}Lâm Hạnh Dung</p>
       <p class="right">${hand(fullName() || "(không ký tên)", "sign mine")}Người nhận việc</p>
-      <div class="hand mine side-note">Ghi chú của tôi: bà Dung ký bằng tay phải, nét chữ ngả về phía trước. Bà đeo găng len dù trời không lạnh. Bà kẹp kèm bản sao chứng minh nhân dân “cho cháu yên tâm”.</div>
+      <div class="hand mine side-note">Ghi chú của tôi: bà Dung đeo găng len dù trời không lạnh. Bà kẹp kèm bản sao chứng minh nhân dân “cho cháu yên tâm”.</div>
     </div>`,
   },
 

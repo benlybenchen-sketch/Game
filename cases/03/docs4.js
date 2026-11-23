@@ -30,7 +30,7 @@ export default [
     html: () => `
     <div class="doc doc--book">
       <div class="book-head">KIM VÂN KIỀU · nhà in Đắc Lập, Huế, 1968 · 3.252 câu<br><small>Trang lót, mực tím: <span class="hand inline">“Hà Ngọc Lan · quà của ba · Huế, Tết Mậu Thân”</span></small></div>
-      <p class="note">Bà Dung: “Sách của Lan. Bà giữ làm kỷ niệm.” Gáy sách sờn, trang 60–61 có dấu ngón tay cái lấm mực như ai đó lật đi lật lại nhiều lần.</p>
+      <p class="note">Bà Dung: “Sách của Lan. Bà giữ làm kỷ niệm.” Gáy sách sờn, trang 60–61 có dấu ngón tay cái lấm mực.</p>
       ${page(OPENING, 1)}
       <p class="note">· · ·</p>
       ${page(NGUNG_BICH.slice(0, 20), 1031)}
@@ -60,8 +60,8 @@ export default [
       <p class="note">Tìm thấy trong cuốn kinh Nhật Khóa của Nghi, ngày 1-11-1971. Phong bì đề: Chị Trịnh Bảo Trinh, Domaine de Marie, Đà Lạt.</p>
       ${hand(`Chị Trinh,<br>
         Em sợ lắm. Chết bốn người rồi. Em muốn về Đà Lạt với chị mà chị Lan nói bỏ giữa chừng thì “bà” bắt hết.<br>
-        ${ln("tn_ao", "Hôm thứ Năm chị Lan mặc cái áo dài lụa xanh của chị Dung, đứng trước gương hỏi em: giống không Nghi? Em gọi nhầm chị ấy là chị Dung thật.")}<br>
-        ${ln("tn_ky", "Tối qua em thấy chị Lan ngồi tập ký tên “Hạnh Dung” bằng tay trái, ký mãi không được, chữ cứ ngả về phía trước. Thấy em, chị cười, nói ký chơi.")}<br>
+        ${ln("tn_ao", "Hôm thứ Năm chị Lan mặc cái áo dài lụa xanh của chị Dung, đứng trước gương hỏi em: đẹp không Nghi?")}<br>
+        ${ln("tn_ky", "Tối qua em thấy chị Lan ngồi ký nháp kín cả một trang giấy. Thấy em, chị gấp lại, cười, nói ký chơi.")}<br>
         ${ln("tn_guoc", "Mà chị ơi, buổi cơ thứ hai, lúc có tiếng gõ, em cúi xuống nhặt cây bút. Dưới gầm bàn, chị Lan không mang guốc. Đôi guốc nằm bên chân ghế.")}<br>
         Em sẽ cầu nguyện cho anh chị em mình. Chị đừng kể cho ba má.<br>Em, Nghi.`)}
     </div>`,
