@@ -6,7 +6,10 @@ import d3 from "./docs3.js";
 import d4 from "./docs4.js";
 import d5 from "./docs5.js";
 import d6 from "./docs6.js";
-import { fragments, pour } from "./media.js";
+import { fragments, pour, STICKS } from "./media.js";
+import { hn } from "./egypt.js";
+import { lockbox, blocks } from "../../js/puzzles.js";
+import { SEALED } from "./locks.js";
 import { egyptFont } from "./egypt.js";
 import { state } from "../../js/store.js";
 export { QUESTIONS, START_CLOCK, END_CLOCK } from "./questions.js";
@@ -15,7 +18,12 @@ export const TAPES = {};
 
 egyptFont();
 export const DOCS = [...d0, ...d1, ...d2, ...d3, ...d4, ...d5, ...d6];
-export const MEDIA = { fragments, pour };
+const DIGITS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+export const MEDIA = {
+  fragments, pour,
+  ruong: (el) => lockbox(el, { id: "ruong", rings: [DIGITS, DIGITS, DIGITS, DIGITS], content: SEALED.ruong, label: (d) => hn(d) }),
+  sticks: (el) => blocks(el, STICKS),
+};
 /** Stand-in when a scare picture is missing: a cobra sign, no human figure. */
 export const ART = { cobra: () => `<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="300" fill="#060403"/><text x="150" y="215" text-anchor="middle" font-size="180" fill="#d9cdb4" font-family="Noto Sans Egyptian Hieroglyphs, serif">\u{13193}</text></svg>` };
 

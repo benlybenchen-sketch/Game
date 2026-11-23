@@ -1,6 +1,6 @@
 // Case 06, night 6 (21st): the master's last riddle, a dictionary of character parts, the adoption deed,
 // the family register, the leap month of 1917, the poison book, the second wax cylinder.
-import { ln, stamp, pic, hand } from "../../js/kit.js";
+import { ln, stamp, pic, hand, media } from "../../js/kit.js";
 import { tape, hv } from "./docs0.js";
 
 /** Characters and the parts they are built from (some are decoys). */
@@ -36,15 +36,12 @@ export default [
   },
 
   {
-    id: "qua_ke", stage: 5, kind: "Văn tự", icon: "✍", label: "Quá kế thư (giấy nhận con thừa tự), ngày 20 tháng Bảy",
+    id: "qua_ke", stage: 5, kind: "Đồ vật", icon: "🔒", label: "Hộp sơn mài khoá chữ trong phòng phu nhân",
     html: () => `
-    <div class="doc doc--form doc--old">
-      <h2 class="form-title">QUÁ KẾ THƯ</h2>
-      <p>Họ Triệu chi trưởng, trấn Hoè Âm. Con trai Triệu Thừa Tự mất sớm, đã cưới vợ âm là Ôn thị. Nay lập người nối dõi cho đôi vợ chồng ấy:</p>
-      <p>${ln("qk_ten", "Triệu Thừa An, con trai Triệu Hoài Nghĩa (em họ, ở Hà Bắc)")}, ${ln("qk_sinh", "sinh giờ Thìn ngày 15 tháng Ba năm Đinh Tỵ")}.</p>
-      <p>${ln("qk_don", "Ngày 25 tháng Bảy, Lưu Phúc đưa xe la sang Hà Bắc đón về.")} Từ nay Thừa An là con của Thừa Tự và Ôn thị, thờ phụng hai người, hưởng gia sản chi trưởng.</p>
-      <div class="sign-row"><div>Người lập<br>${hand("Tiết thị", "sign")}</div><div>Tộc trưởng<br>${hand("Hoài Tông", "sign")}</div><div>Bên cho<br>(chưa ký)</div></div>
-      ${stamp("趙氏宗祠", "right:24px;top:24px")}
+    <div class="doc doc--plain">
+      <p class="note">Hộp sơn mài đen, nắp khảm xà cừ, khoá chữ bốn vòng bằng đồng, mỗi vòng mười chữ. Thuý Nhi lén mang ra lúc phu nhân ra từ đường.</p>
+      ${hand(`<p>Thuý Nhi: “Phu nhân dặn thợ khoá đặt chữ theo bát tự của người sắp bước qua cửa nhà này. Mỗi vòng một trụ, lấy chữ đầu.”</p>`)}
+      ${media("hop_son", "box")}
     </div>`,
   },
 
@@ -134,3 +131,14 @@ export default [
 
   tape("dong_vien", 5, "Ống đĩa sáp số 2 · hiên Đông viện, chiều Rằm tháng Bảy", "Ống cuối cùng thầy Khâu thu, đặt loa máy hát sát khe cửa Đông viện. Thầy dán nhãn bằng chữ run: “Rằm tháng Bảy, hiên Đông viện.”"),
 ];
+
+/** The deed inside the lacquer box (sealed into locks.js by tools/lockbox.mjs). */
+export const quaKeHtml = () => `
+    <div class="doc doc--form doc--old">
+      <h2 class="form-title">QUÁ KẾ THƯ</h2>
+      <p>Họ Triệu chi trưởng, trấn Hoè Âm. Con trai Triệu Thừa Tự mất sớm, đã cưới vợ âm là Ôn thị. Nay lập người nối dõi cho đôi vợ chồng ấy:</p>
+      <p>${ln("qk_ten", "Triệu Thừa An, con trai Triệu Hoài Nghĩa (em họ, ở Hà Bắc)")}, ${ln("qk_sinh", "sinh giờ Thìn ngày 15 tháng Ba năm Đinh Tỵ")}.</p>
+      <p>${ln("qk_don", "Ngày 25 tháng Bảy, Lưu Phúc đưa xe la sang Hà Bắc đón về.")} Từ nay Thừa An là con của Thừa Tự và Ôn thị, thờ phụng hai người, hưởng gia sản chi trưởng.</p>
+      <div class="sign-row"><div>Người lập<br>${hand("Tiết thị", "sign")}</div><div>Tộc trưởng<br>${hand("Hoài Tông", "sign")}</div><div>Bên cho<br>(chưa ký)</div></div>
+      ${stamp("趙氏宗祠", "right:24px;top:24px")}
+    </div>`;

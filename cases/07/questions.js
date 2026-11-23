@@ -96,9 +96,10 @@ export const QUESTIONS = [
   },
   {
     id: "q6", stage: 5, title: "Ngày thứ sáu",
-    ask: "Cái đấu ở cổng chứa bao nhiêu chén hin nước? Nét chữ trên thư trả lời số 3 trùng với gì? Ai giết Hay và Userhat?",
+    ask: "Cái đấu ở cổng chứa bao nhiêu chén hin nước? Bốn thanh gỗ của Hay nói gì? Nét chữ trên thư trả lời số 3 trùng với gì? Ai giết Hay và Userhat?",
     parts: [
       { id: "hin", type: "number", label: "Đấu ở cổng chứa", unit: "chén hin" },
+      { id: "thieu", type: "number", label: "Theo câu Hay khắc trên bốn thanh gỗ, mỗi đấu ở cổng thiếu", unit: "chén hin" },
       { id: "net", type: "choice", label: "Nét chữ thư trả lời số 3 trùng với", options: ["Thẻ buộc bao lúa ở kho bến", "Vở tập viết của thợ vẽ Hay", "Bát thư bà Henut gửi mẹ", "Sổ của thầy bắt rắn Hori"] },
       { id: "ai", type: "text", label: "Người giết Hay và Userhat", placeholder: "tên" },
       P(["Bằng chứng cái đấu đong thiếu", "Bằng chứng về người viết thư số 3", "Bằng chứng về con rắn"]),

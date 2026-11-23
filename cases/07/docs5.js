@@ -44,6 +44,19 @@ export default [
   },
 
   {
+    id: "thanh_go", stage: 5, kind: "Vật chứng", icon: "▥", label: "Bốn thanh gỗ khắc chữ trong bụng con búp bê",
+    html: () => `<div class="doc doc--plain"><p class="note">Nhét chung với mảnh gốm trong bụng con búp bê của bé Tuy. Bốn thanh gỗ vuông, mỗi thanh khắc bảy hàng hình nhỏ. Bà đọc từng hình theo âm đầu, như trang cuối vở của Hay, rồi chép lại bằng chữ của bà. Thanh nào cũng có một đầu sơn đen.</p>${media("sticks", "hay")}</div>`,
+  },
+
+  {
+    id: "bai_ru", stage: 5, kind: "Lời kể", icon: "♪", label: "Bài ru bé Tuy hát cho con búp bê",
+    html: () => `<div class="doc doc--memo">${hand(`<p>Bé Tuy: “Bố dạy con bài này. Bố bảo hát cho búp bê ngủ thì búp bê giữ đồ cho bố.”</p>
+      <p>Ông già chống ba gậy đi đầu,<br>đầu chúc xuống đất, chân đạp lên trời.</p>
+      <p>Hai anh em đứng giữa đường,<br>anh áo đỏ đi trước, em áo đen theo sau.</p>
+      <p>Thằng út một mình đi cuối,<br>ngủ đi con, ngủ đi con.</p>`)}</div>`,
+  },
+
+  {
     id: "the_bao", stage: 5, kind: "Vật chứng", icon: "🏷", label: "Mười hai thẻ gỗ buộc bao lúa ở kho bến",
     html: () => gom(`<table class="tbl"><tr><th>Thẻ</th><th>Ghi</th><th>Số</th></tr>
       ${TAGS.map(([what, n, one], i) => `<tr><td>${i + 1}</td><td>${what}</td><td>${hn(n, { one })}</td></tr>`).join("")}</table>

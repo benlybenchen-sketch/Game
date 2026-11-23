@@ -44,5 +44,25 @@ check("q5 sample of that seal exists", !!SEALS.trai, true);
 // q6
 check("q6 gate measure (hin)", [D.GATE_HIN], S.q6.hin);
 
+// q5 chest code, re-derived: dark huts night 13 · oipe per khar · youths on the payroll · month number of Peret II
+const youths = D.payroll().filter((r) => r.rank === "youth").length;
+check("q5 chest code", [unlit, 4, youths, 6], S.locks.ruong);
+// q6 sticks: the order the lullaby gives (3-groove first and turned, red second, black third, 1-groove last)
+const { STICKS, STICKS_SOLUTION } = await import("../cases/07/media.js");
+const turnR = (rows) => rows.slice().reverse().map((r) => [...r].reverse().join(""));
+const B = STICKS.blocks, order = [B.find((b) => b.rows[0].length === 3), B.find((b) => b.mark === "chấm đỏ"), B.find((b) => b.mark === "chấm đen"), B.find((b) => b.rows[0].length === 1)];
+const rows = order.map((b, i) => (i === 0 ? turnR(b.rows) : b.rows));
+const read = rows[0].map((_, r) => rows.map((x) => x[r]).join("")).join("");
+check("q6 sticks read", read, STICKS_SOLUTION);
+check("q6 shortfall from the sticks (hin)", [D.OIPE_HIN - D.GATE_HIN], S.q6.thieu);
+// no other arrangement (any order, any turns) reads the same text
+let other = 0; const perm = (a) => (a.length <= 1 ? [a] : a.flatMap((x, i) => perm([...a.slice(0, i), ...a.slice(i + 1)]).map((p) => [x, ...p])));
+for (const p of perm([0, 1, 2, 3])) for (let m = 0; m < 16; m++) {
+  const rr = p.map((k, j) => ((m >> j) & 1 ? turnR(B[k].rows) : B[k].rows));
+  const t = rr[0].map((_, r) => rr.map((x) => x[r]).join("")).join("");
+  if (t === STICKS_SOLUTION) other++;
+}
+check("q6 sticks: arrangements giving the message", other, 1);
+
 console.log(bad ? `\n${bad} mismatch(es)` : "\nall answers re-derived from the data");
 process.exit(bad ? 1 : 0);

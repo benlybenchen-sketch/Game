@@ -215,3 +215,12 @@ Ngoài ra, mỗi trọng điểm có 2–3 tài liệu không dùng tới ở tr
 - Nhạc cụ: kèn sậy đôi dẫn giai điệu, đàn hạc rải một câu đi xuống mỗi ô nhịp, trống khung (nhịp tim ở đoạn A, đi rước ở đoạn B, dồn ở đoạn C), sistrum (lục lạc kim loại), dàn nam tụng trầm, nốt ngân trầm D–A, gió, tiếng rắn rít, một chùm nốt nghịch tai (D, Eb, A hạ ¼ cung) dâng lên trước cao trào, cồng.
 - Cấu trúc: dạo 4 ô nhịp, A 8, B 8, C (cao trào) 8, kết 4. Độ lớn: dạo −24 dB, A −19, B −18, C −13, kết −24.
 - Game tự làm nhạc đục dần theo mức rợn (`js/audio.js`).
+
+## 13. Câu đố phòng thoát hiểm (bổ sung, luật 25)
+
+| TĐ | Câu đố | Loại (CAU_DO.md) | Lời giải | Bẫy | Chuỗi |
+|---|---|---|---|---|---|
+| 5 | Hòm gỗ của Userhat, bốn then số viết theo lối của Lăng; trong hòm là sổ giữ ấn (`lich_an`) | 12 hộp khoá số | 2 · 4 · 3 · 6 | Tính Peret II là tháng 2 thì then bốn ra 2, hòm không mở | Then một lấy từ đáp án TĐ 1, then hai từ vở học trò (TĐ 2), then ba từ sổ lương (TĐ 2), then bốn là bước đầu của TĐ 5 |
+| 6 | Bốn thanh gỗ Hay giấu trong búp bê, xếp theo bài ru bé Tuy hát (`thanh_go`, `bai_ru`) | 1 khối chữ xếp hàng | Thanh ba rãnh đầu và xoay ngược, chấm đỏ, chấm đen, thanh một rãnh: “Cái đấu ở cổng thiếu hai chén rưỡi nước, đừng đong lúa ở cổng nữa. Hay nhớ.” → 2,5 chén | Không xoay thanh ba rãnh thì ra chữ vô nghĩa; hai thanh hai rãnh đổi chỗ cho nhau thì lẫn chữ | Đọc hình theo âm đầu bằng bảng của Hay (TĐ 3–4); số 2,5 khớp với trò đong nước |
+
+Bảng đủ tài liệu bổ sung: mã hòm (lều tối: `so_bac`; oipe một khar: `vo_hoc_tro`; thợ trẻ: `bang_luong_1..3`; thứ tự tháng: `lich_le`); thứ tự thanh gỗ: `bai_ru`. `tools/solve07.mjs` giải lại cả hai và kiểm rằng chỉ đúng một cách xếp thanh gỗ cho ra câu.

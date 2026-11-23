@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thử câu đố</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  body { background: #0d0b09; color: #eadfc6; font-family: Georgia, serif; margin: 0; padding: 16px; }
+  main { max-width: 900px; margin: 0 auto; }
+  section { background: #1a1511; border: 1px solid #3a2f25; padding: 14px 16px; margin: 16px 0; border-radius: 4px; }
+  h1 { font-size: 22px; } h2 { font-size: 17px; margin: 0 0 8px; }
+  .hint { color: #b9ab8f; font-size: 14px; }
+  .poem { background: #e9dfc8; color: #2b2116; padding: 10px 14px; border-radius: 3px; font-style: normal; }
+  details { margin-top: 8px; } summary { cursor: pointer; color: #c9b48a; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Thử ba loại câu đố mới</h1>
+  <p class="hint">Trang thử, không thuộc hồ sơ nào. Mỗi câu đố có lời giải giấu bên dưới.</p>
+
+  <section>
+    <h2>1. Khối chữ xếp hàng</h2>
+    <div class="poem">Người cao lớn nhất đứng sau cùng.<br>Hai chị em đứng trước, chị mang chấm trắng đứng đầu.<br>Đứa nhỏ một mình đứng thứ ba, mà đứng trồng cây chuối.</div>
+    <div id="pz1" style="margin-top:10px"></div>
+    <details><summary>Lời giải</summary><p class="hint">Chấm trắng, chấm xám, khối một cột (xoay ngược), khối ba cột. Đọc từng hàng: DƯỚI GỐC SUNG SAU NHÀ CÓ MỘT CÁI HỘP SẮT, CHÔN SÂU BA GANG TAY.</p></details>
+  </section>
+
+  <section>
+    <h2>2. Lưới đục lỗ</h2>
+    <p class="hint">Đặt tấm bìa lên trang chữ, đọc các chữ lộ ra từ trái sang phải, trên xuống dưới, rồi xoay một góc vuông và đọc tiếp. Góc có vết mực phải ở trên bên trái lúc bắt đầu.</p>
+    <div id="pz2"></div>
+    <details><summary>Lời giải</summary><p class="hint">Bốn lần xoay đọc ra: GẶP NHAU Ở GIẾNG CŨ LÚC NỬA ĐÊM, MANG ĐÈN THEO (chữ X cuối là chữ đệm).</p></details>
+  </section>
+
+  <section>
+    <h2>3. Hộp khoá chữ</h2>
+    <p class="hint">Hộp khoá bằng bốn chữ cái. Trên nắp: “Tên người trong ảnh, bỏ hết dấu, bốn chữ đầu.” Người trong ảnh là bà Lành.</p>
+    <div id="pz3"></div>
+    <details><summary>Lời giải</summary><p class="hint">L · A · N · H.</p></details>
+  </section>
+</main>
+<script type="module">
+  import { blocks, grille, lockbox } from "./js/puzzles.js";
+  // Configs computed by a script (each puzzle has exactly one solution).
+  blocks(document.getElementById("pz1"), { id: "demo_blocks", blocks: [
+    { name: "Khối ba cột", rows: ["OCS", "UNH", "TCA", "ATC", "UBA", "AYX"] },
+    { name: "Khối một cột", rows: ["T", "A", "S", "O", "A", "G"] },
+    { name: "Khối hai cột", mark: "chấm xám", rows: ["OI", "GS", "OM", "OP", "NS", "NG"] },
+    { name: "Khối hai cột", mark: "chấm trắng", rows: ["DU", "UN", "AC", "IH", "HO", "GA"] },
+  ] });
+  grille(document.getElementById("pz2"), { id: "demo_grille",
+    grid: ["NGIDEE", "GAPNGN", "UHNACA", "UTDUEO", "MHEMAN", "LOUXCG"],
+    holes: [[5, 5], [1, 5], [3, 0], [1, 0], [1, 1], [1, 2], [3, 5], [2, 1], [2, 3]] });
+  const AZ = "ABCDEFGHIKLMNOPQRSTUVXY".split("");
+  lockbox(document.getElementById("pz3"), { id: "demo_lock", rings: [AZ, AZ, AZ, AZ], content: "KKpdBnUkK2FX9ZyZCU6FNfU9Ls5/67vU1rbVR2Miuvh2alni3ynUUZ/r+vxIZIgZWUI4xVPx/nPFZbnJdodVJHE2d0tiO/tX6uXNFkErKYaaV2fpbNlBuR1+CgAr7c8HopMsDNPVwIpW+xqW3Sa3QECnaaQxseLYvYQKU96LtoMQTudUctJzRERvIZanTYFJLVnuQJ2ibi3xGFDO2/Gu7odfgY8oPL1GjxRn1D6lupojNz/CGoBhzQ==" });
+</script>
+</body>
+</html>

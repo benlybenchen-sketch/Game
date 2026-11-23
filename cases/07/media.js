@@ -37,3 +37,20 @@ export function pour(el) {
     }
   });
 }
+
+// Hay's four carved sticks (docs5 "thanh_go"). The true grid, 7 rows x 8 letters, reads row by row:
+// "CAI DAU O CONG THIEU HAI CHEN RUOI NUOC DUNG DONG LUA O CONG NUA HAY NHO".
+// Cut into columns 3 | 2 | 2 | 1. The three-groove stick was found upside down (stored turned 180°).
+const GRID = ["CAIDAUOC", "ONGTHIEU", "HAICHENR", "UOINUOCD", "UNGDONGL", "UAOCONGN", "UAHAYNHO"];
+const cut = (a, b) => GRID.map((r) => r.slice(a, b));
+const turn = (rows) => rows.slice().reverse().map((r) => [...r].reverse().join(""));
+export const STICKS_SOLUTION = GRID.join("");
+export const STICKS = {
+  id: "sticks",
+  blocks: [   // in the order they lay in the doll
+    { name: "Thanh một rãnh", rows: cut(7, 8) },
+    { name: "Thanh hai rãnh", mark: "chấm đen", rows: cut(5, 7) },
+    { name: "Thanh ba rãnh", rows: turn(cut(0, 3)) },
+    { name: "Thanh hai rãnh", mark: "chấm đỏ", rows: cut(3, 5) },
+  ],
+};

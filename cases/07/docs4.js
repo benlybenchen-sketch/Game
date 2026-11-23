@@ -24,11 +24,16 @@ const JOBS = [
 
 export default [
   {
-    id: "lich_an", stage: 4, kind: "Sổ sách", icon: "📓", label: "Sổ giữ ấn, năm 29",
-    html: () => gom(`<p class="small">Ấn của Lăng niêm cửa lăng mỗi tối. Mỗi tuần một bên giữ. Ấn nhà nguyện do hai thầy tư tế giữ, không bao giờ ra khỏi nhà nguyện.</p>
-      <table class="tbl tbl--num"><tr><th>Tuần</th><th>Bên giữ</th><th>Tuần</th><th>Bên giữ</th><th>Tuần</th><th>Bên giữ</th></tr>
-      ${Array.from({ length: 12 }, (_, r) => `<tr>${[r + 1, r + 13, r + 25].map((w) => `<td>${hn(w)}</td><td>${SEAL_ROTA[w]}</td>`).join("")}</tr>`).join("")}</table>`,
-      "Tuần tính từ ngày Năm mới, mười ngày một tuần. Tuần 13 bên Trái giữ hai lần vì bên Phải nghỉ lễ Nehebkau."),
+    id: "lich_an", stage: 4, kind: "Đồ vật", icon: "🔒", label: "Hòm gỗ của ký lục Userhat",
+    html: () => `<div class="doc doc--plain">
+      <p class="note">Hòm gỗ đen dưới gầm giường Userhat. Nắp có bốn then trượt, mỗi then khắc mười nấc số theo lối của Lăng. Chỉ khi cả bốn then đúng nấc thì nắp mới nhấc lên được.</p>
+      ${gom(hand(`<p>Mặt trong nắp hòm, Userhat viết cho con:</p>
+        <p>Then một: đêm mười ba, mấy mái lều trên đèo tối đèn.</p>
+        <p>Then hai: một khar, mấy cái đấu.</p>
+        <p>Then ba: Lăng có mấy thợ trẻ.</p>
+        <p>Then bốn: tháng này là tháng thứ mấy của năm.</p>`), "Kenna chép lại cho bà; nó nhớ cha đọc như vậy mỗi lần khoá hòm.")}
+      ${media("ruong", "chest")}
+    </div>`,
   },
 
   {
@@ -64,3 +69,9 @@ export default [
       <p>Vật chứng phải niêm bằng một con ấn mà người bị kêu không chạm tới được. Vật chứng không niêm, ta không xem.</p>`)),
   },
 ];
+
+/** The seal rota inside Userhat's chest (sealed into locks.js by tools/lockbox.mjs). */
+export const lichAnHtml = () => gom(`<p class="small">Ấn của Lăng niêm cửa lăng mỗi tối. Mỗi tuần một bên giữ. Ấn nhà nguyện do hai thầy tư tế giữ, không bao giờ ra khỏi nhà nguyện.</p>
+  <table class="tbl tbl--num"><tr><th>Tuần</th><th>Bên giữ</th><th>Tuần</th><th>Bên giữ</th><th>Tuần</th><th>Bên giữ</th></tr>
+  ${Array.from({ length: 12 }, (_, r) => `<tr>${[r + 1, r + 13, r + 25].map((w) => `<td>${hn(w)}</td><td>${SEAL_ROTA[w]}</td>`).join("")}</tr>`).join("")}</table>`,
+  "Sổ giữ ấn năm 29, trong hòm. Tuần tính từ ngày Năm mới, mười ngày một tuần. Tuần 13 bên Trái giữ hai lần vì bên Phải nghỉ lễ Nehebkau.");

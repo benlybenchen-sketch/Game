@@ -7,6 +7,8 @@ import d4 from "./docs4.js";
 import d5 from "./docs5.js";
 import d6 from "./docs6.js";
 import { abacus } from "./media.js";
+import { lockbox } from "../../js/puzzles.js";
+import { SEALED } from "./locks.js";
 import { ghostFace } from "./art.js";
 import { state } from "../../js/store.js";
 export { QUESTIONS, START_CLOCK, END_CLOCK } from "./questions.js";
@@ -14,7 +16,11 @@ export { SECRET, SECRET_KEY } from "./secret.js";
 export { TAPES } from "./tapes.js";
 
 export const DOCS = [...d0, ...d1, ...d2, ...d3, ...d4, ...d5, ...d6];
-export const MEDIA = { abacus };
+const STEMS = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"];
+export const MEDIA = {
+  abacus,
+  hop_son: (el) => lockbox(el, { id: "hop_son", rings: [STEMS, STEMS, STEMS, STEMS], content: SEALED.hop_son, label: (s) => `<span class="han">${s}</span>` }),
+};
 export const ART = { ghostFace };
 
 /** Which ending a wrong choice at the wedding night leads to. */

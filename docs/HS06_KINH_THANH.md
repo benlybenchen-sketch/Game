@@ -208,3 +208,11 @@ Trước trọng điểm 3, không tài liệu nào được ghi "năm Bính Tý
 | 6 | Câu đố chiết tự, các bộ thủ | `khau_cuoi`, `tu_dien` | 6 |
 | 6 | Năm 1917 nhuận tháng Hai; tháng Ba bắt đầu 21/4 | `lich_1917` | 6 |
 | 6 | Quá kế thư, gia phả | `qua_ke`, `gia_pha` | 6 |
+
+## Câu đố phòng thoát hiểm (bổ sung, luật 25)
+
+| TĐ | Câu đố | Loại (CAU_DO.md) | Lời giải | Bẫy | Chuỗi |
+|---|---|---|---|---|---|
+| 6 | Hộp sơn mài khoá chữ bốn vòng (mười chữ can) trong phòng phu nhân; trong hộp là quá kế thư (`qua_ke`) | 13 khoá chữ | 庚 戊 庚 己: chữ đầu bốn trụ trên canh thiếp, tức bát tự Ôn Tú Nương, “người sắp bước qua cửa” | Bát tự Lý Xuân Hoa (己 丁 壬 己), cô dâu phu nhân khai | Đáp án TĐ 1 là mã hộp ở TĐ 6 |
+
+Bảng đủ tài liệu bổ sung: chữ Hán của các trụ nằm trên canh thiếp (`canh_thiep`, TĐ 1); lời Thuý Nhi về cách đặt khoá nằm trên chính hộp.
