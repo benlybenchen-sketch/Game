@@ -116,6 +116,7 @@ export default [
         <tr><th>T2</th><th>T3</th><th>T4</th><th>T5</th><th>T6</th><th>T7</th><th>CN</th></tr>
         ${LUNAR_1989.weeks.map((w) => `<tr>${w.map((d) => d ? `<td>${d.d}<small>${d.l === 1 ? `1/${d.m}` : d.l}</small>${d.note ? `${d.note}` : ""}</td>` : "<td></td>").join("")}</tr>`).join("")}
       </table>
+      <p class="small">Chân trang in tên mười hai tháng âm lịch: Giêng · Hai · Ba · Tư · Năm · Sáu · Bảy · Tám · Chín · Mười · Một · Chạp.</p>
     </div>`,
   },
 

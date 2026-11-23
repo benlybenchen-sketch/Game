@@ -184,3 +184,27 @@ Các chỗ đã sửa để người chơi phải tự ghép, không được d�
 
 ### Rà lộ đáp án (bổ sung): tên năm Bính Tý
 Trước trọng điểm 3, không tài liệu nào được ghi "năm Bính Tý" hay "1936": thiếp mời, giấy báo tang, khế ước ghi "Dân Quốc thứ 25" hoặc "năm nay"; sổ bà Hoàng và giấy báo của đồn ghi "tháng Bảy năm nay"; bìa hồ sơ ghi "Dân Quốc năm 25". Người chơi phải tự đổi Dân Quốc 25 ra can chi bằng tờ lịch của phiếu hiệu (Nhâm Tý + 24 năm). Chỉ trang khoá mật áp được ghi tên hai khoá Ất Hợi và Bính Tý.
+
+## Bảng đủ tài liệu (luật 23, rà ngày 23/11/2026)
+
+| TĐ | Bước | Tài liệu (id) | Mở ở |
+|---|---|---|---|
+| 1 | Luật tứ trụ (Lập Xuân, Ngũ Hổ Độn, giờ, Ngũ Thử Độn) | `quy_tac` | 1 |
+| 1 | Ngày can chi, giờ Lập Xuân 1920 | `van_nien` | 1 |
+| 1 | Ngày sinh ba cô gái | `giay_xuan_hoa`, `khe_uoc`, `so_hau` | 1 |
+| 2 | Đọc bàn tính (giá trị hạt, cột đồng) | `so_hoang` (thêm giá trị hạt 23/11) | 2 |
+| 2 | Tiền công mối 8 đồng, giá hàng | `bang_gia`, `loi_hoang` | 2 |
+| 2 | Vớt xác 26/8; mồng Một tháng Bảy là 17/8 | `bao_vot` | 2 |
+| 3 | Dân Quốc nguyên niên là Nhâm Tý; chu kỳ can chi | `nien_bieu` | 3 |
+| 3 | Hai khoá mật áp | `mat_ap` | 3 |
+| 3 | Thiên Tự Văn 80 chữ đầu | `thien_tu_van` | 3 |
+| 4 | Chết trước hay sau khi xuống nước | `tay_oan`, `bb_ngo_tac` | 4 |
+| 4 | Dấu tay theo nghề | `tay_oan`, `anh_tay` | 4 |
+| 4 | Ngón giữa của Thừa Tự | `thuy_1` | 2 |
+| 5 | Ngũ phục đồ | `ngu_phuc` | 5 |
+| 5 | Ai mặc gì | `so_tang`, `thuy_2` | 5 |
+| 5 | Mẹ Tú Nương mất năm Dân Quốc 19, đã mãn tang; cha còn sống | `loi_on` (thêm 23/11) | 3 |
+| 5 | Chỉ đỏ buộc tay anh | `loi_on`, `khoc_ga` | 1, 3 |
+| 6 | Câu đố chiết tự, các bộ thủ | `khau_cuoi`, `tu_dien` | 6 |
+| 6 | Năm 1917 nhuận tháng Hai; tháng Ba bắt đầu 21/4 | `lich_1917` | 6 |
+| 6 | Quá kế thư, gia phả | `qua_ke`, `gia_pha` | 6 |

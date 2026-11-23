@@ -8,7 +8,7 @@ export default [
     html: () => `
     <div class="doc doc--ledger">
       <div class="ledger-head">HOÀNG KÝ · MỐI ÂM · tháng Bảy năm nay</div>
-      <p class="small">Bà Hoàng không biết chữ số. Mỗi khoản bà gảy bàn tính rồi nhờ thằng cháu vẽ lại y hình bàn tính vào sổ. ${ln("sh_cot", "Cột có chấm đỏ là hàng đồng; hai cột bên phải chấm đỏ là hào và xu.")}</p>
+      <p class="small">Bà Hoàng không biết chữ số. Mỗi khoản bà gảy bàn tính rồi nhờ thằng cháu vẽ lại y hình bàn tính vào sổ. ${ln("sh_cot", "Bàn tính của bà là loại hai hạt trên, năm hạt dưới; hạt nào gảy sát thanh ngang mới tính, hạt trên đáng năm, hạt dưới đáng một. Cột có chấm đỏ là hàng đồng; hai cột bên phải chấm đỏ là hào và xu.")}</p>
       <table class="tbl tbl--hand">
         <tr><th>Ngày (âm)</th><th>Nhà</th><th>Việc</th><th>Số tiền</th></tr>
         <tr><td>mồng 6</td><td>Lý thợ nhuộm, thôn Tây</td><td>${ln("sh_ly", "Mua xác con gái Lý Xuân Hoa (trả nhà Lý)")}</td><td>${media("abacus", "ly")}</td></tr>

@@ -177,3 +177,27 @@ Bìa, bệnh viện Cam Ly trong sương, phòng 7 qua ô kính, ảnh Tết 199
 - Biên bản phỏng vấn có thêm câu nhiễu; ghi chú bên lề không còn đếm "bốn câu".
 
 - Băng (thu lại giọng): Thảo không còn tận mắt kể "bà cho nó ăn miếng thịt" mà chỉ nói bà ra sau hè chỗ con Mực nằm; Vân hỏi "mẹ chị còn người thân nào không" (không còn "em gái"); thêm câu Thảo "mẹ viết là dì ốm lắm"; bỏ câu "giống như mẹ trong gương".
+
+## Bảng đủ tài liệu (luật 23, rà ngày 23/11/2026)
+
+| TĐ | Bước | Tài liệu (id) | Mở ở |
+|---|---|---|---|
+| 1 | Chẩn đoán Capgras F06.2 | `benh_an` | 1 |
+| 1 | Ngày chấn thương 15/2/1996 | `ra_vien` | 1 |
+| 1 | Bà Hoa đi 2/4, về 5/7; Thảo nói "không phải mẹ" ngay tối 5/7 | `benh_an`, `thu_sg_1` | 1 |
+| 2 | Hai kiểu "không phải" | `sach_capgras`, `nhat_ky_thao`, `bien_ban_pv`, `phong_van` | 2 |
+| 2 | Cuộc gọi 3/9 | `so_dien_thoai` | 2 |
+| 3 | Dị ứng tôm, lời dặn | `ba_1985` | 3 |
+| 3 | Gỏi tôm ở căng tin | `so_can_tin` | 3 |
+| 3 | Năm cưới Ất Tỵ → 1965 → 31 năm đeo nhẫn | `anh_tay`, `bang_tuoi` (thêm 23/11) | 3 |
+| 3 | Con Mực | `ba_tu` | 3 |
+| 4 | Bài ru, cách gọi mẹ | `tet90`, `tham_2` (băng có phụ đề) | 1, 4 |
+| 4 | Bài ru và cách gọi mẹ theo vùng | `dan_ca` (thêm 23/11) | 4 |
+| 4 | Sài Gòn: nơi bà Hoa ở ba tháng, nơi Huệ được cho đi | `thu_sg_2`, `gia_pha` | 4 |
+| 5 | Sinh đôi soi gương | `bai_bao`, `hai_chan_dung` | 5 |
+| 5 | Cầm đũa tay trái | `so_giao_ca_dua` | 5 |
+| 6 | Người chết là bà Hoa | `chung_tu`, `mo_1970`, `cmnd_hoa` | 6 |
+| 6 | Sốc phản vệ | `chung_tu`, `ba_1985` | 3, 6 |
+| 6 | Vân móc, vân xoáy | `cmnd_hoa`, `huong_dan_van_tay`, `giay_cam_doan` | 1, 6 |
+| 6 | Nhân bánh tôm chấy | `hop_banh`, `ba_tu` (câu tôm chấy thêm 23/11) | 3, 6 |
+| 6 | Động cơ giám hộ | `don_toa`, `luat` | 1, 6 |

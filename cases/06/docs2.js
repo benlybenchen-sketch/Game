@@ -73,7 +73,7 @@ export default [
       ${hand(`<p>Ông ngồi trên bậc cửa, hơi rượu nồng. Bạn ghi lại.</p>
         <p>“Bán con thì sao? Cả xóm này ai chẳng bán. Nó vào nhà giàu, có cơm ăn, hơn ở với thằng bố say.”</p>
         <p>${ln("on_ngay", "“Ngày nào à? Tôi say, không nhớ. Bà phu nhân cho người mang tờ giấy đỏ đến, bảo tôi điểm chỉ, rồi đưa tôi tờ phiếu. Tôi không biết chữ.”")}</p>
-        <p>${ln("on_thach", "“Thằng Thạch? Nó đi làm đêm Thất tịch, rồi không về. Chắc nó cũng bỏ tôi mà đi như mẹ nó.”")}</p>
+        <p>${ln("on_thach", "“Thằng Thạch? Nó đi làm đêm Thất tịch, rồi không về. Chắc nó cũng bỏ tôi mà đi như mẹ nó. Mẹ nó chết năm Dân Quốc thứ mười chín, ba năm tang tôi để đủ rồi.”")}</p>
         <p>${ln("on_tay", "“Thằng ấy theo nghề tôi từ năm mười hai tuổi. Bàn tay nó cứng như đế giày.”")}</p>
         <p>${ln("on_chi", "“Sáng Thất tịch con bé Tú Nương còn chạy về nhà, ngồi buộc buộc cái gì vào tay anh nó. Trò con gái. Tôi chửi, nó không nghe.”")}</p>
         <p>“Mẹ chúng nó chết năm Dân Quốc 19. Tôi chẳng để tang ai được ba ngày.”</p>`)}

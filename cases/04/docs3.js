@@ -6,6 +6,23 @@ export default [
   tape("tham_2", 3, "Băng buổi thăm nuôi thứ Bảy 19/10", "Buổi thăm kết thúc sớm vì bệnh nhân kích động."),
 
   {
+    id: "dan_ca", stage: 3, kind: "Sách", icon: "📗", label: "Sách thư viện tỉnh: Dân ca và hát ru (trích)",
+    html: () => `
+    <div class="doc doc--book">
+      <div class="book-head">DÂN CA VÀ HÁT RU CÁC VÙNG · Nhà xuất bản Văn hoá, 1984 · trang 112–113</div>
+      <table class="tbl">
+        <tr><th>Vùng</th><th>Câu mở đầu thường gặp khi ru</th><th>Con gọi mẹ</th><th>Ghi chú</th></tr>
+        <tr><td>Đồng bằng Bắc Bộ</td><td>Ầu ơ… Gió mùa thu mẹ ru con ngủ; Con cò bé bé (đồng dao)</td><td>mẹ, u; trung du gọi bầm; nhà nền nếp Hà Nội xưa gọi mợ</td><td>Ru chậm, ngân dài</td></tr>
+        <tr><td>Huế</td><td>Ru hời… ru hỡi… là ru</td><td>mạ</td><td>Bà gọi là mệ</td></tr>
+        <tr><td>Quảng Nam – Đà Nẵng</td><td>Bồng bồng mẹ bế con sang</td><td>mẹ</td><td>Ru theo giọng hò Quảng; cô gọi là o; nói “rứa”, “răng”</td></tr>
+        <tr><td>Nam Bộ</td><td>Ầu ơ… Ví dầu cầu ván đóng đinh</td><td>má</td><td>Nói “vậy”, “sao”</td></tr>
+        <tr><td>Đà Lạt</td><td colspan="2">Dân lập nghiệp từ khắp nơi; nhà nào giữ giọng quê gốc nhà nấy</td><td></td></tr>
+      </table>
+      <p class="note">Bác sĩ Vân mượn ở thư viện tỉnh ngày 20/10.</p>
+    </div>`,
+  },
+
+  {
     id: "kha_phan_bac", stage: 3, kind: "Thư", icon: "✉", label: "BS. Kha viết cho bác sĩ Vân",
     html: () => `
     <div class="doc doc--memo">

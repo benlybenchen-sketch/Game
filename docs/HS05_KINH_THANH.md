@@ -242,3 +242,25 @@ Bìa (cửa buồng dán băng keo, ánh lò than đỏ dưới khe cửa), toà
 - Phiếu khâu: ghi chú của y sĩ Sinh không còn giải thích vết cắt là tự rạch; người chơi tự đọc mô tả vết thương.
 - Bà Tám hàng than không nhắc lại vụ Ngân mua năm cân (đã có trong phiếu bán hàng).
 - Nhật ký sáng 30/12 không còn: Ngân nói đã mang năm cân than vào buồng; "cửa ngách sau chạn bát, đinh đã nhổ"; ông Khải nhắc "giỗ chạp tính theo âm". Thay bằng: chạn bát bị kéo lệch, vệt kéo trên nền, đinh cong dưới gầm; sơ đồ địa chính 1988 có vẽ một cửa nhỏ giữa bếp và buồng trong.
+
+## Bảng đủ tài liệu (luật 23, rà ngày 23/11/2026)
+
+| TĐ | Bước | Tài liệu (id) | Mở ở |
+|---|---|---|---|
+| 1 | Ngày cuối gặp cô Hằng 22/12/1989 | `cv_truong`, `don_lua` | 1 |
+| 1 | Danh sách nghi lao | `ds_lao` | 1 |
+| 1 | Mùi nặng nhất ở buồng trong | `so_do`, `don_lua` | 1 |
+| 2 | Hai lời kể mâu thuẫn | `bien_ban_2`, `bang_tham_2`, `nk_2` | 2 |
+| 2 | Formol: mùi hắc, cay mắt; can 20 lít | `so_tay_anh`, `ho_lua` | 2 |
+| 3 | Ảnh "Vợ tôi": bóng trẻ con, tay không nhẫn, dây chun che sẹo | `vo_toi`, `anh_1988`, `anh_cuoi` | 3 |
+| 3 | Chữ "trăm sóc", chữ g | `mau_chu` | 3 |
+| 4 | Xếp ngày hai cuốn sổ | `so_tay_khai`, `nk_ngan` | 4 |
+| 4 | Khởi phát, tiếp nhận, cách điều trị | `sach` | 4 |
+| 4 | Băng chạy ×0,6 | `bang_dem` (nút tốc độ) | 4 |
+| 5 | Bệnh van tim, thiếu thuốc | `benh_an_1985`, `nhat_ky_xe` | 5 |
+| 5 | Ông Khải trên tàu | `ve_tau` | 5 |
+| 5 | Đêm 22/12/1989 là 25 tháng Một | `lvn_1989` (chân trang in thứ tự tên tháng âm, thêm 23/11) | 5 |
+| 6 | 25 tháng Một năm 1991 là 30/12 | `lich`, `trang_than` | 5, 6 |
+| 6 | Hai lần mua than 5 và 10 cân | `hoa_don` | 5 |
+| 6 | Cửa ngách bếp ↔ buồng trong | `so_do`, `nk_6` | 1, 6 |
+| 7 | Tách người khởi phát | `sach`, `bien_ban_hop` | 4, 7 |
