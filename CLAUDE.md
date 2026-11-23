@@ -15,7 +15,7 @@ Người chơi đã chê hồ sơ 01 và 02 là "dễ đoán", "dễ thở". Kh�
 7. Tài liệu không giải thích hộ cách giải ("ghép chữ đầu…", "tháng Một là tháng 11 âm lịch", "đừng nhầm chỗ này"). Cách giải để trong gợi ý.
 8. Câu "bấm vào câu" phải có ít nhất 5 câu bấm được trong tài liệu chứa đáp án, phần lớn là câu nhiễu hợp lý.
 9. Mỗi trọng điểm ít nhất một bẫy bằng giấy tờ; có nghi phạm giả có động cơ thật; câu cuối phải suy luận thật.
-10. `META.strict: true` (không báo "đúng x/y mục", nộp sai bị niêm phong, gợi ý sau 2 lần sai, lời giải sau 4, chấm hạng S–D).
+10. `META.strict: true` (không báo "đúng x/y mục"; đồng hồ 150 phút cho cả hồ sơ, chỉ chạy khi bàn làm việc đang mở; nộp sai ở cùng một trọng điểm bị trừ 3, rồi 5, rồi 10 phút, tối đa 10; hết giờ là game over, đánh dấu thất bại, phải chơi lại từ đầu; gợi ý sau 2 lần sai, lời giải sau 4, chấm hạng S–D). Kiểm bằng `CASE=<id> node tools/timer_test.cjs`.
 11. Chống đoán cốt truyện (luật 16–22 trong KE_HOACH): không đánh tráo danh tính; người thuê vô tội; hai vụ chồng nhau (người dựng ma khác người giết); mỗi trọng điểm lật kết luận trước; không ai chối điều người chơi chưa nghi; hung thủ ở vai việc vặt; giữ một hiện tượng siêu nhiên không giải thích.
 12. Luôn đủ dữ kiện để giải (luật 23), nhưng dữ kiện để thô, rải rác, có nhiễu; không bảng tra gọn, không chỉ cách dùng. Kinh thánh có "Bảng đủ tài liệu"; giải lại toàn bộ chỉ bằng tài liệu trong game trước khi mở.
 13. Ghim bằng chứng (luật 24): mỗi ô ghim có nhãn vai trò; số ô = số ý cần chứng minh; nhóm nhận mọi tài liệu chứng minh được ý đó. Không bắt người chơi đoán cách chia ô.

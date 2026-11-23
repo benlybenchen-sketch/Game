@@ -20,24 +20,53 @@ const flawless = () => !Object.values(state.tries || {}).some(Boolean) && !Objec
   && !(META.strict && Object.values(state.hints || {}).some(Boolean));
 
 // ---------------------------------------------------------------- strict mode (META.strict, cases 02+)
-// No "x/y parts right" feedback, a growing seal after each wrong answer, hints only after 2 misses, the solution after 4,
-// and a grade at the end. Stops brute-forcing a question part by part.
-const LOCK_S = [20, 45, 90, 150, 240];
+// No "x/y parts right" feedback, hints only after 2 misses, the solution after 4, a grade at the end, and a countdown:
+// each case gets 150 minutes of play (counted only while the desk is open and the tab is visible). A wrong answer costs
+// 3, then 5, then 10 minutes on the same question (never more than 10). At zero: game over, the run must start again.
+const TIME_TOTAL = 150 * 60;
+const PENALTY_MIN = [3, 5, 10];
 const HINT_AFTER = 2, SOLVE_AFTER = 4;
-const lockLeft = (qid) => Math.max(0, Math.ceil((((state.lock || {})[qid] || 0) - Date.now()) / 1000));
-const fmtS = (s) => `${Math.floor(s / 60)}:${String(Math.ceil(s) % 60).padStart(2, "0")}`;
-let lockTimer = 0;
-function tickLock() {
-  clearInterval(lockTimer);
-  const q = currentQ(); if (!q || !META.strict) return;
-  const paint = () => {
-    const b = $('.q-card.open [data-act="submit"]'); if (!b) return clearInterval(lockTimer);
-    const left = lockLeft(q.id);
-    b.disabled = left > 0;
-    b.textContent = left > 0 ? `Hồ sơ niêm phong · ${fmtS(left)}` : (q.fatal ? "Quyết định" : "Nộp kết luận");
-    if (left <= 0) clearInterval(lockTimer);
-  };
-  paint(); if (lockLeft(q.id) > 0) lockTimer = setInterval(paint, 500);
+const fmtT = (s) => { s = Math.max(0, Math.ceil(s)); const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60); return `${h}:${String(m).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`; };
+const timerOn = () => META.strict && state.started && !finished() && !state.failed && !state.timeout;
+let timerId = 0, lastTick = 0, lastSave = 0;
+function paintTimer() {
+  let el = $(".top-timer");
+  if (!el) { const mid = $(".top-mid"); if (!mid) return; el = document.createElement("span"); el.className = "top-timer"; mid.appendChild(el); }
+  if (!META.strict) { el.hidden = true; return; }
+  el.hidden = false;
+  const left = state.timeLeft ?? TIME_TOTAL;
+  el.textContent = state.timeout ? "⏳ HẾT GIỜ" : `⏳ ${fmtT(left)}`;
+  el.classList.toggle("low", left <= 600 || !!state.timeout);
+  el.title = "Thời gian còn lại của hồ sơ. Nộp sai bị trừ 3, 5, rồi 10 phút.";
+}
+function tickTimer() {
+  const now = performance.now(), dt = (now - lastTick) / 1000; lastTick = now;
+  if (!timerOn() || document.hidden || document.body.dataset.screen !== "desk") return paintTimer();
+  state.timeLeft = Math.max(0, (state.timeLeft ?? TIME_TOTAL) - Math.min(dt, 5));
+  if (now - lastSave > 5000) { lastSave = now; save(); }
+  paintTimer();
+  if (state.timeLeft <= 0) gameOver();
+}
+function startTimer() {
+  if (!META.strict) return paintTimer();
+  if (state.timeLeft == null) state.timeLeft = TIME_TOTAL;
+  clearInterval(timerId); lastTick = performance.now(); timerId = setInterval(tickTimer, 1000); paintTimer();
+  if (state.timeout) setTimeout(gameOverDialog, 300);
+}
+/** Takes minutes off the clock for a wrong answer; returns the minutes taken. */
+function penalize(n) {
+  const min = PENALTY_MIN[Math.min(n - 1, PENALTY_MIN.length - 1)];
+  state.timeLeft = Math.max(0, (state.timeLeft ?? TIME_TOTAL) - min * 60);
+  return min;
+}
+function gameOver() {
+  if (state.timeout) return;
+  state.timeout = true; state.timeouts = (state.timeouts || 0) + 1; picking = null; save();
+  sfx.wrong(); setLevel(4); renderAll(); gameOverDialog();
+}
+function gameOverDialog() {
+  dialog(`<h3 class="fatal-h">HẾT GIỜ · GAME OVER</h3><p>Đồng hồ đã về không. Hồ sơ bị đánh dấu thất bại.</p><p>Bạn phải chơi lại từ đầu. Những kết thúc đã mở và hạng cao nhất vẫn được giữ.</p>`,
+    "Chơi lại từ đầu", () => { resetAll(); setLevel(0, { quiet: true }); document.querySelector(".ghost-note").innerHTML = ""; showCover(); });
 }
 const GRADES = [[0, "S", "Không một vết xước"], [3, "A", "Sắc như dao cạo"], [8, "B", "Vững tay"], [15, "C", "Lần mò trong tối"], [Infinity, "D", "Được dắt tay qua hồ sơ"]];
 function grade() {
@@ -170,7 +199,7 @@ function showCover() {
         <li>Một số câu hỏi bắt bạn <b>chỉ ra câu nói dối</b>: bấm “Chọn câu”, rồi bấm vào đúng câu trong lời khai.</li>
         <li>Trả lời đúng thì hồ sơ mới mở ra. Mỗi lần như thế, đêm lại khuya hơn… và quanh bạn có thêm thứ gì đó.</li>
         ${META.strict
-          ? `<li><b>Không ai báo bạn đúng mấy mục.</b> Nộp sai là hồ sơ bị niêm phong một lúc, mỗi lần lâu hơn.</li>
+          ? `<li><b>Bạn có 150 phút</b> cho cả hồ sơ (đồng hồ chỉ chạy khi bàn làm việc đang mở). <b>Không ai báo bạn đúng mấy mục.</b> Mỗi lần nộp sai ở cùng một trọng điểm bị trừ 3, rồi 5, rồi 10 phút. Hết giờ là thua, phải chơi lại từ đầu.</li>
         <li><b>Gợi ý</b> chỉ mở sau ${HINT_AFTER} lần nộp sai, <b>lời giải</b> sau ${SOLVE_AFTER} lần. Dùng chúng là tụt hạng thám tử và mất kết thúc ẩn.</li>`
           : `<li>Bí quá thì dùng <b>gợi ý</b>. Đến lúc tuyệt vọng thì có <b>lời giải</b>.</li>`}
       </ol><p class="small muted">Tiến trình được lưu trên trình duyệt này.</p></details>
@@ -207,6 +236,7 @@ function startDesk() {
   $("#cover").hidden = true;
   $("#desk").hidden = false;
   renderAll();
+  startTimer();
   openDoc(state.lastDoc && byId.has(state.lastDoc) && byId.get(state.lastDoc).stage <= state.stage ? state.lastDoc : META.firstDoc);
 }
 
@@ -229,7 +259,7 @@ function renderTop() {
   const clock = finished() ? END_CLOCK : state.stage === 0 ? START_CLOCK : QUESTIONS[state.stage - 1].clock;
   $(".top-clock").textContent = clock;
   $(".top-clock").title = `Giờ trong truyện: ${META.place}`;
-  $(".top-progress").textContent = state.failed ? "THẤT BẠI" : finished() ? "Đã khép hồ sơ" : `Trọng điểm ${state.stage + 1}/${QUESTIONS.length}`;
+  $(".top-progress").textContent = state.timeout ? "HẾT GIỜ" : state.failed ? "THẤT BẠI" : finished() ? "Đã khép hồ sơ" : `Trọng điểm ${state.stage + 1}/${QUESTIONS.length}`;
 }
 
 function renderFolder() {
@@ -275,7 +305,7 @@ function renderInquiry() {
     return `<div class="q-card locked"><div class="q-head"><span class="q-no">Trọng điểm ${i + 1}</span><span class="q-title">· · ·</span></div></div>`;
   }).join("");
   $(".inq").innerHTML = `<h2>Sổ công tác</h2>${html}${finished() ? `<div class="q-card end"><b>Hồ sơ đã khép.</b> Đọc thư mục “${FOLDERS[QUESTIONS.length] || "Kết thúc"}” bên trái.</div>` : ""}`;
-  tickLock();
+  paintTimer();
 }
 
 function solvedCard(q, i) {
@@ -369,20 +399,19 @@ function submit() {
   const q = currentQ(), s = SECRETS[q.id], fb = $(".q-feedback");
   const res = checkQuestion(q, s, resp(q.id));
   if (!res.complete) { fb.textContent = "Bạn chưa điền đủ mọi mục (kể cả đủ số tài liệu ghim)."; fb.className = "q-feedback warn"; sfx.wrong(); return; }
-  if (META.strict && lockLeft(q.id) > 0) { fb.textContent = `Hồ sơ đang niêm phong. Đọc lại đi, còn ${fmtS(lockLeft(q.id))}.`; fb.className = "q-feedback warn"; return; }
+  if (META.strict && state.timeout) return gameOverDialog();
   if (q.fatal) return decide(q, res.ok);
   if (res.ok) return solved(q, false);
   const n = (state.tries[q.id] = (state.tries[q.id] || 0) + 1);
   let msg = META.wrongFor ? META.wrongFor(n) : WRONG[(n - 1) % WRONG.length];   // a case may word its own reaction
   if (META.strict) {
-    const sec = LOCK_S[Math.min(n - 1, LOCK_S.length - 1)];
-    (state.lock ||= {})[q.id] = Date.now() + sec * 1000;
-    msg += ` Hồ sơ bị niêm phong ${sec} giây.`;
+    const min = penalize(n);
+    msg += ` Đồng hồ bị trừ ${min} phút.`;
     if (n === HINT_AFTER) msg += " Gợi ý đã mở.";
     if (n === SOLVE_AFTER) msg += " Lời giải đã mở.";
   } else if (n >= 3) msg += ` (Đúng ${res.right}/${res.total} mục.)`;
   save();
-  if (META.strict) { renderInquiry(); const f2 = $(".q-feedback"); f2.textContent = msg; f2.className = "q-feedback bad"; sfx.wrong(); tickLock(); }
+  if (META.strict) { renderInquiry(); const f2 = $(".q-feedback"); f2.textContent = msg; f2.className = "q-feedback bad"; sfx.wrong(); paintTimer(); if (state.timeLeft <= 0) return gameOver(); }
   else { fb.textContent = msg; fb.className = "q-feedback bad"; sfx.wrong(); }
   if (level() >= 2 && Math.random() < 0.35) setTimeout(() => sfx.whisper(1.4), 700);
 }
