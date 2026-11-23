@@ -1,4 +1,4 @@
-# Hồ sơ 07 · "Thư gửi người chết" · KINH THÁNH (bản nháp 2, chờ duyệt)
+# Hồ sơ 07 · "Thư gửi người chết" · KINH THÁNH (bản nháp 3, chờ duyệt)
 
 > Bản nháp 1 (Luxor 1924, phái đoàn khảo cổ Pháp) bị người dùng chê "nhàm, chưa đủ rắc rối". Bản này đặt hẳn trong Ai Cập cổ đại.
 > Áp luật độ khó 1–15 và luật chống đoán 16–22 trong `docs/KE_HOACH.md`.
@@ -51,27 +51,35 @@
 | Ngày 19 | Userhat chết trong nhà, rắn hổ mang sừng trong hộp bút. |
 | Ngày 22 | **Ngày thứ bảy.** Thợ bỏ lăng, kéo nhau xuống ngồi sau tường đền Medinet Habu kêu đói. Khonsu tình nguyện mang cái đấu "làm bằng chứng" xuống cho tể tướng. |
 
-## 4. Bảy trọng điểm
+## 4. Bảy trọng điểm (bản 3: khó hơn)
 
-Mỗi trọng điểm dùng một hệ có thật, chưa dùng trong series. Mỗi trọng điểm lật lại kết luận của trọng điểm trước (luật 19).
+Mỗi trọng điểm phải ghép ít nhất 3 tài liệu và qua ít nhất 3 bước tính hoặc suy luận. Không câu nào giải được bằng một bảng tra.
+Đáp án phần lớn là số hoặc chữ tự nhập; câu chọn chỉ dùng khi bắt buộc, và có 6–8 phương án.
 
-| # | Hệ tra cứu | Đáp án đúng | Người chơi sẽ tin sai | Bị lật ở |
+### Năm cơ chế làm khó mới (chưa có trong series)
+
+1. **Tự dựng bảng tra từ ví dụ.** Không có bảng chữ số hieratic hay bảng phân số hoàn chỉnh. Người chơi chỉ có vở bài tập của một cậu học trò ký lục: vài phép tính đã làm, có chỗ thầy sửa đỏ, có chỗ trò làm sai mà thầy chưa sửa. Từ đó phải tự suy ra cách viết số và phân số.
+2. **Phân số con mắt Horus.** Lúa đong bằng hekat, phần lẻ viết bằng các mảnh của "con mắt Horus" (1/2, 1/4, 1/8, 1/16, 1/32, 1/64). Cộng hết sáu mảnh chỉ được 63/64, và người Ai Cập coi phần thiếu 1/64 là "phần thần Thoth giữ". Đây là hệ có thật. Tính mức thiếu phải cộng trừ bằng các mảnh này.
+3. **Cú lật làm hỏng suy luận trước (trọng điểm 4).** Mọi chứng cứ ngoại phạm ở trọng điểm 1 đều dựa trên "Hay chết đêm 13". Trọng điểm 4 chứng minh anh chết đêm 14. Người chơi phải tự xét lại ngoại phạm của từng người với đêm mới, và đây là phần của đáp án.
+4. **Mật tự trên vách lăng.** Thợ vẽ lăng vua biết lối "chữ đố": thay một ký hiệu bằng ký hiệu khác có cùng âm đầu. Lối này có thật, dùng trong các lăng thời ấy. Trước khi chết, Hay vẽ một dòng chữ đố lẫn vào hàng chữ thần chú trên vách. Người chơi phải tự tìm ra dòng nào lạc, rồi giải nó bằng một bảng tên đồ vật.
+5. **Tài liệu tự mâu thuẫn, phải chọn tài liệu đáng tin bằng chứng cứ bên trong nó.** Ví dụ: hai bản điểm danh lệch nhau. Bản đúng là bản có ngày nghỉ lễ khớp với lịch lễ của làng.
+
+### Bảng trọng điểm
+
+| # | Phải ghép | Các bước | Đáp án | Người chơi sẽ tin sai |
 |---|---|---|---|---|
-| 1 | **Sổ điểm danh thợ:** gốm ghi ngày theo lịch dân sự và lý do vắng ("ủ bia", "bọ cạp đốt", "ướp xác anh trai", "làm việc cho đốc công") | Đêm 13, Nakhtmin ghi "ủ bia ở nhà" nhưng vợ ông ghi ông vắng nhà. Nakhtmin nói dối. | Nakhtmin giết Hay, đúng như bà goá tố | 2 |
-| 2 | **Số hieratic và đơn vị lúa:** khar, oipe, hekat (1 khar = 4 oipe = 16 hekat). Bảng lương từng hạng thợ. | Tháng nào nhà nào cũng thiếu đúng 1/16. Thiếu đều như vậy thì không phải một người thợ ăn cắp. Nakhtmin cũng bị thiếu. | Kho đền bên sông ăn bớt. Hay bị giết vì đòi lương. Kẻ giết là người của kho. | 3 |
-| 3 | **Bảng nét chữ hieratic:** mỗi người viết vài ký hiệu theo thói quen riêng, có bảng mẫu chữ trong trường dạy ký lục. Có các bát thư gửi người chết. | Thư "Hay trả lời" là do Nebetiunet viết. Ma là dựng. | Bà goá giết chồng rồi dựng ma để che | 4 |
-| 4 | **Sách rắn** (giống sách y học cổ về rắn và bọ cạp): đặc điểm từng loài, vết cắn, mùa rắn ngủ đông | Userhat chết vì rắn hổ mang sừng; mùa Peret rắn ngủ đông, nên **rắn bị đặt vào**. Giờ đó Nebetiunet đang khiêng kiệu tượng thần trước mặt cả làng. | Không còn ai rõ ràng. Nghi Sennefer vì vụ nợ | 5 |
-| 5 | **Lịch giữ ấn:** ấn "của Lăng" đổi người giữ theo tuần 10 ngày, hai bên Phải và Trái thay nhau. Có các dấu ấn trên đất niêm. | Dấu niêm cửa lăng đêm 13 đúng là ấn đến lượt bên Trái giữ, tức tuần của Sennefer. Bẫy: đếm tuần theo tháng âm thì ra bên Phải. | Sennefer là hung thủ | 6 |
-| 6 | **Đong thể tích:** đổ nước bằng chén hin (1 hekat = 10 hin) để đo cái đấu ở cổng. Mảnh gốm của Hay. Sổ của thầy bắt rắn. Một thư "trả lời" thứ hai khác nét chữ. | Đấu ở cổng chỉ chứa 15/16 oipe. Lương phát ở cổng do người gác đong. Mỗi tối người gác mang ấn của bên đến lượt lên đèo (chi tiết có từ trọng điểm 5 nhưng bị lẫn trong một dòng việc vặt). Lá thư lạ viết số theo lối của thẻ buộc bao lúa. **Hung thủ: Khonsu.** Tổng số lúa bị ăn cắp tính ra khar. | | |
-| 7 | **Một lần chọn duy nhất** | Xem mục 6 | | |
+| 1 | Hai bản điểm danh, lịch lễ làng, sổ cấp bấc đèn cho lều trên đèo | Chọn bản điểm danh đúng nhờ lịch lễ → đổi ngày → đếm bấc đèn từng lều đã đốt đêm 13 và đêm 14 (bấc cháy được bao lâu, phát bao nhiêu) | Ai có mặt ở đèo đêm 13 và đêm 14 (nhập tên theo từng đêm); Nakhtmin nói dối đêm 13 | Nakhtmin là hung thủ |
+| 2 | Vở bài tập ký lục, bảng lương 3 tháng (có mảnh vỡ), bảng hạng thợ | Tự dựng cách đọc số hieratic và mắt Horus → điền phần vỡ của bảng lương bằng tổng cột → tìm mức thiếu → nhận ra nó là tỉ lệ cố định chứ không phải số cố định | Mức thiếu là 1/16 trên mọi nhà, kể cả nhà Nakhtmin; tổng lúa mất sau 3 tháng (khar, hekat và phần mắt Horus) | Kho đền bên sông ăn bớt |
+| 3 | Bát thư gửi người chết, vở tập viết của Hay, bảng mẫu chữ của trường ký lục | So 4 ký hiệu đặc trưng của 4 người viết; hai người học chữ cùng thầy nên giống nhau 3/4 ký hiệu; chỉ ký hiệu thứ tư tách được | Thư "Hay trả lời" số 1 và 2 do Nebetiunet viết; thư số 3 chưa xác định được (để dành cho trọng điểm 6) | Bà goá giết chồng |
+| 4 | Sổ tiến độ đục lăng (đơn vị cubit, palm, finger: 1 cubit = 7 palm = 28 finger), bản vẽ lăng, mật tự trên vách, sách rắn, sổ bấc đèn nhà Userhat | Hành lang chỗ xác nằm chỉ được đục xong chiều 14, nên Hay chết đêm 14 → giải mật tự của Hay (tên một đồ vật: "cái đấu") → Userhat chết vì rắn đặt vào; tính giờ chết theo bấc đèn còn lại | Hay chết đêm 14; dòng mật tự đọc ra "đấu"; Userhat chết khoảng giờ thứ 3 của đêm, lúc bà goá đang khiêng kiệu | Kẻ giết liên quan tới kho lúa, nên nghi người của kho đền |
+| 5 | Lịch giữ ấn theo tuần 10 ngày, mảnh vỡ dấu niêm (ghép hình), sổ việc cổng | Ghép 5 mảnh dấu niêm → đọc ấn → với đêm 14 (không phải 13), ấn đến lượt bên Trái → nhưng sổ việc cổng ghi ai mang ấn lên đèo mỗi tối (một dòng lẫn giữa việc gánh nước, đưa thư) | Ấn bên Trái, người mang lên đèo đêm 14 là "người cổng"; Sennefer ngủ ở làng | Sennefer (nếu chưa thấy dòng sổ cổng) |
+| 6 | Đong nước bằng chén hin, mảnh gốm của Hay, sổ thầy bắt rắn, thẻ buộc bao lúa, thư số 3 | Đo đấu ở cổng → 15/16 oipe → nét số trên thư 3 giống thẻ bao lúa (người viết thẻ là người nhận lúa ở bến) → sổ bắt rắn "giao cho nhà cổng" → ngoại phạm mới (đêm 14) của Khonsu không có | Hung thủ Khonsu; số lúa bị lấy trong 3 tháng tính ra khar và hekat; câu trong thư 3 lộ người viết | |
+| 7 | Một lần chọn duy nhất, nhưng phải tính trước | Giờ thợ tới đền và giờ Khonsu tới kho; đấu đi qua tay ai trước | Phương án D (xem mục 6) | |
 
-**Kiểm theo luật:**
-- **Luật 2:** Nakhtmin chỉ làm đáp án ở trọng điểm 1; Sennefer ở 5; Nebetiunet ở 3. Khonsu chỉ là đáp án ở 6.
-- **Luật 20:** không nhân vật nào nói "đấu ở cổng đúng chuẩn", "người gác không biết chữ", hay "ấn luôn ở nhà đốc công".
-- **Luật 21:** Khonsu xuất hiện từ trang đầu: mở cổng cho bạn, đưa nước, phát lương, đưa thư, mang ấn. Mọi chi tiết đều để ở vai việc vặt.
-- **Manh mối công bằng có từ sớm:**
-  - Ngày thứ nhất, bé Tuy nói "Bố bảo cái đấu ở cổng ăn mất một miếng". Câu này nghe như chuyện ma ăn lúa.
-  - Bảng lương ở trọng điểm 2 có một dòng phụ: người gác cổng nhận lương riêng ở kho, không đong qua cổng.
+### Kiểm theo luật
+
+- **Luật 2:** Nakhtmin chỉ làm đáp án ở trọng điểm 1, Nebetiunet ở 3, Sennefer không làm đáp án ở trọng điểm nào. Khonsu chỉ làm đáp án ở 6 (ở 5 chỉ là "người cổng", không tên).
+- **Luật 8:** mỗi câu bấm có 8–12 câu bấm được.
 
 ## 5. Bẫy giấy tờ cho từng trọng điểm (luật 9)
 
@@ -100,7 +108,13 @@ Ngày thứ nhất, tượng vua thần được khiêng ra trước đống m�
 - Hai người khiêng kiệu hôm ấy là hai thầy tư tế đã mù từ lâu.
 - Không ai giải thích. Lời giải cuối để ngỏ.
 
-## 8. Hệ tra cứu cần dựng
+## 8. Hệ tra cứu cần dựng (bổ sung bản 3)
+
+- Vở bài tập của học trò ký lục: các phép cộng, nhân đôi, chia lúa có chữ số hieratic và phân số mắt Horus; có lỗi được sửa và lỗi chưa sửa.
+- Sổ cấp bấc đèn: bấc phát theo lều, mỗi bấc cháy được bao lâu.
+- Sổ tiến độ đục lăng và bản vẽ lăng (cubit, palm, finger).
+- Bảng chữ đố: ký hiệu → âm đầu, theo tên đồ vật.
+- Năm mảnh dấu niêm để ghép.
 
 - Lịch dân sự Ai Cập: 3 mùa (Akhet, Peret, Shemu) × 4 tháng × 30 ngày, cộng 5 ngày lễ cuối năm; tuần 10 ngày.
 - Chữ số hieratic: đơn vị, chục, trăm, phân số của hekat.
