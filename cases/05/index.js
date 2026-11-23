@@ -27,6 +27,7 @@ const LOST_LINE = {
 };
 
 export const META = {
+  strict: true,   // no x/y feedback, seal after wrong answers, gated hints, grade (js/main.js)
   series: "Hồ sơ Nửa Đêm",
   number: "Hồ sơ số 05",
   title: "Người giữ vợ",

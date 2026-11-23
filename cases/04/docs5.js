@@ -14,7 +14,7 @@ export default [
       <p>Chết lúc 3 giờ ngày 18/6/1996 tại nhà.</p>
       <p>Nguyên nhân: ${ln("ct_dq", "đột quỵ (theo y sĩ trạm y tế phường).")}</p>
       <p>Ghi chú khám thi thể của y sĩ: ${ln("ct_phu", "mặt và môi sưng phù, có nốt đỏ ở cổ;")} ${ln("ct_seo", "sẹo mổ cũ ở bụng dưới bên phải;")} ${ln("ct_ruoi", "nốt ruồi khoé miệng trái.")}</p>
-      <p>Người khai tử: <b>chị gái Lê Thị Hoa</b>, có mặt tại nhà lúc chết. Mai táng ngày 18/6 tại nghĩa trang Phước Lộc, Bình Chánh.</p>
+      <p>Người khai tử: chị gái Lê Thị Hoa, có mặt tại nhà lúc chết. Mai táng ngày 18/6 tại nghĩa trang Phước Lộc, Bình Chánh.</p>
       ${stamp("SAO Y BẢN CHÍNH", "right:24px;bottom:22px", "red")}
     </div>`,
   },
@@ -52,7 +52,7 @@ export default [
       <div class="book-head">TÀI LIỆU NGHIỆP VỤ · ba dạng hoa văn đường vân cơ bản</div>
       <ul>
         <li><b>Cung:</b> đường vân chạy từ mép này sang mép kia như làn sóng, nhô lên ở giữa. Không có tâm, không có điểm tam giác.</li>
-        <li><b>Móc:</b> đường vân đi vào từ một bên, vòng lại hình móc câu, rồi đi ra <u>cùng bên đó</u>. Có một điểm tam giác.</li>
+        <li><b>Móc:</b> đường vân đi vào từ một bên, vòng lại hình móc câu, rồi đi ra cùng bên đó. Có một điểm tam giác.</li>
         <li><b>Xoáy:</b> đường vân cuộn tròn hoặc xoắn ốc quanh một tâm. Có hai điểm tam giác ở hai bên.</li>
       </ul>
       <p>Hoa văn đường vân không đổi suốt đời. Hai người khác nhau, kể cả sinh đôi cùng trứng, không bao giờ có vân tay trùng nhau.</p>

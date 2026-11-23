@@ -23,6 +23,7 @@ export const ART = { ghostFace };
 export const tapeSuffix = (id, i) => (TAPES[id]?.segs[i]?.dose && dose() > 0 ? `_d${dose()}` : "");
 
 export const META = {
+  strict: true,   // no x/y feedback, seal after wrong answers, gated hints, grade (js/main.js)
   series: "Hồ sơ Nửa Đêm",
   number: "Hồ sơ số 04",
   title: "Người mẹ khác",

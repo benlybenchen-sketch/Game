@@ -12,10 +12,10 @@ export default [
       <p>Cháu,</p>
       <p>Đêm 12 tháng 8 vừa rồi (27/9), Kép <b>Châu Văn Kiệt</b> của gánh hát bội <b>Phước Hưng Ban</b> gục chết ngay trên sân khấu đình Phú Lễ, trong vai Quan Công,
         đúng đêm giỗ Tổ. Lưng anh ta uốn cong như cánh cung, mặt nhăn lại như đang cười. Cả cù lao Cồn Ngựa nói: <b>Tổ bắt</b>.</p>
-      <p>Tôi ngồi hàng ghế đầu đêm đó. Và ba mươi năm trước, <b>đêm 12 tháng 8 năm 1963</b>, tôi cũng ngồi đúng hàng ghế đó,
+      <p>Tôi ngồi hàng ghế đầu đêm đó. Và ba mươi năm trước, đêm 12 tháng 8 năm 1963, tôi cũng ngồi đúng hàng ghế đó,
         nhìn kép <b>Hai Lành</b> chết y hệt như vậy, cũng trong vai Quan Công. Hồi đó tôi viết bài “Tổ bắt”. Ba mươi năm nay tôi không ngủ yên với bài báo ấy.</p>
       <p>Thứ Bảy, tôi nhận một gói đồ không đề người gửi: một cuộn băng VHS chép lại đêm diễn, và một mảnh giấy. Cháu xem trong hồ sơ.</p>
-      <p>Thằng Phát, thợ ảnh ở chợ Phú Lễ, là người quay cuộn băng gốc. Nó nói máy quay là máy mượn của tiệm điện, <u>giờ trong máy có đúng không thì nó không biết</u>.
+      <p>Thằng Phát, thợ ảnh ở chợ Phú Lễ, là người quay cuộn băng gốc. Nó nói máy quay là máy mượn của tiệm điện, giờ trong máy có đúng không thì nó không biết.
         Đừng tin con số nào mà chưa đối chiếu.</p>
       <p>Tôi già rồi, mắt kém, tay run. Cháu làm thay tôi. Mỗi trọng điểm phải có giấy tờ làm bằng chứng.
         Thượng úy Huỳnh bên công an huyện nợ tôi một ân tình. Trả lời đúng tới đâu, cậu ấy gửi giấy tờ tới đó.</p>
@@ -60,9 +60,9 @@ export default [
           ${pic("kiet", "Kép Châu Văn Kiệt (ảnh tư liệu của gánh)", "", "pic--small pic--left")}
           <p class="dropcap">Tối thứ Hai 27/9 (12/8 âm lịch, giỗ Tổ hát bội), gánh hát bội Phước Hưng Ban diễn tuồng <i>Quan Công quá ngũ quan</i>
             tại đình Phú Lễ (cù lao Cồn Ngựa). Tuồng mở màn lúc 21 giờ 30, có hơn ba trăm bà con đến xem.</p>
-          <p>Theo người xem, khoảng <b>22 giờ 30</b>, trong lớp thứ ba, kép <b>Châu Văn Kiệt</b> (38 tuổi), người đóng Quan Công, bỗng khựng lại,
+          <p>Theo người xem, khoảng 22 giờ 30, trong lớp thứ ba, kép <b>Châu Văn Kiệt</b> (38 tuổi), người đóng Quan Công, bỗng khựng lại,
             ưỡn người ra sau rồi ngã vật trên sàn diễn. Nhiều người tưởng là một lối diễn mới. Ông Võ Văn Đáng, người cầm trống chầu, kịp ngưng trống.</p>
-          <p>Y sĩ trạm xá xã đến lúc 22 giờ 52. Kép Kiệt qua đời lúc <b>22 giờ 58</b>, trước mặt y sĩ và cả gánh hát.</p>
+          <p>Y sĩ trạm xá xã đến lúc 22 giờ 52. Kép Kiệt qua đời lúc 22 giờ 58, trước mặt y sĩ và cả gánh hát.</p>
           <p>Bà con trong cù lao nhắc lại chuyện cũ: đúng đêm giỗ Tổ năm 1963, kép <b>Hai Lành</b> của gánh này cũng chết trên sân khấu, cũng trong vai Quan Công.
             “Phạm Tổ thì Tổ bắt,” một cụ già nói.</p>
           <p>Công an huyện đã lập hồ sơ, gửi mẫu đi giám định. Bà Nguyễn Thị Lựu, bầu gánh, cho biết gánh sẽ ngưng diễn để lo hậu sự.</p>
@@ -81,16 +81,16 @@ export default [
     <div class="doc doc--form">
       <div class="form-head"><div>SỞ Y TẾ CỬU GIANG<br><b>TRUNG TÂM PHÁP Y TỈNH</b></div><div><b>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</b><br>Độc lập – Tự do – Hạnh phúc</div></div>
       <h2 class="form-title">BIÊN BẢN KHÁM NGHIỆM TỬ THI<br><small>Số 41/PY · ngày 28/9/1993</small></h2>
-      <p>Họ tên: <b>Châu Văn Kiệt</b>, nam, 38 tuổi, diễn viên. Tử vong lúc <b>22 giờ 58</b> ngày 27/9/1993 tại đình Phú Lễ (theo y sĩ Trần Văn Hiếu, trạm xá xã).</p>
-      <p><b>Ghi nhận của y sĩ tại chỗ (22:52–22:58):</b> nạn nhân <b>tỉnh táo hoàn toàn</b>, mắt mở, nghe và hiểu được lời nói. Toàn thân co cứng từng cơn,
-        lưng <b>ưỡn cong như cánh cung</b>, chỉ đầu và gót chân chạm sàn. Cơ mặt co rút kéo hai mép miệng lên thành <b>nụ cười nhăn</b>. Mỗi khi có tiếng động
+      <p>Họ tên: <b>Châu Văn Kiệt</b>, nam, 38 tuổi, diễn viên. Tử vong lúc 22 giờ 58 ngày 27/9/1993 tại đình Phú Lễ (theo y sĩ Trần Văn Hiếu, trạm xá xã).</p>
+      <p><b>Ghi nhận của y sĩ tại chỗ (22:52–22:58):</b> nạn nhân tỉnh táo hoàn toàn, mắt mở, nghe và hiểu được lời nói. Toàn thân co cứng từng cơn,
+        lưng ưỡn cong như cánh cung, chỉ đầu và gót chân chạm sàn. Cơ mặt co rút kéo hai mép miệng lên thành nụ cười nhăn. Mỗi khi có tiếng động
         (tiếng trống, tiếng la, tiếng ghế đổ) hoặc khi bị chạm vào thì lên cơn mới. Không nôn, không tiêu chảy. Không sụp mi. Da không đỏ.</p>
       <p><b>Lời bà bầu Tư Lựu (ghi kèm):</b> chiều 27 Kiệt vẫn tập tuồng, ăn uống, nói cười bình thường, hàm không cứng, không than đau. Từ lúc ra lớp 3 đến lúc tắt thở chưa tới nửa giờ.</p>
       <p><b>Khám ngoài:</b> mặt còn lớp son đỏ vẽ vai Quan Công. Hai bên má và trán có nhiều vết cào sâu do nạn nhân tự cào trong cơn;
         khi lau son, da mặt bong theo từng mảng, lẫn với son thành một lớp nhão đỏ sậm. Lưỡi bị cắn đứt gần một nửa, máu đông lẫn son chảy vào hai hốc mắt.
-        Các ngón tay co quắp, ba móng tay bật gốc. Ngoài các vết tự cào trong cơn, <b>không có vết thương hở hay vết đâm, vết bỏng nào</b> trên người. Tử thi co cứng sớm và rất mạnh: lúc 23 giờ 30, không duỗi thẳng được lưng.</p>
+        Các ngón tay co quắp, ba móng tay bật gốc. Ngoài các vết tự cào trong cơn, không có vết thương hở hay vết đâm, vết bỏng nào trên người. Tử thi co cứng sớm và rất mạnh: lúc 23 giờ 30, không duỗi thẳng được lưng.</p>
       <p><b>Khám trong:</b> dạ dày chứa khoảng 150 ml dịch nâu nhạt, mùi trà. Phổi phù, xuất huyết điểm. Không thấy thương tích do vật tày hay vật sắc.</p>
-      <p><b>Kết luận sơ bộ:</b> tử vong do ngạt vì co cứng cơ hô hấp. Nghi ngộ độc. <b>Gửi mẫu dịch dạ dày đi xét nghiệm độc chất</b>, chờ kết quả.</p>
+      <p><b>Kết luận sơ bộ:</b> tử vong do ngạt vì co cứng cơ hô hấp. Nghi ngộ độc. Gửi mẫu dịch dạ dày đi xét nghiệm độc chất, chờ kết quả.</p>
       <div class="sign-row"><div>Giám định viên<br>${hand("Tường", "sign")}BS. Lê Minh Tường</div><div>Thủ trưởng đơn vị<br>${hand("Phúc", "sign")}</div></div>
       ${stamp("TRUNG TÂM<br>PHÁP Y<br>CỬU GIANG", "right:40px;bottom:30px", "blue")}
     </div>`,
@@ -104,11 +104,11 @@ export default [
       <table class="tbl">
         <tr><th>Chất độc</th><th>Dấu hiệu chính</th><th>Khởi phát sau khi nuốt</th><th>Ý thức</th></tr>
         <tr><td><b>Thạch tín</b> (arsen)</td><td>Đau bụng dữ dội, nôn, tiêu chảy như nước vo gạo, hơi thở mùi tỏi, mất nước, sốc</td><td>30 phút – vài giờ</td><td>Lơ mơ dần</td></tr>
-        <tr><td><b>Lá ngón</b></td><td>Chóng mặt, nhìn đôi, <b>sụp mi</b>, yếu cơ, liệt dần rồi ngừng thở. Không co cứng kiểu cánh cung</td><td>10 phút – 1 giờ</td><td>Tỉnh lúc đầu, sau lơ mơ</td></tr>
-        <tr><td><b>Hạt mã tiền</b> (strychnin)</td><td>Co cứng cơ, cơn giật toàn thân, <b>lưng ưỡn cong như cánh cung</b>, mặt co rút thành <b>“cười nhăn”</b>. Cơn bị khơi lên bởi <b>tiếng động, ánh sáng, đụng chạm</b>. Chết do ngạt</td><td><b>15 – 30 phút</b></td><td><b>Tỉnh táo hoàn toàn</b> đến lúc chết</td></tr>
+        <tr><td><b>Lá ngón</b></td><td>Chóng mặt, nhìn đôi, sụp mi, yếu cơ, liệt dần rồi ngừng thở. Không co cứng kiểu cánh cung</td><td>10 phút – 1 giờ</td><td>Tỉnh lúc đầu, sau lơ mơ</td></tr>
+        <tr><td><b>Hạt mã tiền</b> (strychnin)</td><td>Co cứng cơ, cơn giật toàn thân, lưng ưỡn cong như cánh cung, mặt co rút thành “cười nhăn”. Cơn bị khơi lên bởi tiếng động, ánh sáng, đụng chạm. Chết do ngạt</td><td>15 – 30 phút</td><td>Tỉnh táo hoàn toàn đến lúc chết</td></tr>
         <tr><td><b>Phốt-phua kẽm</b> (thuốc chuột)</td><td>Nôn, hơi thở mùi cá ươn, khó thở, sốc</td><td>15 phút – 4 giờ</td><td>Vật vã, lơ mơ</td></tr>
         <tr><td><b>Cà độc dược</b></td><td>Da đỏ, khô, nóng; đồng tử giãn to; mê sảng, ảo giác, la hét</td><td>30 phút – 1 giờ</td><td>Lú lẫn</td></tr>
-        <tr><td><b>Uốn ván</b> (không phải chất độc: vi trùng vào qua <b>vết thương bẩn</b>, vết bỏng)</td><td><b>Cứng hàm</b> (khít hàm) xuất hiện trước tiên; sau đó co cứng toàn thân, <b>lưng ưỡn cong như cánh cung</b>, mặt <b>“cười nhăn”</b>; cơn giật bị khơi lên bởi <b>tiếng động, ánh sáng, đụng chạm</b>. Bệnh kéo dài nhiều ngày</td><td>Ủ bệnh <b>3 – 21 ngày</b> sau khi bị thương</td><td><b>Tỉnh táo hoàn toàn</b></td></tr>
+        <tr><td><b>Uốn ván</b> (không phải chất độc: vi trùng vào qua vết thương bẩn, vết bỏng)</td><td><b>Cứng hàm</b> (khít hàm) xuất hiện trước tiên; sau đó co cứng toàn thân, lưng ưỡn cong như cánh cung, mặt “cười nhăn”; cơn giật bị khơi lên bởi tiếng động, ánh sáng, đụng chạm. Bệnh kéo dài nhiều ngày</td><td>Ủ bệnh 3 – 21 ngày sau khi bị thương</td><td>Tỉnh táo hoàn toàn</td></tr>
         <tr><td><b>Nọc rắn hổ</b></td><td>Có vết cắn; sụp mi, khó nuốt, liệt</td><td>15 phút – vài giờ</td><td>Tỉnh lúc đầu</td></tr>
       </table>
       <p class="small">Ghi chú của sách: hạt mã tiền chế (đã sao tẩm) bán ở tiệm thuốc bắc làm thuốc trị phong thấp, liều cao rất độc. <b>Thuốc độc bảng A: người bán phải ghi sổ tên, địa chỉ người mua và lấy chữ ký.</b></p>
@@ -145,8 +145,8 @@ export default [
         <tr><td>Lớp 3 · Ải Huỳnh Hà</td><td>khoảng 22:20</td><td>Quan Công: Kiệt · Châu Thương: Thông · Tần Kỳ: Lợi · lính cờ: Tư Hòa, Bảy Lửa</td></tr>
       </table>
       <p><b>Trống chiến:</b> Năm Chánh. <b>Nhắc tuồng:</b> ông Sáu Bé (cánh gà trái). <b>Trống chầu:</b> ông Hương cả Võ Văn Đáng.</p>
-      <p><b>LỆ TRÀ TỔ:</b> chuông đình 10 giờ dứt thì thầy tuồng rót <b>ba chung trà</b> trên bàn Tổ. Kép đóng Quan Công uống <b>chung giữa</b> lúc thay áo trước lớp 3.
-        Ngoài thầy tuồng và kép Quan Công, <b>không ai được đụng tới bàn Tổ</b>. Tan hát, thầy tuồng đổ trà xuống đất, trả cho Tổ.</p>
+      <p><b>LỆ TRÀ TỔ:</b> chuông đình 10 giờ dứt thì thầy tuồng rót ba chung trà trên bàn Tổ. Kép đóng Quan Công uống chung giữa lúc thay áo trước lớp 3.
+        Ngoài thầy tuồng và kép Quan Công, không ai được đụng tới bàn Tổ. Tan hát, thầy tuồng đổ trà xuống đất, trả cho Tổ.</p>
     </div>`,
   },
 ];

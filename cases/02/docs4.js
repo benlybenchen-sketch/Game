@@ -51,7 +51,7 @@ export default [
     <div class="doc doc--form">
       <div class="form-head"><div>SỞ Y TẾ CỬU GIANG<br><b>BỆNH VIỆN HUYỆN MỎ CÀY</b></div><div><b>GIẤY RA VIỆN</b><br>Số 1907/RV</div></div>
       <p>Họ tên người bệnh: <b>Đặng Văn Bé</b>, 70 tuổi, nam. Địa chỉ: ấp Phú Lễ, Cồn Ngựa.</p>
-      <p>Vào viện: <b>8 giờ ngày 16/9/1993</b>. Ra viện: <b>14 giờ ngày 20/9/1993</b>.</p>
+      <p>Vào viện: 8 giờ ngày 16/9/1993. Ra viện: 14 giờ ngày 20/9/1993.</p>
       <p>Chẩn đoán: ho ra máu, theo dõi lao phổi. Người bệnh nằm phòng 4, giường 11, có chích thuốc ngày hai lần, không rời viện.</p>
       <p>Người nhà nuôi bệnh: Trương Thị Hên.</p>
       <div class="sign-row"><div>Người bệnh<br><span class="fingerprint"></span><br><small>(điểm chỉ)</small></div><div>Trưởng khoa<br>${hand("Hạnh", "sign")}</div></div>
@@ -82,7 +82,7 @@ export default [
         <tr><th>Ngày</th><th>Nơi diễn</th><th>Ghi chú</th></tr>
         <tr><td>1–12/9</td><td>Chợ Lách, An Hội</td><td></td></tr>
         <tr><td>13–15/9</td><td>Nghỉ ở Phú Lễ</td><td></td></tr>
-        <tr><td><b>16–20/9</b></td><td><b>Rạp Hưng Ca, thị xã Cửu Giang</b></td><td>Cả gánh ở trọ sau rạp. Ông Sáu nằm viện Mỏ Cày, dì Bảy đi nuôi. Chiều nào cũng nghỉ, anh em đi chợ thị xã</td></tr>
+        <tr><td>16–20/9</td><td>Rạp Hưng Ca, thị xã Cửu Giang</td><td>Cả gánh ở trọ sau rạp. Ông Sáu nằm viện Mỏ Cày, dì Bảy đi nuôi. Chiều nào cũng nghỉ, anh em đi chợ thị xã</td></tr>
         <tr><td>21–24/9</td><td>Giồng Cát</td><td></td></tr>
         <tr><td>25–27/9</td><td>Đình Phú Lễ</td><td>Ba đêm giỗ Tổ</td></tr>
       </table>

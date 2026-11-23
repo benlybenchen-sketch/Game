@@ -53,7 +53,7 @@ export default [
         <tr><td><b>Lâm Hạnh Dung</b></td><td>là bà đây</td><td>còn sống</td></tr>
       </table>
       <p>Cảnh sát nói tai nạn, tự tử. Người ta nói bà Diệp bắt. Bà không biết tin ai.</p>
-      <p>Từ năm 1971, cứ đêm 13 tháng 11, con cơ trong nhà này lại <b>tự chạy</b>, ra một chuỗi quẻ mà bà không đọc được.
+      <p>Từ năm 1971, cứ đêm 13 tháng 11, con cơ trong nhà này lại tự chạy, ra một chuỗi quẻ mà bà không đọc được.
         Bà trẻ để lại một cuốn sổ bằng tiếng Tây. Bà không biết tiếng Tây. Vì vậy bà đăng báo tìm người.</p>
       <p>Cháu học dần các thứ mật mã của nhóm bà năm xưa: mỗi người trong nhóm dạy cả nhóm một kiểu. Bà đưa giấy tờ tới đâu cháu đọc tới đó.
         Tới đêm thứ bảy, cháu sẽ đọc được quẻ.</p>
@@ -160,7 +160,7 @@ export default [
     html: () => `
     <div class="doc doc--plain">
       ${pic("anh_nhom", "Trước cổng biệt thự Bạch Lan, tháng 9/1971. Mặt sau ghi: “Đủ bảy đứa. Dung ký sổ khách, Lan đứng sát bên.”")}
-      <p class="note">Ảnh màu đã phai, mép trái bị cháy sém. Một cô gái tóc dài, áo dài xanh lục nhạt, cúi ký vào cuốn sổ đặt trên trụ cổng, cây bút cầm ở <b>tay trái</b>. Cô gái áo bà ba hoa tím đứng sát sau lưng, đặt tay lên vai cô ta, giống cô ta tới mức bạn phải nhìn hai lần. Cô ấy không nhìn ống kính. Cô ấy nhìn người đang ký.</p>
+      <p class="note">Ảnh màu đã phai, mép trái bị cháy sém. Một cô gái tóc dài, áo dài xanh lục nhạt, cúi ký vào cuốn sổ đặt trên trụ cổng, cây bút cầm ở tay trái. Cô gái áo bà ba hoa tím đứng sát sau lưng, đặt tay lên vai cô ta, giống cô ta tới mức bạn phải nhìn hai lần. Cô ấy không nhìn ống kính. Cô ấy nhìn người đang ký.</p>
     </div>`,
   },
 

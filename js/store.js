@@ -6,8 +6,8 @@ const LEGACY = { "01": "ho-doi-nguoi.v1" };   // case 01 was released before the
 
 const freshSettings = () => ({ sound: true, fear: "full", flash: true, voice: false });
 const fresh = () => ({
-  started: false, stage: 0, resp: {}, seen: {}, heard: {}, plays: {}, hints: {}, peeked: {}, tries: {},
-  notes: "", lastDoc: null, scared: {}, board: {}, letters: {}, player: "", signed: false, failed: null, runs: 0, endings: [],
+  started: false, stage: 0, resp: {}, seen: {}, heard: {}, plays: {}, hints: {}, peeked: {}, tries: {}, lock: {},
+  notes: "", lastDoc: null, scared: {}, board: {}, letters: {}, player: "", signed: false, failed: null, runs: 0, endings: [], best: null,
 });
 
 const read = (k) => { try { const v = JSON.parse(localStorage.getItem(k)); return v && typeof v === "object" ? v : null; } catch { return null; } };
@@ -41,7 +41,7 @@ export function peek(id) {
 /** Starts the open case over, keeping the settings and the endings already reached. After a lost run (state.failed) the read marks are kept too. */
 export function resetAll() {
   const settings = { sound: state.sound, fear: state.fear, flash: state.flash, voice: state.voice };
-  const keep = { endings: state.endings || [], ...(state.failed ? { seen: state.seen, runs: (state.runs || 0) + 1 } : {}) };
+  const keep = { endings: state.endings || [], best: state.best || null, ...(state.failed ? { seen: state.seen, runs: (state.runs || 0) + 1 } : {}) };
   for (const k of Object.keys(state)) delete state[k];
   Object.assign(state, fresh(), settings, keep);
   save();

@@ -16,7 +16,42 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&l
 const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 const finished = () => state.stage >= QUESTIONS.length;
 // d.fail: shown only after a lost run (META.fatal); d.secret: only in the closed case of a flawless run.
-const flawless = () => !Object.values(state.tries || {}).some(Boolean) && !Object.keys(state.peeked || {}).length;
+const flawless = () => !Object.values(state.tries || {}).some(Boolean) && !Object.keys(state.peeked || {}).length
+  && !(META.strict && Object.values(state.hints || {}).some(Boolean));
+
+// ---------------------------------------------------------------- strict mode (META.strict, cases 02+)
+// No "x/y parts right" feedback, a growing seal after each wrong answer, hints only after 2 misses, the solution after 4,
+// and a grade at the end. Stops brute-forcing a question part by part.
+const LOCK_S = [20, 45, 90, 150, 240];
+const HINT_AFTER = 2, SOLVE_AFTER = 4;
+const lockLeft = (qid) => Math.max(0, Math.ceil((((state.lock || {})[qid] || 0) - Date.now()) / 1000));
+const fmtS = (s) => `${Math.floor(s / 60)}:${String(Math.ceil(s) % 60).padStart(2, "0")}`;
+let lockTimer = 0;
+function tickLock() {
+  clearInterval(lockTimer);
+  const q = currentQ(); if (!q || !META.strict) return;
+  const paint = () => {
+    const b = $('.q-card.open [data-act="submit"]'); if (!b) return clearInterval(lockTimer);
+    const left = lockLeft(q.id);
+    b.disabled = left > 0;
+    b.textContent = left > 0 ? `Hồ sơ niêm phong · ${fmtS(left)}` : (q.fatal ? "Quyết định" : "Nộp kết luận");
+    if (left <= 0) clearInterval(lockTimer);
+  };
+  paint(); if (lockLeft(q.id) > 0) lockTimer = setInterval(paint, 500);
+}
+const GRADES = [[0, "S", "Không một vết xước"], [3, "A", "Sắc như dao cạo"], [8, "B", "Vững tay"], [15, "C", "Lần mò trong tối"], [Infinity, "D", "Được dắt tay qua hồ sơ"]];
+function grade() {
+  const sum = (o) => Object.values(o || {}).reduce((a, b) => a + (Number(b) || 0), 0);
+  const pts = sum(state.tries) + 2 * sum(state.hints) + 5 * Object.keys(state.peeked || {}).length;
+  const [, g, name] = GRADES.find(([max]) => pts <= max);
+  return { g, name, tries: sum(state.tries), hints: sum(state.hints), peeked: Object.keys(state.peeked || {}).length };
+}
+function gradeHtml() {
+  const r = grade(), order = "SABCD";
+  if (!state.best || order.indexOf(r.g) < order.indexOf(state.best)) { state.best = r.g; save(); }
+  return `<div class="grade"><b class="grade-g grade-${r.g}">${r.g}</b><div><b>${r.name}</b>
+    <span class="small">Nộp sai ${r.tries} lần · gợi ý ${r.hints} · xem giải ${r.peeked}. Hạng cao nhất: ${state.best}.</span></div></div>`;
+}
 // d.fail may also be a list of ending ids (META.endings): then the doc shows only after a lost run that reached one of them.
 const lostEnding = () => state.failed ? (META.fatal?.ending ? META.fatal.ending(state.failed.choice || "") : "bad") : null;
 const failShows = (d) => !!state.failed && (d.fail === true || (Array.isArray(d.fail) && d.fail.includes(lostEnding())));
@@ -126,6 +161,7 @@ function showCover() {
       <div class="cover-actions">
         <button class="btn btn--red" data-cv="go">${resume ? "Tiếp tục điều tra" : state.started ? "Xem lại hồ sơ" : "Mở phong bì"}</button>
         ${state.started ? `<button class="btn btn--ghost" data-cv="reset">Chơi lại từ đầu</button>` : ""}
+        ${META.strict && state.best ? `<span class="best-grade">Hạng cao nhất: <b class="grade-${state.best}">${state.best}</b></span>` : ""}
         ${META.endings ? `<button class="btn btn--ghost" data-cv="endings">🏁 Kết thúc đã mở: ${(state.endings || []).length}/${META.endings.length}</button>` : ""}
       </div>
       <details class="howto"><summary>Cách chơi</summary><ol>
@@ -133,7 +169,10 @@ function showCover() {
         <li>Mở <b>sổ công tác</b> bên phải, trả lời <b>trọng điểm</b> đang mở. Mỗi kết luận phải <b>ghim tài liệu làm bằng chứng</b> (nút 📌 trên đầu tài liệu).</li>
         <li>Một số câu hỏi bắt bạn <b>chỉ ra câu nói dối</b>: bấm “Chọn câu”, rồi bấm vào đúng câu trong lời khai.</li>
         <li>Trả lời đúng thì hồ sơ mới mở ra. Mỗi lần như thế, đêm lại khuya hơn… và quanh bạn có thêm thứ gì đó.</li>
-        <li>Bí quá thì dùng <b>gợi ý</b>. Đến lúc tuyệt vọng thì có <b>lời giải</b>.</li>
+        ${META.strict
+          ? `<li><b>Không ai báo bạn đúng mấy mục.</b> Nộp sai là hồ sơ bị niêm phong một lúc, mỗi lần lâu hơn.</li>
+        <li><b>Gợi ý</b> chỉ mở sau ${HINT_AFTER} lần nộp sai, <b>lời giải</b> sau ${SOLVE_AFTER} lần. Dùng chúng là tụt hạng thám tử và mất kết thúc ẩn.</li>`
+          : `<li>Bí quá thì dùng <b>gợi ý</b>. Đến lúc tuyệt vọng thì có <b>lời giải</b>.</li>`}
       </ol><p class="small muted">Tiến trình được lưu trên trình duyệt này.</p></details>
       <p class="credit">Truyện và nhân vật hoàn toàn hư cấu. Lấy cảm hứng từ thể loại game hồ sơ điều tra trên trình duyệt.</p>
     </div>
@@ -236,6 +275,7 @@ function renderInquiry() {
     return `<div class="q-card locked"><div class="q-head"><span class="q-no">Trọng điểm ${i + 1}</span><span class="q-title">· · ·</span></div></div>`;
   }).join("");
   $(".inq").innerHTML = `<h2>Sổ công tác</h2>${html}${finished() ? `<div class="q-card end"><b>Hồ sơ đã khép.</b> Đọc thư mục “${FOLDERS[QUESTIONS.length] || "Kết thúc"}” bên trái.</div>` : ""}`;
+  tickLock();
 }
 
 function solvedCard(q, i) {
@@ -301,8 +341,11 @@ function openCard(q, i) {
     ${q.parts.map((p) => partHtml(q, p)).join("")}
     <div class="q-actions">
       <button class="btn btn--red" data-act="submit">${q.fatal ? "Quyết định" : "Nộp kết luận"}</button>
-      ${q.fatal ? "" : `<button class="btn btn--ghost" data-act="hint" ${shown >= s.hints.length ? "disabled" : ""}>Gợi ý (${shown}/${s.hints.length})</button>
-      <button class="btn btn--ghost" data-act="solve">Lời giải</button>`}
+      ${q.fatal ? "" : (() => {
+        const t = state.tries[q.id] || 0, hl = META.strict && t < HINT_AFTER, sl = META.strict && t < SOLVE_AFTER;
+        return `<button class="btn btn--ghost" data-act="hint" ${shown >= s.hints.length || hl ? "disabled" : ""}>${hl ? `Gợi ý · mở sau ${HINT_AFTER - t} lần sai` : `Gợi ý (${shown}/${s.hints.length})`}</button>
+      <button class="btn btn--ghost" data-act="solve" ${sl ? "disabled" : ""}>${sl ? `Lời giải · mở sau ${SOLVE_AFTER - t} lần sai` : "Lời giải"}</button>`;
+      })()}
     </div>
     <div class="q-feedback" aria-live="polite"></div>
     ${s.hints.slice(0, shown).map((h, k) => `<div class="hint"><b>Gợi ý ${k + 1}.</b> ${esc(h)}</div>`).join("")}
@@ -325,12 +368,21 @@ function submit() {
   const q = currentQ(), s = SECRETS[q.id], fb = $(".q-feedback");
   const res = checkQuestion(q, s, resp(q.id));
   if (!res.complete) { fb.textContent = "Bạn chưa điền đủ mọi mục (kể cả đủ số tài liệu ghim)."; fb.className = "q-feedback warn"; sfx.wrong(); return; }
+  if (META.strict && lockLeft(q.id) > 0) { fb.textContent = `Hồ sơ đang niêm phong. Đọc lại đi, còn ${fmtS(lockLeft(q.id))}.`; fb.className = "q-feedback warn"; return; }
   if (q.fatal) return decide(q, res.ok);
   if (res.ok) return solved(q, false);
-  const n = (state.tries[q.id] = (state.tries[q.id] || 0) + 1); save();
+  const n = (state.tries[q.id] = (state.tries[q.id] || 0) + 1);
   let msg = META.wrongFor ? META.wrongFor(n) : WRONG[(n - 1) % WRONG.length];   // a case may word its own reaction
-  if (n >= 3) msg += ` (Đúng ${res.right}/${res.total} mục.)`;
-  fb.textContent = msg; fb.className = "q-feedback bad"; sfx.wrong();
+  if (META.strict) {
+    const sec = LOCK_S[Math.min(n - 1, LOCK_S.length - 1)];
+    (state.lock ||= {})[q.id] = Date.now() + sec * 1000;
+    msg += ` Hồ sơ bị niêm phong ${sec} giây.`;
+    if (n === HINT_AFTER) msg += " Gợi ý đã mở.";
+    if (n === SOLVE_AFTER) msg += " Lời giải đã mở.";
+  } else if (n >= 3) msg += ` (Đúng ${res.right}/${res.total} mục.)`;
+  save();
+  if (META.strict) { renderInquiry(); const f2 = $(".q-feedback"); f2.textContent = msg; f2.className = "q-feedback bad"; sfx.wrong(); tickLock(); }
+  else { fb.textContent = msg; fb.className = "q-feedback bad"; sfx.wrong(); }
   if (level() >= 2 && Math.random() < 0.35) setTimeout(() => sfx.whisper(1.4), 700);
 }
 
@@ -362,7 +414,7 @@ function solved(q, peeked) {
   if (finished()) {
     unlock(META.endings?.find((e) => e.good)?.id);
     if (flawless()) unlock(META.endings?.find((e) => e.hidden)?.id);
-    dialog(META.finale.html, "Đọc hồ sơ kết thúc", () => { openDoc(META.finale.open); fireScare(state.stage); });
+    dialog(META.finale.html + (META.strict ? gradeHtml() : ""), "Đọc hồ sơ kết thúc", () => { openDoc(META.finale.open); fireScare(state.stage); });
     return;
   }
   const clock = q.clock, memo = typeof q.memo === "function" ? q.memo() : q.memo;
@@ -388,11 +440,13 @@ function dreadFor(stage) {
 
 function hint() {
   const q = currentQ(), s = SECRETS[q.id];
+  if (META.strict && (state.tries[q.id] || 0) < HINT_AFTER) return;
   state.hints[q.id] = Math.min(s.hints.length, (state.hints[q.id] || 0) + 1); save(); renderInquiry();
 }
 
 function solve() {
   const q = currentQ();
+  if (META.strict && (state.tries[q.id] || 0) < SOLVE_AFTER) return;
   dialog(`<h3>Xem lời giải?</h3><p>${META.solveIntro || `${cap(META.solver || "anh Quân")} sẽ viết ra toàn bộ suy luận cho trọng điểm này, và bạn đi tiếp.`} Trọng điểm sẽ bị đóng dấu “XEM GIẢI”.</p>`,
     "Xem lời giải", () => {
       const s = SECRETS[q.id];

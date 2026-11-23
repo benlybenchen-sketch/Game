@@ -9,9 +9,9 @@ export default [
       <div class="book-head">五服圖 · NGŨ PHỤC ĐỒ · năm bậc tang phục, từ nặng đến nhẹ</div>
       <table class="tbl">
         <tr><th>Bậc</th><th>Đồ tang</th><th>Ai mặc cho ai</th></tr>
-        <tr><td>1. Trảm thôi</td><td>vải gai thô nhất, mép để sờn, <b>không viền</b></td><td>con trai cho cha; vợ cho chồng; con dâu cho cha chồng</td></tr>
-        <tr><td>2. Tư thôi</td><td>vải gai thô, <b>có viền</b></td><td>con cho mẹ; <b>cha mẹ cho con</b>; <b>anh chị em ruột cho nhau</b></td></tr>
-        <tr><td>3. Đại công</td><td>vải gai mịn hơn</td><td><b>người đã hứa hôn cho vị hôn phu</b>; anh chị em con chú con bác</td></tr>
+        <tr><td>1. Trảm thôi</td><td>vải gai thô nhất, mép để sờn, không viền</td><td>con trai cho cha; vợ cho chồng; con dâu cho cha chồng</td></tr>
+        <tr><td>2. Tư thôi</td><td>vải gai thô, có viền</td><td>con cho mẹ; cha mẹ cho con; anh chị em ruột cho nhau</td></tr>
+        <tr><td>3. Đại công</td><td>vải gai mịn hơn</td><td>người đã hứa hôn cho vị hôn phu; anh chị em con chú con bác</td></tr>
         <tr><td>4. Tiểu công</td><td>vải gai mịn</td><td>anh em họ xa hơn; cháu gọi bằng ông bà ngoại</td></tr>
         <tr><td>5. Ti ma</td><td>vải gai mịn nhất</td><td>gia nhân, tá điền, người hầu trong nhà</td></tr>
         <tr><td>(ngoài năm bậc) Tố y</td><td>áo trắng trơn, không gai</td><td>người ngoài, bạn bè đến viếng</td></tr>

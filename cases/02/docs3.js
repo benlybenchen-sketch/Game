@@ -14,7 +14,7 @@ export default [
         <li>01 ảnh đen trắng cũ, một kép hát mặt vẽ Quan Công, mặt sau ghi: <i>“Ba con – Hai Lành – 1962”</i>.</li>
         <li>01 tờ báo Cửu Giang năm 1963, gấp tư, nhiều chỗ gạch đỏ.</li>
         <li>01 tờ giấy gói thuốc bắc, in chữ <b>“Vạn An Đường – thị xã Cửu Giang”</b>, bên trong còn dính ít bột màu xám.</li>
-        <li>01 lọ thủy tinh nắp thiếc, bên trong có <b>ba con chuột cống chết</b>, đã khô quắt. Cả ba con đều ưỡn cong lưng ra sau, bốn chân duỗi cứng, miệng há nhe răng.
+        <li>01 lọ thủy tinh nắp thiếc, bên trong có ba con chuột cống chết, đã khô quắt. Cả ba con đều ưỡn cong lưng ra sau, bốn chân duỗi cứng, miệng há nhe răng.
           Khi mở nắp, mùi thối xộc ra làm một cán bộ phải ra ngoài nôn. Dưới đáy lọ còn vụn bánh mì lẫn bột xám.</li>
         <li>01 cuốn sổ tay, trang cuối viết hai dòng: <i>“29/9/1963. 27/9/1993. Ba chục năm. Trả.”</i></li>
       </ol>
@@ -85,7 +85,7 @@ export default [
       <p>${ln("hoa3_4", "Hết lớp 2 con chạy về chái sau chùi mặt. Anh Thông đã ngồi đó, đang vẽ lại mặt đen, tay phải vẫn quấn băng. Anh lấy lại đồ, dặn con nói là ở dưới bếp.")}</p>
       <p>${ln("hoa3_5", "Con không bỏ thuốc. Con không biết gì về thuốc.")}</p>
       <div class="sign-row"><div>Bị can<br>${hand("Hòa", "sign")}</div><div>Điều tra viên<br>${hand("Tâm", "sign")}</div></div>
-      <p class="small muted">Ý kiến của điều tra viên: bị can khai sau khi được cho xem ảnh số 14. Lê Văn Thông phủ nhận toàn bộ. <b>Cần thêm chứng cứ độc lập về chất độc.</b></p>
+      <p class="small muted">Ý kiến của điều tra viên: bị can khai sau khi được cho xem ảnh số 14. Lê Văn Thông phủ nhận toàn bộ. Cần thêm chứng cứ độc lập về chất độc.</p>
     </div>`,
   },
   {

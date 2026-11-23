@@ -9,9 +9,9 @@ export default [
     <div class="doc doc--book">
       <div class="book-head">TÂM THẦN HỌC ĐẠI CƯƠNG · tài liệu nội bộ khoa · chương 11: Các hội chứng nhận nhầm</div>
       <h3>Hội chứng Capgras</h3>
-      <p>Bệnh nhân tin chắc một người thân (thường là cha mẹ, vợ chồng) <b>đã bị một kẻ giống hệt thay thế</b>.</p>
+      <p>Bệnh nhân tin chắc một người thân (thường là cha mẹ, vợ chồng) đã bị một kẻ giống hệt thay thế.</p>
       <p><b>Cơ chế được cho là:</b> đường nối giữa vùng nhận diện khuôn mặt và vùng cảm xúc bị tổn thương, hay gặp sau tổn thương thuỳ thái dương hoặc thuỳ trán bên phải.
-        Bệnh nhân <u>thấy</u> khuôn mặt quen nhưng <u>không thấy</u> cảm giác thân thuộc đi kèm, nên kết luận: đây là người khác.</p>
+        Bệnh nhân thấy khuôn mặt quen nhưng không thấy cảm giác thân thuộc đi kèm, nên kết luận: đây là người khác.</p>
       <p><b>Đặc điểm lâm sàng:</b></p>
       <ol>
         <li>${ln("sk_cam", "Bệnh nhân thường chỉ nói “cảm thấy” người kia lạ; không chỉ ra được khác biệt cụ thể nào, hoặc viện dẫn những chi tiết thay đổi mỗi lần hỏi.")}</li>

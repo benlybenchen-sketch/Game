@@ -8,7 +8,6 @@ export default [
     <p>Mùi đập vào mặt trước tiên: hắc, cay mắt, lẫn mùi hương trầm. Hương cắm đầy bát trên bàn thờ. Trên bàn thờ có ảnh ông bà nội, ảnh liệt sĩ, nhưng có một khoảng trống, bụi in hình một khung ảnh đã bị cất đi.</p>
     <p>Cửa buồng trong dán kín bằng băng keo nâu và giấy báo, khe dưới nhét chăn. Trước cửa đặt một khay: bát cháo, đôi đũa, chén trà. Cháo đã nguội, váng lại.</p>
     <p>Ông Khải gầy lắm, tay ám vàng thuốc ảnh, hơi thở có mùi rượu. Ông rót nước mời tôi, tay run.</p>
-    <p>Có một điều tôi để ý suốt buổi: <b>lần nào tôi hỏi về cô Hằng, cháu Ngân cũng trả lời trước.</b> Ông Khải chỉ nói theo, nhắc lại đúng những chữ con vừa nói, như người học thuộc bài.</p>
     <p>Tôi xin phép bật máy ghi âm của trạm. Cháu Ngân bảo “vâng ạ”, rồi nhìn bố. Ông Khải cũng bảo “vâng”.</p>`),
 
   tape("bang_tham_2", 1, "Băng: buổi hỏi chuyện ở nhà ông Khải (21/12)", "Vân ghi âm bằng máy cassette của trạm, máy đặt trên bàn nước ở gian giữa."),

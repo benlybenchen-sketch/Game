@@ -62,7 +62,7 @@ export default [
     id: "lich_1917", stage: 5, kind: "Lịch", icon: "📅", label: "Vạn niên lịch giản lược, năm Đinh Tỵ (1917)",
     html: () => `
     <div class="doc doc--form">
-      <h2 class="form-title">NĂM ĐINH TỴ · Dân Quốc thứ 6 · <b>năm nhuận</b><br><small>Chỉ ghi ngày mồng Một mỗi tháng âm ứng với ngày nào Tây lịch</small></h2>
+      <h2 class="form-title">NĂM ĐINH TỴ · Dân Quốc thứ 6 · năm nhuận<br><small>Chỉ ghi ngày mồng Một mỗi tháng âm ứng với ngày nào Tây lịch</small></h2>
       <table class="tbl">
         <tr><th>Tháng âm</th><th>Mồng Một là ngày (Tây lịch)</th><th>Số ngày</th></tr>
         <tr><td>Tháng Giêng</td><td>23/1/1917</td><td>30</td></tr>

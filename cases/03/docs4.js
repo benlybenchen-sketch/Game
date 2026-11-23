@@ -15,8 +15,8 @@ export default [
     id: "kieu_khiem", stage: 4, kind: "Sách", icon: "📕", label: "Truyện Kiều chú giải của Khiêm (bản đủ 3.254 câu)",
     html: () => `
     <div class="doc doc--book">
-      <div class="book-head">ĐOẠN TRƯỜNG TÂN THANH · bản chú giải, đánh số câu · <b>trọn bộ 3.254 câu</b><br><small>Sài Gòn, 1965. Bìa lót: “Đoàn Minh Khiêm, Văn khoa”. Đóng dấu: “Tang vật · Cuộc CS Quận Nhất · đã hoàn trả 1972”.</small></div>
-      ${hand(`<b>Mã Kiều</b> (Khiêm dạy cả nhóm): mỗi chữ cái là <u>ba con số</u>: <b>số câu · số thứ tự của chữ trong câu · số thứ tự của mẫu tự trong chữ</b>.
+      <div class="book-head">ĐOẠN TRƯỜNG TÂN THANH · bản chú giải, đánh số câu · trọn bộ 3.254 câu<br><small>Sài Gòn, 1965. Bìa lót: “Đoàn Minh Khiêm, Văn khoa”. Đóng dấu: “Tang vật · Cuộc CS Quận Nhất · đã hoàn trả 1972”.</small></div>
+      ${hand(`<b>Mã Kiều</b> (Khiêm dạy cả nhóm): mỗi chữ cái là ba con số: số câu, số thứ tự của chữ trong câu, số thứ tự của mẫu tự trong chữ.
         Đếm mẫu tự không kể dấu. Thí dụ 1·1·1 là T (chữ “Trăm”), 2·3·3 là U (chữ thứ ba của câu 2 là “chữ”, bỏ dấu thành c-h-u, mẫu tự thứ ba là U). Phải dùng đúng cuốn sách, đúng số câu.`)}
       ${page(OPENING, 1)}
       <p class="note">· · ·</p>
@@ -29,7 +29,7 @@ export default [
     id: "kieu_hue", stage: 4, kind: "Sách", icon: "📗", label: "Truyện Kiều bản in Huế 1968 (của Lan)",
     html: () => `
     <div class="doc doc--book">
-      <div class="book-head">KIM VÂN KIỀU · nhà in Đắc Lập, Huế, 1968 · <b>3.252 câu</b><br><small>Trang lót, mực tím: <span class="hand inline">“Hà Ngọc Lan · quà của ba · Huế, Tết Mậu Thân”</span></small></div>
+      <div class="book-head">KIM VÂN KIỀU · nhà in Đắc Lập, Huế, 1968 · 3.252 câu<br><small>Trang lót, mực tím: <span class="hand inline">“Hà Ngọc Lan · quà của ba · Huế, Tết Mậu Thân”</span></small></div>
       <p class="note">Bà Dung: “Sách của Lan. Bà giữ làm kỷ niệm.” Gáy sách sờn, trang 60–61 có dấu ngón tay cái lấm mực như ai đó lật đi lật lại nhiều lần.</p>
       ${page(OPENING, 1)}
       <p class="note">· · ·</p>

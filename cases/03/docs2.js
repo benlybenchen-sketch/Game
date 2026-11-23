@@ -15,7 +15,7 @@ export default [
     html: () => `
     <div class="doc doc--notebook">
       <p class="note">Tập giấy pelure mỏng, chữ con gái tròn trịa. Trang đầu Yến viết cho cả nhóm:</p>
-      ${hand(`<b>Thơ tàng đầu</b> (thơ giấu chữ): ghép <u>chữ cái đầu tiên của mỗi câu</u>, đọc từ trên xuống, sẽ ra một lời nhắn.
+      ${hand(`<b>Thơ tàng đầu</b> (thơ giấu chữ): giấu lời ở đầu câu.
         Dấu không tính: Ơ, Ô cũng là O, Ư là U, Đ là D. Bài này mình làm tặng nhóm mình, tụi bây thử đọc coi:`)}
       ${poem(["Bảy người ngồi dưới trăng thanh,", "Áo ai trắng muốt bên cành sen xa.", "Chén trà mời bóng trăng tà,", "Hồn thơ gửi lại mái nhà Hàng Me.",
         "Lá rơi gió thổi bờ tre,", "Ai về thì nhớ đêm hè năm xưa.", "Nhớ nhau dẫu nắng dẫu mưa."])}

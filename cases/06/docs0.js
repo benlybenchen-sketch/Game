@@ -25,7 +25,7 @@ const FEB = [
   ["13/2", "24 tháng Chạp", "Tân Sửu"], ["14/2", "25 tháng Chạp", "Nhâm Dần"], ["15/2", "26 tháng Chạp", "Quý Mão"], ["16/2", "27 tháng Chạp", "Giáp Thìn"],
   ["17/2", "28 tháng Chạp", "Ất Tỵ"], ["18/2", "29 tháng Chạp", "Bính Ngọ"], ["19/2", "30 tháng Chạp", "Đinh Mùi"], ["20/2", "Mồng 1 tháng Giêng năm Canh Thân", "Mậu Thân", "Vũ Thuỷ · 6 giờ 28"],
 ];
-const rows = (list) => list.map(([s, l, d, t]) => `<tr${t ? ' class="hl"' : ""}><td>${s}</td><td>${l}</td><td>${d}</td><td>${t || ""}</td></tr>`).join("");
+const rows = (list) => list.map(([s, l, d, t]) => `<tr><td>${s}</td><td>${l}</td><td>${d}</td><td>${t || ""}</td></tr>`).join("");
 
 export default [
   {
@@ -60,8 +60,8 @@ export default [
     id: "so_khau", stage: 0, kind: "Sổ tay", icon: "📓", label: "Sổ tay thầy Khâu, mấy trang cuối",
     html: () => `
     <div class="doc doc--notebook">
-      ${hand(`<p><b>14 tháng Bảy.</b> Phu nhân họ Triệu gửi canh thiếp cô dâu âm. Lạ: canh thiếp <u>không ghi tên</u>, chỉ có bát tự. Phu nhân dặn miệng: “của cô Lý Xuân Hoa”.</p>
-        <p>Tôi chưa xem kỹ. Nhớ: tính tứ trụ thì <b>năm đổi ở Lập Xuân, tháng đổi ở Tiết</b>, đừng theo mồng Một Tết, đừng theo mồng Một tháng âm. Bao nhiêu thầy dởm sai chỗ này.</p>
+      ${hand(`<p><b>14 tháng Bảy.</b> Phu nhân họ Triệu gửi canh thiếp cô dâu âm. Lạ: canh thiếp không ghi tên, chỉ có bát tự. Phu nhân dặn miệng: “của cô Lý Xuân Hoa”.</p>
+        <p>Tôi chưa xem kỹ. Nhớ: tính tứ trụ thì năm đổi ở Lập Xuân, tháng đổi ở Tiết.</p>
         <p><b>15 tháng Bảy, Vu Lan.</b> Đến phủ Triệu. Đông viện cửa khoá, dán bùa trấn. Đứng ở hiên, nghe bên trong có tiếng gọi khe khẽ. Hai chữ. Tôi nghe như “Tú Nương”.</p>
         <p>Phu nhân nói: hồn cậu chủ về. Hồn người chết sao lại gọi tên một đứa nha hoàn mới mua?</p>
         <p>Tôi có mang máy hát của ông Tống theo, ghi được một ống ở hiên Đông viện. Về nhà sẽ nghe lại.</p>

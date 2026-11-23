@@ -67,7 +67,7 @@ export default [
       <p>${ln("tt_ngu", "Cả nhà ngủ cùng mẹ. Bố mua than hoa, đốt lò cho mẹ ấm.")}</p>
       <p>${ln("tt_dong", "Đóng hết cửa, chèn chăn thật kín, không để gió lọt vào.")}</p>
       <p>${ln("tt_xa", "Lần này con không bịt tai nữa. Không ai phải xa ai nữa.")}</p>`, "kid")}
-      <p class="note">Ngày tháng bị bụi than làm nhoè, chỉ còn đọc được chữ “tháng Một”. Ở nhà này, như nhiều nhà miền Bắc, giỗ chạp và ngày kỷ niệm đều tính theo <b>âm lịch</b>; “tháng Một” là tháng 11 âm lịch.</p>
+      <p class="note">Ngày tháng bị bụi than làm nhoè, chỉ còn đọc được chữ “tháng Một”. Ở nhà này, như nhiều nhà miền Bắc, giỗ chạp và ngày kỷ niệm đều tính theo lịch ta.</p>
     </div>`,
   },
 

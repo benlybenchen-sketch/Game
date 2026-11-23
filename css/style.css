@@ -635,3 +635,11 @@ td.han { font-size: 24px; }
 .abacus .dot { fill: #e0302a; }
 .tbl tr.hl td { background: #f2e3b5; font-weight: bold; }
 .tbl--small td, .tbl--small th { font-size: 13px; padding: 3px 6px; }
+
+/* strict mode: detective grade */
+.grade { display: flex; gap: 14px; align-items: center; margin: 14px 0 4px; padding: 10px 12px; border: 1px solid rgba(255,255,255,.15); border-radius: 6px; background: rgba(0,0,0,.25); }
+.grade > div { display: flex; flex-direction: column; gap: 2px; }
+.grade-g { font: 700 40px/1 Georgia, serif; min-width: 40px; text-align: center; }
+.grade-S { color: #e8c35a; } .grade-A { color: #d9d2c0; } .grade-B { color: #9fc3a0; } .grade-C { color: #c99a6b; } .grade-D { color: #b06a62; }
+.best-grade { align-self: center; font-size: 14px; opacity: .85; }
+.q-actions .btn[disabled] { opacity: .55; cursor: not-allowed; }

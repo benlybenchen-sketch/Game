@@ -7,7 +7,7 @@ export const QUESTIONS = [
     ask: "Đọc hồ sơ trạm giao. Lần cuối cùng có người ngoài nhìn thấy bà Hằng là ngày nào? Bà Hằng đang có tên trong danh sách bệnh gì? Trên sơ đồ nhà, đánh dấu gian mà bà Lụa nói mùi nặng nhất.",
     parts: [
       { id: "last", type: "text", label: "Ngày cuối cùng có người ngoài nhìn thấy bà Hằng (ngày/tháng/năm)", placeholder: "vd 1/1/1990" },
-      { id: "benh", type: "choice", label: "Danh sách trạm đang theo dõi bà Hằng", options: ["Danh sách tiêm chủng", "Danh sách nghi lao, chưa khám", "Danh sách bệnh tâm thần", "Danh sách sốt rét"] },
+      { id: "benh", type: "choice", label: "Danh sách trạm đang theo dõi bà Hằng", options: ["Danh sách tiêm chủng, chưa tiêm nhắc", "Danh sách nghi lao, chưa khám", "Danh sách bệnh tâm thần, chưa cấp thuốc", "Danh sách sốt rét, chưa lấy máu xét nghiệm"] },
       { id: "mui", type: "spot", label: "Gian mùi nặng nhất (đánh dấu trên sơ đồ)", doc: "so_do", how: "Mở sơ đồ nhà rồi bấm vào một gian." },
       { id: "pins", type: "pins", count: 3, label: "Ghim 3 tài liệu làm bằng chứng" },
     ],
@@ -68,7 +68,7 @@ export const QUESTIONS = [
       { id: "kp", type: "choice", label: "Người khởi phát hoang tưởng", options: ["Ông Khải", "Cháu Ngân", "Bà Lụa", "Không có ai, bà Hằng còn sống"] },
       { id: "ho", type: "choice", label: "Tiếng ho sau cửa buồng trong băng đêm", options: ["Bà Hằng", "Ông Khải", "Cháu Ngân", "Con mèo của bà Lụa", "Tiếng gió"] },
       { id: "cham", type: "text", label: "Câu cuối cùng nghe được khi băng chạy ×0,6 (chép lại nguyên câu)", placeholder: "" },
-      { id: "tach", type: "choice", label: "Tách hai người ra thì người tiếp nhận thường", options: ["Hoang tưởng nặng thêm", "Tự tỉnh dần sau vài ngày đến vài tuần", "Không thay đổi gì", "Chuyển hoang tưởng sang người khác", "Phải dùng thuốc liều cao mới đỡ"] },
+      { id: "tach", type: "choice", label: "Tách hai người ra thì người tiếp nhận thường", options: ["Hoang tưởng nặng thêm trong vài tuần đầu", "Tự tỉnh dần sau vài ngày đến vài tuần", "Không thay đổi gì sau nhiều tháng", "Chuyển hoang tưởng sang một người thân khác", "Phải dùng thuốc liều cao mới đỡ"] },
       { id: "pins", type: "pins", count: 2, label: "Ghim 2 tài liệu làm bằng chứng" },
     ],
     memo: [

@@ -50,7 +50,7 @@ export const QUESTIONS = [
       { id: "m71", type: "text", label: "Lời giấu trong bài thơ của con cơ, 16/10/1971" },
       { id: "yen", type: "text", label: "Lời giấu trong bài thơ cuối của Yến" },
       { id: "m04", type: "text", label: "Lời con cơ đêm nay (sau tên của bạn)", prefix: nameFirst },
-      { id: "tra", type: "line", label: "Câu trong sổ cơ buổi 3 cho thấy cách Quốc bị đầu độc (bấm vào câu đó)" },
+      { id: "tra", type: "line", label: "Câu trong sổ cơ cho thấy người đó đã ra tay với Quốc thế nào (bấm vào câu đó)" },
       pins,
     ],
     memo: () => letter(3, () => [
@@ -67,7 +67,7 @@ export const QUESTIONS = [
       { id: "m71", type: "text", label: "Lời trên tờ giấy dưới chén, 23/10/1971" },
       { id: "m04", type: "text", label: "Lời con cơ đêm nay, 10/11/2004" },
       { id: "line", type: "line", label: "Câu bị sửa trong bản nhật ký hôm nay (bấm vào câu đó)" },
-      { id: "who", type: "choice", label: "Người sửa nhật ký", options: ["Ông Bảy gác dan, người giữ chìa khóa nhà", "Bà chủ nhà, người xưng là Lâm Hạnh Dung", "Dung tự sửa từ năm 1971", "Cảnh sát, lúc lưu hồ sơ năm 1971", "Hồn ma trong nhà", "Bạn chép sai từ đêm đầu"] },
+      { id: "who", type: "choice", label: "Người sửa nhật ký", options: ["Ông Bảy gác dan, người giữ chìa khóa nhà", "Bà chủ nhà, bà Lâm Hạnh Dung", "Dung tự sửa từ năm 1971", "Cảnh sát, lúc lưu hồ sơ năm 1971", "Hồn ma trong nhà", "Bạn chép sai từ đêm đầu"] },
       pins,
     ],
     memo: () => letter(4, () => [
@@ -100,7 +100,7 @@ export const QUESTIONS = [
     parts: [
       { id: "m04", type: "text", label: "Lời con cơ đêm nay, đọc xuôi (có thể kèm tên của bạn)", prefix: nameFirst },
       { id: "body", type: "choice", label: "Xác cháy trên gác thượng là của", options: ["Hà Ngọc Lan", "Lâm Hạnh Dung", "Trịnh Bảo Nghi", "Bà Lâm Ngọc Diệp", "Một người lạ"] },
-      { id: "proof", type: "line", label: "Câu trong biên bản khám nghiệm chứng minh xác đó là ai (bấm vào câu đó; không phải câu chỉ chứng minh án mạng)" },
+      { id: "proof", type: "line", label: "Câu trong biên bản khám nghiệm chứng minh xác đó là ai (bấm vào câu đó)" },
       { id: "seo", type: "line", label: "Hôm nay nhật ký của bà Dung lại có thêm một câu bị sửa. Bấm vào câu đó" },
       pins,
     ],

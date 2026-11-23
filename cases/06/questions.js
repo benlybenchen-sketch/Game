@@ -69,7 +69,7 @@ export const QUESTIONS = [
     id: "q4", stage: 3, title: "Tẩy oan",
     ask: "Theo Tẩy Oan Tập Lục, người trong quan tài chết trước hay sau khi xuống nước: bấm câu chứng minh trong phiếu khám. Người ấy làm nghề gì? Bấm câu cho thấy người ấy không phải Triệu Thừa Tự.",
     parts: [
-      { id: "chet", type: "line", label: "Câu chứng minh người này chết trước khi xuống nước (bấm vào câu trong phiếu khám)" },
+      { id: "chet", type: "line", label: "Câu trong phiếu khám quyết định người này chết trước hay sau khi xuống nước (bấm vào câu đó)" },
       { id: "nghe", type: "choice", label: "Người trong quan tài làm nghề", options: ["Người đọc sách", "Người chèo đò", "Thợ rèn", "Tá điền", "Phu dắt la"] },
       { id: "khong", type: "line", label: "Câu cho thấy người này không phải Triệu Thừa Tự (bấm vào câu trong phiếu khám)" },
       pins(),

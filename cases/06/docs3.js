@@ -32,7 +32,7 @@ export default [
       <div class="book-head">洗冤集錄 · TẨY OAN TẬP LỤC · quyển ba, mục “Chết đuối” và “Xem tay biết nghề”</div>
       <p><b>Người sống rơi xuống nước mà chết:</b> miệng mũi có bọt trắng như nấm, lau rồi lại ra; hai tay nắm lại, trong kẽ móng có cát bùn, vì lúc chìm còn cào cấu.</p>
       <p><b>Người chết rồi mới bị ném xuống nước:</b> miệng mũi không bọt, tay duỗi, móng sạch; phải tìm vết thương ở đầu, cổ.</p>
-      <p><b>Chú:</b> xác ngâm nước lâu ngày, bất kể chết thế nào, <b>bụng đều trướng</b>, da đều bong. Không lấy bụng trướng mà kết luận chết đuối.</p>
+      <p><b>Chú:</b> xác ngâm nước lâu ngày, bất kể chết thế nào, bụng đều trướng, da đều bong. Không lấy bụng trướng mà kết luận chết đuối.</p>
       <p><b>Xem tay biết nghề (Mã ghi thêm theo kinh nghiệm):</b></p>
       <ul>
         <li>Người chèo đò: chai ở gốc các ngón, hai tay như nhau.</li>

@@ -10,7 +10,7 @@ export default [
       <div class="report-head">BỆNH VIỆN ĐA KHOA LÂM ĐỒNG · KHOA CẤP CỨU · Tóm tắt hồ sơ lưu trữ</div>
       <p>Họ tên: <b>Lê Thị Hoa</b>, 41 tuổi, thợ may.</p>
       <p>Ngày 3/6/1985, 20 giờ: ${ln("ba85", "sốc phản vệ sau khi ăn gỏi tôm tại một đám cưới. Phù môi, phù thanh quản, tụt huyết áp. Tiêm adrenalin, thở oxy. Qua khỏi.")}</p>
-      <p>Lời dặn: <b>tuyệt đối không ăn tôm, tép, mắm tôm, ruốc.</b> Mang theo giấy này khi đi khám.</p>
+      <p>Lời dặn: tuyệt đối không ăn tôm, tép, mắm tôm, ruốc. Mang theo giấy này khi đi khám.</p>
       <p class="small">Kèm theo trong cùng bìa hồ sơ gia đình: ${ln("thao90", "Trần Ngọc Thảo, 18 tuổi, ngày 25/1/1990: nổi mề đay toàn thân sau khi ăn tôm. Ghi chú: “dị ứng tôm như mẹ”.")}</p>
       ${stamp("LƯU TRỮ", "right:28px;bottom:24px", "violet")}
     </div>`,

@@ -25,9 +25,9 @@ export default [
       <p>Chào mừng cô về khoa. Từ đêm nay cô điều trị chính cho <b>phòng 7: Trần Ngọc Thảo</b>, 24 tuổi.</p>
       <p>Ca này không khó về chuyên môn. Bệnh nhân bị <b>hội chứng Capgras</b> sau chấn thương sọ não: tin rằng mẹ mình đã bị một người giống hệt thay thế.
         Bà mẹ, bà Lê Thị Hoa, rất tội nghiệp. Tuần nào cũng vào thăm, mang bánh, khóc ở phòng thăm nuôi.</p>
-      <p>Việc gấp: ngày <b>2/9</b> bà Hoa đã nộp đơn ra toà xin tuyên bố Thảo <b>mất năng lực hành vi dân sự</b> để làm người giám hộ.
-        Toà mở phiên ngày <b>28/10</b> và chờ bản giám định pháp y tâm thần của khoa. Người ký với tư cách bác sĩ điều trị là cô. Hạn nộp: sáng 25/10.</p>
-      <p>Một lời khuyên: bệnh nhân này <u>hoang tưởng chi tiết hoá</u>. Nó sẽ kể cho cô nghe đủ thứ chi tiết rất thuyết phục. Đừng sa vào.</p>
+      <p>Việc gấp: ngày 2/9 bà Hoa đã nộp đơn ra toà xin tuyên bố Thảo mất năng lực hành vi dân sự để làm người giám hộ.
+        Toà mở phiên ngày 28/10 và chờ bản giám định pháp y tâm thần của khoa. Người ký với tư cách bác sĩ điều trị là cô. Hạn nộp: sáng 25/10.</p>
+      <p>Một lời khuyên: bệnh nhân này hoang tưởng chi tiết hoá. Nó sẽ kể cho cô nghe đủ thứ chi tiết rất thuyết phục. Đừng sa vào.</p>
       <p class="right">${hand("Kha", "sign")}<b>BS. CKII Đặng Quốc Kha</b><br>Trưởng khoa Nữ 2</p>
     </div>`,
   },

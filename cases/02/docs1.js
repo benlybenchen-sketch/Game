@@ -14,14 +14,14 @@ export default [
       <table class="tbl">
         <tr><th>Mẫu</th><th>Mô tả</th><th>Kết quả</th></tr>
         <tr><td>M1</td><td>Dịch dạ dày Châu Văn Kiệt</td><td><b>Dương tính: strychnin</b> (hoạt chất của hạt mã tiền)</td></tr>
-        <tr><td>M2</td><td>Chung sứ <b>ở giữa</b> trên bàn Tổ; đáy chung có lớp <b>cặn bột màu xám</b>, khô</td><td><b>Dương tính: strychnin</b>, nồng độ rất cao. Cặn là bột hạt mã tiền chế. <b>Không có cồn</b></td></tr>
+        <tr><td>M2</td><td>Chung sứ ở giữa trên bàn Tổ; đáy chung có lớp cặn bột màu xám, khô</td><td><b>Dương tính: strychnin</b>, nồng độ rất cao. Cặn là bột hạt mã tiền chế. Không có cồn</td></tr>
         <tr><td>M3, M4</td><td>Chung sứ bên trái và bên phải trên bàn Tổ (đã đổ hết trà)</td><td>Âm tính</td></tr>
         <tr><td>M5</td><td>Bình rượu cúng Tổ (cả gánh uống lúc 17:00)</td><td>Âm tính</td></tr>
         <tr><td>M6</td><td>Nồi cháo còn lại (cả gánh ăn lúc 19:00)</td><td>Âm tính</td></tr>
         <tr><td>M7</td><td>Dạ dày con chó chết sau buồng trò sáng 28/9</td><td><b>Dương tính: strychnin</b>; trong dạ dày có đất bùn lẫn lá trà</td></tr>
-        <tr><td>M8</td><td>Hũ rượu thuốc ngâm hạt mã tiền của ông Đặng Văn Bé</td><td>Dương tính: strychnin, <b>dạng ngâm rượu</b>, nồng độ thấp</td></tr>
+        <tr><td>M8</td><td>Hũ rượu thuốc ngâm hạt mã tiền của ông Đặng Văn Bé</td><td>Dương tính: strychnin, dạng ngâm rượu, nồng độ thấp</td></tr>
       </table>
-      <p><b>Nhận xét:</b> chất độc trong chung giữa là <b>bột khô</b> rắc vào trà, không phải rượu thuốc đổ vào (không có cồn, không có bã rượu).</p>
+      <p><b>Nhận xét:</b> chất độc trong chung giữa là bột khô rắc vào trà, không phải rượu thuốc đổ vào (không có cồn, không có bã rượu).</p>
       ${stamp("VIỆN<br>PHÁP Y", "right:40px;bottom:24px", "blue")}
     </div>`,
   },

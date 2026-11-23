@@ -17,12 +17,12 @@ export default [
     html: () => `
     <div class="doc doc--notebook">
       ${hand(`<b>Bài của Quốc dạy cả nhóm</b> (Tùng chép vô sổ cơ, 25/9/71)`)}
-      ${hand(`1. Tụi bây đếm chữ cái theo kiểu Tây, A=1 tới Z=26, là sai với tiếng mình. <u>Tiếng Việt có 29 chữ cái</u>, không có F J W Z. Tao đánh số như vầy:`)}
+      ${hand(`1. Tụi bây đếm chữ cái theo kiểu Tây, A=1 tới Z=26, là sai với tiếng mình. Tiếng Việt có 29 chữ cái, không có F J W Z. Tao đánh số như vầy:`)}
       <table class="tbl tbl--alpha"><tr>${ALPHA29.map((c, i) => `<td><b>${c}</b><span>${i + 1}</span></td>`).join("")}</tr></table>
       ${hand(`2. Sổ thuốc nhà tao ghi bằng <b>số Tô Châu</b> (số của các tiệm thuốc Bắc, tiệm vàng Chợ Lớn):`)}
       <table class="tbl tbl--su"><tr>${[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((n) => `<td>${su(suzhou(n))}<span>${n}</span></td>`).join("")}<td>${su("〸")}<span>10 (khi viết riêng)</span></td></tr></table>
       ${hand(`Viết số nhiều chữ số thì viết liền từng chữ số như số mình: ${su("〢〤")} là 24, ${su("〡〇")} là 10.
-        <b>Mẹo của mấy ông chủ tiệm:</b> khi số 1, 2, 3 đứng liền nhau thì viết <u>nằm ngang</u> một con cho khỏi lẫn: ${su("〡一")} là 11 chứ không phải 〡〡, ${su("〢二")} là 22, ${su("〡三")} là 13, ${su("〣一")} là 31…
+        Mẹo của mấy ông chủ tiệm: khi số 1, 2, 3 đứng liền nhau thì viết nằm ngang một con cho khỏi lẫn: ${su("〡一")} là 11 chứ không phải 〡〡, ${su("〢二")} là 22, ${su("〡三")} là 13, ${su("〣一")} là 31…
         ai đọc lẫn là mất tiền.`)}
     </div>`,
   },

@@ -22,7 +22,7 @@ export default [
         <p>Chị Lan mặc áo mình, kẹp tóc của mình, tập ký tên mình. Chị hỏi mình có tính bán cái nhà này không.</p>
         <p>Mình nghĩ lại từng đêm. Đêm anh Tùng chết, chị Lan ra ban công trước anh. Đêm Yến chết, chị dìu Yến ra hồ. Đêm anh Quốc chết, chị pha trà. Anh Khiêm chết sau khi chị lật tờ giấy dưới chén. Nghi ngã ở cầu thang gác, mà chỉ có chị ngủ trên gác.</p>
         <p>Thứ Bảy này chỉ còn hai đứa mình. Mình sẽ ngồi cơ nhưng không đặt tay. Mình muốn tận mắt thấy con cơ chạy một mình hay chạy theo tay chị.</p>
-        <p><b>Nếu mình chết, đừng tin ai mang tên mình.</b></p>
+        <p>Nếu mình chết, đừng tin ai mang tên mình.</p>
         <p>Ai đọc được trang này: mình là Lâm Hạnh Dung. Mình thuận tay trái. Mình có cái sẹo dưới cằm. Xương đòn trái của mình gãy năm 1966. Giấy tờ để kèm đây.</p>
       </div>
     </div>`,

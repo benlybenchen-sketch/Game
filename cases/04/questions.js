@@ -78,15 +78,15 @@ export const QUESTIONS = [
     clock: "05:50",
   },
   {
-    id: "q5", stage: 4, title: "Soi gương",
-    ask: "Chồng hai chân dung lên nhau. Người phụ nữ là ai so với bà Hoa? So từng đặc điểm với bà Hoa năm 1990 (chỉ dựa vào những gì hồ sơ đang có). Người phụ nữ thật ra là ai?",
+    id: "q5", stage: 4, title: "Hai chân dung",
+    ask: "Người phụ nữ là ai so với bà Hoa? So từng đặc điểm với bà Hoa năm 1990 (chỉ dựa vào những gì hồ sơ đang có). Người phụ nữ thật ra là ai?",
     parts: [
-      { id: "kind", type: "choice", label: "Quan hệ của người phụ nữ với bà Hoa", options: ["Chính là bà Hoa, đã thay đổi sau ba tháng", "Em sinh đôi khác trứng", "Em sinh đôi cùng trứng, kiểu soi gương", "Người lạ phẫu thuật cho giống"] },
+      { id: "kind", type: "choice", label: "Quan hệ của người phụ nữ với bà Hoa", options: ["Chính là bà Hoa, đã thay đổi sau ba tháng", "Em sinh đôi khác trứng, chỉ hao hao giống", "Em sinh đôi cùng trứng, giống y hệt cùng bên", "Em sinh đôi cùng trứng, kiểu soi gương", "Người lạ phẫu thuật cho giống"] },
       { id: "ruoi", type: "choice", label: "Nốt ruồi khoé miệng", options: ["Cùng bên với bà Hoa năm 1990", "Ngược bên", "Hồ sơ hiện có chưa cho biết"] },
       { id: "ngoi", type: "choice", label: "Đường rẽ ngôi", options: ["Cùng bên với bà Hoa năm 1990", "Ngược bên", "Hồ sơ hiện có chưa cho biết"] },
       { id: "tay", type: "choice", label: "Tay cầm đũa", options: ["Cùng bên với bà Hoa năm 1990", "Ngược bên", "Hồ sơ hiện có chưa cho biết"] },
       { id: "seo", type: "choice", label: "Sẹo mổ ruột thừa", options: ["Cùng bên với bà Hoa năm 1990", "Ngược bên", "Hồ sơ hiện có chưa cho biết"] },
-      { id: "who", type: "choice", label: "Người phụ nữ xưng là bà Hoa thật ra là", options: ["Lê Thị Hoa, đã đổi khác sau ba tháng", "Lê Thị Huệ, tên con nuôi là Phạm Thị Huệ", "Bà Tư hàng xóm, đóng giả bà Hoa", "Một người lạ ở Sài Gòn, được thuê đóng giả"] },
+      { id: "who", type: "choice", label: "Người phụ nữ xưng là bà Hoa thật ra là", options: ["Lê Thị Hoa, mẹ Thảo, đã đổi khác sau ba tháng ở Sài Gòn", "Lê Thị Huệ, em bà Hoa, mang tên con nuôi Phạm Thị Huệ", "Bà Tư hàng xóm, biết hết chuyện nhà, đóng giả bà Hoa", "Một người lạ ở Sài Gòn, được thuê sửa mặt và đóng giả"] },
       pins,
     ],
     memo: log([
