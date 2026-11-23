@@ -16,7 +16,7 @@ export const CASES = [
   { id: "05", number: "Hồ sơ 05", title: "Người giữ vợ", place: "Thị trấn Cam Đường, Lào Cai, 1991", cover: "cover",
     short: "Hai năm, cửa buồng dán kín, đêm nào cũng có tiếng ho. Cả thị trấn thương cô con gái của ông thợ ảnh hoá dở. Một quyết định sai, và sẽ có người chết.",
     level: "Rất khó · tâm lý · có kết thúc xấu", time: "4–6 giờ", questions: 7, endings: 3 },
-  { id: "06", number: "Hồ sơ 06", title: "Âm Hôn", place: "Trấn Hoè Âm, Sơn Tây, 1936", cover: "cover",
+  { id: "06", number: "Hồ sơ 06", title: "Âm Hôn", place: "Trấn Hoè Âm, Sơn Tây, Dân Quốc năm 25", cover: "cover",
     short: "Nhà giàu cưới vợ cho đứa con trai chết đuối. Canh thiếp cô dâu không có tên. Đêm nào, sau cánh cửa niêm phong ở Đông viện, cũng có người gọi tên một cô hầu.",
     level: "Cực khó (mức 5) · văn hoá Trung Hoa cổ", time: "6–9 giờ", questions: 7, endings: 4 },
 ];

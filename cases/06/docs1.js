@@ -7,7 +7,7 @@ export default [
     id: "so_hoang", stage: 1, kind: "Sổ sách", icon: "🧮", label: "Sổ bán hàng của bà mối âm Hoàng Tứ Nương, tháng Bảy",
     html: () => `
     <div class="doc doc--ledger">
-      <div class="ledger-head">HOÀNG KÝ · MỐI ÂM · tháng Bảy năm Bính Tý</div>
+      <div class="ledger-head">HOÀNG KÝ · MỐI ÂM · tháng Bảy năm nay</div>
       <p class="small">Bà Hoàng không biết chữ số. Mỗi khoản bà gảy bàn tính rồi nhờ thằng cháu vẽ lại y hình bàn tính vào sổ. ${ln("sh_cot", "Cột có chấm đỏ là hàng đồng; hai cột bên phải chấm đỏ là hào và xu.")}</p>
       <table class="tbl tbl--hand">
         <tr><th>Ngày (âm)</th><th>Nhà</th><th>Việc</th><th>Số tiền</th></tr>
@@ -58,7 +58,7 @@ export default [
       <p>${ln("bv_ngay", "Ngày 26 tháng 8 Tây lịch")}, 7 giờ sáng, dân chài vớt được một tử thi nam ở bãi Hạ Than, sông Phần, cách bến đò Hoè Âm sáu dặm về hạ lưu.</p>
       <p>${ln("bv_xac", "Tử thi trương phềnh, mặt không còn nhận ra. Mặc trường sam lụa xanh, chân không giày.")}</p>
       <p>Cùng ngày, Triệu phu nhân đến nhận, nói là con trai Triệu Thừa Tự, mất tích từ đêm Thất tịch. Lão gia Triệu Hoài Đức không cho mổ khám. Đã giao gia đình.</p>
-      <p class="small">Lịch giao ban của đồn: tháng Bảy âm lịch năm Bính Tý, mồng Một nhằm ngày 17 tháng 8 Tây lịch.</p>
+      <p class="small">Lịch giao ban của đồn: tháng Bảy âm lịch năm nay, mồng Một nhằm ngày 17 tháng 8 Tây lịch.</p>
       <div class="sign-row"><div>Đội trưởng<br>${hand("Phùng", "sign")}Phùng Đại Hữu</div></div>
       ${stamp("HOÈ ÂM", "right:30px;bottom:24px", "blue")}
     </div>`,

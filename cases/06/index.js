@@ -34,7 +34,7 @@ export const META = {
   series: "Hồ sơ Nửa Đêm",
   number: "Hồ sơ số 06",
   title: "Âm Hôn",
-  place: "Trấn Hoè Âm, Sơn Tây · tháng Bảy năm Bính Tý (1936)",
+  place: "Trấn Hoè Âm, Sơn Tây · tháng Bảy năm Dân Quốc thứ 25",
   blurb: "Con trai duy nhất nhà chưởng quỹ phiếu hiệu chết đuối ở sông Phần. Theo tục, nhà họ Triệu cưới vợ cho người chết: một cô dâu âm, chôn chung một huyệt. Thầy xem ngày của trấn đột tử đêm Vu Lan. Bạn là học trò của thầy, được mời đến thay: chấm bát tự, viết hôn thư, kịp giờ Tý đêm 22. Canh thiếp cô dâu không có tên. Và đêm nào, sau cánh cửa niêm phong ở Đông viện, cũng có người gọi tên một cô hầu.",
   players: "1–4 người",
   time: "6–9 giờ",

@@ -181,3 +181,6 @@ Các chỗ đã sửa để người chơi phải tự ghép, không được d�
 - Bỏ các câu kết luận hộ: "người gọi tên không ở dưới đất", "Không phải hồn", "Người chết thì ăn cơm làm gì?", "Phủ Triệu làm gì có ai nghiện?", lời Thuý Nhi "sinh cùng ngày, khác giờ, cùng mệnh".
 - Trọng điểm 6 đổi tên "Chiết tự"; thư mục và lời giới thiệu không còn chữ "tân phòng".
 - Ống "Khóc gả" (thu lại giọng): bỏ "cha bán em được trăm hai" (số bạc), "áo xanh không phải áo anh, chật vai" và "con không có chàng, con chỉ có anh"; thay bằng lời khóc không lộ đáp án.
+
+### Rà lộ đáp án (bổ sung): tên năm Bính Tý
+Trước trọng điểm 3, không tài liệu nào được ghi "năm Bính Tý" hay "1936": thiếp mời, giấy báo tang, khế ước ghi "Dân Quốc thứ 25" hoặc "năm nay"; sổ bà Hoàng và giấy báo của đồn ghi "tháng Bảy năm nay"; bìa hồ sơ ghi "Dân Quốc năm 25". Người chơi phải tự đổi Dân Quốc 25 ra can chi bằng tờ lịch của phiếu hiệu (Nhâm Tý + 24 năm). Chỉ trang khoá mật áp được ghi tên hai khoá Ất Hợi và Bính Tý.

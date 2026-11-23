@@ -33,7 +33,7 @@ export default [
     html: () => `
     <div class="doc doc--letter doc--red">
       ${pic("phu_trieu", "Cổng phủ họ Triệu, trấn Hoè Âm. Đèn lồng trắng của đám tang treo cạnh đèn lồng đỏ của đám cưới.")}
-      <p class="right">Trấn Hoè Âm, ngày 17 tháng Bảy năm Bính Tý</p>
+      <p class="right">Trấn Hoè Âm, ngày 17 tháng Bảy năm Dân Quốc thứ 25</p>
       <p>Lục tiên sinh,</p>
       <p>Thầy Khâu của tiên sinh đã về với tổ tiên đêm Rằm. Nhà tôi đang có việc lớn mà người chấm ngày lại đi mất, tôi đành mời tiên sinh thay thầy.</p>
       <p>Con trai tôi là Triệu Thừa Tự, mười chín tuổi, chết đuối ở sông Phần, người ta vớt được ở bãi Hạ Than. Nó chưa vợ. Theo lệ, nhà tôi cưới vợ cho nó dưới âm, để nó khỏi cô đơn, để họ Triệu còn người nối dõi bên nó.</p>
@@ -49,7 +49,7 @@ export default [
     html: () => `
     <div class="doc doc--form">
       <h2 class="form-title">CÁO PHÓ<br><small>Khâu Văn Bỉnh tiên sinh, thầy xem ngày trấn Hoè Âm, thọ 71 tuổi</small></h2>
-      <p>Tiên sinh từ trần đêm Rằm tháng Bảy năm Bính Tý (31/8/1936), tại nhà riêng.</p>
+      <p>Tiên sinh từ trần đêm Rằm tháng Bảy năm nay (31/8 Tây lịch), tại nhà riêng.</p>
       <p>Chiều hôm ấy tiên sinh đến phủ họ Triệu xem nơi đặt linh vị, ${ln("tk_tra", "được quản gia Lưu Phúc mời trà ở hiên Đông viện")}. Về đến nhà tiên sinh kêu buồn ngủ, nằm xuống rồi không dậy nữa.</p>
       <p>${ln("tk_y", "Thầy thuốc Hồi Xuân Đường đến xem, nói: đồng tử co nhỏ như đầu kim, môi tím, thở chậm dần. Tuổi già, tim yếu.")}</p>
       <p class="small muted">Đồ đạc của tiên sinh (sổ tay, hộp canh thiếp, máy hát mượn của ông Tống ở Bắc Bình và hai ống đĩa sáp) giao lại cho học trò Lục Đình.</p>
@@ -122,7 +122,7 @@ export default [
       <p>Người lập khế: Ôn Tam (thường gọi Ôn Lão Tam), phu la, ở xóm Bến Đò, trấn Hoè Âm.</p>
       <p>Vì nhà nghèo, nợ nần, nay bằng lòng bán con gái ruột là Ôn Tú Nương, ${ln("ku_sinh", "sinh giờ Mão ngày 23 tháng Chạp năm Kỷ Mùi")}, cho phủ họ Triệu làm nha hoàn. Từ nay sống là người họ Triệu, chết là ma họ Triệu, cha mẹ anh em không được đòi.</p>
       <p>Giá bạc: trả bằng một tờ hối phiếu của phiếu hiệu Nghĩa Thịnh Xương, ghi theo mật áp của hiệu, đã giao tận tay.</p>
-      <p>Lập ngày ${ln("ku_ngay", "mồng 8 tháng Bảy năm Bính Tý")}.</p>
+      <p>Lập ngày ${ln("ku_ngay", "mồng 8 tháng Bảy năm Dân Quốc thứ 25")}.</p>
       <div class="sign-row"><div>Người bán<br><span class="fingerprint"></span><br><small>(không biết chữ, điểm chỉ)</small></div><div>Người mua<br>${hand("Tiết thị", "sign")}</div><div>Người làm chứng<br>${hand("Lưu Phúc", "sign")}</div></div>
       ${stamp("趙府", "right:30px;top:30px")}
     </div>`,
