@@ -4,7 +4,9 @@ import d1 from "./docs1.js";
 import d2 from "./docs2.js";
 import d3 from "./docs3.js";
 import d4 from "./docs4.js";
-import { map, torch, tear, lich, hand } from "./media.js";
+import { map, torch, tear, lich, hand, MASK } from "./media.js";
+import { grille, lockbox } from "../../js/puzzles.js";
+import { SEALED } from "./locks.js";
 import { ghostFace } from "./art.js";
 import { state } from "../../js/store.js";
 import { TAPES } from "./tapes.js";
@@ -13,7 +15,8 @@ export { SECRET, SECRET_KEY } from "./secret.js";
 export { TAPES };
 
 export const DOCS = [...d0, ...d1, ...d2, ...d3, ...d4];
-export const MEDIA = { map, torch, tear, lich, hand };
+const DIGITS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+export const MEDIA = { map, torch, tear, lich, hand , grille: (el) => grille(el, MASK), hop_ngan: (el) => lockbox(el, { id: "hop_ngan", rings: [DIGITS, DIGITS, DIGITS, DIGITS], content: SEALED.hop_ngan }) };
 export const ART = { ghostFace };
 
 /** Wording of the bad ending, by the option the player chose (A–D). */
@@ -28,6 +31,13 @@ const LOST_LINE = {
 
 export const META = {
   strict: true,   // no x/y feedback, countdown with time penalties, gated hints, grade (js/main.js)
+  // Escape-room puzzles (rule 25, numbers from docs/CAU_DO.md).
+  puzzles: [
+    { n: 4, q: "q4", name: "Xếp sáu dòng ghi chép theo thứ tự thật" },
+    { n: 7, q: "q4", tool: "grille", media: "grille", name: "Tấm bìa đen đục lỗ của buồng tối đặt lên trang giấy ô li của Ngân" },
+    { n: 25, q: "q5", name: "Ngày âm lịch của đêm bà Hằng mất, tra lịch vạn niên" },
+    { n: 12, q: "q6", tool: "lockbox", media: "hop_ngan", chain: "q5", name: "Hộp sắt của Ngân, mã là ngày của mẹ theo âm lịch" },
+  ],
   series: "Hồ sơ Nửa Đêm",
   number: "Hồ sơ số 05",
   title: "Người giữ vợ",

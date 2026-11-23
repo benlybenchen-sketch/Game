@@ -264,3 +264,12 @@ Bìa (cửa buồng dán băng keo, ánh lò than đỏ dưới khe cửa), toà
 | 6 | Hai lần mua than 5 và 10 cân | `hoa_don` | 5 |
 | 6 | Cửa ngách bếp ↔ buồng trong | `so_do`, `nk_6` | 1, 6 |
 | 7 | Tách người khởi phát | `sach`, `bien_ban_hop` | 4, 7 |
+
+## Câu đố phòng thoát hiểm (bổ sung, luật 25)
+
+| TĐ | Câu đố | Loại (CAU_DO.md) | Lời giải | Bẫy | Chuỗi |
+|---|---|---|---|---|---|
+| 4 | Tờ giấy ô li kín chữ của Ngân và tấm bìa đen đục chín lỗ trong buồng tối (`mat_na`) | 7 lưới đục lỗ | Chấm mực tím trùng góc trên trái, đọc qua lỗ, xoay bốn lần: “Con nói dối bố, con ho thay mẹ, con sợ lắm bố ơi” | Đặt bìa từ góc khác thì ra chữ vô nghĩa | Củng cố TĐ 4 (người khởi phát) |
+| 6 | Hộp sắt kẹo dưới gối Ngân, khoá số bốn vòng (`hop_ngan`), “chỉ mở vào ngày của mẹ” | 12 hộp khoá số | 2511: đêm mẹ mất là 25 tháng Một âm lịch | 2212 (ngày dương) | Đáp án TĐ 5 |
+
+`tools/solve05.mjs` kiểm: tấm bìa phủ đủ 36 ô, chỉ góc có chấm mực đọc ra câu; mã hộp suy từ lịch vạn niên.

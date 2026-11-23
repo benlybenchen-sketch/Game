@@ -4,6 +4,18 @@ import { tranh, tape } from "./docs0.js";
 import { state, save } from "../../js/store.js";
 import { jumpScare } from "../../js/dread.js";
 
+// The note torn into four strips, found in the bin of the visiting room on 19/10 (rows read "TOA XU XONG BAN NHA VUON ROI VE SAI GON").
+export const STRIPS = {
+  id: "giay_xe",
+  blocks: [   // as found in the bin: strip 1 is upside down
+    { name: "Dải 1", rows: ["IA", "UV", "OX"] },
+    { name: "Dải 2", rows: ["TO", "AN", "OI"] },
+    { name: "Dải 3", rows: ["NGB", "ONR", "GON"] },
+    { name: "Dải 4", rows: ["AXU", "NHA", "VES"] },
+  ],
+};
+export const STRIPS_SOLUTION = "TOAXUXONGBANNHAVUONROIVESAIGON";
+
 export default [
   {
     id: "chung_tu", stage: 5, kind: "Giấy chứng tử", icon: "§", label: "Giấy chứng tử Phạm Thị Huệ, Sài Gòn 18/6/1996",
@@ -56,6 +68,19 @@ export default [
         <li>Xoáy: đường vân cuộn tròn hoặc xoắn ốc quanh một tâm. Có hai điểm tam giác ở hai bên.</li>
       </ul>
       <p>Hoa văn đường vân không đổi suốt đời. Hai người khác nhau, kể cả sinh đôi cùng trứng, không bao giờ có vân tay trùng nhau.</p>
+    </div>`,
+  },
+
+  {
+    id: "giay_xe", stage: 5, kind: "Vật chứng", icon: "✂", label: "Tờ giấy xé trong giỏ rác phòng thăm",
+    html: () => `<div class="doc doc--plain">
+      <p class="note">Y tá Sương nhặt trong giỏ rác phòng thăm sau buổi thăm 19/10, chỗ bà Hoa ngồi. Một tờ giấy học trò xé dọc thành bốn dải, chữ in hoa không dấu bằng bút bi. Mép rách của từng dải, đọc từ trên xuống, khi dải nằm như lúc nhặt lên:</p>
+      <table class="tbl"><tr><th>Dải</th><th>Mép trái</th><th>Mép phải</th></tr>
+        <tr><td>1</td><td>▼▲▲</td><td>▲▼▼</td></tr>
+        <tr><td>2</td><td>mép giấy thẳng</td><td>▲▼▲</td></tr>
+        <tr><td>3</td><td>▲▲▼</td><td>mép giấy thẳng</td></tr>
+        <tr><td>4</td><td>▲▼▲</td><td>▼▼▲</td></tr></table>
+      ${media("giay_xe", "strips")}
     </div>`,
   },
 

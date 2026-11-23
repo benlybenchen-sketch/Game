@@ -68,6 +68,7 @@ export const QUESTIONS = [
         { id: "n_ho", text: "Ngân: “Đêm qua mẹ ho nhiều.”" },
       ] },
       { id: "kp", type: "choice", label: "Người khởi phát hoang tưởng", options: ["Ông Khải", "Cháu Ngân", "Bà Lụa", "Không có ai, bà Hằng còn sống"] },
+      { id: "mask", type: "text", label: "Câu đọc được qua tấm bìa đen, trên trang giấy ô li của Ngân", placeholder: "" },
       { id: "ho", type: "choice", label: "Tiếng ho sau cửa buồng trong băng đêm là", options: ["Tiếng ho thật, khàn và có đờm", "Tiếng ho giả, có giọng nói xen giữa", "Tiếng ho của đàn ông, giọng trầm", "Tiếng gió rít qua khe cửa dán kín", "Tiếng ho thu sẵn, phát lại từ băng"] },
       { id: "cham", type: "text", label: "Câu cuối cùng nghe được khi băng chạy ×0,6 (chép lại nguyên câu)", placeholder: "" },
       { id: "tach", type: "choice", label: "Tách hai người ra thì người tiếp nhận thường", options: ["Hoang tưởng nặng thêm trong vài tuần đầu", "Tự tỉnh dần sau vài ngày đến vài tuần", "Không thay đổi gì sau nhiều tháng", "Chuyển hoang tưởng sang một người thân khác", "Phải dùng thuốc liều cao mới đỡ"] },
@@ -111,6 +112,7 @@ export const QUESTIONS = [
     ask: "Đêm Ngân chọn là đêm nào trên lịch bloc năm 1991? Khoanh tờ lịch đó. Nếu chỉ thu than ở gian giữa thì còn bao nhiêu than trong nhà, nằm ở đâu, và Ngân vào đó bằng lối nào?",
     parts: [
       { id: "ngay", type: "spot", label: "Tờ lịch của đêm Ngân chọn", doc: "lich", how: "Mở lịch bloc, lật tới tờ cần tìm rồi bấm “Khoanh tờ này”." },
+      { id: "ke", type: "choice", label: "Theo tờ giấy trong hộp sắt, đêm nay Ngân định", options: ["Cả nhà ngủ cùng mẹ trong buồng", "Đưa bố lên trạm cho mẹ ở nhà", "Mở cửa buồng cho mẹ ra ngoài", "Trả lại than cho hàng than chợ"] },
       { id: "than2", type: "number", label: "Số cân than trong nhà ông Khải mà cán bộ không thể thu nếu không mở buồng", unit: "cân" },
       { id: "loi", type: "choice", label: "Lối Ngân vào buồng trong mà không bóc băng keo", options: ["Qua cửa sổ gian giữa, gỡ một song gỗ", "Qua cửa ngách sau chạn bát trong bếp", "Qua lỗ thông gió trên mái, bằng thang tre", "Qua buồng tối rửa ảnh, có vách thông sang", "Ngân không vào được, chỉ đứng ngoài cửa"] },
     ],

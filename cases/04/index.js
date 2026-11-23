@@ -7,6 +7,9 @@ import d4 from "./docs4.js";
 import d5 from "./docs5.js";
 import d6 from "./docs6.js";
 import { overlay, prints, doselog } from "./media.js";
+import { lockbox, blocks } from "../../js/puzzles.js";
+import { SEALED } from "./locks.js";
+import { STRIPS } from "./docs5.js";
 import { ghostFace } from "./art.js";
 import { dose } from "./dose.js";
 import { state } from "../../js/store.js";
@@ -16,7 +19,12 @@ export { SECRET, SECRET_KEY } from "./secret.js";
 export { TAPES };
 
 export const DOCS = [...d0, ...d1, ...d2, ...d3, ...d4, ...d5, ...d6];
-export const MEDIA = { overlay, prints, doselog };
+const DIGITS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+export const MEDIA = {
+  overlay, prints, doselog,
+  hop_thiec: (el) => lockbox(el, { id: "hop_thiec", rings: [DIGITS, DIGITS, DIGITS, DIGITS], content: SEALED.hop_thiec }),
+  giay_xe: (el) => blocks(el, STRIPS),
+};
 export const ART = { ghostFace };
 
 /** Thảo's lines play the take that matches her current sedative dose. */
@@ -25,6 +33,13 @@ export const tapeSuffix = (id, i) => (TAPES[id]?.segs[i]?.dose && dose() > 0 ? `
 export const META = {
   publicNames: ["Bà Hoa", "Lê Thị Hoa", "Sài Gòn"],   // the mother and the city she went to, from the first page (tools/audit.mjs)
   strict: true,   // no x/y feedback, countdown with time penalties, gated hints, grade (js/main.js)
+  // Escape-room puzzles (rule 25, numbers from docs/CAU_DO.md).
+  puzzles: [
+    { n: 12, q: "q4", tool: "lockbox", media: "hop_thiec", chain: "q1", name: "Hộp thiếc khoá số của Thảo, mã là ngày Thảo nói “bà không phải mẹ” lần đầu" },
+    { n: 21, q: "q5", name: "Hai chân dung: ảnh trong gương" },
+    { n: 2, q: "q6", tool: "blocks", media: "giay_xe", name: "Tờ giấy xé dọc thành bốn dải, ghép theo mép rách" },
+    { n: 23, q: "q6", name: "Phân loại vân tay theo tài liệu công an" },
+  ],
   series: "Hồ sơ Nửa Đêm",
   number: "Hồ sơ số 04",
   title: "Người mẹ khác",

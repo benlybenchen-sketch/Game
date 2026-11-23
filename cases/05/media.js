@@ -205,3 +205,24 @@ export function hand(el) {
     box.addEventListener("pointerleave", () => box.classList.remove("zoom"));
   });
 }
+
+// Ngân's squared page and the darkroom's black card with nine holes (js/puzzles.js grille).
+// Read through the holes, turning the card four times from the inked corner top-left:
+// "CON NOI DOI BO CON HO THAY ME CON SO LAM BO OI" (+ XX).
+export const MASK = {
+  id: "mat_na",
+  grid: ["LAMACO", "BYBOON", "OMEICN", "OOCIDX", "NONXOH", "SOIOTH"],
+  holes: [[0, 5], [1, 5], [2, 5], [0, 4], [4, 4], [3, 1], [5, 2], [3, 4], [3, 3]],
+};
+export const MASK_SOLUTION = "CONNOIDOIBOCONHOTHAYMECONSOLAMBOOIXX";
+
+/** What Ngân keeps in her sweet tin (sealed into locks.js by tools/lockbox.mjs). */
+export const tinHtml = () => `<div class="doc doc--memo"><div class="hand">
+  <p>Đêm mẹ khỏi bệnh.</p>
+  <p>Băng keo, ba cuộn. Đã dán.</p>
+  <p>Chăn của mẹ. Đã gấp.</p>
+  <p>Lò. Bố mua rồi.</p>
+  <p>Phần than của con. Đã để chỗ mẹ.</p>
+  <p>Lối của con. Đã nhổ đinh, cắm lại.</p>
+  <p>Đêm nay cả nhà ngủ cùng mẹ. Không ai phải xa ai nữa.</p></div>
+  <p class="note">Dưới đáy hộp: một lọn tóc buộc chun đen, và tấm ảnh 1988 của cô Hằng đã sờn mép.</p></div>`;

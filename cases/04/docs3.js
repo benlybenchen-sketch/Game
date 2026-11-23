@@ -1,5 +1,5 @@
 // Case 04, night shift 4 (Sunday 20/10/1996): the lullaby, BS. Kha's objection, the letters, the family register.
-import { ln, stamp, pic, hand } from "../../js/kit.js";
+import { ln, stamp, pic, hand, media } from "../../js/kit.js";
 import { tranh, tape } from "./docs0.js";
 
 export default [
@@ -36,17 +36,12 @@ export default [
   },
 
   {
-    id: "thu_sg_2", stage: 3, kind: "Thư", icon: "✉", label: "Thư bà Hoa gửi từ Sài Gòn, tháng 5 và 6/1996",
+    id: "thu_sg_2", stage: 3, kind: "Đồ vật", icon: "🔒", label: "Hộp thiếc khoá số trong tủ của Thảo",
     html: () => `
-    <div class="doc doc--memo">
-      ${hand(`<p>Sài Gòn, 20/5/1996</p>
-        <p>Thảo con, chuyện lớn mẹ muốn kể là: ${ln("t2_di", "mẹ tìm lại được dì của con, người mẹ tưởng đã mất từ hồi nạn đói.")} Dì đọc báo nhắn tin tìm mẹ.
-        ${ln("t2_duc", "Dì ốm nhom, mẹ nhìn mà thương.")} Dì nghèo, đau ốm, mẹ ở lại chăm dì ít lâu.</p>
-        <p>${ln("t2_ke", "Tối nào hai chị em cũng ngồi kể chuyện tới khuya. Mẹ kể cho dì nghe hết chuyện nhà mình, chuyện con, chuyện con Mực, chuyện khách may. Dì thương con lắm.")}</p>
-        <p>Sài Gòn, 12/6/1996</p>
-        <p>${ln("t2_nau", "Dì nấu ăn khéo lắm, ngày nào cũng nấu cho mẹ.")} Cuối tháng mẹ về. Mẹ thương con.</p>
-        <p class="right">Mẹ</p>`)}
-      <p class="note">Thảo cất hai lá thư trong tủ.</p>
+    <div class="doc doc--plain">
+      <p class="note">Hộp bánh quy bằng thiếc, Thảo tự gắn một ổ khoá số bốn vòng mua ở chợ Đà Lạt. Y tá Sương lấy trong tủ đồ cá nhân phòng 7.</p>
+      ${hand(`<p>Y tá Sương hỏi mã. Thảo nhìn ra cửa sổ, nói: “Ngày con mất mẹ. Bác sĩ đọc hồ sơ thì biết.”</p>`)}
+      ${media("hop_thiec", "box")}
     </div>`,
   },
 
@@ -71,3 +66,16 @@ export default [
   tape("hoi_4", 3, "Băng: hỏi chuyện Thảo (20/10)", "Bác sĩ Vân hỏi Thảo về những lá thư."),
   tranh(4, 3, "Tranh Thảo vẽ đêm 20/10", "Một người đàn bà áo dài tím đứng cuối giường, nốt nhạc bay ra từ miệng. Thảo vẽ mình đang ngủ, mỉm cười."),
 ];
+
+/** The two letters inside Thảo's tin box (sealed into locks.js by tools/lockbox.mjs). */
+export const thuSg2Html = () => `
+    <div class="doc doc--memo">
+      ${hand(`<p>Sài Gòn, 20/5/1996</p>
+        <p>Thảo con, chuyện lớn mẹ muốn kể là: ${ln("t2_di", "mẹ tìm lại được dì của con, người mẹ tưởng đã mất từ hồi nạn đói.")} Dì đọc báo nhắn tin tìm mẹ.
+        ${ln("t2_duc", "Dì ốm nhom, mẹ nhìn mà thương.")} Dì nghèo, đau ốm, mẹ ở lại chăm dì ít lâu.</p>
+        <p>${ln("t2_ke", "Tối nào hai chị em cũng ngồi kể chuyện tới khuya. Mẹ kể cho dì nghe hết chuyện nhà mình, chuyện con, chuyện con Mực, chuyện khách may. Dì thương con lắm.")}</p>
+        <p>Sài Gòn, 12/6/1996</p>
+        <p>${ln("t2_nau", "Dì nấu ăn khéo lắm, ngày nào cũng nấu cho mẹ.")} Cuối tháng mẹ về. Mẹ thương con.</p>
+        <p class="right">Mẹ</p>`)}
+      <p class="note">Thảo cất hai lá thư trong tủ.</p>
+    </div>`;

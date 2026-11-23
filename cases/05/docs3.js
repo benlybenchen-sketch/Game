@@ -138,4 +138,12 @@ export default [
       ${media("lich", "1991")}
     </div>`,
   },
+
+  {
+    id: "hop_ngan", stage: 5, kind: "Đồ vật", icon: "🔒", label: "Hộp sắt đựng kẹo của Ngân, quấn khoá số",
+    html: () => `<div class="doc doc--plain">
+      <p class="note">Hộp sắt kẹo Hải Hà, Vân thấy dưới gối của Ngân sáng 30/12. Ngân quấn quanh hộp cái khoá số bốn vòng của xe đạp. Trên nắp, chữ Ngân: “Chỉ mở vào ngày của mẹ.”</p>
+      ${media("hop_ngan", "box")}
+    </div>`,
+  },
 ];
