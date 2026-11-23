@@ -35,7 +35,7 @@ export const META = {
   number: "Hồ sơ số 06",
   title: "Âm Hôn",
   place: "Trấn Hoè Âm, Sơn Tây · tháng Bảy năm Bính Tý (1936)",
-  blurb: "Con trai duy nhất nhà chưởng quỹ phiếu hiệu chết đuối ở sông Phần. Theo tục, nhà họ Triệu cưới vợ cho người chết: một cô dâu âm, chôn chung một huyệt. Thầy xem ngày của trấn đột tử đêm Vu Lan. Bạn là học trò của thầy, được mời đến thay: chấm bát tự, viết hôn thư, kịp giờ Tý đêm 22. Canh thiếp cô dâu không có tên. Và đêm nào, sau cánh cửa niêm phong của tân phòng, cũng có người gọi tên một cô hầu.",
+  blurb: "Con trai duy nhất nhà chưởng quỹ phiếu hiệu chết đuối ở sông Phần. Theo tục, nhà họ Triệu cưới vợ cho người chết: một cô dâu âm, chôn chung một huyệt. Thầy xem ngày của trấn đột tử đêm Vu Lan. Bạn là học trò của thầy, được mời đến thay: chấm bát tự, viết hôn thư, kịp giờ Tý đêm 22. Canh thiếp cô dâu không có tên. Và đêm nào, sau cánh cửa niêm phong ở Đông viện, cũng có người gọi tên một cô hầu.",
   players: "1–4 người",
   time: "6–9 giờ",
   level: "Cực khó (mức 5) · văn hoá Trung Hoa cổ · nhiều kết thúc",
@@ -49,7 +49,7 @@ export const META = {
   music: "am_hon.mp3",        // original theme, rendered by tools/compose06c.py (suona procession, drum rolls, wail)
   ambience: "ghostWedding",   // fallback if the file fails: synthesized procession in js/audio.js
   folders: ["Đêm 17 · Canh thiếp", "Đêm 18 · Ngõ Liễu", "Đêm 19 · Phiếu hiệu", "Đêm 20 · Phiếu khám xác", "Sáng 21 · Lễ phát tang",
-    "Đêm 21 · Tân phòng", "Đêm 22 · Giờ Hợi", "Rạng sáng 23", "Sau đêm 22"],
+    "Đêm 21 · Trang sổ cuối", "Đêm 22 · Giờ Hợi", "Rạng sáng 23", "Sau đêm 22"],
   wrong: [
     "Chưa đúng. Thầy Khâu dặn: đừng tin con số nào chưa tự tính lại.",
     "Sai. Trong phủ này, giấy tờ nào cũng có người đã sửa hoặc đã giấu một nửa.",

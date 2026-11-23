@@ -113,10 +113,10 @@ export const QUESTIONS = [
   },
   {
     id: "q7", stage: 6, title: "Đêm thứ bảy",
-    ask: "Giải bốn mươi ba quẻ họ Lâm (có thể kèm những quẻ con cơ đánh đêm nay). Bà chủ nhà thật ra là ai? Bà ta đã giết bao nhiêu người, vì sao, và vì sao lại thuê bạn?",
+    ask: "Giải bốn mươi ba quẻ họ Lâm (có thể kèm những quẻ con cơ đánh đêm nay). Bà chủ nhà là ai? Bà ta đã giết bao nhiêu người, vì sao, và vì sao lại thuê bạn?",
     parts: [
       { id: "msg", type: "text", label: "Lời giải các quẻ (viết liền một hàng, có dấu hay không đều được)", prefix: nameFirst },
-      { id: "who", type: "choice", label: "Bà chủ nhà thật ra là", options: PEOPLE.slice(5, 7).concat(["Bà Lâm Ngọc Diệp", "Chị của Nghi"]) },
+      { id: "who", type: "choice", label: "Bà chủ nhà là", options: PEOPLE.slice(5, 7).concat(["Bà Lâm Ngọc Diệp", "Chị của Nghi"]) },
       { id: "n", type: "number", label: "Số người bà ta đã giết năm 1971", unit: "người" },
       { id: "why", type: "choice", label: "Động cơ năm 1971", options: ["Trả thù cho người cha chết ở Huế, Tết Mậu Thân", "Chiếm thân phận, nhà và vàng của Lâm Hạnh Dung", "Ghen vì Yến được bà Diệp và cả nhóm thương hơn", "Bịt miệng cả nhóm, giấu một tai nạn năm 1970", "Bị hồn bà Diệp nhập trong buổi cơ đầu tiên"] },
       { id: "hire", type: "choice", label: "Vì sao bà ta thuê bạn", options: ["Để có một người lạ làm chứng rằng con cơ tự chạy", "Vì cần người đọc được tiếng Pháp để tìm số vàng", "Vì cần người giải được mã Morse và mã của Tùng", "Để đầu độc thêm một người cho đủ bảy mạng người"] },

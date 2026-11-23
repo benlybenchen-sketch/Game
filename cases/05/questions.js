@@ -20,12 +20,12 @@ export const QUESTIONS = [
   },
   {
     id: "q2", stage: 1, title: "Hai lời kể",
-    ask: "So lời ông Khải và lời cháu Ngân trong biên bản hỏi chuyện. Chỉ ra hai câu không thể cùng đúng. Mùi hắc trong nhà là mùi gì? Mỗi lần được hỏi về bà Hằng, ai là người trả lời trước?",
+    ask: "So lời ông Khải và lời cháu Ngân trong biên bản hỏi chuyện. Chỉ ra hai câu không thể cùng đúng. Mùi hắc trong nhà là mùi gì? Mỗi lần được hỏi về bà Hằng, ông Khải làm gì?",
     parts: [
       { id: "k", type: "line", label: "Câu của ông Khải (bấm vào câu trong biên bản)" },
       { id: "n", type: "line", label: "Câu của cháu Ngân mâu thuẫn với câu trên" },
       { id: "chat", type: "choice", label: "Mùi hắc, cay mắt trong nhà", options: ["Long não", "Dầu hoả", "Formol", "Thuốc trừ sâu", "Mùi hương trầm"] },
-      { id: "first", type: "choice", label: "Ai trả lời trước mỗi khi được hỏi về bà Hằng", options: ["Ông Khải", "Cháu Ngân", "Hai người cùng lúc", "Không ai trả lời"] },
+      { id: "first", type: "choice", label: "Trong băng, mỗi lần được hỏi về bà Hằng, ông Khải", options: ["Trả lời trước, rồi con gái nói theo", "Nhắc lại gần đúng lời con vừa nói", "Im lặng, để con gái nói một mình", "Nói khác hẳn những gì con vừa nói", "Gọi vọng vào buồng hỏi lại vợ"] },
       { id: "pins", type: "pins", count: 2, label: "Ghim 2 tài liệu làm bằng chứng" },
     ],
     memo: [
@@ -55,7 +55,7 @@ export const QUESTIONS = [
   },
   {
     id: "q4", stage: 3, title: "Ai tin trước",
-    ask: "Sắp xếp sáu dòng ghi chép theo đúng thứ tự ngày tháng. Theo giáo trình, ai là người khởi phát hoang tưởng trong nhà này? Tiếng ho trong băng đêm là của ai, và khi cho băng chạy chậm, câu cuối cùng nghe được là gì? Nếu tách hai người ra, người tiếp nhận thường sẽ thế nào?",
+    ask: "Sắp xếp sáu dòng ghi chép theo đúng thứ tự ngày tháng. Theo giáo trình, ai là người khởi phát hoang tưởng trong nhà này? Tiếng ho trong băng đêm là tiếng gì, và khi cho băng chạy chậm, câu cuối cùng nghe được là gì? Nếu tách hai người ra, người tiếp nhận thường sẽ thế nào?",
     parts: [
       { id: "ord", type: "order", label: "Sáu dòng ghi chép, từ sớm nhất đến muộn nhất (bấm ▲▼ để đổi chỗ)", items: [
         { id: "k_chao", text: "Ông Khải: “Hằng ăn cháo, khen ngon.”" },
@@ -66,7 +66,7 @@ export const QUESTIONS = [
         { id: "n_ho", text: "Ngân: “Đêm qua mẹ ho nhiều.”" },
       ] },
       { id: "kp", type: "choice", label: "Người khởi phát hoang tưởng", options: ["Ông Khải", "Cháu Ngân", "Bà Lụa", "Không có ai, bà Hằng còn sống"] },
-      { id: "ho", type: "choice", label: "Tiếng ho sau cửa buồng trong băng đêm", options: ["Bà Hằng", "Ông Khải", "Cháu Ngân", "Con mèo của bà Lụa", "Tiếng gió"] },
+      { id: "ho", type: "choice", label: "Tiếng ho sau cửa buồng trong băng đêm là", options: ["Tiếng ho thật, khàn và có đờm", "Tiếng ho giả, có giọng nói xen giữa", "Tiếng ho của đàn ông, giọng trầm", "Tiếng gió rít qua khe cửa dán kín", "Tiếng ho thu sẵn, phát lại từ băng"] },
       { id: "cham", type: "text", label: "Câu cuối cùng nghe được khi băng chạy ×0,6 (chép lại nguyên câu)", placeholder: "" },
       { id: "tach", type: "choice", label: "Tách hai người ra thì người tiếp nhận thường", options: ["Hoang tưởng nặng thêm trong vài tuần đầu", "Tự tỉnh dần sau vài ngày đến vài tuần", "Không thay đổi gì sau nhiều tháng", "Chuyển hoang tưởng sang một người thân khác", "Phải dùng thuốc liều cao mới đỡ"] },
       { id: "pins", type: "pins", count: 2, label: "Ghim 2 tài liệu làm bằng chứng" },

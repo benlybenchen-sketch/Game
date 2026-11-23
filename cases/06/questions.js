@@ -16,7 +16,7 @@ export const OPTIONS_7 = [
 export const QUESTIONS = [
   {
     id: "q1", stage: 0, title: "Canh thiếp không tên",
-    ask: "Phu nhân nói canh thiếp không tên là của cô Lý Xuân Hoa. Tự tính tứ trụ của từng người có trong hồ sơ. Bát tự trên canh thiếp thật ra là của ai, người đó sinh ngày nào theo Tây lịch, và trụ nào phân biệt người đó với người có bát tự gần giống nhất?",
+    ask: "Phu nhân nói canh thiếp không tên là của cô Lý Xuân Hoa. Tự tính tứ trụ của từng người có trong hồ sơ. Bát tự trên canh thiếp là của ai, người đó sinh ngày nào theo Tây lịch, và trụ nào phân biệt người đó với người có bát tự gần giống nhất?",
     parts: [
       { id: "who", type: "choice", label: "Bát tự trên canh thiếp là của", options: ["Lý Xuân Hoa", "Ôn Tú Nương", "Thuý Nhi", "Không khớp ai trong hồ sơ"] },
       { id: "ngay", type: "text", label: "Người đó sinh ngày (ngày/tháng/năm Tây lịch)", placeholder: "vd 1/1/1900" },
@@ -67,11 +67,11 @@ export const QUESTIONS = [
   },
   {
     id: "q4", stage: 3, title: "Tẩy oan",
-    ask: "Theo Tẩy Oan Tập Lục, người trong quan tài chết trước hay sau khi xuống nước: bấm câu chứng minh trong phiếu khám. Người ấy làm nghề gì? Bấm câu cho thấy người ấy không phải Triệu Thừa Tự.",
+    ask: "Theo Tẩy Oan Tập Lục, người trong quan tài chết trước hay sau khi xuống nước: bấm câu chứng minh trong phiếu khám. Người ấy làm nghề gì? Người ấy có phải Triệu Thừa Tự không? Bấm câu quyết định điều đó.",
     parts: [
       { id: "chet", type: "line", label: "Câu trong phiếu khám quyết định người này chết trước hay sau khi xuống nước (bấm vào câu đó)" },
       { id: "nghe", type: "choice", label: "Người trong quan tài làm nghề", options: ["Người đọc sách", "Người chèo đò", "Thợ rèn", "Tá điền", "Phu dắt la"] },
-      { id: "khong", type: "line", label: "Câu cho thấy người này không phải Triệu Thừa Tự (bấm vào câu trong phiếu khám)" },
+      { id: "khong", type: "line", label: "Câu trong phiếu khám cho biết người này có phải Triệu Thừa Tự hay không (bấm vào câu đó)" },
       pins(),
     ],
     memo: [
@@ -99,11 +99,11 @@ export const QUESTIONS = [
     clock: "09:10",
   },
   {
-    id: "q6", stage: 5, title: "Tân phòng",
-    ask: "Giải câu đố chiết tự cuối cùng của thầy Khâu. “Triệu Thừa An” trong quá kế thư thật ra là ai? Ngày sinh ghi trong quá kế thư ứng với ngày nào Tây lịch? Nếu lễ diễn ra, theo hôn thư Tú Nương sẽ nằm cạnh ai?",
+    id: "q6", stage: 5, title: "Chiết tự",
+    ask: "Giải câu đố chiết tự cuối cùng của thầy Khâu. “Triệu Thừa An” trong quá kế thư là ai? Ngày sinh ghi trong quá kế thư ứng với ngày nào Tây lịch? Nếu lễ diễn ra, theo hôn thư Tú Nương sẽ nằm cạnh ai?",
     parts: [
       { id: "chu", type: "text", label: "Hai chữ thầy Khâu giấu (âm Hán Việt hoặc chữ Hán)", placeholder: "" },
-      { id: "an", type: "choice", label: "“Triệu Thừa An” trong quá kế thư thật ra là", options: ["Con trai Triệu Hoài Nghĩa", "Triệu Thừa Tự", "Triệu Thừa Chí", "Một đứa trẻ mua ở Hà Bắc"] },
+      { id: "an", type: "choice", label: "“Triệu Thừa An” trong quá kế thư là", options: ["Con trai Triệu Hoài Nghĩa", "Triệu Thừa Tự", "Triệu Thừa Chí", "Một đứa trẻ mua ở Hà Bắc"] },
       { id: "sinh", type: "text", label: "Ngày sinh trong quá kế thư, đổi ra Tây lịch (ngày/tháng/năm)", placeholder: "vd 1/1/1900" },
       { id: "canh", type: "choice", label: "Nếu lễ diễn ra, Tú Nương sẽ nằm cạnh", options: ["Triệu Thừa Tự", "Ôn Thạch", "Lý Xuân Hoa", "Không ai"] },
       pins(),
