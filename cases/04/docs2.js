@@ -45,6 +45,22 @@ export default [
   },
 
   {
+    id: "bang_tuoi", stage: 2, kind: "Lịch", icon: "📅", label: "Lịch bloc 1996 ở phòng trực: trang tra năm âm lịch",
+    html: () => {
+      const can = ["Giáp", "Ất", "Bính", "Đinh", "Mậu", "Kỷ", "Canh", "Tân", "Nhâm", "Quý"];
+      const chi = ["Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi", "Thân", "Dậu", "Tuất", "Hợi"];
+      const cell = (y) => `<td>${y}<br><small>${can[(y - 4) % 10]} ${chi[(y - 4) % 12]}</small></td>`;
+      const rows = [];
+      for (let y = 1930; y < 1990; y += 6) rows.push(`<tr>${[0, 1, 2, 3, 4, 5].map((i) => cell(y + i)).join("")}</tr>`);
+      return `
+    <div class="doc doc--plain">
+      <p class="note">Tờ cuối cuốn lịch bloc treo ở phòng trực khoa Nữ 2, in sẵn bảng tra tuổi.</p>
+      <table class="tbl">${rows.join("")}</table>
+    </div>`;
+    },
+  },
+
+  {
     id: "ba_tu", stage: 2, kind: "Lời khai", icon: "✍", label: "Lời bà Tư hàng xóm và chuyện con Mực",
     html: () => `
     <div class="doc doc--memo">
