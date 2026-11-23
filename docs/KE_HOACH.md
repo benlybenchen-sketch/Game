@@ -78,6 +78,7 @@ Người chơi chê hồ sơ 01 "dễ đoán". Hồ sơ 02–05 đã được l�
 20. **Không nhân vật nào phủ nhận điều người chơi chưa nghi** (lỗi "Lan chết rồi cháu" ở hồ sơ 03: càng chối càng lộ).
 21. **Hung thủ là người xuất hiện nhiều nhưng ở vai việc vặt**, tên không làm đáp án trước trọng điểm áp chót; manh mối công bằng có từ sớm nhưng chỉ đọc ra khi ghép với tài liệu cuối.
 22. **Phần siêu nhiên không được giải thích hết:** giữ lại đúng một hiện tượng không ai lý giải, để người chơi không dựa được vào "mọi thứ ma quái đều do người làm".
+23. **Luôn đủ dữ kiện để giải, nhưng không đưa bảng tra gọn và không chỉ cách dùng.** Mỗi bước giải phải có tài liệu chứa đúng dữ kiện cần, mở ở trọng điểm đó hoặc sớm hơn; không bắt người chơi biết sẵn kiến thức ngoài game. Dữ kiện được trình bày thô: tự suy ra từ ví dụ (vở bài tập có lỗi), rải ở nhiều tài liệu và nhiều trọng điểm, chôn giữa dòng việc vặt, có tài liệu nhiễu đi kèm. Kinh thánh phải có "Bảng đủ tài liệu" (bước → dữ kiện → tài liệu → trọng điểm mở); trước khi mở hồ sơ, giải lại toàn bộ chỉ bằng tài liệu trong game. Bài học: hồ sơ 03 từng thiếu Morse Q–Z và câu Kiều 1051–1052; hồ sơ 04 từng thiếu cách đổi năm Ất Tỵ.
 
 ## Quy tắc âm thanh và cảnh doạ (áp dụng cho mọi hồ sơ từ nay về sau)
 - Mọi hiệu ứng âm thanh đi qua bus `fx` trong `js/audio.js` (khuếch đại lớn, có limiter): luôn ở mức tối đa mà không vỡ tiếng. Hiệu ứng mới chỉ cần gọi `tone`/`noiseHit`/`sfx.*` là tự to.

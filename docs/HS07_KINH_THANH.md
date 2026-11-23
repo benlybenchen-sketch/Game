@@ -1,4 +1,4 @@
-# Hồ sơ 07 · "Thư gửi người chết" · KINH THÁNH (bản nháp 3, chờ duyệt)
+# Hồ sơ 07 · "Thư gửi người chết" · KINH THÁNH (bản 3, đã chốt tên)
 
 > Bản nháp 1 (Luxor 1924, phái đoàn khảo cổ Pháp) bị người dùng chê "nhàm, chưa đủ rắc rối". Bản này đặt hẳn trong Ai Cập cổ đại.
 > Áp luật độ khó 1–15 và luật chống đoán 16–22 trong `docs/KE_HOACH.md`.
@@ -82,6 +82,42 @@ Mỗi trọng điểm phải ghép ít nhất 3 tài liệu và qua ít nhất 3
 
 - **Luật 2:** Nakhtmin chỉ làm đáp án ở trọng điểm 1, Nebetiunet ở 3, Sennefer không làm đáp án ở trọng điểm nào. Khonsu chỉ làm đáp án ở 6 (ở 5 chỉ là "người cổng", không tên).
 - **Luật 8:** mỗi câu bấm có 8–12 câu bấm được.
+
+## 4b. Bảng đủ tài liệu (luật 23)
+
+Mỗi dữ kiện cần cho một bước nằm trong tài liệu mở ở trọng điểm đó hoặc sớm hơn. Cột "Dạng" ghi dữ kiện được giấu thế nào để vẫn khó. Id tài liệu là tạm.
+
+| TĐ | Bước | Dữ kiện | Tài liệu (id) | Mở ở | Dạng |
+|---|---|---|---|---|---|
+| 1 | Chọn bản điểm danh đúng | Ngày lễ của làng tháng 2 Peret | `lich_le` | 1 | Lịch lễ dán ở nhà nguyện, không nói liên quan tới điểm danh |
+| 1 | Đếm ngày | 3 mùa × 4 tháng × 30 ngày; tuần 10 ngày | `lich_le`, `diem_danh_a`, `diem_danh_b` | 1 | Suy từ cách ghi ngày trên lịch lễ |
+| 1 | Ai thức ở đèo | Bấc phát từng lều, bấc trả sáng hôm sau, bấc cháy mấy giờ | `so_bac`, `bac_tra` | 1 | Tốc độ cháy nằm trong một lời phàn nàn của người cổng |
+| 1 | Nakhtmin nói dối | Lời ông và lời vợ ông | `khai_nakhtmin`, `khai_vo_nakhtmin` | 1 | |
+| 2 | Đọc số hieratic | Phép tính có lời giải, chỗ thầy sửa đỏ, lỗi chưa sửa | `vo_hoc_tro` | 2 | Không có bảng số; tự dựng |
+| 2 | Phân số mắt Horus | Bài chép về 6 mảnh và phần 1/64 | `vo_hoc_tro` | 2 | Bài chép có một mảnh ghi sai giá trị, phải tự phát hiện |
+| 2 | Đơn vị lúa | khar, oipe, hekat, hin | `vo_hoc_tro`, `bang_hang` | 2 | Rải trong hai bài toán chia lúa |
+| 2 | Lương chuẩn | Mức từng hạng thợ | `bang_hang` | 2 | |
+| 2 | Lương thực nhận | 3 tháng, có ô vỡ, tổng cột còn | `bang_luong_1`, `bang_luong_2`, `bang_luong_3` | 2 | |
+| 3 | So nét chữ | Mẫu chữ trường ký lục; chữ Hay; chữ bà goá; thư trả lời 1–2 | `mau_chu`, `vo_hay`, `bat_gui`, `tra_loi_1`, `tra_loi_2` | 3 | Bảng mẫu có 6 ký hiệu; chỉ 1 ký hiệu tách được hai người |
+| 4 | Đơn vị dài | 1 cubit = 7 palm = 28 finger | `ban_ve_lang` | 4 | Thước vẽ ở mép bản vẽ, không có lời giải thích |
+| 4 | Ngày đục xong chỗ xác | Tiến độ đục từng ngày; vị trí xác đo từ cửa | `so_tien_do`, `ban_ve_lang`, `bien_ban_xac` | 4 | Vị trí xác ghi bằng cubit-palm-finger, tiến độ ghi bằng cubit |
+| 4 | Chữ đố | Bảng ký hiệu → âm đầu; dòng thần chú chuẩn | `vo_hay`, `than_chu_chuan`, `vach_lang` | 3, 4 | Bảng chữ đố nằm ở trang cuối vở Hay, mở từ TĐ 3 nhưng chưa dùng |
+| 4 | Loài rắn | 6 loài, sừng, khoảng cách răng, triệu chứng, mùa ngủ | `sach_ran` | 4 | |
+| 4 | Vết cắn | Biên bản thầy thuốc | `kham_userhat` | 4 | |
+| 4 | Giờ chết Userhat | Bấc phát, bấc còn, tốc độ cháy | `so_bac`, `den_userhat` | 1, 4 | Tốc độ cháy lấy từ TĐ 1 |
+| 4 | Bà goá ở đâu | Thứ tự rước kiệu, giờ rước | `ruoc_kieu` | 4 | |
+| 5 | Lịch giữ ấn | Tuần nào bên nào giữ | `lich_an` | 5 | |
+| 5 | Ghép dấu niêm | 5 mảnh, mẫu ấn hai bên | `dau_niem`, `mau_an` | 5 | Trò ghép trong game, có một mảnh của dấu niêm khác lẫn vào |
+| 5 | Ai mang ấn lên đèo | Sổ việc cổng | `so_cong` | 5 | Một dòng giữa việc gánh nước, đưa thư |
+| 5 | Sennefer đêm 14 | Lời khai; bấc lều bên Trái | `khai_sennefer`, `so_bac` | 1, 5 | |
+| 6 | Đo đấu ở cổng | Đong nước bằng chén hin; dung tích chuẩn | `dong_dau`, `vo_hoc_tro` | 2, 6 | Dung tích chuẩn chỉ có trong một bài toán của vở học trò |
+| 6 | Số Hay tự đong | 3 lần đong | `gom_hay` | 6 | |
+| 6 | Thư trả lời số 3 | Nét số; thẻ bao lúa; ai nhận lúa ở bến | `tra_loi_3`, `the_bao`, `so_kho_ben` | 6 | |
+| 6 | Rắn từ đâu | Ngày, loài, "giao cho nhà cổng" | `so_bat_ran` | 6 | |
+| 6 | Tổng lúa bị lấy | Bảng lương × 1/16, đổi ra khar và hekat | `bang_luong_1..3`, `vo_hoc_tro` | 2 | |
+| 7 | Giờ thợ tới đền, giờ người cổng tới kho | Quãng đường, đơn vị iteru, tốc độ đi bộ và đi lừa, giờ xuất phát | `ban_do_bo_tay`, `tin_dinh_cong` | 7 | Cách đổi iteru nằm trong một lá thư của tể tướng |
+
+Khi dựng: viết `tools/solve07.mjs` giải lại toàn bộ chỉ từ dữ liệu trong các file tài liệu và đối chiếu với `secret.js`; audit phải gọi công cụ này.
 
 ## 5. Bẫy giấy tờ cho từng trọng điểm (luật 9)
 
