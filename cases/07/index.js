@@ -48,7 +48,8 @@ export const META = {
   firstDoc: "thu_moi",
   cover: "cover",
   coverStyle: "background-size:auto 100%;background-position:right center;background-repeat:no-repeat;background-color:#07090a",
-  ambience: "ghostWedding",
+  music: "thu_nguoi_chet.mp3",   // original score, rendered by tools/compose07.py (reed, harp, frame drum, sistrum, chant)
+  ambience: "ghostWedding",       // fallback if the file fails
   // Khonsu opens the gate on page one (rule 21: the killer sits in plain sight in a menial role);
   // Nebetiunet is the dead man's widow, named on the first bowl the player sees.
   publicNames: ["Khonsu", "Nebetiunet"],

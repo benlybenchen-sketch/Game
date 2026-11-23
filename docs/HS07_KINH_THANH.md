@@ -207,3 +207,11 @@ Mỗi hệ tra cứu có ít nhất gấp đôi số mục thật sự cần. Ph
 | Đồ vật trong nhà Userhat | Hộp bút | 12 món, nhiều món "có vẻ" là manh mối (con dao, lọ thuốc, bùa) | |
 
 Ngoài ra, mỗi trọng điểm có 2–3 tài liệu không dùng tới ở trọng điểm nào (đời sống làng: thuê lừa, giặt đồ, kiện cái nồi, giấc mơ được ghi lại). Đây là tài liệu nhiễu thuần, không phải bẫy.
+
+## 12. Nhạc
+
+`audio/07/thu_nguoi_chet.mp3`, tự sáng tác hoàn toàn bằng code (`tools/compose07.py`, dùng lại bộ tổng hợp âm thanh `tools/synth06.py`). Vòng lặp 116 giây, nối liền.
+- Thang âm D Phrygian dominant (D Eb F# G A Bb C), 66 nhịp mỗi phút.
+- Nhạc cụ: kèn sậy đôi dẫn giai điệu, đàn hạc rải một câu đi xuống mỗi ô nhịp, trống khung (nhịp tim ở đoạn A, đi rước ở đoạn B, dồn ở đoạn C), sistrum (lục lạc kim loại), dàn nam tụng trầm, nốt ngân trầm D–A, gió, tiếng rắn rít, một chùm nốt nghịch tai (D, Eb, A hạ ¼ cung) dâng lên trước cao trào, cồng.
+- Cấu trúc: dạo 4 ô nhịp, A 8, B 8, C (cao trào) 8, kết 4. Độ lớn: dạo −24 dB, A −19, B −18, C −13, kết −24.
+- Game tự làm nhạc đục dần theo mức rợn (`js/audio.js`).
