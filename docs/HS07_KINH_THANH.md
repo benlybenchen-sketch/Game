@@ -45,7 +45,9 @@
 |---|---|
 | Tháng 1 Peret | Hay đong thử lương nhà mình bằng chén hin; ghi số lên một mảnh gốm riêng. |
 | Tháng 2 Peret, ngày 11 | Toà làng xử vụ con lừa. Hay thề "nếu tôi nói dối, Meretseger sẽ bắt mắt tôi". |
-| Tháng 2 Peret, ngày 13, đêm | Hay bị đánh chết trong hành lang lăng vua. Khonsu mang ấn lên đèo, niêm lại cửa. |
+| Tháng 2 Peret, ngày 13, đêm | Hay còn sống. Tối đó Nakhtmin nói dối chỗ ở (đi gặp vợ người khác); về sau người chơi tưởng đây là đêm án mạng. |
+| Ngày 14, chiều | Hành lang chỗ xác được đục xong. |
+| Ngày 14, đêm | Hay bị đánh chết trong hành lang. Khonsu mang ấn bên Trái lên đèo, niêm lại cửa. |
 | Ngày 15 | Bên Trái mở cửa lăng, thấy xác Hay dưới hình nữ thần rắn. Cả làng nói Hay bị phạt vì thề gian. |
 | Ngày 16 | **Ngày thứ nhất của game.** Bạn lên làng. Tượng vua thần được khiêng ra xin thẻ. |
 | Ngày 19 | Userhat chết trong nhà, rắn hổ mang sừng trong hộp bút. |
