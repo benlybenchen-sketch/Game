@@ -33,7 +33,7 @@ export default [
       <p class="note">Bà Dung: “Sách của Lan. Bà giữ làm kỷ niệm.” Gáy sách sờn, trang 60–61 có dấu ngón tay cái lấm mực.</p>
       ${page(OPENING, 1)}
       <p class="note">· · ·</p>
-      ${page(NGUNG_BICH.slice(0, 20), 1031)}
+      ${page(NGUNG_BICH, 1031)}
       ${media("kieu", "hue")}
     </div>`,
   },
