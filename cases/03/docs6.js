@@ -27,6 +27,14 @@ export default [
         <p>${ln("sd_or", "Si je meurs cette nuit, mon or dormira là où personne n'ose aller.")}</p>
         <p class="right">L. N. Diệp</p>`, "fr")}
       <p class="note">Bên lề, nét chữ học trò nghiêng ngược, mực đã phai: “bà trẻ mất đêm đó.”</p>
+      <p class="note">Bạn dịch từng câu, chép vào sổ tay của mình:</p>
+      ${hand(`<p>Hàng Me, ngày 13 tháng 11 năm 1958.</p>
+        <p>Bé Dung của bà đọc được gương. Chỉ mình nó sẽ đọc được thư của bà.</p>
+        <p>Với bảng chữ của nhà mình, hai mươi chín chữ từ A tới Y, bà viết mỗi chữ bằng một quẻ.</p>
+        <p>Đọc từ dưới lên. Vạch liền đáng một, vạch đứt không đáng gì.</p>
+        <p>Vạch dưới cùng nặng nhất: đáng ba mươi hai; rồi mười sáu, tám, bốn, hai; vạch trên cùng đáng một.</p>
+        <p>Cộng lại: tổng là chỗ của chữ. Sáu vạch đứt: khoảng lặng giữa hai chữ.</p>
+        <p>Nếu bà chết đêm nay, vàng của bà sẽ ngủ ở nơi không ai dám tới.</p>`)}
     </div>`,
   },
 

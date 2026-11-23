@@ -184,3 +184,26 @@ Nguyên tắc bản 2: **Lan là đáp án "ai" ở năm câu** của bản 1, g
 - Sổ quẻ: bỏ "Phải tìm người đọc được tiếng Tây" (lý do thuê bạn phải tự suy ra).
 
 - Băng (thu lại giọng): cuộn 1 không còn Tùng tự giải "Tùng huyền… Tùng rơi" và Khiêm không còn nói "Tùng rơi"; Lan nói "để em ngồi đầu bàn" (không nói "tay chủ"); cuộn 2 Yến nói "mình nghe… gần lắm".
+
+## Bảng đủ tài liệu (luật 23, rà ngày 23/11/2026)
+
+| TĐ | Bước | Tài liệu (id) | Mở ở |
+|---|---|---|---|
+| 1 | Mã điện báo (chữ có dấu, dấu thanh) | `so_tung` | 1 |
+| 1 | Tay chủ ngồi đầu bàn; Lan ngồi đầu bàn; Lan xin ngồi đầu bàn | `so_tung`, `bien_ban_1`, `bang_1` | 1 |
+| 2 | Bảng Morse A–Z (sửa 23/11: trước chỉ có A–P), bàn gõ thử | `so_tung` | 1 |
+| 2 | Đoạn Yến chép, phần còn lại trên băng | `bien_ban_2`, `bang_2` | 2 |
+| 2 | Micro dựng trên mặt bàn; tiếng gõ thử máy; Lan đi guốc gỗ | `so_tung`, `bang_2`, `nhat_ky` | 1, 2 |
+| 3 | Bài thơ con cơ, bài thơ cuối của Yến (tàng đầu) | `bien_ban_3`, `tap_tho_yen`, `do_dac_yen` | 3 |
+| 3 | Dung thuận tay trái (bản chép đêm 7/11) | `ban_chep` | 1 |
+| 3 | Lan pha trà, Quốc ói | `bien_ban_3` | 3 |
+| 4 | Bảng 29 chữ cái, số Tô Châu (có mẹo viết ngang) | `vo_quoc` | 4 |
+| 4 | So bản chép với nhật ký hôm nay; ai giữ tủ | `ban_chep`, `nhat_ky` | 1 |
+| 5 | Hai cuốn Kiều, đánh số câu, ô tra (sửa 23/11: bản Huế in thiếu câu 1051–1052) | `kieu_khiem`, `kieu_hue` | 5 |
+| 5 | Sách Khiêm bị công an giữ; Lan dò một mình | `kieu_khiem`, `bien_ban_5` | 5 |
+| 6 | Đánh ngược, đổi kiểu điện báo | `ban_co_6`, `so_tung` | 1, 6 |
+| 6 | Xương đòn gãy cũ; hồ sơ 1966; căn cước 1970; CMND 1979 | `kham_nghiem`, `y_te_1966`, `can_cuoc_1970`, `cmnd` | 1, 6 |
+| 7 | Luật đọc quẻ (thêm bản dịch tiếng Việt 23/11; trước chỉ có tiếng Pháp) | `so_diep` | 7 |
+| 7 | Bảng 29 chữ cái | `vo_quoc` | 4 |
+| 7 | 43 quẻ | `so_que`, `ban_co_7` | 7 |
+| 7 | Nét chữ ngả trước của Lan, ngả sau của Dung | `bien_ban_7`, `bien_ban_6`, `bien_ban_1` | 1, 6, 7 |
