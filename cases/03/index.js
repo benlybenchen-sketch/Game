@@ -30,6 +30,7 @@ sfx.dungMorse = () => {
 };
 
 export const META = {
+  publicNames: ["Lâm Hạnh Dung"],   // the name on the contract, from the first page (tools/audit.mjs)
   strict: true,   // no x/y feedback, seal after wrong answers, gated hints, grade (js/main.js)
   series: "Hồ sơ Nửa Đêm",
   number: "Hồ sơ số 03",

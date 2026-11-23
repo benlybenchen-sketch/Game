@@ -40,5 +40,48 @@ for (const q of C.QUESTIONS) {
 }
 for (const d of C.DOCS) if (d.stage > C.QUESTIONS.length + 1 && !d.fail) bad(`doc ${d.id} stage ${d.stage} unreachable`);
 for (let st = 0; st < C.QUESTIONS.length; st++) if (!C.DOCS.some((d) => d.stage === st)) bad(`stage ${st} has no documents`);
+// ---------------------------------------------------------------- difficulty rules (docs/KE_HOACH.md, rules 1-15)
+// Enforced for case 03 onward (case 02 is kept as released). Each finding is a leak or an easy guess.
+// META.publicNames: names the player meets from the first page (main characters, home towns); they may be answers.
+if (Number(id) >= 3) {
+  const M = C.META, Q = C.QUESTIONS;
+  const strip = (x) => String(x ?? "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+  const low = (x) => strip(x).toLowerCase();
+  const memoOf = (q) => { try { return strip(typeof q.memo === "function" ? q.memo() : q.memo); } catch { return ""; } };
+  if (!M.strict) bad("rule 11: META.strict must be true");
+  // rule 8/12: no emphasis tags in documents or finale
+  for (const d of C.DOCS) { const h = htmlOf(d); const m = h.match(/<(b|u|em|strong|mark)(\s[^>]*)?>|<(i)>/); if (m) bad(`rule 12: doc ${d.id} uses <${m[1] || m[3]}>`); if (/class="[^"]*\bhl\b/.test(h)) bad(`rule 12: doc ${d.id} highlights a row`); }
+  if (/<(b|u|i|em|strong|mark)>/.test(String(M.finale?.html ?? ""))) bad("rule 12: finale uses emphasis tags");
+  // rule 2: one choice answer at most twice in the whole case
+  const used = {};
+  for (const q of Q) for (const p of q.parts) if (p.type === "choice" && p.options.length > 2) (used[S[q.id][p.id]] ||= []).push(`${q.id}.${p.id}`);
+  for (const [a, l] of Object.entries(used)) { const qs = new Set(l.map((x) => x.split(".")[0])); if (qs.size > 2) bad(`rule 2: "${a}" is the answer in ${qs.size} questions (${l.join(", ")})`); }
+  // rule 1: the right option must not stand out by length or by number of clauses
+  const clauses = (o) => (o.match(/[,;:(]/g) || []).length;
+  for (const q of Q) for (const p of q.parts) if (p.type === "choice" && p.options.length > 2) {
+    const a = S[q.id][p.id], others = p.options.filter((o) => o !== a);
+    const mx = Math.max(...others.map((o) => o.length));
+    if (a.length > mx + 3 && a.length > mx * 1.1) bad(`rule 1: ${q.id}.${p.id} right option is the longest (${a.length} vs ${mx})`);
+    if (clauses(a) > Math.max(...others.map(clauses))) bad(`rule 1: ${q.id}.${p.id} right option has the most clauses`);
+  }
+  // rules 3, 10, 13, 15: answers must not appear early in titles, folder names, blurb, doc labels or earlier memos
+  const known = new Set();
+  Q.forEach((q, j) => {
+    const answers = [];
+    for (const p of q.parts) { const a = S[q.id][p.id]; if (p.type === "choice") answers.push(a); else if (p.type === "text") answers.push([].concat(a)[0]); }
+    for (const a of answers) {
+      const probe = low(a).replace(/\(.*?\)/g, "").split(",")[0].trim();
+      if (probe.length < 6 || known.has(probe) || (M.publicNames || []).some((n) => probe === n.toLowerCase())) continue;
+      const places = [["blurb", M.blurb], ...Q.map((x) => [`${x.id}.title`, x.title]), ...(M.folders || []).slice(0, j + 1).map((f, k) => [`folder ${k}`, f]),
+        ...C.DOCS.filter((d) => !d.fail && !d.secret && d.stage <= j).map((d) => [`label ${d.id}`, d.label]), ...Q.slice(0, j).map((x) => [`${x.id}.memo`, memoOf(x)])];
+      for (const [where, txt] of places) if (low(txt).includes(probe)) bad(`rule 13/15: answer of ${q.id} ("${probe}") appears in ${where}`);
+    }
+    answers.forEach((a) => known.add(low(a).replace(/\(.*?\)/g, "").split(",")[0].trim()));
+  });
+  // rule 10: no presupposing words in asks and labels
+  for (const q of Q) for (const t of [q.ask, ...q.parts.map((p) => p.label)]) { const m = low(t).match(/thật ra|thật sự|không phải là|người xưng là/); if (m) bad(`rule 10: ${q.id} wording presupposes the answer ("${m[0]}")`); }
+  // rule 14: a line answer needs at least 5 pickable lines in its document
+  for (const q of Q) for (const p of q.parts) if (p.type === "line") { const d = lineHome.get(S[q.id][p.id][0]); if (d) { const n = (htmlOf(d).match(/data-line="/g) || []).length; if (n < 5) bad(`rule 14: ${q.id}.${p.id} doc ${d.id} has only ${n} pickable lines`); } }
+}
 console.log(`== ${id}: ${C.DOCS.length} docs, ${C.QUESTIONS.length} questions, ${lineHome.size} clickable lines`);
 console.log(problems.length ? problems.map((p) => "  ! " + p).join("\n") : "  ok");

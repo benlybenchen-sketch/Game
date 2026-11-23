@@ -53,10 +53,11 @@ Tô Châu 1937, trà quán đầu cầu đá bán "canh quên" cho người tị
 - Cơ chế: **game xoá thật** (qua mỗi đêm một số tài liệu đã đọc bị viết lại, không báo trước); mỗi đêm chỉ được **"khắc lên tay" 3 sự thật** không bị xoá; câu cuối ghép các sự thật người chơi đã chọn giữ.
 - Kết thúc: Nhớ lại / Quên êm (uống bát thứ bảy) / Người bán canh (bạn đứng sau quầy) / Ẩn (giữ đúng 3 sự thật từ đêm đầu đến cuối).
 
-## Quy tắc độ khó (bắt buộc từ Hồ sơ 06 trở đi)
+## Quy tắc độ khó (bắt buộc từ Hồ sơ 06 trở đi; hồ sơ 03–06 đã được rà lại theo đúng các luật này)
+`node tools/audit.mjs <id>` tự kiểm các luật 1, 2, 10–15 cho hồ sơ 03 trở đi. Hồ sơ mới chỉ được mở khi audit ra `ok`. Xem thêm `CLAUDE.md` ở gốc repo.
 Người chơi chê hồ sơ 01 "dễ đoán". Hồ sơ 02–05 đã được làm lại (bản 2). **Từ Hồ sơ 06, mọi hồ sơ phải ở mức khó cực đại ngay từ bản đầu**, theo các luật sau:
 1. **Không có phương án "dài nhất là đúng".** Mọi phương án trong một câu chọn phải dài ngang nhau, cùng giọng điệu, và mỗi phương án sai phải nghe hợp lý.
-2. **Không hỏi một tên người làm đáp án ở nhiều câu.** Hung thủ chỉ được là đáp án chọn tên tối đa 2 lần; các câu khác đòi **bấm đúng câu bằng chứng**, tự gõ, tính toán hoặc sắp thứ tự.
+2. **Không hỏi một tên người làm đáp án ở nhiều câu.** Mỗi đáp án (tên người hay bất cứ phương án nào) chỉ được đúng ở tối đa 2 trọng điểm, và hung thủ không được lộ (kể cả qua lời nhắn) trước trọng điểm áp chót; các câu khác đòi **bấm đúng câu bằng chứng**, tự gõ, tính toán hoặc sắp thứ tự.
 3. **Câu hỏi và ghi chép giữa các câu không được nói trước đáp án**: không có các chữ như "lỡ miệng", "người em", "có hai…"; dòng chữ ma không được trùng đáp án câu đang mở.
 4. **Mỗi câu ít nhất một bẫy bằng giấy tờ**: nghi phạm giả có động cơ, tài liệu bị nhoè hoặc sửa, đồng hồ lệch, năm nhuận, can chi, chiều tàu, hai người trùng tên hoặc trùng dấu vết.
 5. **Ít nhất một câu cần ghép từ 3 tài liệu trở lên**, và ít nhất một câu có phương án "hồ sơ hiện có chưa cho biết" là đáp án đúng.
