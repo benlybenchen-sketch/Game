@@ -71,6 +71,13 @@ Người chơi chê hồ sơ 01 "dễ đoán". Hồ sơ 02–05 đã được l�
 13. **Tên trọng điểm và tên tài liệu không được chứa đáp án** hay chỉ hướng (ví dụ "Tùng rơi", "Soi gương", "hỏi chuyện về người dì", "bản đủ 3.254 câu").
 14. **Câu bấm phải có mồi:** tài liệu chứa câu đáp án phải có ít nhất 5 câu bấm được, phần lớn là câu nhiễu nghe hợp lý.
 15. **Lời nhắn giữa các trọng điểm** chỉ được tóm điều đã giải, không được nói trước đáp án trọng điểm kế tiếp.
+16. **Không đánh tráo danh tính.** Hồ sơ 03, 04, 06 đều xoay quanh người chết còn sống hoặc người đội tên người khác; người chơi đã quen. Từ hồ sơ 07 không dùng nữa. Được gài mồi cho người chơi tưởng có, rồi phá giữa hồ sơ.
+17. **Người thuê bạn hoặc chủ nhà vô tội.** Hồ sơ 03, 04, 06 người thuê đều có tội. Từ hồ sơ 07 người thuê vô tội, có thể chết giữa chừng.
+18. **Hai vụ chồng lên nhau:** một người dựng chuyện ma (động cơ riêng, không giết ai), một người giết và mượn chuyện ma làm bình phong.
+19. **Mỗi trọng điểm lật kết luận của trọng điểm trước:** đáp án đúng, nhưng điều người chơi suy ra từ đáp án phải bị trọng điểm sau đánh đổ.
+20. **Không nhân vật nào phủ nhận điều người chơi chưa nghi** (lỗi "Lan chết rồi cháu" ở hồ sơ 03: càng chối càng lộ).
+21. **Hung thủ là người xuất hiện nhiều nhưng ở vai việc vặt**, tên không làm đáp án trước trọng điểm áp chót; manh mối công bằng có từ sớm nhưng chỉ đọc ra khi ghép với tài liệu cuối.
+22. **Phần siêu nhiên không được giải thích hết:** giữ lại đúng một hiện tượng không ai lý giải, để người chơi không dựa được vào "mọi thứ ma quái đều do người làm".
 
 ## Quy tắc âm thanh và cảnh doạ (áp dụng cho mọi hồ sơ từ nay về sau)
 - Mọi hiệu ứng âm thanh đi qua bus `fx` trong `js/audio.js` (khuếch đại lớn, có limiter): luôn ở mức tối đa mà không vỡ tiếng. Hiệu ứng mới chỉ cần gọi `tone`/`noiseHit`/`sfx.*` là tự to.
