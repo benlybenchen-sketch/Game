@@ -1,6 +1,6 @@
 // Case 03, night 1 (Sunday 7/11/2004): the contract, Tùng's notebook, the first session of 1971, Dung's diary.
 import { ln, stamp, pic, hand, media } from "../../js/kit.js";
-import { MORSE } from "./cipher.js";
+import { MORSE, MORSE_KEYS, morseGlyph } from "./cipher.js";
 import { callName, fullName } from "./name.js";
 import { diaryNow, diaryHtml, diaryCopyHtml } from "./diary.js";
 import { boardArt } from "./art.js";
@@ -101,7 +101,7 @@ export default [
       </table>
       ${hand(`Dấu thanh luôn đánh ở cuối chữ. Thí dụ: “Sài Gòn” → SAIF GOFN. “Bạch Lan” → BACHJ LAN. “Thư” → THUW.`)}
       <h4>2. Morse (cho tụi bây chơi gõ cửa)</h4>
-      <div class="morse-grid">${Object.entries(MORSE).slice(0, 26).map(([k, v]) => `<span>${k} ${v.replace(/\./g, "·").replace(/-/g, "—")}</span>`).join("")}</div>
+      <div class="morse-grid">${MORSE_KEYS.slice(0, 26).map((k) => `<span>${k}&nbsp; ${morseGlyph(MORSE[k])}</span>`).join("")}</div>
       ${hand(`Chấm là gõ ngắn, gạch là gõ dài. Giữa hai chữ cái nghỉ một nhịp, giữa hai chữ nghỉ lâu hơn. Chữ có dấu thì cũng gõ theo kiểu điện báo ở trên.`)}
       ${media("morsepad", "pad")}
       <h4>3. Cách ngồi cơ</h4>

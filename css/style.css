@@ -431,7 +431,7 @@ body[data-case="03"] .doc--notebook .note, body[data-case="03"] .doc--diary .not
 .su { font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", "Noto Sans CJK TC", sans-serif; font-size: 1.25em; color: #6d1a12; letter-spacing: .05em; }
 .paper-note .su { font-size: 30px; line-height: 1.6; }
 .tbl--code td, .tbl--code th { text-align: center; font-family: var(--mono); }
-.morse-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 2px 10px; font: 14px var(--mono); margin: 6px 0 12px; }
+.morse-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 2px 10px; font: 14px var(--mono); margin: 6px 0 12px; }
 .morse-grid b { display: inline-block; width: 1.3em; }
 .tbl--alpha, .tbl--su { table-layout: fixed; }
 .tbl--alpha td, .tbl--su td { text-align: center; padding: 3px 1px; font-family: var(--mono); }
@@ -491,7 +491,7 @@ body[data-case="03"] .doc--notebook .note, body[data-case="03"] .doc--diary .not
 .mpad { background: rgba(60,40,10,.08); padding: 10px; margin: 8px 0; }
 .mpad-head { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 13px; margin-bottom: 8px; }
 .mpad-head .btn.on { outline: 2px solid var(--red2); }
-.mpad-keys { display: grid; grid-template-columns: repeat(auto-fill, minmax(62px, 1fr)); gap: 4px; }
+.mpad-keys { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 4px; }
 .mpad-key { background: #f3ecd9; border: 1px solid #b3a57f; border-radius: 3px; padding: 3px; font: 12px var(--mono); color: var(--paper-ink); cursor: pointer; }
 .mpad-key b { display: block; font-size: 15px; } .mpad-key:active { background: #e0cfa2; }
 

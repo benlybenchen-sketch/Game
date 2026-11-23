@@ -37,6 +37,10 @@ export const MORSE = {
   N: "-.", O: "---", P: ".--.", Q: "--.-", R: ".-.", S: "...", T: "-", U: "..-", V: "...-", W: ".--", X: "-..-", Y: "-.--", Z: "--..",
   0: "-----", 1: ".----", 2: "..---", 3: "...--", 4: "....-", 5: ".....", 6: "-....", 7: "--...", 8: "---..", 9: "----.",
 };
+/** Letters first, then digits (integer-like keys would otherwise come first). */
+export const MORSE_KEYS = [...Object.keys(MORSE).filter((k) => /[A-Z]/.test(k)), ...Object.keys(MORSE).filter((k) => /[0-9]/.test(k))];
+/** ".--" -> "· — —": spaced so two dashes never run together into one long bar. */
+export const morseGlyph = (code) => [...code].map((c) => (c === "." ? "·" : "—")).join(" ");
 /** "EM LANHJ" -> ". -- / .-.. .- -. .... .---" ("/" between words). */
 export const morse = (telexText) => telexText.split(" ").map((w) => [...w].map((c) => MORSE[c]).join(" ")).join(" / ");
 

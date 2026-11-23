@@ -4,7 +4,7 @@ import { state, save } from "../../js/store.js";
 import { ctx, sfx, morseKnocks, out } from "../../js/audio.js";
 import { base } from "../../js/case.js";
 import { jumpScare, level } from "../../js/dread.js";
-import { MORSE, morse, telex, hexagrams } from "./cipher.js";
+import { MORSE, MORSE_KEYS, morseGlyph, morse, telex, hexagrams } from "./cipher.js";
 import { coName, hexName } from "./name.js";
 import { diaryNow, diaryCopyHtml, diaryHtml } from "./diary.js";
 import { edition } from "./kieu.js";
@@ -57,7 +57,7 @@ const POS = (() => {
 const label = (k) => ({ CO: "CÓ", KHONG: "KHÔNG", END: "TẠM BIỆT" }[k] || k);
 
 function transcript(mode, toks) {
-  if (mode === "knock") return toks.map((t) => ({ ".": "·", "-": "—", " ": "  ", "/": "   /   " }[t])).join("");
+  if (mode === "knock") return toks.map((t) => ({ ".": "·", "-": "—", " ": "   ", "/": "   /   " }[t])).join(" ").replace(/ {4,}\/ {4,}/g, "    /    ");
   if (mode === "hex") return toks.map((t) => (t === "_" ? " | " : label(t))).join(" ").replace(/ \| /g, " │ ").replace(/\s+│\s+/g, "  │  ");
   if (mode === "digits") return toks.map((t) => (t === "_" ? " " : t === "|" ? "   ·   " : t)).join("");
   return toks.map((t) => (t === "_" ? " " : t === "|" ? "   " : t)).join("");
@@ -181,7 +181,7 @@ export function morsepad(el) {
   el.innerHTML = `<div class="mpad">
     <div class="mpad-head">Bấm một chữ để nghe nó gõ.
       <button class="btn btn--small on" data-k="cup">Chén gõ mặt bàn</button><button class="btn btn--small" data-k="heel">Gót guốc gõ sàn</button></div>
-    <div class="mpad-keys">${Object.keys(MORSE).map((c) => `<button class="mpad-key" data-m="${c}">${c}<span>${MORSE[c].replace(/\./g, "·").replace(/-/g, "—")}</span></button>`).join("")}</div></div>`;
+    <div class="mpad-keys">${MORSE_KEYS.map((c) => `<button class="mpad-key" data-m="${c}">${c}<span>${morseGlyph(MORSE[c])}</span></button>`).join("")}</div></div>`;
   el.addEventListener("click", (e) => {
     const k = e.target.closest("[data-k]");
     if (k) { kind = k.dataset.k; el.querySelectorAll("[data-k]").forEach((b) => b.classList.toggle("on", b === k)); return; }
