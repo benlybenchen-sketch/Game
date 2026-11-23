@@ -10,7 +10,7 @@ export const tape = (id, stage, label, note, extra = {}) => ({
 /** Hán character with its Hán-Việt reading underneath. */
 export const hv = (han, viet) => `<ruby>${han}<rt>${viet}</rt></ruby>`;
 
-const PILLARS = [["庚申", "Canh Thân"], ["戊寅", "Mậu Dần"], ["庚子", "Canh Tý"], ["己卯", "Kỷ Mão"]];
+export const PILLARS = [["庚申", "Canh Thân"], ["戊寅", "Mậu Dần"], ["庚子", "Canh Tý"], ["己卯", "Kỷ Mão"]];
 
 /** Almanac rows: solar date, lunar date, day pillar, solar term (with hour). */
 const JAN = [
@@ -18,7 +18,7 @@ const JAN = [
   ["14/1", "24 tháng Một", "Tân Mùi"], ["15/1", "25 tháng Một", "Nhâm Thân"], ["16/1", "26 tháng Một", "Quý Dậu"], ["17/1", "27 tháng Một", "Giáp Tuất"],
   ["18/1", "28 tháng Một", "Ất Hợi"], ["19/1", "29 tháng Một", "Bính Tý"], ["20/1", "30 tháng Một", "Đinh Sửu"], ["21/1", "1 tháng Chạp", "Mậu Dần", "Đại Hàn · 16 giờ 04"],
 ];
-const FEB = [
+export const FEB = [
   ["1/2", "12 tháng Chạp", "Kỷ Sửu"], ["2/2", "13 tháng Chạp", "Canh Dần"], ["3/2", "14 tháng Chạp", "Tân Mão"], ["4/2", "15 tháng Chạp", "Nhâm Thìn"],
   ["5/2", "16 tháng Chạp", "Quý Tỵ", "LẬP XUÂN · 10 giờ 26"], ["6/2", "17 tháng Chạp", "Giáp Ngọ"], ["7/2", "18 tháng Chạp", "Ất Mùi"], ["8/2", "19 tháng Chạp", "Bính Thân"],
   ["9/2", "20 tháng Chạp", "Đinh Dậu"], ["10/2", "21 tháng Chạp", "Mậu Tuất"], ["11/2", "22 tháng Chạp", "Kỷ Hợi"], ["12/2", "23 tháng Chạp", "Canh Tý"],

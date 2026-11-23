@@ -40,7 +40,16 @@ const LOST = {
 
 export const META = {
   strict: true,
-  timeLimit: 240,          // minutes on the countdown (default 150)
+  timeLimit: 240,
+  // Escape-room puzzles (rule 25, numbers from docs/CAU_DO.md).
+  puzzles: [
+    { n: 15, q: "q2", name: "Tự dựng chữ số hieratic và phân số mắt Horus từ vở học trò" },
+    { n: 26, q: "q4", name: "Dòng chữ đố trên vách, đọc bằng bảng hình của Hay" },
+    { n: 6, q: "q5", tool: "fragments", media: "fragments", name: "Ghép mảnh dấu niêm với mẫu ấn" },
+    { n: 12, q: "q5", tool: "lockbox", media: "ruong", chain: "q1", name: "Hòm bốn then số của Userhat" },
+    { n: 23, q: "q6", tool: "pour", media: "pour", name: "Đổ nước bằng chén hin vào ba cái đấu" },
+    { n: 1, q: "q6", tool: "blocks", media: "sticks", chain: "q3", name: "Bốn thanh gỗ khắc chữ, xếp theo bài ru" },
+  ],          // minutes on the countdown (default 150)
   series: "Hồ sơ Nửa Đêm",
   number: "Hồ sơ số 07",
   title: "Thư gửi người chết",

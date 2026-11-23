@@ -97,7 +97,7 @@ export function lockbox(el, cfg) {
       delete st.code;
     }
     el.innerHTML = `<div class="pz-lock">
-      <div class="pz-rings">${cfg.rings.map((ring, i) => `<div class="pz-ring"><button class="btn btn--small" data-r="${i}" data-d="-1">▲</button><div class="pz-sym">${label(ring[st.pos[i]])}</div><button class="btn btn--small" data-r="${i}" data-d="1">▼</button></div>`).join("")}</div>
+      <div class="pz-rings">${cfg.rings.map((ring, i) => `<div class="pz-ring"><button class="btn btn--small" data-r="${i}" data-d="-1">▲</button><div class="pz-sym" data-v="${esc(String(ring[st.pos[i]]))}">${label(ring[st.pos[i]])}</div><button class="btn btn--small" data-r="${i}" data-d="1">▼</button></div>`).join("")}</div>
       <button class="btn" data-open="1">Thử mở</button> <span class="pz-msg small muted"></span></div>`;
   };
   draw();

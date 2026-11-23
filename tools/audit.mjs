@@ -85,4 +85,16 @@ if (Number(id) >= 3) {
   for (const q of Q) for (const p of q.parts) if (p.type === "line") { const d = lineHome.get(S[q.id][p.id][0]); if (d) { const n = (htmlOf(d).match(/data-line="/g) || []).length; if (n < 5) bad(`rule 14: ${q.id}.${p.id} doc ${d.id} has only ${n} pickable lines`); } }
 }
 console.log(`== ${id}: ${C.DOCS.length} docs, ${C.QUESTIONS.length} questions, ${lineHome.size} clickable lines`);
+// rule 25: escape-room puzzles (cases 04+). META.puzzles = [{ n: <type in docs/CAU_DO.md>, q: "qX", tool?: "lockbox"|"blocks"|"grille"|..., chain?: "qY" }]
+if (+id >= 4) {
+  const P = C.META.puzzles || [];
+  if (new Set(P.map((p) => p.n)).size < 3) bad("rule 25: fewer than 3 puzzle types in META.puzzles");
+  if (!P.some((p) => p.tool)) bad("rule 25: no interactive puzzle");
+  if (!P.some((p) => p.chain)) bad("rule 25: no chained puzzle (result of one opens another)");
+  for (const p of P) {
+    if (!C.QUESTIONS.some((q) => q.id === p.q)) bad(`rule 25: puzzle ${p.n} points to unknown ${p.q}`);
+    if (p.tool && p.media && !C.MEDIA?.[p.media]) bad(`rule 25: puzzle ${p.n} widget "${p.media}" not in MEDIA`);
+    if (p.tool === "lockbox" && !(S.locks && S.locks[p.media])) bad(`rule 25: lock ${p.media} has no code in secret.locks`);
+  }
+}
 console.log(problems.length ? problems.map((p) => "  ! " + p).join("\n") : "  ok");

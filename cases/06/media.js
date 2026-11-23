@@ -2,8 +2,8 @@
 // Beads that count are pushed against the beam. The rod with the red dot is the unit of đồng bạc; the two rods to its right are hào and xu.
 
 /** Values shown in the broker's ledger, digits from the leftmost rod (hundreds) to the rightmost (xu). */
-const ABACI = { ly: [0, 2, 5, 0, 0], vuong: [0, 7, 0, 0, 0], trieu: [0, 4, 0, 0, 0], hoan: [0, 3, 2, 0, 0] };
-const UNIT = 2;   // index of the rod marked with the red dot
+export const ABACI = { ly: [0, 2, 5, 0, 0], vuong: [0, 7, 0, 0, 0], trieu: [0, 4, 0, 0, 0], hoan: [0, 3, 2, 0, 0] };
+export const UNIT = 2;   // index of the rod marked with the red dot
 
 function rod(x, d) {
   const up = d >= 5 ? 1 : 0, low = d % 5, beads = [];

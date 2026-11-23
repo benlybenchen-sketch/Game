@@ -38,6 +38,12 @@ const LOST_TEXT = {
 export const META = {
   strict: true,   // no x/y feedback, countdown with time penalties, gated hints, grade (js/main.js)
   timeLimit: 240, // minutes on the countdown (default 150)
+  // Escape-room puzzles (rule 25, numbers from docs/CAU_DO.md).
+  puzzles: [
+    { n: 15, q: "q3", name: "Mật áp theo Thiên Tự Văn (bảng chữ thay số)" },
+    { n: 27, q: "q6", name: "Câu đố chiết tự" },
+    { n: 13, q: "q6", tool: "lockbox", media: "hop_son", chain: "q1", name: "Hộp sơn mài khoá chữ can, mã là bát tự trên canh thiếp" },
+  ],
   series: "Hồ sơ Nửa Đêm",
   number: "Hồ sơ số 06",
   title: "Âm Hôn",

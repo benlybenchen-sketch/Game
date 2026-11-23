@@ -4,7 +4,7 @@ import { ln, stamp, pic, hand } from "../../js/kit.js";
 import { hv } from "./docs0.js";
 
 /** The first 80 characters of the Thousand Character Classic, in lines of four, with Hán-Việt readings. */
-const TTV = [
+export const TTV = [
   ["天地玄黃", "thiên địa huyền hoàng"], ["宇宙洪荒", "vũ trụ hồng hoang"], ["日月盈昃", "nhật nguyệt doanh trắc"], ["辰宿列張", "thần tú liệt trương"],
   ["寒來暑往", "hàn lai thử vãng"], ["秋收冬藏", "thu thu đông tàng"], ["閏餘成歲", "nhuận dư thành tuế"], ["律呂調陽", "luật lữ điệu dương"],
   ["雲騰致雨", "vân đằng trí vũ"], ["露結為霜", "lộ kết vi sương"], ["金生麗水", "kim sinh lệ thuỷ"], ["玉出崑岡", "ngọc xuất côn cương"],

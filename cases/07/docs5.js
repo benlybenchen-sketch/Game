@@ -45,7 +45,7 @@ export default [
 
   {
     id: "thanh_go", stage: 5, kind: "Vật chứng", icon: "▥", label: "Bốn thanh gỗ khắc chữ trong bụng con búp bê",
-    html: () => `<div class="doc doc--plain"><p class="note">Nhét chung với mảnh gốm trong bụng con búp bê của bé Tuy. Bốn thanh gỗ vuông, mỗi thanh khắc bảy hàng hình nhỏ. Bà đọc từng hình theo âm đầu, như trang cuối vở của Hay, rồi chép lại bằng chữ của bà. Thanh nào cũng có một đầu sơn đen.</p>${media("sticks", "hay")}</div>`,
+    html: () => `<div class="doc doc--plain"><p class="note">Nhét chung với mảnh gốm trong bụng con búp bê của bé Tuy. Bốn thanh gỗ vuông, mỗi thanh khắc bảy hàng hình nhỏ. Bà chép lại từng hàng bằng chữ của bà. Thanh nào cũng có một đầu sơn đen.</p>${media("sticks", "hay")}</div>`,
   },
 
   {
