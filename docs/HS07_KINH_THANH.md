@@ -184,3 +184,26 @@ Không ảnh nào vẽ người bằng code. Tranh tường, tượng có hình 
 - Duyệt cốt truyện và hung thủ.
 - Tên hồ sơ: "Thư gửi người chết" hay "Nơi của Chân lý"?
 - Duyệt các kết thúc.
+
+## 11. Tài liệu nhiễu (bản 4, theo yêu cầu "nhiều nhiễu để lọc")
+
+Mỗi hệ tra cứu có ít nhất gấp đôi số mục thật sự cần. Phần lớn mục nhiễu đều hợp lý và có số liệu đầy đủ, để người chơi không loại được chúng chỉ bằng cảm giác.
+
+| Hệ | Mục cần dùng | Tổng số mục trong game | Mục nhiễu nguy hiểm nhất |
+|---|---|---|---|
+| Sách rắn | 1 (rắn hổ mang sừng) | 14 loài có thật ở Ai Cập: hổ mang sừng, lục sa mạc không sừng, lục thảm (vảy cưa), lục sừng giả Sinai, hổ mang Ai Cập, hổ mang phun nọc Nubia, rắn đen sa mạc, rắn hang, rắn mắt mèo, rắn roi, rắn cát, trăn cát, rắn mũi xẻng, rắn nước sông Nile | Lục sừng giả: "sừng" là chùm vảy, khoảng cách răng gần bằng; khác ở đuôi và ở mùa hoạt động |
+| Bát thư gửi người chết | 2 bát của Nebetiunet + 3 "thư trả lời" | 9 bát và 6 mảnh "trả lời": nhiều nhà trong làng cùng viết cho người thân đã khuất (xin con, đòi nợ, xin hết bệnh) | Một bát của vợ Nakhtmin gửi mẹ chồng đã chết, chữ rất giống chữ Nebetiunet |
+| Sổ điểm danh | Tuần có đêm 13–14 | 3 tuần, hai bản (ký lục và đốc công), 40 thợ | Một thợ khác cũng vắng "ủ bia" đêm 14 |
+| Sổ cấp bấc đèn | Lều Nakhtmin, lều Sennefer, lều Hay, nhà Userhat | 22 lều và nhà, 3 tuần | Lều thợ đục Pentaweret đốt nhiều bấc bất thường (ông ốm, có ghi ở sổ điểm danh) |
+| Bảng lương | 3 tháng | 3 tháng × 2 bên × khoảng 40 người, có ô vỡ | Hai nhà bị thiếu thêm vì vay lúa của nhau (có giấy vay) |
+| Vở học trò | 6 trang | 10 trang: thêm bài chia bánh mì, bài tính dốc kim tự tháp, bài chép văn mẫu | Trang chép bài mắt Horus có một giá trị bị viết sai mà thầy không sửa |
+| Mẫu ấn | Ấn bên Phải, ấn bên Trái | 7 ấn: ấn của Lăng (2 bên), ấn kho đền, ấn nhà nguyện, ấn tể tướng, ấn nhà ký lục, ấn kho bến | Ấn kho bến giống ấn bên Trái ở 4/5 chi tiết |
+| Mảnh dấu niêm | 5 mảnh | 8 mảnh: 3 mảnh từ một cục niêm khác (cửa kho) | Một mảnh lạ khớp mép với mảnh thật |
+| Sổ việc cổng | 1 dòng (mang ấn lên đèo) | 3 tuần, mỗi tối 4–6 việc | |
+| Sổ tiến độ đục lăng | Ngày 13–14 | 20 ngày, 3 hành lang, cả hai bên | Hành lang bên Phải đục xong đúng đêm 13 (đúng con số nhưng khác hành lang) |
+| Sổ thầy bắt rắn | 1 dòng | 25 dòng: bán rắn cho người làm bùa, thầy thuốc, đền | Một dòng bán rắn lục sa mạc cho chính Nebetiunet (để làm bùa trừ tà, ghi rõ) |
+| Thẻ bao lúa | Nét số của người nhận ở bến | 12 thẻ, 3 người viết | |
+| Lời khai | | 14 người | Mỗi nghi phạm giả có một lời khai có chỗ sai thật (nói dối vì chuyện khác) |
+| Đồ vật trong nhà Userhat | Hộp bút | 12 món, nhiều món "có vẻ" là manh mối (con dao, lọ thuốc, bùa) | |
+
+Ngoài ra, mỗi trọng điểm có 2–3 tài liệu không dùng tới ở trọng điểm nào (đời sống làng: thuê lừa, giặt đồ, kiện cái nồi, giấc mơ được ghi lại). Đây là tài liệu nhiễu thuần, không phải bẫy.
