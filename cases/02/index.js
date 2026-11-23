@@ -16,7 +16,7 @@ export const MEDIA = { vhs, room, roll };
 export const ART = { ghostFace };
 
 export const META = {
-  strict: true,   // no x/y feedback, seal after wrong answers, gated hints, grade (js/main.js)
+  strict: true,   // no x/y feedback, countdown with time penalties, gated hints, grade (js/main.js)
   series: "Hồ sơ Nửa Đêm",
   number: "Hồ sơ số 02",
   title: "Đêm giỗ Tổ",

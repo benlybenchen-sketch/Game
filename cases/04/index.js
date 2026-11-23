@@ -24,7 +24,7 @@ export const tapeSuffix = (id, i) => (TAPES[id]?.segs[i]?.dose && dose() > 0 ? `
 
 export const META = {
   publicNames: ["Bà Hoa", "Lê Thị Hoa", "Sài Gòn"],   // the mother and the city she went to, from the first page (tools/audit.mjs)
-  strict: true,   // no x/y feedback, seal after wrong answers, gated hints, grade (js/main.js)
+  strict: true,   // no x/y feedback, countdown with time penalties, gated hints, grade (js/main.js)
   series: "Hồ sơ Nửa Đêm",
   number: "Hồ sơ số 04",
   title: "Người mẹ khác",

@@ -32,6 +32,7 @@ const LOST = {
 
 export const META = {
   strict: true,
+  timeLimit: 240,          // minutes on the countdown (default 150)
   series: "Hồ sơ Nửa Đêm",
   number: "Hồ sơ số 07",
   title: "Thư gửi người chết",

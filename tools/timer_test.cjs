@@ -39,6 +39,23 @@ const CASE = process.env.CASE || "07";
   await p.click('[data-dlg="ok"]'); await p.waitForTimeout(500);
   const st = await p.evaluate((k) => JSON.parse(localStorage.getItem(k)), key);
   console.log("after restart:", await p.evaluate(() => document.body.dataset.screen), "| stage", st.stage, "| started", st.started, "| timeout", st.timeout, "| timeouts", st.timeouts, "| timeLeft", st.timeLeft);
+  // Penalties count over the whole case: one earlier wrong answer elsewhere -> the next one costs 5 minutes.
+  await p.click('[data-cv="go"]').catch(() => {}); await p.waitForTimeout(400);
+  if (await p.isVisible("input[data-sign]")) { await p.fill("input[data-sign]", "Thử"); await p.click('[data-dlg="ok"]'); await p.waitForTimeout(300); }
+  await p.evaluate(([k, q]) => {
+    const s = JSON.parse(localStorage.getItem(k)); const r = {};
+    for (const part of q.parts) {
+      if (part.type === "choice") r[part.id] = part.options[part.options.length - 1];
+      else if (part.type === "number" || part.type === "text") r[part.id] = "999";
+      else if (part.type === "line") { r[part.id] = "zz"; r[part.id + "Text"] = "zz"; }
+      else if (part.type === "pins") r.pins = Array.from({ length: part.count }, (_, i) => `x${i}`);
+    }
+    s.resp = { [q.id]: r }; s.tries = { q_other: 1 }; s.started = true; localStorage.setItem(k, JSON.stringify(s));
+  }, [key, S]);
+  await p.reload(); await p.waitForTimeout(600); await p.click('[data-cv="go"]'); await p.waitForTimeout(600);
+  const a2 = await left(); await p.click('.q-card.open [data-act="submit"]'); await p.waitForTimeout(400);
+  const t2 = Math.round((a2 - (await left())) / 60);
+  console.log("cumulative: after one wrong answer on another question, this one cost", t2, t2 === 5 ? "(ok)" : "(WRONG)");
   console.log(errs.length ? "errors: " + errs.join("; ") : "no errors");
   await b.close();
 })();

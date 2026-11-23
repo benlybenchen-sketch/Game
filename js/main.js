@@ -21,9 +21,11 @@ const flawless = () => !Object.values(state.tries || {}).some(Boolean) && !Objec
 
 // ---------------------------------------------------------------- strict mode (META.strict, cases 02+)
 // No "x/y parts right" feedback, hints only after 2 misses, the solution after 4, a grade at the end, and a countdown:
-// each case gets 150 minutes of play (counted only while the desk is open and the tab is visible). A wrong answer costs
-// 3, then 5, then 10 minutes on the same question (never more than 10). At zero: game over, the run must start again.
-const TIME_TOTAL = 150 * 60;
+// each case gets META.timeLimit minutes of play (150 by default; counted only while the desk is open and the tab is visible).
+// Wrong answers cost 3, then 5, then 10 minutes, counted over the whole case (never more than 10). At zero: game over,
+// the run must start again.
+const TIME_TOTAL_MIN = () => META.timeLimit || 150;
+const TIME_TOTAL = () => TIME_TOTAL_MIN() * 60;
 const PENALTY_MIN = [3, 5, 10];
 const HINT_AFTER = 2, SOLVE_AFTER = 4;
 const fmtT = (s) => { s = Math.max(0, Math.ceil(s)); const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60); return `${h}:${String(m).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`; };
@@ -34,29 +36,30 @@ function paintTimer() {
   if (!el) { const mid = $(".top-mid"); if (!mid) return; el = document.createElement("span"); el.className = "top-timer"; mid.appendChild(el); }
   if (!META.strict) { el.hidden = true; return; }
   el.hidden = false;
-  const left = state.timeLeft ?? TIME_TOTAL;
+  const left = state.timeLeft ?? TIME_TOTAL();
   el.textContent = state.timeout ? "⏳ HẾT GIỜ" : `⏳ ${fmtT(left)}`;
   el.classList.toggle("low", left <= 600 || !!state.timeout);
-  el.title = "Thời gian còn lại của hồ sơ. Nộp sai bị trừ 3, 5, rồi 10 phút.";
+  el.title = "Thời gian còn lại của hồ sơ. Nộp sai bị trừ 3, 5, rồi 10 phút mỗi lần.";
 }
 function tickTimer() {
   const now = performance.now(), dt = (now - lastTick) / 1000; lastTick = now;
   if (!timerOn() || document.hidden || document.body.dataset.screen !== "desk") return paintTimer();
-  state.timeLeft = Math.max(0, (state.timeLeft ?? TIME_TOTAL) - Math.min(dt, 5));
+  state.timeLeft = Math.max(0, (state.timeLeft ?? TIME_TOTAL()) - Math.min(dt, 5));
   if (now - lastSave > 5000) { lastSave = now; save(); }
   paintTimer();
   if (state.timeLeft <= 0) gameOver();
 }
 function startTimer() {
   if (!META.strict) return paintTimer();
-  if (state.timeLeft == null) state.timeLeft = TIME_TOTAL;
+  if (state.timeLeft == null) state.timeLeft = TIME_TOTAL();
   clearInterval(timerId); lastTick = performance.now(); timerId = setInterval(tickTimer, 1000); paintTimer();
   if (state.timeout) setTimeout(gameOverDialog, 300);
 }
-/** Takes minutes off the clock for a wrong answer; returns the minutes taken. */
-function penalize(n) {
-  const min = PENALTY_MIN[Math.min(n - 1, PENALTY_MIN.length - 1)];
-  state.timeLeft = Math.max(0, (state.timeLeft ?? TIME_TOTAL) - min * 60);
+/** Takes minutes off the clock for a wrong answer (n-th wrong answer of the whole case); returns the minutes taken. */
+function penalize() {
+  const n = Object.values(state.tries || {}).reduce((a, b) => a + (Number(b) || 0), 0);
+  const min = PENALTY_MIN[Math.max(0, Math.min(n - 1, PENALTY_MIN.length - 1))];
+  state.timeLeft = Math.max(0, (state.timeLeft ?? TIME_TOTAL()) - min * 60);
   return min;
 }
 function gameOver() {
@@ -199,7 +202,7 @@ function showCover() {
         <li>Một số câu hỏi bắt bạn <b>chỉ ra câu nói dối</b>: bấm “Chọn câu”, rồi bấm vào đúng câu trong lời khai.</li>
         <li>Trả lời đúng thì hồ sơ mới mở ra. Mỗi lần như thế, đêm lại khuya hơn… và quanh bạn có thêm thứ gì đó.</li>
         ${META.strict
-          ? `<li><b>Bạn có 150 phút</b> cho cả hồ sơ (đồng hồ chỉ chạy khi bàn làm việc đang mở). <b>Không ai báo bạn đúng mấy mục.</b> Mỗi lần nộp sai ở cùng một trọng điểm bị trừ 3, rồi 5, rồi 10 phút. Hết giờ là thua, phải chơi lại từ đầu.</li>
+          ? `<li><b>Bạn có ${TIME_TOTAL_MIN()} phút</b> cho cả hồ sơ (đồng hồ chỉ chạy khi bàn làm việc đang mở). <b>Không ai báo bạn đúng mấy mục.</b> Lần nộp sai đầu tiên bị trừ 3 phút, lần thứ hai 5 phút, từ lần thứ ba mỗi lần 10 phút, tính chung cả hồ sơ. Hết giờ là thua, phải chơi lại từ đầu.</li>
         <li><b>Gợi ý</b> chỉ mở sau ${HINT_AFTER} lần nộp sai, <b>lời giải</b> sau ${SOLVE_AFTER} lần. Dùng chúng là tụt hạng thám tử và mất kết thúc ẩn.</li>`
           : `<li>Bí quá thì dùng <b>gợi ý</b>. Đến lúc tuyệt vọng thì có <b>lời giải</b>.</li>`}
       </ol><p class="small muted">Tiến trình được lưu trên trình duyệt này.</p></details>
@@ -405,7 +408,7 @@ function submit() {
   const n = (state.tries[q.id] = (state.tries[q.id] || 0) + 1);
   let msg = META.wrongFor ? META.wrongFor(n) : WRONG[(n - 1) % WRONG.length];   // a case may word its own reaction
   if (META.strict) {
-    const min = penalize(n);
+    const min = penalize();
     msg += ` Đồng hồ bị trừ ${min} phút.`;
     if (n === HINT_AFTER) msg += " Gợi ý đã mở.";
     if (n === SOLVE_AFTER) msg += " Lời giải đã mở.";
