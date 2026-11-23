@@ -48,6 +48,17 @@ const STEMS = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "�
   await moveTo("ba rãnh", 0); await moveTo("chấm đỏ", 1); await moveTo("chấm đen", 2);
   const got = await read();
   console.log("07 sticks arranged read:", got, got === "CAIDAUOCONGTHIEUHAICHENRUOINUOCDUNGDONGLUAOCONGNUAHAYNHO" ? "(ok)" : "(WRONG)");
+  // 04 torn strips: target = Dải 2, Dải 4, Dải 1 (turned), Dải 3
+  await mount("04", "giay_xe");
+  await p.click('[data-turn="0"]');
+  await moveTo("Dải 2", 0); await moveTo("Dải 4", 1); await moveTo("Dải 1", 2);
+  const g04 = await read();
+  console.log("04 strips arranged read:", g04, g04 === "TOAXUXONGBANNHAVUONROIVESAIGON" ? "(ok)" : "(WRONG)");
+  // 05 darkroom card: lay it on, read the holes, turn three times
+  await mount("05", "grille");
+  await p.click('[data-g="on"]'); let g05 = "";
+  for (let t = 0; t < 4; t++) { g05 += await p.evaluate(() => [...document.querySelectorAll(".pz-hole")].map((x) => x.textContent).join("")); if (t < 3) await p.click('[data-g="turn"]'); }
+  console.log("05 card read:", g05, g05 === "CONNOIDOIBOCONHOTHAYMECONSOLAMBOOIXX" ? "(ok)" : "(WRONG)");
   console.log(errs.length ? "errors: " + errs.join("; ") : "no errors");
   await b.close();
 })();

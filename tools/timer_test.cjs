@@ -19,6 +19,9 @@ const CASE = process.env.CASE || "07";
       else if (part.type === "number" || part.type === "text") r[part.id] = "999";
       else if (part.type === "line") { r[part.id] = "zz"; r[part.id + "Text"] = "zz"; }
       else if (part.type === "pins") r.pins = Array.from({ length: part.count }, (_, i) => `x${i}`);
+      else if (part.type === "order") r[part.id] = (part.items || []).map((x) => x.id);
+      else if (part.type === "spot") r[part.id] = "zz";
+      else if (part.type === "set") r[part.id] = ["zz"];
     }
     s.resp = { [q.id]: r }; localStorage.setItem(k, JSON.stringify(s));
   }, [key, S]);
@@ -49,6 +52,9 @@ const CASE = process.env.CASE || "07";
       else if (part.type === "number" || part.type === "text") r[part.id] = "999";
       else if (part.type === "line") { r[part.id] = "zz"; r[part.id + "Text"] = "zz"; }
       else if (part.type === "pins") r.pins = Array.from({ length: part.count }, (_, i) => `x${i}`);
+      else if (part.type === "order") r[part.id] = (part.items || []).map((x) => x.id);
+      else if (part.type === "spot") r[part.id] = "zz";
+      else if (part.type === "set") r[part.id] = ["zz"];
     }
     s.resp = { [q.id]: r }; s.tries = { q_other: 1 }; s.started = true; localStorage.setItem(k, JSON.stringify(s));
   }, [key, S]);
