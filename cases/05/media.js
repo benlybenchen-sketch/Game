@@ -25,6 +25,8 @@ const ROOMS = [
   { id: "san", name: "Sân sau, giếng", x: 60, y: 20, w: 370, h: 50 },
   { id: "nha_lua", name: "Nhà bà Lụa", x: 450, y: 70, w: 110, h: 210 },
 ];
+// Doors drawn on the 1988 plan: [x, y, vertical wall?, swing side]. Every room has one, so the kitchen door does not stand out.
+const DOORS = [[190, 200, true, 1], [100, 170, false, 1], [240, 170, false, 0], [320, 215, true, 1], [230, 70, false, 1], [320, 112, true, 1]];
 export function map(el) {
   const sel = () => current("mui");
   el.innerHTML = `
@@ -37,6 +39,8 @@ export function map(el) {
           <text x="${r.x + r.w / 2}" y="${r.y + r.h / 2}" text-anchor="middle" font-size="17" stroke="none">${r.name}</text></g>`).join("")}
         <text x="505" y="105" text-anchor="middle" font-size="13" stroke="none">(bếp bà Lụa)</text>
         <line x1="450" y1="125" x2="560" y2="125" stroke-dasharray="3 3"/>
+        ${DOORS.map(([x, y, v, sw]) => v ? `<line x1="${x}" y1="${y}" x2="${x}" y2="${y + 20}" stroke="#f7f1e1" stroke-width="4"/><path d="M${x} ${y} a20 20 0 0 ${sw} ${sw ? -20 : 20} 20" fill="none" stroke-dasharray="2 2"/>`
+          : `<line x1="${x}" y1="${y}" x2="${x + 20}" y2="${y}" stroke="#f7f1e1" stroke-width="4"/><path d="M${x} ${y} a20 20 0 0 ${sw} 20 ${sw ? 20 : -20}" fill="none" stroke-dasharray="2 2"/>`).join("")}
         <circle cx="400" cy="45" r="10" fill="none"/><text x="400" y="49" text-anchor="middle" font-size="11" stroke="none">giếng</text>
         <rect x="100" y="279" width="50" height="6" fill="#2b2620"/><text x="125" y="300" text-anchor="middle" font-size="13" stroke="none">cửa hiệu</text>
         <text x="300" y="322" text-anchor="middle" font-size="15" stroke="none">ĐƯỜNG XUỐNG CHỢ</text>

@@ -46,7 +46,7 @@ export default [
       <p>5/1/1990, 21 giờ. Đỗ Thị Ngân, 13 tuổi. Người đưa đến: bố.</p>
       <p>${ln("pk_vet", "Vết cắt mặt trong cổ tay phải, dài 4 cm, gọn, sâu, theo chiều ngang. Khâu 6 mũi.")}</p>
       <p>Bố khai: con gái cắt phim, dao cạo trượt.</p>
-      <p class="small">${ln("pk_sinh", "Ghi chú của y sĩ Sinh, viết thêm năm 1991 khi đọc lại sổ: “Dao cạo trượt thì không cắt ngang cổ tay phải gọn như thế. Hồi ấy tôi không hỏi. Tôi có lỗi.”")}</p>
+      <p class="small">${ln("pk_sinh", "Ghi chú của y sĩ Sinh, viết thêm năm 1991 khi đọc lại sổ: “Hồi ấy tôi không hỏi.”")}</p>
     </div>`,
   },
 
@@ -90,7 +90,7 @@ export default [
         <tr><td>20/12/1991</td><td>${ln("hd_ngan", "cháu gái nhà hiệu ảnh")}</td><td>Than hoa</td><td>5 cân</td></tr>
         <tr><td>26/12/1991</td><td>ông Khải hiệu ảnh</td><td>${ln("hd_than", "Than hoa")}</td><td>10 cân</td></tr>
         <tr><td>26/12/1991</td><td>ông Khải hiệu ảnh</td><td>Lò than đất nung, cỡ to</td><td>1 cái</td></tr></table>
-      <p class="small">Bà Tám nói với Vân: “Ông ấy mua gấp đôi mọi năm. Tôi hỏi nhà có cỗ à, ông ấy bảo con gái dặn. Tuần trước con bé ấy cũng ra mua năm cân, trả toàn tiền lẻ, cõng về một mình.”</p>
+      <p class="small">Bà Tám nói với Vân: “Ông ấy mua gấp đôi mọi năm. Tôi hỏi nhà có cỗ à, ông ấy bảo con gái dặn.”</p>
     </div>`,
   },
 
@@ -124,9 +124,9 @@ export default [
     <p>Thứ Hai 30/12/1991. Tôi đến sớm. Ngân không đi học.</p>
     <p>Ngân vui lắm. Ngân mặc áo len đỏ của mẹ, buộc tóc giống tóc mẹ trong ảnh 1988. Ngân pha trà mời tôi, rồi nói: “Tối nay mẹ cháu khỏi bệnh rồi cô ạ. Cô đừng đến nữa nhé.”</p>
     <p>Bao than mười cân đã được kéo vào sát cửa buồng. Băng keo mới dán thêm một lớp quanh khung cửa sổ gian giữa.</p>
-    <p>Tôi hỏi bao than năm cân Ngân mua hôm 20. Ngân cười: “Cháu mang vào cho mẹ rồi. Mẹ cất trong buồng.” Tôi nhìn cửa buồng: băng keo ba lớp, bụi bám đều, không ai bóc.</p>
-    <p>Trong bếp, sau cái chạn bát kê lệch, có một cánh cửa ngách nhỏ bằng gỗ thông sang buồng trong. Ông Khải nói cửa ấy đóng đinh từ năm 1990. Mấy cái đinh đã bị nhổ ra, cắm lại vào lỗ cho có. Ông Khải không biết.</p>
-    <p>Trên tường bếp treo cuốn lịch bloc của năm 1991, xé dở. Ông Khải nói: “Nhà tôi vẫn xem ngày theo cuốn này. Hằng dặn: giỗ chạp nhà mình tính theo âm.”</p>
+    <p>Tôi nhìn cửa buồng: băng keo ba lớp, bụi bám đều, không ai bóc.</p>
+    <p>Trong bếp, cái chạn bát bị kê lệch khỏi chỗ cũ, chân chạn còn vệt kéo trên nền đất. Dưới gầm chạn có mấy cái đinh cong. Ông Khải nói bếp ấy bỏ không từ năm 1990, nhà nấu ngoài sân.</p>
+    <p>Trên tường bếp treo cuốn lịch bloc của năm 1991, xé dở. Ông Khải nói: “Nhà tôi vẫn xem ngày theo cuốn này.”</p>
     <p>Chiều nay 15 giờ, thầy Sinh họp với trung uý Bảo ở trạm. Thầy dặn tôi phải có mặt.</p>`),
 
   {

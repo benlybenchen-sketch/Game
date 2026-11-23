@@ -236,3 +236,9 @@ Nếu người chơi trả lời đúng **tất cả** câu hỏi ở lần đ�
 
 ## 11. Ảnh (dự kiến)
 Bìa (cửa buồng dán băng keo, ánh lò than đỏ dưới khe cửa), toàn cảnh Cam Đường trong sương muối, mặt tiền hiệu ảnh "Ảnh Hằng", gian giữa có bàn thờ không ảnh, sơ đồ nhà, ảnh cưới 1975, ảnh "Vợ tôi, Tết 1991" (có lớp ẩn cho đèn pin: mặt trẻ con trong kính, tay không nhẫn, sẹo cổ tay), buồng tối ánh đèn đỏ với ảnh phơi trên dây, hai mẫu chữ, trang nhật ký xé 6 mảnh, lò than và bao than, cuốn lịch tờ, căn buồng mở buổi sáng, và các cảnh doạ (mặt Ngân trong khăn của mẹ áp sát ống kính, khe cửa có khói than, bóng người đàn bà ngồi tựa thành giường). Prompt sẽ viết ở `docs/PROMPTS_ANH_05.md`, mỗi ảnh một prompt riêng, ghi tỉ lệ trong prompt và ghi chú ảnh tham chiếu. Ảnh Hằng 1988 và ảnh "Vợ tôi, Tết 1991" phải dùng chung chiếc áo len, khăn len, cửa sổ và góc chụp để người chơi so được.
+
+## Rà lộ đáp án (bản 3)
+- Bà Lụa không còn kể "con Ngân bảo… là bố nó đi mua…" (lộ người khởi phát ngay giai đoạn 1); chỉ còn "việc gì trong nhà cũng một tay con bé lo".
+- Phiếu khâu: ghi chú của y sĩ Sinh không còn giải thích vết cắt là tự rạch; người chơi tự đọc mô tả vết thương.
+- Bà Tám hàng than không nhắc lại vụ Ngân mua năm cân (đã có trong phiếu bán hàng).
+- Nhật ký sáng 30/12 không còn: Ngân nói đã mang năm cân than vào buồng; "cửa ngách sau chạn bát, đinh đã nhổ"; ông Khải nhắc "giỗ chạp tính theo âm". Thay bằng: chạn bát bị kéo lệch, vệt kéo trên nền, đinh cong dưới gầm; sơ đồ địa chính 1988 có vẽ một cửa nhỏ giữa bếp và buồng trong.

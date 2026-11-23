@@ -43,7 +43,7 @@ export default [
     html: () => `
     <div class="doc doc--notebook">${hand(`
       <p>Hàng nước đầu ngõ, chiều 21/12. Bà Lụa rót cho tôi bát chè xanh, nói không cần hỏi.</p>
-      <p>“Thằng Khải nó hiền như đất. Từ ngày vợ ốm, cái gì cũng con Ngân. ${ln("hl_trung", "Con Ngân bảo mẹ thèm cháo trứng là bố nó đi mua trứng. Con Ngân bảo mẹ sợ gió là bố nó đi mua băng keo.")}”</p>
+      <p>“Thằng Khải nó hiền như đất. Từ ngày vợ ốm, ${ln("hl_trung", "việc gì trong nhà cũng một tay con bé lo, bố nó chỉ biết ngồi uống rượu.")}”</p>
       <p>“${ln("hl_mui", "Cái mùi ấy à? Hắc như mùi phòng thí nghiệm mổ ếch ở trường cấp ba ấy. Ngày xưa thằng Khải làm phòng hoá nghiệm bên mỏ, quen mùi rồi.")}”</p>
       <p>“${ln("hl_tay", "Năm kia, ra Giêng, con Ngân đứt tay một đường dài lắm, bố nó cõng ra trạm. Bảo cắt phim bị dao cạo. Từ đấy con bé đeo cái chun buộc tóc ở cổ tay suốt.")}”</p>
       <p>“Cô hỏi tôi có tin cô Hằng còn nằm trong ấy không à? Tôi không biết. Đêm nào tôi cũng nghe ho thật mà.”</p>`)}
