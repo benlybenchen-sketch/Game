@@ -26,12 +26,11 @@ export const QUESTIONS = [
     memo: [
       "Đêm 17, giờ Sửu. Canh thiếp không phải của người chết. Là của một cô gái đang ngủ cách tôi hai bức vách, ở Tây sương.",
       "Năm Kỷ Mùi mà trụ năm lại là Canh Thân: thầy Khâu dặn đúng chỗ này. Phu nhân không cần tôi chấm ngày. Phu nhân cần một người ký tên.",
-      "Sáng mai tôi đi ngõ Liễu, tìm bà mối âm đã bán Lý Xuân Hoa.",
     ].join("\n"),
     clock: "01:40",
   },
   {
-    id: "q2", stage: 1, title: "Bàn tính của bà mối âm",
+    id: "q2", stage: 1, title: "Ngõ Liễu",
     ask: "Đọc sổ của bà Hoàng (số tiền chỉ có trên hình bàn tính). Phu nhân đặt mua cô dâu chết Lý Xuân Hoa ngày nào âm lịch, giá bao nhiêu? Đặt sớm hơn ngày vớt được xác mấy ngày? Hôm trả hàng, bà Hoàng hoàn lại bao nhiêu?",
     parts: [
       { id: "ngay", type: "text", label: "Ngày đặt mua (ngày/tháng âm lịch)", placeholder: "vd 1/7" },
@@ -41,10 +40,8 @@ export const QUESTIONS = [
       pins(),
     ],
     memo: [
-      "Đêm 18. Bốn mươi đồng một cô dâu chết. Ngày mồng 9, khi sông Phần còn chưa trả xác.",
+      "Đêm 18. Bốn mươi đồng một cô dâu chết. Ngày mồng 9, khi sông Phần còn chưa trả xác. Ngày 12 bà ấy trả hàng, lấy lại ba mươi hai đồng.",
       "Phu nhân đã mua vợ cho con trước khi biết con chết. Bà Hoàng nhớ câu bà ấy nói: “sắp tìm thấy rồi”.",
-      "Rồi ngày 12 bà ấy trả hàng. “Hàng tươi, nhà tôi tự lo.” Tôi đã thấy món hàng tươi ấy: nó bưng nước rửa mặt cho tôi sáng nay.",
-      "Ngăn kéo lão gia có một tờ hối phiếu ghi bằng chữ lạ. Ôn Lão Tam đã đổi nó lấy bạc.",
     ].join("\n"),
     clock: "02:15",
   },
@@ -61,12 +58,11 @@ export const QUESTIONS = [
     memo: [
       "Đêm 19. Mồng 7 tháng Bảy. Thất tịch. Phu nhân lập phiếu mua Tú Nương ngay chiều hôm ấy, trước khi đêm Thất tịch xảy ra bất cứ chuyện gì.",
       "Một trăm hai mươi đồng: gấp ba lần một cô dâu chết.",
-      "Ôn Lão Tam nói con trai ông đi đêm Thất tịch rồi không về. Sáng nay ngỗ tác Mã gửi tôi phiếu khám xác ông ấy bị bắt ký.",
     ].join("\n"),
     clock: "02:50",
   },
   {
-    id: "q4", stage: 3, title: "Tẩy oan",
+    id: "q4", stage: 3, title: "Xác vớt ở Hạ Than",
     ask: "Theo Tẩy Oan Tập Lục, người trong quan tài chết trước hay sau khi xuống nước: bấm câu chứng minh trong phiếu khám. Người ấy làm nghề gì? Người ấy có phải Triệu Thừa Tự không? Bấm câu quyết định điều đó.",
     parts: [
       { id: "chet", type: "line", label: "Câu trong phiếu khám quyết định người này chết trước hay sau khi xuống nước (bấm vào câu đó)" },
@@ -76,13 +72,11 @@ export const QUESTIONS = [
     ],
     memo: [
       "Đêm 20. Người trong quan tài đã chết trước khi chạm nước: gáy vỡ, miệng không bọt, móng sạch. Bàn tay của một người dắt la.",
-      "Sợi chỉ đỏ ở cổ tay trái. Ai buộc cho người ấy?",
-      "Sáng mai tôi xin Lưu Phúc xem sổ phát tang. Tôi muốn biết hôm ấy ai đã khóc, và ai không.",
     ].join("\n"),
     clock: "03:30",
   },
   {
-    id: "q5", stage: 4, title: "Ngũ phục",
+    id: "q5", stage: 4, title: "Lễ phát tang",
     ask: "Đối chiếu sổ phát tang với Ngũ phục đồ. Bấm hai câu cho thấy hai người để tang không đúng với quan hệ của họ với người chết. Tú Nương để tang người chết với tư cách gì? Vậy người trong quan tài là ai?",
     parts: [
       { id: "a", type: "line", label: "Người thứ nhất (bấm vào câu)" },
@@ -94,12 +88,11 @@ export const QUESTIONS = [
     memo: [
       "Sáng 21. Một người mẹ không để tang con. Một cô hầu để tang anh ruột dưới lớp áo hầu.",
       "Người trong quan tài là Ôn Thạch. Phu nhân biết. Tú Nương biết từ hôm phát tang. Chỉ có lão gia là khóc thật.",
-      "Lưu Phúc vừa đưa tôi một xấp giấy phu nhân dặn đốt. Trong đó có trang cuối sổ tay thầy Khâu.",
     ].join("\n"),
     clock: "09:10",
   },
   {
-    id: "q6", stage: 5, title: "Chiết tự",
+    id: "q6", stage: 5, title: "Trang sổ cuối",
     ask: "Giải câu đố chiết tự cuối cùng của thầy Khâu. “Triệu Thừa An” trong quá kế thư là ai? Ngày sinh ghi trong quá kế thư ứng với ngày nào Tây lịch? Nếu lễ diễn ra, theo hôn thư Tú Nương sẽ nằm cạnh ai?",
     parts: [
       { id: "chu", type: "text", label: "Hai chữ thầy Khâu giấu (âm Hán Việt hoặc chữ Hán)", placeholder: "" },
@@ -112,7 +105,7 @@ export const QUESTIONS = [
       "Đêm 21. Tân phòng. Người gọi “Tú Nương” trong Đông viện không phải hồn. Là cậu chủ, đang sống, đang được nuôi bằng thuốc phiện.",
       "Ba hôm nữa cậu ấy sẽ “từ Hà Bắc về”, mang tên một đứa trẻ đã chết năm 1920, làm con thừa tự cho chính mình và cho cô gái đang bị đem đi chôn.",
       "Còn Tú Nương sẽ nằm cạnh anh ruột của mình, làm vợ chồng, dưới tên họ Triệu.",
-      "Đêm mai là đêm 22. Tôi đã đọc trình tự lễ. Tôi chỉ có một lần để làm đúng.",
+      "Đêm mai là đêm 22. Tôi chỉ có một lần để làm đúng.",
     ].join("\n"),
     clock: "21:40",
   },

@@ -17,6 +17,8 @@ Người chơi đã chê hồ sơ 01 và 02 là "dễ đoán", "dễ thở". Kh�
 9. Mỗi trọng điểm ít nhất một bẫy bằng giấy tờ; có nghi phạm giả có động cơ thật; câu cuối phải suy luận thật.
 10. `META.strict: true` (không báo "đúng x/y mục", nộp sai bị niêm phong, gợi ý sau 2 lần sai, lời giải sau 4, chấm hạng S–D).
 `node tools/audit.mjs <id>` kiểm tra tự động các luật trên cho hồ sơ 03 trở đi; hồ sơ mới chỉ được mở khi audit báo `ok`.
+Tên thư mục chỉ ghi đêm/ngày (ví dụ "Đêm thứ hai · Thứ Hai 8/11"), không ghi tên mật mã, tài liệu tra cứu hay cách giải ("Gương", "Soi gương", "Chiết tự", "Ngũ phục"). Tên trọng điểm cũng vậy.
+Lời nhắn sau mỗi trọng điểm không được hé câu sau ("sáng mai tôi đi xem sổ phát tang", "ai buộc chỉ đỏ?", "bác sĩ dặn để ý bà ăn uống ra sao").
 Tên nhân vật gặp ngay từ trang đầu mà cũng là đáp án thì khai trong `META.publicNames`, kèm lý do.
 Hồ sơ 02 giữ nguyên như đã phát hành, chỉ sửa khi người dùng yêu cầu.
 

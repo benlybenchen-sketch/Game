@@ -25,7 +25,7 @@ export const QUESTIONS = [
     clock: "06:10",
   },
   {
-    id: "q2", stage: 1, title: "Hai kiểu “không phải”",
+    id: "q2", stage: 1, title: "Biên bản phỏng vấn",
     ask: "So lời Thảo nói về anh Khoa với lời Thảo nói về mẹ, đặt cạnh sách giáo khoa. Chỉ ra một câu Thảo nói về mẹ và một câu Thảo nói về anh Khoa: câu nào khớp sách, câu nào không. Điện thoại cho thấy điều gì?",
     parts: [
       { id: "line", type: "line", label: "Một câu Thảo nêu khác biệt cụ thể, kiểm chứng được (bấm vào câu trong biên bản phỏng vấn)" },
@@ -35,13 +35,13 @@ export const QUESTIONS = [
     ],
     memo: log([
       "Sổ giao ca, sáng 17/10. BS. Vân không tăng liều. BS. Kha biết, ông không vui.",
-      "Bác sĩ hỏi tôi chuyện con chó Mực và chuyện bà Hoa ăn gì ở căng tin. Tôi đi lục sổ căng tin cho bác sĩ, rồi lục luôn hồ sơ cũ của bà Hoa ở bệnh viện tỉnh.",
+      "Bác sĩ nhờ tôi lục thêm giấy tờ. Tôi lục được sổ căng tin và hồ sơ cũ của bà Hoa ở bệnh viện tỉnh. Bà Tư hàng xóm cũng nhắn vào mấy lời.",
       "Tôi để kèm hai tấm ảnh bàn tay, một tấm con Thảo giữ trong ví, một tấm tôi chụp hôm thứ Bảy.",
     ]),
     clock: "06:05",
   },
   {
-    id: "q3", stage: 2, title: "Ba thứ không giả được",
+    id: "q3", stage: 2, title: "Thăm nuôi",
     ask: "Kiểm chứng ba chi tiết Thảo nêu. Năm 1985 bà Hoa bị sốc phản vệ vì gì? Bà Hoa đã đeo nhẫn cưới bao nhiêu năm tính tới 1996? Ngày 12/10, bà Hoa ăn món gì ở căng tin? Ai đã giết con Mực?",
     parts: [
       { id: "allergen", type: "choice", label: "Chất làm bà Hoa sốc phản vệ năm 1985", options: ["Penicillin", "Tôm", "Đậu phộng", "Ong đốt", "Thuốc tê"] },
@@ -72,7 +72,7 @@ export const QUESTIONS = [
     ],
     memo: log([
       "Sổ giao ca, sáng 21/10. Đêm qua có người đứng ngoài ô kính phòng 7. Tôi chạy ra thì hành lang trống, trên kính còn vết thở và dấu tay.",
-      "BS. Vân dặn tôi để ý bà Hoa ăn uống ra sao. Tôi để ý rồi, ghi vào sổ giao ca, bác sĩ tự đọc.",
+      "Chuyện gì trong ca tôi cũng ghi vào sổ giao ca, bác sĩ tự đọc.",
       "Tôi để lên bàn bác sĩ tấm ảnh Tết con Thảo giữ, tấm ảnh tôi chụp bà Hoa tuần trước, và một bài báo khoa học bác sĩ nhờ thư viện tìm. Con Thảo vẽ một tấm tranh mới. Tôi không muốn nhìn lâu.",
     ]),
     clock: "05:50",

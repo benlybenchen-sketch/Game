@@ -39,7 +39,7 @@ export const META = {
   solveIntro: "Bản kết luận mẫu cho trọng điểm này sẽ hiện ra, và bạn trực tiếp đêm sau.",
   firstDoc: "loi_dan",
   cover: "cover",
-  folders: ["Đêm trực 1 · Hồ sơ phòng 7", "Đêm trực 2 · Hai kiểu “không phải”", "Đêm trực 3 · Không giả được", "Đêm trực 4 · Tiếng ru", "Đêm trực 5 · Soi gương", "Đêm trực 6 · Bản giám định", "Tháng 11/1996"],
+  folders: ["Đêm trực 1 · Hồ sơ phòng 7", "Đêm trực 2 · Thứ Tư 16/10", "Đêm trực 3 · Thứ Sáu 18/10", "Đêm trực 4 · Tiếng ru", "Đêm trực 5 · Thứ Ba 22/10", "Đêm trực 6 · Bản giám định", "Tháng 11/1996"],
   wrong: [
     "Y lệnh của bạn đã được thực hiện: tăng liều Haloperidol cho phòng 7. Nghe lại băng của Thảo đi.",
     "BS. Kha gõ bút xuống bàn: “Tôi đã dặn cô rồi. Đừng sa vào.”",

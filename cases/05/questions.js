@@ -80,7 +80,7 @@ export const QUESTIONS = [
     clock: "01:20",
   },
   {
-    id: "q5", stage: 4, title: "Đêm đông chí",
+    id: "q5", stage: 4, title: "Hai năm trước",
     ask: "Bà Hằng chết thế nào, đêm đó ông Khải ở đâu, và Ngân đã làm gì? Ghép trang vở bị xé để đọc. Theo lịch vạn niên, đêm bà Hằng mất là ngày bao nhiêu âm lịch? Ông Khải đã mua gì cho “đêm mẹ khỏi bệnh”, và theo kế hoạch ai sẽ ngủ trong buồng?",
     parts: [
       { id: "chet", type: "choice", label: "Nguyên nhân bà Hằng chết", options: ["Lao phổi giai đoạn cuối, ho ra nhiều máu", "Lên cơn khó thở vì van tim, thiếu thuốc", "Nhồi máu cơ tim lúc đang ngủ say trong buồng", "Ngộ độc formol trong buồng kín", "Ngộ độc khí than trong buồng kín"] },

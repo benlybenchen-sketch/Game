@@ -47,7 +47,7 @@ export const META = {
   firstDoc: "giao_keo",
   cover: "cover",
   contract: { html: () => contractHtml(true) },
-  folders: ["Đêm thứ nhất · Giao kèo", "Đêm thứ hai · Tiếng gõ", "Đêm thứ ba · Thơ", "Đêm thứ tư · Sổ thuốc", "Đêm thứ năm · Truyện Kiều", "Đêm thứ sáu · Gương", "Đêm thứ bảy · Quẻ", "Rạng sáng 14/11"],
+  folders: ["Đêm thứ nhất · Chủ Nhật 7/11", "Đêm thứ hai · Thứ Hai 8/11", "Đêm thứ ba · Thứ Ba 9/11", "Đêm thứ tư · Thứ Tư 10/11", "Đêm thứ năm · Thứ Năm 11/11", "Đêm thứ sáu · Thứ Sáu 12/11", "Đêm thứ bảy · Thứ Bảy 13/11", "Rạng sáng 14/11"],
   wrong: [
     "Hàng chữ không ra nghĩa. Con cơ đứng im giữa bàn, chờ bạn đọc lại.",
     "Bà Dung nhìn qua vai bạn: “Sai rồi hả cháu? Từ từ. Uống miếng trà đi.”",
