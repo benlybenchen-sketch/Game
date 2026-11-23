@@ -3,7 +3,7 @@ import { ln, stamp, pic, hand } from "../../js/kit.js";
 import { tranh, tape } from "./docs0.js";
 
 export default [
-  tape("tham_2", 3, "Băng buổi thăm nuôi thứ Bảy 19/10", "Buổi thăm kết thúc sớm vì bệnh nhân kích động. Nghe kỹ: có một chữ chỉ lọt ra một lần, rất nhanh."),
+  tape("tham_2", 3, "Băng buổi thăm nuôi thứ Bảy 19/10", "Buổi thăm kết thúc sớm vì bệnh nhân kích động."),
 
   {
     id: "kha_phan_bac", stage: 3, kind: "Thư", icon: "✉", label: "BS. Kha viết cho bác sĩ Vân",
@@ -24,10 +24,10 @@ export default [
     <div class="doc doc--memo">
       ${hand(`<p>Sài Gòn, 20/5/1996</p>
         <p>Thảo con, chuyện lớn mẹ muốn kể là: ${ln("t2_di", "mẹ tìm lại được dì của con, người mẹ tưởng đã mất từ hồi nạn đói.")} Dì đọc báo nhắn tin tìm mẹ.
-        ${ln("t2_duc", "Dì giống mẹ như đúc, con mà thấy chắc con không phân biệt được.")} Dì nghèo, đau ốm, mẹ ở lại chăm dì ít lâu.</p>
+        ${ln("t2_duc", "Dì ốm nhom, mẹ nhìn mà thương.")} Dì nghèo, đau ốm, mẹ ở lại chăm dì ít lâu.</p>
         <p>${ln("t2_ke", "Tối nào hai chị em cũng ngồi kể chuyện tới khuya. Mẹ kể cho dì nghe hết chuyện nhà mình, chuyện con, chuyện con Mực, chuyện khách may. Dì thương con lắm.")}</p>
         <p>Sài Gòn, 12/6/1996</p>
-        <p>${ln("t2_nau", "Dì nấu ăn khéo lắm, ngày nào cũng nấu cho mẹ. Mẹ dặn dì mẹ dị ứng tôm, dì nhớ kỹ lắm.")} Cuối tháng mẹ về. Mẹ thương con.</p>
+        <p>${ln("t2_nau", "Dì nấu ăn khéo lắm, ngày nào cũng nấu cho mẹ.")} Cuối tháng mẹ về. Mẹ thương con.</p>
         <p class="right">Mẹ</p>`)}
       <p class="note">Thảo cất hai lá thư trong tủ.</p>
     </div>`,

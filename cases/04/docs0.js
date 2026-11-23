@@ -102,7 +102,7 @@ export default [
       ${hand(`<p>Sài Gòn, ngày 6 tháng 4 năm 1996</p>
         <p>Thảo con,</p>
         <p>Mẹ vô tới nơi rồi, xe đò đi mười hai tiếng, mẹ say xe ói mấy lần. Mẹ ở nhà người bà con dưới Khánh Hội, gần bến tàu.</p>
-        <p>Con ở nhà nhớ cho con Mực ăn đúng giờ, đừng cho nó ăn đồ lạ. Con nhớ đừng ăn tôm, mẹ dị ứng thì con cũng dị ứng.</p>
+        <p>Con ở nhà nhớ cho con Mực ăn đúng giờ, đừng cho nó ăn đồ lạ. Con nhớ mặc ấm, đêm Đà Lạt lạnh.</p>
         <p>Mẹ có chuyện lớn muốn kể con nghe mà để mẹ về rồi mẹ kể. Mẹ thương con.</p>
         <p class="right">Mẹ</p>`)}
       <p class="note">Thư Thảo cất trong ví. Nét chữ mềm, nghiêng phải. Ký “Mẹ”.</p>

@@ -53,8 +53,7 @@ export default [
         <li>${ln("pv_cuoi", "“Bà đó cười không giống. Em không tả được chỗ nào.”")}</li>
       </ol>
       <p>Hỏi: Còn anh Khoa?</p>
-      <p>Đáp: ${ln("pv_khoa0", "“Ảnh với em chia tay rồi. Em không muốn nhắc.”")}</p>
-      <p>Đáp: ${ln("pv_khoa", "“Mặt vẫn là mặt ảnh. Mà em không thấy ảnh. Em không chỉ ra được chỗ nào khác.”")}</p>
+      <p>Đáp: ${ln("pv_khoa0", "“Ảnh với em chia tay rồi. Em không muốn nhắc.”")} ${ln("pv_khoa", "“Mặt vẫn là mặt ảnh. Mà em không thấy ảnh. Em không chỉ ra được chỗ nào khác.”")}</p>
       <p class="note">Bên lề, mực đỏ, BS. Kha: “Hoang tưởng chi tiết hoá. Không cần kiểm chứng.” Các câu trả lời về mẹ bị gạch hai lần bằng mực đỏ.</p>
     </div>`,
   },

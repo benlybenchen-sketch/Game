@@ -169,3 +169,9 @@ Lỗi của bản 1: đáp án đúng hầu như luôn là phương án **dài n
 
 ## 10. Ảnh (dự kiến)
 Bìa, bệnh viện Cam Ly trong sương, phòng 7 qua ô kính, ảnh Tết 1990 cả nhà, ảnh bàn tay đeo nhẫn đạp máy may, ảnh "bà Hoa" tháng 10 (cùng góc với ảnh Tết để chồng ảnh), tranh Thảo vẽ (6 tấm), con Mực chết, gia phả họ Lê, hai dấu vân tay, hộp bánh, và 4 cảnh doạ (mặt ở ô kính, hai khuôn mặt nhập làm một, mặt Thảo sưng phù, người áo dài tím cuối giường). Prompt sẽ viết ở `docs/PROMPTS_ANH_04.md` theo cách làm ảnh mẫu nhân vật như hồ sơ 03; ảnh Hoa và ảnh Huệ phải dùng **cùng một ảnh mẫu** rồi mới đổi bên nốt ruồi.
+
+## Rà lộ đáp án (bản 3)
+- Thư Sài Gòn tháng 4: bỏ "mẹ dị ứng thì con cũng dị ứng". Thư tháng 5–6: bỏ "dì giống mẹ như đúc" và "mẹ dặn dì mẹ dị ứng tôm" (băng hỏi chuyện 20/10 cũng bỏ câu Thảo nhắc lại "dì giống mẹ như đúc").
+- Bà Tư hàng xóm không còn thấy "đưa con Mực miếng thịt", chỉ thấy người phụ nữ ngồi lâu chỗ con chó nằm; bỏ lời giải thích "o Tư theo kiểu người Quảng".
+- Băng thăm 19/10 bỏ lời dặn "nghe kỹ: có một chữ lọt ra một lần". Tên người nói trong băng ghi Bà Hoa, không còn ngoặc kép mỉa mai.
+- Biên bản phỏng vấn có thêm câu nhiễu; ghi chú bên lề không còn đếm "bốn câu".
