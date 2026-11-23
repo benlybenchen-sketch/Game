@@ -29,6 +29,7 @@ for (const q of C.QUESTIONS) {
     if (p.type === "line") for (const l of a) { const d = lineHome.get(l); if (!d) bad(`${q.id}.${p.id}: line ${l} not found`); else if (!visible(d.id)) bad(`${q.id}.${p.id}: line ${l} is in ${d.id} (stage ${d.stage}) not open yet`); }
     if (p.type === "pins") a.forEach((g, i) => g.forEach((dd) => { if (!docs.has(dd)) bad(`${q.id}: pin group ${i} doc ${dd} missing`); else if (!visible(dd)) bad(`${q.id}: pin ${dd} (stage ${docs.get(dd).stage}) not open at stage ${q.stage}`); }));
     if (p.type === "pins" && a.length !== p.count) bad(`${q.id}: ${a.length} pin groups for count ${p.count}`);
+    if (p.type === "pins" && +id >= 3 && (!Array.isArray(p.roles) || p.roles.length !== p.count)) bad(`${q.id}: pin slots need one role label each (rule 24)`);
     if (p.type === "order") { const it = p.items.map((x) => x.id).sort().join(); if ([...a].sort().join() !== it) bad(`${q.id}.${p.id}: order answer ids differ from items`); if (a.join() === p.items.map((x) => x.id).join()) bad(`${q.id}.${p.id}: items already in the right order`); }
     if ((p.type === "spot" || p.type === "set") && p.doc && !docs.has(p.doc)) bad(`${q.id}.${p.id}: doc ${p.doc} missing`);
   }

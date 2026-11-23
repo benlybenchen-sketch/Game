@@ -643,3 +643,6 @@ td.han { font-size: 24px; }
 .grade-S { color: #e8c35a; } .grade-A { color: #d9d2c0; } .grade-B { color: #9fc3a0; } .grade-C { color: #c99a6b; } .grade-D { color: #b06a62; }
 .best-grade { align-self: center; font-size: 14px; opacity: .85; }
 .q-actions .btn[disabled] { opacity: .55; cursor: not-allowed; }
+
+.pin-roles { margin: 4px 0 2px 18px; padding: 0; font-size: 13px; line-height: 1.45; }
+.pin-roles li { margin: 1px 0; }

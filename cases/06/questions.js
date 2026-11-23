@@ -13,6 +13,8 @@ export const OPTIONS_7 = [
   "G. Phá cửa Đông viện sau giờ Tý; đưa người bên trong ra trước họ tộc; giữ Tú Nương bên mình; mời cảnh sát làm chứng.",
 ];
 
+const P = (roles) => ({ id: "pins", type: "pins", count: roles.length, label: `Ghim ${roles.length} tài liệu làm bằng chứng`, roles });
+
 export const QUESTIONS = [
   {
     id: "q1", stage: 0, title: "Canh thiếp không tên",
@@ -21,7 +23,7 @@ export const QUESTIONS = [
       { id: "who", type: "choice", label: "Bát tự trên canh thiếp là của", options: ["Lý Xuân Hoa", "Ôn Tú Nương", "Thuý Nhi", "Không khớp ai trong hồ sơ"] },
       { id: "ngay", type: "text", label: "Người đó sinh ngày (ngày/tháng/năm Tây lịch)", placeholder: "vd 1/1/1900" },
       { id: "tru", type: "choice", label: "Trụ phân biệt người đó với người có bát tự gần giống nhất", options: ["Trụ năm", "Trụ tháng", "Trụ ngày", "Trụ giờ"] },
-      pins(),
+      P(["Canh thiếp", "Tài liệu ghi ngày giờ sinh của người khớp canh thiếp", "Tài liệu để tính tứ trụ"]),
     ],
     memo: [
       "Đêm 17, giờ Sửu. Canh thiếp không phải của người chết. Là của một cô gái đang ngủ cách tôi hai bức vách, ở Tây sương.",
@@ -37,7 +39,7 @@ export const QUESTIONS = [
       { id: "gia", type: "number", label: "Giá đặt mua", unit: "đồng bạc" },
       { id: "som", type: "number", label: "Đặt sớm hơn ngày vớt được xác", unit: "ngày" },
       { id: "hoan", type: "number", label: "Số tiền hoàn lại hôm trả hàng", unit: "đồng bạc" },
-      pins(),
+      P(["Sổ của bà mối", "Tài liệu ghi ngày vớt xác", "Tài liệu về giá hàng hoặc tiền công mối"]),
     ],
     memo: [
       "Đêm 18. Bốn mươi đồng một cô dâu chết. Ngày mồng 9, khi sông Phần còn chưa trả xác. Ngày 12 bà ấy trả hàng, lấy lại ba mươi hai đồng.",
@@ -53,7 +55,7 @@ export const QUESTIONS = [
       { id: "ngay", type: "number", label: "Ngày", unit: "" },
       { id: "tien", type: "number", label: "Số bạc", unit: "đồng" },
       { id: "truoc", type: "number", label: "Lập trước ngày vớt được xác", unit: "ngày" },
-      pins(),
+      P(["Hối phiếu", "Khoá để giải mật áp", "Tài liệu để tính số ngày trước khi vớt xác"]),
     ],
     memo: [
       "Đêm 19. Mồng 7 tháng Bảy. Thất tịch. Phu nhân lập phiếu mua Tú Nương ngay chiều hôm ấy, trước khi đêm Thất tịch xảy ra bất cứ chuyện gì.",
@@ -68,7 +70,7 @@ export const QUESTIONS = [
       { id: "chet", type: "line", label: "Câu trong phiếu khám quyết định người này chết trước hay sau khi xuống nước (bấm vào câu đó)" },
       { id: "nghe", type: "choice", label: "Người trong quan tài làm nghề", options: ["Người đọc sách", "Người chèo đò", "Phu kéo thuyền", "Thợ rèn", "Tá điền", "Phu dắt la"] },
       { id: "khong", type: "line", label: "Câu trong phiếu khám cho biết người này có phải Triệu Thừa Tự hay không (bấm vào câu đó)" },
-      pins(),
+      P(["Phiếu khám xác", "Sách khám nghiệm", "Bằng chứng người chết là ai"]),
     ],
     memo: [
       "Đêm 20. Người trong quan tài đã chết trước khi chạm nước: gáy vỡ, miệng không bọt, móng sạch. Bàn tay của một người dắt la.",
@@ -83,7 +85,7 @@ export const QUESTIONS = [
       { id: "b", type: "line", label: "Người thứ hai (bấm vào câu)" },
       { id: "vai", type: "choice", label: "Tú Nương để tang người chết với tư cách", options: ["Vị hôn thê", "Em gái ruột", "Con gái", "Người hầu", "Bạn đến viếng"] },
       { id: "xac", type: "choice", label: "Người trong quan tài là", options: ["Triệu Thừa Tự", "Ôn Thạch", "Triệu Thừa Chí", "Một người lạ trôi sông"] },
-      pins(),
+      P(["Sổ phát tang", "Quy định tang phục", "Bằng chứng về quan hệ của Tú Nương với người chết"]),
     ],
     memo: [
       "Sáng 21. Một người mẹ không để tang con. Một cô hầu để tang anh ruột dưới lớp áo hầu.",
@@ -99,7 +101,7 @@ export const QUESTIONS = [
       { id: "an", type: "choice", label: "“Triệu Thừa An” trong quá kế thư là", options: ["Con trai Triệu Hoài Nghĩa", "Triệu Thừa Tự", "Triệu Thừa Chí", "Một đứa trẻ mua ở Hà Bắc"] },
       { id: "sinh", type: "text", label: "Ngày sinh trong quá kế thư, đổi ra Tây lịch (ngày/tháng/năm)", placeholder: "vd 1/1/1900" },
       { id: "canh", type: "choice", label: "Nếu lễ diễn ra, Tú Nương sẽ nằm cạnh", options: ["Triệu Thừa Tự", "Ôn Thạch", "Lý Xuân Hoa", "Không ai"] },
-      pins(),
+      P(["Câu đố và cách giải chữ", "Giấy tờ về Triệu Thừa An", "Tài liệu khác ủng hộ kết luận của bạn"]),
     ],
     memo: [
       "Đêm 21. Tân phòng. Người gọi “Tú Nương” trong Đông viện không phải hồn. Là cậu chủ, đang sống, đang được nuôi bằng thuốc phiện.",

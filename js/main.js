@@ -324,7 +324,8 @@ function partHtml(q, p) {
   }
   if (p.type === "pins") {
     const pins = r.pins || [];
-    return `<div class="part"><span>${p.label}</span><ul class="slots">
+    const roles = p.roles ? `<ol class="pin-roles">${p.roles.map((t) => `<li>${t}</li>`).join("")}</ol><p class="small muted">Mỗi tài liệu ghim đáp ứng một yêu cầu trên; thứ tự ghim không quan trọng.</p>` : "";
+    return `<div class="part"><span>${p.label}</span>${roles}<ul class="slots">
       ${Array.from({ length: p.count }, (_, i) => pins[i]
         ? `<li class="full"><button class="link" data-goto="${pins[i]}">${esc(byId.get(pins[i])?.label || pins[i])}</button><button class="x" data-unpin="${pins[i]}" title="Bỏ ghim">×</button></li>`
         : `<li class="empty">mở tài liệu rồi bấm 📌</li>`).join("")}</ul></div>`;

@@ -6,6 +6,8 @@ export const PEOPLE = ["Phạm Văn Tùng", "Võ Thị Bạch Yến", "Lưu Ki�
 const pins = { id: "pins", type: "pins", count: 3, label: "Ghim 3 tài liệu làm bằng chứng" };
 const nameFirst = () => [given(), coName(), hexName(), "em"];
 
+const P = (roles) => ({ id: "pins", type: "pins", count: roles.length, label: `Ghim ${roles.length} tài liệu làm bằng chứng`, roles });
+
 export const QUESTIONS = [
   {
     id: "q1", stage: 0, title: "Đêm thứ nhất",
@@ -14,7 +16,7 @@ export const QUESTIONS = [
       { id: "m71", type: "text", label: "Lời cơ 2/10/1971 (viết có dấu hay không dấu đều được)", placeholder: "vd: bạch lan" },
       { id: "m04", type: "text", label: "Lời cơ đêm nay, 7/11/2004", placeholder: "" },
       { id: "chu", type: "choice", label: "Người ngồi tay chủ", options: PEOPLE.slice(0, 7) },
-      pins,
+      P(["Tài liệu để đọc được lời báo tử năm 1971", "Tài liệu ghi lời con cơ đêm nay", "Tài liệu cho biết ai ngồi vị trí tay chủ"]),
     ],
     memo: () => letter(1, () => [
       "Cháu ngủ có ngon không? Đêm qua bà nghe cháu trở mình hoài.",
@@ -33,7 +35,7 @@ export const QUESTIONS = [
       { id: "src", type: "choice", label: "Tiếng gõ trên băng năm 1971 phát ra từ", options: [
         "Con cơ bằng chén sứ gõ xuống mặt bàn", "Ngón tay ai đó gõ lên mặt bàn từ phía dưới", "Gót guốc gỗ gõ xuống sàn dưới gầm bàn", "Cánh cửa ban công đập vào khung trong gió", "Có người đi lại trên sàn gác thượng"] },
       { id: "guoc", type: "line", label: "Câu cho biết người có thể tạo ra tiếng gõ đó (bấm vào câu trong một tài liệu)" },
-      pins,
+      P(["Tài liệu ghi tiếng gõ năm 1971", "Tài liệu ghi lời con cơ đêm nay", "Tài liệu cho biết tiếng gõ phát ra từ đâu", "Tài liệu cho biết ai trong nhóm tạo được tiếng gõ đó"]),
     ],
     memo: () => letter(2, () => [
       "Em lạnh. Cháu viết hai chữ đó to tướng trong sổ.",
@@ -51,7 +53,7 @@ export const QUESTIONS = [
       { id: "yen", type: "text", label: "Lời giấu trong bài thơ cuối của Yến" },
       { id: "m04", type: "text", label: "Lời con cơ đêm nay (sau tên của bạn)", prefix: nameFirst },
       { id: "tra", type: "line", label: "Câu trong sổ cơ cho thấy người đó đã ra tay với Quốc thế nào (bấm vào câu đó)" },
-      pins,
+      P(["Tài liệu ghi bài thơ con cơ đọc năm 1971", "Tài liệu ghi bài thơ cuối cùng của Yến", "Tài liệu ghi lời con cơ đêm nay", "Tài liệu cho biết ai là người dẫn con cơ"]),
     ],
     memo: () => letter(3, () => [
       "Đêm qua con cơ đánh tên cháu. Cháu có nói tên cháu cho ai trong nhà này đâu?",
@@ -68,7 +70,7 @@ export const QUESTIONS = [
       { id: "m04", type: "text", label: "Lời con cơ đêm nay, 10/11/2004" },
       { id: "line", type: "line", label: "Câu bị sửa trong bản nhật ký hôm nay (bấm vào câu đó)" },
       { id: "who", type: "choice", label: "Người sửa nhật ký", options: ["Ông Bảy gác dan, người giữ chìa khóa nhà", "Bà chủ nhà, bà Lâm Hạnh Dung", "Dung tự sửa từ năm 1971", "Cảnh sát, lúc lưu hồ sơ năm 1971", "Hồn ma trong nhà", "Bạn chép sai từ đêm đầu"] },
-      pins,
+      P(["Tài liệu để đọc được lời năm 1971", "Tài liệu ghi lời con cơ đêm nay", "Bản nhật ký bà chủ nhà đưa hôm nay", "Bản chép của bạn đêm đầu"]),
     ],
     memo: () => letter(4, () => [
       "Cháu hỏi ai sửa giấy. Giấy ba mươi ba năm, mực nhòe, chữ phai. Có khi cháu chép sai từ đêm đầu đó cháu.",
@@ -85,7 +87,7 @@ export const QUESTIONS = [
       { id: "m04", type: "text", label: "Lời con cơ đêm nay, 11/11/2004" },
       { id: "book", type: "choice", label: "Cuốn Kiều khớp với lời cơ năm 1971", options: ["Cuốn chú giải của Khiêm, bản 3.254 câu", "Cuốn in ở Huế của Lan, bản 3.252 câu", "Cả hai cuốn đều khớp với lời cơ", "Không cuốn nào khớp với lời cơ"] },
       { id: "sach", type: "line", label: "Câu trong sổ cơ cho thấy ai đã dò lời năm 1971, và bằng sách nào (bấm vào câu đó)" },
-      pins,
+      P(["Cuốn sách khớp với lời báo tử năm 1971", "Cuốn sách khớp với lời con cơ đêm nay", "Tài liệu cho biết ai dò lời năm 1971"]),
     ],
     memo: () => letter(5, () => [
       "Cháu viết là Lan soạn những lời đó. Không phải đâu cháu. Lan chết rồi. Người chết thì soạn được gì.",
@@ -102,7 +104,7 @@ export const QUESTIONS = [
       { id: "body", type: "choice", label: "Xác cháy trên gác thượng là của", options: ["Hà Ngọc Lan", "Lâm Hạnh Dung", "Trịnh Bảo Nghi", "Bà Lâm Ngọc Diệp", "Một người lạ"] },
       { id: "proof", type: "line", label: "Câu trong biên bản khám nghiệm chứng minh xác đó là ai (bấm vào câu đó)" },
       { id: "seo", type: "line", label: "Hôm nay nhật ký của bà Dung lại có thêm một câu bị sửa. Bấm vào câu đó" },
-      pins,
+      P(["Tài liệu cho biết xác cháy là của ai", "Hồ sơ cũ để đối chiếu với biên bản khám nghiệm", "Giấy tờ tuỳ thân hoặc trang nhật ký để đối chiếu thêm"]),
     ],
     memo: () => letter(6, () => [
       "Cháu đã đọc mấy tờ giấy sau di ảnh. Bà biết, vì cái khung ảnh treo lệch.",
@@ -120,7 +122,7 @@ export const QUESTIONS = [
       { id: "n", type: "number", label: "Số người bà ta đã giết năm 1971", unit: "người" },
       { id: "why", type: "choice", label: "Động cơ năm 1971", options: ["Trả thù cho người cha chết ở Huế, Tết Mậu Thân", "Chiếm thân phận, nhà và vàng của Lâm Hạnh Dung", "Ghen vì Yến được bà Diệp và cả nhóm thương hơn", "Bịt miệng cả nhóm, giấu một tai nạn năm 1970", "Bị hồn bà Diệp nhập trong buổi cơ đầu tiên"] },
       { id: "hire", type: "choice", label: "Vì sao bà ta thuê bạn", options: ["Để có một người lạ làm chứng rằng con cơ tự chạy", "Vì cần người đọc được tiếng Pháp để tìm số vàng", "Vì cần người giải được mã Morse và mã của Tùng", "Để đầu độc thêm một người cho đủ bảy mạng người"] },
-      pins,
+      P(["Tài liệu cho biết cách đọc quẻ", "Tài liệu ghi các quẻ", "Tài liệu cho biết bà chủ nhà là ai"]),
     ],
     memo: "",
     clock: "05:00",

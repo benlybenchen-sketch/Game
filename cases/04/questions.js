@@ -5,6 +5,8 @@ import { doseNote } from "./dose.js";
 const pins = { id: "pins", type: "pins", count: 3, label: "Ghim 3 tài liệu làm bằng chứng" };
 const log = (lines) => () => [...lines, `Phòng 7: ${doseNote()}`].join("\n");
 
+const P = (roles) => ({ id: "pins", type: "pins", count: roles.length, label: `Ghim ${roles.length} tài liệu làm bằng chứng`, roles });
+
 export const QUESTIONS = [
   {
     id: "q1", stage: 0, title: "Hồ sơ phòng 7",
@@ -15,7 +17,7 @@ export const QUESTIONS = [
       { id: "days", type: "number", label: "Số ngày bà Hoa ở Sài Gòn (tính từ ngày đi tới ngày về)", unit: "ngày" },
       { id: "first", type: "text", label: "Ngày đầu tiên Thảo nói “bà không phải mẹ” (ngày/tháng)", placeholder: "vd 1/1" },
       { id: "gap", type: "number", label: "Từ ngày chấn thương tới ngày đó là bao nhiêu ngày?", unit: "ngày" },
-      pins,
+      P(["Tài liệu ghi chẩn đoán", "Tài liệu ghi ngày chấn thương", "Tài liệu ghi ngày bà Hoa đi, về và ngày Thảo nói lần đầu"]),
     ],
     memo: log([
       "Sổ giao ca, sáng 15/10. Đêm qua BS. Vân ngồi ở phòng trực tới 4 giờ sáng đọc hồ sơ phòng 7.",
@@ -31,7 +33,7 @@ export const QUESTIONS = [
       { id: "line", type: "line", label: "Một câu Thảo nêu khác biệt cụ thể, kiểm chứng được (bấm vào câu trong biên bản phỏng vấn)" },
       { id: "khoa", type: "line", label: "Một câu Thảo nói về anh Khoa đúng như sách mô tả (bấm vào câu trong biên bản phỏng vấn)" },
       { id: "phone", type: "text", label: "Ngày Thảo nghe giọng bà Hoa qua điện thoại và không nhận ra (ngày/tháng)", placeholder: "vd 1/9" },
-      pins,
+      P(["Lời Thảo nói về mẹ và về anh Khoa", "Mô tả bệnh trong sách", "Tài liệu về cuộc điện thoại"]),
     ],
     memo: log([
       "Sổ giao ca, sáng 17/10. BS. Vân không tăng liều. BS. Kha biết, ông không vui.",
@@ -48,7 +50,7 @@ export const QUESTIONS = [
       { id: "ring", type: "number", label: "Số năm bà Hoa đeo nhẫn cưới, tính tới năm 1996", unit: "năm" },
       { id: "dish", type: "choice", label: "Món bà Hoa ăn ở căng tin ngày 12/10", options: ["Cháo trắng", "Bánh bò", "Gỏi tôm", "Cháo tôm", "Phở bò", "Bánh căn"] },
       { id: "dog", type: "choice", label: "Người giết con Mực", options: ["Bà Tư hàng xóm", "Thảo", "Bà Hoa", "Anh Khoa", "Không ai: con Mực ăn phải bả chuột"] },
-      pins,
+      P(["Bằng chứng về dị ứng của bà Hoa", "Bằng chứng về món ăn ở căng tin", "Bằng chứng về chiếc nhẫn", "Bằng chứng về con Mực"]),
     ],
     memo: log([
       "Sổ giao ca, trưa Chủ Nhật 20/10, để lại cho ca trực tối nay của BS. Vân. Chiều hôm qua, thứ Bảy, bà Hoa vào thăm. Có ghi băng như mọi lần.",
@@ -68,7 +70,7 @@ export const QUESTIONS = [
       { id: "ru_la", type: "choice", label: "Bài ru của người phụ nữ (băng 19/10)", options: ["Ví dầu cầu ván đóng đinh", "Bồng bồng mẹ bế con sang", "Ầu ơ… Gió mùa thu mẹ ru con ngủ", "Con cò bé bé"] },
       { id: "where", type: "choice", label: "Người phụ nữ lớn lên ở đâu", options: ["Đà Nẵng", "Huế", "Đà Lạt", "Sài Gòn", "Cần Thơ", "Hà Nội"] },
       { id: "twin", type: "text", label: "Tên người trong gia phả đã có thể nghe kể hết chuyện nhà", placeholder: "tên" },
-      pins,
+      P(["Băng có giọng bà Hoa năm 1990", "Băng có giọng người phụ nữ hôm nay", "Tài liệu cho biết ai có thể biết hết chuyện nhà"]),
     ],
     memo: log([
       "Sổ giao ca, sáng 21/10. Đêm qua có người đứng ngoài ô kính phòng 7. Tôi chạy ra thì hành lang trống, trên kính còn vết thở và dấu tay.",
@@ -87,7 +89,7 @@ export const QUESTIONS = [
       { id: "tay", type: "choice", label: "Tay cầm đũa", options: ["Cùng bên với bà Hoa năm 1990", "Ngược bên với bà Hoa năm 1990", "Hồ sơ hiện có chưa cho biết"] },
       { id: "seo", type: "choice", label: "Sẹo mổ ruột thừa", options: ["Cùng bên với bà Hoa năm 1990", "Ngược bên với bà Hoa năm 1990", "Hồ sơ hiện có chưa cho biết"] },
       { id: "who", type: "choice", label: "Người phụ nữ ở phòng thăm nuôi là", options: ["Lê Thị Hoa, mẹ Thảo, đã đổi khác sau ba tháng ở Sài Gòn", "Lê Thị Huệ, em bà Hoa, mang tên con nuôi Phạm Thị Huệ", "Bà Tư hàng xóm, biết hết chuyện nhà, đóng giả bà Hoa", "Một người lạ ở Sài Gòn, được thuê sửa mặt và đóng giả"] },
-      pins,
+      P(["Hai khuôn mặt cần so", "Tài liệu khoa học về sinh đôi", "Bằng chứng khác về người phụ nữ"]),
     ],
     memo: log([
       "Sổ giao ca, chiều 24/10, để lại cho ca trực tối nay của BS. Vân. Hôm qua phòng hành chính nhận được thư hồi âm của phường 2, quận 4, thành phố Hồ Chí Minh, theo công văn BS. Vân gửi tuần trước. Có giấy chứng tử bản sao.",
@@ -109,7 +111,7 @@ export const QUESTIONS = [
       { id: "capgras", type: "choice", label: "Kết luận 1 · Hội chứng Capgras ở Trần Ngọc Thảo", options: ["Không có", "Có, đối với một số người quen", "Có, đối với tất cả người thân"] },
       { id: "nangluc", type: "choice", label: "Kết luận 2 · Năng lực hành vi dân sự", options: ["Mất năng lực hành vi dân sự", "Hạn chế năng lực hành vi dân sự", "Đủ năng lực hành vi dân sự"] },
       { id: "loikhai", type: "choice", label: "Kết luận 3 · Lời khai của Thảo về mẹ", options: ["Hoang tưởng hoàn toàn", "Một phần đúng, một phần hoang tưởng", "Đúng sự thật", "Chưa đủ cơ sở kết luận"] },
-      pins,
+      P(["Bằng chứng người được chôn là ai", "Bằng chứng về hai dấu vân tay", "Bằng chứng về hộp bánh hoặc động cơ"]),
     ],
     memo: "",
     clock: "05:30",

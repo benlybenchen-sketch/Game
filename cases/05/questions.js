@@ -1,6 +1,8 @@
 // Case 05 "Người giữ vợ": six home visits and one decision (public part). Answers live in secret.js.
 // The memo of each question is the next page of Vân's internship diary. Question 7 is the one-shot decision (fatal).
 
+const P = (roles) => ({ id: "pins", type: "pins", count: roles.length, label: `Ghim ${roles.length} tài liệu làm bằng chứng`, roles });
+
 export const QUESTIONS = [
   {
     id: "q1", stage: 0, title: "Người không ai thấy",
@@ -9,7 +11,7 @@ export const QUESTIONS = [
       { id: "last", type: "text", label: "Ngày cuối cùng có người ngoài nhìn thấy bà Hằng (ngày/tháng/năm)", placeholder: "vd 1/1/1990" },
       { id: "benh", type: "choice", label: "Danh sách trạm đang theo dõi bà Hằng", options: ["Danh sách tiêm chủng, chưa tiêm nhắc", "Danh sách nghi lao, chưa được khám tận nhà", "Danh sách bệnh tâm thần, chưa cấp thuốc", "Danh sách sốt rét, chưa lấy máu xét nghiệm"] },
       { id: "mui", type: "spot", label: "Gian mùi nặng nhất (đánh dấu trên sơ đồ)", doc: "so_do", how: "Mở sơ đồ nhà rồi bấm vào một gian." },
-      { id: "pins", type: "pins", count: 3, label: "Ghim 3 tài liệu làm bằng chứng" },
+      P(["Lần cuối có người ngoài thấy bà Hằng", "Danh sách bệnh", "Chỗ mùi nặng nhất"]),
     ],
     memo: [
       "Nhật ký thực tập, tối 19/12. Chiều nay tôi hỏi thầy Sinh: “Thầy có tin cô Hằng còn sống không?” Thầy im lâu lắm rồi nói: “Tôi tin con bé Ngân. Con bé ấy không biết nói dối.”",
@@ -26,7 +28,7 @@ export const QUESTIONS = [
       { id: "n", type: "line", label: "Câu của cháu Ngân mâu thuẫn với câu trên" },
       { id: "chat", type: "choice", label: "Mùi hắc, cay mắt trong nhà", options: ["Long não", "Dầu hoả", "Formol", "Thuốc trừ sâu", "Mùi hương trầm"] },
       { id: "first", type: "choice", label: "Trong băng, mỗi lần được hỏi về bà Hằng, ông Khải", options: ["Trả lời trước, rồi con gái nói theo", "Nhắc lại gần đúng lời con vừa nói", "Im lặng, để con gái nói một mình", "Nói khác hẳn những gì con vừa nói", "Gọi vọng vào buồng hỏi lại vợ"] },
-      { id: "pins", type: "pins", count: 2, label: "Ghim 2 tài liệu làm bằng chứng" },
+      P(["Hai lời kể của cha con", "Nguồn gốc mùi hắc"]),
     ],
     memo: [
       "Nhật ký thực tập, tối 21/12. Ông Khải nói sáng nào ông cũng vào buồng bón cháo. Ngân nói gần hai năm nay bố không được vào. Một trong hai người đang nhớ một điều chưa từng xảy ra.",
@@ -44,7 +46,7 @@ export const QUESTIONS = [
       { id: "viet", type: "choice", label: "Người viết các giấy xin nghỉ của cô Hằng", options: ["Cô Hằng tự viết", "Ông Khải", "Cháu Ngân", "Cô Hà chủ nhiệm", "Bà Lụa"] },
       { id: "loi", type: "text", label: "Từ bị viết sai chính tả giống nhau ở cả hai bên (viết đúng như chữ sai)", placeholder: "một chữ" },
       { id: "chu", type: "text", label: "Chữ cái có nét viết riêng giống nhau ở cả hai bên", placeholder: "một chữ cái" },
-      { id: "pins", type: "pins", count: 2, label: "Ghim 2 tài liệu làm bằng chứng" },
+      P(["Ảnh để so với tấm Vợ tôi", "Mẫu chữ để so"]),
     ],
     memo: [
       "Nhật ký thực tập, khuya 23/12. Người trong ảnh “Vợ tôi” là Ngân. Ngân mặc áo của mẹ, ngồi đúng chỗ mẹ ngồi, cho bố chụp sau lưng. Giấy xin nghỉ của cô Hằng là chữ Ngân.",
@@ -69,7 +71,7 @@ export const QUESTIONS = [
       { id: "ho", type: "choice", label: "Tiếng ho sau cửa buồng trong băng đêm là", options: ["Tiếng ho thật, khàn và có đờm", "Tiếng ho giả, có giọng nói xen giữa", "Tiếng ho của đàn ông, giọng trầm", "Tiếng gió rít qua khe cửa dán kín", "Tiếng ho thu sẵn, phát lại từ băng"] },
       { id: "cham", type: "text", label: "Câu cuối cùng nghe được khi băng chạy ×0,6 (chép lại nguyên câu)", placeholder: "" },
       { id: "tach", type: "choice", label: "Tách hai người ra thì người tiếp nhận thường", options: ["Hoang tưởng nặng thêm trong vài tuần đầu", "Tự tỉnh dần sau vài ngày đến vài tuần", "Không thay đổi gì sau nhiều tháng", "Chuyển hoang tưởng sang một người thân khác", "Phải dùng thuốc liều cao mới đỡ"] },
-      { id: "pins", type: "pins", count: 2, label: "Ghim 2 tài liệu làm bằng chứng" },
+      P(["Hai cuốn sổ ghi chép", "Tài liệu về người khởi phát hoặc tiếng ho"]),
     ],
     memo: [
       "Nhật ký thực tập, đêm 25/12. Ngân viết trước. Lần nào cũng thế: Ngân viết “mẹ ho”, ba hôm sau ông Khải viết “tôi cũng nghe thấy”.",
@@ -95,7 +97,7 @@ export const QUESTIONS = [
       { id: "am", type: "text", label: "Ngày âm lịch của đêm bà Hằng mất (ngày, tháng âm)", placeholder: "vd 3 tháng Chạp" },
       { id: "than", type: "number", label: "Số than hoa ông Khải mua ngày 26/12/1991", unit: "cân" },
       { id: "ngu", type: "choice", label: "Theo trang vở kẹp trong bao than, “đêm mẹ khỏi bệnh” ai sẽ ngủ trong buồng", options: ["Chỉ cháu Ngân", "Cháu Ngân và ông Khải", "Chỉ ông Khải", "Không ai, lò chỉ để sưởi cho mẹ"] },
-      { id: "pins", type: "pins", count: 3, label: "Ghim 3 tài liệu làm bằng chứng" },
+      P(["Bằng chứng về cái chết của bà Hằng", "Tài liệu cho biết đêm đó ông Khải ở đâu", "Tài liệu về ngày âm lịch hoặc về kế hoạch đêm mẹ khỏi bệnh"]),
     ],
     memo: [
       "Nhật ký thực tập, khuya 27/12. Đêm 22/12/1989 ông Khải ngồi trên tàu. Lọ thuốc rơi dưới gầm giường. Cô Hằng gọi “Ngân ơi, lấy thuốc cho mẹ”. Ngân mười ba tuổi, vừa cãi nhau với mẹ, bịt tai.",
