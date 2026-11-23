@@ -1,135 +1,134 @@
-# Hồ sơ 07 · "Phòng thứ chín" · KINH THÁNH (bản nháp, chờ duyệt)
+# Hồ sơ 07 · "Thư gửi người chết" · KINH THÁNH (bản nháp 2, chờ duyệt)
 
-> Bản nháp để người dùng duyệt cốt truyện. Chưa dựng code, chưa có ảnh.
-> Áp toàn bộ luật độ khó 1–15 và luật chống đoán 16–22 trong `docs/KE_HOACH.md`.
-> Không dùng người thật làm nhân vật. Không chép trò chơi, phim hay truyện có sẵn nào.
+> Bản nháp 1 (Luxor 1924, phái đoàn khảo cổ Pháp) bị người dùng chê "nhàm, chưa đủ rắc rối". Bản này đặt hẳn trong Ai Cập cổ đại.
+> Áp luật độ khó 1–15 và luật chống đoán 16–22 trong `docs/KE_HOACH.md`.
+> Tên nhân vật đều tự đặt (tên Ai Cập thông dụng), không phải người có thật. Bối cảnh, phong tục và các hệ đo đếm là có thật, tự soạn lại.
 
 ## 1. Bối cảnh
 
-- **Thời gian:** 14–20 tháng 1 năm 1924. Hơn một năm sau khi lăng Tutankhamun được mở, báo chí châu Âu đang sốt chuyện "lời nguyền pharaoh". Đó chỉ là không khí thời đại; không nhân vật có thật nào xuất hiện.
-- **Nơi:** bờ Tây Luxor (Thebes), một nhánh khe núi hẻo lánh phía nam Thung lũng các Hoàng hậu. "Nhà đá" là trại của phái đoàn, một ngôi nhà gạch bùn hai tầng có buồng tối rửa ảnh, kho hoá chất và phòng đánh máy.
-- **Phái đoàn:** "Mission Aubertin", phái đoàn tư nhân của Pháp, tiền của một nhà băng tơ lụa Lyon, giấy phép của Sở Cổ vật Ai Cập.
-- **Phát hiện:** ngày 2/1/1924 phái đoàn mở được một lăng nhỏ chưa ai đụng tới, gồm tám phòng thông nhau và một phòng thứ chín còn nguyên dấu niêm phong bằng đất sét. Chủ lăng là một công chúa không có trong bất kỳ danh sách nào; tên của bà bị đục nham nhở ở nhiều chỗ trên vách.
-- **Người chơi:** Phan Hữu Tâm, thợ ảnh người Việt của Viện Viễn Đông Bác cổ (Hà Nội), đang theo một chuyến công cán ở Cairo. Tâm được GS. Aubertin đánh điện mời về Luxor gấp, thay thợ ảnh Henri Duclos vừa chết. Sổ tay của Tâm là lời kể.
-- **Hạn chót:** đêm 20/1, phái đoàn phá niêm phong phòng thứ chín trước mặt thanh tra Sở Cổ vật.
+- **Nơi:** Set-Maat, "Nơi của Chân lý" (nay gọi là Deir el-Medina). Đây là làng của thợ đục, thợ vẽ, thợ chạm lăng vua, nằm trong một khe núi khô bờ Tây Thebes.
+  - Cả làng có chừng 60 nhà, một cổng có người gác, tường bao quanh.
+  - Thợ chia hai "bên": bên Phải và bên Trái, mỗi bên một đốc công.
+  - Mỗi tuần làm việc dài 10 ngày. Trong tuần, thợ ngủ ở dãy lều trên đèo, cạnh Thung lũng các Vua.
+- **Thời:** năm thứ 29 đời Đức Vua, tháng 2 mùa Peret (mùa nước rút, giữa mùa đông). Lương thực đã trễ 18 ngày; cả làng đói. Lịch sử thật ghi lại cuộc đình công đầu tiên của loài người đúng vào khoảng thời gian này, ở đúng ngôi làng này. Game không nêu tên vua.
+- **Tín ngưỡng:**
+  - Nữ thần rắn Meretseger, "Người yêu sự im lặng", sống trên đỉnh núi, trừng phạt kẻ thề gian bằng mù loà và rắn cắn.
+  - Tượng vua thần Amenhotep được khiêng đi xin thẻ: tượng nghiêng tới là "có", lùi lại là "không".
+  - Người sống viết thư lên bát gốm đặt ở nhà nguyện, gửi người chết nhờ đừng quấy nữa hoặc nhờ phân xử.
+  - Làng có "người đàn bà thông tuệ" (ta-rekhet), chuyên chỉ ra vị thần hay hồn ma nào đang gây hoạ.
+- **Người chơi:** Meryt, người đàn bà thông tuệ ở xóm dưới chân núi. Viên ký lục của Lăng thuê bà lên làng để nói xem thần nào đang nổi giận. Người chơi ghi chép trên mảnh gốm, như người làng vẫn làm; đó là lời kể.
 
 ## 2. Nhân vật
 
-| Người | Vai | Ghi chú cho người viết (không đưa vào game) |
+| Người | Vai | Sự thật (không đưa vào game) |
 |---|---|---|
-| GS. Lucien Aubertin, 58 | Trưởng đoàn, người thuê bạn | **Vô tội** (luật 17). Chết đêm 17/1. Đang dịch chương 125 Sách Người Chết; bản thảo đánh máy để trong két. |
-| Bà Hélène Aubertin, 44 | Vợ giáo sư | Nghi phạm giả 2: có chìa kho hoá chất, được hưởng thừa kế, lén gặp thanh tra Kamal. Thật ra bà đang xin Kamal giữ hộ thư từ để ly dị. Vô tội. |
-| Ông Kamal Fathy, 35 | Thanh tra Sở Cổ vật, người Ai Cập | Nghi phạm giả 3: người ái quốc (Ai Cập vừa độc lập năm 1922), ghét phái đoàn ngoại quốc. Vô tội. Là người niêm phong và kiểm tra mọi dấu niêm. |
-| Reis Mahmoud Sayed, 50 | Đốc công người làng Qurna | **Người dựng chuyện ma** (luật 18). Con trai ông chết vì sập hầm khi đào cho một phái đoàn khác năm 1921. Ông dựng tiếng khóc, dấu chân chó rừng, đèn tắt để dân phu bỏ việc, mong phái đoàn rút đi. Không giết ai. |
-| Ông Walter Pryce, 61 | Nhà hoá học bảo quản, người Anh | Nạn nhân 1, chết đêm 12 rạng 13/1. Lo bảo quản hiện vật; dùng kali xyanua trong lọ giết côn trùng ở kho. Ghi một sổ bảo quản riêng, viết tay. |
-| Henri Duclos, 29 | Thợ ảnh của đoàn | Nạn nhân 2, ngã xuống giếng lăng đêm 13/1. Người ta cho là sợ quá bỏ chạy trong đêm. Để lại 41 kính ảnh. |
-| Cô Odette Ferrand, 31 | Thư ký đánh máy | **Hung thủ** (luật 21). Đánh máy mọi giấy tờ của đoàn: sổ hiện vật, điện tín, bản dịch của giáo sư. Có mặt ở hầu hết tài liệu với vai việc vặt: chép, gửi, pha cà phê, giữ chìa phòng đánh máy. |
-| Ông Yusuf | Chủ tiệm "đồ cổ" ở chợ Luxor | Người mua hàng của Odette. |
-| Bé Zeinab, 11 | Cháu gái reis Mahmoud, gánh nước cho trại | Nhân chứng; kể chuyện "bà công chúa đi đêm". |
+| Userhat | Ký lục của Lăng, người thuê bạn | **Vô tội** (luật 17). Đang lặng lẽ cộng sổ lương thực vì thấy thiếu. Chết ngày thứ tư, rắn hổ mang sừng trong hộp bút. |
+| Hay | Thợ vẽ bên Trái | Nạn nhân đầu tiên. Chết trong hành lang lăng vua đang đục, ngay dưới hình nữ thần rắn. Trước đó anh đã tự đong lại lương bằng cái chén hin của nhà mình. |
+| Nebetiunet | Vợ goá của Hay | **Người dựng chuyện ma** (luật 18). Viết thư lên bát gửi chồng, rồi tự viết "thư trả lời của Hay" đặt ở nhà nguyện, để ép toà làng (kenbet) xử lại. Tin chồng bị giết, nhưng tố nhầm người: Nakhtmin. |
+| Nakhtmin | Đốc công bên Phải | Nghi phạm giả 1. Đang kiện Hay về một con lừa; Hay đã thề trước toà là không mượn lừa. Nói dối về chỗ mình ở đêm Hay chết (đi gặp vợ người khác). |
+| Sennefer | Đốc công bên Trái, chủ của Hay | Nghi phạm giả 2. Ấn "của Lăng" đến lượt bên Trái giữ đúng tuần ấy. Hay còn nợ ông hai deben đồng. |
+| Khonsu | Người gác cổng làng | **Hung thủ** (luật 21). Nhận lúa ở kho bến sông, chở lừa lên làng, đong lương cho từng nhà ngay ở cổng bằng cái đấu oipe của cổng. Cũng là người đưa tin, đưa thư, mang ấn lên đèo mỗi tối. Có mặt trong hầu hết tài liệu với vai việc vặt. |
+| Hori | Thầy bắt rắn, bùa bọ cạp | Bán rắn cho người làm bùa. Sổ bán của ông không ghi tên người mua, chỉ ghi "người nhà cổng". Chi tiết này không lộ ra trước trọng điểm 6. |
+| Ký lục kho Medinet Habu | Người ở ngoài làng | Nghi phạm giả 3: kho của đền bên sông. Bị người chơi nghi là đã ăn bớt lương. Vô tội. |
+| Bé Tuy, 9 tuổi | Con gái Hay | Nhân chứng: "Bố bảo cái đấu ở cổng ăn mất một miếng." |
 
-**Động cơ của Odette:** từ tháng 12/1923, cô bớt lại hiện vật nhỏ (bùa, bọ hung, nhẫn) trong lúc đánh máy sổ hiện vật, rồi bán cho ông Yusuf. Cô định dùng tiền để đưa em trai bị thương phổi từ chiến tranh sang chữa ở Thuỵ Sĩ, nhưng không được để người chơi đoán ra động cơ này trước trọng điểm 6. Ba người có thể phát hiện chuyện đó đều bị giết:
-- Pryce, vì sổ bảo quản viết tay của ông lệch với sổ đánh máy.
-- Duclos, vì kính ảnh của anh chụp hiện vật tại chỗ.
-- Aubertin, vì ông bắt đầu đối chiếu kính ảnh.
+**Sự thật:**
+- Khonsu lót đáy đấu oipe của cổng một lớp vữa, làm đấu nhỏ đi đúng 1/16. Mỗi lần phát lương, mỗi nhà mất một chút. Phần lúa dư, em trai anh ta đem đổi ở chợ bờ Đông.
+- Cả làng đói, tưởng là kho đền gửi trễ và gửi thiếu. **Chính cuộc đình công là hậu quả của vụ ăn cắp.**
+- Hay phát hiện ra, bị Khonsu giết trong lăng. Đêm đó Khonsu là người mang ấn lên đèo, nên anh ta niêm lại cửa lăng được.
+- Userhat cộng sổ, sắp tìm ra, bị giết bằng một con rắn.
+- Khonsu là người chuyển bát thư của Nebetiunet tới nhà nguyện. Anh ta chen thêm một "thư trả lời" do chính mình viết, đẩy cả làng đổ tội cho Nakhtmin.
 
-Cô mượn lời đồn lời nguyền mà reis Mahmoud đang thổi lên: cạnh mỗi xác, cô để một mảnh giấy cói chép một câu trong 42 lời tự thú phủ nhận ("Tôi không ăn cắp…").
+## 3. Dòng thời gian (lịch dân sự: 3 mùa × 4 tháng × 30 ngày, cộng 5 ngày lễ cuối năm)
 
-**Người chơi Tâm là mục tiêu tiếp theo**, vì Tâm đang in lại kính ảnh của Duclos.
+| Ngày | Việc |
+|---|---|
+| Tháng 1 Peret | Hay đong thử lương nhà mình bằng chén hin; ghi số lên một mảnh gốm riêng. |
+| Tháng 2 Peret, ngày 11 | Toà làng xử vụ con lừa. Hay thề "nếu tôi nói dối, Meretseger sẽ bắt mắt tôi". |
+| Tháng 2 Peret, ngày 13, đêm | Hay bị đánh chết trong hành lang lăng vua. Khonsu mang ấn lên đèo, niêm lại cửa. |
+| Ngày 15 | Bên Trái mở cửa lăng, thấy xác Hay dưới hình nữ thần rắn. Cả làng nói Hay bị phạt vì thề gian. |
+| Ngày 16 | **Ngày thứ nhất của game.** Bạn lên làng. Tượng vua thần được khiêng ra xin thẻ. |
+| Ngày 19 | Userhat chết trong nhà, rắn hổ mang sừng trong hộp bút. |
+| Ngày 22 | **Ngày thứ bảy.** Thợ bỏ lăng, kéo nhau xuống ngồi sau tường đền Medinet Habu kêu đói. Khonsu tình nguyện mang cái đấu "làm bằng chứng" xuống cho tể tướng. |
 
-## 3. Dòng thời gian thật
+## 4. Bảy trọng điểm
 
-| Ngày (Tây lịch) | Lịch Copt (reis dùng) | Lịch Hồi (Kamal dùng) | Việc |
-|---|---|---|---|
-| 2/1/1924 | 24 Koiak 1640 | 25 Jumada I 1342 | Mở lăng. Phòng 9 còn niêm. |
-| 3–11/1 | | | Phái đoàn dọn tám phòng. Duclos chụp 41 kính. Odette đánh máy sổ hiện vật; 11 món "không thấy". |
-| 12/1, 23 giờ | 3 Tobi | 5 Jumada II | Pryce bị đầu độc bằng xyanua pha vào ca trà đêm ông vẫn uống ở kho. Ông gục ở phòng 3, trước cảnh "Cân trái tim". Odette kéo xác vào đặt cho khớp cảnh trên vách và để mảnh cói số 1. |
-| cùng đêm, 23 giờ 30 | | | Reis Mahmoud dựng tiếng khóc trong lăng như mọi đêm; ông thấy đèn trong phòng 3 nhưng tưởng là Pryce đang làm việc. |
-| 13/1, gần sáng | 4 Tobi | 6 Jumada II | Duclos bị đẩy xuống giếng lăng. Mảnh cói số 2 trong túi áo. |
-| 14/1 | 5 Tobi | 7 Jumada II | Tâm tới. Đêm thứ nhất. |
-| 16/1 | 7 Tobi | 9 Jumada II | Kamal bắt reis Mahmoud vì dấu chân chó rừng. Reis bị giữ ở đồn Luxor tới hết 18/1. |
-| 17/1, 22 giờ | 8 Tobi | 10 Jumada II | Aubertin chết trong buồng tối, xyanua. Mảnh cói số 3. **Reis đang bị giam: ông không thể là hung thủ.** |
-| 20/1 | 11 Tobi | 13 Jumada II | Mở phòng 9. Odette định đốt buồng tối bằng bột magiê đèn chớp lúc mọi người ở trong lăng. |
+Mỗi trọng điểm dùng một hệ có thật, chưa dùng trong series. Mỗi trọng điểm lật lại kết luận của trọng điểm trước (luật 19).
 
-## 4. Bảy trọng điểm: đáp án đúng, và kết luận sai người chơi sẽ rút ra
+| # | Hệ tra cứu | Đáp án đúng | Người chơi sẽ tin sai | Bị lật ở |
+|---|---|---|---|---|
+| 1 | **Sổ điểm danh thợ:** gốm ghi ngày theo lịch dân sự và lý do vắng ("ủ bia", "bọ cạp đốt", "ướp xác anh trai", "làm việc cho đốc công") | Đêm 13, Nakhtmin ghi "ủ bia ở nhà" nhưng vợ ông ghi ông vắng nhà. Nakhtmin nói dối. | Nakhtmin giết Hay, đúng như bà goá tố | 2 |
+| 2 | **Số hieratic và đơn vị lúa:** khar, oipe, hekat (1 khar = 4 oipe = 16 hekat). Bảng lương từng hạng thợ. | Tháng nào nhà nào cũng thiếu đúng 1/16. Thiếu đều như vậy thì không phải một người thợ ăn cắp. Nakhtmin cũng bị thiếu. | Kho đền bên sông ăn bớt. Hay bị giết vì đòi lương. Kẻ giết là người của kho. | 3 |
+| 3 | **Bảng nét chữ hieratic:** mỗi người viết vài ký hiệu theo thói quen riêng, có bảng mẫu chữ trong trường dạy ký lục. Có các bát thư gửi người chết. | Thư "Hay trả lời" là do Nebetiunet viết. Ma là dựng. | Bà goá giết chồng rồi dựng ma để che | 4 |
+| 4 | **Sách rắn** (giống sách y học cổ về rắn và bọ cạp): đặc điểm từng loài, vết cắn, mùa rắn ngủ đông | Userhat chết vì rắn hổ mang sừng; mùa Peret rắn ngủ đông, nên **rắn bị đặt vào**. Giờ đó Nebetiunet đang khiêng kiệu tượng thần trước mặt cả làng. | Không còn ai rõ ràng. Nghi Sennefer vì vụ nợ | 5 |
+| 5 | **Lịch giữ ấn:** ấn "của Lăng" đổi người giữ theo tuần 10 ngày, hai bên Phải và Trái thay nhau. Có các dấu ấn trên đất niêm. | Dấu niêm cửa lăng đêm 13 đúng là ấn đến lượt bên Trái giữ, tức tuần của Sennefer. Bẫy: đếm tuần theo tháng âm thì ra bên Phải. | Sennefer là hung thủ | 6 |
+| 6 | **Đong thể tích:** đổ nước bằng chén hin (1 hekat = 10 hin) để đo cái đấu ở cổng. Mảnh gốm của Hay. Sổ của thầy bắt rắn. Một thư "trả lời" thứ hai khác nét chữ. | Đấu ở cổng chỉ chứa 15/16 oipe. Lương phát ở cổng do người gác đong. Mỗi tối người gác mang ấn của bên đến lượt lên đèo (chi tiết có từ trọng điểm 5 nhưng bị lẫn trong một dòng việc vặt). Lá thư lạ viết số theo lối của thẻ buộc bao lúa. **Hung thủ: Khonsu.** Tổng số lúa bị ăn cắp tính ra khar. | | |
+| 7 | **Một lần chọn duy nhất** | Xem mục 6 | | |
 
-Mỗi trọng điểm dùng một hệ tra cứu có thật, chưa dùng trong series.
-
-| # | Đêm | Hệ tra cứu | Đáp án | Kết luận sai mà người chơi sẽ tin (luật 19) | Trọng điểm nào lật lại |
-|---|---|---|---|---|---|
-| 1 | 14/1 | Bảng chữ tượng hình một phụ âm, hướng đọc theo mặt con vật | Tên chủ lăng **Tabekhnet** (đọc ngược hướng ra "Tenkhbet", là bẫy). Tên bị đục đi sau khi chôn. | Công chúa bị xoá tên, nên xác trong quan tài có thể không phải bà: "có người đội tên" (mồi đánh tráo danh tính, luật 16) | 4: dấu trên vải liệm khớp tên; đúng là bà |
-| 2 | 15/1 | Ba bộ lịch: Tây, Copt, Hồi. Bảng đổi ngày trong sổ của Kamal | Đêm Pryce chết, reis Mahmoud **có mặt trong lăng** lúc 23 giờ 30, dù ông khai ở làng | Reis nói dối, nên reis là hung thủ (ông còn có động cơ thật: con trai chết) | 4: reis bị giam khi Aubertin chết |
-| 3 | 16/1 | Sách nhận dạng dấu chân thú (chó rừng: chân trước 5 ngón kể cả ngón huyền, chân sau 4 ngón) | Dấu chân "Anubis" quanh lăng là **dấu khuôn gỗ**: chân nào cũng 5 ngón, khoảng cách bước không đổi. Khuôn ở nhà reis. | Reis dựng ma, vậy giết người cũng là reis | 4 |
-| 4 | 17–18/1 | Bảng độc chất và sổ kho hoá chất của Pryce (đổi gram, đếm lọ) | Aubertin và Pryce cùng chết vì **xyanua**, thiếu 14 g ở lọ giết côn trùng số 2. Đêm 17 reis đang bị giam. Dấu trên vải liệm xác ướp đọc ra Tabekhnet: không có đánh tráo. | Bà Hélène có chìa kho hoá chất, được thừa kế, lén gặp Kamal: bà là hung thủ | 6 |
-| 5 | 18–19/1 | Chương 125 Sách Người Chết (bản in chuẩn) và bản dịch đánh máy của Aubertin | Ba mảnh cói theo đúng **thứ tự sai** trong bản dịch của Aubertin (ông đảo hai câu 17 và 19), không theo bản chuẩn. Kẻ chép đã đọc bản đánh máy trong két. | Kẻ giết là một người "trả thù cho thần", chọn những người ăn cắp của lăng, nên nghi Kamal (ái quốc) hoặc Aubertin tự sát | 6: người chết không phải kẻ trộm, mà là những người có thể phát hiện kẻ trộm |
-| 6 | 19/1 | Kính ảnh của Duclos, sổ hiện vật đánh máy, sổ bảo quản viết tay, biên lai tiệm ông Yusuf | 11 món có trong kính ảnh ngày 6–9/1 nhưng ghi "không thấy" trong sổ đánh máy. Biên lai ông Yusuf ghi số hiệu theo đúng cách đánh số chỉ có trong sổ đánh máy. Người có bản dịch và đánh số: **Odette Ferrand**. | | |
-| 7 | 20/1 | Đồng hồ sao trên nắp quan tài và giờ mở phòng 9 | Chọn đúng một việc (xem mục 6) | | |
-
-Ghi chú:
-- **Không ai được chối điều người chơi chưa nghi (luật 20).** Không ai nói "xác ướp đúng là công chúa", "reis vô tội", "tôi không hề đọc bản dịch".
-- **Odette có mặt từ trang đầu, ở vai việc vặt (luật 21):** bức điện mời Tâm là cô đánh, sổ hiện vật cô đánh, cà phê cô pha. Tên cô không là đáp án trước trọng điểm 6.
-- **Manh mối công bằng từ sớm:**
-  - Trang 1 có bức điện mời Tâm. Bức điện đánh số hiện vật kiểu "VQ-7/31", kiểu đánh số chỉ phòng đánh máy dùng.
-  - Đêm thứ hai, Zeinab kể "bà công chúa đi đêm, mang đèn, gõ lách cách". Câu này nghe như chuyện ma, nhưng thật ra là tiếng máy chữ lúc 1 giờ sáng.
+**Kiểm theo luật:**
+- **Luật 2:** Nakhtmin chỉ làm đáp án ở trọng điểm 1; Sennefer ở 5; Nebetiunet ở 3. Khonsu chỉ là đáp án ở 6.
+- **Luật 20:** không nhân vật nào nói "đấu ở cổng đúng chuẩn", "người gác không biết chữ", hay "ấn luôn ở nhà đốc công".
+- **Luật 21:** Khonsu xuất hiện từ trang đầu: mở cổng cho bạn, đưa nước, phát lương, đưa thư, mang ấn. Mọi chi tiết đều để ở vai việc vặt.
+- **Manh mối công bằng có từ sớm:**
+  - Ngày thứ nhất, bé Tuy nói "Bố bảo cái đấu ở cổng ăn mất một miếng". Câu này nghe như chuyện ma ăn lúa.
+  - Bảng lương ở trọng điểm 2 có một dòng phụ: người gác cổng nhận lương riêng ở kho, không đong qua cổng.
 
 ## 5. Bẫy giấy tờ cho từng trọng điểm (luật 9)
 
-1. Bản chép tay cartouche của Duclos chép ngược hướng, ra Tenkhbet.
-2. Biên bản của đồn Luxor ghi ngày theo lịch Hồi. Người chơi đổi nhầm thì thành reis bị bắt trước khi Pryce chết.
-3. Một trang sách dấu chân thú khác, của cáo sa mạc (fennec), cũng 5 ngón. Phải đo cả kích thước.
-4. Sổ kho ghi xyanua theo "drachme" (đơn vị cũ). Đổi nhầm sang gram sẽ ra lượng thiếu sai. Có thêm một lọ arsenic cũng hụt, là bẫy, vì Pryce dùng nó để chống mối.
-5. Có hai bản chương 125 khác nhau, giống trò hai cuốn Kiều ở hồ sơ 3 nhưng đây là thứ tự câu, không phải số câu.
-6. Bà Hélène có một hoá đơn bán đồ trang sức ở Luxor. Đó là nhẫn của chính bà, bán để có tiền về Pháp một mình.
+1. **Hai bản điểm danh.** Bản của ký lục ghi theo ngày, bản của đốc công ghi theo tuần. Đọc lệch một ngày là ra Nakhtmin vô can.
+2. **Một tháng có 5 ngày lễ cuối năm** nhưng không phát lương. Chia nhầm cho 35 ngày thay vì 30 thì ra mức thiếu khác.
+3. **Hai bàn tay viết rất giống nhau.** Nebetiunet học chữ từ chính Hay. Bảng mẫu chữ phải so đúng hai ký hiệu thì mới tách được.
+4. **Rắn hổ mang Ai Cập cũng có trong sách** và có vết cắn gần giống. Phải dùng khoảng cách hai vết răng và triệu chứng mắt để phân biệt.
+5. **Tuần 10 ngày tính theo lịch dân sự,** không theo tháng trăng của lễ hội.
+6. **Đấu của kho đền đúng chuẩn.** Đo nhầm đấu sẽ ra "kho không gian".
 
-## 6. Đêm cuối (trọng điểm 7, chỉ một lần chọn)
+## 6. Ngày thứ bảy (trọng điểm 7, chọn một lần)
 
-Giờ Hợi đêm 20/1. Cả đoàn sắp xuống lăng phá niêm phòng 9. Odette xin ở lại trông buồng tối "vì sợ". Lựa chọn, mỗi cái dẫn tới một kết thúc:
+Thợ kéo nhau xuống đền. Khonsu ôm cái đấu ở cổng, nói sẽ mang xuống làm chứng "kho đền đong thiếu". Bạn chỉ làm được một việc:
 
-- A. Xuống lăng như mọi người, mang theo kính ảnh: buồng tối cháy, mất sổ bảo quản và biên lai. Kết thúc "Lời nguyền" (Odette thoát, báo chí viết về lời nguyền).
-- B. Ở lại buồng tối với Odette: bạn là nạn nhân thứ tư. Kết thúc "Mảnh cói thứ tư".
-- C. Tố Odette trước cả đoàn ngay lúc ấy, không đưa bằng chứng: Kamal không tin, Odette đốt kho trong lúc hỗn loạn.
-- **D (đúng).** Chuyển kính ảnh và sổ bảo quản sang lều của Kamal trước giờ Hợi, nhờ Kamal giữ Odette ở lại trong lăng làm người ghi biên bản niêm, rồi để Kamal tự đối chiếu biên lai ông Yusuf. Kết thúc "Phòng thứ chín".
-- Kết thúc ẩn "Người đếm sao": không sai lần nào, không xem gợi ý. Thêm trang cuối sổ của Duclos.
+- **A.** Để Khonsu mang đấu đi. Lớp vữa bị cạo trên đường, đấu thành đúng chuẩn. Kho đền bị đổ tội. Kết thúc "Meretseger".
+- **B.** Tố Khonsu trước toà làng ngay. Không có đấu làm chứng, anh ta chối; đêm đó đấu biến mất. Kết thúc "Im lặng".
+- **C.** Đem chén hin của Hay và mảnh gốm ghi số xuống đền trình tể tướng. Thiếu cái đấu thì không thành án. Kết thúc "Một nửa".
+- **D (đúng).** Nhờ bên Trái giữ cái đấu ở cổng, niêm bằng chính ấn của Lăng trước mặt cả làng. Mang mảnh gốm của Hay, sổ thầy bắt rắn và lá thư trả lời thứ hai xuống cho tể tướng. Kết thúc "Thư gửi người chết".
+- **Kết thúc ẩn "Lời của thần":** không sai lần nào, không xem gợi ý. Bạn được đọc lại mảnh gốm mà tượng vua thần đã nghiêng về phía nó ngày thứ nhất.
 
 ## 7. Điều không ai giải thích được (luật 22)
 
-Sau mỗi cái chết, trên gối nạn nhân có một con bọ hung bằng đá xanh. Đêm 20/1 phá niêm phòng 9 trước mặt Kamal:
-- Dấu niêm còn nguyên, bụi trên sàn không có dấu chân.
-- Trong phòng có một hộp gỗ 4 ngăn; ba ngăn trống, đúng chỗ của ba con bọ hung.
-- Odette thú nhận mọi việc trừ việc này. Cô chưa từng vào phòng 9.
+Ngày thứ nhất, tượng vua thần được khiêng ra trước đống mảnh gốm ghi tên mọi người trong làng.
+- Tượng nghiêng về một mảnh. Người làng đọc vội thành "Nakhtmin", vì mảnh ấy nằm chồng lên mảnh tên ông.
+- Ngày cuối, người ta lật đống gốm lại. Mảnh nằm dưới cùng, đúng chỗ tượng nghiêng, ghi "Khonsu, người giữ cổng".
+- Hai người khiêng kiệu hôm ấy là hai thầy tư tế đã mù từ lâu.
+- Không ai giải thích. Lời giải cuối để ngỏ.
 
-Lời giải cuối để ngỏ chuyện này.
+## 8. Hệ tra cứu cần dựng
 
-## 8. Các hệ tra cứu cần dựng (đều là kiến thức có thật, tự soạn lại)
+- Lịch dân sự Ai Cập: 3 mùa (Akhet, Peret, Shemu) × 4 tháng × 30 ngày, cộng 5 ngày lễ cuối năm; tuần 10 ngày.
+- Chữ số hieratic: đơn vị, chục, trăm, phân số của hekat.
+- Đơn vị lúa: khar, oipe, hekat, hin; mức lương theo hạng thợ. Số liệu sẽ kiểm lại khi dựng và ghi nguồn trong kinh thánh.
+- Đơn vị đồng và trao đổi: deben, kite (1 deben = 10 kite).
+- Bảng nét chữ hieratic của 4 người viết. Tự thiết kế: dựa trên dạng chữ thật nhưng vẽ lại.
+- Sách rắn: 6 loài thật ở Ai Cập (hổ mang sừng, rắn lục thảm, hổ mang Ai Cập…), mô tả hình dạng, vết cắn, triệu chứng.
+- Lịch giữ ấn và các dấu ấn trên đất niêm.
 
-- Bảng 24 chữ tượng hình một phụ âm; luật hướng đọc; định tố "người nữ".
-- Lịch Copt (13 tháng: Thout … Mesori, Nasie). Năm 1640 bắt đầu 12/9/1923; tháng Tobi bắt đầu 10/1/1924.
-- Lịch Hồi: 1 Jumada II 1342 ≈ 9/1/1924 (lịch bảng). Cần kiểm lại bằng máy khi dựng.
-- Bảng nhận dạng dấu chân: chó rừng, cáo fennec, chó nhà, linh cẩu.
-- Bảng độc chất: xyanua, arsenic, strychnine; liều chết; mùi; đơn vị drachme (≈ 3,9 g, kiểm lại khi dựng).
-- Chương 125: 42 lời tự thú phủ nhận. Tự viết lại tiếng Việt dựa trên nội dung cổ (công cộng), không chép bản dịch có bản quyền.
-- Đồng hồ sao: 12 giờ đêm theo các chòm sao decan mọc, dùng ở trọng điểm 7.
+## 9. Ảnh dự kiến (prompt chi tiết viết sau khi duyệt)
 
-## 9. Danh sách ảnh dự kiến (prompt chi tiết viết sau khi duyệt)
+Không ảnh nào vẽ người bằng code. Tranh tường, tượng có hình người do người dùng tạo bằng công cụ ảnh.
 
-Không ảnh nào cần vẽ người bằng code. Ảnh có người (tranh tường) do người dùng tạo bằng công cụ ảnh.
-
-1. Bìa (dọc): cửa lăng trong khe núi đêm trăng, đèn bão, dải niêm.
-2. Vách "Cân trái tim" với cartouche bị đục.
-3. Cartouche cận cảnh (vùng bấm để đọc từng ký hiệu).
-4. Nắp quan tài có đồng hồ sao.
-5. Ba mảnh giấy cói chữ Pháp viết tay.
-6. Dấu chân trên cát quanh cửa lăng (ảnh đen trắng của Duclos).
-7. Khuôn gỗ chân chó rừng.
-8. Kho hoá chất: kệ lọ, lọ giết côn trùng số 2.
-9. Buồng tối: chậu rửa, đèn đỏ, kính ảnh.
-10. Phòng đánh máy: máy chữ, giấy than, tách cà phê.
-11. Tiệm ông Yusuf ở chợ Luxor.
-12. Cửa phòng 9 còn niêm đất sét.
-13. Hộp gỗ bốn ngăn với ba ngăn trống.
-14. Bọ hung đá xanh trên gối.
+1. Bìa (dọc): làng Set-Maat trong khe núi lúc chạng vạng, đỉnh núi hình kim tự tháp phía sau, cổng làng có đèn dầu.
+2. Hành lang lăng đang đục dở, hình nữ thần rắn vẽ dở trên vách, vệt máu khô.
+3. Đống mảnh gốm ghi tên và kiệu tượng vua thần, cảnh chỉ có đồ vật.
+4. Bát gốm viết thư gửi người chết (hai cái, khác nét chữ).
+5. Mảnh gốm điểm danh thợ (chữ hieratic, ảnh cận).
+6. Kho lúa: bao lúa, đấu oipe, chén hin.
+7. Cái đấu ở cổng, nhìn từ trên xuống, thấy đáy.
+8. Hộp bút của ký lục: bảng mực, bút sậy, nắp hộp mở.
+9. Dấu ấn trên cục đất niêm.
+10. Lều thợ trên đèo lúc đêm.
+11. Giỏ rắn của thầy bắt rắn.
+12. Tường đền Medinet Habu lúc thợ ngồi đình công (nhìn từ xa, không rõ mặt người).
 
 ## 10. Việc cần người dùng quyết
 
 - Duyệt cốt truyện và hung thủ.
-- Đặt tên tiếng Việt cho hồ sơ ("Phòng thứ chín" hay tên khác).
-- Duyệt bốn kết thúc.
+- Tên hồ sơ: "Thư gửi người chết" hay "Nơi của Chân lý"?
+- Duyệt các kết thúc.
