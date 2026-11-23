@@ -71,7 +71,7 @@ export const USERHAT_WICK = { issued: 1, left: 1 };   // quarters left -> burnt 
 // ------------------------------------------------------------------ tomb progress (cubits cut by end of day)
 // 1 cubit = 7 palms = 28 fingers.
 export const PROGRESS = {
-  "Hành lang B (bên Phải)": { 11: 6, 12: 7.5, 13: 10, 14: 10, 15: 11 },
+  "Hành lang B (bên Phải)": { 11: 6, 12: 7, 13: 10, 14: 10, 15: 11 },
   "Hành lang C (bên Trái)": { 11: 5, 12: 7, 13: 9, 14: 11, 15: 11 },
   "Phòng phụ D (bên Trái)": { 11: 0, 12: 0, 13: 1, 14: 2, 15: 2 },
 };

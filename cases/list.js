@@ -19,4 +19,7 @@ export const CASES = [
   { id: "06", number: "Hồ sơ 06", title: "Âm Hôn", place: "Trấn Hoè Âm, Sơn Tây, Dân Quốc năm 25", cover: "cover",
     short: "Nhà giàu cưới vợ cho đứa con trai chết đuối. Canh thiếp cô dâu không có tên. Đêm nào, sau cánh cửa niêm phong ở Đông viện, cũng có người gọi tên một cô hầu.",
     level: "Cực khó (mức 5) · văn hoá Trung Hoa cổ", time: "6–9 giờ", questions: 7, endings: 4 },
+  { id: "07", number: "Hồ sơ 07", title: "Thư gửi người chết", place: "Set-Maat, bờ Tây Thebes, năm 29", cover: "cover", soon: true,
+    short: "Thợ vẽ lăng vua chết dưới hình Bà Rắn. Lúa trễ mười tám ngày, cả làng đói. Vợ anh viết thư cho người chết mỗi tối, và sáng nào cũng có thư trả lời.",
+    level: "Cực khó (mức 5) · Ai Cập cổ", time: "7–10 giờ", questions: 7, endings: 5 },
 ];

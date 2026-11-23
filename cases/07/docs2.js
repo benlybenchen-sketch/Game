@@ -66,7 +66,7 @@ export default [
   reply("tra_loi_3", 3, "tags", `<p>Hay trả lời. Đốc công bên Phải đứng trên lăng đêm ấy, tay cầm búa. Đừng ai đụng tới lúa của Lăng, lúa là của thần. Đong một đấu là đủ một đấu.</p>`),
 
   {
-    id: "loi_nebet", stage: 2, kind: "Lời kể", icon: "✍", label: "Bà Nebetiunet nói ở nhà nguyện",
+    id: "loi_nebet", stage: 2, kind: "Lời kể", icon: "✍", label: "Vợ góa của Hay nói ở nhà nguyện",
     html: () => `<div class="doc doc--memo">${hand(`
       <p>“Tôi biết chữ. Anh Hay dạy tôi từ hồi mới cưới.”</p>
       <p>“Thư trả lời à? Anh ấy về thì anh ấy viết. Bà hỏi làm gì.”</p>

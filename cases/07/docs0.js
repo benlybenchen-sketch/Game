@@ -71,7 +71,7 @@ export default [
 
   ...["a", "b"].map((k) => ({
     id: `diem_danh_${k}`, stage: 0, kind: "Sổ điểm danh", icon: "📓",
-    label: k === "a" ? "Sổ điểm danh thợ, ngày 11–15 (bản của ký lục)" : "Sổ điểm danh thợ, ngày 11–15 (bản chép cho nhà nguyện)",
+    label: k === "a" ? "Sổ điểm danh thợ, ngày 11–15, mực đen" : "Sổ điểm danh thợ, ngày 11–15, mực nhạt",
     html: () => gom(`<table class="tbl">
         <tr><th>Ngày</th><th>Người vắng ở Lăng và lý do</th></tr>
         ${(k === "a" ? REG_A : REG_B).map(([d, t]) => `<tr><td>${d}</td><td>${t}</td></tr>`).join("")}

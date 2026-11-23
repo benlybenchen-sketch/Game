@@ -71,7 +71,7 @@ export function hn(value, { one = 0, cls = "" } = {}) {
 }
 
 /** A row of pebbles (for the school exercise book). */
-export const pebbles = (n) => `<span class="pebbles">${Array.from({ length: n }, (_, i) => `<i${i % 10 === 9 ? ' class="gap"' : ""}></i>`).join("")}</span>`;
+export const pebbles = (n) => `<span class="pebbles">${Array.from({ length: n }, (_, i) => `<span class="pb${i % 10 === 9 ? " gap" : ""}"></span>`).join("")}</span>`;
 
 // ------------------------------------------------------------------ handwriting signs
 // Six signs, three variants each. A writer = six variant indices.
