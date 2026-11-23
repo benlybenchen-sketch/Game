@@ -30,7 +30,7 @@ export default [
     html: () => `
     <div class="doc doc--book">
       <div class="book-head">BỘ THỦ GIẢN YẾU · chữ Hán là ghép từ các phần nhỏ</div>
-      <p><b>Các phần:</b> ${P1.map(([h, v]) => `${hv(h, v.split(":")[0])} <span class="small">(${v})</span>`).join(" · ")}</p>
+      <p>Các phần: ${P1.map(([h, v]) => `${hv(h, v.split(":")[0])} <span class="small">(${v})</span>`).join(" · ")}</p>
       <table class="tbl">${PARTS.map(([h, v, p]) => `<tr><td class="han">${h}</td><td>${v}</td><td>${p}</td></tr>`).join("")}</table>
     </div>`,
   },
@@ -43,7 +43,7 @@ export default [
       <p>Họ Triệu chi trưởng, trấn Hoè Âm. Con trai Triệu Thừa Tự mất sớm, đã cưới vợ âm là Ôn thị. Nay lập người nối dõi cho đôi vợ chồng ấy:</p>
       <p>${ln("qk_ten", "Triệu Thừa An, con trai Triệu Hoài Nghĩa (em họ, ở Hà Bắc)")}, ${ln("qk_sinh", "sinh giờ Thìn ngày 15 tháng Ba năm Đinh Tỵ")}.</p>
       <p>${ln("qk_don", "Ngày 25 tháng Bảy, Lưu Phúc đưa xe la sang Hà Bắc đón về.")} Từ nay Thừa An là con của Thừa Tự và Ôn thị, thờ phụng hai người, hưởng gia sản chi trưởng.</p>
-      <div class="sign-row"><div>Người lập<br>${hand("Tiết thị", "sign")}</div><div>Tộc trưởng<br>${hand("Hoài Tông", "sign")}</div><div>Bên cho<br><i>(chưa ký)</i></div></div>
+      <div class="sign-row"><div>Người lập<br>${hand("Tiết thị", "sign")}</div><div>Tộc trưởng<br>${hand("Hoài Tông", "sign")}</div><div>Bên cho<br>(chưa ký)</div></div>
       ${stamp("趙氏宗祠", "right:24px;top:24px")}
     </div>`,
   },
@@ -53,8 +53,8 @@ export default [
     html: () => `
     <div class="doc doc--book">
       <div class="book-head">TRIỆU THỊ TỘC PHẢ · chi trưởng · bản chép lại năm Dân Quốc 20</div>
-      <p>Triệu Hoài Đức, lấy Tiết thị. Con: <b>Triệu Thừa Tự</b>, ${ln("gp_sinh", "sinh ngày 5 tháng 5 năm Dân Quốc thứ 6 (Tây lịch), giờ Thìn")}. Con một.</p>
-      <p>Triệu Hoài Nghĩa (em họ), dời sang Hà Bắc năm Dân Quốc thứ 2. Con: …… <i>(bỏ trống, chưa chép)</i>.</p>
+      <p>Triệu Hoài Đức, lấy Tiết thị. Con: Triệu Thừa Tự, ${ln("gp_sinh", "sinh ngày 5 tháng 5 năm Dân Quốc thứ 6 (Tây lịch), giờ Thìn")}. Con một.</p>
+      <p>Triệu Hoài Nghĩa (em họ), dời sang Hà Bắc năm Dân Quốc thứ 2. Con: …… (bỏ trống, chưa chép).</p>
     </div>`,
   },
 
@@ -96,11 +96,11 @@ export default [
     <div class="doc doc--plain">
       <div class="red-card">
         <div class="red-card-h">冥 婚 書 · HÔN THƯ ÂM</div>
-        <p>Nhà trai: họ Triệu, trấn Hoè Âm. Chú rể: <b>Triệu Thừa Tự</b>, ${ln("ht_re", "người đang nằm trong quan tài sơn son ở linh đường phủ Triệu")}.</p>
-        <p>Nhà gái: họ Ôn. Cô dâu: <b>Ôn thị Tú Nương</b>, bát tự như canh thiếp.</p>
+        <p>Nhà trai: họ Triệu, trấn Hoè Âm. Chú rể: Triệu Thừa Tự, ${ln("ht_re", "người đang nằm trong quan tài sơn son ở linh đường phủ Triệu")}.</p>
+        <p>Nhà gái: họ Ôn. Cô dâu: Ôn thị Tú Nương, bát tự như canh thiếp.</p>
         <p>${ln("ht_chon", "Sau lễ, cô dâu theo chồng, hợp táng một huyệt, đầu cùng hướng, tay trong tay.")}</p>
         <p>Ngày giờ: đêm 22 tháng Bảy, giờ Tý.</p>
-        <p class="small">Người viết: …… <i>(để trống, chờ thầy xem ngày ký)</i></p>
+        <p class="small">Người viết: …… (để trống, chờ thầy xem ngày ký)</p>
       </div>
     </div>`,
   },

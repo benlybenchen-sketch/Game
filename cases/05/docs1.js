@@ -55,9 +55,9 @@ export default [
     html: () => `
     <div class="doc doc--old">
       <p class="note">Cuốn sổ bìa cứng treo trên đinh trong buồng tối. Vân chép lại trang đầu.</p>
-      ${hand(`<p><b>THUỐC HIỆN</b> (D-76): metol 2 g, sulfit 100 g, hydroquinon 5 g, borax 2 g, nước cho đủ 1 lít.</p>
-      <p><b>THUỐC HÃM</b>: hypo 250 g / lít. Mùa hè thêm phèn.</p>
-      <p><b>BỂ LÀM CỨNG</b> (mùa nồm, phim mềm): ${ln("st_formol", "formol (formalin) 10 ml cho 1 lít nước. Mùi rất hắc, cay mắt, phải mở cửa.")}</p>
+      ${hand(`<p>THUỐC HIỆN (D-76): metol 2 g, sulfit 100 g, hydroquinon 5 g, borax 2 g, nước cho đủ 1 lít.</p>
+      <p>THUỐC HÃM: hypo 250 g / lít. Mùa hè thêm phèn.</p>
+      <p>BỂ LÀM CỨNG (mùa nồm, phim mềm): ${ln("st_formol", "formol (formalin) 10 ml cho 1 lít nước. Mùi rất hắc, cay mắt, phải mở cửa.")}</p>
       <p>${ln("st_can", "Can 20 lít formol mang từ phòng hoá nghiệm mỏ về, tháng 6/1988, dùng dè.")} Vôi bột 2 bao để hút ẩm giấy ảnh.</p>
       <p class="small">Dòng viết thêm bằng bút chì, nét khác, rất mạnh tay: ${ln("st_het", "“Tháng 1/1990: hết nửa can.”")}</p>`)}
     </div>`,

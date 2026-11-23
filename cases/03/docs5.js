@@ -32,28 +32,28 @@ export default [
     id: "bien_ban_6", stage: 5, kind: "Sổ cơ", icon: "📓", label: "Sổ cơ · buổi 6 · 6/11/1971 (Dung ghi)",
     html: () => `
     <div class="doc doc--notebook">
-      ${hand(`<p><b>Buổi cơ thứ sáu.</b> Thứ Bảy 6/11/1971.</p>
+      ${hand(`<p>Buổi cơ thứ sáu. Thứ Bảy 6/11/1971.</p>
         <p>Ngồi: chị Lan (tay chủ), Dung (ghi sổ).</p>
         <p>${ln("bb6_tay", "Mình không đặt tay. Con cơ vẫn chạy, theo đúng ngón tay chị Lan.")}</p>
         <p><span class="code-line">L A N &nbsp; C H E E T S &nbsp; C H A Y S</span></p>
         <p>Chị Lan cười. Chị nói: “Thấy chưa Dung, bà gọi tới chị rồi.” Chị rủ mình lên gác thượng thắp nhang cho bà trẻ. Mình đi, vì mình muốn</p>`, "back")}
-      <p class="note">Câu viết dở. Nét chữ cả trang ngả về phía sau, mực lem ở cạnh trái mỗi dòng như bàn tay trái quẹt qua mực còn ướt. Trang kế tiếp là buổi cơ thứ bảy.</p>
+      <p class="note">Câu viết dở. Nét chữ cả trang ngả về phía sau, mực lem ở cạnh trái mỗi dòng. Trang kế tiếp là buổi cơ thứ bảy.</p>
     </div>`,
   },
 
   {
-    id: "kham_nghiem", stage: 5, kind: "Biên bản", icon: "§", label: "Viện Giảo nghiệm: khám nghiệm tử thi “Hà Ngọc Lan”, 1971",
+    id: "kham_nghiem", stage: 5, kind: "Biên bản", icon: "§", label: "Viện Giảo nghiệm: khám nghiệm tử thi Hà Ngọc Lan, 1971",
     html: () => `
     <div class="doc doc--report">
       <div class="report-head">VIỆN GIẢO NGHIỆM SÀI GÒN · BIÊN BẢN KHÁM NGHIỆM TỬ THI SỐ 71/1146</div>
-      <p>Tử thi nữ, đưa tới hồi 6 giờ ngày 7-11-1971 từ gác thượng số 9 đường Hàng Me. Theo hồ sơ cảnh sát: <b>Hà Ngọc Lan</b>, 19 tuổi.</p>
+      <p>Tử thi nữ, đưa tới hồi 6 giờ ngày 7-11-1971 từ gác thượng số 9 đường Hàng Me. Theo hồ sơ cảnh sát: Hà Ngọc Lan, 19 tuổi.</p>
       <p>${ln("kn_chay", "Cháy than hóa chừng 80% cơ thể. Tư thế co quắp: hai cánh tay co lên trước ngực, hai bàn tay nắm lại, hai gối co, như võ sĩ quyền Anh thủ thế (cơ co rút vì nhiệt).")} Da mặt và tóc cháy hết, không nhận được mặt.</p>
       <p>${ln("kn_nhan", "Nhận dạng: nhẫn vàng khắc chữ “H.N.L.” ở ngón áp út tay phải; mảnh vải áo bà ba hoa tím còn dính ở lưng. Người nhận dạng: cô Lâm Hạnh Dung, bạn cùng nhà.")}</p>
       <p>${ln("kn_xuong", "Xương đòn trái: có can xương cũ ở một phần ba giữa, gãy đã liền hoàn toàn, ước trên ba năm.")}</p>
       <p>${ln("kn_khi", "Khí quản và phế quản không có muội than.")} ${ln("kn_so", "Vùng chẩm có đường nứt sọ dài 4 phân.")}</p>
       <p>${ln("kn_seo", "Không xác định được sẹo hay dấu vết riêng vùng mặt, cổ do cháy.")}</p>
       <p>Ý kiến Viện: nạn nhân có thể đã tử vong trước khi bị cháy. Đề nghị điều tra thêm.</p>
-      <p class="small">Bút phê của Cuộc CS Quận Nhất: <i>Đèn dầu đổ, cháy gác thượng, nạn nhân bị xà gỗ rơi trúng đầu. Xếp hồ sơ.</i></p>
+      <p class="small">Bút phê của Cuộc CS Quận Nhất: Đèn dầu đổ, cháy gác thượng, nạn nhân bị xà gỗ rơi trúng đầu. Xếp hồ sơ.</p>
       ${stamp("ĐÃ XẾP", "right:30px;bottom:30px", "blue")}
     </div>`,
   },
@@ -63,7 +63,7 @@ export default [
     html: () => `
     <div class="doc doc--report">
       <div class="report-head">BỆNH VIỆN ĐÀ LẠT · PHIẾU ĐIỀU TRỊ NGOẠI KHOA</div>
-      <p>Bệnh nhân: <b>Lâm Hạnh Dung</b>, nữ, 14 tuổi. Người nhà: bà Lâm Ngọc… (giám hộ). Vào viện 20-7-1966.</p>
+      <p>Bệnh nhân: Lâm Hạnh Dung, nữ, 14 tuổi. Người nhà: bà Lâm Ngọc… (giám hộ). Vào viện 20-7-1966.</p>
       <p>Lý do: té ngựa ở bờ hồ Xuân Hương.</p>
       <p>${ln("yt_xuong", "Chẩn đoán: gãy kín một phần ba giữa xương đòn trái. Bó bột hình số 8, sáu tuần.")}</p>
       <p>${ln("yt_seo", "Vết rách da dưới cằm dài 1,5 phân, khâu 3 mũi.")}</p>
@@ -77,10 +77,10 @@ export default [
     html: () => `
     <div class="doc doc--plain">
       <div class="idcard id-vnch">
-        <div class="id-head">VIỆT NAM CỘNG HÒA<br><b>THẺ CĂN CƯỚC</b></div>
+        <div class="id-head">VIỆT NAM CỘNG HÒA<br>THẺ CĂN CƯỚC</div>
         <div class="id-photo">ảnh dán<br>(đã bóc mất)</div>
         <div class="id-body">
-          <p>Họ và tên: <b>LÂM HẠNH DUNG</b></p><p>Sanh ngày 14-2-1952 tại Sài Gòn</p><p>Cha: Lâm Văn Hiếu (đã chết) · Mẹ: Ngô Thị Hạnh (đã chết)</p>
+          <p>Họ và tên: LÂM HẠNH DUNG</p><p>Sanh ngày 14-2-1952 tại Sài Gòn</p><p>Cha: Lâm Văn Hiếu (đã chết) · Mẹ: Ngô Thị Hạnh (đã chết)</p>
           <p>Cao: 1 th 58</p>
           <p>${ln("cc_dau", "Dấu tích riêng: Sẹo 1,5 phân dưới cằm.")}</p>
           <p>Cấp ngày 2-3-1970 · Đô Thành Sài Gòn</p>

@@ -12,11 +12,11 @@ export default [
   },
 
   {
-    id: "kieu_khiem", stage: 4, kind: "Sách", icon: "📕", label: "Truyện Kiều chú giải của Khiêm (bản đủ 3.254 câu)",
+    id: "kieu_khiem", stage: 4, kind: "Sách", icon: "📕", label: "Truyện Kiều chú giải của Khiêm",
     html: () => `
     <div class="doc doc--book">
       <div class="book-head">ĐOẠN TRƯỜNG TÂN THANH · bản chú giải, đánh số câu · trọn bộ 3.254 câu<br><small>Sài Gòn, 1965. Bìa lót: “Đoàn Minh Khiêm, Văn khoa”. Đóng dấu: “Tang vật · Cuộc CS Quận Nhất · đã hoàn trả 1972”.</small></div>
-      ${hand(`<b>Mã Kiều</b> (Khiêm dạy cả nhóm): mỗi chữ cái là ba con số: số câu, số thứ tự của chữ trong câu, số thứ tự của mẫu tự trong chữ.
+      ${hand(`Mã Kiều (Khiêm dạy cả nhóm): mỗi chữ cái là ba con số: số câu, số thứ tự của chữ trong câu, số thứ tự của mẫu tự trong chữ.
         Đếm mẫu tự không kể dấu. Thí dụ 1·1·1 là T (chữ “Trăm”), 2·3·3 là U (chữ thứ ba của câu 2 là “chữ”, bỏ dấu thành c-h-u, mẫu tự thứ ba là U). Phải dùng đúng cuốn sách, đúng số câu.`)}
       ${page(OPENING, 1)}
       <p class="note">· · ·</p>
@@ -42,14 +42,14 @@ export default [
     id: "bien_ban_5", stage: 4, kind: "Sổ cơ", icon: "📓", label: "Sổ cơ · buổi 5 · 30/10/1971 (Nghi ghi)",
     html: () => `
     <div class="doc doc--notebook">
-      ${hand(`<b>Buổi cơ thứ năm.</b> Thứ Bảy 30/10/1971. Con xin Chúa thương xót.<br>
-        Ngồi: <b>chị Lan (tay chủ)</b>, chị Dung, Nghi (ghi sổ).<br>
-        Con cơ chạy số, mỗi lần ba con số rồi về giữa bàn, như mã Kiều anh Khiêm dạy. Con chép:`)}
+      ${hand(`Buổi cơ thứ năm. Thứ Bảy 30/10/1971. Con xin Chúa thương xót.<br>
+        ${ln("bb5_ngoi", "Ngồi: chị Lan (tay chủ), chị Dung, Nghi (ghi sổ).")}<br>
+        ${ln("bb5_so", "Con cơ chạy số, mỗi lần ba con số rồi về giữa bàn, như mã Kiều anh Khiêm dạy.")} Con chép:`)}
       ${hand(`<span class="code-line">1033·1·3 &nbsp; 1037·2·2 &nbsp; 1046·1·2 &nbsp; 1042·6·2 &nbsp; &nbsp; 1052·4·3 &nbsp; 1042·8·1 &nbsp; 1051·5·2</span>`)}
       ${hand(`${ln("bb5_sach", "Sách Kiều của anh Khiêm công an giữ làm tang vật rồi. Chị Lan đi lên lầu lấy cuốn Kiều của chị xuống, ngồi dò một mình, rồi xé tờ giấy, nói ra chữ vô nghĩa.")}<br>
-        Chị Dung nhìn chị Lan rất lâu. Không ai nói gì.`)}
+        ${ln("bb5_nhin", "Chị Dung nhìn chị Lan rất lâu. Không ai nói gì.")}`)}
       <p class="note">Dòng cuối trang, nét nghiêng về phía trước:</p>
-      ${hand(`<i>Nghi trượt chân ở cầu thang lên gác thượng lúc 1 giờ sáng. Gãy cổ.</i>`, "fwd")}
+      ${hand(`${ln("bb5_nga", "Nghi trượt chân ở cầu thang lên gác thượng lúc 1 giờ sáng. Gãy cổ.")}`, "fwd")}
     </div>`,
   },
 
@@ -57,7 +57,7 @@ export default [
     id: "thu_nghi", stage: 4, kind: "Thư", icon: "✉", label: "Thư Nghi viết cho chị ở Đà Lạt (chưa gửi)",
     html: () => `
     <div class="doc doc--memo">
-      <p class="note">Tìm thấy trong cuốn kinh Nhật Khóa của Nghi, ngày 1-11-1971. Phong bì đề: <i>Chị Trịnh Bảo Trinh, Domaine de Marie, Đà Lạt</i>.</p>
+      <p class="note">Tìm thấy trong cuốn kinh Nhật Khóa của Nghi, ngày 1-11-1971. Phong bì đề: Chị Trịnh Bảo Trinh, Domaine de Marie, Đà Lạt.</p>
       ${hand(`Chị Trinh,<br>
         Em sợ lắm. Chết bốn người rồi. Em muốn về Đà Lạt với chị mà chị Lan nói bỏ giữa chừng thì “bà” bắt hết.<br>
         ${ln("tn_ao", "Hôm thứ Năm chị Lan mặc cái áo dài lụa xanh của chị Dung, đứng trước gương hỏi em: giống không Nghi? Em gọi nhầm chị ấy là chị Dung thật.")}<br>

@@ -61,7 +61,7 @@ export const QUESTIONS = [
     memo: [
       "Đêm 19. Mồng 7 tháng Bảy. Thất tịch. Phu nhân lập phiếu mua Tú Nương ngay chiều hôm ấy, trước khi đêm Thất tịch xảy ra bất cứ chuyện gì.",
       "Một trăm hai mươi đồng: gấp ba lần một cô dâu chết.",
-      "Ôn Lão Tam nói con trai ông đánh xe la đi đêm Thất tịch rồi không về. Sáng nay ngỗ tác Mã gửi tôi phiếu khám xác ông ấy bị bắt ký.",
+      "Ôn Lão Tam nói con trai ông đi đêm Thất tịch rồi không về. Sáng nay ngỗ tác Mã gửi tôi phiếu khám xác ông ấy bị bắt ký.",
     ].join("\n"),
     clock: "02:50",
   },
@@ -76,7 +76,7 @@ export const QUESTIONS = [
     ],
     memo: [
       "Đêm 20. Người trong quan tài đã chết trước khi chạm nước: gáy vỡ, miệng không bọt, móng sạch. Bàn tay của một người dắt la.",
-      "Thằng Thạch dắt la từ năm mười hai tuổi. Sợi chỉ đỏ ở cổ tay trái.",
+      "Sợi chỉ đỏ ở cổ tay trái. Ai buộc cho người ấy?",
       "Sáng mai tôi xin Lưu Phúc xem sổ phát tang. Tôi muốn biết hôm ấy ai đã khóc, và ai không.",
     ].join("\n"),
     clock: "03:30",
@@ -94,7 +94,7 @@ export const QUESTIONS = [
     memo: [
       "Sáng 21. Một người mẹ không để tang con. Một cô hầu để tang anh ruột dưới lớp áo hầu.",
       "Người trong quan tài là Ôn Thạch. Phu nhân biết. Tú Nương biết từ hôm phát tang. Chỉ có lão gia là khóc thật.",
-      "Còn Thừa Tự? Lưu Phúc vừa đưa tôi một xấp giấy phu nhân dặn đốt. Trong đó có trang cuối sổ tay thầy Khâu.",
+      "Lưu Phúc vừa đưa tôi một xấp giấy phu nhân dặn đốt. Trong đó có trang cuối sổ tay thầy Khâu.",
     ].join("\n"),
     clock: "09:10",
   },

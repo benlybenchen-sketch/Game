@@ -17,14 +17,14 @@ export default [
     id: "loi_dan", stage: 0, kind: "Thư", icon: "✉", label: "Thư giao việc của y sĩ Lò Văn Sinh",
     html: () => `
     <div class="doc doc--memo">
-      <div class="memo-head"><b>TRẠM Y TẾ THỊ TRẤN CAM ĐƯỜNG</b> · Sở Y tế Lào Cai (tái lập 1/10/1991)</div>
+      <div class="memo-head">TRẠM Y TẾ THỊ TRẤN CAM ĐƯỜNG · Sở Y tế Lào Cai (tái lập 1/10/1991)</div>
       ${pic("cam_duong", "Thị trấn Cam Đường, sáng sương muối tháng 12/1991.")}
       <p>Cô Vân,</p>
-      <p>Tỉnh mới tách, sở mới lập, việc nhiều mà người ít. Đợt rà soát bệnh lao cuối năm, tỉnh bắt mỗi trạm phải <b>khám tận nơi</b> mọi người có tên trong danh sách nghi lao mà chưa khám. Trạm mình còn đúng một người: <b>bà Phạm Thị Hằng</b>, nhà ông Khải hiệu ảnh, sau chợ.</p>
+      <p>Tỉnh mới tách, sở mới lập, việc nhiều mà người ít. Đợt rà soát bệnh lao cuối năm, tỉnh bắt mỗi trạm phải khám tận nơi mọi người có tên trong danh sách nghi lao mà chưa khám. Trạm mình còn đúng một người: bà Phạm Thị Hằng, nhà ông Khải hiệu ảnh, sau chợ.</p>
       <p>Tôi giao cô ca này cho hết đợt thực tập. Nói trước để cô khỏi bỡ ngỡ: nhà ấy khổ. Bà Hằng ốm nằm buồng gần hai năm nay, không tiếp ai, ông Khải từ ngày vợ ốm thì sinh rượu, hơi dở người. Con gái là cháu Ngân, lớp 9, ngoan lắm, một tay chăm mẹ.</p>
       <p>Trạm đã đến ba lần, lần nào cũng chỉ đứng ở cửa. Cô là con gái, lại trẻ, may ra cháu Ngân cho vào.</p>
       <p>Hồ sơ tôi để trên bàn: danh sách lao, đơn của bà Lụa hàng xóm, công văn của trường cấp 2, sơ đồ nhà bên địa chính cho mượn.</p>
-      <p class="right">${hand("Sinh", "sign")}<b>Y sĩ Lò Văn Sinh</b><br>Trạm trưởng</p>
+      <p class="right">${hand("Sinh", "sign")}Y sĩ Lò Văn Sinh<br>Trạm trưởng</p>
     </div>`,
   },
 
@@ -35,7 +35,7 @@ export default [
       <div class="report-head">TRẠM Y TẾ CAM ĐƯỜNG · CHƯƠNG TRÌNH CHỐNG LAO<br>DANH SÁCH NGHI LAO, CHƯA KHÁM (trích dòng số 7)</div>
       <table class="tbl tbl--ledger">
         <tr><th>Họ tên</th><th>Tuổi</th><th>Địa chỉ</th><th>Lý do ghi tên</th></tr>
-        <tr><td><b>Phạm Thị Hằng</b></td><td>41 (sinh 1948)</td><td>Nhà ông Đỗ Văn Khải, sau chợ</td><td>${ln("ds_ly", "Chồng khai “ho lâu, khó thở, nằm buồng” khi đưa con gái đi khâu tay ngày 5/1/1990.")}</td></tr>
+        <tr><td>Phạm Thị Hằng</td><td>41 (sinh 1948)</td><td>Nhà ông Đỗ Văn Khải, sau chợ</td><td>${ln("ds_ly", "Chồng khai “ho lâu, khó thở, nằm buồng” khi đưa con gái đi khâu tay ngày 5/1/1990.")}</td></tr>
       </table>
       <table class="tbl tbl--hand">
         <tr><th>Ngày đến</th><th>Kết quả</th></tr>
@@ -54,7 +54,7 @@ export default [
     html: () => `
     <div class="doc doc--letter">
       <p class="right">Cam Đường, ngày 18 tháng 11 năm 1991</p>
-      <p><b>ĐƠN PHẢN ÁNH</b><br>Kính gửi: Trạm y tế thị trấn, Công an thị trấn</p>
+      <p>ĐƠN PHẢN ÁNH<br>Kính gửi: Trạm y tế thị trấn, Công an thị trấn</p>
       <p>Tôi là Trịnh Thị Lụa, 62 tuổi, bán nước chè ở chợ, nhà sát vách nhà ông Đỗ Văn Khải. Tôi viết đơn này không phải để kiện cáo gì, chỉ vì thương nhà ấy.</p>
       <p>${ln("dl_mui", "Hai năm nay nhà ông Khải lúc nào cũng có một mùi hắc, cay mắt. Mùi nặng nhất là ở bức vách sau bếp nhà tôi, chỗ giáp với nhà ông ấy.")}
         ${ln("dl_toi", "Không phải chỗ buồng tối ông ấy rửa ảnh đâu, buồng tối ở tít đầu kia, đằng sau hiệu ảnh, mùi ở đấy khác.")}</p>

@@ -10,15 +10,14 @@ export default [
       <div class="book-head">TÂM THẦN HỌC ĐẠI CƯƠNG · tài liệu nội bộ khoa · chương 11: Các hội chứng nhận nhầm</div>
       <h3>Hội chứng Capgras</h3>
       <p>Bệnh nhân tin chắc một người thân (thường là cha mẹ, vợ chồng) đã bị một kẻ giống hệt thay thế.</p>
-      <p><b>Cơ chế được cho là:</b> đường nối giữa vùng nhận diện khuôn mặt và vùng cảm xúc bị tổn thương, hay gặp sau tổn thương thuỳ thái dương hoặc thuỳ trán bên phải.
+      <p>Cơ chế được cho là: đường nối giữa vùng nhận diện khuôn mặt và vùng cảm xúc bị tổn thương, hay gặp sau tổn thương thuỳ thái dương hoặc thuỳ trán bên phải.
         Bệnh nhân thấy khuôn mặt quen nhưng không thấy cảm giác thân thuộc đi kèm, nên kết luận: đây là người khác.</p>
-      <p><b>Đặc điểm lâm sàng:</b></p>
+      <p>Đặc điểm lâm sàng:</p>
       <ol>
         <li>${ln("sk_cam", "Bệnh nhân thường chỉ nói “cảm thấy” người kia lạ; không chỉ ra được khác biệt cụ thể nào, hoặc viện dẫn những chi tiết thay đổi mỗi lần hỏi.")}</li>
         <li>${ln("sk_dt", "Vì tổn thương nằm ở đường thị giác, nhiều bệnh nhân vẫn nhận ra người thân khi nói chuyện qua điện thoại, nhưng lại cho là kẻ mạo danh khi gặp mặt.")}</li>
         <li>Hội chứng có thể chỉ nhắm vào một hoặc vài người, có thể cả vật nuôi.</li>
       </ol>
-      <p class="small">Bên lề, nét bút chì của ai đó trong khoa: <i>“Ca P7: mục 1 không khớp?”</i> Có người đã tẩy, nhưng còn vết hằn.</p>
     </div>`,
   },
 
@@ -42,17 +41,21 @@ export default [
     html: () => `
     <div class="doc doc--report">
       <div class="report-head">BIÊN BẢN PHỎNG VẤN · BN TRẦN NGỌC THẢO · 9/1996</div>
-      <p><b>Hỏi:</b> Căn cứ vào đâu chị cho rằng người đến thăm không phải mẹ chị?</p>
-      <p><b>Đáp:</b></p>
+      <p>Hỏi: Căn cứ vào đâu chị cho rằng người đến thăm không phải mẹ chị?</p>
+      <p>Đáp:</p>
       <ol>
         <li>${ln("pv_ruoi", "“Nốt ruồi của mẹ chạy sang bên kia miệng.”")}</li>
         <li>${ln("pv_nhan", "“Mẹ đeo nhẫn ba mươi năm, ngón tay có vết hằn. Bà đó không có vết hằn.”")}</li>
         <li>${ln("pv_tom", "“Bà đó ăn tôm. Mẹ em ăn tôm là chết.”")}</li>
         <li>${ln("pv_ru", "“Bà đó ru em bài khác.”")}</li>
+        <li>${ln("pv_lanh", "“Bà đó nhìn em mà em thấy lạnh. Mẹ em không làm em lạnh như vậy.”")}</li>
+        <li>${ln("pv_biet", "“Em nhìn là biết. Ai giả mẹ thì con biết liền.”")}</li>
+        <li>${ln("pv_cuoi", "“Bà đó cười không giống. Em không tả được chỗ nào.”")}</li>
       </ol>
-      <p><b>Hỏi:</b> Còn anh Khoa?</p>
-      <p><b>Đáp:</b> ${ln("pv_khoa", "“Mặt vẫn là mặt ảnh. Mà em không thấy ảnh. Em không chỉ ra được chỗ nào khác.”")}</p>
-      <p class="note">Bên lề, mực đỏ, BS. Kha: <i>“Hoang tưởng chi tiết hoá. Không cần kiểm chứng.”</i> Bốn câu trả lời về mẹ bị gạch chân hai lần.</p>
+      <p>Hỏi: Còn anh Khoa?</p>
+      <p>Đáp: ${ln("pv_khoa0", "“Ảnh với em chia tay rồi. Em không muốn nhắc.”")}</p>
+      <p>Đáp: ${ln("pv_khoa", "“Mặt vẫn là mặt ảnh. Mà em không thấy ảnh. Em không chỉ ra được chỗ nào khác.”")}</p>
+      <p class="note">Bên lề, mực đỏ, BS. Kha: “Hoang tưởng chi tiết hoá. Không cần kiểm chứng.” Các câu trả lời về mẹ bị gạch hai lần bằng mực đỏ.</p>
     </div>`,
   },
 
@@ -70,6 +73,6 @@ export default [
     </div>`,
   },
 
-  tape("hoi_2", 1, "Băng: hỏi chuyện Thảo về cuộc gọi (16/10)", "Bác sĩ Vân hỏi Thảo về hai cuộc điện thoại tháng 9."),
+  tape("hoi_2", 1, "Băng: hỏi chuyện Thảo (16/10)", "Bác sĩ Vân hỏi Thảo về hai cuộc điện thoại tháng 9."),
   tranh(2, 1, "Tranh Thảo vẽ đêm 16/10", "Hai khuôn mặt giống hệt nhau. Thảo khoanh đỏ một chấm đen ở khoé miệng."),
 ];

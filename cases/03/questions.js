@@ -8,7 +8,7 @@ const nameFirst = () => [given(), coName(), hexName(), "em"];
 
 export const QUESTIONS = [
   {
-    id: "q1", stage: 0, title: "Tùng rơi",
+    id: "q1", stage: 0, title: "Đêm thứ nhất",
     ask: "Giải hai lời con cơ đánh ra: lời báo tử đầu tiên năm 1971 và lời đêm nay. Ai ngồi vị trí tay chủ, người dẫn con cơ? (Sổ cơ buổi 1 không ghi tên.)",
     parts: [
       { id: "m71", type: "text", label: "Lời cơ 2/10/1971 (viết có dấu hay không dấu đều được)", placeholder: "vd: bạch lan" },
@@ -25,13 +25,13 @@ export const QUESTIONS = [
     clock: "06:40",
   },
   {
-    id: "q2", stage: 1, title: "Tiếng gõ dưới gầm bàn",
+    id: "q2", stage: 1, title: "Đêm thứ hai",
     ask: "Giải lời báo tử gõ bằng Morse đêm 9/10/1971 và lời con cơ gõ đêm nay. Tiếng gõ năm 1971 phát ra từ đâu? Chỉ ra câu trong hồ sơ cho biết ai trong nhóm có thể tạo ra tiếng gõ đó.",
     parts: [
       { id: "m71", type: "text", label: "Lời cơ 9/10/1971 (gõ trên băng)" },
       { id: "m04", type: "text", label: "Lời cơ đêm nay, 8/11/2004" },
       { id: "src", type: "choice", label: "Tiếng gõ trên băng năm 1971 phát ra từ", options: [
-        "Con cơ (chén sứ) gõ xuống mặt bàn", "Ngón tay gõ lên mặt bàn", "Gót guốc gỗ gõ xuống sàn gỗ dưới gầm bàn", "Cánh cửa ban công đập trong gió", "Có người đi trên gác thượng"] },
+        "Con cơ bằng chén sứ gõ xuống mặt bàn", "Ngón tay ai đó gõ lên mặt bàn từ phía dưới", "Gót guốc gỗ gõ xuống sàn dưới gầm bàn", "Cánh cửa ban công đập vào khung trong gió", "Có người đi lại trên sàn gác thượng"] },
       { id: "guoc", type: "line", label: "Câu cho biết người có thể tạo ra tiếng gõ đó (bấm vào câu trong một tài liệu)" },
       pins,
     ],
@@ -44,7 +44,7 @@ export const QUESTIONS = [
     clock: "06:35",
   },
   {
-    id: "q3", stage: 2, title: "Tay chủ",
+    id: "q3", stage: 2, title: "Đêm thứ ba",
     ask: "Giải lời báo tử năm 1971 giấu trong bài thơ con cơ “đọc”, lời giấu trong bài thơ cuối cùng của Yến, và lời con cơ đêm nay. Lời giấu của Yến nói ai đẩy con cơ? Chỉ ra câu trong sổ cơ cho thấy người đó đã ra tay với Quốc thế nào.",
     parts: [
       { id: "m71", type: "text", label: "Lời giấu trong bài thơ của con cơ, 16/10/1971" },
@@ -61,7 +61,7 @@ export const QUESTIONS = [
     clock: "06:20",
   },
   {
-    id: "q4", stage: 3, title: "Bà sửa giấy",
+    id: "q4", stage: 3, title: "Đêm thứ tư",
     ask: "Giải tờ giấy số Tô Châu dưới chén đêm 23/10/1971 và lời con cơ đêm nay. Rồi đối chiếu bản chép của bạn với bản nhật ký bà Dung đưa hôm nay: chỉ ra câu đã bị sửa, và ai sửa.",
     parts: [
       { id: "m71", type: "text", label: "Lời trên tờ giấy dưới chén, 23/10/1971" },
@@ -78,7 +78,7 @@ export const QUESTIONS = [
     clock: "05:55",
   },
   {
-    id: "q5", stage: 4, title: "Hai cuốn Kiều",
+    id: "q5", stage: 4, title: "Đêm thứ năm",
     ask: "Giải lời báo tử đêm 30/10/1971 và lời con cơ đêm nay. Mỗi lời được soạn bằng cuốn Kiều nào? Chỉ ra câu trong sổ cơ cho thấy ai đã dò lời năm 1971.",
     parts: [
       { id: "m71", type: "text", label: "Lời cơ 30/10/1971" },
@@ -95,7 +95,7 @@ export const QUESTIONS = [
     clock: "05:40",
   },
   {
-    id: "q6", stage: 5, title: "Người mang tên em",
+    id: "q6", stage: 5, title: "Đêm thứ sáu",
     ask: "Đọc lời con cơ đánh ngược đêm nay. Cái xác cháy trên gác thượng đêm 6/11/1971 là của ai, và câu nào trong biên bản khám nghiệm chứng minh điều đó? Đối chiếu nhật ký thêm một lần nữa.",
     parts: [
       { id: "m04", type: "text", label: "Lời con cơ đêm nay, đọc xuôi (có thể kèm tên của bạn)", prefix: nameFirst },
@@ -112,14 +112,14 @@ export const QUESTIONS = [
     clock: "05:10",
   },
   {
-    id: "q7", stage: 6, title: "Quẻ họ Lâm",
+    id: "q7", stage: 6, title: "Đêm thứ bảy",
     ask: "Giải bốn mươi ba quẻ họ Lâm (có thể kèm những quẻ con cơ đánh đêm nay). Bà chủ nhà thật ra là ai? Bà ta đã giết bao nhiêu người, vì sao, và vì sao lại thuê bạn?",
     parts: [
       { id: "msg", type: "text", label: "Lời giải các quẻ (viết liền một hàng, có dấu hay không đều được)", prefix: nameFirst },
       { id: "who", type: "choice", label: "Bà chủ nhà thật ra là", options: PEOPLE.slice(5, 7).concat(["Bà Lâm Ngọc Diệp", "Chị của Nghi"]) },
       { id: "n", type: "number", label: "Số người bà ta đã giết năm 1971", unit: "người" },
-      { id: "why", type: "choice", label: "Động cơ năm 1971", options: ["Trả thù cho người cha chết ở Huế năm 1968", "Chiếm thân phận, căn nhà và số vàng của Lâm Hạnh Dung", "Ghen vì Yến được bà Diệp và cả nhóm thương hơn", "Bịt miệng cả nhóm sau một tai nạn năm 1970", "Bị hồn bà Diệp nhập trong buổi cơ đầu tiên"] },
-      { id: "hire", type: "choice", label: "Vì sao bà ta thuê bạn", options: ["Để có một người lạ làm chứng rằng con cơ tự chạy", "Vì cần người đọc tiếng Pháp để giải quẻ, tìm vàng", "Vì cần người giải được mã Morse và mã của Tùng", "Để đầu độc thêm một người cho đủ bảy mạng người"] },
+      { id: "why", type: "choice", label: "Động cơ năm 1971", options: ["Trả thù cho người cha chết ở Huế, Tết Mậu Thân", "Chiếm thân phận, nhà và vàng của Lâm Hạnh Dung", "Ghen vì Yến được bà Diệp và cả nhóm thương hơn", "Bịt miệng cả nhóm, giấu một tai nạn năm 1970", "Bị hồn bà Diệp nhập trong buổi cơ đầu tiên"] },
+      { id: "hire", type: "choice", label: "Vì sao bà ta thuê bạn", options: ["Để có một người lạ làm chứng rằng con cơ tự chạy", "Vì cần người đọc được tiếng Pháp để tìm số vàng", "Vì cần người giải được mã Morse và mã của Tùng", "Để đầu độc thêm một người cho đủ bảy mạng người"] },
       pins,
     ],
     memo: "",

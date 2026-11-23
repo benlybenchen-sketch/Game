@@ -108,11 +108,11 @@ export function torch(el) {
 }
 
 // ------------------------------------------------------------------ the torn diary page
-const PAGE = `<p><b>Thứ Sáu 22/12/1989. Đông chí.</b></p>
+const PAGE = `<p>Thứ Sáu 22/12/1989. Đông chí.</p>
   <p>Mẹ không cho con đi trại hè văn học. Con ghét mẹ. Con khoá cửa.</p>
-  <p>Đêm, mẹ gõ vách. Mẹ gọi: <i>Ngân ơi, lấy thuốc cho mẹ.</i></p>
+  <p>Đêm, mẹ gõ vách. Mẹ gọi: Ngân ơi, lấy thuốc cho mẹ.</p>
   <p>Con bịt tai. Con tưởng mẹ giả vờ để làm lành.</p>
-  <p><b>Con không mở cửa.</b></p>
+  <p>Con không mở cửa.</p>
   <p class="shake">Sáng ra mẹ ngồi tựa thành giường. Mẹ ngủ.</p>`;
 const START_ROT = [180, 0, 90, 270, 90, 180];   // piece i starts turned by this much
 const TRAY_ORDER = [4, 1, 5, 0, 3, 2];
@@ -164,7 +164,7 @@ export function lich(el) {
         <div class="bloc-day">${d.d}</div>
         <div class="bloc-wd">${d.wd}</div>
         ${d.note ? `<div class="bloc-note">${d.note}</div>` : ""}
-        <div class="bloc-lunar">Âm lịch: ngày <b>${d.l}</b> tháng ${d.lm} · năm Tân Mùi</div>
+        <div class="bloc-lunar">Âm lịch: ngày ${d.l} tháng ${d.lm} · năm Tân Mùi</div>
       </div>
       <div class="bloc-ctl">
         <button class="btn btn--small" data-bloc="-1" ${k === 0 ? "disabled" : ""}>◀ Tờ trước</button>
@@ -188,7 +188,7 @@ export function hand(el) {
   el.innerHTML = `
   <div class="hw">
     <figure><div class="hw-box"><div class="hw-a">Kính gửi Ban giám hiệu,<br>Tôi là Phạm Thị Hằng, giáo viên Văn. Tôi bị ốm, xin nghỉ <span class="hw-g">g</span>ấp hai tuần để <span class="hw-err">trăm</span> sóc sức khoẻ.<br>Cam Đường, 26/12/1989<br>Phạm Thị Hằng</div></div>
-      <figcaption>1. Giấy xin nghỉ “của cô Hằng” gửi trường, 26/12/1989</figcaption></figure>
+      <figcaption>1. Giấy xin nghỉ của cô Hằng gửi trường, 26/12/1989</figcaption></figure>
     <figure><div class="hw-box"><div class="hw-c">Lớp 7A · Văn · HKI 1988–1989<br>Nguyễn Thị Giang: 7 · Lò Văn Góp: 6<br>Ghi chú: em Giang cần chăm chỉ hơn ở phần<br>tập làm văn. Gặp gia đình em Góp.</div></div>
       <figcaption>2. Sổ điểm do chính cô Hằng ghi, 1988–1989</figcaption></figure>
     <figure><div class="hw-box"><div class="hw-a">Bài văn: Mẹ của em<br>Mẹ em là cô <span class="hw-g">g</span>iáo dạy Văn. Mẹ bị ốm, em ở nhà <span class="hw-err">trăm</span> mẹ. Mẹ <span class="hw-g">g</span>ầy lắm nhưng mẹ vẫn cười.<br>Đỗ Thị Ngân, lớp 9A, 10/1991</div></div>

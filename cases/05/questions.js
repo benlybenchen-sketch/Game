@@ -7,7 +7,7 @@ export const QUESTIONS = [
     ask: "Đọc hồ sơ trạm giao. Lần cuối cùng có người ngoài nhìn thấy bà Hằng là ngày nào? Bà Hằng đang có tên trong danh sách bệnh gì? Trên sơ đồ nhà, đánh dấu gian mà bà Lụa nói mùi nặng nhất.",
     parts: [
       { id: "last", type: "text", label: "Ngày cuối cùng có người ngoài nhìn thấy bà Hằng (ngày/tháng/năm)", placeholder: "vd 1/1/1990" },
-      { id: "benh", type: "choice", label: "Danh sách trạm đang theo dõi bà Hằng", options: ["Danh sách tiêm chủng, chưa tiêm nhắc", "Danh sách nghi lao, chưa khám", "Danh sách bệnh tâm thần, chưa cấp thuốc", "Danh sách sốt rét, chưa lấy máu xét nghiệm"] },
+      { id: "benh", type: "choice", label: "Danh sách trạm đang theo dõi bà Hằng", options: ["Danh sách tiêm chủng, chưa tiêm nhắc", "Danh sách nghi lao, chưa được khám tận nhà", "Danh sách bệnh tâm thần, chưa cấp thuốc", "Danh sách sốt rét, chưa lấy máu xét nghiệm"] },
       { id: "mui", type: "spot", label: "Gian mùi nặng nhất (đánh dấu trên sơ đồ)", doc: "so_do", how: "Mở sơ đồ nhà rồi bấm vào một gian." },
       { id: "pins", type: "pins", count: 3, label: "Ghim 3 tài liệu làm bằng chứng" },
     ],
@@ -24,7 +24,7 @@ export const QUESTIONS = [
     parts: [
       { id: "k", type: "line", label: "Câu của ông Khải (bấm vào câu trong biên bản)" },
       { id: "n", type: "line", label: "Câu của cháu Ngân mâu thuẫn với câu trên" },
-      { id: "chat", type: "choice", label: "Mùi hắc, cay mắt trong nhà", options: ["Long não", "Dầu hoả", "Formol (formalin)", "Thuốc trừ sâu", "Mùi hương trầm"] },
+      { id: "chat", type: "choice", label: "Mùi hắc, cay mắt trong nhà", options: ["Long não", "Dầu hoả", "Formol", "Thuốc trừ sâu", "Mùi hương trầm"] },
       { id: "first", type: "choice", label: "Ai trả lời trước mỗi khi được hỏi về bà Hằng", options: ["Ông Khải", "Cháu Ngân", "Hai người cùng lúc", "Không ai trả lời"] },
       { id: "pins", type: "pins", count: 2, label: "Ghim 2 tài liệu làm bằng chứng" },
     ],
@@ -41,7 +41,7 @@ export const QUESTIONS = [
     ask: "Soi tấm “Vợ tôi, Tết 1991” và so với ảnh năm 1988. Tìm ba chi tiết cho thấy người ngồi bên cửa sổ không phải bà Hằng. Ai đã viết các giấy xin nghỉ gửi trường? Chỉ ra hai dấu vết trong nét chữ.",
     parts: [
       { id: "ct", type: "set", count: 3, label: "Ba chi tiết trong ảnh (soi bằng đèn pin)", doc: "vo_toi", how: "soi ảnh rồi bấm “Ghi vào sổ”" },
-      { id: "viet", type: "choice", label: "Người viết các giấy xin nghỉ “của cô Hằng”", options: ["Cô Hằng tự viết", "Ông Khải", "Cháu Ngân", "Cô Hà chủ nhiệm", "Bà Lụa"] },
+      { id: "viet", type: "choice", label: "Người viết các giấy xin nghỉ của cô Hằng", options: ["Cô Hằng tự viết", "Ông Khải", "Cháu Ngân", "Cô Hà chủ nhiệm", "Bà Lụa"] },
       { id: "loi", type: "text", label: "Từ bị viết sai chính tả giống nhau ở cả hai bên (viết đúng như chữ sai)", placeholder: "một chữ" },
       { id: "chu", type: "text", label: "Chữ cái có nét viết riêng giống nhau ở cả hai bên", placeholder: "một chữ cái" },
       { id: "pins", type: "pins", count: 2, label: "Ghim 2 tài liệu làm bằng chứng" },
@@ -83,12 +83,12 @@ export const QUESTIONS = [
     id: "q5", stage: 4, title: "Đêm đông chí",
     ask: "Bà Hằng chết thế nào, đêm đó ông Khải ở đâu, và Ngân đã làm gì? Ghép trang vở bị xé để đọc. Theo lịch vạn niên, đêm bà Hằng mất là ngày bao nhiêu âm lịch? Ông Khải đã mua gì cho “đêm mẹ khỏi bệnh”, và theo kế hoạch ai sẽ ngủ trong buồng?",
     parts: [
-      { id: "chet", type: "choice", label: "Nguyên nhân bà Hằng chết", options: ["Lao phổi giai đoạn cuối, ho ra máu", "Lên cơn khó thở vì van tim, thiếu thuốc", "Nhồi máu cơ tim lúc đang ngủ say", "Ngộ độc formol trong buồng kín", "Ngộ độc khí than trong buồng kín"] },
+      { id: "chet", type: "choice", label: "Nguyên nhân bà Hằng chết", options: ["Lao phổi giai đoạn cuối, ho ra nhiều máu", "Lên cơn khó thở vì van tim, thiếu thuốc", "Nhồi máu cơ tim lúc đang ngủ say trong buồng", "Ngộ độc formol trong buồng kín", "Ngộ độc khí than trong buồng kín"] },
       { id: "o", type: "choice", label: "Đêm 22/12/1989 ông Khải ở đâu", options: ["Ở nhà, ngủ say", "Trên tàu đêm Lào Cai đi Hà Nội", "Trên tàu đêm Hà Nội về Lào Cai", "Ở Hà Nội, nhà khách Bạch Mai", "Trực ở phòng hoá nghiệm mỏ"] },
       { id: "lam", type: "choice", label: "Đêm ấy Ngân đã làm gì", options: [
         "Ngủ say, không nghe thấy gì",
         "Tìm thuốc khắp buồng nhưng không thấy",
-        "Nghe mẹ gọi, bịt tai, không mở cửa",
+        "Nghe mẹ gọi mà bịt tai, không mở cửa",
         "Chạy sang gọi bà Lụa, không ai mở",
         "Đưa thuốc, mẹ không nuốt được nữa",
       ] },
@@ -110,7 +110,7 @@ export const QUESTIONS = [
     parts: [
       { id: "ngay", type: "spot", label: "Tờ lịch của đêm Ngân chọn", doc: "lich", how: "Mở lịch bloc, lật tới tờ cần tìm rồi bấm “Khoanh tờ này”." },
       { id: "than2", type: "number", label: "Số cân than trong nhà ông Khải mà cán bộ không thể thu nếu không mở buồng", unit: "cân" },
-      { id: "loi", type: "choice", label: "Lối Ngân vào buồng trong mà không bóc băng keo", options: ["Qua cửa sổ gian giữa", "Qua cửa ngách sau chạn bát trong bếp", "Qua lỗ thông gió trên mái", "Qua buồng tối rửa ảnh", "Ngân không vào được"] },
+      { id: "loi", type: "choice", label: "Lối Ngân vào buồng trong mà không bóc băng keo", options: ["Qua cửa sổ gian giữa, gỡ một song gỗ", "Qua cửa ngách sau chạn bát trong bếp", "Qua lỗ thông gió trên mái, bằng thang tre", "Qua buồng tối rửa ảnh, có vách thông sang", "Ngân không vào được, chỉ đứng ngoài cửa"] },
     ],
     memo: [
       "Nhật ký thực tập, 14 giờ 50 ngày 30/12. Hai mươi lăm tháng Một là hôm nay. Thứ Hai 30/12/1991.",

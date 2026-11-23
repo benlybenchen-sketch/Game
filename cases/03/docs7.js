@@ -13,7 +13,7 @@ export default [
       <p>Rạng sáng 14/11, người dân phát hiện thi thể bà L.H.D. (52 tuổi), chủ một biệt thự cũ ở quận 1, úp mặt dưới hồ sen sau vườn.
         Hai tay nạn nhân ôm chặt một hộp sắt tây bám đầy bùn, bên trong có 37 lượng vàng lá và một nhẫn hột xoàn cũ.</p>
       <p>Theo công an phường, hồ sen không sâu quá ngực người lớn. Trên mặt nạn nhân không có dấu vết vật lộn. Ngón trỏ tay phải của bà vẫn duỗi thẳng, ấn xuống nắp hộp, “như đang đặt tay lên con cơ”, một người hàng xóm nói.</p>
-      <p>Trên bàn trong phòng khách tầng hai, công an thu giữ một bình trà sen và hai chung trà còn nước. Kết quả giám định sơ bộ: trong một chung có <b>arsenic</b> (thạch tín).</p>
+      <p>Trên bàn trong phòng khách tầng hai, công an thu giữ một bình trà sen và hai chung trà còn nước. Kết quả giám định sơ bộ: trong một chung có arsenic (thạch tín).</p>
       <p>Theo nguồn tin riêng, công an đang xem xét đề nghị khai quật một ngôi mộ ở nghĩa trang Thiên Phước, Gò Vấp, khắc tên Hà Ngọc Lan (1952–1971).</p>
       ${pic("ho_sen", "Hồ sen sau biệt thự, sáng 14/11/2004. Nước đã được bơm cạn một nửa: sen thối đen, bùn và xương cá.")}
     </div>`,
@@ -24,7 +24,7 @@ export default [
     html: () => `
     <div class="doc doc--plain">
       ${pic("bia_moi", "Tấm bia đã được khắc lại.", tombArt("LÂM HẠNH DUNG", "1952 – 1971"))}
-      <p class="note">Tấm bia cũ được mài đi, khắc lại: <b>LÂM HẠNH DUNG · 1952–1971</b>. Bên cạnh là một ngôi mộ mới đắp, chưa có bia. Không ai đặt sen. Dưới chân bia có một ngọn nến nhỏ không biết ai thắp. Trên mộ mới chỉ có một nén nhang cắm thẳng, cháy tới chân, tàn không rơi.</p>
+      <p class="note">Tấm bia cũ được mài đi, khắc lại: LÂM HẠNH DUNG · 1952–1971. Bên cạnh là một ngôi mộ mới đắp, chưa có bia. Không ai đặt sen. Dưới chân bia có một ngọn nến nhỏ không biết ai thắp. Trên mộ mới chỉ có một nén nhang cắm thẳng, cháy tới chân, tàn không rơi.</p>
     </div>`,
   },
 
@@ -32,7 +32,7 @@ export default [
     id: "thu_cuoi", stage: 7, kind: "Thư", icon: "✉", label: "Lá thư không ký tên",
     html: () => `
     <div class="doc doc--memo">
-      <p class="note">Bạn tìm thấy lá thư kẹp trong sổ tay của mình, đúng trang bản chép nhật ký. Bạn không nhớ đã để nó ở đó. Phong bì đề: <b>${fullName() || "Em"}</b>.</p>
+      <p class="note">Bạn tìm thấy lá thư kẹp trong sổ tay của mình, đúng trang bản chép nhật ký. Bạn không nhớ đã để nó ở đó. Phong bì đề: ${fullName() || "Em"}.</p>
       ${hand(`<p>${CallName() === "Cháu" ? "Em" : CallName()},</p>
         <p>Em đã đọc lại. Không ai đọc lại cả, ba mươi ba năm nay.</p>
         <p>Em đã không uống. Chị biết, vì chị ngồi bên cạnh em suốt bảy đêm, ngón tay chị đặt trên con cơ cạnh ngón tay em.</p>

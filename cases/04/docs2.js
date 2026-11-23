@@ -8,7 +8,7 @@ export default [
     html: () => `
     <div class="doc doc--report">
       <div class="report-head">BỆNH VIỆN ĐA KHOA LÂM ĐỒNG · KHOA CẤP CỨU · Tóm tắt hồ sơ lưu trữ</div>
-      <p>Họ tên: <b>Lê Thị Hoa</b>, 41 tuổi, thợ may.</p>
+      <p>Họ tên: Lê Thị Hoa, 41 tuổi, thợ may.</p>
       <p>Ngày 3/6/1985, 20 giờ: ${ln("ba85", "sốc phản vệ sau khi ăn gỏi tôm tại một đám cưới. Phù môi, phù thanh quản, tụt huyết áp. Tiêm adrenalin, thở oxy. Qua khỏi.")}</p>
       <p>Lời dặn: tuyệt đối không ăn tôm, tép, mắm tôm, ruốc. Mang theo giấy này khi đi khám.</p>
       <p class="small">Kèm theo trong cùng bìa hồ sơ gia đình: ${ln("thao90", "Trần Ngọc Thảo, 18 tuổi, ngày 25/1/1990: nổi mề đay toàn thân sau khi ăn tôm. Ghi chú: “dị ứng tôm như mẹ”.")}</p>
@@ -39,8 +39,8 @@ export default [
         ${pic("tay_nhan_1995", "Thảo giữ trong ví: tay mẹ đạp máy may, năm 1995.")}
         ${pic("tay_1996", "Y tá Sương chụp ở căng tin ngày 12/10/1996.")}
       </div>
-      <p class="note">Mặt sau tấm ảnh 1995, Thảo chép lại dòng chữ trên ảnh cưới của cha mẹ: <i>“Minh – Hoa, rằm tháng Giêng năm Ất Tỵ”</i>. Ông Minh mất năm 1975. Theo lời Thảo và hàng xóm, bà chưa từng tháo nhẫn cưới.
-        Bà Hoa hiện nay nói đã <i>“đánh rơi nhẫn ở bến xe Miền Đông”</i>.</p>
+      <p class="note">Mặt sau tấm ảnh 1995, Thảo chép lại dòng chữ trên ảnh cưới của cha mẹ: “Minh – Hoa, rằm tháng Giêng năm Ất Tỵ”. Ông Minh mất năm 1975. Theo lời Thảo và hàng xóm, bà chưa từng tháo nhẫn cưới.
+        Bà Hoa hiện nay nói đã “đánh rơi nhẫn ở bến xe Miền Đông”.</p>
     </div>`,
   },
 
@@ -58,6 +58,6 @@ export default [
   },
 
   tape("tham_1", 2, "Băng buổi thăm nuôi thứ Bảy 12/10", "Ghi âm theo quy định thăm nuôi có giám sát."),
-  tape("hoi_3", 2, "Băng: hỏi chuyện Thảo về con Mực (18/10)", "Bác sĩ Vân hỏi Thảo về con chó."),
+  tape("hoi_3", 2, "Băng: hỏi chuyện Thảo (18/10)", "Bác sĩ Vân hỏi Thảo về con chó."),
   tranh(3, 2, "Tranh Thảo vẽ đêm 18/10", "Con chó đen nằm nghiêng, bọt trắng ở miệng. Một bàn tay áo nâu cầm cái chén phía trên."),
 ];

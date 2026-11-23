@@ -47,7 +47,7 @@ export const META = {
   folders: ["Lần thăm 1 · Thứ Năm 19/12", "Lần thăm 2 · Thứ Bảy 21/12", "Lần thăm 3 · Thứ Hai 23/12", "Lần thăm 4 · Thứ Tư 25/12",
     "Lần thăm 5 · Thứ Sáu 27/12", "Lần thăm 6 · Sáng thứ Hai 30/12", "Chiều 30/12 · Cuộc họp ở trạm", "Đêm 30/12/1991 và sau đó", "Sáng 31/12/1991"],
   wrong: [
-    "Chưa khớp. Đọc lại giấy tờ: nhà này không ai nói dối, nhưng không phải điều gì họ kể cũng đã xảy ra.",
+    "Chưa khớp. Đọc lại giấy tờ, từng chữ một.",
     "Thầy Sinh lắc đầu: “Cô vội quá. Ngồi đọc lại đi.”",
     "Đêm đó, ở nhà ông Khải, vẫn có tiếng ho.",
     "Chưa đúng. Một ngày tháng, một chữ, một bàn tay. Chi tiết nằm đâu đó trong hồ sơ.",
@@ -56,7 +56,7 @@ export const META = {
     html: `<h3>05:50 · Sáng 31/12/1991</h3>
       <p>Đêm qua, cháu Ngân ngủ ở khoa tâm thần bệnh viện tỉnh, có người ngồi cạnh giường đến sáng. Mười cân than nằm ở trạm.</p>
       <p>Ông Khải ngồi một mình ở gian giữa. Không ai ho.</p>
-      <p>Gần 6 giờ sáng, ông tự bóc băng keo cửa buồng, từng lớp một. Rồi ông đội mũ, đi bộ ra trạm, gõ cửa, nói với thầy Sinh: <b>“Nhà tôi mất rồi. Mất hai năm rồi.”</b></p>
+      <p>Gần 6 giờ sáng, ông tự bóc băng keo cửa buồng, từng lớp một. Rồi ông đội mũ, đi bộ ra trạm, gõ cửa, nói với thầy Sinh: “Nhà tôi mất rồi. Mất hai năm rồi.”</p>
       <p>Đó là lần đầu tiên ông nói câu ấy thành tiếng.</p>`,
     open: "bb_dem",
   },
@@ -77,7 +77,7 @@ export const META = {
       return `<h3>06:15 · Sáng 31/12/1991</h3>
         <p>${LOST_LINE[k]}</p>
         <p>Đêm 25 tháng Một, đúng đêm cô Hằng gọi con lấy thuốc hai năm trước, có người đốt một lò than trong căn buồng dán kín.</p>
-        <p>Sáng nay người ta phá cửa. <b>Cháu Ngân nằm cạnh mẹ.</b></p>
+        <p>Sáng nay người ta phá cửa. Cháu Ngân nằm cạnh mẹ.</p>
         <p class="small muted">Hồ sơ đã bị đóng dấu THẤT BẠI. Bạn có thể đọc biên bản, rồi mở lại hồ sơ từ đầu.</p>`;
     },
     open: "bb_su_viec",

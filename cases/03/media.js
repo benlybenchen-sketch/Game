@@ -78,7 +78,7 @@ export function board(el, id) {
       <div class="cb-candle cb-candle--l"></div><div class="cb-candle cb-candle--r"></div>
       ${Object.entries(POS).filter(([k]) => !"_|".includes(k)).map(([k, [x, y]]) => `<span class="cb-k ${k.length > 1 ? "cb-k--word" : ""}" style="left:${x}%;top:${y}%">${label(k)}</span>`).join("")}
       <span class="cb-home" style="left:${POS._[0]}%;top:${POS._[1]}%"></span>
-      <div class="cb-cup"><i></i></div>
+      <div class="cb-cup"></div>
     </div>
     <div class="cb-ctl">
       <span class="cb-hint">Giữ chuột trên bàn cơ (điện thoại: giữ ngón tay) để con cơ chạy. Buông tay, con cơ dừng.</span>
@@ -181,7 +181,7 @@ export function morsepad(el) {
   el.innerHTML = `<div class="mpad">
     <div class="mpad-head">Bấm một chữ để nghe nó gõ.
       <button class="btn btn--small on" data-k="cup">Chén gõ mặt bàn</button><button class="btn btn--small" data-k="heel">Gót guốc gõ sàn</button></div>
-    <div class="mpad-keys">${Object.keys(MORSE).map((c) => `<button class="mpad-key" data-m="${c}"><b>${c}</b><span>${MORSE[c].replace(/\./g, "·").replace(/-/g, "—")}</span></button>`).join("")}</div></div>`;
+    <div class="mpad-keys">${Object.keys(MORSE).map((c) => `<button class="mpad-key" data-m="${c}">${c}<span>${MORSE[c].replace(/\./g, "·").replace(/-/g, "—")}</span></button>`).join("")}</div></div>`;
   el.addEventListener("click", (e) => {
     const k = e.target.closest("[data-k]");
     if (k) { kind = k.dataset.k; el.querySelectorAll("[data-k]").forEach((b) => b.classList.toggle("on", b === k)); return; }
@@ -220,7 +220,7 @@ export function kieu(el) {
   const show = () => {
     const ed = el.querySelector("[data-ed]").value, n = Number(el.querySelector("[data-n]").value);
     const t = edition(ed).get(n);
-    el.querySelector(".kieu-line").innerHTML = !n ? "…" : t ? `<b>${n}</b> · ${t.replace(/[,.?]$/, "")}<br><small>${t.replace(/[,.?]/g, "").split(" ").map((w, i) => `<span>${i + 1}:${w}</span>`).join(" ")}</small>` : "Câu này không nằm trong những trang được chép lại.";
+    el.querySelector(".kieu-line").innerHTML = !n ? "…" : t ? `${n} · ${t.replace(/[,.?]$/, "")}<br><small>${t.replace(/[,.?]/g, "").split(" ").map((w, i) => `<span>${i + 1}:${w}</span>`).join(" ")}</small>` : "Câu này không nằm trong những trang được chép lại.";
   };
   el.addEventListener("input", show); el.addEventListener("change", show);
 }

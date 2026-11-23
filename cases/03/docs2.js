@@ -15,7 +15,7 @@ export default [
     html: () => `
     <div class="doc doc--notebook">
       <p class="note">Tập giấy pelure mỏng, chữ con gái tròn trịa. Trang đầu Yến viết cho cả nhóm:</p>
-      ${hand(`<b>Thơ tàng đầu</b> (thơ giấu chữ): giấu lời ở đầu câu.
+      ${hand(`Thơ tàng đầu (thơ giấu chữ): giấu lời ở đầu câu.
         Dấu không tính: Ơ, Ô cũng là O, Ư là U, Đ là D. Bài này mình làm tặng nhóm mình, tụi bây thử đọc coi:`)}
       ${poem(["Bảy người ngồi dưới trăng thanh,", "Áo ai trắng muốt bên cành sen xa.", "Chén trà mời bóng trăng tà,", "Hồn thơ gửi lại mái nhà Hàng Me.",
         "Lá rơi gió thổi bờ tre,", "Ai về thì nhớ đêm hè năm xưa.", "Nhớ nhau dẫu nắng dẫu mưa."])}
@@ -27,16 +27,16 @@ export default [
     id: "bien_ban_3", stage: 2, kind: "Sổ cơ", icon: "📓", label: "Sổ cơ · buổi 3 · 16/10/1971 (Quốc ghi)",
     html: () => `
     <div class="doc doc--notebook">
-      ${hand(`<b>Buổi cơ thứ ba.</b> Thứ Bảy 16/10/1971. Yến mới chôn hôm thứ Tư.<br>
-        Ngồi: <b>Lan (tay chủ)</b>, Dung, Khiêm, Nghi, Quốc (ghi sổ). Hai chỗ trống.<br>
-        Con cơ chạy rất lâu, không ngừng. Lan đọc theo từng chữ con cơ dừng, tôi chép lại. Ra một bài lục bát mười ba câu:`)}
+      ${hand(`Buổi cơ thứ ba. Thứ Bảy 16/10/1971. Yến mới chôn hôm thứ Tư.<br>
+        ${ln("bb3_ngoi", "Ngồi: Lan (tay chủ), Dung, Khiêm, Nghi, Quốc (ghi sổ). Hai chỗ trống.")}<br>
+        ${ln("bb3_doc", "Con cơ chạy rất lâu, không ngừng. Lan đọc theo từng chữ con cơ dừng, tôi chép lại.")} Ra một bài lục bát mười ba câu:`)}
       ${poem(["Quạ kêu ba tiếng đầu hồi,", "Ủ tro bếp lạnh ai ngồi chờ ai.", "Ơi người áo trắng sân ngoài,", "Chén trà ai rót đêm dài cho em.",
         "Uống đi cho ấm môi mềm,", "Ông bà ngồi đợi bên thềm từ lâu.", "Nước hồ xanh thẳm còn sâu,", "Gió đưa hương khói qua cầu sang sông.",
         "Trăm năm nằm dưới đáy lòng,", "Hồn ai đứng giữa hư không gọi về.", "Uống rồi nằm ngủ như mê,", "Ơi người, ai gọi chẳng nghe nữa đâu.", "Chưa xanh cỏ mộ đã sầu."])}
-      ${hand(`Khiêm nói thơ dở, chắc bà Diệp không có học. Không ai cười.<br>
+      ${hand(`${ln("bb3_khiem", "Khiêm nói thơ dở, chắc bà Diệp không có học. Không ai cười.")}<br>
         ${ln("bb3_tra", "Lan pha một bình trà nóng mời mọi người cho đỡ lạnh. Tôi uống hai chung.")}`)}
       <p class="note">Dòng cuối trang, nét khác (Khiêm):</p>
-      ${hand(`<i>Quốc ói suốt đêm, nước ói trắng đục như nước vo gạo, mùi tỏi. Mất lúc 3 giờ sáng 17/10 tại nhà thương Chợ Rẫy.</i>`)}
+      ${hand(`${ln("bb3_oi", "Quốc ói suốt đêm, nước ói trắng đục như nước vo gạo, mùi tỏi.")} Mất lúc 3 giờ sáng 17/10 tại nhà thương Chợ Rẫy.`)}
     </div>`,
   },
 

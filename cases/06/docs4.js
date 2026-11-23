@@ -16,7 +16,7 @@ export default [
         <tr><td>5. Ti ma</td><td>vải gai mịn nhất</td><td>gia nhân, tá điền, người hầu trong nhà</td></tr>
         <tr><td>(ngoài năm bậc) Tố y</td><td>áo trắng trơn, không gai</td><td>người ngoài, bạn bè đến viếng</td></tr>
       </table>
-      <p class="small"><b>Lệ riêng của họ Triệu:</b> bậc trên trong họ (ngoài cha mẹ) không để tang người dưới chết trẻ chưa vợ. Người đã hết tang thì không mặc lại.</p>
+      <p class="small">Lệ riêng của họ Triệu: bậc trên trong họ (ngoài cha mẹ) không để tang người dưới chết trẻ chưa vợ. Người đã hết tang thì không mặc lại.</p>
     </div>`,
   },
 
@@ -47,9 +47,9 @@ export default [
       ${hand(`<p>Thuý Nhi kéo bạn ra sau giếng, nói rất nhanh.</p>
         <p>${ln("tn_nhin", "“Hôm phát tang, lúc khâm liệm, chị Tú Nương nhìn cổ tay cái xác rất lâu. Chị không khóc. Chị cắn môi đến chảy máu.”")}</p>
         <p>${ln("tn_dai", "“Tối hôm ấy con thấy chị buộc một dải vải gai vào thắt lưng, bên trong áo. Vải gai thô, có viền mép. Chị bảo con: đừng nói với ai.”")}</p>
-        <p>“Bộ ti ma phu nhân phát, chị vẫn mặc bên ngoài cho người ta thấy.”</p>
+        <p>${ln("tn_tima", "“Bộ ti ma phu nhân phát, chị vẫn mặc bên ngoài cho người ta thấy.”")}</p>
         <p>${ln("tn_vo", "“Chị chưa bao giờ hứa hôn với ai. Chị nói nhà chị nghèo, ai thèm hỏi.”")}</p>
-        <p>“Hôm sau phu nhân gọi chị vào phòng, đóng cửa rất lâu. Lúc ra, chị là cô dâu.”</p>`)}
+        <p>${ln("tn_goi", "“Hôm sau phu nhân gọi chị vào phòng, đóng cửa rất lâu. Lúc ra, chị là cô dâu.”")}</p>`)}
     </div>`,
   },
 

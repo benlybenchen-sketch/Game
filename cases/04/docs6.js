@@ -10,7 +10,7 @@ export default [
       <div class="news-head">BÁO LÂM ĐỒNG · số ra ngày 15-11-1996</div>
       <h3>CHỊ EM SINH ĐÔI, MỘT NGƯỜI SỐNG THAY NGƯỜI KIA</h3>
       <p>Toà án nhân dân thành phố Đà Lạt đã bác đơn yêu cầu tuyên bố chị T.N.T. mất năng lực hành vi dân sự, căn cứ bản giám định của Bệnh viện Tâm thần Cam Ly.</p>
-      <p>Cùng ngày, Công an tỉnh Lâm Đồng phối hợp Công an thành phố Hồ Chí Minh khởi tố bà <b>Phạm Thị Huệ</b> (tức Lê Thị Huệ, 52 tuổi) về hai tội giết người và giết người chưa đạt.
+      <p>Cùng ngày, Công an tỉnh Lâm Đồng phối hợp Công an thành phố Hồ Chí Minh khởi tố bà Phạm Thị Huệ (tức Lê Thị Huệ, 52 tuổi) về hai tội giết người và giết người chưa đạt.
         Kết quả khai quật ở nghĩa trang Phước Lộc cho thấy người được chôn dưới tên “Phạm Thị Huệ” có sẹo mổ ruột thừa và hồ sơ y tế trùng với bà Lê Thị Hoa, chị song sinh của bị can.</p>
       <p>Theo cơ quan điều tra, bị can đã nấu cháo tôm cho người chị bị dị ứng tôm nặng, rồi mang tên chị về sống ở Đà Lạt suốt bốn tháng.</p>
       <p>Bác sĩ điều trị, BS. Lê Bích Vân, từ chối trả lời phỏng vấn.</p>

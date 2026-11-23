@@ -13,7 +13,7 @@ export default [
   },
 
   {
-    id: "bai_bao", stage: 4, kind: "Bài báo", icon: "📄", label: "Bài báo khoa học: sinh đôi soi gương (bản dịch tay)",
+    id: "bai_bao", stage: 4, kind: "Bài báo", icon: "📄", label: "Bài báo khoa học về trẻ sinh đôi (bản dịch tay)",
     html: () => `
     <div class="doc doc--book">
       <div class="book-head">Bản dịch tay của thư viện Đại học Đà Lạt cho BS. Vân · tóm tắt từ tạp chí di truyền học</div>
@@ -27,7 +27,7 @@ export default [
   },
 
   {
-    id: "so_giao_ca_dua", stage: 4, kind: "Sổ giao ca", icon: "📓", label: "Sổ giao ca: bà Hoa cầm đũa",
+    id: "so_giao_ca_dua", stage: 4, kind: "Sổ giao ca", icon: "📓", label: "Sổ giao ca của y tá trực",
     html: () => `
     <div class="doc doc--notebook">
       ${hand(`<p>Chủ Nhật 20/10, 16 giờ, sau buổi thăm. Bà Hoa ngồi căng tin một mình. ${ln("sg_trai", "Tôi đứng sau cửa kính nhìn: bà cầm đũa tay trái, gắp rất khéo.")}</p>
@@ -38,6 +38,6 @@ export default [
     </div>`,
   },
 
-  tape("hoi_5", 4, "Băng: hỏi chuyện Thảo về nốt ruồi (22/10)", "Bác sĩ Vân hỏi Thảo những điểm khác của người phụ nữ."),
-  tranh(5, 4, "Tranh Thảo vẽ đêm 22/10", "Hai người đàn bà giống hệt đứng quay lưng vào nhau, giữa là một đường dọc như mép gương. Người áo tím có chân chôn dưới đất."),
+  tape("hoi_5", 4, "Băng: hỏi chuyện Thảo (22/10)", "Bác sĩ Vân hỏi Thảo những điểm khác của người phụ nữ."),
+  tranh(5, 4, "Tranh Thảo vẽ đêm 22/10", "Hai người đàn bà giống hệt đứng quay lưng vào nhau, giữa là một đường dọc. Người áo tím có chân chôn dưới đất."),
 ];

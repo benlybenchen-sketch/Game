@@ -10,7 +10,7 @@ export default [
     html: () => `
     <div class="doc doc--report">
       <div class="report-head">UỶ BAN NHÂN DÂN PHƯỜNG 2 · QUẬN 4 · THÀNH PHỐ HỒ CHÍ MINH<br>GIẤY CHỨNG TỬ (bản sao)</div>
-      <p>Họ tên người chết: <b>PHẠM THỊ HUỆ</b> · Nữ · Sinh năm 1944 · Nơi thường trú: Khánh Hội, Q.4.</p>
+      <p>Họ tên người chết: PHẠM THỊ HUỆ · Nữ · Sinh năm 1944 · Nơi thường trú: Khánh Hội, Q.4.</p>
       <p>Chết lúc 3 giờ ngày 18/6/1996 tại nhà.</p>
       <p>Nguyên nhân: ${ln("ct_dq", "đột quỵ (theo y sĩ trạm y tế phường).")}</p>
       <p>Ghi chú khám thi thể của y sĩ: ${ln("ct_phu", "mặt và môi sưng phù, có nốt đỏ ở cổ;")} ${ln("ct_seo", "sẹo mổ cũ ở bụng dưới bên phải;")} ${ln("ct_ruoi", "nốt ruồi khoé miệng trái.")}</p>
@@ -24,7 +24,7 @@ export default [
     html: () => `
     <div class="doc doc--report">
       <div class="report-head">BỆNH VIỆN ĐÀ LẠT · KHU NGOẠI · 1970</div>
-      <p>Bệnh nhân: <b>Lê Thị Hoa</b> (bà Trần Văn Minh), 26 tuổi.</p>
+      <p>Bệnh nhân: Lê Thị Hoa (bà Trần Văn Minh), 26 tuổi.</p>
       <p>${ln("mo_ruot", "Ngày 11/3/1970: mổ cắt ruột thừa viêm, đường mổ bụng dưới bên phải dài 6 phân.")} Ra viện sau 7 ngày.</p>
       <p>Đặc điểm nhận dạng ghi trong bệnh án: ${ln("mo_ruoi", "nốt ruồi khoé miệng trái.")}</p>
     </div>`,
@@ -35,9 +35,9 @@ export default [
     html: () => `
     <div class="doc doc--plain">
       <div class="idcard id-vn">
-        <div class="id-head">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM<br><b>GIẤY CHỨNG MINH NHÂN DÂN</b></div>
+        <div class="id-head">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM<br>GIẤY CHỨNG MINH NHÂN DÂN</div>
         <div class="id-photo">ảnh 3×4<br>(bản chụp mờ)</div>
-        <div class="id-body"><p>Họ tên: <b>LÊ THỊ HOA</b></p><p>Sinh ngày: 14-3-1944</p><p>Nguyên quán: Hoà Vang, Quảng Nam – Đà Nẵng</p><p>Thường trú: Phan Đình Phùng, Đà Lạt</p></div>
+        <div class="id-body"><p>Họ tên: LÊ THỊ HOA</p><p>Sinh ngày: 14-3-1944</p><p>Nguyên quán: Hoà Vang, Quảng Nam – Đà Nẵng</p><p>Thường trú: Phan Đình Phùng, Đà Lạt</p></div>
         <div class="id-back"><p>${ln("cm_dau", "Dấu vết riêng: nốt ruồi khoé miệng trái.")}</p><p>Ngày cấp: 10-6-1980 · Công an Lâm Đồng</p></div>
       </div>
       <p class="note">Công an phường cho chụp lại dấu vân tay ngón trỏ phải lưu trên chỉ bản. Đặt cạnh dấu điểm chỉ trên giấy cam đoan nhập viện ngày 20/8.</p>
@@ -51,9 +51,9 @@ export default [
     <div class="doc doc--book">
       <div class="book-head">TÀI LIỆU NGHIỆP VỤ · ba dạng hoa văn đường vân cơ bản</div>
       <ul>
-        <li><b>Cung:</b> đường vân chạy từ mép này sang mép kia như làn sóng, nhô lên ở giữa. Không có tâm, không có điểm tam giác.</li>
-        <li><b>Móc:</b> đường vân đi vào từ một bên, vòng lại hình móc câu, rồi đi ra cùng bên đó. Có một điểm tam giác.</li>
-        <li><b>Xoáy:</b> đường vân cuộn tròn hoặc xoắn ốc quanh một tâm. Có hai điểm tam giác ở hai bên.</li>
+        <li>Cung: đường vân chạy từ mép này sang mép kia như làn sóng, nhô lên ở giữa. Không có tâm, không có điểm tam giác.</li>
+        <li>Móc: đường vân đi vào từ một bên, vòng lại hình móc câu, rồi đi ra cùng bên đó. Có một điểm tam giác.</li>
+        <li>Xoáy: đường vân cuộn tròn hoặc xoắn ốc quanh một tâm. Có hai điểm tam giác ở hai bên.</li>
       </ul>
       <p>Hoa văn đường vân không đổi suốt đời. Hai người khác nhau, kể cả sinh đôi cùng trứng, không bao giờ có vân tay trùng nhau.</p>
     </div>`,
@@ -69,8 +69,8 @@ export default [
       return `
     <div class="doc doc--plain">
       ${pic("hop_banh", "Hộp bánh trên bàn trực, 22 giờ 15.")}
-      <p class="note">Nhãn giấy dán nắp, nét chữ nghiêng: <i>“Bánh ít đậu xanh. Mẹ làm cho con.”</i></p>
-      <p class="note">${ln("hb_mo", "Y tá Sương bẻ thử một cái: nhân bên trong màu hồng cam, tơi, thơm mùi tôm khô. Không phải đậu xanh.")}</p>
+      <p class="note">Nhãn giấy dán nắp, nét chữ nghiêng: “Bánh ít đậu xanh. Mẹ làm cho con.”</p>
+      <p class="note">${ln("hb_mo", "Y tá Sương bẻ thử một cái: nhân bên trong màu hồng cam, tơi, khô và mặn.")}</p>
       <p class="note">${ln("hb_thao", "22 giờ 40: y tá Sương phát hiện Thảo đã lấy được một cái lúc đi ngang bàn trực, ăn mất nửa. Mặt và môi sưng phù, khó thở. Tiêm adrenalin kịp thời.")}</p>
     </div>`;
     },
@@ -81,7 +81,7 @@ export default [
     html: () => `
     <div class="doc doc--memo">
       ${hand(`<p>Phòng kế hoạch tổng hợp tóm tắt cho bác sĩ:</p>
-        <p>Bộ luật Dân sự có hiệu lực từ ngày 1/7/1996. Khi một người bị bệnh tâm thần không nhận thức, làm chủ được hành vi, Toà có thể tuyên bố người đó mất năng lực hành vi dân sự, căn cứ vào <b>kết luận giám định</b>.</p>
+        <p>Bộ luật Dân sự có hiệu lực từ ngày 1/7/1996. Khi một người bị bệnh tâm thần không nhận thức, làm chủ được hành vi, Toà có thể tuyên bố người đó mất năng lực hành vi dân sự, căn cứ vào kết luận giám định.</p>
         <p>Khi đó Toà cử người giám hộ, thường là cha mẹ. ${ln("lu_gh", "Người giám hộ thay mặt người được giám hộ quản lý và giao dịch tài sản, kể cả nhà đất.")}</p>
         <p>Luật còn có mức “hạn chế năng lực hành vi dân sự”, nhưng chỉ áp dụng cho người nghiện ma tuý hoặc chất kích thích khác dẫn đến phá tán tài sản, không áp dụng cho bệnh tâm thần.</p>
         <p>Nếu kết luận giám định là người bệnh vẫn đủ năng lực, Toà bác đơn.</p>`)}

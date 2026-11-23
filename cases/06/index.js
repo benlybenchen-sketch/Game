@@ -60,7 +60,7 @@ export const META = {
     html: `<h3>Rạng sáng 23 tháng Bảy · phủ Triệu</h3>
       <p>Cửa Đông viện mở toang. Người trong tân phòng còn sống, gầy như que củi, chân trái xích vào giường. Lão gia quỳ xuống nhận con giữa sân.</p>
       <p>Trâm bạc nhúng vào bình rượu hợp cẩn, đen lại.</p>
-      <p>Nắp quan tài được mở. Trên cổ tay trái người chết có một sợi chỉ đỏ. Tú Nương đứng cạnh bạn, gọi khẽ: <b>“Anh Thạch.”</b></p>
+      <p>Nắp quan tài được mở. Trên cổ tay trái người chết có một sợi chỉ đỏ. Tú Nương đứng cạnh bạn, gọi khẽ: “Anh Thạch.”</p>
       <p>Không ai ký hôn thư.</p>`,
     open: "bb_dong_vien",
   },

@@ -32,7 +32,7 @@ export default [
         <tr><td>“Còn ấm”: chết chưa quá ba ngày</td><td>70</td></tr>
         <tr><td>Tiền công mối, bao trọn lễ</td><td>8</td></tr>
       </table>
-      <p class="small muted">Góc dưới, ai đó gạch một dòng bút chì đã mờ: <i>“người sống: không bán.”</i></p>
+      <p class="small muted">Góc dưới, ai đó gạch một dòng bút chì đã mờ: “người sống: không bán.”</p>
     </div>`,
   },
 
@@ -53,13 +53,13 @@ export default [
     id: "bao_vot", stage: 1, kind: "Giấy", icon: "§", label: "Giấy báo của đồn cảnh sát trấn Hoè Âm",
     html: () => `
     <div class="doc doc--form">
-      <div class="form-head"><div>CẢNH SÁT CỤC HUYỆN BÌNH DAO<br><b>ĐỒN TRẤN HOÈ ÂM</b></div><div><b>TRUNG HOA DÂN QUỐC</b><br>năm thứ 25</div></div>
+      <div class="form-head"><div>CẢNH SÁT CỤC HUYỆN BÌNH DAO<br>ĐỒN TRẤN HOÈ ÂM</div><div>TRUNG HOA DÂN QUỐC<br>năm thứ 25</div></div>
       <h2 class="form-title">GIẤY BÁO TÌM THẤY TỬ THI</h2>
       <p>${ln("bv_ngay", "Ngày 26 tháng 8 Tây lịch")}, 7 giờ sáng, dân chài vớt được một tử thi nam ở bãi Hạ Than, sông Phần, cách bến đò Hoè Âm sáu dặm về hạ lưu.</p>
       <p>${ln("bv_xac", "Tử thi trương phềnh, mặt không còn nhận ra. Mặc trường sam lụa xanh, chân không giày.")}</p>
       <p>Cùng ngày, Triệu phu nhân đến nhận, nói là con trai Triệu Thừa Tự, mất tích từ đêm Thất tịch. Lão gia Triệu Hoài Đức không cho mổ khám. Đã giao gia đình.</p>
       <p class="small">Lịch giao ban của đồn: tháng Bảy âm lịch năm Bính Tý, mồng Một nhằm ngày 17 tháng 8 Tây lịch.</p>
-      <div class="sign-row"><div>Đội trưởng<br>${hand("Phùng", "sign")}<b>Phùng Đại Hữu</b></div></div>
+      <div class="sign-row"><div>Đội trưởng<br>${hand("Phùng", "sign")}Phùng Đại Hữu</div></div>
       ${stamp("HOÈ ÂM", "right:30px;bottom:24px", "blue")}
     </div>`,
   },

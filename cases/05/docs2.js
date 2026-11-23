@@ -5,7 +5,7 @@ import { tape, diary } from "./docs0.js";
 export default [
   diary("nk_3", 2, "Nhật ký thực tập: hiệu ảnh và buồng tối, 23/12", null, `
     <p>Thứ Hai 23/12/1991. Ông Khải cho tôi xem hiệu ảnh. Lúc nói về ảnh, ông tỉnh hẳn, nói nhiều, giọng ấm.</p>
-    <p>Giữa tủ kính treo một tấm phóng to nhất, khung gỗ, ghi bằng chữ của ông: <b>“Vợ tôi, Tết 1991”</b>. Người trong ảnh ngồi quay lưng bên cửa sổ, áo len đỏ, trùm khăn len kem.</p>
+    <p>Giữa tủ kính treo một tấm phóng to nhất, khung gỗ, ghi bằng chữ của ông: “Vợ tôi, Tết 1991”. Người trong ảnh ngồi quay lưng bên cửa sổ, áo len đỏ, trùm khăn len kem.</p>
     <p>Ông nói: “Nhà tôi không thích chụp mặt lúc ốm. Tôi chụp sau lưng thôi.” Cháu Ngân đứng sau bố, mỉm cười.</p>
     <p>Bên cạnh là tấm ông chụp năm 1988: cô Hằng chấm bài bên đúng cửa sổ ấy, cùng cái áo, cùng cái khăn. Lúc đó cô còn đầy đặn lắm.</p>
     <p>Trong buồng tối, trên dây phơi, tôi đếm được mười bốn bản in của tấm “Vợ tôi, Tết 1991”.</p>
@@ -38,7 +38,7 @@ export default [
     id: "mau_chu", stage: 2, kind: "Giấy tờ", icon: "✍", label: "Ba mẫu chữ: giấy xin nghỉ, sổ điểm, bài văn",
     html: () => `
     <div class="doc doc--plain">
-      <p class="note">Vân mượn được ba thứ: giấy xin nghỉ “của cô Hằng” ở trường, sổ điểm cô Hằng ghi năm học 1988–1989, và bài văn của Ngân cô Hà chủ nhiệm cho xem. Rê chuột hoặc chạm để soi bằng kính lúp.</p>
+      <p class="note">Vân mượn được ba thứ: giấy xin nghỉ của cô Hằng ở trường, sổ điểm cô Hằng ghi năm học 1988–1989, và bài văn của Ngân cô Hà chủ nhiệm cho xem. Rê chuột hoặc chạm để soi bằng kính lúp.</p>
       ${media("hand", "mau")}
     </div>`,
   },
@@ -69,13 +69,13 @@ export default [
     id: "so_tay_khai", stage: 3, kind: "Sổ tay", icon: "📓", label: "Sổ tay ông Khải, 12/1989 – 1990 (Vân chép)",
     html: () => `
     <div class="doc doc--notebook">${hand(`
-      <p><b>23/12/1989, 4 giờ chiều.</b> ${ln("sk_mat", "Hằng mất rồi.")} Con không cho ai vào. Con chải tóc cho mẹ, bảo mẹ ngủ. Tôi phải sang trạm.</p>
-      <p><b>24/12/1989.</b> ${ln("sk_dap", "Tôi vừa nói chữ “trạm” là con đập đầu vào tường. Không dám nhắc nữa.")}</p>
-      <p><b>5/1/1990.</b> ${ln("sk_tay", "Con cắt tay bằng dao cạo phim. Tôi cõng con ra trạm, nói con cắt phim. Về nhà tôi hứa với con: mẹ không đi đâu cả.")}</p>
-      <p><b>6/2/1990.</b> ${ln("sk_ho", "Đêm nay tôi cũng nghe Hằng ho. Ngân nói đúng.")}</p>
-      <p><b>15/3/1990.</b> ${ln("sk_chao", "Hằng ăn cháo, khen ngon.")}</p>
-      <p><b>4/5/1990.</b> ${ln("sk_gio", "Dán băng keo cửa buồng. Hằng sợ gió.")}</p>
-      <p><b>Tết 1991.</b> ${ln("sk_anh", "Ngân bảo chụp mẹ một kiểu. Mẹ ngồi bên cửa sổ, quay lưng. Ảnh đẹp nhất đời tôi chụp.")}</p>`)}
+      <p>23/12/1989, 4 giờ chiều. ${ln("sk_mat", "Hằng mất rồi.")} Con không cho ai vào. Con chải tóc cho mẹ, bảo mẹ ngủ. Tôi phải sang trạm.</p>
+      <p>24/12/1989. ${ln("sk_dap", "Tôi vừa nói chữ “trạm” là con đập đầu vào tường. Không dám nhắc nữa.")}</p>
+      <p>5/1/1990. ${ln("sk_tay", "Con cắt tay bằng dao cạo phim. Tôi cõng con ra trạm, nói con cắt phim. Về nhà tôi hứa với con: mẹ không đi đâu cả.")}</p>
+      <p>6/2/1990. ${ln("sk_ho", "Đêm nay tôi cũng nghe Hằng ho. Ngân nói đúng.")}</p>
+      <p>15/3/1990. ${ln("sk_chao", "Hằng ăn cháo, khen ngon.")}</p>
+      <p>4/5/1990. ${ln("sk_gio", "Dán băng keo cửa buồng. Hằng sợ gió.")}</p>
+      <p>Tết 1991. ${ln("sk_anh", "Ngân bảo chụp mẹ một kiểu. Mẹ ngồi bên cửa sổ, quay lưng. Ảnh đẹp nhất đời tôi chụp.")}</p>`)}
     </div>`,
   },
 
@@ -83,11 +83,11 @@ export default [
     id: "nk_ngan", stage: 3, kind: "Nhật ký", icon: "✿", label: "“Nhật ký chăm mẹ” của Ngân, 1990 (Vân chép)",
     html: () => `
     <div class="doc doc--diary">${hand(`
-      <p><b>3/2/1990.</b> ${ln("ng_ho", "Đêm qua mẹ ho nhiều. Bố ngủ say không nghe thấy. Con nghe thấy hết.")}</p>
-      <p><b>12/3/1990.</b> ${ln("ng_chao", "Mẹ ăn được ba thìa cháo. Mẹ bảo ngon.")}</p>
-      <p><b>2/5/1990.</b> ${ln("ng_gio", "Mẹ dặn đóng hết cửa lại, mẹ sợ gió. Con với bố phải dán cửa.")}</p>
-      <p><b>20/8/1990.</b> Con viết đơn xin nghỉ cho mẹ. Mẹ mệt không cầm bút được, mẹ đọc cho con viết.</p>
-      <p><b>14/2/1991.</b> ${ln("ng_anh", "Hôm nay bố chụp ảnh cho mẹ. Con giúp mẹ mặc áo len.")}</p>
+      <p>3/2/1990. ${ln("ng_ho", "Đêm qua mẹ ho nhiều. Bố ngủ say không nghe thấy. Con nghe thấy hết.")}</p>
+      <p>12/3/1990. ${ln("ng_chao", "Mẹ ăn được ba thìa cháo. Mẹ bảo ngon.")}</p>
+      <p>2/5/1990. ${ln("ng_gio", "Mẹ dặn đóng hết cửa lại, mẹ sợ gió. Con với bố phải dán cửa.")}</p>
+      <p>20/8/1990. Con viết đơn xin nghỉ cho mẹ. Mẹ mệt không cầm bút được, mẹ đọc cho con viết.</p>
+      <p>14/2/1991. ${ln("ng_anh", "Hôm nay bố chụp ảnh cho mẹ. Con giúp mẹ mặc áo len.")}</p>
       <p class="small">Trang cuối cùng của năm 1989 bị xé mất, chỉ còn chân giấy.</p>`, "kid")}
     </div>`,
   },

@@ -36,11 +36,11 @@ export default [
       <p class="right">Trấn Hoè Âm, ngày 17 tháng Bảy năm Bính Tý</p>
       <p>Lục tiên sinh,</p>
       <p>Thầy Khâu của tiên sinh đã về với tổ tiên đêm Rằm. Nhà tôi đang có việc lớn mà người chấm ngày lại đi mất, tôi đành mời tiên sinh thay thầy.</p>
-      <p>Con trai tôi là <b>Triệu Thừa Tự</b>, mười chín tuổi, chết đuối ở sông Phần, người ta vớt được ở bãi Hạ Than. Nó chưa vợ. Theo lệ, nhà tôi cưới vợ cho nó dưới âm, để nó khỏi cô đơn, để họ Triệu còn người nối dõi bên nó.</p>
-      <p>Cô dâu đã có: <b>cô Lý Xuân Hoa</b>, con nhà lương thiện, mất vì thương hàn đầu tháng. Canh thiếp của cô tôi đã gửi thầy Khâu, tiên sinh tìm trong hộp của thầy.</p>
-      <p>Việc của tiên sinh: chấm lại bát tự, viết hôn thư cho đúng phép. Lễ định vào <b>đêm 22, giờ Tý</b>. Đừng chậm trễ.</p>
-      <p>Tiền công gấp ba. Tiên sinh ở lại phủ cho tiện, phòng ở Tây sương. <b>Đông viện là phòng tân hôn của con tôi, đã niêm phong. Không ai được vào.</b></p>
-      <p class="right">${hand("Tiết thị", "sign")}<b>Triệu môn Tiết thị</b></p>
+      <p>Con trai tôi là Triệu Thừa Tự, mười chín tuổi, chết đuối ở sông Phần, người ta vớt được ở bãi Hạ Than. Nó chưa vợ. Theo lệ, nhà tôi cưới vợ cho nó dưới âm, để nó khỏi cô đơn, để họ Triệu còn người nối dõi bên nó.</p>
+      <p>Cô dâu đã có: cô Lý Xuân Hoa, con nhà lương thiện, mất vì thương hàn đầu tháng. Canh thiếp của cô tôi đã gửi thầy Khâu, tiên sinh tìm trong hộp của thầy.</p>
+      <p>Việc của tiên sinh: chấm lại bát tự, viết hôn thư cho đúng phép. Lễ định vào đêm 22, giờ Tý. Đừng chậm trễ.</p>
+      <p>Tiền công gấp ba. Tiên sinh ở lại phủ cho tiện, phòng ở Tây sương. Đông viện là phòng tân hôn của con tôi, đã niêm phong. Không ai được vào.</p>
+      <p class="right">${hand("Tiết thị", "sign")}Triệu môn Tiết thị</p>
     </div>`,
   },
 
@@ -60,9 +60,9 @@ export default [
     id: "so_khau", stage: 0, kind: "Sổ tay", icon: "📓", label: "Sổ tay thầy Khâu, mấy trang cuối",
     html: () => `
     <div class="doc doc--notebook">
-      ${hand(`<p><b>14 tháng Bảy.</b> Phu nhân họ Triệu gửi canh thiếp cô dâu âm. Lạ: canh thiếp không ghi tên, chỉ có bát tự. Phu nhân dặn miệng: “của cô Lý Xuân Hoa”.</p>
+      ${hand(`<p>14 tháng Bảy. Phu nhân họ Triệu gửi canh thiếp cô dâu âm. Lạ: canh thiếp không ghi tên, chỉ có bát tự. Phu nhân dặn miệng: “của cô Lý Xuân Hoa”.</p>
         <p>Tôi chưa xem kỹ. Nhớ: tính tứ trụ thì năm đổi ở Lập Xuân, tháng đổi ở Tiết.</p>
-        <p><b>15 tháng Bảy, Vu Lan.</b> Đến phủ Triệu. Đông viện cửa khoá, dán bùa trấn. Đứng ở hiên, nghe bên trong có tiếng gọi khe khẽ. Hai chữ. Tôi nghe như “Tú Nương”.</p>
+        <p>15 tháng Bảy, Vu Lan. Đến phủ Triệu. Đông viện cửa khoá, dán bùa trấn. Đứng ở hiên, nghe bên trong có tiếng gọi khe khẽ. Hai chữ. Tôi nghe như “Tú Nương”.</p>
         <p>Phu nhân nói: hồn cậu chủ về. Hồn người chết sao lại gọi tên một đứa nha hoàn mới mua?</p>
         <p>Tôi có mang máy hát của ông Tống theo, ghi được một ống ở hiên Đông viện. Về nhà sẽ nghe lại.</p>
         <p>Trà nhà họ Triệu đắng quá.</p>`)}
@@ -75,10 +75,10 @@ export default [
     <div class="doc doc--plain">
       <div class="red-card">
         <div class="red-card-h">乾 坤 · CANH THIẾP NHÀ GÁI</div>
-        <div class="pillars">${PILLARS.map(([h, v], i) => `<div class="pillar"><small>${["Năm", "Tháng", "Ngày", "Giờ"][i]}</small><b>${h}</b><span>${v}</span></div>`).join("")}</div>
-        <p class="small">Tên: <i>(để trống)</i> · Quê quán: <i>(để trống)</i></p>
+        <div class="pillars">${PILLARS.map(([h, v], i) => `<div class="pillar"><small>${["Năm", "Tháng", "Ngày", "Giờ"][i]}</small>${h}<span>${v}</span></div>`).join("")}</div>
+        <p class="small">Tên: (để trống) · Quê quán: (để trống)</p>
       </div>
-      <p class="note">Giấy đỏ gấp đôi, mực son. Trong hộp canh thiếp của thầy Khâu, kẹp giữa hai tờ giấy trắng. Thầy ghi bút chì ở mép: <i>“chưa đối chiếu”</i>.</p>
+      <p class="note">Giấy đỏ gấp đôi, mực son. Trong hộp canh thiếp của thầy Khâu, kẹp giữa hai tờ giấy trắng. Thầy ghi bút chì ở mép: “chưa đối chiếu”.</p>
     </div>`,
   },
 
@@ -87,14 +87,14 @@ export default [
     html: () => `
     <div class="doc doc--book">
       <div class="book-head">TỨ TRỤ GIẢN YẾU · bản chép tay của Khâu Văn Bỉnh · trang 3–5</div>
-      <p><b>Một. Trụ năm.</b> Năm can chi đổi vào <b>giờ Lập Xuân</b>, không phải mồng Một Tết. Sinh trước giờ Lập Xuân thì vẫn tính năm cũ, dù đã qua Tết; sinh sau giờ Lập Xuân thì tính năm mới, dù chưa tới Tết.</p>
-      <p><b>Hai. Trụ tháng.</b> Tháng đổi vào giờ <b>Tiết</b> (Lập Xuân mở tháng Dần, Kinh Trập mở tháng Mão, …, Tiểu Hàn mở tháng Sửu). Không theo mồng Một tháng âm. Can của tháng tra theo can năm:</p>
+      <p>Một. Trụ năm. Năm can chi đổi vào giờ Lập Xuân, không phải mồng Một Tết. Sinh trước giờ Lập Xuân thì vẫn tính năm cũ, dù đã qua Tết; sinh sau giờ Lập Xuân thì tính năm mới, dù chưa tới Tết.</p>
+      <p>Hai. Trụ tháng. Tháng đổi vào giờ Tiết (Lập Xuân mở tháng Dần, Kinh Trập mở tháng Mão, …, Tiểu Hàn mở tháng Sửu). Không theo mồng Một tháng âm. Can của tháng tra theo can năm:</p>
       <table class="tbl"><tr><th>Can năm</th><th>Tháng Dần là</th></tr>
         <tr><td>Giáp, Kỷ</td><td>Bính Dần</td></tr><tr><td>Ất, Canh</td><td>Mậu Dần</td></tr><tr><td>Bính, Tân</td><td>Canh Dần</td></tr>
         <tr><td>Đinh, Nhâm</td><td>Nhâm Dần</td></tr><tr><td>Mậu, Quý</td><td>Giáp Dần</td></tr></table>
       <p class="small">(Ngũ Hổ Độn.) Các tháng sau cứ thế đi tiếp theo thứ tự can chi: Dần, Mão, Thìn, … Tý, Sửu. Tháng Sửu là tháng thứ mười hai.</p>
-      <p><b>Ba. Trụ ngày.</b> Tra vạn niên lịch.</p>
-      <p><b>Bốn. Trụ giờ.</b> Giờ Tý 23–1 giờ, Sửu 1–3, Dần 3–5, Mão 5–7, Thìn 7–9, Tỵ 9–11, Ngọ 11–13, Mùi 13–15, Thân 15–17, Dậu 17–19, Tuất 19–21, Hợi 21–23. Can của giờ tra theo can ngày:</p>
+      <p>Ba. Trụ ngày. Tra vạn niên lịch.</p>
+      <p>Bốn. Trụ giờ. Giờ Tý 23–1 giờ, Sửu 1–3, Dần 3–5, Mão 5–7, Thìn 7–9, Tỵ 9–11, Ngọ 11–13, Mùi 13–15, Thân 15–17, Dậu 17–19, Tuất 19–21, Hợi 21–23. Can của giờ tra theo can ngày:</p>
       <table class="tbl"><tr><th>Can ngày</th><th>Giờ Tý là</th></tr>
         <tr><td>Giáp, Kỷ</td><td>Giáp Tý</td></tr><tr><td>Ất, Canh</td><td>Bính Tý</td></tr><tr><td>Bính, Tân</td><td>Mậu Tý</td></tr>
         <tr><td>Đinh, Nhâm</td><td>Canh Tý</td></tr><tr><td>Mậu, Quý</td><td>Nhâm Tý</td></tr></table>
@@ -119,8 +119,8 @@ export default [
     html: () => `
     <div class="doc doc--form doc--old">
       <h2 class="form-title">KHẾ ƯỚC<br><small>bán con gái làm nha hoàn, đứt bán, không chuộc lại</small></h2>
-      <p>Người lập khế: <b>Ôn Tam</b> (thường gọi Ôn Lão Tam), phu la, ở xóm Bến Đò, trấn Hoè Âm.</p>
-      <p>Vì nhà nghèo, nợ nần, nay bằng lòng bán con gái ruột là <b>Ôn Tú Nương</b>, ${ln("ku_sinh", "sinh giờ Mão ngày 23 tháng Chạp năm Kỷ Mùi")}, cho phủ họ Triệu làm nha hoàn. Từ nay sống là người họ Triệu, chết là ma họ Triệu, cha mẹ anh em không được đòi.</p>
+      <p>Người lập khế: Ôn Tam (thường gọi Ôn Lão Tam), phu la, ở xóm Bến Đò, trấn Hoè Âm.</p>
+      <p>Vì nhà nghèo, nợ nần, nay bằng lòng bán con gái ruột là Ôn Tú Nương, ${ln("ku_sinh", "sinh giờ Mão ngày 23 tháng Chạp năm Kỷ Mùi")}, cho phủ họ Triệu làm nha hoàn. Từ nay sống là người họ Triệu, chết là ma họ Triệu, cha mẹ anh em không được đòi.</p>
       <p>Giá bạc: trả bằng một tờ hối phiếu của phiếu hiệu Nghĩa Thịnh Xương, ghi theo mật áp của hiệu, đã giao tận tay.</p>
       <p>Lập ngày ${ln("ku_ngay", "mồng 8 tháng Bảy năm Bính Tý")}.</p>
       <div class="sign-row"><div>Người bán<br><span class="fingerprint"></span><br><small>(không biết chữ, điểm chỉ)</small></div><div>Người mua<br>${hand("Tiết thị", "sign")}</div><div>Người làm chứng<br>${hand("Lưu Phúc", "sign")}</div></div>
@@ -148,12 +148,12 @@ export default [
     id: "giay_xuan_hoa", stage: 0, kind: "Giấy", icon: "☰", label: "Giấy bà mối âm gửi kèm “hàng”: Lý Xuân Hoa",
     html: () => `
     <div class="doc doc--memo">
-      ${hand(`<p><b>Hoàng Tứ Nương, mối âm, ngõ Liễu, trấn Hoè Âm.</b></p>
-        <p>Cô dâu âm: <b>Lý Xuân Hoa</b>, mười sáu tuổi, con gái Lý thợ nhuộm ở thôn Tây.</p>
+      ${hand(`<p>Hoàng Tứ Nương, mối âm, ngõ Liễu, trấn Hoè Âm.</p>
+        <p>Cô dâu âm: Lý Xuân Hoa, mười sáu tuổi, con gái Lý thợ nhuộm ở thôn Tây.</p>
         <p>Sinh ${ln("xh_sinh", "ngày 15 tháng Giêng năm 1920 Tây lịch, giờ Dậu")} (nhà ấy theo đạo, ghi ngày theo nhà thờ).</p>
         <p>Mất ngày mồng 5 tháng Bảy năm nay, thương hàn. Còn nguyên vẹn, chưa chôn, đang để trong kho lạnh của tôi.</p>
         <p>Mặt mũi sáng sủa. Chân nhỏ. Tóc dài tới thắt lưng.</p>`)}
-      <p class="note">Mặt sau, chữ khác: <i>“Phu nhân đặt. Đã nhận tiền.”</i></p>
+      <p class="note">Mặt sau, chữ khác: “Phu nhân đặt. Đã nhận tiền.”</p>
     </div>`,
   },
 

@@ -26,7 +26,7 @@ export default [
         <p>${ln("sd_somme", "Additionnez : la somme donne la place de la lettre.")} ${ln("sd_blanc", "Six traits brisés : le silence entre deux mots.")}</p>
         <p>${ln("sd_or", "Si je meurs cette nuit, mon or dormira là où personne n'ose aller.")}</p>
         <p class="right">L. N. Diệp</p>`, "fr")}
-      <p class="note">Bên lề, nét chữ học trò nghiêng ngược, mực đã phai: <i>“bà trẻ mất đêm đó.”</i></p>
+      <p class="note">Bên lề, nét chữ học trò nghiêng ngược, mực đã phai: “bà trẻ mất đêm đó.”</p>
     </div>`,
   },
 
@@ -38,27 +38,27 @@ export default [
       ${hand(`1971, 1972, 1973 … 2003. Ba mươi ba năm, năm nào cũng y như vầy, không sai một vạch:`, "fwd")}
       <div class="hx-seq">${SEQ().map((h) => hexDraw(h)).join("")}</div>
       ${hand(`Bốn mươi ba quẻ. Bà Diệp chỉ chỗ vàng. Phải tìm người đọc được tiếng Tây.`, "fwd")}
-      <p class="note">Mỗi năm một dòng ngày tháng, cùng một nét chữ ngả về phía trước. Năm 1983 có một dòng mực đỏ: <i>“đứng ngoài hồ sen nửa tiếng. Không dám.”</i></p>
+      <p class="note">Mỗi năm một dòng ngày tháng, cùng một nét chữ ngả về phía trước. Năm 1983 có một dòng mực đỏ: “đứng ngoài hồ sen nửa tiếng. Không dám.”</p>
     </div>`,
   },
 
   {
-    id: "bien_ban_7", stage: 6, kind: "Sổ cơ", icon: "📓", label: "Sổ cơ · buổi 7 · 13/11/1971 (“Dung” ghi)",
+    id: "bien_ban_7", stage: 6, kind: "Sổ cơ", icon: "📓", label: "Sổ cơ · buổi 7 · 13/11/1971 (Dung ghi)",
     html: () => `
     <div class="doc doc--notebook">
-      ${hand(`<b>Buổi cơ thứ bảy.</b> Thứ Bảy 13/11/1971.<br>
+      ${hand(`Buổi cơ thứ bảy. Thứ Bảy 13/11/1971.<br>
         ${ln("bb7_mot", "Chỉ còn mình. Mình ngồi một mình để từ biệt các bạn.")}<br>
         Ngồi: Dung (tay chủ, ghi sổ).<br>
         Con cơ chạy giữa CÓ và KHÔNG. Mình chép theo, ra mấy chục quẻ, không đọc được.<br>
         ${ln("bb7_chay", "Mình buông tay mà con cơ vẫn chạy. Mình bỏ chạy xuống nhà.")}<br>
         Khóa nhà. Mai về ở nhà dì.`, "fwd")}
       <p class="right">${hand("Hạnh Dung", "sign fwd")}</p>
-      <p class="note">Nét chữ cả trang ngả về phía trước, không lem mực. So với trang buổi cơ thứ sáu ngay trước đó.</p>
+      <p class="note">Nét chữ cả trang ngả về phía trước, không lem mực.</p>
     </div>`,
   },
 
   {
-    id: "bia_mo", stage: 6, kind: "Ảnh", icon: "🖼", label: "Mộ “Hà Ngọc Lan” ở nghĩa trang Thiên Phước",
+    id: "bia_mo", stage: 6, kind: "Ảnh", icon: "🖼", label: "Mộ Hà Ngọc Lan ở nghĩa trang Thiên Phước",
     html: () => `
     <div class="doc doc--plain">
       ${pic("bia_mo", "Nghĩa trang Thiên Phước, Gò Vấp. Bia: “Hà Ngọc Lan · 1952–1971”. Bông sen trắng còn tươi.", tombArt("HÀ NGỌC LAN", "1952 – 1971"))}

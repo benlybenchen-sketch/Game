@@ -20,7 +20,7 @@ export default [
         <li>${ln("ng_chi", "Cổ tay trái buộc một sợi chỉ đỏ, thắt nút kiểu con gái.")}</li>
         <li>${ln("ng_ao", "Mặc trường sam lụa xanh, chật căng ở vai, đường may vai bục chỉ, cài lệch một khuy.")}</li>
       </ol>
-      <p><b>Kết luận (theo lời gia chủ):</b> ${ln("ng_kl", "chết đuối.")}</p>
+      <p>Kết luận (theo lời gia chủ): ${ln("ng_kl", "chết đuối.")}</p>
       ${stamp("ĐÃ GIAO<br>GIA ĐÌNH", "right:30px;bottom:24px", "blue")}
     </div>`,
   },
@@ -30,10 +30,10 @@ export default [
     html: () => `
     <div class="doc doc--book">
       <div class="book-head">洗冤集錄 · TẨY OAN TẬP LỤC · quyển ba, mục “Chết đuối” và “Xem tay biết nghề”</div>
-      <p><b>Người sống rơi xuống nước mà chết:</b> miệng mũi có bọt trắng như nấm, lau rồi lại ra; hai tay nắm lại, trong kẽ móng có cát bùn, vì lúc chìm còn cào cấu.</p>
-      <p><b>Người chết rồi mới bị ném xuống nước:</b> miệng mũi không bọt, tay duỗi, móng sạch; phải tìm vết thương ở đầu, cổ.</p>
-      <p><b>Chú:</b> xác ngâm nước lâu ngày, bất kể chết thế nào, bụng đều trướng, da đều bong. Không lấy bụng trướng mà kết luận chết đuối.</p>
-      <p><b>Xem tay biết nghề (Mã ghi thêm theo kinh nghiệm):</b></p>
+      <p>Người sống rơi xuống nước mà chết: miệng mũi có bọt trắng như nấm, lau rồi lại ra; hai tay nắm lại, trong kẽ móng có cát bùn, vì lúc chìm còn cào cấu.</p>
+      <p>Người chết rồi mới bị ném xuống nước: miệng mũi không bọt, tay duỗi, móng sạch; phải tìm vết thương ở đầu, cổ.</p>
+      <p>Chú: xác ngâm nước lâu ngày, bất kể chết thế nào, bụng đều trướng, da đều bong. Không lấy bụng trướng mà kết luận chết đuối.</p>
+      <p>Xem tay biết nghề (Mã ghi thêm theo kinh nghiệm):</p>
       <ul>
         <li>Người chèo đò: chai ở gốc các ngón, hai tay như nhau.</li>
         <li>Thợ rèn: lòng bàn tay có sẹo bỏng; chai dày ở hổ khẩu (chỗ giữa ngón cái và ngón trỏ).</li>
@@ -53,7 +53,7 @@ export default [
       <p>Nghe tin Thừa Tự mất, tôi không tin. Đứa trò tôi dạy mười năm, sợ nước như sợ cọp, chưa bao giờ dám xuống bến đò một mình, sao lại chết đuối?</p>
       <p>${ln("td_tay", "Nó viết cả ngày, ngón giữa tay phải chai cứng như hạt đậu. Bàn tay nó trắng mềm, chưa cầm một cái cuốc.")} Người ta nói nó mặc áo trường sam xanh: đúng cái áo tôi may tặng năm ngoái, may vừa người nó, nó gầy lắm.</p>
       <p>Tôi xin huynh cho tôi xem mặt nó lần cuối.</p>
-      <p class="right">${hand("Kiều", "sign")}<b>Kiều Bá Văn</b></p>
+      <p class="right">${hand("Kiều", "sign")}Kiều Bá Văn</p>
       <p class="small muted">Thư không có hồi âm. Lưu Phúc ghi ở góc: “Phu nhân dặn: không trả lời.”</p>
     </div>`,
   },
@@ -63,7 +63,7 @@ export default [
     html: () => `
     <div class="doc doc--plain">
       ${pic("tay_xac", "Ảnh chụp sáng 10 tháng Bảy ở bãi Hạ Than. Sợi chỉ đỏ trên cổ tay trái còn nguyên.")}
-      <p class="note">Ghi chú sau ảnh, chữ đội trưởng Phùng: <i>“Phu nhân nhìn sợi chỉ, bảo cắt đi. Lão gia ngất. Tôi chưa kịp cắt thì gia đình đã khâm liệm.”</i></p>
+      <p class="note">Ghi chú sau ảnh, chữ đội trưởng Phùng: “Phu nhân nhìn sợi chỉ, bảo cắt đi. Lão gia ngất. Tôi chưa kịp cắt thì gia đình đã khâm liệm.”</p>
     </div>`,
   },
 
@@ -72,7 +72,7 @@ export default [
     html: () => `
     <div class="doc doc--memo">
       ${hand(`<p>“Tôi ba mươi năm khám xác. Cậu đọc phiếu tôi thì biết tôi biết gì.”</p>
-        <p>“Lão gia quỳ xuống xin tôi đừng mổ. Phu nhân không quỳ. Phu nhân đứng sau lưng tôi, nói khẽ: <i>ông ghi chết đuối thì ông về nhà ăn cơm</i>.”</p>
+        <p>“Lão gia quỳ xuống xin tôi đừng mổ. Phu nhân không quỳ. Phu nhân đứng sau lưng tôi, nói khẽ: ông ghi chết đuối thì ông về nhà ăn cơm.”</p>
         <p>“Tôi ghi theo lời gia chủ. Từng chữ trong phiếu là thật, chỉ có dòng kết luận là của người ta.”</p>
         <p>“Cái áo xanh ấy, xác mặc chật ở vai, rộng ở bụng. Người mặc không phải người được may cho.”</p>`)}
     </div>`,

@@ -11,7 +11,7 @@ export default [
       <table class="tbl">
         <tr><td>Giờ Tuất</td><td>Rước dâu từ Tây sương sang linh đường. Cô dâu đội khăn đỏ, đi chân không.</td></tr>
         <tr><td>Giờ Hợi</td><td>Bái thiên địa, bái linh vị. Thầy xem ngày đọc hôn thư.</td></tr>
-        <tr><td><b>Giờ Tý</b></td><td>${ln("tt_ruou", "Cô dâu uống rượu hợp cẩn trước linh vị. Phu nhân tự tay rót. Không ai khác được chạm vào bình rượu.")}</td></tr>
+        <tr><td>Giờ Tý</td><td>${ln("tt_ruou", "Cô dâu uống rượu hợp cẩn trước linh vị. Phu nhân tự tay rót. Không ai khác được chạm vào bình rượu.")}</td></tr>
         <tr><td>Giờ Sửu, Dần</td><td>Cô dâu “ngủ” bên quan tài. Đóng cửa linh đường.</td></tr>
         <tr><td>Giờ Mão</td><td>${ln("tt_chon", "Hạ huyệt, hợp táng.")}</td></tr>
       </table>
@@ -57,7 +57,7 @@ export default [
     html: () => `
     <div class="doc doc--form">
       <p>“Đêm Thất tịch, phu nhân sai tôi ra bến đò. Thằng phu la cầm roi đánh tôi. Tôi chỉ định đánh cho nó ngất.”</p>
-      <p>“Phu nhân bảo lột áo cậu chủ mặc cho nó, ném xuống sông. Phu nhân bảo: <i>nó chết thay con tôi, coi như có phúc</i>.”</p>
+      <p>“Phu nhân bảo lột áo cậu chủ mặc cho nó, ném xuống sông. Phu nhân bảo: nó chết thay con tôi, coi như có phúc.”</p>
       <p>“Trà mời thầy Khâu tôi pha theo lời phu nhân. Phu nhân bảo cho ông già ngủ một giấc.”</p>
       <p>“Rượu hợp cẩn, phu nhân tự pha. Tôi chỉ mua thuốc.”</p>
     </div>`,

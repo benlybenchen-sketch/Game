@@ -59,7 +59,7 @@ export default [
   {
     id: "so_tay_cuoi", stage: 7, kind: "Sổ tay", icon: "📓", label: "Sổ tay ông Khải, trang cuối",
     html: () => `<div class="doc doc--notebook">${hand(`
-      <p><b>31/12/1991, 3 giờ sáng.</b></p>
+      <p>31/12/1991, 3 giờ sáng.</p>
       <p>Không có ai ho.</p>
       <p>Hai năm nay, lần đầu tiên không có ai ho.</p>
       <p>Tôi bóc băng keo ra rồi. Hằng ơi.</p>`)}</div>`,
@@ -83,7 +83,7 @@ export default [
       <p>Ngày cuối thực tập ở Cam Đường, 3/1/1992.</p>
       <p>Thầy Sinh hỏi tôi ra trường định theo ngành gì. Tôi nói nội.</p>
       <p>Trên tàu về Hà Nội, tôi gạch chữ “nội” trong sổ, viết lại.</p>
-      <p><b>Tôi sẽ học tâm thần.</b></p>`)}<p class="right">${hand("Vân", "sign")}</p></div>`,
+      <p>Tôi sẽ học tâm thần.</p>`)}<p class="right">${hand("Vân", "sign")}</p></div>`,
   },
   tape("bang_buong", 7, "Băng tự ghi: buồng trong đã trống, đêm 2/1/1992", "Vân xin để máy ghi âm trong buồng trống một đêm, trước khi trả máy cho trạm. Không ai biết vì sao Vân làm vậy.", { secret: true }),
 
@@ -95,7 +95,7 @@ export default [
       <div class="report-head">CÔNG AN THỊ TRẤN CAM ĐƯỜNG · BIÊN BẢN SỰ VIỆC<br>6 giờ 15 ngày 31/12/1991 · nhà ông Đỗ Văn Khải</div>
       <p>${LOST[lostKey()]}</p>
       <p>6 giờ 15 sáng 31/12, phá cửa buồng trong. Khe cửa chèn chăn kín. Cánh cửa ngách sau chạn bát trong bếp cũng chèn chăn, chốt từ bên trong. Trong buồng có một lò than đã tắt và vỏ một bao than năm cân, mùi khí than rất nặng.</p>
-      <p>Phát hiện cháu <b>Đỗ Thị Ngân</b>, 15 tuổi, đã tử vong, nằm nghiêng trên giường, ôm thi thể đã khô của bà <b>Phạm Thị Hằng</b>. Trên tay cháu Ngân có một lọ thuốc trợ tim, nắp đã mở.</p>
+      <p>Phát hiện cháu Đỗ Thị Ngân, 15 tuổi, đã tử vong, nằm nghiêng trên giường, ôm thi thể đã khô của bà Phạm Thị Hằng. Trên tay cháu Ngân có một lọ thuốc trợ tim, nắp đã mở.</p>
       <p>Nguyên nhân sơ bộ: ngộ độc khí than (CO).</p>
       ${stamp("THẤT BẠI", "right:26px;top:50px", "red")}
     </div>`,

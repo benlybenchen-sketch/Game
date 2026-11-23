@@ -55,7 +55,7 @@ export const META = {
   ],
   finale: {
     html: `<h3>05:50 · Rạng sáng Chủ Nhật 14/11/2004</h3>
-      <p>Bạn đặt bản giải lên bàn cơ: <b>MỘ LAN LÀ EM · ĐỪNG UỐNG TRÀ · VÀNG DƯỚI HỒ SEN</b>.</p>
+      <p>Bạn đặt bản giải lên bàn cơ: MỘ LAN LÀ EM · ĐỪNG UỐNG TRÀ · VÀNG DƯỚI HỒ SEN.</p>
       <p>Bà Dung đọc rất lâu. Rồi bà gấp tờ giấy làm tư, cất vào túi áo, đứng dậy. Bà không nhìn bạn. Bà nói: “Cháu ngồi đây. Đừng đi đâu hết.”</p>
       <p>Bạn nghe tiếng dép bà xuống cầu thang, ra cửa sau, đi về phía vườn. Rồi không nghe gì nữa.</p>
       <p>Chung trà sen trước mặt bạn vẫn đầy. Bạn không uống.</p>

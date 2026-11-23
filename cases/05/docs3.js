@@ -16,7 +16,7 @@ export default [
     html: () => `
     <div class="doc doc--report">
       <div class="report-head">BỆNH VIỆN BẠCH MAI · VIỆN TIM MẠCH<br>GIẤY RA VIỆN (bản sao lưu ở trạm Cam Đường)</div>
-      <p>Họ tên: <b>PHẠM THỊ HẰNG</b>, 37 tuổi · Giáo viên · Cam Đường, Hoàng Liên Sơn.</p>
+      <p>Họ tên: PHẠM THỊ HẰNG, 37 tuổi · Giáo viên · Cam Đường, Hoàng Liên Sơn.</p>
       <p>Chẩn đoán: ${ln("ba_van", "hở van hai lá mức độ vừa, có cơn khó thở kịch phát về đêm.")}</p>
       <p>Dặn dò: ${ln("ba_thuoc", "luôn để thuốc trợ tim ngay đầu giường. Lên cơn khó thở ban đêm phải ngồi dậy, uống thuốc ngay; nếu không có thuốc, cơn có thể gây tử vong trong vòng một giờ.")}</p>
       <p>${ln("ba_mot", "Không nên ở nhà một mình qua đêm.")}</p>
@@ -75,8 +75,8 @@ export default [
     id: "so_tay_khai_2", stage: 4, kind: "Sổ tay", icon: "📓", label: "Sổ tay ông Khải, những trang tháng 12/1991",
     html: () => `
     <div class="doc doc--notebook">${hand(`
-      <p><b>22/12/1991.</b> ${ln("s2_dong", "Đông chí. Hai năm. Ngân không nhắc gì. Tôi cũng không. Chắc qua rồi.")}</p>
-      <p><b>26/12/1991.</b> ${ln("s2_than", "Ngân dặn mua than cho đêm mẹ khỏi bệnh. Mua 10 cân than hoa, cái lò mới, ba cuộn băng keo.")} Con vui lắm.</p>
+      <p>22/12/1991. ${ln("s2_dong", "Đông chí. Hai năm. Ngân không nhắc gì. Tôi cũng không. Chắc qua rồi.")}</p>
+      <p>26/12/1991. ${ln("s2_than", "Ngân dặn mua than cho đêm mẹ khỏi bệnh. Mua 10 cân than hoa, cái lò mới, ba cuộn băng keo.")} Con vui lắm.</p>
       <p>${ln("s2_hoi", "Đêm mẹ khỏi bệnh là đêm nào? Tôi không dám hỏi.")}</p>`)}
     </div>`,
   },
@@ -114,7 +114,7 @@ export default [
       <p class="small">Số to là ngày dương lịch. Số nhỏ bên dưới là ngày âm lịch; ngày mồng 1 có ghi tên tháng âm.</p>
       <table class="tbl cal">
         <tr><th>T2</th><th>T3</th><th>T4</th><th>T5</th><th>T6</th><th>T7</th><th>CN</th></tr>
-        ${LUNAR_1989.weeks.map((w) => `<tr>${w.map((d) => d ? `<td><b>${d.d}</b><small>${d.l === 1 ? `1/${d.m}` : d.l}</small>${d.note ? `<em>${d.note}</em>` : ""}</td>` : "<td></td>").join("")}</tr>`).join("")}
+        ${LUNAR_1989.weeks.map((w) => `<tr>${w.map((d) => d ? `<td>${d.d}<small>${d.l === 1 ? `1/${d.m}` : d.l}</small>${d.note ? `${d.note}` : ""}</td>` : "<td></td>").join("")}</tr>`).join("")}
       </table>
     </div>`,
   },

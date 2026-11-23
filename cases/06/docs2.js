@@ -23,9 +23,9 @@ export default [
     <div class="doc doc--plain">
       <div class="draft">
         <div class="draft-h">義 盛 昌 · NGHĨA THỊNH XƯƠNG · phân hiệu Hoè Âm</div>
-        <p>Bằng phiếu này, hiệu trả cho người cầm phiếu là <b>Ôn Tam</b>, xóm Bến Đò:</p>
+        <p>Bằng phiếu này, hiệu trả cho người cầm phiếu là Ôn Tam, xóm Bến Đò:</p>
         <p class="draft-code">${hv("巨", "?")}${hv("闕", "?")}${hv("柰", "?")} nguyên bạc</p>
-        <p>Lập năm <b>Dân Quốc thứ 25</b>, tháng <span class="draft-code">${hv("列", "?")}</span>, ngày <span class="draft-code">${hv("成", "?")}</span>.</p>
+        <p>Lập năm Dân Quốc thứ 25, tháng <span class="draft-code">${hv("列", "?")}</span>, ngày <span class="draft-code">${hv("成", "?")}</span>.</p>
         <p class="small">Người lập phiếu: ${hand("Triệu", "sign")} (chưởng quỹ) · Người đặt tiền: ${ln("hp_dat", "Tiết thị, tự đến quầy, trả bằng bạc trắng của mình")}.</p>
         ${stamp("密押<br>MẬT ÁP", "right:20px;top:18px")}
       </div>
@@ -38,8 +38,8 @@ export default [
     html: () => `
     <div class="doc doc--book">
       <div class="book-head">NGHĨA THỊNH XƯƠNG · MẬT ÁP · chỉ chưởng quỹ được xem · đổi khoá mỗi năm vào mồng Một Tết</div>
-      <p><b>Khoá năm Ất Hợi.</b> ${ln("ma_at", "Mở Thiên Tự Văn, bắt đầu đếm từ chữ thứ nhất: mười hai chữ đầu là mười hai tháng, ba mươi chữ kế tiếp là ba mươi ngày, mười chữ kế tiếp là chữ số một, hai, ba, …, chín, rồi không.")}</p>
-      <p><b>Khoá năm Bính Tý.</b> ${ln("ma_binh", "Như trên, nhưng bắt đầu đếm từ chữ thứ chín.")}</p>
+      <p>Khoá năm Ất Hợi. ${ln("ma_at", "Mở Thiên Tự Văn, bắt đầu đếm từ chữ thứ nhất: mười hai chữ đầu là mười hai tháng, ba mươi chữ kế tiếp là ba mươi ngày, mười chữ kế tiếp là chữ số một, hai, ba, …, chín, rồi không.")}</p>
+      <p>Khoá năm Bính Tý. ${ln("ma_binh", "Như trên, nhưng bắt đầu đếm từ chữ thứ chín.")}</p>
       <p class="small">Số tiền ghi bằng chữ số theo hàng: trăm, chục, đơn vị, viết liền. “Nguyên” là đồng bạc.</p>
       <p class="small muted">Hai trang kẹp chung, không trang nào ghi năm Dân Quốc.</p>
     </div>`,

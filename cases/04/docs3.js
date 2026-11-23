@@ -29,7 +29,7 @@ export default [
         <p>Sài Gòn, 12/6/1996</p>
         <p>${ln("t2_nau", "Dì nấu ăn khéo lắm, ngày nào cũng nấu cho mẹ. Mẹ dặn dì mẹ dị ứng tôm, dì nhớ kỹ lắm.")} Cuối tháng mẹ về. Mẹ thương con.</p>
         <p class="right">Mẹ</p>`)}
-      <p class="note">Thảo cất hai lá thư trong tủ. Thảo nói chưa từng nghe mẹ nhắc tới một người dì nào.</p>
+      <p class="note">Thảo cất hai lá thư trong tủ.</p>
     </div>`,
   },
 
@@ -46,11 +46,11 @@ export default [
         <li>${ln("gp_cho", "Thứ nữ Huệ, cho họ Phạm ở Sài Gòn, năm Ất Dậu (1945), lúc đói.")}</li>
       </ul>
       <p>Lê Thị Hoa lấy chồng họ Trần năm Ất Tỵ (1965), lên ở Đà Lạt. Con: Trần Ngọc Thảo (1972).</p>
-      <p class="small">Thư kèm của người o họ ở Đà Nẵng: <i>“Hai chị em giống nhau như hai giọt nước, mà một đứa ăn bằng tay trái, bà nội đánh hoài không sửa được.”</i></p>
+      <p class="small">Thư kèm của người o họ ở Đà Nẵng: “Hai chị em giống nhau như hai giọt nước, mà một đứa ăn bằng tay trái, bà nội đánh hoài không sửa được.”</p>
     </div>`,
   },
 
   tape("dem_3h", 3, "Máy ghi âm để trong phòng 7, đêm 19 rạng 20/10", "Y tá Sương đặt máy theo lời dặn của bác sĩ Vân. Cửa phòng khoá từ 21 giờ. Không ai được thăm đêm."),
-  tape("hoi_4", 3, "Băng: hỏi chuyện Thảo về người dì (20/10)", "Bác sĩ Vân hỏi Thảo về những lá thư."),
+  tape("hoi_4", 3, "Băng: hỏi chuyện Thảo (20/10)", "Bác sĩ Vân hỏi Thảo về những lá thư."),
   tranh(4, 3, "Tranh Thảo vẽ đêm 20/10", "Một người đàn bà áo dài tím đứng cuối giường, nốt nhạc bay ra từ miệng. Thảo vẽ mình đang ngủ, mỉm cười."),
 ];

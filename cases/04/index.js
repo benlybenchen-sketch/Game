@@ -55,7 +55,7 @@ export const META = {
   },
   finale: {
     html: `<h3>06:30 · Sáng 25/10/1996</h3>
-      <p>Bạn ký bản giám định: <b>Trần Ngọc Thảo có hội chứng Capgras đối với một số người quen, nhưng vẫn đủ năng lực hành vi dân sự. Lời khai của bệnh nhân về mẹ là sự thật.</b></p>
+      <p>Bạn ký bản giám định: Trần Ngọc Thảo có hội chứng Capgras đối với một số người quen, nhưng vẫn đủ năng lực hành vi dân sự. Lời khai của bệnh nhân về mẹ là sự thật.</p>
       <p>BS. Kha đọc rất lâu. Rồi ông ký bên dưới chữ ký của bạn, không nói gì.</p>
       <p>Chín giờ sáng, công an tới phòng thăm nuôi. Người phụ nữ áo len nâu đang ngồi chờ, tay ôm một hộp bánh mới. Khi thấy bạn, bà mỉm cười, lễ phép như mọi lần: “Chào bác sĩ.”</p>
       <p>Bà cầm cái nĩa bằng tay trái.</p>`,

@@ -8,8 +8,8 @@ import { boardArt } from "./art.js";
 export const contractHtml = (input = true) => `
   <div class="contract">
     <h3>GIAO KÈO</h3>
-    <p>Tôi, <b>Lâm Hạnh Dung</b>, sinh năm 1952, chủ biệt thự Bạch Lan số 9 đường Hàng Me, thuê
-      ${input ? `cháu <input data-sign maxlength="40" placeholder="tên của bạn" autocomplete="off">` : `cháu <b class="hand inline">${fullName() || "………………"}</b>`}
+    <p>Tôi, Lâm Hạnh Dung, sinh năm 1952, chủ biệt thự Bạch Lan số 9 đường Hàng Me, thuê
+      ${input ? `cháu <input data-sign maxlength="40" placeholder="tên của bạn" autocomplete="off">` : `cháu <span class="hand inline">${fullName() || "………………"}</span>`}
       đọc và giải các mật thư trong nhà, bảy đêm, từ ngày 7 đến ngày 13 tháng 11 năm 2004.</p>
     <ol>
       <li>Đêm nào cũng ngồi cầu cơ với tôi lúc 23 giờ, ở phòng khách tầng hai.</li>
@@ -27,8 +27,8 @@ export default [
     html: () => `
     <div class="doc doc--memo">
       ${contractHtml(false)}
-      <p class="right" style="margin-top:14px">Sài Gòn, ngày 7 tháng 11 năm 2004<br>${hand("Hạnh Dung", "sign fwd")}<b>Lâm Hạnh Dung</b></p>
-      <p class="right">${hand(fullName() || "(không ký tên)", "sign mine")}<b>Người nhận việc</b></p>
+      <p class="right" style="margin-top:14px">Sài Gòn, ngày 7 tháng 11 năm 2004<br>${hand("Hạnh Dung", "sign fwd")}Lâm Hạnh Dung</p>
+      <p class="right">${hand(fullName() || "(không ký tên)", "sign mine")}Người nhận việc</p>
       <div class="hand mine side-note">Ghi chú của tôi: bà Dung ký bằng tay phải, nét chữ ngả về phía trước. Bà đeo găng len dù trời không lạnh. Bà kẹp kèm bản sao chứng minh nhân dân “cho cháu yên tâm”.</div>
     </div>`,
   },
@@ -39,18 +39,18 @@ export default [
     <div class="doc doc--memo">
       <p>${callName().charAt(0).toUpperCase() + callName().slice(1)},</p>
       <p>Cháu đọc thư này khi bà đã đi ngủ. Bà già rồi, nói chuyện ba mươi ba năm trước bằng miệng thì không nổi, nên bà viết.</p>
-      <p>Năm 1971, bà mười chín tuổi, học Văn khoa. Bà với sáu người bạn lập ra <b>Thi văn đoàn Bạch Lan</b>, lấy theo tên cái nhà này,
-        nhà của bà trẻ bà là bà <b>Lâm Ngọc Diệp</b>. Bà trẻ mất đêm 13/11/1958, ngay trong phòng khách tầng hai, nơi bây giờ đặt bàn cơ.</p>
+      <p>Năm 1971, bà mười chín tuổi, học Văn khoa. Bà với sáu người bạn lập ra Thi văn đoàn Bạch Lan, lấy theo tên cái nhà này,
+        nhà của bà trẻ bà là bà Lâm Ngọc Diệp. Bà trẻ mất đêm 13/11/1958, ngay trong phòng khách tầng hai, nơi bây giờ đặt bàn cơ.</p>
       <p>Mùa thu năm đó, cả nhóm cầu cơ ở đây bảy tối thứ Bảy liền. Mỗi tối con cơ báo một người chết. Rồi người đó chết thật.</p>
       <table class="tbl">
         <tr><th>Người</th><th></th><th>Chết</th></tr>
-        <tr><td><b>Phạm Văn Tùng</b></td><td>trưởng nhóm, con ông trưởng ca điện báo Bưu điện Sài Gòn</td><td>2/10/1971, rơi từ ban công</td></tr>
-        <tr><td><b>Võ Thị Bạch Yến</b></td><td>làm thơ</td><td>9/10/1971, chết đuối ở hồ sen</td></tr>
-        <tr><td><b>Lưu Kiến Quốc</b></td><td>người Hoa Chợ Lớn, nhà có hiệu thuốc Bắc</td><td>16/10/1971, ngộ độc</td></tr>
-        <tr><td><b>Đoàn Minh Khiêm</b></td><td>thuộc Kiều làu làu</td><td>23/10/1971, thắt cổ ở cầu thang</td></tr>
-        <tr><td><b>Trịnh Bảo Nghi</b></td><td>út, có đạo</td><td>30/10/1971, ngã cầu thang gác</td></tr>
-        <tr><td><b>Hà Ngọc Lan</b></td><td>bạn thân nhất của bà, gốc Huế, ở nhờ nhà bà</td><td>6/11/1971, chết cháy trên gác thượng</td></tr>
-        <tr><td><b>Lâm Hạnh Dung</b></td><td>là bà đây</td><td>còn sống</td></tr>
+        <tr><td>Phạm Văn Tùng</td><td>trưởng nhóm, con ông trưởng ca điện báo Bưu điện Sài Gòn</td><td>2/10/1971, rơi từ ban công</td></tr>
+        <tr><td>Võ Thị Bạch Yến</td><td>làm thơ</td><td>9/10/1971, chết đuối ở hồ sen</td></tr>
+        <tr><td>Lưu Kiến Quốc</td><td>người Hoa Chợ Lớn, nhà có hiệu thuốc Bắc</td><td>16/10/1971, ngộ độc</td></tr>
+        <tr><td>Đoàn Minh Khiêm</td><td>thuộc Kiều làu làu</td><td>23/10/1971, thắt cổ ở cầu thang</td></tr>
+        <tr><td>Trịnh Bảo Nghi</td><td>út, có đạo</td><td>30/10/1971, ngã cầu thang gác</td></tr>
+        <tr><td>Hà Ngọc Lan</td><td>bạn thân nhất của bà, gốc Huế, ở nhờ nhà bà</td><td>6/11/1971, chết cháy trên gác thượng</td></tr>
+        <tr><td>Lâm Hạnh Dung</td><td>là bà đây</td><td>còn sống</td></tr>
       </table>
       <p>Cảnh sát nói tai nạn, tự tử. Người ta nói bà Diệp bắt. Bà không biết tin ai.</p>
       <p>Từ năm 1971, cứ đêm 13 tháng 11, con cơ trong nhà này lại tự chạy, ra một chuỗi quẻ mà bà không đọc được.
@@ -67,10 +67,10 @@ export default [
     html: () => `
     <div class="doc doc--plain">
       <div class="idcard id-vn">
-        <div class="id-head">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM<br><b>GIẤY CHỨNG MINH NHÂN DÂN</b></div>
+        <div class="id-head">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM<br>GIẤY CHỨNG MINH NHÂN DÂN</div>
         <div class="id-photo">ảnh 3×4<br>(bản sao mờ)</div>
         <div class="id-body">
-          <p>Số: 02013xxxx</p><p>Họ tên: <b>LÂM HẠNH DUNG</b></p><p>Sinh ngày: 14-2-1952</p>
+          <p>Số: 02013xxxx</p><p>Họ tên: LÂM HẠNH DUNG</p><p>Sinh ngày: 14-2-1952</p>
           <p>Nguyên quán: Sài Gòn</p><p>Nơi ĐKHK thường trú: 9 Hàng Me, Q.1</p>
         </div>
         <div class="id-back">
@@ -88,7 +88,7 @@ export default [
     id: "so_tung", stage: 0, kind: "Sổ tay", icon: "📓", label: "Sổ của Tùng: bảng mã điện báo, Morse, cách ngồi cơ",
     html: () => `
     <div class="doc doc--notebook">
-      <p class="note">Cuốn sổ bìa vải xanh, trang đầu đề: <i>“Phạm Văn Tùng · Văn khoa · Sổ cơ của Thi văn đoàn Bạch Lan”</i>. Các trang sau do nhiều người ghi tiếp.</p>
+      <p class="note">Cuốn sổ bìa vải xanh, trang đầu đề: “Phạm Văn Tùng · Văn khoa · Sổ cơ của Thi văn đoàn Bạch Lan”. Các trang sau do nhiều người ghi tiếp.</p>
       <h4>1. Bảng mã điện báo (ba tôi dạy, Bưu điện dùng để đánh điện tín tiếng Việt)</h4>
       ${hand(`Máy điện báo và bàn cơ của mình đều chỉ có 26 chữ cái Tây. Chữ có dấu thì đánh thêm chữ:`)}
       <table class="tbl tbl--code">
@@ -99,13 +99,13 @@ export default [
         <tr><th>Dấu</th><td>sắc</td><td>huyền</td><td>hỏi</td><td>ngã</td><td>nặng</td></tr>
         <tr><th>Đánh</th><td>S</td><td>F</td><td>R</td><td>X</td><td>J</td></tr>
       </table>
-      ${hand(`Dấu thanh luôn đánh ở <u>cuối chữ</u>. Thí dụ: “Sài Gòn” → <b>SAIF GOFN</b>. “Bạch Lan” → <b>BACHJ LAN</b>. “Thư” → <b>THUW</b>.`)}
+      ${hand(`Dấu thanh luôn đánh ở cuối chữ. Thí dụ: “Sài Gòn” → SAIF GOFN. “Bạch Lan” → BACHJ LAN. “Thư” → THUW.`)}
       <h4>2. Morse (cho tụi bây chơi gõ cửa)</h4>
-      <div class="morse-grid">${Object.entries(MORSE).slice(0, 26).map(([k, v]) => `<span><b>${k}</b> ${v.replace(/\./g, "·").replace(/-/g, "—")}</span>`).join("")}</div>
+      <div class="morse-grid">${Object.entries(MORSE).slice(0, 26).map(([k, v]) => `<span>${k} ${v.replace(/\./g, "·").replace(/-/g, "—")}</span>`).join("")}</div>
       ${hand(`Chấm là gõ ngắn, gạch là gõ dài. Giữa hai chữ cái nghỉ một nhịp, giữa hai chữ nghỉ lâu hơn. Chữ có dấu thì cũng gõ theo kiểu điện báo ở trên.`)}
       ${media("morsepad", "pad")}
       <h4>3. Cách ngồi cơ</h4>
-      ${hand(`Bảy người ngồi quanh bàn tròn. <b>Tay chủ</b> là người ngồi đầu bàn, quay lưng ra ban công, đặt ngón tay lên chén trước tiên và khấn. Con cơ đi theo tay chủ.
+      ${hand(`Bảy người ngồi quanh bàn tròn. Tay chủ là người ngồi đầu bàn, quay lưng ra ban công, đặt ngón tay lên chén trước tiên và khấn. Con cơ đi theo tay chủ.
         Người ghi sổ ngồi cuối bàn, chép từng chữ con cơ dừng. Máy ghi âm Akai của tôi để giữa bàn, micro dựng ngay trên mặt bàn.`)}
     </div>`,
   },
@@ -114,7 +114,7 @@ export default [
     id: "bien_ban_1", stage: 0, kind: "Sổ cơ", icon: "📓", label: "Sổ cơ · buổi 1 · 2/10/1971 (Tùng ghi)",
     html: () => `
     <div class="doc doc--notebook">
-      ${hand(`<b>Buổi cơ thứ nhất.</b> Thứ Bảy 2/10/1971, 21 giờ. Phòng khách tầng hai, nhà bà Diệp.<br>
+      ${hand(`Buổi cơ thứ nhất. Thứ Bảy 2/10/1971, 21 giờ. Phòng khách tầng hai, nhà bà Diệp.<br>
         Ngồi (theo chiều kim đồng hồ, từ đầu bàn): Lan, Dung, Yến, Khiêm, Nghi, Quốc, Tùng (ghi sổ). Tay chủ: như mọi khi.<br>
         Yến khấn mời bà Diệp. Chén chạy sau chừng năm phút.`)}
       ${hand(`Chữ con cơ dừng: <span class="code-line">T U N G F &nbsp; R O W I</span>`)}
@@ -122,7 +122,7 @@ export default [
         Băng cối có ghi lại buổi này (cuộn số 1).<br>
         21 giờ 50: tôi ra ban công hút thuốc.`)}
       <p class="note">Hàng chữ cuối cùng viết bằng một nét khác, nghiêng về phía trước, mực xanh đậm hơn:</p>
-      ${hand(`<i>23 giờ 10. Lan can ban công gãy. Anh Tùng rơi xuống sân gạch. Chết trước khi xe cứu thương tới.</i>`, "fwd")}
+      ${hand(`23 giờ 10. Lan can ban công gãy. Anh Tùng rơi xuống sân gạch. Chết trước khi xe cứu thương tới.`, "fwd")}
     </div>`,
   },
 
@@ -141,7 +141,7 @@ export default [
     <div class="doc doc--diary">
       <p class="note">Cuốn nhật ký bìa da đỏ, bà Dung đưa ra mỗi tối và cất vào tủ trước khi đi ngủ. “Nhật ký của bà hồi con gái. Cháu đọc thì đọc, đừng cười.”</p>
       <div class="diary">${diaryHtml(diaryNow())}</div>
-      <p class="note">Mép trang có vài chữ tiếng Pháp: <i>“Ma tante Diệp disait : celle qui lit le miroir garde la clé.”</i></p>
+      <p class="note">Mép trang có vài chữ tiếng Pháp: “Ma tante Diệp disait : celle qui lit le miroir garde la clé.”</p>
     </div>`,
   },
 
@@ -160,7 +160,7 @@ export default [
     html: () => `
     <div class="doc doc--plain">
       ${pic("anh_nhom", "Trước cổng biệt thự Bạch Lan, tháng 9/1971. Mặt sau ghi: “Đủ bảy đứa. Dung ký sổ khách, Lan đứng sát bên.”")}
-      <p class="note">Ảnh màu đã phai, mép trái bị cháy sém. Một cô gái tóc dài, áo dài xanh lục nhạt, cúi ký vào cuốn sổ đặt trên trụ cổng, cây bút cầm ở tay trái. Cô gái áo bà ba hoa tím đứng sát sau lưng, đặt tay lên vai cô ta, giống cô ta tới mức bạn phải nhìn hai lần. Cô ấy không nhìn ống kính. Cô ấy nhìn người đang ký.</p>
+      <p class="note">Ảnh màu đã phai, mép trái bị cháy sém. Một cô gái tóc dài, áo dài xanh lục nhạt, cúi ký vào cuốn sổ đặt trên trụ cổng, cây bút cầm ở tay trái. Cô gái áo bà ba hoa tím đứng sát sau lưng, đặt tay lên vai cô ta, tóc cũng dài, dáng cũng mảnh. Cô ấy không nhìn ống kính. Cô ấy nhìn người đang ký.</p>
     </div>`,
   },
 

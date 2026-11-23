@@ -66,6 +66,10 @@ Người chơi chê hồ sơ 01 "dễ đoán". Hồ sơ 02–05 đã được l�
 9. **Tài liệu không giải thích luôn cách giải.** Nói quy tắc ngắn gọn như người trong truyện vẫn nói; không thêm câu "đừng nhầm chỗ này", "nghĩa là…". Cách giải chi tiết để trong gợi ý.
 10. **Nhãn câu hỏi không được trả lời thay câu hỏi** (ví dụ hỏi "chết trước hay sau" thì nhãn không được ghi "câu chứng minh chết trước"; tên trọng điểm không được là đáp án).
 11. **Chế độ nghiêm (`META.strict: true`, bắt buộc từ 02 trở đi):** không báo "đúng x/y mục"; nộp sai thì niêm phong 20 giây, 45 giây, 90 giây, 150 giây, 240 giây; gợi ý mở sau 2 lần sai, lời giải sau 4 lần; cuối hồ sơ chấm hạng S/A/B/C/D (sai 1 điểm, gợi ý 2 điểm, xem giải 5 điểm); kết thúc ẩn chỉ mở khi không sai, không gợi ý, không xem giải.
+12. **Không in đậm, gạch chân, in nghiêng gì trong tài liệu** (kể cả tên, ngày giờ). Không dùng ngoặc kép mỉa mai báo trước sự thật (“bà Hoa”, “của cô Hằng”, “Dung” ghi).
+13. **Tên trọng điểm và tên tài liệu không được chứa đáp án** hay chỉ hướng (ví dụ "Tùng rơi", "Soi gương", "hỏi chuyện về người dì", "bản đủ 3.254 câu").
+14. **Câu bấm phải có mồi:** tài liệu chứa câu đáp án phải có ít nhất 5 câu bấm được, phần lớn là câu nhiễu nghe hợp lý.
+15. **Lời nhắn giữa các trọng điểm** chỉ được tóm điều đã giải, không được nói trước đáp án trọng điểm kế tiếp.
 
 ## Quy tắc âm thanh và cảnh doạ (áp dụng cho mọi hồ sơ từ nay về sau)
 - Mọi hiệu ứng âm thanh đi qua bus `fx` trong `js/audio.js` (khuếch đại lớn, có limiter): luôn ở mức tối đa mà không vỡ tiếng. Hiệu ứng mới chỉ cần gọi `tone`/`noiseHit`/`sfx.*` là tự to.

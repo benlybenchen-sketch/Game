@@ -19,16 +19,16 @@ export default [
     id: "loi_dan", stage: 0, kind: "Thư", icon: "✉", label: "Lời dặn của BS. Kha cho bác sĩ mới",
     html: () => `
     <div class="doc doc--memo">
-      <div class="memo-head"><b>BỆNH VIỆN TÂM THẦN CAM LY</b> · Khoa Nữ 2 · Đà Lạt</div>
+      <div class="memo-head">BỆNH VIỆN TÂM THẦN CAM LY · Khoa Nữ 2 · Đà Lạt</div>
       ${pic("benh_vien", "Bệnh viện Tâm thần Cam Ly, tháng 10/1996.")}
       <p>Bác sĩ Vân,</p>
-      <p>Chào mừng cô về khoa. Từ đêm nay cô điều trị chính cho <b>phòng 7: Trần Ngọc Thảo</b>, 24 tuổi.</p>
-      <p>Ca này không khó về chuyên môn. Bệnh nhân bị <b>hội chứng Capgras</b> sau chấn thương sọ não: tin rằng mẹ mình đã bị một người giống hệt thay thế.
+      <p>Chào mừng cô về khoa. Từ đêm nay cô điều trị chính cho phòng 7: Trần Ngọc Thảo, 24 tuổi.</p>
+      <p>Ca này không khó về chuyên môn. Bệnh nhân bị hội chứng Capgras sau chấn thương sọ não: tin rằng mẹ mình đã bị một người giống hệt thay thế.
         Bà mẹ, bà Lê Thị Hoa, rất tội nghiệp. Tuần nào cũng vào thăm, mang bánh, khóc ở phòng thăm nuôi.</p>
       <p>Việc gấp: ngày 2/9 bà Hoa đã nộp đơn ra toà xin tuyên bố Thảo mất năng lực hành vi dân sự để làm người giám hộ.
         Toà mở phiên ngày 28/10 và chờ bản giám định pháp y tâm thần của khoa. Người ký với tư cách bác sĩ điều trị là cô. Hạn nộp: sáng 25/10.</p>
       <p>Một lời khuyên: bệnh nhân này hoang tưởng chi tiết hoá. Nó sẽ kể cho cô nghe đủ thứ chi tiết rất thuyết phục. Đừng sa vào.</p>
-      <p class="right">${hand("Kha", "sign")}<b>BS. CKII Đặng Quốc Kha</b><br>Trưởng khoa Nữ 2</p>
+      <p class="right">${hand("Kha", "sign")}BS. CKII Đặng Quốc Kha<br>Trưởng khoa Nữ 2</p>
     </div>`,
   },
 
@@ -37,8 +37,8 @@ export default [
     html: () => `
     <div class="doc doc--report">
       <div class="report-head">SỞ Y TẾ LÂM ĐỒNG · BỆNH VIỆN TÂM THẦN CAM LY<br>BỆNH ÁN NỘI TRÚ · Số 96/312</div>
-      <p>Họ tên: <b>TRẦN NGỌC THẢO</b> · Nữ · Sinh 1972 · Nghề: bán hoa, chợ Đà Lạt · Địa chỉ: nhà bà Lê Thị Hoa, đường Phan Đình Phùng, Đà Lạt.</p>
-      <p>Vào viện: 9 giờ ngày 20/8/1996. Người đưa vào: mẹ ruột <b>Lê Thị Hoa</b>, 52 tuổi.</p>
+      <p>Họ tên: TRẦN NGỌC THẢO · Nữ · Sinh 1972 · Nghề: bán hoa, chợ Đà Lạt · Địa chỉ: nhà bà Lê Thị Hoa, đường Phan Đình Phùng, Đà Lạt.</p>
+      <p>Vào viện: 9 giờ ngày 20/8/1996. Người đưa vào: mẹ ruột Lê Thị Hoa, 52 tuổi.</p>
       <h4>Lý do vào viện (mẹ khai)</h4>
       <p>${ln("ba_ve", "Bà Hoa đi Sài Gòn thăm họ hàng từ 2/4/1996, về Đà Lạt ngày 5/7/1996.")} ${ln("ba_ngay", "Ngay tối 5/7, con gái nhìn bà rồi hét “bà không phải mẹ”, từ đó không cho mẹ lại gần.")}
         ${ln("ba_cho", "Ngày 9/8 con chó của nhà chết, bệnh nhân khóc, đập phá, nói “bà giết con Mực”.")}</p>
@@ -48,7 +48,7 @@ export default [
       <h4>Khám</h4>
       <p>Tỉnh, tiếp xúc được, định hướng không gian thời gian tốt. Khí sắc lo âu. Hoang tưởng bị thay thế đối với mẹ, nội dung rất chi tiết. Không ảo thanh.</p>
       <h4>Chẩn đoán</h4>
-      <p><b>${ln("cd", "Hội chứng Capgras sau chấn thương sọ não (F06.2)")}</b></p>
+      <p>${ln("cd", "Hội chứng Capgras sau chấn thương sọ não (F06.2)")}</p>
       <p>Y lệnh: Haloperidol 5 mg × 2 lần/ngày. Cách ly phòng 7. Thăm nuôi có giám sát và ghi âm (phục vụ giám định).</p>
       <p class="right">BS. Đặng Quốc Kha</p>
       ${stamp("ĐÃ DUYỆT", "right:28px;top:60px", "blue")}
@@ -90,7 +90,7 @@ export default [
       <p>Con tôi bị bệnh tâm thần sau tai nạn, không nhận ra mẹ, không tự lo được cho bản thân, đang điều trị tại Bệnh viện Tâm thần Cam Ly.</p>
       <p>${ln("dt_ts", "Con tôi đứng tên căn nhà và vườn hoa 2.000 m² ở Trại Mát do cha cháu để lại. Hiện có người hỏi mua, cần người đứng ra giao dịch.")}</p>
       <p>Tôi kính đề nghị Toà tuyên bố con tôi mất năng lực hành vi dân sự và cử tôi làm người giám hộ.</p>
-      <p class="right">Đà Lạt, ngày 2 tháng 9 năm 1996<br><i>(điểm chỉ)</i></p>
+      <p class="right">Đà Lạt, ngày 2 tháng 9 năm 1996<br>(điểm chỉ)</p>
       ${stamp("TOÀ ĐÃ NHẬN · phiên 28/10", "right:20px;bottom:24px", "red")}
     </div>`,
   },
@@ -112,7 +112,7 @@ export default [
   {
     id: "anh_tet", stage: 0, kind: "Ảnh", icon: "🖼", label: "Ảnh Tết 1990 Thảo giữ trong ví",
     html: () => `<div class="doc doc--plain">${pic("tet_1990", "Tết Canh Ngọ 1990. Bà Hoa áo dài tím, Thảo 18 tuổi, con Mực.")}
-      <p class="note">Mặt sau ảnh, nét chữ Thảo: <i>“Mẹ với con với Mực. Đừng bao giờ đổi.”</i></p></div>`,
+      <p class="note">Mặt sau ảnh, nét chữ Thảo: “Mẹ với con với Mực. Đừng bao giờ đổi.”</p></div>`,
   },
   tape("tet90", 0, "Băng cassette Tết 1990 của nhà Thảo", "Cuộn băng Thảo xin đem theo vào viện. Khoa giữ trong tủ đồ cá nhân."),
   {
