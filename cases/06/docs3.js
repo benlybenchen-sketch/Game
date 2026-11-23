@@ -38,7 +38,8 @@ export default [
         <li>Người chèo đò: chai ở gốc các ngón, hai tay như nhau.</li>
         <li>Thợ rèn: lòng bàn tay có sẹo bỏng; chai dày ở hổ khẩu (chỗ giữa ngón cái và ngón trỏ).</li>
         <li>Tá điền: chai đều khắp lòng bàn tay, móng có đất.</li>
-        <li>Phu dắt la: tay trái quấn dây cương nên có vệt chai hằn chéo lòng bàn tay; tay phải cầm roi, chai cạnh bàn tay.</li>
+        <li>Phu kéo thuyền: dây kéo vắt qua vai, hai lòng bàn tay đều có chai hằn chéo, vai có vết hằn dây.</li>
+        <li>Phu dắt la: bàn tay nắm dây cương có vệt chai hằn chéo lòng bàn tay; bàn tay cầm roi chai ở cạnh ngoài.</li>
         <li>Người đọc sách: tay mềm; ngón giữa tay phải, đốt đầu, có chai bút.</li>
       </ul>
     </div>`,
@@ -51,7 +52,7 @@ export default [
       <p class="right">Thái Nguyên, ngày 13 tháng Bảy</p>
       <p>Hoài Đức huynh,</p>
       <p>Nghe tin Thừa Tự mất, tôi không tin. Đứa trò tôi dạy mười năm, sợ nước như sợ cọp, chưa bao giờ dám xuống bến đò một mình, sao lại chết đuối?</p>
-      <p>${ln("td_tay", "Nó viết cả ngày, ngón giữa tay phải chai cứng như hạt đậu. Bàn tay nó trắng mềm, chưa cầm một cái cuốc.")} Người ta nói nó mặc áo trường sam xanh: đúng cái áo tôi may tặng năm ngoái, may vừa người nó, nó gầy lắm.</p>
+      <p>${ln("td_tay", "Nó viết cả ngày, chữ đẹp nhất lớp. Nhà ấy chưa bắt nó làm một việc nặng nào.")} Người ta nói nó mặc áo trường sam xanh: đúng cái áo tôi may tặng năm ngoái, may vừa người nó, nó gầy lắm.</p>
       <p>Tôi xin huynh cho tôi xem mặt nó lần cuối.</p>
       <p class="right">${hand("Kiều", "sign")}Kiều Bá Văn</p>
       <p class="small muted">Thư không có hồi âm. Lưu Phúc ghi ở góc: “Phu nhân dặn: không trả lời.”</p>
@@ -74,7 +75,7 @@ export default [
       ${hand(`<p>“Tôi ba mươi năm khám xác. Cậu đọc phiếu tôi thì biết tôi biết gì.”</p>
         <p>“Lão gia quỳ xuống xin tôi đừng mổ. Phu nhân không quỳ. Phu nhân đứng sau lưng tôi, nói khẽ: ông ghi chết đuối thì ông về nhà ăn cơm.”</p>
         <p>“Tôi ghi theo lời gia chủ. Từng chữ trong phiếu là thật, chỉ có dòng kết luận là của người ta.”</p>
-        <p>“Cái áo xanh ấy, xác mặc chật ở vai, rộng ở bụng. Người mặc không phải người được may cho.”</p>`)}
+        <p>“Cái áo xanh ấy, lúc khâm liệm phải rạch đường may vai mới cởi ra được.”</p>`)}
     </div>`,
   },
 ];

@@ -5,7 +5,7 @@ const T = {
   "03": [["q4","who","Ông Bảy gác dan, người giữ chìa khóa nhà"],["q6","proof","kn_khi"],["q6","proof","kn_nhan"],["q6","body","Hà Ngọc Lan"],["q5","book","Cuốn chú giải của Khiêm, bản 3.254 câu"]],
   "04": [["q1","gap","140"],["q2","phone","7/9"],["q3","ring","30"],["q3","dish","Cháo tôm"],["q3","dog","Không ai: con Mực ăn phải bả chuột"],["q4","where","Cần Thơ"],["q5","seo","Ngược bên với bà Hoa năm 1990"],["q5","kind","Em sinh đôi cùng trứng, giống y hệt cùng bên"],["q6","nangluc","Hạn chế năng lực hành vi dân sự"],["q6","loikhai","Một phần đúng, một phần hoang tưởng"],["q6","cause","Đột quỵ do cao huyết áp"]],
   "05": [["q5","o","Trên tàu đêm Lào Cai đi Hà Nội"],["q5","ngu","Chỉ cháu Ngân"],["q6","than2","0"],["q6","loi","Qua cửa sổ gian giữa, gỡ một song gỗ"],["q5","am","25/1"],["q3","loi","chăm"],["q4","cham","Mẹ ơi lấy thuốc cho con"]],
-  "06": [["q1","who","Không khớp ai trong hồ sơ"],["q1","tru","Trụ năm"],["q2","gia","4000"],["q2","hoan","40"],["q3","ngay","8"],["q3","thang","11"],["q4","nghe","Người chèo đò"],["q4","chet","ng_bung"],["q5","vai","Vị hôn thê"],["q6","sinh","6/4/1917"],["q6","chu","tân sở"],["q6","an","Con trai Triệu Hoài Nghĩa"]],
+  "06": [["q1","who","Không khớp ai trong hồ sơ"],["q1","tru","Trụ năm"],["q2","gia","4000"],["q2","hoan","40"],["q3","ngay","8"],["q3","thang","11"],["q4","nghe","Người chèo đò"],["q4","nghe","Phu kéo thuyền"],["q4","chet","ng_bung"],["q5","vai","Vị hôn thê"],["q6","sinh","6/4/1917"],["q6","chu","tân sở"],["q6","an","Con trai Triệu Hoài Nghĩa"]],
 };
 let bad = 0;
 for (const [id, list] of Object.entries(T)) {

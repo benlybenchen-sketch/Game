@@ -171,3 +171,12 @@ Hai **ống đĩa sáp** (máy hát Edison thầy Khâu mượn của một nhà
 - *Khóc gả* (Tú Nương hát đêm 14): lời khóc gọi **"anh ơi"**, không gọi chồng. Trên phổ đồ giấu chữ "THẠCH".
 - *Đông viện, đêm Rằm* (thầy Khâu thu ngoài cửa Đông viện): giọng con trai yếu ớt gọi "Tú Nương… đừng uống…", tiếng phụ nữ ru, tiếng xích sắt.
 Giọng tạo bằng GenMax như các hồ sơ trước; khi chưa có giọng, băng chạy bằng chữ.
+
+## Rà lộ đáp án (bản 2, sau khi người chơi chê hồ sơ 02 "dễ thở")
+Các chỗ đã sửa để người chơi phải tự ghép, không được dò chữ:
+- Ôn Lão Tam (giai đoạn 2) không còn tả tay Thạch hay nói thẳng "dắt la", "chỉ đỏ cổ tay trái". Chỉ còn: "theo nghề tôi từ năm mười hai tuổi" (khế ước ghi Ôn Tam là phu la) và "Tú Nương buộc buộc cái gì vào tay anh nó".
+- Tẩy Oan Tập Lục không còn ghi tay trái, tay phải cho phu dắt la; thêm nghề bẫy "phu kéo thuyền" (chai cả hai lòng bàn tay) và thêm vào lựa chọn.
+- Dấu chai bút của Thừa Tự chỉ còn trong lời Thuý Nhi lần 1 (giai đoạn 1); thư thầy đồ không tả ngón tay nữa. Ngỗ tác Mã không kết luận về cái áo.
+- Tự điển bộ thủ không còn cột "ghép từ"; người chơi tự nhìn chữ để tách bộ. Thêm chữ bẫy 防 (cũng đọc "phòng"), 斧, 近, 坊, 芳.
+- Bỏ các câu kết luận hộ: "người gọi tên không ở dưới đất", "Không phải hồn", "Người chết thì ăn cơm làm gì?", "Phủ Triệu làm gì có ai nghiện?", lời Thuý Nhi "sinh cùng ngày, khác giờ, cùng mệnh".
+- Trọng điểm 6 đổi tên "Chiết tự"; thư mục và lời giới thiệu không còn chữ "tân phòng".

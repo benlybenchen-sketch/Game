@@ -140,7 +140,6 @@ export default [
         <tr><td>${ln("sh_thuy", "Thuý Nhi")}</td><td>hầu phòng cậu chủ</td><td>${ln("sh_thuy_sinh", "giờ Ngọ ngày 23 tháng Chạp năm Kỷ Mùi")}</td><td>Dân Quốc năm 20</td></tr>
         <tr><td>Ôn Tú Nương</td><td>hầu phu nhân</td><td>(xem khế ước)</td><td>mồng 8 tháng Bảy năm nay</td></tr>
       </table>
-      <p class="small muted">Thuý Nhi nói với bạn: “Con với chị Tú Nương sinh cùng một ngày, bà đỡ còn nhớ. Chị ấy sinh lúc gà gáy, con sinh lúc trưa. Phu nhân bảo hai đứa cùng mệnh.”</p>
     </div>`,
   },
 

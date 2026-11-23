@@ -70,7 +70,7 @@ export const QUESTIONS = [
     ask: "Theo Tẩy Oan Tập Lục, người trong quan tài chết trước hay sau khi xuống nước: bấm câu chứng minh trong phiếu khám. Người ấy làm nghề gì? Người ấy có phải Triệu Thừa Tự không? Bấm câu quyết định điều đó.",
     parts: [
       { id: "chet", type: "line", label: "Câu trong phiếu khám quyết định người này chết trước hay sau khi xuống nước (bấm vào câu đó)" },
-      { id: "nghe", type: "choice", label: "Người trong quan tài làm nghề", options: ["Người đọc sách", "Người chèo đò", "Thợ rèn", "Tá điền", "Phu dắt la"] },
+      { id: "nghe", type: "choice", label: "Người trong quan tài làm nghề", options: ["Người đọc sách", "Người chèo đò", "Phu kéo thuyền", "Thợ rèn", "Tá điền", "Phu dắt la"] },
       { id: "khong", type: "line", label: "Câu trong phiếu khám cho biết người này có phải Triệu Thừa Tự hay không (bấm vào câu đó)" },
       pins(),
     ],

@@ -5,10 +5,10 @@ import { tape, hv } from "./docs0.js";
 
 /** Characters and the parts they are built from (some are decoys). */
 const PARTS = [
-  ["新", "tân (mới)", "亲 + 斤 (亲 lại là 立 trên 木)"], ["亲", "thân (người thân)", "立 trên 木"], ["析", "tích (chẻ ra)", "木 + 斤"],
-  ["房", "phòng (buồng)", "户 trên 方"], ["所", "sở (chỗ)", "户 + 斤"], ["旁", "bàng (bên cạnh)", "phần trên + 方"],
-  ["扇", "phiến (cánh quạt)", "户 trên 羽"], ["棺", "quan (quan tài)", "木 + 官"], ["婚", "hôn (cưới)", "女 + 昏"],
-  ["姻", "nhân (thông gia)", "女 + 因"], ["喜", "hỉ (mừng)", "吉 trên 豆 (biến thể)"], ["休", "hưu (nghỉ)", "亻 + 木"],
+  ["斧", "phủ (cái rìu)"], ["亲", "thân (người thân)"], ["防", "phòng (đề phòng)"], ["析", "tích (chẻ ra)"],
+  ["棺", "quan (quan tài)"], ["所", "sở (chỗ)"], ["新", "tân (mới)"], ["坊", "phường (phường, xóm)"],
+  ["扇", "phiến (cánh quạt)"], ["近", "cận (gần)"], ["旁", "bàng (bên cạnh)"], ["婚", "hôn (cưới)"],
+  ["房", "phòng (buồng)"], ["芳", "phương (thơm)"], ["休", "hưu (nghỉ)"], ["姻", "nhân (thông gia)"],
 ];
 const P1 = [["立", "lập: đứng"], ["木", "mộc: cây"], ["斤", "cân: lưỡi rìu"], ["户", "hộ: cánh cửa một cánh"], ["方", "phương: phương, hướng"]];
 
@@ -18,7 +18,7 @@ export default [
     html: () => `
     <div class="doc doc--notebook">
       ${hand(`<p>Đêm Rằm. Buồn ngủ quá. Mắt mở không lên.</p>
-        <p>Nếu tôi không dậy được, Đình nhớ: người đang gọi tên con bé không ở dưới đất.</p>
+        <p>Nếu tôi không dậy được, Đình nhớ lấy mấy dòng này.</p>
         <p>Tôi không dám viết thẳng. Nhà ấy có người đọc được chữ. Đình là học trò tôi, Đình giải được:</p>
         <p class="riddle">“${ln("kc_1", "Người đứng trên cây, cây tựa lưỡi rìu.")}<br>${ln("kc_2", "Dưới một cánh cửa, có một phương.")}”</p>
         <p>Hai chữ. Ghép lại là chỗ cần mở.</p>`, "shaky")}
@@ -29,9 +29,9 @@ export default [
     id: "tu_dien", stage: 5, kind: "Sách", icon: "📖", label: "Tự điển bộ thủ (trang thầy Khâu đánh dấu)",
     html: () => `
     <div class="doc doc--book">
-      <div class="book-head">BỘ THỦ GIẢN YẾU · chữ Hán là ghép từ các phần nhỏ</div>
+      <div class="book-head">BỘ THỦ GIẢN YẾU · trang thầy Khâu gấp góc</div>
       <p>Các phần: ${P1.map(([h, v]) => `${hv(h, v.split(":")[0])} <span class="small">(${v})</span>`).join(" · ")}</p>
-      <table class="tbl">${PARTS.map(([h, v, p]) => `<tr><td class="han">${h}</td><td>${v}</td><td>${p}</td></tr>`).join("")}</table>
+      <table class="tbl">${PARTS.map(([h, v]) => `<tr><td class="han">${h}</td><td>${v}</td></tr>`).join("")}</table>
     </div>`,
   },
 
@@ -117,7 +117,7 @@ export default [
         <tr><td>15</td><td>Lưu Phúc, phủ Triệu</td><td>nha phiến cao, 1 lạng</td><td>“hết rồi”</td></tr>
         <tr><td>20</td><td>${ln("hx_phuc_2", "Lưu Phúc, phủ Triệu")}</td><td>${ln("hx_tin", "thạch tín (phê sương), 2 tiền")}</td><td>“bẫy chuột kho thóc”</td></tr>
       </table>
-      <p class="small muted">Chủ hiệu nói thêm: “Một lạng nha phiến là đủ cho một người nghiện nặng hút cả tháng. Phủ Triệu làm gì có ai nghiện?”</p>
+      <p class="small muted">Chủ hiệu nói thêm: “Một lạng nha phiến là đủ cho một người nghiện nặng hút cả tháng.”</p>
     </div>`,
   },
 
@@ -125,12 +125,12 @@ export default [
     id: "gac_dem", stage: 5, kind: "Lời kể", icon: "✍", label: "Lão Vương gác đêm của phủ",
     html: () => `
     <div class="doc doc--memo">
-      ${hand(`<p>“Đông viện á? Từ mồng 8, đêm nào phu nhân cũng tự tay mang một khay cơm vào, khoá cửa lại, ra một mình. Người chết thì ăn cơm làm gì?”</p>
+      ${hand(`<p>“Đông viện á? Từ mồng 8, đêm nào phu nhân cũng tự tay mang một khay cơm vào, khoá cửa lại, ra một mình.”</p>
         <p>“Có đêm tôi nghe tiếng xích kéo trên sàn gỗ.”</p>
         <p>“Mùi trong ấy ngọt ngọt, khét khét. Giống mùi tiệm hút ngoài chợ.”</p>`)}
       ${pic("dong_vien", "Cửa Đông viện: khoá đồng, dán ba lá bùa vàng, chân cửa có vệt sáng đèn dầu.")}
     </div>`,
   },
 
-  tape("dong_vien", 5, "Ống đĩa sáp số 2 · hiên Đông viện, chiều Rằm tháng Bảy", "Ống cuối cùng thầy Khâu thu, đặt loa máy hát sát khe cửa Đông viện. Thầy dán nhãn bằng chữ run: “Không phải hồn.”"),
+  tape("dong_vien", 5, "Ống đĩa sáp số 2 · hiên Đông viện, chiều Rằm tháng Bảy", "Ống cuối cùng thầy Khâu thu, đặt loa máy hát sát khe cửa Đông viện. Thầy dán nhãn bằng chữ run: “Rằm tháng Bảy, hiên Đông viện.”"),
 ];
