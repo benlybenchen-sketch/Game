@@ -182,3 +182,5 @@ Nguyên tắc bản 2: **Lan là đáp án "ai" ở năm câu** của bản 1, g
 - Thư Nghi: không còn "gọi nhầm là chị Dung" và "tập ký tên Hạnh Dung bằng tay trái"; chỉ còn Lan mặc áo dài của Dung và ký nháp kín một trang.
 - Trang chữ gương của Dung: không còn kể lại từng cái chết, không còn "đừng tin ai mang tên mình", không còn tự liệt kê tay trái, sẹo cằm, xương đòn. Người chơi phải tự lấy hồ sơ bệnh viện 1966 và thẻ căn cước 1970 đối chiếu với biên bản khám nghiệm.
 - Sổ quẻ: bỏ "Phải tìm người đọc được tiếng Tây" (lý do thuê bạn phải tự suy ra).
+
+- Băng (thu lại giọng): cuộn 1 không còn Tùng tự giải "Tùng huyền… Tùng rơi" và Khiêm không còn nói "Tùng rơi"; Lan nói "để em ngồi đầu bàn" (không nói "tay chủ"); cuộn 2 Yến nói "mình nghe… gần lắm".

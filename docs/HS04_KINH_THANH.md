@@ -175,3 +175,5 @@ Bìa, bệnh viện Cam Ly trong sương, phòng 7 qua ô kính, ảnh Tết 199
 - Bà Tư hàng xóm không còn thấy "đưa con Mực miếng thịt", chỉ thấy người phụ nữ ngồi lâu chỗ con chó nằm; bỏ lời giải thích "o Tư theo kiểu người Quảng".
 - Băng thăm 19/10 bỏ lời dặn "nghe kỹ: có một chữ lọt ra một lần". Tên người nói trong băng ghi Bà Hoa, không còn ngoặc kép mỉa mai.
 - Biên bản phỏng vấn có thêm câu nhiễu; ghi chú bên lề không còn đếm "bốn câu".
+
+- Băng (thu lại giọng): Thảo không còn tận mắt kể "bà cho nó ăn miếng thịt" mà chỉ nói bà ra sau hè chỗ con Mực nằm; Vân hỏi "mẹ chị còn người thân nào không" (không còn "em gái"); thêm câu Thảo "mẹ viết là dì ốm lắm"; bỏ câu "giống như mẹ trong gương".

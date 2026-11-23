@@ -180,3 +180,4 @@ Các chỗ đã sửa để người chơi phải tự ghép, không được d�
 - Tự điển bộ thủ không còn cột "ghép từ"; người chơi tự nhìn chữ để tách bộ. Thêm chữ bẫy 防 (cũng đọc "phòng"), 斧, 近, 坊, 芳.
 - Bỏ các câu kết luận hộ: "người gọi tên không ở dưới đất", "Không phải hồn", "Người chết thì ăn cơm làm gì?", "Phủ Triệu làm gì có ai nghiện?", lời Thuý Nhi "sinh cùng ngày, khác giờ, cùng mệnh".
 - Trọng điểm 6 đổi tên "Chiết tự"; thư mục và lời giới thiệu không còn chữ "tân phòng".
+- Ống "Khóc gả" (thu lại giọng): bỏ "cha bán em được trăm hai" (số bạc), "áo xanh không phải áo anh, chật vai" và "con không có chàng, con chỉ có anh"; thay bằng lời khóc không lộ đáp án.

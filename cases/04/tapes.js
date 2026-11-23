@@ -78,7 +78,7 @@ export const TAPES = {
     hidden: { t0: 28.4, t1: 42.4, text: "MỰC" },
     segs: [
       { t: 1, d: 3.3, who: "BS. Vân (bạn)", voice: "van", text: "Con Mực chết thế nào, chị nhớ không?" },
-      { t: 5.3, d: 13.7, who: "Thảo", voice: "thao", dose: 1, text: "Từ hôm bà đó về, con Mực sủa bà suốt, không cho lại gần. Tối mồng tám bà cho nó ăn miếng thịt. Sáng ra nó chết." },
+      { t: 5.3, d: 13.7, who: "Thảo", voice: "thao", dose: 1, text: "Từ hôm bà đó về, con Mực sủa bà suốt, không cho lại gần. Tối mồng tám bà ra sau hè chỗ con Mực nằm. Sáng ra nó chết." },
       { t: 20, d: 6.9, who: "Thảo", voice: "thao", dose: 1, text: "Con chó nó không nhìn mặt, chị. Nó ngửi. Nó biết." },
       { t: 27.9, d: 15, sfx: "water", text: "[mưa]" },
     ],
@@ -115,9 +115,9 @@ export const TAPES = {
     title: "Băng ghi âm khoa Nữ 2", label: "Phòng 7 · 20/10/96 · BS Vân", dur: 41,
     hidden: { t0: 23.3, t1: 37.3, text: "DÌ" },
     segs: [
-      { t: 1, d: 3.7, who: "BS. Vân (bạn)", voice: "van", text: "Chị có biết mẹ chị có một người em gái không?" },
+      { t: 1, d: 3.7, who: "BS. Vân (bạn)", voice: "van", text: "Chị có biết mẹ chị còn người thân nào không?" },
       { t: 5.7, d: 10.6, who: "Thảo", voice: "thao", dose: 1, text: "Không. Mẹ chưa bao giờ nói. Thư mẹ gửi về có nhắc một người dì, em tưởng là bà con xa." },
-      { t: 17.3, d: 4.5, sfx: "pause", text: "[Thảo nhìn ra cửa sổ, không nói gì nữa]" },   // spoken line removed: it repeated a letter detail that gave the twin away
+      { t: 17.3, d: 4.5, who: "Thảo", voice: "thao", dose: 1, text: "Mẹ viết là dì ốm lắm, mẹ ở lại chăm dì." },
       { t: 22.8, d: 15, sfx: "water", text: "[im lặng]" },
     ],
   },
@@ -127,7 +127,7 @@ export const TAPES = {
     hidden: { t0: 23.9, t1: 37.9, text: "GƯƠNG" },
     segs: [
       { t: 1, d: 4.5, who: "BS. Vân (bạn)", voice: "van", text: "Chị nói nốt ruồi chạy sang bên kia. Còn gì nữa không?" },
-      { t: 6.5, d: 15.9, who: "Thảo", voice: "thao", dose: 1, text: "Tóc. Mẹ rẽ ngôi bên này, bà đó rẽ bên kia. Bà đó cầm đũa tay trái, rồi thấy em nhìn thì đổi tay. Giống như mẹ trong gương vậy, chị." },
+      { t: 6.5, d: 15.9, who: "Thảo", voice: "thao", dose: 1, text: "Tóc. Mẹ rẽ ngôi bên này, bà đó rẽ bên kia. Bà đó cầm đũa tay trái, rồi thấy em nhìn thì đổi tay." },
       { t: 23.4, d: 15, sfx: "water", text: "[mưa]" },
     ],
   },

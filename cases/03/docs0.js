@@ -118,7 +118,7 @@ export default [
         Ngồi (theo chiều kim đồng hồ, từ đầu bàn): Lan, Dung, Yến, Khiêm, Nghi, Quốc, Tùng (ghi sổ). Tay chủ: như mọi khi.<br>
         Yến khấn mời bà Diệp. Chén chạy sau chừng năm phút.`)}
       ${hand(`Chữ con cơ dừng: <span class="code-line">T U N G F &nbsp; R O W I</span>`)}
-      ${hand(`Cả bọn cười. Khiêm nói “rơi vô lưới tình”. Dung hỏi Lan có đẩy không. Lan nói không.<br>
+      ${hand(`Cả bọn cười. Khiêm nói chén chạy bậy. Dung hỏi Lan có đẩy không. Lan nói không.<br>
         Băng cối có ghi lại buổi này (cuộn số 1).<br>
         21 giờ 50: tôi ra ban công hút thuốc.`)}
       <p class="note">Hàng chữ cuối cùng viết bằng một nét khác, nghiêng về phía trước, mực xanh đậm hơn:</p>

@@ -13,13 +13,13 @@ export const TAPES = {
     segs: [
       { t: 1, d: 4, sfx: "water", text: "[mưa trên mái ngói, nến nổ lách tách, tiếng ghế kéo]" },
       { t: 5.5, d: 7, who: "Tùng", voice: "tung", text: "Thứ Bảy, hai tháng Mười, bảy mốt. Buổi cơ thứ nhất ở nhà bà Diệp. Thi văn đoàn Bạch Lan đủ bảy người." },
-      { t: 12.5, d: 5, who: "Lan", voice: "lan", text: "Để em ngồi tay chủ cho. Mấy anh chị cứ đặt hờ ngón tay thôi." },
+      { t: 12.5, d: 5, who: "Lan", voice: "lan", text: "Để em ngồi đầu bàn cho. Mấy anh chị cứ đặt hờ ngón tay thôi." },
       { t: 18.5, d: 4.5, who: "Yến", voice: "yen", text: "Bà Diệp ơi, nếu bà có về thì cho con chén chạy." },
       { t: 24, d: 3, sfx: "slide", text: "[tiếng chén sứ trượt trên mặt giấy]" },
-      { t: 27.5, d: 6, who: "Tùng", voice: "tung", text: "Tê. U. Nờ. Gờ. Ép. Ê, nó đánh tên tao! Tùng huyền!" },
+      { t: 27.5, d: 6, who: "Tùng", voice: "tung", text: "Tê. U. Nờ. Gờ. Ép. Ê, nó đánh tên tao!" },
       { t: 34.5, d: 3, sfx: "slide", text: "[con cơ chạy tiếp]" },
-      { t: 38, d: 5, who: "Tùng", voice: "tung", text: "Rờ. O. Vê kép. I. Rơi. Tùng rơi." },
-      { t: 43.5, d: 5, who: "Khiêm", voice: "khiem", text: "Tùng rơi! Rơi vô lưới tình con nhỏ nào đó rồi!" },
+      { t: 38, d: 5, who: "Tùng", voice: "tung", text: "Rờ. O. Vê kép. I. Cái gì đây?" },
+      { t: 43.5, d: 5, who: "Khiêm", voice: "khiem", text: "Chén chạy bậy rồi! Đứa nào đẩy đó?" },
       { t: 49, d: 3, sfx: "water", text: "[cả bọn cười rộ]" },
       { t: 52.5, d: 4, who: "Dung", voice: "dung", text: "Đừng giỡn. Chị Lan, chị đẩy phải không?" },
       { t: 57, d: 5, who: "Lan", voice: "lan", text: "Chị đâu có đẩy. Dung coi nè, chị để hờ thôi mà." },
@@ -52,7 +52,7 @@ export const TAPES = {
   t2.segs.push(
     { t: end, d: 3, who: "Khiêm", voice: "khiem", text: "Ai gõ đó? Đứa nào gõ?" },
     { t: end + 3.5, d: 4, who: "Dung", voice: "dung", text: "Không ai nhấc tay hết. Mình thấy mà." },
-    { t: end + 8, d: 3.5, who: "Yến", voice: "yen", text: "Mình nghe… ở dưới chân." },
+    { t: end + 8, d: 3.5, who: "Yến", voice: "yen", text: "Mình nghe… gần lắm." },
     { t: end + 12, d: 5, sfx: "water", text: "[tiếng ghế đổ. Ai đó bấm tắt máy]" },
   );
   t2.dur = Math.ceil(end + 18);
