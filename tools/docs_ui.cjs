@@ -22,7 +22,11 @@ const id = process.env.CASE, U = `http://localhost:8063/?case=${id}&preview=1`;
         if (tag === "phone") await p.click('.tabs [data-panel="folder"]').catch(() => {});
         // a jump scare covers the screen until the player clicks it away: do the same
         for (let i = 0; i < 5 && await p.$("#fx .scare"); i++) { await p.click("#fx .scare", { force: true }).catch(() => {}); await p.waitForTimeout(800); }
-        await p.click(`[data-doc="${d}"]`, { timeout: 4000 }).catch((e) => errs.push(`cannot open ${d}`));
+        // a delayed scare can rise in the middle of the click: dismiss it and try once more
+        await p.click(`[data-doc="${d}"]`, { timeout: 4000 }).catch(async () => {
+          for (let i = 0; i < 5 && await p.$("#fx .scare"); i++) { await p.click("#fx .scare", { force: true }).catch(() => {}); await p.waitForTimeout(800); }
+          await p.click(`[data-doc="${d}"]`, { timeout: 4000 }).catch(() => errs.push(`cannot open ${d}`));
+        });
         await p.waitForTimeout(150);
         const play = await p.$(".tape button");
         if (play && await play.isVisible()) { await play.click().catch(() => {}); await p.waitForTimeout(300); await play.click().catch(() => {}); }
