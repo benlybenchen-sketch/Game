@@ -28,6 +28,15 @@ const TIME_TOTAL_MIN = () => META.timeLimit || 150;
 const TIME_TOTAL = () => TIME_TOTAL_MIN() * 60;
 const PENALTY_MIN = [3, 5, 10];
 const HINT_AFTER = 2, SOLVE_AFTER = 4;
+// META.hintCost = { hint: minutes, solve: minutes }: hints and the solution are open from the start but cost time;
+// wrong answers no longer unlock anything (cases 04 on). Without it the old gate applies (2 misses / 4 misses).
+const COST = () => (META.strict && META.hintCost) || null;
+const gated = () => META.strict && !COST();
+function payTime(min) {
+  if (!timerOn()) return;
+  state.timeLeft = Math.max(0, (state.timeLeft ?? TIME_TOTAL()) - min * 60); save(); paintTimer();
+  if (state.timeLeft <= 0) gameOver();
+}
 const fmtT = (s) => { s = Math.max(0, Math.ceil(s)); const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60); return `${h}:${String(m).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`; };
 const timerOn = () => META.strict && state.started && !finished() && !state.failed && !state.timeout;
 let timerId = 0, lastTick = 0, lastSave = 0;
@@ -213,7 +222,7 @@ function showCover() {
         <li>Trả lời đúng thì hồ sơ mới mở ra. Mỗi lần như thế, đêm lại khuya hơn… và quanh bạn có thêm thứ gì đó.</li>
         ${META.strict
           ? `<li><b>Bạn có ${TIME_TOTAL_MIN()} phút</b> cho cả hồ sơ (đồng hồ chỉ chạy khi bàn làm việc đang mở). <b>Không ai báo bạn đúng mấy mục.</b> Lần nộp sai đầu tiên bị trừ 3 phút, lần thứ hai 5 phút, từ lần thứ ba mỗi lần 10 phút, tính chung cả hồ sơ. Thử sai mã một hộp khoá bị trừ 3 phút. Hết giờ là thua, phải chơi lại từ đầu.</li>
-        <li><b>Gợi ý</b> chỉ mở sau ${HINT_AFTER} lần nộp sai, <b>lời giải</b> sau ${SOLVE_AFTER} lần. Dùng chúng là tụt hạng thám tử và mất kết thúc ẩn.</li>`
+        <li>${COST() ? `<b>Gợi ý</b> và <b>lời giải</b> mở được bất cứ lúc nào, nhưng mỗi gợi ý trừ ${COST().hint} phút, xem lời giải trừ ${COST().solve} phút. Nộp sai không mở thêm gì.` : `<b>Gợi ý</b> chỉ mở sau ${HINT_AFTER} lần nộp sai, <b>lời giải</b> sau ${SOLVE_AFTER} lần.`} Dùng chúng là tụt hạng thám tử và mất kết thúc ẩn.</li>`
           : `<li>Bí quá thì dùng <b>gợi ý</b>. Đến lúc tuyệt vọng thì có <b>lời giải</b>.</li>`}
       </ol><p class="small muted">Tiến trình được lưu trên trình duyệt này.</p></details>
       <p class="credit">Truyện và nhân vật hoàn toàn hư cấu. Lấy cảm hứng từ thể loại game hồ sơ điều tra trên trình duyệt.</p>
@@ -387,9 +396,9 @@ function openCard(q, i) {
     <div class="q-actions">
       <button class="btn btn--red" data-act="submit">${q.fatal ? "Quyết định" : "Nộp kết luận"}</button>
       ${q.fatal ? "" : (() => {
-        const t = state.tries[q.id] || 0, hl = META.strict && t < HINT_AFTER, sl = META.strict && t < SOLVE_AFTER;
-        return `<button class="btn btn--ghost" data-act="hint" ${shown >= s.hints.length || hl ? "disabled" : ""}>${hl ? `Gợi ý · mở sau ${HINT_AFTER - t} lần sai` : `Gợi ý (${shown}/${s.hints.length})`}</button>
-      <button class="btn btn--ghost" data-act="solve" ${sl ? "disabled" : ""}>${sl ? `Lời giải · mở sau ${SOLVE_AFTER - t} lần sai` : "Lời giải"}</button>`;
+        const t = state.tries[q.id] || 0, hl = gated() && t < HINT_AFTER, sl = gated() && t < SOLVE_AFTER, c = COST();
+        return `<button class="btn btn--ghost" data-act="hint" ${shown >= s.hints.length || hl ? "disabled" : ""}>${hl ? `Gợi ý · mở sau ${HINT_AFTER - t} lần sai` : `Gợi ý (${shown}/${s.hints.length})${c ? ` · −${c.hint} phút` : ""}`}</button>
+      <button class="btn btn--ghost" data-act="solve" ${sl ? "disabled" : ""}>${sl ? `Lời giải · mở sau ${SOLVE_AFTER - t} lần sai` : `Lời giải${c ? ` · −${c.solve} phút` : ""}`}</button>`;
       })()}
     </div>
     <div class="q-feedback" aria-live="polite"></div>
@@ -421,8 +430,8 @@ function submit() {
   if (META.strict) {
     const min = penalize();
     msg += ` Đồng hồ bị trừ ${min} phút.`;
-    if (n === HINT_AFTER) msg += " Gợi ý đã mở.";
-    if (n === SOLVE_AFTER) msg += " Lời giải đã mở.";
+    if (gated() && n === HINT_AFTER) msg += " Gợi ý đã mở.";
+    if (gated() && n === SOLVE_AFTER) msg += " Lời giải đã mở.";
   } else if (n >= 3) msg += ` (Đúng ${res.right}/${res.total} mục.)`;
   save();
   if (META.strict) { renderInquiry(); const f2 = $(".q-feedback"); f2.textContent = msg; f2.className = "q-feedback bad"; sfx.wrong(); paintTimer(); if (state.timeLeft <= 0) return gameOver(); }
@@ -484,15 +493,22 @@ function dreadFor(stage) {
 
 function hint() {
   const q = currentQ(), s = SECRETS[q.id];
-  if (META.strict && (state.tries[q.id] || 0) < HINT_AFTER) return;
-  state.hints[q.id] = Math.min(s.hints.length, (state.hints[q.id] || 0) + 1); save(); renderInquiry();
+  if (gated() && (state.tries[q.id] || 0) < HINT_AFTER) return;
+  const give = () => { state.hints[q.id] = Math.min(s.hints.length, (state.hints[q.id] || 0) + 1); save(); renderInquiry(); };
+  const c = COST();
+  if (!c) return give();
+  if ((state.hints[q.id] || 0) >= s.hints.length) return;
+  dialog(`<h3>Mở gợi ý ${(state.hints[q.id] || 0) + 1}?</h3><p>Đồng hồ sẽ bị trừ ${c.hint} phút. Dùng gợi ý là tụt hạng thám tử và mất kết thúc ẩn.</p>`,
+    `Mở gợi ý (−${c.hint} phút)`, () => { payTime(c.hint); if (!state.timeout) give(); }, "Thôi, tự làm tiếp");
 }
 
 function solve() {
   const q = currentQ();
-  if (META.strict && (state.tries[q.id] || 0) < SOLVE_AFTER) return;
-  dialog(`<h3>Xem lời giải?</h3><p>${META.solveIntro || `${cap(META.solver || "anh Quân")} sẽ viết ra toàn bộ suy luận cho trọng điểm này, và bạn đi tiếp.`} Trọng điểm sẽ bị đóng dấu “XEM GIẢI”.</p>`,
-    "Xem lời giải", () => {
+  if (gated() && (state.tries[q.id] || 0) < SOLVE_AFTER) return;
+  const c = COST();
+  dialog(`<h3>Xem lời giải?</h3><p>${META.solveIntro || `${cap(META.solver || "anh Quân")} sẽ viết ra toàn bộ suy luận cho trọng điểm này, và bạn đi tiếp.`} Trọng điểm sẽ bị đóng dấu “XEM GIẢI”.${c ? ` Đồng hồ bị trừ ${c.solve} phút.` : ""}</p>`,
+    c ? `Xem lời giải (−${c.solve} phút)` : "Xem lời giải", () => {
+      if (c) { payTime(c.solve); if (state.timeout) return; }
       const s = SECRETS[q.id];
       dialog(`<h3>Lời giải · ${q.title}</h3><p>${esc(s.solution)}</p>`, "Đi tiếp", () => solved(q, true));
     }, "Thôi, tự làm tiếp");

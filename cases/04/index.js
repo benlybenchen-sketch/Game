@@ -34,6 +34,7 @@ export const META = {
   publicNames: ["Bà Hoa", "Lê Thị Hoa", "Sài Gòn"],   // the mother and the city she went to, from the first page (tools/audit.mjs)
   strict: true,   // no x/y feedback, countdown with time penalties, gated hints, grade (js/main.js)
   // Escape-room puzzles (rule 25, numbers from docs/CAU_DO.md).
+  hintCost: { hint: 10, solve: 20 },   // hints and solution open any time, paid in minutes; misses unlock nothing
   pinRoles: false,   // evidence slots without role labels: the player works out what to prove (harder)
   puzzles: [
     { n: 12, q: "q4", tool: "lockbox", media: "hop_thiec", chain: "q1", name: "Hộp thiếc khoá số của Thảo, mã là ngày Thảo nói “bà không phải mẹ” lần đầu" },

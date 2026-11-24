@@ -1,5 +1,5 @@
 // Gameplay flow checks for one case (strict mode). Usage: CASE=07 node tools/flow_test.cjs
-//  1. hints open only after 2 wrong answers, the solution after 4;
+//  1. hints open only after 2 wrong answers, the solution after 4 (or, with META.hintCost, open at once and paid in minutes);
 //  2. every lock box refuses a wrong code and opens with the code in secret.locks;
 //  3. every option of the fatal question leads to the ending META.fatal.ending gives (or the good one) and its docs;
 //  4. a flawless last answer unlocks the good ending and the hidden one, and shows the secret docs.
@@ -19,7 +19,7 @@ let bad = 0; const ok = (what, cond, extra = "") => { if (!cond) bad++; console.
     return { Q: C.QUESTIONS.map((q) => ({ id: q.id, fatal: !!q.fatal, parts: q.parts })), S, fatal: !!C.META.fatal, endings: C.META.endings || [],
       routes: C.META.fatal ? Object.fromEntries((C.QUESTIONS.find((q) => q.fatal)?.parts.find((x) => x.type === "choice")?.options || []).map((o) => [o, C.META.fatal.ending(o)])) : {},
       failDocs: C.DOCS.filter((d) => d.fail).map((d) => ({ id: d.id, fail: d.fail })), secretDocs: C.DOCS.filter((d) => d.secret).map((d) => d.id),
-      locks: Object.keys(S.locks || {}), media: Object.keys(C.MEDIA || {}) };
+      locks: Object.keys(S.locks || {}), media: Object.keys(C.MEDIA || {}), hintCost: C.META.hintCost || null };
   }, CASE);
   const seed = async (st) => { await p.evaluate(([k, st]) => { localStorage.setItem(k, JSON.stringify(st)); }, [key, st]); await p.reload(); await p.waitForTimeout(500); await p.click('[data-cv="go"]'); await p.waitForTimeout(500); if (await p.isVisible("input[data-sign]")) { await p.fill("input[data-sign]", "Thử"); await p.click('[data-dlg="ok"]'); await p.waitForTimeout(300); } };
   const base = { started: true, signed: true, player: "Thử", stage: 0, resp: {}, tries: {}, hints: {}, peeked: {}, seen: {}, endings: [], timeLeft: 9000 };
@@ -31,11 +31,34 @@ let bad = 0; const ok = (what, cond, extra = "") => { if (!cond) bad++; console.
   await seed({ ...base, resp: { [q1.id]: junk(q1) } });
   const btn = async (act) => p.evaluate((a) => { const x = document.querySelector(`.q-card.open [data-act="${a}"]`); return x ? !x.disabled : null; }, act);
   const states = [];
+  if (info.hintCost) {
+    // paid hints: open from the start, each costs minutes; wrong answers unlock nothing
+    const left = () => p.evaluate((k) => JSON.parse(localStorage.getItem(k)).timeLeft, key);
+    ok("hint open from the start", (await btn("hint")) === true);
+    ok("solution open from the start", (await btn("solve")) === true);
+    const t0 = await left();
+    await p.click('.q-card.open [data-act="hint"]'); await p.waitForTimeout(300);
+    ok("hint asks before taking time", /phút/.test(await p.textContent("#dialog").catch(() => "")));
+    await p.click('[data-dlg="ok"]'); await p.waitForTimeout(400);
+    const t1 = await left();
+    ok(`hint costs ${info.hintCost.hint} minutes`, Math.round((t0 - t1) / 60) === info.hintCost.hint, `took ${Math.round((t0 - t1) / 60)}`);
+    ok("one hint shown", (await p.$$eval(".q-card.open .hint", (h) => h.length)) === 1);
+    await p.click('.q-card.open [data-act="hint"]'); await p.waitForTimeout(300); await p.click('[data-dlg="no"]'); await p.waitForTimeout(300);
+    ok("cancelling a hint costs nothing", (await left()) === t1 && (await p.$$eval(".q-card.open .hint", (h) => h.length)) === 1);
+    for (let n = 0; n < 2; n++) { await p.click('.q-card.open [data-act="submit"]'); await p.waitForTimeout(300); }
+    ok("wrong answers unlock no hint", (await p.$$eval(".q-card.open .hint", (h) => h.length)) === 1);
+    const t2 = await left();
+    await p.click('.q-card.open [data-act="solve"]'); await p.waitForTimeout(300); await p.click('[data-dlg="ok"]'); await p.waitForTimeout(400);
+    ok(`solution costs ${info.hintCost.solve} minutes`, Math.round((t2 - (await left())) / 60) === info.hintCost.solve);
+    ok("solution shown", /Lời giải/.test(await p.textContent("#dialog").catch(() => "")));
+    await p.click('[data-dlg="ok"]').catch(() => {}); await p.waitForTimeout(300);
+  } else {
   for (let n = 0; n <= 4; n++) { states.push([n, await btn("hint"), await btn("solve")]); if (n < 4) { await p.click('.q-card.open [data-act="submit"]'); await p.waitForTimeout(300); } }
   ok("hint closed before 2 wrong answers", states[0][1] === false && states[1][1] === false);
   ok("hint open after 2 wrong answers", states[2][1] === true);
   ok("solution closed before 4 wrong answers", states[3][2] === false);
   ok("solution open after 4 wrong answers", states[4][2] === true);
+  }
 
   // 2. lock boxes
   for (const lock of info.locks) {

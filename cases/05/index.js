@@ -32,6 +32,7 @@ const LOST_LINE = {
 export const META = {
   strict: true,   // no x/y feedback, countdown with time penalties, gated hints, grade (js/main.js)
   // Escape-room puzzles (rule 25, numbers from docs/CAU_DO.md).
+  hintCost: { hint: 10, solve: 20 },   // hints and solution open any time, paid in minutes; misses unlock nothing
   pinRoles: false,   // evidence slots without role labels: the player works out what to prove (harder)
   puzzles: [
     { n: 4, q: "q4", name: "Xếp sáu dòng ghi chép theo thứ tự thật" },
