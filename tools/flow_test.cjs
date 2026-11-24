@@ -111,6 +111,8 @@ let bad = 0; const ok = (what, cond, extra = "") => { if (!cond) bad++; console.
       if (info.otherRoute.length) {
         const locked = await p.evaluate(() => [...document.querySelectorAll("[data-locked]")].map((x) => x.dataset.locked));
         ok(`${label}: documents of the other route are shown locked`, info.otherRoute.every((d) => locked.includes(d)) && !info.otherRoute.some((d) => shown.includes(d)));
+        for (let k = 0; k < 4; k++) { const d = await p.$('#dialog:not([hidden]) [data-dlg="ok"]'); if (!d) break; await d.click(); await p.waitForTimeout(300); }
+        for (let k = 0; k < 6 && await p.$("#fx .scare"); k++) { await p.click("#fx .scare", { force: true }).catch(() => {}); await p.waitForTimeout(700); }
         await p.click(`[data-locked="${info.otherRoute[0]}"]`); await p.waitForTimeout(300);
         ok(`${label}: a locked document offers to play the other route`, /nhánh khác/.test(await p.textContent("#dialog").catch(() => "")));
         await p.click('[data-dlg="no"]').catch(() => {}); await p.waitForTimeout(200);
