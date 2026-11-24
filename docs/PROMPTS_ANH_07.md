@@ -11,12 +11,11 @@
 |---|---|---|
 | `dau_cong` (07) | `cong_lang` (02) | cái đấu ở cổng, chén gốm đỏ |
 | `kho_ben` (06) | `cong_lang` (02) | cùng kiểu đấu gỗ nhưng **đáy sạch, không vữa** |
-| `hop_but` (08) | không | (ảnh gốc của con rắn hổ mang sừng) |
-| `chen_hin` (13) | `cong_lang` (02) | chén gốm đỏ có vết mẻ chữ V |
+| `hop_but` (08) | `bup_be_scare` (17, đã có) | màu và đốm của con rắn hổ mang sừng |
+| `chen_hin` (13) | `cong_lang` (02) và `bup_be_scare` (17, đã có) | chén gốm đỏ có vết mẻ chữ V; con búp bê |
 | `lang_sang` (14) | `cong_lang` (02) | cổng, tường, ghế gạch cạnh cổng |
-| `ba_ran_scare` (16) | `hanh_lang` (03) | hình Bà Rắn trên vách, hành lang |
-| `thu_den_scare` (15) | `bat_thu` (05) | bát gốm đỏ, bàn cúng đá |
-| `bup_be_scare` (17) | `chen_hin` (13) và `hop_but` (08) | con búp bê gỗ; con rắn hổ mang sừng |
+| `hanh_lang` (03) | `ba_ran_scare` (16, đã có) | hình Bà Rắn trên vách, lưới kẻ đỏ |
+| `bat_thu` (05) | `thu_den_scare` (15, đã có) | bát gốm đỏ, bàn cúng đá |
 
 
 > **Mình tự làm bằng code, bạn không cần tạo:** mọi mảnh gốm có chữ (sổ điểm danh, bảng lương, sổ bấc, sổ việc cổng, sổ tiến độ, thẻ bao lúa, thư trả lời), vở bài tập học trò, vở của Hay, bảng mẫu chữ, sách rắn 14 loài, bản vẽ lăng, dòng chữ trên vách, mẫu ấn và trò ghép mảnh dấu niêm, trò đong nước, bản đồ bờ Tây. Những thứ này có chữ tượng hình, chữ số và phân số phải đúng tuyệt đối. Chữ tượng hình dùng phông chữ chuẩn, không vẽ tay.
@@ -40,111 +39,163 @@
 ---
 
 ### 01. `cover.jpg` (bìa, ảnh dọc)
-**Kiểm tra:** làng trong khe núi đêm trăng, đỉnh núi kim tự tháp, một bát gốm có vết mực mờ ở cận cảnh, bóng rắn hổ mang trên tường. Không người, không chữ.
-**Nếu sai:** *"Remove any people and any readable text. Keep the pyramid-shaped peak behind the village and the cobra shadow on the wall."*
+**Bố cục:** ảnh dọc. Nửa trên: đỉnh núi hình kim tự tháp dưới trăng. Giữa: mái làng gạch bùn. Nửa dưới, cận cảnh lệch phải: bàn cúng gạch có bát thư; trên tường phía sau, bóng rắn hổ mang to. Mép trái tối để đặt chữ tiêu đề.
+**Kiểm tra:** đỉnh núi nhọn như kim tự tháp (không phải kim tự tháp xây); bát gốm đỏ nông có vết mực mờ; bóng rắn hổ mang **bành mang** trên tường trắng; vài cửa có ánh đèn; không người, không chữ.
+**Nếu sai:**
+- Có người hoặc tượng người: *"Remove every person and statue. Only the village, the bowl, and the cobra shadow."*
+- Ra kim tự tháp xây bằng đá: *"The peak is a natural mountain of rock shaped like a pyramid, not a built pyramid."*
+- Bóng rắn không rõ: *"Make the cobra shadow large and sharp on the white wall, hood spread wide, cast by the oil lamp in front of it."*
 ```
-Aspect ratio 2:3, portrait. Night scene, realistic film photograph. A small ancient Egyptian workmen's village of about sixty flat-roofed mud-brick houses squeezed inside a dry limestone valley, New Kingdom period around 1150 BC, west bank of Thebes. Behind the village rises a single natural pyramid-shaped mountain peak, pale under a cold blue full moon. A few doorways glow with tiny warm orange oil-lamp light, most are dark. In the near foreground, on a low mud-brick offering bench, sits a shallow red pottery bowl with faint smudged black ink strokes inside it, the strokes are blurred and unreadable. On the whitewashed wall behind the bowl, the shadow of a rearing cobra with a spread hood is cast by the lamp, larger than life. Dust in the air, deep shadows, quiet and ominous mood. Muted earth colours, fine film grain. No people, no modern objects, no readable letters, no hieroglyphs that can be read, no text, no watermark.
+Aspect ratio 2:3, portrait orientation. Realistic cinematic film photograph at night, 35mm lens, shot from low near the ground. Setting: a small ancient Egyptian workmen's village of flat-roofed mud-brick houses with whitewashed walls, packed tightly inside a dry, narrow limestone valley on the west bank of Thebes, New Kingdom, around 1150 BC. In the top third of the frame, a single natural mountain peak shaped like a pyramid (a rock mountain, not a built pyramid) stands pale against a dark blue sky lit by a cold full moon. In the middle third, the flat roofs and narrow lanes of the village; only four or five doorways glow with tiny warm orange oil-lamp light, the rest are dark. In the bottom third, close to the camera and slightly right of centre, a low mud-brick offering bench against a whitewashed wall. On the bench sits one shallow red pottery bowl, about the size of two hands, with faint smudged black ink strokes spiralling inside it, blurred and unreadable. Next to it, a small clay oil lamp with a living flame. The lamp throws onto the white wall behind a huge sharp shadow of a rearing cobra with its hood fully spread, taller than a man, though no real snake is visible in the frame. Dust hangs in the air. Left edge of the frame stays dark and empty. Muted earth colours, deep blue night shadows, warm lamp highlights, fine film grain. Do not include: people, human silhouettes, statues, modern objects, electric light, readable letters, readable hieroglyphs, text, logos, watermark.
 ```
 
 ### 02. `cong_lang.jpg` (cổng làng lúc rạng sáng)
-**Kiểm tra:** cổng gỗ thấp trong tường gạch bùn; ghế gạch có cái đấu gỗ tròn đai dây gai; hai con lừa chở bao lúa; không thấy mặt người.
-**Nếu sai:** *"Make the measure a low round wooden tub bound with rope, sitting on the brick bench by the gate. No faces."*
+**Bố cục:** nhìn chéo vào cổng từ phía ngoài làng. Trái: tường gạch bùn và cánh cổng gỗ thấp. Giữa tiền cảnh: ghế gạch với cái đấu và cái chén. Phải: hai con lừa buộc ở tường.
+**Kiểm tra:** cái đấu là **thùng gỗ tròn thấp** (cao chừng một gang, rộng chừng hai gang), đai **dây gai bện**, không có quai, không phải bình gốm, không phải giỏ đan; bên cạnh là **chén gốm đỏ nhỏ miệng loe**; lúa vương quanh; hai lừa xám chở bao. Không thấy mặt người.
+**Nếu sai:**
+- Cái đấu thành giỏ, bình hay xô có quai: *"The grain measure is a low round wooden tub made of wooden staves, about one hand-span tall and two hand-spans wide, bound around with two bands of twisted palm-fibre rope, no handle."*
+- Có người rõ mặt: *"No people at all in the frame."*
+- Cổng quá to như đền: *"It is a small, humble village gate in a mud-brick wall, a single low wooden door, barely taller than a man."*
 ```
-Aspect ratio 16:9. Realistic film photograph at dawn, cold pale light turning gold. The only gate of an ancient Egyptian walled workmen's village, New Kingdom, around 1150 BC: a low thick wooden door in a whitewashed mud-brick wall, a narrow dirt street beyond. Beside the gate, a mud-brick bench; on it stands a low round wooden grain measure about two hand-spans wide, bound with twisted palm-fibre rope, with a little spilled emmer wheat around it, and a small red clay cup next to it. Two grey donkeys loaded with coarse woven sacks of grain stand tied near the wall, heads down. A clay oil lamp, burnt out, sits in a wall niche. Dusty ground with hoof prints and footprints. No people visible. Muted earth tones, gentle film grain. No readable text, no hieroglyphs, no watermark.
+Aspect ratio 16:9. Realistic film photograph at dawn, 35mm lens at eye level, looking diagonally at the only gate of a small walled workmen's village in ancient Egypt, New Kingdom, around 1150 BC. On the left: a thick whitewashed mud-brick wall, rough and patched, and a single low heavy wooden door standing half open, barely taller than a man, with a narrow dirt street visible beyond. In the centre foreground, against the wall beside the gate, a low mud-brick bench. On the bench stands the village grain measure: a low round wooden tub made of vertical wooden staves, about one hand-span tall and two hand-spans wide, bound around the outside with two bands of twisted palm-fibre rope, no handles, its rim worn smooth; a little spilled emmer wheat lies around its base. Beside the measure sits a small red clay cup with a flared rim, about the size of a fist. On the right, two grey donkeys stand tied to a peg in the wall, heads down, each loaded with two coarse woven sacks of grain. Above the bench, a small niche in the wall holds a burnt-out clay oil lamp. Dusty ground with hoof prints and bare footprints. Cold pale light turning gold on the top of the wall, long soft shadows. Muted earth tones, gentle film grain. Do not include: people, faces, metal buckets, ceramic jars used as the measure, woven baskets used as the measure, readable text, hieroglyphs, watermark.
 ```
 
 ### 03. `hanh_lang.jpg` (hành lang lăng vua đang đục dở)
-**Kiểm tra:** hành lang đá đục dở, lưới kẻ đỏ; rắn hổ mang dựng đội đĩa mặt trời vẽ dở; đèn chén gốm; đục đồng, búa gỗ; vệt sẫm khô trên nền. Không người, không chữ đọc được.
-**Nếu sai:** *"The goddess must be painted only as a rearing cobra with a red sun disc, unfinished, over red grid lines. No human figure. Signs on the wall must be blurred."*
+**Bố cục:** máy đặt giữa hành lang, nhìn dọc xuống chỗ dốc chìm vào bóng tối. Vách phải chiếm một phần ba khung hình, có hình Bà Rắn vẽ dở. Nền đá tiền cảnh: dụng cụ, đèn, vệt sẫm.
+**Kiểm tra:** hành lang hẹp đục trong đá vôi, trần thấp, dốc xuống; vách phải trát vữa trắng có **lưới ô vuông kẻ đỏ**; hình **rắn hổ mang dựng đứng, bành mang, đội đĩa mặt trời đỏ**, mới tô màu một phần; đục đồng, búa gỗ, giỏ đá vụn, đèn chén; một **vệt sẫm đã khô** trên nền ngay dưới hình. Không người, không xác, không chữ đọc được.
+**Nếu sai:**
+- Bà Rắn thành người hay người đầu rắn: *"The goddess is painted only as a rearing cobra with a spread hood and a red sun disc on its head. No human body, no woman, no human head."*
+- Có chữ tượng hình rõ, đọc được: *"Make all wall signs faint, blurred and unreadable."*
+- Hành lang rộng như cung điện: *"A narrow, low, unfinished corridor cut into rough limestone, only wide enough for two men, sloping down into darkness."*
 ```
-Aspect ratio 16:9. Realistic film photograph inside an unfinished royal tomb corridor cut into pale limestone, ancient Egypt around 1150 BC. The corridor slopes down into darkness. The walls are partly smoothed and plastered white; on the right wall a painter's red ochre grid of squares is visible, and over it a half-finished painting of a large rearing cobra with a spread hood wearing a red sun disc on its head, outlined in red, only partly coloured in yellow and black. Further along the wall are faint, blurred columns of painted signs, deliberately indistinct and unreadable. On the floor: copper chisels, a wooden mallet, a basket of limestone chips, a clay lamp with a small flame. Near the base of the cobra painting, a dark dried stain on the rock floor. Warm flickering lamp light against deep black shadow, dust in the air. No people, no readable hieroglyphs, no text, no watermark.
+Aspect ratio 16:9. Realistic film photograph inside an unfinished royal tomb corridor cut into pale yellow limestone, Valley of the Kings, ancient Egypt, around 1150 BC. 24mm lens, camera at chest height in the middle of the corridor, looking down its length as it slopes into total darkness. The corridor is narrow and low, only wide enough for two men, the ceiling rough with chisel marks. The left wall is still raw cut stone. The right wall is smoothed and plastered white; on it a painter's grid of thin red ochre lines forms squares, and over the grid a large half-finished painting of a rearing cobra with its hood spread, wearing a red sun disc on its head, drawn in red outline and only partly filled with yellow and black, the lower part of the body still only an outline. Further down the right wall, faint columns of painted signs, deliberately blurred and unreadable. On the floor in the foreground: two copper chisels, a wooden mallet, a palm-fibre basket of limestone chips, a small clay oil lamp with a single flame. Directly below the cobra painting, a dark brown dried stain on the rock floor, the size of a hand, nothing more. Warm flickering lamp light falls off quickly into deep black shadow; dust floats in the light. Do not include: people, bodies, skeletons, human figures in the painting, readable hieroglyphs, text, modern lights, watermark.
 ```
 
 ### 04. `xin_the.jpg` (kiệu tượng thần và đống mảnh gốm)
-**Kiểm tra:** kiệu gỗ có khám thờ nhỏ đóng kín, hai đòn khiêng đặt trên đất; trước kiệu là đống mảnh gốm có vết mực mờ; một mảnh hơi tách ra. Không người.
-**Nếu sai:** *"Remove all people. The shrine must be closed, with a linen curtain. The potsherds must have only blurred ink marks."*
+**Bố cục:** quảng trường làng buổi sớm, máy thấp ngang đầu gối. Giữa hậu cảnh: kiệu với khám thờ đóng kín. Tiền cảnh: chiếu cói với đống mảnh gốm; một mảnh tách ra gần máy.
+**Kiểm tra:** kiệu gỗ có **hai đòn khiêng dài** đặt trên đất; khám thờ nhỏ mạ vàng cũ, **rèm vải trắng che kín phía trước**, không thấy tượng; khoảng ba mươi mảnh gốm và mảnh đá vôi có vết mực mờ; một mảnh nằm riêng, bị mảnh khác che một nửa. Không người.
+**Nếu sai:**
+- Có người khiêng kiệu: *"No people. The palanquin rests on the ground by itself."*
+- Thấy rõ tượng thần: *"The shrine is closed, its front fully covered by a faded white linen curtain."*
+- Mảnh gốm có chữ rõ: *"Only faint smudged ink marks on the sherds, unreadable."*
 ```
-Aspect ratio 16:9. Realistic film photograph at early morning in the open square of an ancient Egyptian workmen's village. A portable wooden palanquin with two long carrying poles rests on the dusty ground; on it sits a small closed gilded wooden shrine with a faded white linen curtain drawn across its front. In front of the palanquin, on a reed mat, lies a loose heap of about thirty pale limestone flakes and broken pottery sherds, each with faint smudged black ink marks that are unreadable. One sherd lies slightly apart from the heap, half hidden under another. Long shadows from the low sun, incense smoke drifting from a small clay burner. Mud-brick houses in soft focus behind. No people, no readable text, no watermark.
+Aspect ratio 16:9. Realistic film photograph in early morning in the small open square of an ancient Egyptian workmen's village, around 1150 BC. 35mm lens, camera low at knee height. In the middle distance, centred, a portable wooden palanquin with two long carrying poles rests on the dusty ground; on it sits a small closed shrine of old, worn gilded wood, its front fully covered by a faded white linen curtain, nothing visible inside. In the foreground, on a frayed reed mat, lies a loose heap of about thirty small pale limestone flakes and broken red pottery sherds, each the size of a palm, each with faint smudged black ink marks that are unreadable. One sherd lies slightly apart from the heap, nearest the camera, half covered by another sherd. A small clay incense burner at the side sends a thin line of smoke across the frame. Low sun from the side makes long shadows. Whitewashed mud-brick house fronts in soft focus behind. Do not include: people, priests, carriers, statues visible, readable writing, hieroglyphs, text, watermark.
 ```
 
 ### 05. `bat_thu.jpg` (bát thư gửi người chết)
-**Kiểm tra:** hai bát gốm đỏ có vết mực đen mờ bên trong, đặt trên bàn cúng đá trong nhà nguyện nhỏ; bánh mì tròn, hoa sen héo. Chữ không đọc được.
-**Nếu sai:** *"Ink inside the bowls must be blurred and unreadable. Keep two bowls side by side."*
+**Bố cục:** máy ngang mặt bàn cúng, gần. Giữa: hai bát gốm đỏ cạnh nhau. Trái: ổ bánh, hoa sen héo. Phải: đèn chén. Hậu cảnh: tường trắng có hốc nhỏ tối.
+**Kiểm tra:** hai **bát gốm đỏ nông** (rộng cỡ hai bàn tay), lòng bát có **vòng xoắn mực đen mờ, không đọc được**; một bát mực mới hơn, đậm hơn; bàn cúng bằng đá thấp; nhà nguyện gạch bùn nhỏ hẹp. Không người.
+**Nếu sai:**
+- Bát thành bát sứ trắng hay có hoa văn: *"Two plain shallow red unglazed pottery bowls, with black ink writing spiralling inside, blurred."*
+- Chữ đọc được: *"Blur the ink so no sign can be read."*
 ```
-Aspect ratio 4:3. Realistic film photograph inside a tiny mud-brick family chapel in an ancient Egyptian village, around 1150 BC. On a low stone offering table stand two shallow red pottery bowls side by side; the inside of each bowl is covered in a spiral of faint black ink writing, blurred and unreadable, one bowl's ink slightly fresher and darker than the other's. Beside them: a small round loaf of bread, a wilted blue lotus flower, a clay lamp with a weak flame. Behind the table, a whitewashed wall with a small dark niche. Warm low light, heavy shadows, quiet and sad mood. No people, no readable text, no watermark.
+Aspect ratio 4:3. Realistic film photograph inside a tiny family chapel of mud brick in an ancient Egyptian village, around 1150 BC. 50mm lens at the height of the table top, close. On a low stone offering table stand two plain shallow red unglazed pottery bowls side by side, each about the width of two hands. The inside of each bowl is covered with a spiral of faint black handwritten ink running round and round toward the centre, blurred and unreadable; the left bowl's ink is older and fainter, the right bowl's ink darker and fresher. To the left: a small round loaf of bread and a wilted blue lotus flower lying on its side. To the right: a clay oil lamp with a weak flame, the only light. Behind the table, a whitewashed wall with a small dark rectangular niche. Warm low light, heavy soft shadows, a quiet, grieving mood. Fine film grain. Do not include: people, porcelain, glazed or painted bowls, readable text, readable hieroglyphs, watermark.
 ```
 
 ### 06. `kho_ben.jpg` (kho lúa ở bến sông)
-**Kiểm tra:** silo gạch bùn tròn, bao lúa, một cái đấu gỗ khác (không có lớp vữa), sông Nile phía sau, thuyền buồm vuông. Không rõ mặt người.
+**Bố cục:** sân kho nhìn ra sông. Trái: dãy silo gạch bùn tròn mái vòm. Giữa tiền cảnh: ghế gạch với cái đấu kho (đáy gỗ sạch). Phải: chồng bao có thẻ buộc. Hậu cảnh: sông Nile, thuyền buồm vuông, cọ.
+**Kiểm tra:** cái đấu kho **cùng kiểu thùng gỗ tròn đai dây** như ảnh `cong_lang`, nhưng **lòng đáy là gỗ sạch, không có lớp vữa**; thẻ gỗ nhỏ buộc dây vào miệng bao, vết mực mờ; người (nếu có) chỉ là bóng xa quay lưng.
+**Nếu sai:**
+- Đáy đấu có lớp trắng: *"The bottom inside the measure is bare clean wood, no plaster, no white layer."*
+- Thẻ thành thẻ giấy hiện đại: *"Small flat wooden tags the size of a thumb, tied to the sacks with string, with faint ink marks."*
 ```
-Aspect ratio 16:9. Realistic film photograph in late afternoon at a riverside granary on the west bank of the Nile, ancient Egypt around 1150 BC. Several round domed mud-brick grain silos with small hatches, a courtyard with stacked coarse woven sacks of emmer and barley, and a low round wooden grain measure on a bench with a clean wooden bottom. In the background, the wide Nile with a wooden boat with a square sail, palm trees and green fields on the far bank. A few small clay tally tags tied with string hang from one sack, with blurred unreadable ink marks. If any people appear, only distant silhouettes with their backs turned. Warm golden light, dust. No readable text, no watermark.
+Aspect ratio 16:9. Realistic film photograph in late afternoon at a riverside granary on the west bank of the Nile, ancient Egypt, around 1150 BC. 35mm lens at eye level. On the left, a row of four round domed mud-brick grain silos with small square hatches near the top. In the centre foreground, on a low mud-brick bench, a low round wooden grain measure made of wooden staves, bound with two bands of twisted palm-fibre rope, tilted slightly toward the camera so its inside is visible: the bottom inside is bare, clean, light-brown wood. On the right, a stack of coarse woven sacks of emmer and barley; small flat wooden tags the size of a thumb are tied with string to the necks of several sacks, each with faint unreadable ink marks. Behind everything, the wide Nile, a wooden boat with a single square sail, date palms and bright green fields on the far bank. If any people appear, they are tiny distant silhouettes with their backs turned. Warm golden light, floating dust. Do not include: faces, plaster or white layer inside the measure, paper labels, readable text, watermark.
 ```
 
 ### 07. `dau_cong.jpg` (đáy cái đấu ở cổng, nhìn từ trên xuống)
-**Kiểm tra:** nhìn thẳng từ trên xuống lòng đấu gỗ; đáy có lớp vữa vôi trắng ngà, mép nứt; vài hạt lúa; một chén gốm đỏ nhỏ đặt bên cạnh để so cỡ.
-**Nếu sai:** *"Top-down view. The inside bottom must show a pale lime-plaster layer about a finger thick, cracked at the edge where it meets the wooden wall."*
+**Bố cục:** ảnh vuông, nhìn **thẳng từ trên xuống**. Cái đấu chiếm gần hết khung, lệch trái; chén gốm đỏ ở góc dưới phải để so cỡ.
+**Kiểm tra:** lòng đấu có **lớp vữa vôi trắng ngà dày chừng một đốt ngón tay**, phẳng, **nứt một đường dọc mép** chỗ giáp thành gỗ, có **một chỗ mẻ lộ gỗ sẫm** bên dưới; vài hạt lúa; chén gốm đỏ nhỏ **có vết mẻ chữ V ở miệng**.
+**Nếu sai:**
+- Không phải nhìn thẳng xuống: *"Exact top-down view, camera directly above, looking straight into the measure."*
+- Không thấy lớp vữa: *"Inside, the bottom is covered by a pale off-white lime plaster layer about a finger thick, clearly a separate layer, cracked along the edge where it meets the wooden wall, with one chipped spot showing darker wood beneath."*
 ```
-Aspect ratio 1:1. Realistic film photograph, straight top-down view into a low round wooden grain measure from ancient Egypt, bound outside with palm-fibre rope. Inside, the bottom is covered with a pale off-white lime plaster layer about a finger thick, smoothed but with a fine crack along the edge where it meets the wooden wall, and a small chipped spot showing the darker wood underneath. A few grains of emmer wheat and grain dust lie inside. Next to the measure on a reed mat, for scale, a small red clay cup with a flared rim. Soft even daylight, sharp detail, fine film grain. No text, no watermark.
+Aspect ratio 1:1. Realistic film photograph, exact top-down view, camera directly above. A low round wooden grain measure from ancient Egypt fills most of the frame, slightly left of centre: wooden staves, bound outside with two bands of twisted palm-fibre rope, the rim worn smooth. Looking straight into it: the bottom inside is covered by a pale off-white lime plaster layer about a finger thick, clearly a separate layer laid on top of the wood, smoothed flat, with a fine dark crack running along its edge where it meets the wooden wall, and one small chipped spot where the plaster has broken away to show the darker wood underneath. A few grains of emmer wheat and a little grain dust lie on the plaster. In the lower right corner, on the reed mat, for scale, a small red clay cup with a flared rim and a small V-shaped chip in its rim. Soft even daylight, sharp detail, fine film grain. Do not include: people, hands, text, watermark.
 ```
 
 ### 08. `hop_but.jpg` (hộp bút của ký lục và con rắn)
-**Kiểm tra:** hộp gỗ mở; bảng mực hai lỗ đỏ và đen; bút sậy; rắn màu cát có **hai sừng nhỏ trên mắt**, cuộn giữa mấy mẩu giấy cói; đèn chén gần cạn.
-**Nếu sai:** *"The snake must be a horned viper: short thick sand-coloured body, two small pointed horns directly above the eyes, vertical pupils. Not a cobra."*
+**Bố cục:** ban đêm, máy thấp sát chiếu, gần. Giữa: hộp bút mở, con rắn cuộn một nửa trong hộp, đầu hướng về máy. Trái: bảng mực hai lỗ, bút sậy. Phải: đèn chén gần cạn.
+**Kiểm tra:** rắn là **rắn hổ mang sừng**: thân **to ngắn**, màu **cát vàng nhạt có đốm nâu nhạt**, đầu tam giác, **đồng tử dọc**, **hai cái sừng nhọn nhỏ dựng ngay trên hai mắt**, thấy rõ. **Không bành mang.** Bảng mực gỗ có **hai lỗ: đỏ và đen**. Hộp gỗ dài hẹp nắp trượt. Không người.
+**Nếu sai:**
+- Ra rắn hổ mang bành mang: *"Not a cobra. A horned viper: short thick sandy body, no hood, triangular head, two small sharp horns directly above the eyes."*
+- Sừng không rõ: *"Make the two small pointed horns above the eyes clearly visible, lit by the lamp."*
+- Bảng mực sai: *"A flat wooden scribe's palette with exactly two round wells of dry ink: one red, one black."*
 ```
-Aspect ratio 4:3. Realistic film photograph at night by the light of a nearly burnt-out clay oil lamp, inside a mud-brick room in ancient Egypt around 1150 BC. On a reed mat lies a scribe's long narrow wooden writing box with its sliding lid pulled open; beside it a wooden scribe's palette with two round wells of ink cake, one red and one black, and several reed pens scattered. Coiled half inside the open box, among small rolled papyrus scraps, is a horned viper: short thick body, pale sandy yellow with faint light brown blotches, triangular head, vertical pupils, and two small sharp horns standing up directly above its eyes, clearly visible. The lamp's tiny flame lights the snake's eyes. Deep shadows. No people, no readable writing, no text, no watermark.
+Aspect ratio 4:3. Realistic film photograph at night, lit only by a nearly burnt-out clay oil lamp, inside a mud-brick room in ancient Egypt, around 1150 BC. 50mm macro-style lens, camera low, close to a reed mat on the floor. In the centre lies a scribe's long narrow wooden writing box, its sliding lid pulled half open. Coiled half inside the open box, among small rolled scraps of papyrus, is a horned viper facing the camera: a short, thick body, pale sandy yellow with faint light brown blotches, a broad triangular head, vertical slit pupils, and two small sharp horns standing straight up directly above its eyes, clearly visible and lit by the lamp. It has no hood. On the left, a flat wooden scribe's palette with exactly two round wells of dry ink cake, one red and one black, and four or five reed pens scattered across the mat. On the right, the clay lamp with a tiny dying flame, its oil almost gone. The flame glints in the snake's eyes. Everything beyond the lamp light is deep shadow. Do not include: people, hands, cobra, hooded snake, readable writing, text, watermark.
 ```
 
 ### 09. `leu_deo.jpg` (dãy lều thợ trên đèo lúc nửa đêm)
-**Kiểm tra:** dãy lều đá thấp trên yên ngựa núi; phần lớn cửa có ánh đèn, chỉ một hai lều tối; trời sao; xa xa là khe Thung lũng các Vua chìm trong bóng tối.
+**Bố cục:** máy đứng ở đầu dãy, trên cao, nhìn dọc theo sống núi. Dãy lều chạy chéo từ tiền cảnh trái sang hậu cảnh phải. Bên phải dưới: khe Thung lũng các Vua tối đen.
+**Kiểm tra:** khoảng hai mươi **lều đá thấp xếp khan**, không mái hoặc mái chiếu sậy, chạy dọc yên ngựa núi; **phần lớn cửa có ánh đèn dầu vàng cam, chỉ một hai lều tối**; trời đầy sao, trăng lưỡi liềm; lối mòn đi xuống thung lũng. Không người.
+**Nếu sai:**
+- Ra làng nhà to: *"Tiny low huts of rough stacked stones, each only big enough for one man to sleep, in a single row along the ridge."*
+- Lều tối hết: *"Most of the huts glow warm orange from a small oil lamp inside; only one or two are dark."*
 ```
-Aspect ratio 16:9. Realistic film photograph at midnight on a high rocky mountain pass above the Valley of the Kings, ancient Egypt around 1150 BC. A row of about twenty small low stone huts built of rough limestone blocks, without roofs or with reed mat roofs, strung along a narrow saddle of the ridge. Most doorways show the warm orange glow of a small oil lamp; only one or two are completely dark. A narrow path winds down into the black valley below. Sky full of stars, thin crescent moon, cold blue light on the rocks. No people visible, no text, no watermark.
+Aspect ratio 16:9. Realistic film photograph at midnight on a high rocky mountain pass above the Valley of the Kings, ancient Egypt, around 1150 BC. 24mm lens, camera standing at the head of the row, slightly above it, looking along the ridge. About twenty tiny huts built of rough dry-stacked limestone blocks, each only big enough for one man to sleep, some roofless, some with reed-mat roofs, run in a single line diagonally from the left foreground to the right distance along a narrow saddle of the ridge. Most hut doorways glow with the warm orange light of a small oil lamp inside; only one or two huts in the row are completely dark. A narrow footpath winds down from the ridge into the black valley on the lower right. Above, a sky thick with stars and a thin crescent moon, cold blue light on the rocks. Do not include: people, large houses, temples, torches, modern lights, text, watermark.
 ```
 
 ### 10. `gio_ran.jpg` (sân nhà thầy bắt rắn)
-**Kiểm tra:** giỏ có nắp buộc dây, chum gốm, gậy chẻ đôi, bùa treo dây; không người.
+**Bố cục:** sân đất nhỏ buổi chiều, nhìn vào góc tường. Giữa: dãy giỏ có nắp buộc dây. Trái: chum gốm phủ vải. Phải: gậy chẻ đôi dựa tường, bùa và thảo dược treo.
+**Kiểm tra:** giỏ tròn đan lá cọ **có nắp buộc dây**, một giỏ **hé nắp**, bên trong tối; gậy gỗ dài **chẻ đôi ở đầu**; chuỗi bùa sứ xanh nhỏ. Không người, không thấy rắn.
+**Nếu sai:**
+- Có rắn lộ ra: *"No snake visible anywhere. Only the baskets; one lid slightly open with darkness inside."*
 ```
-Aspect ratio 4:3. Realistic film photograph in the small dusty courtyard of a snake catcher's house in an ancient Egyptian village, around 1150 BC. Several round lidded baskets woven from palm leaves, their lids tied down with cord, sit against a mud-brick wall; a few tall clay jars covered with cloth; a long wooden stick forked at one end leans on the wall; strings of small faience amulets and dried herbs hang from a wooden peg. One basket lid is slightly ajar, darkness inside. Afternoon sun with sharp shadows. No people, no snakes visible, no text, no watermark.
+Aspect ratio 4:3. Realistic film photograph in the small dusty courtyard of a snake catcher's house in an ancient Egyptian village, around 1150 BC, mid-afternoon. 35mm lens at standing height, looking into the corner of two mud-brick walls. In the centre, five or six round lidded baskets woven from palm leaves, of different sizes, sit in a row against the wall, their lids tied down tightly with cord; one basket's lid is slightly lifted, a thin black gap of darkness inside. On the left, two tall clay jars with cloth tied over their mouths. On the right, a long wooden stick with a forked end leans against the wall, and from a wooden peg hang strings of small blue faience amulets and bundles of dried herbs. Hard afternoon sun, sharp shadows, flies in the light. Do not include: people, visible snakes, text, watermark.
 ```
 
 ### 11. `dinh_cong.jpg` (thợ ngồi sau tường đền, ngày thứ bảy)
-**Kiểm tra:** tường đền đá khổng lồ lúc hoàng hôn; một đám đông nhỏ ngồi dọc chân tường, thấy từ xa, quay lưng; không rõ mặt.
+**Bố cục:** máy ở xa, thấp, nhìn chéo dọc chân tường đền. Tường đền khổng lồ chiếm hai phần ba khung, bên phải. Thợ ngồi thành hàng dài dọc chân tường, nhỏ, quay lưng.
+**Kiểm tra:** tường bao và cổng tháp đền đá khổng lồ trong nắng chiều; chừng bốn mươi thợ mặc khố trắng **ngồi bệt quay lưng**, thấy từ xa, không rõ mặt; vài bếp lửa nhỏ. Cảm giác đói, im lặng.
+**Nếu sai:**
+- Thấy rõ mặt người: *"All the men are seen from far away, from behind, no faces."*
+- Phù điêu có chữ rõ: *"The carvings on the wall are worn and in deep shadow, unreadable."*
 ```
-Aspect ratio 16:9. Realistic film photograph at sunset on the west bank of Thebes, ancient Egypt around 1150 BC. The massive sloping sandstone enclosure wall and pylon of a royal mortuary temple tower over the scene, its carved reliefs worn and in deep shadow, details unreadable. Along the foot of the wall, seen from far away, about forty workmen in plain white kilts sit in the dust in a long line, backs to the camera, some with heads bowed, a few small cooking fires. Long orange light, dust haze, a sense of hunger and quiet protest. No faces visible, no readable text, no watermark.
+Aspect ratio 16:9. Realistic film photograph in late afternoon on the west bank of Thebes, ancient Egypt, around 1150 BC. 50mm lens from far away and low, looking diagonally along the foot of a temple wall. On the right two-thirds of the frame, the massive sloping sandstone enclosure wall and gate tower of a royal mortuary temple rise high, its carved reliefs worn and half in deep shadow, unreadable. Along the foot of the wall, small in the frame, about forty workmen in plain white linen kilts sit on the dust in a long ragged line, all with their backs to the camera, some with heads bowed on their knees, a few small cooking fires with thin smoke and no food on them. Long orange light, dust haze in the air, a mood of hunger and silent protest. Do not include: faces, soldiers, chariots, readable inscriptions, text, watermark.
 ```
 
 ### 12. `ran_scare.jpg` (ảnh doạ)
-**Kiểm tra:** rắn hổ mang bành vươn ra từ bóng tối, rất gần ống kính, mắt phản ánh đèn.
+**Bố cục:** cận cực sát, gần như toàn bộ khung là đầu và mang rắn lao vào ống kính. Hậu cảnh: bóng tối, xa xa một đĩa mặt trời đỏ vẽ trên tường trắng.
+**Kiểm tra:** rắn hổ mang Ai Cập màu nâu sẫm **bành mang hết cỡ**, miệng hé, **lao thẳng về ống kính**; mắt bắt ánh đèn dầu cam; mép mang nhoè chuyển động, mắt và vảy sắc nét.
+**Nếu sai:**
+- Rắn quá xa, không doạ: *"Much closer: the snake's head and spread hood fill most of the frame, lunging straight at the lens."*
 ```
-Aspect ratio 16:9. Extreme close-up realistic photograph in near total darkness inside an ancient Egyptian tomb corridor. A large dark cobra rears up suddenly from the black, hood fully spread, mouth slightly open, lunging toward the camera; its eyes catch the orange reflection of a small oil lamp. Motion blur on the edge of the hood, sharp focus on the eyes and scales. Behind it, barely visible, a painted red sun disc on a white wall. Terrifying, sudden, claustrophobic. No people, no text, no watermark.
+Aspect ratio 16:9. Extreme close-up realistic horror photograph in near total darkness inside an ancient Egyptian tomb corridor, around 1150 BC. Wide-angle lens almost touching the subject. A large dark brown Egyptian cobra rears up out of the black and lunges straight at the camera: its head and fully spread hood fill most of the frame, mouth open showing pale pink inside and fangs, forked tongue out. Its eyes catch the orange reflection of a small oil lamp just below the frame. Motion blur on the edges of the hood, the eyes and the scales on the head razor sharp. Far behind it, barely visible in the dark, a painted red sun disc on a white plastered wall. Sudden, terrifying, claustrophobic. Do not include: people, text, watermark.
 ```
 
 ### 13. `chen_hin.jpg` (chén hin và mảnh gốm của Hay)
-**Kiểm tra:** chén gốm đỏ nhỏ **mẻ hình chữ V ở miệng**; mảnh gốm vỡ có các cột vạch mực mờ; một con búp bê gỗ của trẻ con bên cạnh.
+**Bố cục:** máy hơi từ trên xuống, gần, trên chiếu cói. Trái: con búp bê nằm nghiêng. Giữa: chén gốm đỏ, vết mẻ chữ V quay về máy. Phải: mảnh gốm có cột vạch mực.
+**Kiểm tra:** chén gốm đỏ nhỏ miệng loe, **vết mẻ hình chữ V ở miệng, quay về phía máy, thấy rõ**; mảnh gốm cỡ bàn tay có **mấy cột vạch mực ngắn**, mờ; **con búp bê giống hệt búp bê trong ảnh `bup_be_scare`** (gỗ dẹt hình mái chèo, tóc chuỗi hạt đất sét, mặt vẽ mắt đen, cổ áo đỏ), bụng có ngăn rỗng **đang đóng**. Không người.
+**Nếu sai:**
+- Không thấy vết mẻ: *"Turn the cup so the V-shaped chip in its rim faces the camera and is clearly visible."*
+- Búp bê khác ảnh doạ: *"Make the doll exactly the same as in the attached image (flat paddle-shaped wooden body, clay-bead hair, painted black eyes and red collar), lying on its side, its belly compartment closed."*
 ```
-Aspect ratio 4:3. Realistic film photograph on a reed mat on the earthen floor of a poor house in an ancient Egyptian village, around 1150 BC. A small red pottery cup with a flared rim and a clear V-shaped chip in its rim. Next to it a broken pottery sherd the size of a palm, covered with short columns of faint black ink tally marks, blurred and unreadable. Beside them lies a simple carved wooden child's doll with a faded painted dress and no detailed face. Soft window light from the side, dust. No people, no readable text, no watermark.
+Aspect ratio 4:3. Realistic film photograph on a reed mat on the earthen floor of a poor house in an ancient Egyptian village, around 1150 BC. 50mm lens, camera slightly above, close. In the centre, a small red pottery cup with a flared rim, about the size of a fist, turned so that a clear V-shaped chip in its rim faces the camera. On the right, a broken pottery sherd the size of a palm, covered with four or five short columns of faint black ink tally strokes, blurred and unreadable. On the left, lying on its side, a child's flat paddle-shaped wooden doll painted with simple black eyes, a red patterned collar and dress, with hair made of strings of small brown clay beads; a small hollow compartment in its belly is closed with a wooden plug. Soft side light from a small window, dust in the air, quiet mood. Do not include: people, hands, modern toys, readable text, watermark.
 ```
 
 ### 14. `lang_sang.jpg` (kết thúc đúng: buổi sáng sau cùng)
-**Kiểm tra:** cổng làng mở; hai con lừa chở bao lúa đi vào; ghế gạch cạnh cổng trống trơn (cái đấu cũ đã bị mang đi); nắng sớm. Không thấy mặt người.
+**Bố cục:** cùng góc nhìn với ảnh `cong_lang` (đính kèm làm tham chiếu). Cổng mở toang, hai con lừa chở bao lúa đi vào, thấy từ phía sau. Ghế gạch cạnh cổng trống trơn, chỉ còn vệt tròn trên bụi.
+**Kiểm tra:** cổng, tường, ghế gạch **giống ảnh `cong_lang`**; **cái đấu không còn trên ghế**, chỉ còn một vệt tròn nhạt trong bụi; lừa chở bao đầy đi vào làng; nắng sớm vàng, chim bay. Không thấy mặt người.
+**Nếu sai:**
+- Cái đấu vẫn còn: *"The bench is empty. The grain measure is gone, only a pale round mark in the dust where it stood."*
+- Cảnh khác ảnh 02: *"Keep the same gate, wall and bench as in the attached image, same angle."*
 ```
-Aspect ratio 16:9. Realistic film photograph at sunrise at the open gate of an ancient Egyptian walled workmen's village, around 1150 BC. The low thick wooden door stands wide open in the whitewashed mud-brick wall. Two grey donkeys loaded with full coarse woven sacks of grain walk in through the gate along the dirt street, seen from behind. Beside the gate, the mud-brick bench is empty: only a pale round mark in the dust where a grain measure used to stand. Golden first light, long shadows, a few birds, thin smoke rising inside the village. Peaceful but melancholic. No faces visible, no readable text, no watermark.
+Aspect ratio 16:9. Realistic film photograph at sunrise, the same place and the same camera angle as the attached image of the village gate: the only gate of a small walled workmen's village in ancient Egypt, around 1150 BC. The low heavy wooden door now stands wide open in the whitewashed mud-brick wall. Two grey donkeys loaded with full, heavy, coarse woven sacks of grain walk in through the gate along the dirt street, seen from behind. Beside the gate, the low mud-brick bench is empty: only a pale round mark in the dust where a grain measure used to stand. Golden first light floods the street, long shadows, a few birds in the air, thin smoke rising from inside the village. Peaceful but melancholic. Do not include: faces, the grain measure, text, watermark.
 ```
 
-### 15. `thu_den_scare.jpg` (ảnh doạ, mở ở ngày thứ ba)
+### 15. `thu_den_scare.jpg` (ĐÃ CÓ · ảnh doạ, mở ở ngày thứ ba)
 **Kiểm tra:** trong nhà nguyện lúc nửa đêm, một xác người quấn vải liệm vàng ố ngồi xổm trước bàn cúng, tay khô đét cầm bút sậy viết vào lòng bát gốm đỏ; vải trên mặt tuột một nửa, lộ mặt khô quắt, hốc mắt sâu, một con mắt đục trắng nhìn thẳng ống kính; mực đen nhỏ giọt từ bát xuống. Chữ không đọc được.
 **Nếu sai:** *"It must be a dried mummified corpse in loose yellowed linen, crouching and writing into the red bowl, half its face unwrapped, one milky eye staring at the camera. Ink unreadable."*
 ```
 Aspect ratio 16:9. Realistic horror film photograph at midnight inside a tiny mud-brick family chapel in an ancient Egyptian village, around 1150 BC, lit only by one guttering clay oil lamp on the floor. A dead man wrapped in loose, stained, yellowed burial linen crouches in front of a low stone offering table, his back hunched. With a shrivelled, blackened, claw-like hand he writes with a reed pen inside a shallow red pottery bowl; the black ink spirals in the bowl are wet, blurred, unreadable, dripping over the rim onto the stone. The linen over his face has slipped half away, revealing dried leathery skin pulled tight over the skull, lips drawn back from yellow teeth, a deep empty eye socket and one clouded milky-white eye turned straight toward the camera, as if he has just noticed us. Sand trickles from the folds of the linen. Deep black shadows, harsh low light from below, grain and slight motion blur on the hand. Terrifying, intimate, wrong. No readable text, no watermark.
 ```
 
-### 16. `ba_ran_scare.jpg` (ảnh doạ chính, mở ở ngày thứ sáu)
+### 16. `ba_ran_scare.jpg` (ĐÃ CÓ · ảnh doạ chính, mở ở ngày thứ sáu)
 **Kiểm tra:** xác Hay nằm sấp trong hành lang lăng, sau đầu vỡ, vũng máu khô sẫm dưới đầu; mặt ngoảnh về ống kính, mắt mở trợn trắng, miệng há; trên vách ngay trên xác là hình Bà Rắn (rắn hổ mang dựng đứng, mang bành, đội đĩa mặt trời đỏ, nền vữa trắng có lưới kẻ đỏ) với đôi mắt ánh lên như mắt thật, sơn đỏ chảy dài xuống tới lưng xác; chén đèn đổ, bát màu đỏ đổ.
 **Nếu sai:** *"The Snake Lady must stay a painting on plaster with a red grid, only its eyes look alive. The man lies face down with his head turned toward us, dried blood under his head, the red paint running down the wall onto his back."*
 ```
 Aspect ratio 16:9. Realistic horror film photograph, low angle at floor level, inside an unfinished ancient Egyptian royal tomb corridor, around 1150 BC, lit by a single overturned clay oil lamp still flickering on the stone floor. A dead young painter in a simple white linen kilt lies face down on the rough limestone floor, arms flung forward, his head turned sideways toward the camera: eyes wide open and rolled up so only the whites show, mouth slack and open, dust on his lips. The back of his skull is broken, and a large pool of dark dried blood has spread under his head and soaked into the stone dust. A reed brush lies beside his fingers and a bowl of red paint has spilled across the floor, blending with the blood. On the white plaster wall directly above him, ruled with a faint red grid, a half-finished painting of an upright cobra with hood spread and a red sun disc on its head; the painted eyes glisten wet and alive and look down at him, and long streaks of fresh red paint run down the wall from the sun disc onto his back like blood. Everything beyond the lamplight is black. Extremely disturbing, sacred and cruel. No readable text, no watermark.
 ```
 
-### 17. `bup_be_scare.jpg` (ảnh doạ, khi mở bốn thanh gỗ)
+### 17. `bup_be_scare.jpg` (ĐÃ CÓ · ảnh doạ, khi mở bốn thanh gỗ)
 **Kiểm tra:** bé gái Ai Cập năm sáu tuổi (tóc cạo chừa một lọn bên đầu) đứng trong khung cửa tối, mặt trắng bệch, mắt đen mở to phản ánh ánh đèn, nhìn thẳng ống kính; ôm con búp bê gỗ dẹt hình mái chèo, tóc chuỗi hạt đất sét; bụng búp bê mở, cát chảy ra; một con rắn hổ mang sừng màu cát quấn quanh cổ tay bé, bé không sợ.
 **Nếu sai:** *"The doll is a flat paddle-shaped wooden doll with clay-bead hair. The snake is a short thick sand-coloured horned viper with two small horns above the eyes, coiled around the child's wrist. The child is calm and staring."*
 ```
