@@ -178,16 +178,23 @@ function showHome() {
         <span class="case-art"><span class="soon-lock">🔒</span></span>
         <span class="case-body"><span class="cover-series">${k.number} · ${k.place}</span><b class="case-title">${k.title}</b>
         <span class="case-blurb">${k.short}</span>
-        <span class="case-facts">${k.level} · ${k.time} · ${k.questions} trọng điểm</span><span class="case-status case-status--soon">ĐANG HOÀN THÀNH · Sắp ra mắt</span></span></div>`;
+        ${ratingHtml(k)}<span class="case-facts">${k.level} · ${k.time} · ${k.questions} trọng điểm</span><span class="case-status case-status--soon">ĐANG HOÀN THÀNH · Sắp ra mắt</span></span></div>`;
       const p = peek(k.id), status = p.failed ? (k.endings ? "Đã đi hết một tuyến · mở lại để đi tuyến khác" : "THẤT BẠI · mở lại để điều tra lại") : p.stage >= k.questions ? "Đã khép hồ sơ" : p.started ? `Đang điều tra · trọng điểm ${p.stage + 1}/${k.questions}` : "Chưa mở";
       return `<button class="case-card" data-case="${k.id}" style="--cover:url(../img/${k.id}/${k.cover}.jpg)">
         <span class="case-art"></span>
         <span class="case-body"><span class="cover-series">${k.number} · ${k.place}</span><b class="case-title">${k.title}</b>
         <span class="case-blurb">${k.short}</span>
-        <span class="case-facts">${k.level} · ${k.time} · ${k.questions} trọng điểm${k.endings ? ` · ${k.endings} kết thúc` : ""}</span><span class="case-status">${status}${k.endings ? ` · 🏁 ${p.endings}/${k.endings}` : ""}</span></span></button>`;
+        ${ratingHtml(k)}<span class="case-facts">${k.level} · ${k.time} · ${k.questions} trọng điểm${k.endings ? ` · ${k.endings} kết thúc` : ""}</span><span class="case-status">${status}${k.endings ? ` · 🏁 ${p.endings}/${k.endings}` : ""}</span></span></button>`;
     }).join("")}</div>
     <p class="credit">Truyện và nhân vật hoàn toàn hư cấu. Có yếu tố kinh dị, tâm linh: nên đeo tai nghe.</p>
   </div>`;
+}
+
+/** Two 1–5 star rows (difficulty, horror) for a case card: filled stars gold, the rest faint. */
+function ratingHtml(k) {
+  if (!k.diff && !k.fear) return "";
+  const row = (label, n) => `<span class="rate"><span class="rate-l">${label}</span><span class="stars" aria-label="${label} ${n}/5">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= n ? "on" : ""}">★</i>`).join("")}</span></span>`;
+  return `<span class="case-rating">${row("Độ khó", k.diff)}${row("Độ kinh dị", k.fear)}</span>`;
 }
 
 // ---------------------------------------------------------------- cover
@@ -206,7 +213,7 @@ function showCover() {
       <h1 class="cover-title">${META.title}</h1>
       <div class="cover-place">${META.place}</div>
       <p class="cover-blurb">${META.blurb}</p>
-      <div class="cover-facts"><span><b>Người chơi</b>${META.players}</span><span><b>Thời gian</b>${META.time}</span><span><b>Độ khó</b>${META.level}</span></div>
+      <div class="cover-facts"><span><b>Người chơi</b>${META.players}</span><span><b>Thời gian</b>${META.strict ? `${TIME_TOTAL_MIN()} phút` : "Không giới hạn"}</span><span><b>Độ khó</b>${META.level}</span></div>
       <div class="warn">⚠ Trò chơi có yếu tố <b>kinh dị, tâm linh</b>, âm thanh gây giật mình${state.fear === "full" ? " và hình ảnh doạ" : ""}. Nên đeo tai nghe, chơi trong phòng tối… nếu bạn dám.</div>
       ${settingsHtml()}
       <div class="cover-actions">

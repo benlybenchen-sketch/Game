@@ -341,6 +341,11 @@ body[data-fear="soft"] .apparition { display: none; }
 .case-title { font-family: "Oswald", var(--serif); font-size: 32px; line-height: 1.1; color: #efe6d4; }
 .case-blurb { font-size: 15px; }
 .case-facts { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.case-rating { display: flex; flex-wrap: wrap; gap: 4px 18px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.rate { display: inline-flex; align-items: center; gap: 6px; }
+.stars i { font-style: normal; font-size: 17px; letter-spacing: 1px; color: rgba(239, 230, 212, .14); }
+.stars i.on { color: #e3b341; text-shadow: 0 0 6px rgba(227, 179, 65, .45); }
+.case-card--soon .stars i.on { color: #b8923a; }
 .case-status { font-family: var(--mono); font-size: 12px; color: var(--red2); margin-top: auto; }
 .back-home { font-family: var(--mono); font-size: 12px; margin-bottom: 10px; }
 .case-card--soon { cursor: default; opacity: .72; filter: grayscale(.6); }

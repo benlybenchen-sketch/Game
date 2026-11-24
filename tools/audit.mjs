@@ -97,4 +97,12 @@ if (+id >= 4) {
     if (p.tool === "lockbox" && !(S.locks && S.locks[p.media])) bad(`rule 25: lock ${p.media} has no code in secret.locks`);
   }
 }
+// home card: time shown must be the in-game timer; ratings 1–5 present
+{ const { CASES } = await import("../cases/list.js"); const k = CASES.find((x) => x.id === id);
+  if (!k) bad("case missing from cases/list.js");
+  else {
+    const want = C.META.strict ? `${C.META.timeLimit || 150} phút` : "Không giới hạn thời gian";
+    if (k.time !== want) bad(`list.js time "${k.time}" differs from the game timer "${want}"`);
+    for (const f of ["diff", "fear"]) if (!(k[f] >= 1 && k[f] <= 5)) bad(`list.js ${f} must be 1–5 stars`);
+  } }
 console.log(problems.length ? problems.map((p) => "  ! " + p).join("\n") : "  ok");
