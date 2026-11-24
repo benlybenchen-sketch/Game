@@ -14,7 +14,12 @@ const id = process.env.CASE, U = `http://localhost:8063/?case=${id}&preview=1`;
       if (mode === "lost" && !hasFatal) { await ctx.close(); continue; }
       const st = mode === "done" ? { started: true, stage: n, seen: {} } : { started: true, stage: n - 1, seen: {}, failed: { q: "q" + n, choice: "A." } };
       await p.evaluate(([id, st]) => localStorage.setItem("hsnd.case." + id, JSON.stringify(st)), [id, st]);
-      await p.goto(U); await p.click('[data-cv="go"]'); await p.waitForTimeout(400);
+      await p.goto(U); await p.waitForTimeout(300);
+      // nothing (cover picture, overlay) may sit on top of the cover's buttons
+      const covered = async (sel) => p.evaluate((sel) => { const e = document.querySelector(sel); if (!e) return "missing"; const r = e.getBoundingClientRect(); if (!r.width) return "hidden";
+        const t = document.elementFromPoint(r.left + r.width / 2, Math.min(r.top + r.height / 2, innerHeight - 2)); return t && (e === t || e.contains(t)) ? "" : (t ? t.className || t.tagName : "nothing"); }, sel);
+      for (const sel of ['[data-cv="go"]', ".cover-title"]) { await p.evaluate((sel) => document.querySelector(sel)?.scrollIntoView({ block: "center" }), sel); await p.waitForTimeout(100); const c = await covered(sel); if (c) errs.push(`cover: ${sel} covered by ${c}`); }
+      await p.click('[data-cv="go"]'); await p.waitForTimeout(400);
       // close any dialog that might be open
       for (let i = 0; i < 3; i++) { const d = await p.$('[data-dlg="ok"]'); if (d && await d.isVisible()) { await d.click(); await p.waitForTimeout(200); } }
       const docIds = await p.$$eval("[data-doc]", (els) => [...new Set(els.map((e) => e.dataset.doc))]);
@@ -30,6 +35,9 @@ const id = process.env.CASE, U = `http://localhost:8063/?case=${id}&preview=1`;
         await p.waitForTimeout(150);
         const play = await p.$(".tape button");
         if (play && await play.isVisible()) { await play.click().catch(() => {}); await p.waitForTimeout(300); await play.click().catch(() => {}); }
+        // the document title must be visible and on top (no picture or overlay hiding the reader)
+        for (let i = 0; i < 5 && await p.$("#fx .scare"); i++) { await p.click("#fx .scare", { force: true }).catch(() => {}); await p.waitForTimeout(800); }
+        { const c = await covered(".reader-head h2"); if (c && c !== "hidden") errs.push(`${d}: reader title covered by ${c}`); }
         const ov = await p.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
         if (ov > 2) errs.push(`${d}: page wider than screen by ${ov}px`);
         for (let i = 0; i < 2; i++) { const dl = await p.$('[data-dlg="ok"]'); if (dl && await dl.isVisible()) await dl.click(); }

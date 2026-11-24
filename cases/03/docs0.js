@@ -121,7 +121,7 @@ export default [
       ${hand(`Cả bọn cười. Khiêm nói chén chạy bậy. Dung hỏi Lan có đẩy không. Lan nói không.<br>
         Băng cối có ghi lại buổi này (cuộn số 1).<br>
         21 giờ 50: tôi ra ban công hút thuốc.`)}
-      <p class="note">Hàng chữ cuối cùng viết bằng một nét khác, nghiêng về phía trước, mực xanh đậm hơn:</p>
+      <p class="note">Hàng chữ cuối cùng viết bằng một nét khác, nghiêng về phía trước:</p>
       ${hand(`23 giờ 10. Lan can ban công gãy. Anh Tùng rơi xuống sân gạch. Chết trước khi xe cứu thương tới.`, "fwd")}
     </div>`,
   },

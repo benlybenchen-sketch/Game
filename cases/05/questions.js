@@ -5,7 +5,7 @@ const P = (roles) => ({ id: "pins", type: "pins", count: roles.length, label: `G
 
 export const QUESTIONS = [
   {
-    id: "q1", stage: 0, title: "Người không ai thấy",
+    id: "q1", stage: 0, title: "Lần thăm 1",
     ask: "Đọc hồ sơ trạm giao. Lần cuối cùng có người ngoài nhìn thấy bà Hằng là ngày nào? Bà Hằng đang có tên trong danh sách bệnh gì? Trên sơ đồ nhà, đánh dấu gian mà bà Lụa nói mùi nặng nhất.",
     parts: [
       { id: "last", type: "text", label: "Ngày cuối cùng có người ngoài nhìn thấy bà Hằng (ngày/tháng/năm)", placeholder: "vd 1/1/1990" },
@@ -21,7 +21,7 @@ export const QUESTIONS = [
     clock: "20:10",
   },
   {
-    id: "q2", stage: 1, title: "Hai lời kể",
+    id: "q2", stage: 1, title: "Lần thăm 2",
     ask: "So lời ông Khải và lời cháu Ngân trong biên bản hỏi chuyện. Chỉ ra hai câu không thể cùng đúng. Mùi hắc trong nhà là mùi gì? Mỗi lần được hỏi về bà Hằng, ông Khải làm gì?",
     parts: [
       { id: "k", type: "line", label: "Câu của ông Khải (bấm vào câu trong biên bản)" },
@@ -39,7 +39,7 @@ export const QUESTIONS = [
     clock: "21:30",
   },
   {
-    id: "q3", stage: 2, title: "Người trong ảnh",
+    id: "q3", stage: 2, title: "Lần thăm 3",
     ask: "Soi tấm “Vợ tôi, Tết 1991” và so với ảnh năm 1988. Tìm ba chi tiết cho thấy người ngồi bên cửa sổ không phải bà Hằng. Ai đã viết các giấy xin nghỉ gửi trường? Chỉ ra hai dấu vết trong nét chữ.",
     parts: [
       { id: "ct", type: "set", count: 3, label: "Ba chi tiết trong ảnh (soi bằng đèn pin)", doc: "vo_toi", how: "soi ảnh rồi bấm “Ghi vào sổ”" },
@@ -56,7 +56,7 @@ export const QUESTIONS = [
     clock: "23:50",
   },
   {
-    id: "q4", stage: 3, title: "Ai tin trước",
+    id: "q4", stage: 3, title: "Lần thăm 4",
     ask: "Sắp xếp sáu dòng ghi chép theo đúng thứ tự ngày tháng. Theo giáo trình, ai là người khởi phát hoang tưởng trong nhà này? Tiếng ho trong băng đêm là tiếng gì, và khi cho băng chạy chậm, câu cuối cùng nghe được là gì? Nếu tách hai người ra, người tiếp nhận thường sẽ thế nào?",
     parts: [
       { id: "ord", type: "order", label: "Sáu dòng ghi chép, từ sớm nhất đến muộn nhất (bấm ▲▼ để đổi chỗ)", items: [
@@ -83,7 +83,7 @@ export const QUESTIONS = [
     clock: "01:20",
   },
   {
-    id: "q5", stage: 4, title: "Hai năm trước",
+    id: "q5", stage: 4, title: "Lần thăm 5",
     ask: "Bà Hằng chết thế nào, đêm đó ông Khải ở đâu, và Ngân đã làm gì? Ghép trang vở bị xé để đọc. Theo lịch vạn niên, đêm bà Hằng mất là ngày bao nhiêu âm lịch? Ông Khải đã mua gì cho “đêm mẹ khỏi bệnh”, và theo kế hoạch ai sẽ ngủ trong buồng?",
     parts: [
       { id: "chet", type: "choice", label: "Nguyên nhân bà Hằng chết", options: ["Lao phổi giai đoạn cuối, ho ra nhiều máu", "Lên cơn khó thở vì van tim, thiếu thuốc", "Nhồi máu cơ tim lúc đang ngủ say trong buồng", "Ngộ độc formol trong buồng kín", "Ngộ độc khí than trong buồng kín"] },
@@ -108,7 +108,7 @@ export const QUESTIONS = [
     clock: "02:40",
   },
   {
-    id: "q6", stage: 5, title: "Đêm nay",
+    id: "q6", stage: 5, title: "Lần thăm 6",
     ask: "Đêm Ngân chọn là đêm nào trên lịch bloc năm 1991? Khoanh tờ lịch đó. Nếu chỉ thu than ở gian giữa thì còn bao nhiêu than trong nhà, nằm ở đâu, và Ngân vào đó bằng lối nào?",
     parts: [
       { id: "ngay", type: "spot", label: "Tờ lịch của đêm Ngân chọn", doc: "lich", how: "Mở lịch bloc, lật tới tờ cần tìm rồi bấm “Khoanh tờ này”." },
@@ -124,14 +124,14 @@ export const QUESTIONS = [
     clock: "14:50",
   },
   {
-    id: "q7", stage: 6, title: "Bước ngoặt", fatal: true,
+    id: "q7", stage: 6, title: "Chiều 30/12", fatal: true,
     ask: "Thầy Sinh hỏi: đêm nay làm thế nào? Đề xuất của bạn sẽ được thực hiện ngay. Bạn chỉ được nói một lần.",
     parts: [
       { id: "pa", type: "choice", label: "Đề xuất của bạn cho đêm nay", options: [
         "A. Ông Khải về đồn tối nay; cháu Ngân ngủ nhờ nhà bà Lụa, có người lớn trông; thu than ở gian giữa; sáng mai mở buồng.",
-        "B. Mở buồng ngay chiều nay; có công an chứng kiến; thu than ở gian giữa; tối nay hai cha con ở nhà với cán bộ trạm.",
-        "C. Thầy Sinh nói thật với cháu Ngân rằng mẹ đã mất; thu than ở gian giữa; chưa mở buồng; cán bộ trạm ở lại trông nhà.",
-        "D. Thu than ở gian giữa; chưa mở buồng; sáng mai đưa cháu Ngân lên viện tỉnh; đêm nay cán bộ trạm ở lại trông nhà.",
+        "B. Mở buồng ngay chiều nay, có công an chứng kiến; thu than ở gian giữa; tối nay hai cha con ở nhà, cán bộ trạm ở cùng.",
+        "C. Thầy Sinh nói thật với cháu Ngân, rằng mẹ đã mất; thu than ở gian giữa; chưa mở buồng; cán bộ trạm ở lại trông nhà.",
+        "D. Thu than ở gian giữa; chưa mở buồng; sáng mai đưa cháu Ngân lên viện tỉnh, có bố đi cùng; đêm nay cán bộ trạm trông nhà.",
         "E. Tối nay đưa cháu Ngân lên viện tỉnh, có người ngồi cạnh; thu than ở gian giữa; chưa mở buồng; ông Khải ở nhà.",
         "F. Tối nay đưa cháu Ngân lên viện tỉnh, có bố ngồi cạnh; thu than ở gian giữa; chưa mở buồng; cán bộ trạm trông nhà.",
         "G. Tối nay đưa ông Khải lên viện tỉnh; thu than ở gian giữa; chưa mở buồng; cháu Ngân ngủ ở nhà, cán bộ thức canh.",

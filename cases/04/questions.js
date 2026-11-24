@@ -9,7 +9,7 @@ const P = (roles) => ({ id: "pins", type: "pins", count: roles.length, label: `G
 
 export const QUESTIONS = [
   {
-    id: "q1", stage: 0, title: "Hồ sơ phòng 7",
+    id: "q1", stage: 0, title: "Đêm trực 1",
     ask: "Đọc hồ sơ nhập viện của Trần Ngọc Thảo. BS. Kha chẩn đoán gì? Thảo bị chấn thương sọ não ngày nào? Bà Hoa ở Sài Gòn bao nhiêu ngày, ngày đầu tiên Thảo nói “bà không phải mẹ” là ngày nào, và cách ngày chấn thương bao lâu?",
     parts: [
       { id: "dx", type: "choice", label: "Chẩn đoán của BS. Kha", options: ["Tâm thần phân liệt thể hoang tưởng, khởi phát muộn", "Hội chứng Capgras sau chấn thương sọ não", "Hội chứng Fregoli sau chấn thương sọ não", "Trầm cảm nặng có triệu chứng loạn thần", "Rối loạn phân ly sau sang chấn tâm lý"] },
@@ -27,7 +27,7 @@ export const QUESTIONS = [
     clock: "06:10",
   },
   {
-    id: "q2", stage: 1, title: "Biên bản phỏng vấn",
+    id: "q2", stage: 1, title: "Đêm trực 2",
     ask: "So lời Thảo nói về anh Khoa với lời Thảo nói về mẹ, đặt cạnh sách giáo khoa. Chỉ ra một câu Thảo nói về mẹ và một câu Thảo nói về anh Khoa: câu nào khớp sách, câu nào không. Điện thoại cho thấy điều gì?",
     parts: [
       { id: "line", type: "line", label: "Một câu Thảo nêu khác biệt cụ thể, kiểm chứng được (bấm vào câu trong biên bản phỏng vấn)" },
@@ -43,7 +43,7 @@ export const QUESTIONS = [
     clock: "06:05",
   },
   {
-    id: "q3", stage: 2, title: "Thăm nuôi",
+    id: "q3", stage: 2, title: "Đêm trực 3",
     ask: "Kiểm chứng ba chi tiết Thảo nêu. Năm 1985 bà Hoa bị sốc phản vệ vì gì? Bà Hoa đã đeo nhẫn cưới bao nhiêu năm tính tới 1996? Ngày 12/10, bà Hoa ăn món gì ở căng tin? Ai đã giết con Mực?",
     parts: [
       { id: "allergen", type: "choice", label: "Chất làm bà Hoa sốc phản vệ năm 1985", options: ["Penicillin", "Tôm", "Đậu phộng", "Ong đốt", "Thuốc tê"] },
@@ -61,7 +61,7 @@ export const QUESTIONS = [
     clock: "12:00",
   },
   {
-    id: "q4", stage: 3, title: "Tiếng ru",
+    id: "q4", stage: 3, title: "Đêm trực 4",
     ask: "Nghe băng Tết 1990 và băng buổi thăm 19/10, so cách xưng hô và bài ru. BS. Kha nói người lạ không thể biết hết chuyện nhà: theo thư và gia phả, ai đã có thể biết?",
     parts: [
       { id: "goi", type: "choice", label: "Chữ Thảo và bà Hoa trong băng 1990 dùng để gọi mẹ", options: ["Mẹ", "Má", "U", "Bầm", "Mợ"] },
@@ -80,7 +80,7 @@ export const QUESTIONS = [
     clock: "05:50",
   },
   {
-    id: "q5", stage: 4, title: "Hai chân dung",
+    id: "q5", stage: 4, title: "Đêm trực 5",
     ask: "Người phụ nữ là ai so với bà Hoa? So từng đặc điểm với bà Hoa năm 1990 (chỉ dựa vào những gì hồ sơ đang có). Vậy người phụ nữ là ai?",
     parts: [
       { id: "kind", type: "choice", label: "Quan hệ của người phụ nữ với bà Hoa", options: ["Chính là bà Hoa, đã thay đổi sau ba tháng", "Em sinh đôi khác trứng, chỉ hao hao giống", "Em sinh đôi cùng trứng, giống y hệt cùng bên", "Em sinh đôi cùng trứng, kiểu soi gương", "Người lạ phẫu thuật cho giống"] },
@@ -99,7 +99,7 @@ export const QUESTIONS = [
     clock: "17:30",
   },
   {
-    id: "q6", stage: 5, title: "Bản giám định",
+    id: "q6", stage: 5, title: "Đêm trực 6",
     ask: "Điền bản giám định pháp y tâm thần mà toà chờ ngày 28/10. Người được chôn ở Sài Gòn dưới tên Phạm Thị Huệ là ai, chết vì gì? Hai dấu vân tay thuộc loại nào? Trong hộp bánh có gì? Động cơ là gì? Và kết luận của bạn về Thảo.",
     parts: [
       { id: "buried", type: "choice", label: "Người được chôn ở Sài Gòn dưới tên Phạm Thị Huệ", options: ["Phạm Thị Huệ", "Lê Thị Hoa", "Một người vô danh"] },

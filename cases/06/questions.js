@@ -17,7 +17,7 @@ const P = (roles) => ({ id: "pins", type: "pins", count: roles.length, label: `G
 
 export const QUESTIONS = [
   {
-    id: "q1", stage: 0, title: "Canh thiếp không tên",
+    id: "q1", stage: 0, title: "Đêm 17",
     ask: "Phu nhân nói canh thiếp không tên là của cô Lý Xuân Hoa. Tự tính tứ trụ của từng người có trong hồ sơ. Bát tự trên canh thiếp là của ai, người đó sinh ngày nào theo Tây lịch, và trụ nào phân biệt người đó với người có bát tự gần giống nhất?",
     parts: [
       { id: "who", type: "choice", label: "Bát tự trên canh thiếp là của", options: ["Lý Xuân Hoa", "Ôn Tú Nương", "Thuý Nhi", "Không khớp ai trong hồ sơ"] },
@@ -32,7 +32,7 @@ export const QUESTIONS = [
     clock: "01:40",
   },
   {
-    id: "q2", stage: 1, title: "Ngõ Liễu",
+    id: "q2", stage: 1, title: "Đêm 18",
     ask: "Đọc sổ của bà Hoàng (số tiền chỉ có trên hình bàn tính). Phu nhân đặt mua cô dâu chết Lý Xuân Hoa ngày nào âm lịch, giá bao nhiêu? Đặt sớm hơn ngày vớt được xác mấy ngày? Hôm trả hàng, bà Hoàng hoàn lại bao nhiêu?",
     parts: [
       { id: "ngay", type: "text", label: "Ngày đặt mua (ngày/tháng âm lịch)", placeholder: "vd 1/7" },
@@ -48,7 +48,7 @@ export const QUESTIONS = [
     clock: "02:15",
   },
   {
-    id: "q3", stage: 2, title: "Mật áp Nghĩa Thịnh Xương",
+    id: "q3", stage: 2, title: "Đêm 19",
     ask: "Giải mật áp trên hối phiếu trả cho Ôn Lão Tam: tháng, ngày, số bạc. Hối phiếu được lập trước ngày vớt được xác mấy ngày?",
     parts: [
       { id: "thang", type: "number", label: "Tháng (âm lịch)", unit: "" },
@@ -64,7 +64,7 @@ export const QUESTIONS = [
     clock: "02:50",
   },
   {
-    id: "q4", stage: 3, title: "Xác vớt ở Hạ Than",
+    id: "q4", stage: 3, title: "Đêm 20",
     ask: "Theo Tẩy Oan Tập Lục, người trong quan tài chết trước hay sau khi xuống nước: bấm câu chứng minh trong phiếu khám. Người ấy làm nghề gì? Người ấy có phải Triệu Thừa Tự không? Bấm câu quyết định điều đó.",
     parts: [
       { id: "chet", type: "line", label: "Câu trong phiếu khám quyết định người này chết trước hay sau khi xuống nước (bấm vào câu đó)" },
@@ -78,7 +78,7 @@ export const QUESTIONS = [
     clock: "03:30",
   },
   {
-    id: "q5", stage: 4, title: "Lễ phát tang",
+    id: "q5", stage: 4, title: "Sáng 21",
     ask: "Đối chiếu sổ phát tang với Ngũ phục đồ. Bấm hai câu cho thấy hai người để tang không đúng với quan hệ của họ với người chết. Tú Nương để tang người chết với tư cách gì? Vậy người trong quan tài là ai?",
     parts: [
       { id: "a", type: "line", label: "Người thứ nhất (bấm vào câu)" },
@@ -94,7 +94,7 @@ export const QUESTIONS = [
     clock: "09:10",
   },
   {
-    id: "q6", stage: 5, title: "Trang sổ cuối",
+    id: "q6", stage: 5, title: "Đêm 21",
     ask: "Giải câu đố chiết tự cuối cùng của thầy Khâu. “Triệu Thừa An” trong quá kế thư là ai? Ngày sinh ghi trong quá kế thư ứng với ngày nào Tây lịch? Nếu lễ diễn ra, theo hôn thư Tú Nương sẽ nằm cạnh ai?",
     parts: [
       { id: "chu", type: "text", label: "Hai chữ thầy Khâu giấu (âm Hán Việt hoặc chữ Hán)", placeholder: "" },
@@ -112,7 +112,7 @@ export const QUESTIONS = [
     clock: "21:40",
   },
   {
-    id: "q7", stage: 6, title: "Giờ Tý", fatal: true,
+    id: "q7", stage: 6, title: "Đêm 22", fatal: true,
     ask: "Giờ Hợi đêm 22. Phu nhân đưa bút cho bạn ký hôn thư. Bạn chỉ làm được một việc. Việc bạn chọn sẽ được làm ngay.",
     parts: [{ id: "pa", type: "choice", label: "Việc bạn làm đêm nay", options: OPTIONS_7 }],
     memo: "",

@@ -59,7 +59,7 @@ export default [
       <p>THUỐC HÃM: hypo 250 g / lít. Mùa hè thêm phèn.</p>
       <p>BỂ LÀM CỨNG (mùa nồm, phim mềm): ${ln("st_formol", "formol (formalin) 10 ml cho 1 lít nước. Mùi rất hắc, cay mắt, phải mở cửa.")}</p>
       <p>${ln("st_can", "Can 20 lít formol mang từ phòng hoá nghiệm mỏ về, tháng 6/1988, dùng dè.")} Vôi bột 2 bao để hút ẩm giấy ảnh.</p>
-      <p class="small">Dòng viết thêm bằng bút chì, nét khác, rất mạnh tay: ${ln("st_het", "“Tháng 1/1990: hết nửa can.”")}</p>`)}
+      <p class="small">Bút chì, ở mép dưới trang: ${ln("st_het", "“Tháng 1/1990: hết nửa can.”")}</p>`)}
     </div>`,
   },
 

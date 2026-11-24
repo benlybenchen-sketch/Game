@@ -64,8 +64,8 @@ export const META = {
   coverStyle: "background-size:auto 100%;background-position:right center;background-repeat:no-repeat;background-color:#07090a",
   music: "Minh hon.m4a",      // uploaded by the owner (was am_hon.mp3 from tools/compose06c.py)
   ambience: "ghostWedding",   // fallback if the file fails: synthesized procession in js/audio.js
-  folders: ["Đêm 17 · Canh thiếp", "Đêm 18 · Ngõ Liễu", "Đêm 19 · Phiếu hiệu", "Đêm 20 · Phiếu khám xác", "Sáng 21 · Lễ phát tang",
-    "Đêm 21 · Trang sổ cuối", "Đêm 22 · Giờ Hợi", "Rạng sáng 23", "Sau đêm 22"],
+  folders: ["Đêm 17", "Đêm 18", "Đêm 19", "Đêm 20", "Sáng 21",
+    "Đêm 21", "Đêm 22", "Rạng sáng 23", "Sau đêm 22"],
   wrong: [
     "Chưa đúng. Thầy Khâu dặn: đừng tin con số nào chưa tự tính lại.",
     "Sai. Trong phủ này, giấy tờ nào cũng có người đã sửa hoặc đã giấu một nửa.",

@@ -58,7 +58,7 @@ export const META = {
   // Portrait cover: show it whole on the right, so the spoon and the hair from under the door stay in view.
   coverStyle: "background-size:auto 100%;background-position:right center;background-repeat:no-repeat;background-color:#07090a",
   folders: ["Lần thăm 1 · Thứ Năm 19/12", "Lần thăm 2 · Thứ Bảy 21/12", "Lần thăm 3 · Thứ Hai 23/12", "Lần thăm 4 · Thứ Tư 25/12",
-    "Lần thăm 5 · Thứ Sáu 27/12", "Lần thăm 6 · Sáng thứ Hai 30/12", "Chiều 30/12 · Cuộc họp ở trạm", "Đêm 30/12/1991 và sau đó", "Sáng 31/12/1991"],
+    "Lần thăm 5 · Thứ Sáu 27/12", "Lần thăm 6 · Sáng thứ Hai 30/12", "Chiều 30/12", "Đêm 30/12/1991", "Sáng 31/12/1991"],
   wrong: [
     "Chưa khớp. Đọc lại giấy tờ, từng chữ một.",
     "Thầy Sinh lắc đầu: “Cô vội quá. Ngồi đọc lại đi.”",

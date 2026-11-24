@@ -11,8 +11,13 @@ traps=$(node tools/traps.mjs 2>&1 | tail -1)
 for c in "$@"; do
   a=$(node tools/audit.mjs "$c" 2>&1 | tail -n +2); [ "$a" = "  ok" ] && row "$c" audit ok || { row "$c" audit "FAIL"; echo "$a"; fail=1; }
   if [ -f "tools/solve$c.mjs" ]; then s=$(node "tools/solve$c.mjs" 2>&1 | tail -1); [[ "$s" == all* ]] && row "$c" solve ok || { row "$c" solve "FAIL: $s"; fail=1; }; else row "$c" solve "(không có tools/solve$c.mjs)"; fi
-  CASE=$c timeout 900 node tools/smoke.mjs "$OUT/smoke$c" > "$OUT/smoke$c.log" 2>&1; n=$(grep -c SOLVED "$OUT/smoke$c.log"); e=$(tail -1 "$OUT/smoke$c.log")
-  [ "$e" = "no errors" ] && row "$c" smoke "ok ($n trọng điểm, máy tính + điện thoại)" || { row "$c" smoke "FAIL: $e"; fail=1; }
+  if [ -f "tools/route$c.mjs" ]; then r=$(node "tools/route$c.mjs" 2>&1 | tail -1); [[ "$r" == "all routes ok" ]] && row "$c" route "ok ($(node "tools/route$c.mjs" | grep -o '[0-9]* minutes left' | tr '\n' ' '))" || { row "$c" route "FAIL: $r"; fail=1; }; fi
+  # cases with a mid-case choice are played on both routes
+  for br in $(node -e "import('./cases/$c/index.js').then(C=>console.log(C.QUESTIONS.some(q=>q.branch)?'A B':'-'))" 2>/dev/null || echo -); do
+    [ "$br" = "-" ] && br=""
+    BRANCH=$br CASE=$c timeout 900 node tools/smoke.mjs "$OUT/smoke$c$br" > "$OUT/smoke$c$br.log" 2>&1; n=$(grep -c SOLVED "$OUT/smoke$c$br.log"); e=$(tail -1 "$OUT/smoke$c$br.log")
+    [ "$e" = "no errors" ] && row "$c" smoke "ok ($n trọng điểm, máy tính + điện thoại${br:+, nhánh $br})" || { row "$c" smoke "FAIL${br:+ (nhánh $br)}: $e"; grep -v SOLVED "$OUT/smoke$c$br.log" | head -5; fail=1; }
+  done
   CASE=$c timeout 900 node tools/docs_ui.cjs > "$OUT/docs$c.log" 2>&1; t=$(grep -c "docs opened" "$OUT/docs$c.log"); g=$(grep -c "no problems" "$OUT/docs$c.log")
   [ "$t" -gt 0 ] && [ "$t" = "$g" ] && row "$c" docs "ok ($g lượt mở)" || { row "$c" docs "FAIL"; grep -v "no problems" "$OUT/docs$c.log" | head; fail=1; }
   CASE=$c timeout 300 node tools/timer_test.cjs > "$OUT/timer$c.log" 2>&1

@@ -71,6 +71,8 @@ function penalize() {
   state.timeLeft = Math.max(0, (state.timeLeft ?? TIME_TOTAL()) - min * 60);
   return min;
 }
+// A puzzle widget that opens may reveal documents (d.needs): refresh the folder.
+document.addEventListener("pz-open", () => { if ($("#folder") && document.body.dataset.screen === "desk") renderFolder(); });
 // A wrong code on a lock box (js/puzzles.js) costs LOCK_MIN minutes, flat.
 const LOCK_MIN = 3;
 document.addEventListener("pz-fail", (e) => {
@@ -106,7 +108,27 @@ function gradeHtml() {
 // d.fail may also be a list of ending ids (META.endings): then the doc shows only after a lost run that reached one of them.
 const lostEnding = () => state.failed ? (META.fatal?.ending ? META.fatal.ending(state.failed.choice || "") : "bad") : null;
 const failShows = (d) => !!state.failed && (d.fail === true || (Array.isArray(d.fail) && d.fail.includes(lostEnding())));
-const visibleDocs = () => DOCS.filter((d) => d.fail ? failShows(d) : d.secret ? finished() && flawless() : d.stage <= state.stage);
+// The run is over (case closed or lost): every document the run could have found is open for reading.
+const over = () => finished() || !!state.failed;
+/**
+ * Is a document in the folder? Besides its stage (d.stage), a case may ask for more (case 08 on):
+ *  d.place  (META.map) found only by going to that place at its stage or later (state.visits[place] >= d.stage);
+ *  d.branch ("A"|"B")  only on the route chosen mid-case (state.branch);
+ *  d.via    (an id)    only after that cross-examination was won (state.confronted);
+ *  d.needs  (an id)    only once that puzzle widget was opened (state.puzzles[id].code).
+ */
+function docVisible(d) {
+  if (d.fail) return failShows(d);
+  if (d.secret) return finished() && flawless();
+  if (d.stage > state.stage) return false;
+  if (d.branch && (state.branch ? state.branch !== d.branch : !over())) return false;
+  if (over()) return true;
+  if (d.via && !state.confronted?.[d.via]) return false;
+  if (d.needs && !state.puzzles?.[d.needs]?.code) return false;
+  if (META.map && d.place && d.place !== META.map.home && !((state.visits?.[d.place] ?? -1) >= d.stage)) return false;
+  return true;
+}
+const visibleDocs = () => DOCS.filter(docVisible);
 
 // ---------------------------------------------------------------- endings (cases with several routes: META.endings)
 /** Records an ending as reached; endings survive "play again". */
@@ -231,6 +253,8 @@ function showCover() {
           ? `<li><b>Bạn có ${TIME_TOTAL_MIN()} phút</b> cho cả hồ sơ (đồng hồ chỉ chạy khi bàn làm việc đang mở). <b>Không ai báo bạn đúng mấy mục.</b> Lần nộp sai đầu tiên bị trừ 3 phút, lần thứ hai 5 phút, từ lần thứ ba mỗi lần 10 phút, tính chung cả hồ sơ. Thử sai mã một hộp khoá bị trừ 3 phút. Hết giờ là thua, phải chơi lại từ đầu.</li>
         <li>${COST() ? `<b>Gợi ý</b> và <b>lời giải</b> mở được bất cứ lúc nào, nhưng mỗi gợi ý trừ ${COST().hint} phút, xem lời giải trừ ${COST().solve} phút. Nộp sai không mở thêm gì.` : `<b>Gợi ý</b> chỉ mở sau ${HINT_AFTER} lần nộp sai, <b>lời giải</b> sau ${SOLVE_AFTER} lần.`} Dùng chúng là tụt hạng thám tử và mất kết thúc ẩn.</li>`
           : `<li>Bí quá thì dùng <b>gợi ý</b>. Đến lúc tuyệt vọng thì có <b>lời giải</b>.</li>`}
+        ${META.map ? `<li><b>Bản đồ:</b> giấy tờ nằm rải rác khắp nơi. Mỗi lần đến một nơi mất một nén hương (${META.map.cost} phút). Bản đồ không báo nơi nào có thứ mới.</li>` : ""}
+        ${DOCS.some((d) => d.confront) ? `<li><b>Đối chất:</b> dưới một số lời khai, bạn có thể đưa ra một tài liệu. Đưa sai bị trừ ${CONFRONT_MIN} phút, và người ấy sẽ đề phòng.</li>` : ""}
       </ol><p class="small muted">Tiến trình được lưu trên trình duyệt này.</p></details>
       <p class="credit">Truyện và nhân vật hoàn toàn hư cấu. Lấy cảm hứng từ thể loại game hồ sơ điều tra trên trình duyệt.</p>
     </div>
@@ -266,7 +290,7 @@ function startDesk() {
   $("#desk").hidden = false;
   renderAll();
   startTimer();
-  openDoc(state.lastDoc && byId.has(state.lastDoc) && byId.get(state.lastDoc).stage <= state.stage ? state.lastDoc : META.firstDoc);
+  openDoc(state.lastDoc && byId.has(state.lastDoc) && docVisible(byId.get(state.lastDoc)) ? state.lastDoc : META.firstDoc);
 }
 
 /** A case can open with a contract the player signs with their own name (kept only in this browser). */
@@ -282,7 +306,7 @@ function contract() {
 }
 
 // ---------------------------------------------------------------- render
-function renderAll() { renderFolder(); renderInquiry(); renderTop(); $(".notes textarea").value = state.notes; }
+function renderAll() { renderFolder(); renderInquiry(); renderTop(); $(".notes textarea").value = state.notes; paintExtras(); }
 
 function renderTop() {
   const clock = finished() ? END_CLOCK : state.stage === 0 ? START_CLOCK : QUESTIONS[state.stage - 1].clock;
@@ -306,13 +330,13 @@ function renderFolder() {
 
 function openDoc(id) {
   const d = byId.get(id);
-  if (!d) return;
+  if (!d || !docVisible(d)) return;
   cleanupMedia();
   state.lastDoc = id; state.seen[id] = true; save();
   const q = currentQ(), pinPart = q?.parts.find((p) => p.type === "pins");
   const pinned = q ? (resp(q.id).pins || []).includes(id) : false;
   $(".reader-head").innerHTML = `
-    <div><span class="kind">${d.kind}</span><h2>${d.label}</h2></div>
+    <div><span class="kind">${d.kind}${META.map && d.place && d.place !== META.map.home ? ` · ${placeName(d.place)}` : ""}</span><h2>${d.label}</h2></div>
     ${pinPart && !state.failed && d.stage < QUESTIONS.length ? `<button class="btn ${pinned ? "btn--on" : ""}" data-pin="${id}">📌 ${pinned ? "Bỏ ghim" : "Ghim làm bằng chứng"}</button>` : ""}`;
   const body = $(".reader-body");
   body.innerHTML = d.html();
@@ -321,9 +345,83 @@ function openDoc(id) {
   if (picking) markPickedLine();
   body.scrollTop = 0;
   cleanupMedia = mountMedia(body);
+  if (d.confront) body.insertAdjacentHTML("beforeend", `<div class="confront" data-cf="${d.confront.id}"></div>`);
+  paintExtras();
+  const ds = (META.docScares || {})[id];
+  if (ds) setTimeout(() => { if (state.lastDoc === id) jumpScare(ds[0], ds[1], ds[3] || {}); }, ds[2] ?? 1500);
   sfx.paper();
   renderFolder();
   if (isMobile()) showPanel("reader");
+}
+/** Fills the map and the cross-examination box of the open document (they change with the clock and the stage). */
+function paintExtras() {
+  const m = $(".reader-body .mapnav"); if (m) m.innerHTML = mapHtml();
+  const c = $(".reader-body .confront"); if (c) c.innerHTML = confrontHtml(byId.get(state.lastDoc));
+}
+
+// ---------------------------------------------------------------- the map (META.map, case 08 on)
+// META.map = { home, cost, places: [{ id, name, note, cost?, x?, y? }], image? }. Going to a place costs minutes and opens
+// the documents of that place up to the current stage. The map never says where something new is.
+const placeOf = (pid) => META.map?.places.find((p) => p.id === pid);
+const placeName = (pid) => placeOf(pid)?.name || pid;
+const placeCost = (pid) => placeOf(pid)?.cost ?? META.map.cost;
+function mapHtml() {
+  if (!META.map) return "";
+  const v = state.visits || {};
+  const row = (p) => {
+    const at = v[p.id], here = at === state.stage, cost = placeCost(p.id);
+    const status = at == null ? "Chưa đến" : here ? "Đã đến trong lúc này" : `Lần cuối đến: trọng điểm ${at + 1}`;
+    const btn = over() || state.timeout ? "" : here ? `<button class="btn btn--small" disabled>Đã đến</button>` : `<button class="btn btn--small" data-visit="${p.id}">Đến đây · −${cost} phút</button>`;
+    return `<li class="${at == null ? "" : "been"}"><div><b class="pl-name">${p.name}</b><span class="small muted">${p.note || ""}</span></div><div class="pl-act"><span class="small">${status}</span>${btn}</div></li>`;
+  };
+  const img = META.map.image ? `<div class="map-pic"><img src="${base.img}${META.map.image}.jpg" alt="" onerror="this.parentNode.remove()">${META.map.places.filter((p) => p.x != null).map((p) => `<button class="map-dot ${v[p.id] == null ? "" : "been"}" style="left:${p.x}%;top:${p.y}%" ${over() || state.timeout || v[p.id] === state.stage ? "disabled" : `data-visit="${p.id}"`} title="${p.name}"><span>${p.name}</span></button>`).join("")}</div>` : "";
+  return `${img}<ul class="places">${META.map.places.map(row).join("")}</ul>`;
+}
+function visit(pid) {
+  const p = placeOf(pid); if (!p || over() || state.timeout || (state.visits || {})[pid] === state.stage) return;
+  const cost = placeCost(pid);
+  dialog(`<h3>Đến ${p.name}?</h3><p>Đi lại, hỏi han, lục lọi ở đó mất ${cost === META.map.cost ? "một nén hương" : `${cost / META.map.cost} nén hương`}: đồng hồ bị trừ ${cost} phút.</p>`, `Đi (−${cost} phút)`, () => {
+    const before = new Set(visibleDocs().map((d) => d.id));
+    payTime(cost); if (state.timeout) return;
+    (state.visits ||= {})[pid] = state.stage; save();
+    const found = visibleDocs().filter((d) => !before.has(d.id));
+    sfx.paper(); renderFolder(); paintExtras();
+    toast(found.length ? `${p.name}: thu được ${found.length} thứ mới.` : `${p.name}: không thấy gì khác lần trước.`);
+    if (found.length) openDoc(found[0].id);
+  }, "Thôi");
+}
+
+// ---------------------------------------------------------------- cross-examination (d.confront, case 08 on)
+// d.confront = { id, who, after }. The answer (secret.confront[id] = { docs: [...], opens }) is a set of documents: any one
+// of them wins (two at once once the witness is on guard after a miss). A miss costs CONFRONT_MIN minutes.
+const CONFRONT_MIN = 3;
+function confrontHtml(d) {
+  if (!d?.confront || over()) return "";
+  const cf = d.confront, key = SECRETS.confront?.[cf.id];
+  if (state.confronted?.[cf.id]) { const o = key && byId.get(key.opens); return `<p class="small">Đã đối chất ${cf.who}.${o ? ` <button class="link" data-goto="${o.id}">${esc(o.label)}</button>` : ""}</p>`; }
+  const n = state.wary?.[cf.id] ? 2 : 1;
+  const opts = visibleDocs().filter((x) => x.id !== d.id).map((x) => `<option value="${x.id}">${esc(x.label)}</option>`).join("");
+  return `<h4>Đối chất ${cf.who}</h4>
+    <p class="small muted">${n === 2 ? `${cap(cf.who)} đã đề phòng: phải đưa ra hai tài liệu cùng lúc.` : "Đưa ra một tài liệu."} Đưa sai bị trừ ${CONFRONT_MIN} phút.</p>
+    ${Array.from({ length: n }, (_, i) => `<select data-cfpick="${i}"><option value="">— chọn tài liệu —</option>${opts}</select>`).join("")}
+    <button class="btn btn--small" data-cfgo="${cf.id}">Đưa ra</button><p class="cf-msg small" aria-live="polite"></p>`;
+}
+function confront(cid) {
+  const d = byId.get(state.lastDoc); if (!d?.confront || d.confront.id !== cid || over() || state.timeout) return;
+  const box = $(".reader-body .confront"), picks = [...box.querySelectorAll("[data-cfpick]")].map((s) => s.value);
+  if (picks.some((v) => !v) || new Set(picks).size !== picks.length) { box.querySelector(".cf-msg").textContent = "Chọn đủ tài liệu (không trùng nhau)."; return; }
+  const key = SECRETS.confront?.[cid], good = key && key.docs.length && picks.every((v) => key.docs.includes(v));
+  if (good) {
+    (state.confronted ||= {})[cid] = true; save(); sfx.stamp();
+    renderFolder();
+    dialog(`<h3>Đối chất ${d.confront.who}</h3><p>${d.confront.after || ""}</p>`, "Đọc lời khai mới", () => openDoc(key.opens));
+    return;
+  }
+  (state.wary ||= {})[cid] = true; state.confrontFails = (state.confrontFails || 0) + 1; save();
+  payTime(CONFRONT_MIN); sfx.wrong();
+  paintExtras();
+  const msg = $(".reader-body .confront .cf-msg");
+  if (msg) msg.textContent = `${cap(d.confront.who)} nhìn tờ giấy rồi lắc đầu. Đồng hồ bị trừ ${CONFRONT_MIN} phút.`;
 }
 
 // ---------------------------------------------------------------- inquiry
@@ -395,9 +493,16 @@ function partHtml(q, p) {
 
 function openCard(q, i) {
   const s = SECRETS[q.id], shown = state.hints[q.id] || 0;
+  // q.branch = { intro, warn, options: [{ id, label, text }] }: a choice that cannot be taken back, made before the question opens.
+  if (q.branch && !state.branch) return `<div class="q-card open fatal" data-q="${q.id}">
+    <div class="q-head"><span class="q-no">Trọng điểm ${i + 1}</span><span class="q-title">${q.title}</span></div>
+    <div class="fatal-warn"><b>QUYẾT ĐỊNH KHÔNG THỂ RÚT LẠI</b><span>Chỉ làm được một việc. Việc kia sẽ mất.</span></div>
+    <p class="q-ask">${q.branch.intro}</p>
+    <div class="q-actions">${q.branch.options.map((o) => `<button class="btn btn--red" data-branch="${o.id}">${o.label}</button>`).join("")}</div></div>`;
   return `<div class="q-card open ${q.fatal ? "fatal" : ""}" data-q="${q.id}">
     <div class="q-head"><span class="q-no">Trọng điểm ${i + 1}</span><span class="q-title">${q.title}</span></div>
     ${q.fatal ? `<div class="fatal-warn"><b>QUYẾT ĐỊNH KHÔNG THỂ RÚT LẠI</b><span>Chỉ được trả lời một lần. Không có gợi ý, không có lời giải. Sai là thua.</span></div>` : ""}
+    ${q.branch && state.branch ? `<p class="small muted">Đêm ấy bạn đã chọn: ${q.branch.options.find((o) => o.id === state.branch)?.label || ""}.</p>` : ""}
     <p class="q-ask">${q.ask}</p>
     ${q.parts.map((p) => partHtml(q, p)).join("")}
     <div class="q-actions">
@@ -474,13 +579,14 @@ function solved(q, peeked) {
   if (finished()) {
     unlock(META.endings?.find((e) => e.good)?.id);
     if (flawless()) unlock(META.endings?.find((e) => e.hidden)?.id);
-    dialog(META.finale.html + (META.strict ? gradeHtml() : ""), "Đọc hồ sơ kết thúc", () => { openDoc(META.finale.open); fireScare(state.stage); });
+    const fin = (x) => (typeof x === "function" ? x() : x);
+    dialog(fin(META.finale.html) + (META.strict ? gradeHtml() : ""), "Đọc hồ sơ kết thúc", () => { openDoc(fin(META.finale.open)); fireScare(state.stage); });
     return;
   }
   const clock = q.clock, memo = typeof q.memo === "function" ? q.memo() : q.memo;
   dialog(`<h3>${clock} · ${META.narrator || "Anh Quân"}</h3>${memo.split("\n").map((l) => `<p>${l.trim()}</p>`).join("")}<p class="small muted">Thư mục mới: “${FOLDERS[state.stage]}”.</p>`,
     "Mở hồ sơ mới", () => {
-      const first = DOCS.find((d) => d.stage === state.stage);
+      const first = DOCS.find((d) => d.stage === state.stage && docVisible(d));
       if (first) openDoc(first.id);
       fireScare(state.stage);
     });
@@ -519,6 +625,18 @@ function solve() {
       const s = SECRETS[q.id];
       dialog(`<h3>Lời giải · ${q.title}</h3><p>${esc(s.solution)}</p>`, "Đi tiếp", () => solved(q, true));
     }, "Thôi, tự làm tiếp");
+}
+
+/** The mid-case choice (q.branch): asked once, recorded at once, never undone in this run. */
+function chooseBranch(id) {
+  const q = currentQ(); if (!q?.branch || state.branch || over()) return;
+  const o = q.branch.options.find((x) => x.id === id); if (!o) return;
+  dialog(`<h3 class="fatal-h">${esc(o.label)}</h3><p>${o.text}</p>${q.branch.warn || ""}`, "Làm việc này", () => {
+    state.branch = id; save(); sfx.stamp(); setLevel(Math.max(level(), dreadFor(state.stage)));
+    renderAll();
+    const first = DOCS.find((d) => d.branch === id && d.stage === state.stage && docVisible(d));
+    if (first) openDoc(first.id);
+  }, "Nghĩ lại");
 }
 
 // ---------------------------------------------------------------- line picking
@@ -583,6 +701,9 @@ function bindChrome() {
     const act = t.closest("[data-act]");
     if (act) { ctx(); return ({ submit, hint, solve })[act.dataset.act](); }
     const pk = t.closest("[data-pick]"); if (pk) return setPicking(!picking, pk.dataset.pick);
+    const vi = t.closest("[data-visit]"); if (vi) { ctx(); return visit(vi.dataset.visit); }
+    const cf = t.closest("[data-cfgo]"); if (cf) { ctx(); return confront(cf.dataset.cfgo); }
+    const br = t.closest("[data-branch]"); if (br) { ctx(); return chooseBranch(br.dataset.branch); }
     const ln = t.closest(".reader-body.picking .ln");
     if (ln && picking) {
       const r = resp(picking.qid);

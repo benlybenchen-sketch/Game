@@ -1,4 +1,4 @@
-# Hồ sơ 08 · "Độ Kiếp" · KINH THÁNH (bản 1)
+# Hồ sơ 08 · "Độ Kiếp" · KINH THÁNH (bản 2, đã dựng)
 
 > Áp toàn bộ luật độ khó 1–25 trong `docs/KE_HOACH.md`, luật 26–28 mới (mục 12 dưới đây), và danh sách tự kiểm ở `CLAUDE.md` mục 5.
 > Người dùng đã chốt: giữ cả ba cơ chế mới (thần thức dò núi, đối chất, chuỗi trận pháp và đan phương), 8 trọng điểm trong 300 phút, có một quyết định không rút lại ở giữa hồ sơ.
@@ -43,10 +43,10 @@ Tiết khí: Thanh minh 29/2 · Cốc vũ 15/3 · Lập hạ 1/4 · Tiểu mãn 
 | 15/2 | Ất Dậu | Khảo hạch mùa xuân; Giới luật đường ghi lại cảnh giới đệ tử (sổ mới). |
 | 7/3 | Đinh Mùi | Chưởng môn khắc ngọc giản, gửi Đan Dương Tử giữ "nếu ta không ra". |
 | 8/3 | Mậu Thân | Giờ Ngọ bế quan (ngày thứ 1). Bảy trưởng lão ký tờ niêm cửa động. |
-| 18/3 | Mậu Ngọ | Ngày thứ 11. Chạng vạng Tào quét Lôi Đài, úp phiến đá và nỉ ướt lên lỗ thông khí. Canh hai A Mặc ghi "khói ống động phủ tắt". Đêm ấy chưởng môn chết. Rạng sáng Tào gỡ nỉ. |
+| 18/3 | Mậu Ngọ | Ngày thứ 11. Chạng vạng Tào quét Lôi Đài, úp bao tải gai ướt và phiến đá lên lỗ thông khí. Canh hai A Mặc ghi "khói ống động phủ tắt". Đêm ấy chưởng môn chết. Rạng sáng Tào gỡ nỉ. |
 | 19/3 | Kỷ Mùi | Ngày 12. Viên đan ngày 12 không ai dùng. Từ đây Tào lấy khay, trộn đan vào cám hạc, trả khay sạch, báo "đã dùng". |
 | 24/3 | Giáp Tý | Hạc đầu tiên chết (viên ngày 14). |
-| 23/4 | | Ngày 45. Tiểu Tùng đưa Đan Dương Tử bốn viên đan lấy từ diều hạc. Ông cân, ghi, khoá vào tủ thuốc. |
+| 22/4 | | Tiểu Tùng đưa Đan Dương Tử bốn viên đan lấy từ diều hạc. Ngày 24 ông mượn sách cân lường, cân, ghi, khoá vào tủ thuốc. |
 | 27/4 | Bính Thân | Ngày 49. Chiều: bạn tới. Đan Dương Tử nói với Tĩnh Hư ông sẽ đòi mở động sớm. Canh một: Tĩnh Hư vào động. Canh hai đến canh tư: sấm, mưa lớn. Canh ba: Đan Dương Tử ghi dòng cuối sổ hoả hậu. Sau đó Tào nhét rơm ướt vào miệng ống khói Đan phòng. Canh năm: mưa tạnh; Tĩnh Hư mang tro, áo, kiếm lên Lôi Đài; Tào gỡ rơm. |
 | 28/4 | Đinh Dậu | **Ngày thứ nhất của game.** Giờ Mão A Mặc báo "tiên tích". Đan Dương Tử được thấy chết. A Mặc ghi thêm dòng sét thứ chín. |
 | 30/4 | | Ngày thứ ba. Đêm: quyết định không rút lại (khai quan hay phá trận). |
@@ -309,3 +309,16 @@ Không vẽ người bằng code. Cân, trận, bản đồ chữ, sổ sách, n
 - Engine: bản đồ (`META.map`), đối chất (`confront` trên tài liệu), nhánh (`META.branch`, tài liệu có `branch: "A"|"B"`), công cụ `can` và `tran` trong `js/puzzles.js`.
 - Tools: `tools/solve08.mjs` (giải lại sổ sấm, lậu khắc, trận, cân, mã tủ, ngọc giản từ dữ liệu tài liệu, cả hai nhánh), `tools/route08.mjs`, `tools/gen/ngocgian08.mjs`, `tools/gen/cal08.py`; thêm bẫy 08 vào `tools/traps.mjs`; smoke và flow chạy cả hai nhánh.
 - Khoá `soon: true` cho tới khi đủ 20 ảnh và qua toàn bộ danh sách kiểm (CLAUDE.md mục 2 và 5).
+
+
+## 14. Bản dựng (những điểm đã chốt khi dựng, thay cho mọi chỗ khác nếu lệch)
+- **File:** `cases/08/` (docs0–docs6, data.js, ngocgian.js do `tools/gen/ngocgian08.mjs` sinh, questions.js, index.js, locks.js do `tools/lockbox.mjs 08` sinh từ `tools/locksrc/08.mjs`). Engine: bản đồ, đối chất, nhánh trong `js/main.js`; cân trong `js/puzzles.js` (`scale`); trận là hộp khoá 9 vòng xếp lưới (`lockbox` với `cols: 3`).
+- **Kiểm:** `node tools/audit.mjs 08`, `node tools/solve08.mjs` (giải lại cả bẫy), `node tools/route08.mjs` (nhánh A: 20 lần đến, 63 phút; nhánh B: 21 lần, 66 phút), `bash tools/fulltest.sh 08` (chơi cả hai nhánh).
+- **Lỗ thở bị bịt** bằng bao tải gai ướt và phiến đá (không phải nỉ). Cùng loại bao tải: nắm rơm dưới máng Đan phòng, nắm vải nhét lỗ thông gió phòng người chơi đêm mồng 1, bao rách trong kho than (chìa chỉ hoả công giữ).
+- **Khay:** khay ngày 11 về sáng 19/3 còn cặn thuốc; từ khay ngày 12 (về sáng 20/3) sạch. Tiểu Tùng mang khay thay hoả công các ngày 13, 18, 23 tháng Ba (ngày hoả công xuống Hạ Khê mua than từ giờ Mão).
+- **Tấm gỗ tám quẻ ở Tổ sư điện** đánh số theo Tiên thiên (bẫy); bia trước động ghi "Quẻ theo Văn Vương"; Ngũ Lôi pháp ghi phương của tám quẻ theo Văn Vương và Lạc Thư chín cung; vở học trận của Tĩnh Hư có bài mẫu ngày mồng 3 (số đúng, quẻ sai theo Tiên thiên, thầy phê "quẻ chưa xong").
+- **Ngọc giản:** mặt trước chỉ ghi "Huyền Chân khắc, mồng bảy tháng Ba", không ghi người nhận. 29 dòng "cảnh giới · số". Bảng sau khảo hạch ở Tam Thanh điện, sổ tháng Giêng ở Giới luật đường.
+- **Đối chất (đáp án trong secret.js):** A Mặc ← sổ sấm hoặc sổ tay đêm 27; bà Lưu ← lồng chuột hoặc Nghiệm thi lục; Lăng Tiêu Tử ← sổ mượn sách, sổ dầu các hoặc lời Bão Phác Tử; Tĩnh Hư ← tờ niêm soi nắng, hộp giấy Tổ sư điện hoặc sổ dầu hồn đăng; Tiểu Tùng ← sổ hạc, sổ khay hoặc sổ tay trưởng lão (nhánh A); Tào Thuận (lời khai đêm 18) ← sổ ra vào, sổ việc vặt hoặc lời A Mặc về đêm 18. Các lời khai khác cũng có ô đối chất nhưng không có tài liệu nào đúng (người khai nói thật): đưa gì cũng bị trừ 3 phút.
+- **Thời điểm mở lời khai đêm 18:** sáng mồng 3 (TĐ7), sau khi TĐ5 đã tìm ra ngày. Không ai nhắc đêm 18 trước đó.
+- **Nhạc:** `audio/08/do_kiep.mp3`, `tools/compose08.py` (cổ cầm, khánh đá, chuông đồng, tụng, mưa, sấm, chín tiếng trống), vòng 132 giây.
+- **Ảnh:** chưa có; hồ sơ khoá (`soon: true`) tới khi đủ 20 ảnh và chạy lại toàn bộ danh sách kiểm, kể cả đặt toạ độ 14 điểm lên `ban_do_nen` (META.map.places x, y).

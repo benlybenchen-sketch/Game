@@ -105,4 +105,52 @@ if (+id >= 4) {
     if (k.time !== want) bad(`list.js time "${k.time}" differs from the game timer "${want}"`);
     for (const f of ["diff", "fear"]) if (!(k[f] >= 1 && k[f] <= 5)) bad(`list.js ${f} must be 1–5 stars`);
   } }
+
+// ---------------------------------------------------------------- rules added after real mistakes (CLAUDE.md section 6)
+if (Number(id) >= 3) {
+  const M = C.META, Q = C.QUESTIONS;
+  const strip = (x) => String(x ?? "").replace(/<svg[\s\S]*?<\/svg>/g, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+  // checkpoint titles and folder names: only day/night/visit words and dates (no puzzle, document or answer words)
+  const TIMEWORDS = new Set(("đêm ngày sáng chiều tối trưa rạng sau lần thăm trực thứ nhất một hai ba tư bốn năm sáu bảy tám chín mười " +
+    "chủ nhật tháng giêng chạp mồng peret akhet shemu và").split(" "));
+  const timeOnly = (t) => strip(t).toLowerCase().split(/[\s·,/().:-]+/).filter(Boolean).every((w) => /^\d+$/.test(w) || TIMEWORDS.has(w));
+  for (const q of Q) if (!timeOnly(q.title)) bad(`rule 3: title of ${q.id} ("${q.title}") must only name the day or night`);
+  (M.folders || []).forEach((f, k) => { if (!timeOnly(f)) bad(`rule 3: folder ${k} ("${f}") must only name the day or night`); });
+  // emphasis by inline style (rule 12): bold, italics, underline, coloured or highlighted text inside documents
+  for (const d of C.DOCS) { const h = htmlOf(d).replace(/<svg[\s\S]*?<\/svg>/g, ""); const m = h.match(/style="[^"]*(font-weight|text-decoration|font-style:\s*italic|background(-color)?:\s*(yellow|#ff[0-9a-f]{4}))[^"]*"/i); if (m) bad(`rule 12: doc ${d.id} emphasises text by style (${m[1]})`); }
+  // the one-shot last question: options alike in length and shape, so the ending cannot be picked by its look
+  for (const q of Q) if (q.fatal) for (const p of q.parts) if (p.type === "choice") {
+    const L = p.options.map((o) => o.length), cl = p.options.map((o) => (o.match(/[,;:(]/g) || []).length);
+    if (Math.max(...L) > Math.min(...L) * 1.3) bad(`rule 1: ${q.id} options differ too much in length (${Math.min(...L)}–${Math.max(...L)})`);
+    if (new Set(cl).size > 1) bad(`rule 1: ${q.id} options have different numbers of clauses (${cl.join(",")})`);
+  }
+}
+if (Number(id) >= 8) {
+  const strip = (x) => String(x ?? "").replace(/<svg[\s\S]*?<\/svg>/g, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+  // rule 7: documents never explain how to solve; the narrator never points at a line ("nét khác", "mực đậm hơn")
+  const EXPLAIN = /nghĩa là|tức là|đừng nhầm|lưu ý|ghép chữ|chữ cái đầu|chữ đầu mỗi|cách giải|cách đọc|mẹo |gợi ý|chú ý:|để ý/i;
+  const MARK = /mực (khác|đậm hơn|mới hơn|còn ướt)|nét (khác|đậm hơn)|khác mực|viết đè|tô đậm|gạch dưới|khoanh tròn|đánh dấu|dòng này/i;
+  for (const d of C.DOCS) { const t = strip(htmlOf(d)); let m;
+    if ((m = t.match(EXPLAIN)) && !d.exercise) bad(`rule 7: doc ${d.id} explains ("${t.slice(Math.max(0, m.index - 30), m.index + 30)}")`);
+    if ((m = t.match(MARK))) bad(`rule 6: doc ${d.id} points at a line ("${t.slice(Math.max(0, m.index - 30), m.index + 30)}")`); }
+  // map, branch, cross-examination wiring (rules 26-28)
+  const M = C.META, places = new Set((M.map?.places || []).map((p) => p.id).concat(M.map ? [M.map.home] : []));
+  for (const d of C.DOCS) {
+    if (M.map && d.place && !places.has(d.place)) bad(`rule 26: doc ${d.id} at unknown place ${d.place}`);
+    if (d.branch && !["A", "B"].includes(d.branch)) bad(`rule 28: doc ${d.id} branch must be A or B`);
+    if (d.via && !C.DOCS.some((x) => x.confront?.id === d.via)) bad(`rule 27: doc ${d.id} opened by unknown cross-examination ${d.via}`);
+    if (d.confront) { const k = S.confront?.[d.confront.id]; if (!k) bad(`rule 27: no secret for cross-examination ${d.confront.id}`);
+      else { for (const x of k.docs) { const e = docs.get(x); if (!e) bad(`rule 27: ${d.confront.id} wants missing doc ${x}`); }
+        if (k.docs.length && k.docs.length < 2) bad(`rule 27: ${d.confront.id} needs two right documents (the witness asks for two after a miss)`);
+        if (k.opens && docs.get(k.opens)?.via !== d.confront.id) bad(`rule 27: ${d.confront.id} opens ${k.opens}, which is not marked via it`); } }
+  }
+  // every answer and pin group must be reachable on BOTH routes (rule 28)
+  const bq = C.QUESTIONS.findIndex((q) => q.branch);
+  for (const b of ["A", "B"]) for (const q of C.QUESTIONS) {
+    const can = (x) => { const e = docs.get(x); return e && !e.fail && !e.secret && e.stage <= q.stage && (!e.branch || (e.branch === b && q.stage >= bq)) && (!e.needs || b === "B"); };
+    for (const p of q.parts) { const a = S[q.id][p.id];
+      if (p.type === "pins") a.forEach((g, i) => { if (!g.some(can)) bad(`rule 28: ${q.id} pin group ${i} has no document on route ${b}`); });
+      if (p.type === "line" && !a.some((l) => can(lineHome.get(l)?.id))) bad(`rule 28: ${q.id}.${p.id} has no line on route ${b}`); }
+  }
+}
 console.log(problems.length ? problems.map((p) => "  ! " + p).join("\n") : "  ok");

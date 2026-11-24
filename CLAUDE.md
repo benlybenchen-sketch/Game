@@ -58,3 +58,28 @@ Trước khi báo "xong" một hồ sơ hay một đợt sửa, tự đi hết d
 7. Nhạc tự viết hoặc có quyền dùng. Khi người dùng tự up file nhạc qua GitHub: giữ file của họ, kiểm tên file trong `META.music`, giữ các dòng META khác (coverStyle, ambience), chạy `node tools/stamp.mjs`.
 8. Chạy đủ: audit, solve, smoke (máy tính và điện thoại), docs_ui (thắng và thua), traps, timer_test, flow_test, puzzle_test, route (nếu có bản đồ), `tools/fulltest.sh`; vẽ khung vùng bấm lên ảnh thật; chụp bìa trên máy tính và điện thoại. Báo kết quả từng bước cho người dùng.
 9. Trước commit: `node tools/stamp.mjs`. Nếu push bị từ chối vì nhánh có commit mới (người dùng up qua web): fetch, merge, xem họ đổi gì, sửa nếu họ vô tình xoá dòng cần thiết, rồi báo lại.
+
+## 6. Sổ lỗi đã gặp: mỗi lỗi thành một luật, mỗi luật có máy kiểm (đọc trước khi viết bất cứ hồ sơ nào)
+Người dùng yêu cầu: lỗi nào đã gặp thì không bao giờ được lặp lại. Mỗi dòng dưới đây là một lỗi có thật, luật chặn nó, và công cụ tự kiểm.
+Thêm lỗi mới vào bảng này ngay khi gặp, kèm kiểm tra tự động nếu kiểm được bằng máy. `bash tools/fulltest.sh <id...>` chạy tất cả.
+
+| Lỗi đã gặp | Luật | Máy kiểm |
+|---|---|---|
+| Đáp án đúng dài nhất, nhiều vế nhất (chọn theo độ dài là trúng) | Phương án dài ngang nhau, cùng số vế | audit luật 1 (mọi câu chọn); câu quyết định cuối: độ dài lệch ≤ 30%, số vế bằng nhau |
+| Đáp án lộ trong tên trọng điểm, tên thư mục, tên tài liệu, blurb, memo trước | Không chứa đáp án hay chỉ hướng | audit luật 13/15 |
+| Tên trọng điểm, tên thư mục mang nội dung ("Tiếng ru", "Mật áp…", "Soi gương", "Phiếu khám xác") | Chỉ ghi ngày, đêm, lần thăm, ngày tháng | audit luật 3 (từ vựng giờ giấc, hồ sơ 03 trở đi) |
+| In đậm, nghiêng, gạch chân, tô màu, chữ "mực đậm hơn", "nét khác", "dòng này…" làm lộ manh mối | Không đánh dấu gì; người kể không chỉ tay vào dòng nào | audit luật 12 (thẻ và style) mọi hồ sơ; luật 6 (lời đánh dấu) từ hồ sơ 08 |
+| Tài liệu tự giải thích cách giải ("nghĩa là", "ghép chữ đầu", "đừng nhầm") | Cách giải để trong gợi ý | audit luật 7 từ hồ sơ 08 (tài liệu bài tập có cờ `exercise` được phép có lời giải mẫu) |
+| Thiếu tài liệu để giải (Morse Q–Z, câu Kiều, năm Ất Tỵ) | Bảng đủ tài liệu; giải lại chỉ bằng dữ liệu trong game | audit (ghim, câu bấm đã mở đúng lúc, đủ cả hai nhánh), `tools/solveXX.mjs`, `tools/routeXX.mjs` |
+| Ghim đúng mà bị chấm sai vì nhóm quá hẹp | Nhóm ghim nhận mọi tài liệu chứng minh được ý ấy | audit + rà tay khi viết |
+| Câu hỏi tự trả lời ("thật ra", "người xưng là") | Không giả định đáp án trong lời hỏi | audit luật 10 |
+| Nhân vật chối điều người chơi chưa nghi; người thuê có tội; đánh tráo danh tính lặp lại | Luật 16–22 | rà tay theo kinh thánh (mục "Kiểm theo luật") |
+| Kết thúc dễ đoán, chọn theo đạo đức | Mỗi phương án sai có lỗ hổng chỉ thấy trong hồ sơ; phương án giống nhau về hình thức | audit (độ dài, số vế); flow_test (mỗi phương án ra đúng kết thúc và biên bản) |
+| Cơ chế "sai 2 lần mở gợi ý" bị người chơi lợi dụng | Gợi ý và lời giải trả bằng phút | flow_test (giá gợi ý, giá lời giải, nộp sai không mở gì) |
+| Câu đố tự báo đúng sai, giải trong 2 phút | Kết quả trung gian vô nghĩa, thử sai bị phạt, đi tắt gặp bẫy | solveXX (một lời giải duy nhất, bẫy ra kết quả khác), puzzle_test |
+| Ảnh doạ, ảnh bìa che nút, che tài liệu; bìa điện thoại cắt mất chi tiết | Không gì được nằm đè lên nút và tài liệu; bìa có `coverFocus` | docs_ui (kiểm nút "Mở phong bì", tên hồ sơ, tiêu đề tài liệu không bị che, máy tính và điện thoại), chụp bìa |
+| Tài liệu mở chưa tới lúc, câu bấm nằm ở tài liệu chưa mở | Mọi thứ cần cho câu n mở ở trọng điểm n hoặc sớm hơn | audit |
+| Thời gian trên thẻ hồ sơ khác đồng hồ trong game | `time` = `timeLimit` phút | audit |
+| Người dùng sửa META trên GitHub, vô tình xoá dòng | Sau mỗi lần merge, đối chiếu META | rà tay khi merge (CLAUDE.md mục 5.9) |
+| Tự đặt ra luật không có (ảnh doạ "không người, không máu") | Chỉ theo luật đã ghi; hỏi lại nếu chưa rõ | rà tay |
+| Nhạc mất trên iPhone (công tắc im lặng) | `navigator.audioSession` + mở khoá âm thanh | thử trên trình duyệt, xem `js/audio.js` |

@@ -57,7 +57,7 @@ export const META = {
   firstDoc: "loi_dan",
   coverFocus: "62% 42%",   // phone banner crop: the part of the cover that must stay visible
   cover: "cover",
-  folders: ["Đêm trực 1 · Hồ sơ phòng 7", "Đêm trực 2 · Thứ Tư 16/10", "Đêm trực 3 · Thứ Sáu 18/10", "Đêm trực 4 · Tiếng ru", "Đêm trực 5 · Thứ Ba 22/10", "Đêm trực 6 · Bản giám định", "Tháng 11/1996"],
+  folders: ["Đêm trực 1 · Thứ Hai 14/10", "Đêm trực 2 · Thứ Tư 16/10", "Đêm trực 3 · Thứ Sáu 18/10", "Đêm trực 4 · Chủ Nhật 20/10", "Đêm trực 5 · Thứ Ba 22/10", "Đêm trực 6 · Thứ Năm 24/10", "Tháng 11/1996"],
   wrong: [
     "Y lệnh của bạn đã được thực hiện: tăng liều Haloperidol cho phòng 7. Nghe lại băng của Thảo đi.",
     "BS. Kha gõ bút xuống bàn: “Tôi đã dặn cô rồi. Đừng sa vào.”",

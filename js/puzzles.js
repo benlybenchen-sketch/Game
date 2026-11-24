@@ -98,9 +98,12 @@ function openContent(b64, code) {
 }
 /**
  * cfg = { id, rings: [[symbol, ...], ...] (one list per ring), label?: (symbol) => html, content: sealed base64, after?: (el) => void }
+ * Options: cols (lay the rings out as a grid, e.g. 3 for a 3×3 door), openText (button), failText (message on a wrong code),
+ * start (starting position of each ring, so a door is not found already set to its first symbols).
+ * A successful opening fires "pz-open" (the game refreshes documents that need this widget opened).
  */
 export function lockbox(el, cfg) {
-  const st = P(cfg.id); st.pos ||= cfg.rings.map(() => 0);
+  const st = P(cfg.id); st.pos ||= cfg.start ? cfg.start.slice() : cfg.rings.map(() => 0);
   const label = cfg.label || ((s) => esc(s));
   const draw = () => {
     if (st.code) {
@@ -109,8 +112,8 @@ export function lockbox(el, cfg) {
       delete st.code;
     }
     el.innerHTML = `<div class="pz-lock">
-      <div class="pz-rings">${cfg.rings.map((ring, i) => `<div class="pz-ring"><button class="btn btn--small" data-r="${i}" data-d="-1">▲</button><div class="pz-sym" data-v="${esc(String(ring[st.pos[i]]))}">${label(ring[st.pos[i]])}</div><button class="btn btn--small" data-r="${i}" data-d="1">▼</button></div>`).join("")}</div>
-      <button class="btn" data-open="1">Thử mở</button> <span class="pz-msg small muted"></span></div>`;
+      <div class="pz-rings ${cfg.cols ? "pz-rings--grid" : ""}" ${cfg.cols ? `style="grid-template-columns:repeat(${cfg.cols},auto)"` : ""}>${cfg.rings.map((ring, i) => `<div class="pz-ring"><button class="btn btn--small" data-r="${i}" data-d="-1">▲</button><div class="pz-sym" data-v="${esc(String(ring[st.pos[i]]))}">${label(ring[st.pos[i]])}</div><button class="btn btn--small" data-r="${i}" data-d="1">▼</button></div>`).join("")}</div>
+      <button class="btn" data-open="1">${cfg.openText || "Thử mở"}</button> <span class="pz-msg small muted"></span></div>`;
   };
   draw();
   el.addEventListener("click", (e) => {
@@ -118,11 +121,50 @@ export function lockbox(el, cfg) {
     if (r) { const i = +r.dataset.r, len = cfg.rings[i].length; st.pos[i] = (st.pos[i] + +r.dataset.d + len) % len; save(); draw(); return; }
     if (e.target.closest("[data-open]")) {
       const code = st.pos.map((p, i) => cfg.rings[i][p]);
-      if (openContent(cfg.content, code) != null) { st.code = code; save(); draw(); }
+      if (openContent(cfg.content, code) != null) { st.code = code; save(); draw(); el.dispatchEvent(new CustomEvent("pz-open", { bubbles: true, detail: { id: cfg.id } })); }
       else {   // the game (js/main.js) listens for pz-fail and takes time off the clock
-        const m = el.querySelector(".pz-msg"); if (m) m.textContent = "Không mở được. Các vòng kẹt lại.";
+        const m = el.querySelector(".pz-msg"); if (m) m.textContent = cfg.failText || "Không mở được. Các vòng kẹt lại.";
         el.dispatchEvent(new CustomEvent("pz-fail", { bubbles: true, detail: { id: cfg.id, msg: m } }));
       }
     }
+  });
+}
+
+// ------------------------------------------------------------------ 4. balance scale (case 08)
+/**
+ * cfg = { id, items: [{ id, name }], weights: [{ id, label }], mass: (kind, id) -> number (same unit for items and weights),
+ *         itemTitle?, weightTitle? }
+ * One item on the left pan, any set of weights on the right. The beam only tilts left, right or stays level: no numbers.
+ */
+export function scale(el, cfg) {
+  const st = P(cfg.id); st.item ??= null; st.on ||= [];
+  const draw = () => {
+    const L = st.item == null ? 0 : cfg.mass("item", st.item), R = st.on.reduce((a, w) => a + cfg.mass("weight", w), 0);
+    const tilt = L === R ? 0 : L > R ? -1 : 1;           // -1: the item side goes down
+    const ang = tilt * 9, say = st.item == null && !st.on.length ? "Hai đĩa trống, cán cân đứng thăng bằng."
+      : tilt === 0 ? "Cán cân đứng thăng bằng." : tilt < 0 ? "Cán cân nghiêng về phía đĩa có viên đan." : "Cán cân nghiêng về phía đĩa quả cân.";
+    const item = cfg.items.find((x) => x.id === st.item), on = cfg.weights.filter((w) => st.on.includes(w.id));
+    el.innerHTML = `<div class="pz-scale">
+      <svg viewBox="0 0 320 170" class="pz-beam" aria-hidden="true">
+        <rect x="156" y="40" width="8" height="112" fill="#6b5a3e"/><rect x="118" y="150" width="84" height="10" rx="3" fill="#4a3d2a"/>
+        <g transform="rotate(${-ang} 160 40)">
+          <rect x="40" y="36" width="240" height="7" rx="3" fill="#8a7550"/><circle cx="160" cy="40" r="6" fill="#c9a45a"/>
+          <line x1="52" y1="40" x2="52" y2="${96 - ang * 1.4}" stroke="#a08b64"/><line x1="268" y1="40" x2="268" y2="${96 + ang * 1.4}" stroke="#a08b64"/>
+          <path d="M22 ${96 - ang * 1.4} h60 l-8 10 h-44 z" fill="#b08d4f"/><path d="M238 ${96 + ang * 1.4} h60 l-8 10 h-44 z" fill="#b08d4f"/>
+          ${item ? `<circle cx="52" cy="${90 - ang * 1.4}" r="6" fill="#d6b14a"/>` : ""}
+          ${on.map((w, i) => `<rect x="${246 + (i % 4) * 11}" y="${86 - ang * 1.4 - Math.floor(i / 4) * 9}" width="9" height="9" fill="#7c6a48"/>`).join("")}
+        </g>
+      </svg>
+      <p class="pz-say">${say}</p>
+      <div class="pz-pans">
+        <div><p class="small muted">${cfg.itemTitle || "Đĩa trái"}</p>${cfg.items.map((x) => `<button class="btn btn--small ${st.item === x.id ? "btn--on" : ""}" data-it="${x.id}">${esc(x.name)}</button>`).join(" ")}</div>
+        <div><p class="small muted">${cfg.weightTitle || "Đĩa phải"}</p>${cfg.weights.map((w) => `<button class="btn btn--small ${st.on.includes(w.id) ? "btn--on" : ""}" data-wt="${w.id}">${esc(w.label)}</button>`).join(" ")}</div>
+      </div></div>`;
+  };
+  draw();
+  el.addEventListener("click", (e) => {
+    const it = e.target.closest("[data-it]"), wt = e.target.closest("[data-wt]");
+    if (it) { st.item = st.item === it.dataset.it ? null : it.dataset.it; save(); draw(); }
+    if (wt) { const k = st.on.indexOf(wt.dataset.wt); if (k >= 0) st.on.splice(k, 1); else st.on.push(wt.dataset.wt); save(); draw(); }
   });
 }

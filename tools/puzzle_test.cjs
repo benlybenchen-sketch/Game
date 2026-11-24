@@ -67,6 +67,31 @@ const STEMS = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "�
   while (!/trên trái/.test(await p.textContent(".pz-grille"))) await p.click('[data-g="turn"]');
   const t05 = await readCard();
   console.log("05 card, sheet two face up reads the trap:", t05, t05.startsWith("BOBATCON") ? "(ok)" : "(WRONG)");
+  // 08 cave door: nine trigram discs, South on top. Traps (sexagenary centre, backwards flight, Phục Hy numbers) must not open.
+  const door = async (code) => {
+    await mount("08", "tran");
+    for (let i = 0; i < 9; i++) for (let k = 0; k < 9 && (await p.evaluate((i) => document.querySelectorAll(".pz-sym")[i].dataset.v, i)) !== code[i]; k++) await p.click(`[data-r="${i}"][data-d="1"]`);
+    await p.click("[data-open]"); await p.waitForTimeout(200);
+    return p.evaluate(() => !!document.querySelector(".pz-open"));
+  };
+  console.log("08 door, centre from Mậu Thân (9) opens:", await door(["Cấn", "Tốn", "Càn", "Đoài", "Ly", "Khôn", "Chấn", "Khôn", "Khảm"]), "(should be false)");
+  console.log("08 door, flown backwards opens:", await door(["Ly", "Tốn", "Khôn", "Khảm", "Cấn", "Càn", "Khôn", "Chấn", "Đoài"]), "(should be false)");
+  console.log("08 door, right code opens:", await door(["Đoài", "Chấn", "Khôn", "Càn", "Cấn", "Khảm", "Khôn", "Tốn", "Ly"]), "(should be true)");
+  // 08 cabinet: pill days in the order the cranes died; sorted order is a trap
+  const cab = async (code) => { await mount("08", "tu"); for (let i = 0; i < 4; i++) for (let k = 0; k < code[i] - 1; k++) await p.click(`[data-r="${i}"][data-d="1"]`); await p.click("[data-open]"); await p.waitForTimeout(200); return p.evaluate(() => !!document.querySelector(".pz-open") && /NGỌC GIẢN/.test(document.body.textContent)); };
+  console.log("08 cabinet, sorted 12-14-19-22 opens:", await cab([12, 14, 19, 22]), "(should be false)");
+  console.log("08 cabinet, 14-12-19-22 opens and shows the jade slip:", await cab([14, 12, 19, 22]), "(should be true)");
+  // 08 balance: the Thanh Điểu pill (day 12) balances 2 tiền + 1 phân, and no number is shown
+  await p.goto("http://localhost:8063/?case=08&preview=1"); await p.waitForTimeout(500);
+  await p.evaluate(() => localStorage.setItem("hsnd.case.08", JSON.stringify({ confronted: { tieu_tung: true } }))); await p.reload(); await p.waitForTimeout(600);
+  await p.evaluate(async () => { const C = await import("/cases/08/index.js"); document.body.innerHTML = '<div id="w"></div>'; C.MEDIA.can(document.getElementById("w"), "can"); });
+  const say = () => p.evaluate(() => document.querySelector(".pz-say").textContent);
+  await p.click('button:has-text("Thanh Điểu")'); const s0 = await say();
+  await p.click('[data-wt="w3"]'); const s1 = await say();
+  await p.click('[data-wt="w8"]'); const s2 = await say();
+  await p.click('[data-wt="w9"]'); const s3 = await say();
+  console.log("08 balance: pill alone tilts to the pill:", /viên đan/.test(s0), "| 2 tiền: still the pill:", /viên đan/.test(s1), "| 2 tiền 1 phân: level:", /thăng bằng/.test(s2), "| 2 tiền 2 phân: to the weights:", /quả cân/.test(s3), /viên đan/.test(s0) && /viên đan/.test(s1) && /thăng bằng/.test(s2) && /quả cân/.test(s3) ? "(ok)" : "(WRONG)");
+  console.log("08 balance shows no numbers:", await p.evaluate(() => !/\d/.test(document.querySelector(".pz-say").textContent)) ? "(ok)" : "(WRONG)");
   console.log(errs.length ? "errors: " + errs.join("; ") : "no errors");
   await b.close();
 })();

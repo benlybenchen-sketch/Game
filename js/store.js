@@ -8,6 +8,7 @@ const freshSettings = () => ({ sound: true, fear: "full", flash: true, voice: fa
 const fresh = () => ({
   started: false, stage: 0, resp: {}, seen: {}, heard: {}, plays: {}, hints: {}, peeked: {}, tries: {}, timeLeft: null, timeout: false, timeouts: 0,
   notes: "", lastDoc: null, scared: {}, board: {}, letters: {}, player: "", signed: false, failed: null, runs: 0, endings: [], best: null,
+  visits: {}, confronted: {}, wary: {}, branch: null,   // case 08 on: places visited (place -> stage), cross-examinations won, witnesses on guard, mid-case choice
 });
 
 const read = (k) => { try { const v = JSON.parse(localStorage.getItem(k)); return v && typeof v === "object" ? v : null; } catch { return null; } };
