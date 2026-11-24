@@ -5,6 +5,19 @@
 2. Mỗi ô có một prompt duy nhất: chép nguyên khối và dán vào. Tỉ lệ khung hình ghi ngay trong prompt; nếu AI Studio có ô chọn tỉ lệ thì chọn y như vậy.
 3. Đối chiếu ảnh với mục **Kiểm tra**. Sai điểm nào thì gõ câu ở mục **Nếu sai**, trong cùng cuộc trò chuyện và đính kèm lại ảnh vừa tạo.
 4. Đổi tên file đúng tên ở đầu ô rồi gửi lên chat.
+5. **Ảnh tham chiếu:** không cần ảnh nào từ bên ngoài. Nhưng vài vật xuất hiện ở nhiều ảnh và người chơi dùng chúng để giải, nên khi tạo ảnh sau hãy đính kèm ảnh trước làm tham chiếu, kèm câu: *"Keep this object exactly the same as in the attached image."*
+
+| Khi tạo | Đính kèm làm tham chiếu | Để giữ giống |
+|---|---|---|
+| `dau_cong` (07) | `cong_lang` (02) | cái đấu ở cổng, chén gốm đỏ |
+| `kho_ben` (06) | `cong_lang` (02) | cùng kiểu đấu gỗ nhưng **đáy sạch, không vữa** |
+| `hop_but` (08) | không | (ảnh gốc của con rắn hổ mang sừng) |
+| `chen_hin` (13) | `cong_lang` (02) | chén gốm đỏ có vết mẻ chữ V |
+| `lang_sang` (14) | `cong_lang` (02) | cổng, tường, ghế gạch cạnh cổng |
+| `ba_ran_scare` (16) | `hanh_lang` (03) | hình Bà Rắn trên vách, hành lang |
+| `thu_den_scare` (15) | `bat_thu` (05) | bát gốm đỏ, bàn cúng đá |
+| `bup_be_scare` (17) | `chen_hin` (13) và `hop_but` (08) | con búp bê gỗ; con rắn hổ mang sừng |
+
 
 > **Mình tự làm bằng code, bạn không cần tạo:** mọi mảnh gốm có chữ (sổ điểm danh, bảng lương, sổ bấc, sổ việc cổng, sổ tiến độ, thẻ bao lúa, thư trả lời), vở bài tập học trò, vở của Hay, bảng mẫu chữ, sách rắn 14 loài, bản vẽ lăng, dòng chữ trên vách, mẫu ấn và trò ghép mảnh dấu niêm, trò đong nước, bản đồ bờ Tây. Những thứ này có chữ tượng hình, chữ số và phân số phải đúng tuyệt đối. Chữ tượng hình dùng phông chữ chuẩn, không vẽ tay.
 
