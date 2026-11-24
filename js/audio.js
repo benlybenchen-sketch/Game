@@ -3,6 +3,10 @@
 import { state } from "./store.js";
 
 let ac = null, master = null, fx = null, noiseBuf = null, verb = null;
+// Volume buses under the master: music and voice have sliders (state.vol = { music, voice }, 0..1); effects and scares
+// always play at full level (user's rule).
+let musicBus = null, sfxBus = null, voiceBus = null;
+const vol = (k) => { const v = state.vol?.[k]; return typeof v === "number" ? Math.max(0, Math.min(1, v)) : 1; };
 const amb = { on: false, nodes: null, timers: [] };
 
 export function ctx() {
@@ -26,21 +30,30 @@ export function ctx() {
     for (let i = 0; i < curve.length; i++) { const x = (i / 1024) - 1, a = Math.abs(x); curve[i] = Math.sign(x) * (a < 0.75 ? a : 0.75 + 0.24 * Math.tanh((a - 0.75) / 0.24)); }
     ceil.curve = curve;
     master.connect(safe).connect(ceil).connect(ac.destination);
+    musicBus = ac.createGain(); musicBus.gain.value = vol("music"); musicBus.connect(master);
+    sfxBus = ac.createGain(); sfxBus.gain.value = 1; sfxBus.connect(master);   // effects and scares: always full, no slider
+    voiceBus = ac.createGain(); voiceBus.gain.value = vol("voice"); voiceBus.connect(master);
     // Every sound effect goes through one loud bus: a big gain into a limiter, so effects sit at the top
     // of the range without cracking. Voices and tapes stay on the master at their own level.
     fx = ac.createGain(); fx.gain.value = 3.2;
     const lim = ac.createDynamicsCompressor();
     lim.threshold.value = -6; lim.knee.value = 3; lim.ratio.value = 20; lim.attack.value = 0.002; lim.release.value = 0.12;
     const post = ac.createGain(); post.gain.value = 1;
-    fx.connect(lim).connect(post).connect(master);
+    fx.connect(lim).connect(post).connect(sfxBus);
   }
   if (ac.state === "suspended") ac.resume();
   return ac;
 }
-export const out = () => (ctx(), master);
+/** Where voices and tapes play (the voice volume). */
+export const out = () => (ctx(), voiceBus);
 /** The loud sound-effect bus. */
 export const fxOut = () => (ctx(), fx);
 
+/** Sets one volume (music | voice, 0..1) live; the value itself is saved by the caller in state.vol. */
+export function setVolume(kind, v) {
+  const bus = { music: musicBus, voice: voiceBus }[kind];
+  if (bus) bus.gain.setTargetAtTime(Math.max(0, Math.min(1, v)), ac.currentTime, 0.05);
+}
 export function setSound(on) {
   if (master) master.gain.setTargetAtTime(on ? 1 : 0, ac.currentTime, 0.05);
 }
@@ -110,7 +123,7 @@ export const sfx = {
   stamp() { noiseHit({ dur: 0.12, freq: 180, type: "lowpass", gain: 0.6 }); tone({ freq: 70, to: 40, dur: 0.25, gain: 0.3 }); },
   gong() {
     const v = reverb();
-    [98, 147.3, 196.5, 262].forEach((f, i) => tone({ freq: f, dur: 4 - i * 0.6, type: "sine", gain: 0.264 / (i + 1), dest: v || master, attack: 0.005 }));
+    [98, 147.3, 196.5, 262].forEach((f, i) => tone({ freq: f, dur: 4 - i * 0.6, type: "sine", gain: 0.264 / (i + 1), dest: v || sfxBus, attack: 0.005 }));
   },
   knock(n = 3, when = 0) {
     for (let i = 0; i < n; i++) {
@@ -124,11 +137,11 @@ export const sfx = {
   },
   drip(when = 0) {
     const f = 900 + Math.random() * 900;
-    tone({ when, freq: f, to: f * 0.35, dur: 0.09, gain: 0.168, dest: reverb() || master });
+    tone({ when, freq: f, to: f * 0.35, dur: 0.09, gain: 0.168, dest: reverb() || sfxBus });
   },
   whisper(dur = 2.5) {
     if (!ctx()) return;
-    const v = reverb() || master;
+    const v = reverb() || sfxBus;
     const syll = Math.floor(dur / 0.22);
     const pan = Math.random() * 1.6 - 0.8;
     for (let i = 0; i < syll; i++) {
@@ -167,32 +180,32 @@ export const sfx = {
   },
   /** A wooden clog heel on a wooden floor: deep, booming. */
   heel(when = 0, dest = null) {
-    tone({ when, freq: 82, to: 48, dur: 0.32, gain: 1.54, dest: dest || reverb() || master });
-    noiseHit({ when, dur: 0.12, freq: 260, type: "lowpass", gain: 1.76, dest: dest || master });
+    tone({ when, freq: 82, to: 48, dur: 0.32, gain: 1.54, dest: dest || reverb() || sfxBus });
+    noiseHit({ when, dur: 0.12, freq: 260, type: "lowpass", gain: 1.76, dest: dest || sfxBus });
   },
   /** The heel dragged along the floor boards. */
   scrape(when = 0, dur = 0.45, dest = null) {
-    noiseHit({ when, dur, freq: 420, q: 0.9, gain: 0.56, dest: dest || master });
-    noiseHit({ when, dur: dur * 0.8, freq: 1100, q: 4, gain: 0.14, dest: dest || master });
+    noiseHit({ when, dur, freq: 420, q: 0.9, gain: 0.56, dest: dest || sfxBus });
+    noiseHit({ when, dur: dur * 0.8, freq: 1100, q: 4, gain: 0.14, dest: dest || sfxBus });
   },
   /** A knuckle on a table top: short and dry. */
   knuckle(when = 0, dest = null) {
-    noiseHit({ when, dur: 0.035, freq: 1500, q: 3, gain: 0.5, dest: dest || master });
-    tone({ when, freq: 640, to: 420, dur: 0.05, gain: 0.12, dest: dest || master });
+    noiseHit({ when, dur: 0.035, freq: 1500, q: 3, gain: 0.5, dest: dest || sfxBus });
+    tone({ when, freq: 640, to: 420, dur: 0.05, gain: 0.12, dest: dest || sfxBus });
   },
   /** Trống chầu: "tom" is the drum face (praise), "chát" the wooden rim (blame). */
   tom(when = 0, dest = null) {
-    tone({ when, freq: 120, to: 62, dur: 0.55, gain: 0.55, dest: dest || master });
-    noiseHit({ when, dur: 0.18, freq: 180, type: "lowpass", gain: 0.45, dest: dest || master });
+    tone({ when, freq: 120, to: 62, dur: 0.55, gain: 0.55, dest: dest || sfxBus });
+    noiseHit({ when, dur: 0.18, freq: 180, type: "lowpass", gain: 0.45, dest: dest || sfxBus });
   },
   chat(when = 0, dest = null) {
-    noiseHit({ when, dur: 0.07, freq: 2600, q: 8, gain: 0.88, dest: dest || master });
-    tone({ when, freq: 1450, to: 1300, dur: 0.06, type: "square", gain: 0.096, dest: dest || master });
+    noiseHit({ when, dur: 0.07, freq: 2600, q: 8, gain: 0.88, dest: dest || sfxBus });
+    tone({ when, freq: 1450, to: 1300, dur: 0.06, type: "square", gain: 0.096, dest: dest || sfxBus });
   },
   /** The kèn (oboe) of the troupe, wailing a few notes, a little out of tune. */
   ken(when = 0, dur = 3, dest = null) {
     if (!ctx()) return [];
-    const v = dest || reverb() || master, nodes = [];
+    const v = dest || reverb() || sfxBus, nodes = [];
     const notes = [587, 659, 523, 494, 440, 392];
     const n = Math.max(2, Math.round(dur / 0.55));
     for (let i = 0; i < n; i++) {
@@ -205,11 +218,11 @@ export const sfx = {
     return nodes;
   },
   /** Far-off chầu: one random praise or blame from an empty stage. */
-  chau() { Math.random() < 0.6 ? sfx.tom(0, reverb() || master) : (sfx.chat(0), sfx.chat(0.33)); },
+  chau() { Math.random() < 0.6 ? sfx.tom(0, reverb() || sfxBus) : (sfx.chat(0), sfx.chat(0.33)); },
   /** A small child humming a pentatonic lullaby, far away. Returns the nodes so a tape can stop it. */
   hum(when = 0, dur = 8, dest = null) {
     if (!ctx()) return [];
-    const v = dest || reverb() || master;
+    const v = dest || reverb() || sfxBus;
     const notes = [523, 587, 659, 587, 523, 440, 392, 440, 523, 523, 440, 392];
     const step = dur / notes.length, nodes = [];
     notes.forEach((f, i) => {
@@ -251,7 +264,7 @@ export function ambience(level) {
   if (amb.style === "ghostWedding") return ghostWedding(level);
   if (!amb.on) {
     amb.on = true;
-    const bus = ac.createGain(); bus.connect(master);
+    const bus = ac.createGain(); bus.connect(musicBus);
     const rain = ac.createBufferSource(); rain.buffer = noise(); rain.loop = true;
     const lp = ac.createBiquadFilter(); lp.type = "lowpass"; lp.frequency.value = 1400;
     const hp = ac.createBiquadFilter(); hp.type = "highpass"; hp.frequency.value = 350;
@@ -283,7 +296,7 @@ export function ambience(level) {
 function musicFile(url, level) {
   if (!amb.on) {
     amb.on = true;
-    const bus = ac.createGain(); bus.gain.value = 0; bus.connect(master);
+    const bus = ac.createGain(); bus.gain.value = 0; bus.connect(musicBus);
     const lp = ac.createBiquadFilter(); lp.type = "lowpass"; lp.frequency.value = 9000; lp.connect(bus);
     amb.nodes = { out: bus, lp, all: [] };
     fetch(url).then((r) => (r.ok ? r.arrayBuffer() : Promise.reject(r.status))).then((b) => ac.decodeAudioData(b)).then((buf) => {
@@ -310,7 +323,7 @@ const PHRASES = [
 function ghostWedding(level) {
   if (!amb.on) {
     amb.on = true;
-    const bus = ac.createGain(); bus.gain.value = 1; bus.connect(master);
+    const bus = ac.createGain(); bus.gain.value = 1; bus.connect(musicBus);
     const wind = ac.createBufferSource(); wind.buffer = noise(); wind.loop = true;
     const bp = ac.createBiquadFilter(); bp.type = "bandpass"; bp.frequency.value = 520; bp.Q.value = 0.8;
     const wl = ac.createOscillator(); wl.frequency.value = 0.045; const wd = ac.createGain(); wd.gain.value = 260; wl.connect(wd).connect(bp.frequency);
@@ -466,7 +479,7 @@ export function speak(text, kind) {
   const vi = speechSynthesis.getVoices().find((x) => /^vi/i.test(x.lang));
   if (vi) u.voice = vi;
   const s = (VOICES[kind] || VOICES.ha).speak;
-  u.pitch = s.pitch; u.rate = s.rate; u.volume = state.sound ? 1 : 0;
+  u.pitch = s.pitch; u.rate = s.rate; u.volume = state.sound ? vol("voice") : 0;
   speechSynthesis.speak(u);
   return true;
 }
@@ -500,7 +513,7 @@ export function tapeOut() {
   if (!ctx()) return null;
   const lp = ac.createBiquadFilter(); lp.type = "lowpass"; lp.frequency.value = 3400;
   const g = ac.createGain(); g.gain.value = 0.9;
-  lp.connect(g).connect(master);
+  lp.connect(g).connect(voiceBus);
   return lp;
 }
 

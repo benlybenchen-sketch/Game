@@ -17,19 +17,23 @@ export const ART = { ghostFace };
 export const DOCS = [...d0, ...d1, ...d2, ...d3, ...d4];
 
 export const META = {
+  strict: true,                          // countdown, penalties, grade (brought up to the series standard)
+  timeLimit: 150,
+  hintCost: { hint: 10, solve: 20 },     // hints and the solution open any time, paid in minutes
+  publicNames: ["Đỗ Văn Khánh"],         // the commune chairman is named on the first pages
   series: "Hồ sơ Nửa Đêm",
   number: "Hồ sơ số 01",
   title: "Hồ đòi người",
   place: "Xã Vọng Thủy, hồ thủy điện Nậm Khê · đêm 19 rạng sáng 20/8/2003",
   blurb: "Đêm rằm tháng Bảy, một cô giáo trẻ biến mất bên hồ thủy điện. Làng nói: cứ bảy năm, hồ lại đòi một người. Năm 1989 là một bé gái mặc áo đỏ. Năm 1996 là một ông kế toán. Bảy ngày sau, chương trình radio về chuyện ma của bạn nhận được một cuộn băng ẩm mùi bùn, gửi từ một địa chỉ không có người gửi.",
   players: "1–4 người",
-  time: "2–4 giờ",
+  time: "150 phút",
   level: "Khó, tăng dần",
   boss: "Anh Quân",
   firstDoc: "giao_viec",
   coverFocus: "62% 45%",   // phone banner crop: the part of the cover that must stay visible
   cover: "cover",
-  folders: ["Phong bì gửi tới đài", "Chị Nga gửi · lần 1", "Túi giấy của bà Thoa", "Hồ sơ năm 1996", "Gần sáng", "Kết thúc"],
+  folders: ["22 giờ 07", "23 giờ 31", "0 giờ 46", "2 giờ 13", "3 giờ 52", "5 giờ 20"],
   wrong: [
     "Anh Quân lắc đầu: “Chưa khớp. Đọc lại đi, chị Nga sẽ không mở hồ sơ vì một linh cảm.”",
     "“Có chỗ chưa đúng. Đừng đoán, hãy tìm tờ giấy nói điều đó.”",

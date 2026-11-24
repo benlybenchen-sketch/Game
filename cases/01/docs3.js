@@ -1,14 +1,14 @@
 // Fourth folder (after question 3): the death of Phạm Văn Bổng, rằm tháng Bảy 1996 (Wednesday 28/8/1996).
 import { ln, stamp, pic, hand, media, dread } from "../../js/kit.js";
 
-const xaHead = `<div class="form-head"><div>CÔNG AN HUYỆN NẬM KHÊ<br><b>CÔNG AN XÃ VỌNG THỦY</b></div><div><b>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</b><br>Độc lập – Tự do – Hạnh phúc</div></div>`;
+const xaHead = `<div class="form-head"><div>CÔNG AN HUYỆN NẬM KHÊ<br>CÔNG AN XÃ VỌNG THỦY</div><div>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM<br>Độc lập – Tự do – Hạnh phúc</div></div>`;
 
 export default [
   {
     id: "bang_3", stage: 3, kind: "Băng ghi âm", icon: "▶", label: "Băng số 3: buổi lên đồng ở nhà bà Gấm",
     html: () => `
     <div class="doc doc--plain">
-      <p class="note">Cuộn băng thứ ba trong túi của bà Thoa, nhãn viết tay của cô Hà. Anh Quân nghe được nửa băng thì đèn phòng thu tắt. ${dread(4, "<b>Lúc đèn sáng lại, băng đang tự quay.</b>")}</p>
+      <p class="note">Cuộn băng thứ ba trong túi của bà Thoa, nhãn viết tay của cô Hà. Anh Quân nghe được nửa băng thì đèn phòng thu tắt. ${dread(4, "Lúc đèn sáng lại, băng đang tự quay.")}</p>
       ${media("tape", "bang_3")}
       <p class="note small">Lời của một người lên đồng không phải là bằng chứng. Nhưng nó có thể chỉ chỗ để tìm bằng chứng.</p>
     </div>`,
@@ -21,10 +21,10 @@ export default [
       ${xaHead}
       <h2 class="form-title">BIÊN BẢN<br><small>Về việc phát hiện người chết đuối</small></h2>
       <p>Hồi 7 giờ 15 ngày 29/8/1996. Người lập: Đinh Công Hùng, trưởng công an xã.</p>
-      <p>Hồi 6 giờ cùng ngày, ngư dân <b>Hà Văn Nhì</b> phát hiện thi thể một người đàn ông nổi trên mặt hồ, <b>sát chân Gò Miếu</b>, phía cửa nhận nước nhà máy.
-        Xác định là ông <b>Phạm Văn Bổng</b>, 49 tuổi, trú tại thôn Ven Hồ.</p>
-      <p>Chiếc <b>xuồng chèo</b> của nạn nhân được tìm thấy <b>buộc dây cẩn thận tại bến Vọng</b>, mái chèo để gọn trong lòng xuồng, lòng xuồng khô.</p>
-      <p><b>Nhận định:</b> nạn nhân có thói quen đi câu đêm. Đêm 28/8 đi câu một mình ở khu vực Gò Miếu, trượt chân ngã xuống hồ, đuối nước. Không có dấu hiệu hình sự.
+      <p>Hồi 6 giờ cùng ngày, ngư dân Hà Văn Nhì phát hiện thi thể một người đàn ông nổi trên mặt hồ, sát chân Gò Miếu, phía cửa nhận nước nhà máy.
+        Xác định là ông Phạm Văn Bổng, 49 tuổi, trú tại thôn Ven Hồ.</p>
+      <p>Chiếc xuồng chèo của nạn nhân được tìm thấy buộc dây cẩn thận tại bến Vọng, mái chèo để gọn trong lòng xuồng, lòng xuồng khô.</p>
+      <p>Nhận định: nạn nhân có thói quen đi câu đêm. Đêm 28/8 đi câu một mình ở khu vực Gò Miếu, trượt chân ngã xuống hồ, đuối nước. Không có dấu hiệu hình sự.
         Gia đình xin nhận thi thể về mai táng, không đề nghị khám nghiệm thêm.</p>
       <div class="sign-row"><div>Người phát hiện<br>${hand("Nhì", "sign")}Hà Văn Nhì</div><div>Trưởng công an xã<br>${hand("Hùng", "sign")}Đinh Công Hùng</div></div>
       ${stamp("CÔNG AN XÃ<br>VỌNG THỦY<br>★", "right:40px;bottom:30px")}
@@ -35,16 +35,16 @@ export default [
     id: "giam_dinh_1996", stage: 3, kind: "Giám định", icon: "✚", label: "Phiếu khám của Trung tâm y tế huyện, 1996",
     html: () => `
     <div class="doc doc--form doc--old">
-      <div class="form-head"><div>SỞ Y TẾ SƠN KHÊ<br><b>TRUNG TÂM Y TẾ HUYỆN NẬM KHÊ</b></div><div><i>Ngày 29/8/1996</i></div></div>
+      <div class="form-head"><div>SỞ Y TẾ SƠN KHÊ<br>TRUNG TÂM Y TẾ HUYỆN NẬM KHÊ</div><div>Ngày 29/8/1996</div></div>
       <h2 class="form-title">PHIẾU KHÁM NGOÀI TỬ THI<br><small>(không mổ tử thi, theo đề nghị của gia đình)</small></h2>
-      <p>Họ tên: <b>Phạm Văn Bổng</b>, nam, 49 tuổi. Bác sĩ khám: Nguyễn Hữu Lộc.</p>
+      <p>Họ tên: Phạm Văn Bổng, nam, 49 tuổi. Bác sĩ khám: Nguyễn Hữu Lộc.</p>
       <ul>
-        <li>Thời gian tử vong ước tính: <b>từ 22 giờ đến 24 giờ ngày 28/8/1996</b>.</li>
+        <li>Thời gian tử vong ước tính: từ 22 giờ đến 24 giờ ngày 28/8/1996.</li>
         <li>Dấu hiệu ngạt nước: có, phù hợp chết đuối.</li>
-        <li><b>Vùng gáy có ổ bầm tụ máu 4 × 3 cm</b>, hình thành <b>trước khi chết</b>.</li>
+        <li>Vùng gáy có ổ bầm tụ máu 4 × 3 cm, hình thành trước khi chết.</li>
         <li>Hai cổ tay có vết hằn bầm, rộng khoảng 1 cm, chạy vòng quanh cổ tay.</li>
       </ul>
-      <p><b>Ý kiến:</b> đề nghị cơ quan công an làm rõ nguyên nhân vết bầm vùng gáy và cổ tay.</p>
+      <p>Ý kiến: đề nghị cơ quan công an làm rõ nguyên nhân vết bầm vùng gáy và cổ tay.</p>
       <p class="small muted">Bút chì ở lề, nét khác: ${hand("“Đã trao đổi, xã kết luận đuối nước – H.”", "inline")}</p>
     </div>`,
   },
@@ -55,9 +55,9 @@ export default [
     <div class="doc doc--form doc--old">
       ${xaHead}
       <h2 class="form-title">BIÊN BẢN GHI LỜI KHAI</h2>
-      <p>Người khai: <b>Lê Thị Thoa</b>, vợ ông Phạm Văn Bổng. Người ghi: Đinh Công Hùng.</p>
+      <p>Người khai: Lê Thị Thoa, vợ ông Phạm Văn Bổng. Người ghi: Đinh Công Hùng.</p>
       <p>Khoảng 21 giờ tối 28/8 có người đứng ngoài ngõ gọi ông nhà tôi, giọng thanh niên. Ông bảo “tôi ra một lát”.</p>
-      <p>Ông đi tay không, <b>không mang cần câu</b>. Cần câu và giỏ cá vẫn dựng ở góc nhà tới sáng.</p>
+      <p>Ông đi tay không, không mang cần câu. Cần câu và giỏ cá vẫn dựng ở góc nhà tới sáng.</p>
       <p><s>Một lúc sau tôi nghe tiếng máy thuyền nổ ngoài bến Vọng, chạy ra phía Gò Miếu.</s></p>
       <p>Ông đi đến sáng không về.</p>
       <p class="small muted">Dòng gạch bỏ là do người ghi gạch, không có chữ ký xác nhận sửa chữa của người khai.</p>
@@ -108,7 +108,7 @@ export default [
       <p>Tôi là Phạm Văn Bổng, nguyên kế toán Ban di dân lòng hồ xã Vọng Thủy năm 1989.</p>
       <p>Bảy năm nay tôi không ngủ được. Năm 1989, sáu hộ trong xã bị ghi khống là đã nhận tiền đền bù. Để đoàn kiểm tra huyện không phát hiện,
         trưởng ban đã xin đóng cống tích nước sớm, trong khi những nhà ấy còn chưa dọn. Cháu Nguyễn Thị Lụa chết trong đêm đó.</p>
-      <p>Tôi có giữ sổ chi gốc. <b>Ngày 29/8/1996 tôi sẽ mang sổ lên tỉnh</b> để trình bày. Tôi có lỗi vì đã im lặng.</p>
+      <p>Tôi có giữ sổ chi gốc. Ngày 29/8/1996 tôi sẽ mang sổ lên tỉnh để trình bày. Tôi có lỗi vì đã im lặng.</p>
       <p>Hôm qua tôi đã nói với anh K. là tôi sẽ đi. Anh ấy bảo tôi “nghĩ cho kỹ”.</p>
       <p class="right">Người viết<br>Bổng</p>`)}
       <p class="small muted">Bản nháp, chưa gửi, kẹp trong quyển sổ chi thật. Bà Thoa mới tìm thấy tối nay, khi lật lại quyển sổ.</p>

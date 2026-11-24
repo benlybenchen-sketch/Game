@@ -6,7 +6,7 @@ export const PEOPLE = ["Đỗ Văn Khánh", "Đỗ Văn Lực", "Nguyễn Thị 
 
 export const QUESTIONS = [
   {
-    id: "q1", stage: 0, title: "Đôi dép khô",
+    id: "q1", stage: 0, title: "22 giờ 07",
     ask: "Công an xã kết luận cô Hà trượt chân xuống hồ ở bến Vọng trong lúc xem lễ. Kết luận đó có đứng vững không?",
     parts: [
       { id: "a", type: "choice", label: "Cô Hà rơi xuống hồ ở bến Vọng, đêm 12/8", options: ["Có thể", "Không thể"] },
@@ -20,7 +20,7 @@ export const QUESTIONS = [
     clock: "23:31",
   },
   {
-    id: "q2", stage: 1, title: "Con thuyền không đèn",
+    id: "q2", stage: 1, title: "23 giờ 31",
     ask: "Cô Hà không ra bến Vọng. Ai đã đón cô ở bến Mới tối 12/8? Chỉ ra câu nói dối của người đó về chiếc thuyền.",
     parts: [
       { id: "who", type: "choice", label: "Người lái thuyền đón cô Hà", options: PEOPLE },
@@ -36,7 +36,7 @@ export const QUESTIONS = [
     clock: "00:46",
   },
   {
-    id: "q3", stage: 2, title: "Món nợ năm 1989",
+    id: "q3", stage: 2, title: "0 giờ 46",
     ask: "Đối chiếu sổ sách năm 1989. Bao nhiêu hộ bị ghi khống là đã nhận tiền, tổng số tiền bị giữ lại là bao nhiêu? Ai đã ký giấy xin đóng cống tích nước sớm?",
     parts: [
       { id: "n", type: "number", label: "Số hộ bị ghi khống (trang 3)", unit: "hộ" },
@@ -51,8 +51,8 @@ export const QUESTIONS = [
     clock: "02:13",
   },
   {
-    id: "q4", stage: 3, title: "Đêm rằm năm 1996",
-    ask: "Ông Bổng có thật sự đi câu đêm 28/8/1996 không? Ai đã đưa ông ra hồ? Chỉ ra câu nói dối trong bản tường trình năm 1996.",
+    id: "q4", stage: 3, title: "2 giờ 13",
+    ask: "Đêm 28/8/1996 ông Bổng có đi câu không? Ai đã đưa ông ra hồ? Chỉ ra câu nói dối trong bản tường trình năm 1996.",
     parts: [
       { id: "fish", type: "choice", label: "Đêm 28/8/1996 ông Bổng đi câu cá", options: ["Có", "Không"] },
       { id: "drv", type: "choice", label: "Người lái thuyền đưa ông Bổng ra hồ", options: PEOPLE },
@@ -67,8 +67,8 @@ export const QUESTIONS = [
     clock: "03:52",
   },
   {
-    id: "q5", stage: 4, title: "Chỗ nước không tới",
-    ask: "Cô Hà đang ở đâu? Nếu không ai tới kịp, nước sẽ ngập sàn nơi cô bị nhốt lúc mấy giờ sáng nay? Ai ra lệnh?",
+    id: "q5", stage: 4, title: "3 giờ 52",
+    ask: "Cô Hà đang ở đâu? Nếu không ai tới kịp, nước sẽ ngập sàn nơi cô bị nhốt lúc mấy giờ sáng nay?",
     parts: [
       { id: "where", type: "choice", label: "Cô Hà đang ở", options: [
         "Dưới đáy hồ, gần bến Vọng",
@@ -78,7 +78,6 @@ export const QUESTIONS = [
         "Trong miếu trên đỉnh Gò Miếu",
       ] },
       { id: "t", type: "time", label: "Nước ngập tới sàn nơi giam cô Hà vào lúc (sáng 20/8)", placeholder: "vd 04:30" },
-      { id: "boss", type: "choice", label: "Người ra lệnh giam cô Hà", options: PEOPLE },
       { id: "pins", type: "pins", count: 3, label: "Ghim 3 tài liệu làm bằng chứng" },
     ],
     memo: "",

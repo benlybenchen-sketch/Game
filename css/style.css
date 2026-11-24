@@ -741,3 +741,11 @@ ol.ngoc { columns: 2; column-gap: 28px; font-family: var(--serif); }
 @media (max-width: 600px) { ol.ngoc { columns: 1; } }
 .fold-item--locked { opacity: .55; }
 .fold-item--locked .lbl { font-style: normal; }
+.set--vol { display: flex; align-items: center; gap: 10px; }
+.set--vol span { min-width: 12em; }
+.set--vol input[type=range] { flex: 1; max-width: 220px; accent-color: #8c1e19; }
+.set--vol em { font-style: normal; font-family: var(--mono); font-size: 12px; min-width: 3.5em; text-align: right; }
+@media (max-width: 600px) { .set--vol { flex-wrap: wrap; } .set--vol span { min-width: 100%; } }
+.home-tools { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 22px 0 4px; }
+.code-box { width: 100%; font: 12px/1.4 var(--mono); background: #0b0f11; color: #d9cfb8; border: 1px solid #2a3438; border-radius: 4px; padding: 8px; word-break: break-all; resize: vertical; box-sizing: border-box; }
+.restore-msg { color: var(--red2); }

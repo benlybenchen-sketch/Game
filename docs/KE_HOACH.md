@@ -92,6 +92,7 @@ Người chơi chê hồ sơ 01 "dễ đoán". Hồ sơ 02–05 đã được l�
 ## Quy tắc âm thanh và cảnh doạ (áp dụng cho mọi hồ sơ từ nay về sau)
 - Mọi hiệu ứng âm thanh đi qua bus `fx` trong `js/audio.js` (khuếch đại lớn, có limiter): luôn ở mức tối đa mà không vỡ tiếng. Hiệu ứng mới chỉ cần gọi `tone`/`noiseHit`/`sfx.*` là tự to.
 - Giọng đọc và băng giữ ở master, không đẩy theo hiệu ứng.
+- Âm lượng: người chơi chỉnh được nhạc nền và giọng đọc (Cài đặt). Tiếng động và tiếng doạ không có thanh chỉnh, luôn ở mức tối đa (chỉ tắt khi tắt hẳn âm thanh).
 - Cảnh doạ: luôn có tiếng thét lớn (`sfx.scream`, ba lớp giọng rít + tiếng nổ trầm); mỗi cảnh doạ giữ lâu hơn thời gian ghi trong case thêm 1,2 giây; bấm vào màn hình để tắt (sau 0,6 giây). Cảnh doạ chính thét hai lần.
 
 ## Đưa bản mới lên web

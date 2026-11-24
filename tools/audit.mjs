@@ -44,7 +44,7 @@ for (let st = 0; st < C.QUESTIONS.length; st++) if (!C.DOCS.some((d) => d.stage 
 // ---------------------------------------------------------------- difficulty rules (docs/KE_HOACH.md, rules 1-15)
 // Enforced for case 03 onward (case 02 is kept as released). Each finding is a leak or an easy guess.
 // META.publicNames: names the player meets from the first page (main characters, home towns); they may be answers.
-if (Number(id) >= 3) {
+if (Number(id) >= 3 || id === "01") {
   const M = C.META, Q = C.QUESTIONS;
   const strip = (x) => String(x ?? "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
   const low = (x) => strip(x).toLowerCase();
@@ -107,12 +107,12 @@ if (+id >= 4) {
   } }
 
 // ---------------------------------------------------------------- rules added after real mistakes (CLAUDE.md section 6)
-if (Number(id) >= 3) {
+if (Number(id) >= 3 || id === "01") {
   const M = C.META, Q = C.QUESTIONS;
   const strip = (x) => String(x ?? "").replace(/<svg[\s\S]*?<\/svg>/g, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
   // checkpoint titles and folder names: only day/night/visit words and dates (no puzzle, document or answer words)
   const TIMEWORDS = new Set(("đêm ngày sáng chiều tối trưa rạng sau lần thăm trực thứ nhất một hai ba tư bốn năm sáu bảy tám chín mười " +
-    "chủ nhật tháng giêng chạp mồng peret akhet shemu và").split(" "));
+    "chủ nhật tháng giêng chạp mồng peret akhet shemu và giờ phút gần nửa").split(" "));
   const timeOnly = (t) => strip(t).toLowerCase().split(/[\s·,/().:-]+/).filter(Boolean).every((w) => /^\d+$/.test(w) || TIMEWORDS.has(w));
   for (const q of Q) if (!timeOnly(q.title)) bad(`rule 3: title of ${q.id} ("${q.title}") must only name the day or night`);
   (M.folders || []).forEach((f, k) => { if (!timeOnly(f)) bad(`rule 3: folder ${k} ("${f}") must only name the day or night`); });

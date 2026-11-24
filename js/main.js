@@ -1,11 +1,11 @@
 // The investigation desk: cover, folder list, document reader, the notebook of staged questions,
 // unlocking new folders, the ending. Loaded by index.html as an ES module.
-import { state, save, resetAll, loadState, peek } from "./store.js";
+import { state, save, resetAll, loadState, peek, exportCode, importCode } from "./store.js";
 import { C, loadCase, CASE_ID, base } from "./case.js";
 import { CASES } from "../cases/list.js";
 import { decode, checkQuestion } from "./answer.js";
 import { mountMedia } from "./media.js";
-import { ctx, sfx, setSound, ambience, setAmbience, hush, ambState } from "./audio.js";
+import { ctx, sfx, setSound, ambience, setAmbience, hush, ambState, setVolume } from "./audio.js";
 import { setLevel, level, jumpScare } from "./dread.js";
 
 // Data of the open case (set by openCase).
@@ -52,6 +52,11 @@ function paintTimer() {
 }
 function tickTimer() {
   const now = performance.now(), dt = (now - lastTick) / 1000; lastTick = now;
+  // play time for the run report: counted like the clock (desk open, tab visible), without the penalties
+  if (state.started && !finished() && !state.failed && !state.timeout && !document.hidden && document.body.dataset.screen === "desk") {
+    state.playSec = (state.playSec || 0) + Math.min(dt, 5);
+    (state.stageAt ||= {})[state.stage] ??= Math.max(0, state.playSec - Math.min(dt, 5));
+  }
   if (!timerOn() || document.hidden || document.body.dataset.screen !== "desk") return paintTimer();
   state.timeLeft = Math.max(0, (state.timeLeft ?? TIME_TOTAL()) - Math.min(dt, 5));
   if (now - lastSave > 5000) { lastSave = now; save(); }
@@ -59,6 +64,7 @@ function tickTimer() {
   if (state.timeLeft <= 0) gameOver();
 }
 function startTimer() {
+  clearInterval(timerId); lastTick = performance.now(); timerId = setInterval(tickTimer, 1000);
   if (!META.strict) return paintTimer();
   if (state.timeLeft == null) state.timeLeft = TIME_TOTAL();
   clearInterval(timerId); lastTick = performance.now(); timerId = setInterval(tickTimer, 1000); paintTimer();
@@ -137,6 +143,30 @@ const visibleDocs = () => DOCS.filter(docVisible);
 /** Documents shown with a lock after a win: those of the route not taken. */
 const lockedDocs = () => (won() ? DOCS.filter((d) => !d.fail && !d.secret && d.stage <= state.stage && otherRoute(d)) : []);
 
+// ---------------------------------------------------------------- run report (kept in this browser only)
+/** Time spent on each checkpoint (play time, penalties excluded), misses, hints, solutions, visits, cross-examinations. */
+function reportRows() {
+  const m = (sec) => `${Math.round(sec / 60)} phút`;
+  return QUESTIONS.map((q, i) => {
+    const from = state.stageAt?.[i], to = state.solvedAt?.[q.id] ?? (i === state.stage && !finished() ? state.playSec : null);
+    return [`${i + 1}. ${q.title}`, from == null || to == null ? "—" : m(to - from), state.tries?.[q.id] || 0, state.hints?.[q.id] || 0, state.peeked?.[q.id] ? "có" : "", i < state.stage ? "xong" : i === state.stage ? (state.failed ? "thua" : state.timeout ? "hết giờ" : "đang làm") : ""];
+  });
+}
+function reportText() {
+  const rows = reportRows(), visits = Object.keys(state.visits || {}).length;
+  return [`Báo cáo lượt chơi · ${META.number} ${META.title}`, `Tổng thời gian chơi: ${Math.round((state.playSec || 0) / 60)} phút${META.strict ? ` · đồng hồ còn ${Math.round((state.timeLeft ?? 0) / 60)} phút` : ""}`,
+    ...rows.map((r) => `${r[0]}: ${r[1]} · sai ${r[2]} · gợi ý ${r[3]}${r[4] ? " · xem giải" : ""}${r[5] ? ` · ${r[5]}` : ""}`),
+    `Thử sai mã, trận: ${state.lockFails || 0}${META.map ? ` · nơi đã đến: ${visits} · đối chất sai: ${state.confrontFails || 0} · nhánh: ${state.branch || "chưa chọn"}` : ""}`,
+    `Kết thúc đã mở: ${(state.endings || []).length}${META.endings ? `/${META.endings.length}` : ""}`].join("\n");
+}
+function reportDialog() {
+  const rows = reportRows();
+  dialog(`<h3>📊 Báo cáo lượt chơi</h3><p class="small muted">Chỉ lưu trên trình duyệt này. Thời gian là thời gian bạn thật sự ngồi đọc và giải (không tính phút bị trừ).</p>
+    <table class="tbl"><tr><th>Trọng điểm</th><th>Thời gian</th><th>Sai</th><th>Gợi ý</th><th>Xem giải</th><th></th></tr>${rows.map((r) => `<tr>${r.map((c) => `<td>${c}</td>`).join("")}</tr>`).join("")}</table>
+    <textarea class="code-box" readonly rows="6">${esc(reportText())}</textarea>
+    <button class="btn btn--small" data-copy="1">Chép báo cáo</button> <span class="copy-msg small"></span>`, "Đóng");
+}
+
 // ---------------------------------------------------------------- endings (cases with several routes: META.endings)
 /** Records an ending as reached; endings survive "play again". */
 function unlock(id) {
@@ -162,6 +192,8 @@ let cleanupMedia = () => {};
 // ---------------------------------------------------------------- boot
 function boot() {
   bindChrome();
+  // offline fallback (sw.js): network first, so new versions always win
+  if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) navigator.serviceWorker.register("sw.js").catch(() => {});
   const q = new URLSearchParams(location.search), id = q.get("case");
   const k = CASES.find((c) => c.id === id);
   if (k && (!k.soon || q.has("preview"))) openCase(id); else showHome();
@@ -216,8 +248,28 @@ function showHome() {
         <span class="case-blurb">${k.short}</span>
         ${ratingHtml(k)}<span class="case-facts">${k.level} · ${k.time} · ${k.questions} trọng điểm${k.endings ? ` · ${k.endings} kết thúc` : ""}</span><span class="case-status">${status}${k.endings ? ` · 🏁 ${p.endings}/${k.endings}` : ""}</span></span></button>`;
     }).join("")}</div>
+    <div class="home-tools"><button class="btn btn--ghost" data-cv="backup">💾 Sao lưu tiến trình</button><button class="btn btn--ghost" data-cv="restore">📥 Khôi phục từ mã</button></div>
     <p class="credit">Truyện và nhân vật hoàn toàn hư cấu. Có yếu tố kinh dị, tâm linh: nên đeo tai nghe.</p>
   </div>`;
+}
+
+/** Backup: shows the code of every case's progress, to paste into another browser. */
+function backupDialog() {
+  const code = exportCode();
+  dialog(`<h3>💾 Sao lưu tiến trình</h3><p>Đây là mã chứa tiến trình mọi hồ sơ (trọng điểm, ghim, ghi chú, đồng hồ, kết thúc đã mở) và cài đặt của bạn. Chép nó lại, rồi ở máy khác bấm "Khôi phục từ mã" và dán vào.</p>
+    <textarea class="code-box" readonly rows="5">${code}</textarea><p class="small muted">${code.length.toLocaleString("vi-VN")} ký tự. Mã chỉ nằm trên máy bạn, game không gửi đi đâu.</p>
+    <button class="btn btn--small" data-copy="1">Chép mã</button> <span class="copy-msg small"></span>`, "Xong");
+  const ta = $("#dialog .code-box"); ta?.addEventListener("focus", () => ta.select());
+}
+function restoreDialog() {
+  dialog(`<h3>📥 Khôi phục từ mã</h3><p>Dán mã sao lưu vào đây. Tiến trình của những hồ sơ có trong mã sẽ thay cho tiến trình hiện có trên máy này.</p>
+    <textarea class="code-box" rows="5" placeholder="HSND1...."></textarea><p class="restore-msg small"></p>`, "Khôi phục", null, "Thôi");
+  const d = $("#dialog"), ok = d.querySelector('[data-dlg="ok"]');
+  ok.addEventListener("click", (e) => {
+    const r = importCode(d.querySelector(".code-box")?.value);
+    if (!r.ok) { e.stopImmediatePropagation(); d.querySelector(".restore-msg").textContent = r.why; return; }
+    setTimeout(() => { dialog(`<h3>Đã khôi phục</h3><p>Đã nạp tiến trình của ${r.n} hồ sơ${r.at ? ` (sao lưu ngày ${r.at.split("-").reverse().join("/")})` : ""}.</p>`, "Tải lại trang", () => location.reload()); }, 0);
+  }, { capture: true });
 }
 
 /** Two 1–5 star rows (difficulty, horror) for a case card: filled stars gold, the rest faint. */
@@ -250,6 +302,7 @@ function showCover() {
         <button class="btn btn--red" data-cv="go">${resume ? "Tiếp tục điều tra" : state.started ? "Xem lại hồ sơ" : "Mở phong bì"}</button>
         ${state.started ? `<button class="btn btn--ghost" data-cv="reset">Chơi lại từ đầu</button>` : ""}
         ${META.strict && state.best ? `<span class="best-grade">Hạng cao nhất: <b class="grade-${state.best}">${state.best}</b></span>` : ""}
+        ${state.started ? `<button class="btn btn--ghost" data-cv="report">📊 Báo cáo lượt chơi</button>` : ""}
         ${META.endings ? `<button class="btn btn--ghost" data-cv="endings">🏁 Kết thúc đã mở: ${(state.endings || []).length}/${META.endings.length}</button>` : ""}
       </div>
       <details class="howto"><summary>Cách chơi</summary><ol>
@@ -276,6 +329,7 @@ function settingsHtml() {
     ${tog("flash", state.flash, "Nháy sáng nhanh", "Tắt", "Bật")}
     ${tog("sound", state.sound, "Âm thanh", "Tắt", "Bật")}
     ${tog("voice", state.voice, "Đọc lời băng bằng giọng máy", "Tắt", "Bật")}
+    ${[["music", "Nhạc nền"], ["voice", "Giọng đọc, băng ghi âm"]].map(([k, l]) => `<label class="set set--vol"><span>${l}</span><input type="range" min="0" max="100" step="5" value="${Math.round((state.vol?.[k] ?? 1) * 100)}" data-vol="${k}"><em>${Math.round((state.vol?.[k] ?? 1) * 100)}%</em></label>`).join("")}
   </div>`;
 }
 
@@ -298,7 +352,21 @@ function startDesk() {
   $("#desk").hidden = false;
   renderAll();
   startTimer();
+  warmPictures();
   openDoc(state.lastDoc && byId.has(state.lastDoc) && docVisible(byId.get(state.lastDoc)) ? state.lastDoc : META.firstDoc);
+}
+
+/** When the browser is idle, fetch the pictures of the open case once, so a dropped connection later does not leave holes. */
+let warmed = "";
+function warmPictures() {
+  if (warmed === CASE_ID || navigator.connection?.saveData) return;
+  warmed = CASE_ID;
+  const names = new Set();
+  for (const d of DOCS) { try { for (const m of d.html().matchAll(/src="([^"]+\.jpg)"/g)) names.add(m[1]); } catch { /* a document that needs more state */ } }
+  for (const k of [META.cover, ...Object.values(META.scares || {}).map((x) => x[1]), ...Object.values(META.docScares || {}).map((x) => x[1])]) if (k) names.add(`${base.img}${k}.jpg`);
+  const idle = (f, ms) => (window.requestIdleCallback ? requestIdleCallback(() => setTimeout(f, ms), { timeout: 5000 }) : setTimeout(f, ms));
+  const list = [...names], step = () => { const n = list.shift(); if (!n) return; fetch(n).catch(() => {}).finally(() => idle(step, 300)); };
+  idle(step, 4000);
 }
 
 /** A case can open with a contract the player signs with their own name (kept only in this browser). */
@@ -357,11 +425,30 @@ function openDoc(id) {
   cleanupMedia = mountMedia(body);
   if (d.confront) body.insertAdjacentHTML("beforeend", `<div class="confront" data-cf="${d.confront.id}"></div>`);
   paintExtras();
+  if (!over() && !state.timeout) { if (body.querySelector(".mapnav")) setTimeout(() => guide("map"), 400); else if (d.confront) setTimeout(() => guide("confront"), 400); }
   const ds = (META.docScares || {})[id];
   if (ds) setTimeout(() => { if (state.lastDoc === id) jumpScare(ds[0], ds[1], ds[3] || {}); }, ds[2] ?? 1500);
   sfx.paper();
   renderFolder();
   if (isMobile()) showPanel("reader");
+}
+// ---------------------------------------------------------------- first-time guides (how to use a new mechanism, never how to solve)
+const GUIDES_FORCED = /[?&]guides=1/.test(location.search);   // read once: openCase rewrites the address
+const GUIDES = {
+  map: ["🗺 Bản đồ", "Giấy tờ nằm rải rác ở nhiều nơi. Bấm “Đến đây” để tới một nơi: mỗi lần đi mất một nén hương, đồng hồ bị trừ vài phút, rồi giấy tờ ở nơi đó (tới lúc hiện tại) vào hồ sơ của bạn.",
+    "Bản đồ không báo nơi nào có thứ mới. Một nơi đã đến, sang trọng điểm sau có thể có thêm giấy tờ: muốn xem phải đến lại."],
+  confront: ["🗣 Đối chất", "Dưới lời khai có ô đối chất. Chọn một tài liệu trong hồ sơ rồi bấm “Đưa ra”. Đưa đúng thứ làm người ấy không chối được nữa thì họ khai lại, và lời khai mới vào hồ sơ.",
+    "Đưa sai bị trừ phút, và người ấy sẽ đề phòng: lần sau phải đưa hai tài liệu cùng lúc. Có người nói thật: đưa gì cũng là sai."],
+  branch: ["⚠ Quyết định không rút lại", "Trọng điểm này bắt đầu bằng một lựa chọn: chỉ làm được một việc, việc kia sẽ mất trong lượt chơi này.",
+    "Đi đường nào cũng đủ giấy tờ để phá án, nhưng bạn sẽ thấy những thứ khác nhau và kết thúc cũng khác. Thắng xong, tài liệu của đường kia hiện khoá: chơi lại để đi đường còn lại."],
+};
+function guide(k) {
+  // automated tests (navigator.webdriver) skip the guides unless the address asks for them (?guides=1)
+  if (navigator.webdriver && !GUIDES_FORCED) return;
+  if (!GUIDES[k] || state.guides?.[k] || !$("#dialog").hidden) return;
+  state.guides = { ...(state.guides || {}), [k]: true }; save();
+  const [h, ...ps] = GUIDES[k];
+  dialog(`<h3>${h}</h3>${ps.map((x) => `<p>${x}</p>`).join("")}<p class="small muted">Lời dẫn này chỉ hiện một lần.</p>`, "Đã hiểu");
 }
 /** Fills the map and the cross-examination box of the open document (they change with the clock and the stage). */
 function paintExtras() {
@@ -441,6 +528,7 @@ function renderInquiry() {
     if (i === state.stage) return state.failed ? failedCard(q, i) : openCard(q, i);
     return `<div class="q-card locked"><div class="q-head"><span class="q-no">Trọng điểm ${i + 1}</span><span class="q-title">· · ·</span></div></div>`;
   }).join("");
+  if (currentQ()?.branch && !state.branch && !over()) setTimeout(() => guide("branch"), 600);
   $(".inq").innerHTML = `<h2>Sổ công tác</h2>${html}${finished() ? `<div class="q-card end"><b>Hồ sơ đã khép.</b> Đọc thư mục “${FOLDERS[QUESTIONS.length] || "Kết thúc"}” bên trái.</div>` : ""}`;
   paintTimer();
 }
@@ -580,6 +668,7 @@ function decide(q, ok) {
 
 function solved(q, peeked) {
   if (peeked) state.peeked[q.id] = true;
+  (state.solvedAt ||= {})[q.id] = state.playSec || 0;
   picking = null;
   state.stage++;
   save();
@@ -590,7 +679,7 @@ function solved(q, peeked) {
     unlock(META.endings?.find((e) => e.good)?.id);
     if (flawless()) unlock(META.endings?.find((e) => e.hidden)?.id);
     const fin = (x) => (typeof x === "function" ? x() : x);
-    dialog(fin(META.finale.html) + (META.strict ? gradeHtml() : ""), "Đọc hồ sơ kết thúc", () => { openDoc(fin(META.finale.open)); fireScare(state.stage); });
+    dialog(fin(META.finale.html) + (META.strict ? gradeHtml() : "") + `<p class="small muted">Xem thời gian từng trọng điểm: nút “Báo cáo lượt chơi” ở trang bìa.</p>`, "Đọc hồ sơ kết thúc", () => { openDoc(fin(META.finale.open)); fireScare(state.stage); });
     return;
   }
   const clock = q.clock, memo = typeof q.memo === "function" ? q.memo() : q.memo;
@@ -691,12 +780,17 @@ function bindChrome() {
       if (cv.dataset.cv === "go") startDesk();
       if (cv.dataset.cv === "home") showHome();
       if (cv.dataset.cv === "endings") dialog(endingsHtml(), "Đóng", () => {});
+      if (cv.dataset.cv === "backup") backupDialog();
+      if (cv.dataset.cv === "report") reportDialog();
+      if (cv.dataset.cv === "restore") restoreDialog();
       if (cv.dataset.cv === "reset") dialog("<h3>Chơi lại từ đầu?</h3><p>Mọi câu trả lời, ghim và ghi chú sẽ bị xoá.</p>", "Xoá và chơi lại", () => { resetAll(); setLevel(0, { quiet: true }); document.querySelector(".ghost-note").innerHTML = ""; showCover(); }, "Thôi");
       return;
     }
     const kc = t.closest(".case-card");
     if (kc && kc.dataset.case && document.body.dataset.screen === "home") { ctx(); openCase(kc.dataset.case); return; }
     const set = t.closest("[data-set]"); if (set) { ctx(); applySetting(set.dataset.set, Number(set.dataset.v)); return; }
+    const cp = t.closest("[data-copy]");
+    if (cp) { const ta = $("#dialog .code-box"); const msg = $("#dialog .copy-msg"); (navigator.clipboard?.writeText(ta.value) || Promise.reject()).then(() => { msg.textContent = "Đã chép."; }, () => { ta.select(); document.execCommand?.("copy"); msg.textContent = "Đã chọn sẵn, bấm Ctrl+C (hoặc giữ để chép trên điện thoại)."; }); return; }
     const doc = t.closest("[data-doc]"); if (doc) return openDoc(doc.dataset.doc);
     const lk = t.closest("[data-locked]");
     if (lk) return dialog(`<h3>🔒 Tài liệu bị khoá</h3><p>“${esc(byId.get(lk.dataset.locked)?.label || "")}” thuộc nhánh bạn chưa đi trong lượt này.</p><p>Bạn có muốn chơi lại từ đầu và chọn nhánh khác để mở nó không? Kết thúc đã mở và hạng cao nhất vẫn được giữ.</p>`,
@@ -740,6 +834,11 @@ function bindChrome() {
   document.addEventListener("input", (e) => {
     if (e.target.matches(".notes textarea")) { state.notes = e.target.value; save(); return; }
     if (e.target.matches("input[data-part]")) onField(e);
+    if (e.target.matches("input[data-vol]")) {
+      const k = e.target.dataset.vol, v = Number(e.target.value) / 100;
+      state.vol = { music: 1, voice: 1, ...(state.vol || {}), [k]: v }; save(); ctx(); setVolume(k, v);
+      document.querySelectorAll(`input[data-vol="${k}"] + em`).forEach((x) => { x.textContent = `${Math.round(v * 100)}%`; });
+    }
   });
   showPanel("reader");
 }

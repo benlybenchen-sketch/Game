@@ -118,5 +118,53 @@ let bad = 0; const ok = (what, cond, extra = "") => { if (!cond) bad++; console.
     ok(`${c}: no page errors`, errs.length === 0, [...new Set(errs)].join("; "));
     await p.close();
   }
+  // ---------------------------------------------------------------- features shared by every case
+  {
+    console.log("== shared features");
+    const ctx = await b.newContext({ viewport: { width: 1300, height: 900 } }); const p = await ctx.newPage(); const errs = []; p.on("pageerror", (e) => errs.push(e.message));
+    const H = "http://localhost:8063/";
+    // backup and restore
+    await p.goto(H + "?case=07&preview=1"); await p.evaluate(() => { localStorage.clear(); localStorage.setItem("hsnd.case.07", JSON.stringify({ started: true, stage: 3, notes: "ghi chú thử", endings: ["that"] })); });
+    await p.goto(H); await p.waitForTimeout(400);
+    await p.click('[data-cv="backup"]'); await p.waitForTimeout(200);
+    const code = await p.inputValue("#dialog .code-box");
+    ok("backup gives a code", /^HSND1\./.test(code) && code.length > 40);
+    await p.click('[data-dlg="ok"]');
+    await p.evaluate(() => localStorage.clear()); await p.reload(); await p.waitForTimeout(300);
+    await p.click('[data-cv="restore"]'); await p.fill("#dialog .code-box", code.slice(0, -3) + "zzz"); await p.click('[data-dlg="ok"]'); await p.waitForTimeout(200);
+    ok("a damaged code is refused with a message", /thiếu hoặc sai|đúng dạng/.test(await p.textContent("#dialog .restore-msg")));
+    await p.fill("#dialog .code-box", code); await p.click('[data-dlg="ok"]'); await p.waitForTimeout(300);
+    ok("a good code restores", /Đã khôi phục/.test(await p.textContent("#dialog")));
+    const back = await p.evaluate(() => JSON.parse(localStorage.getItem("hsnd.case.07") || "{}"));
+    ok("restored progress is the same", back.stage === 3 && back.notes === "ghi chú thử" && (back.endings || []).includes("that"));
+    // run report
+    await p.goto(H + "?case=07&preview=1"); await p.waitForTimeout(400); await p.click('[data-cv="report"]'); await p.waitForTimeout(200);
+    const rep = await p.inputValue("#dialog .code-box");
+    ok("run report lists every checkpoint", (rep.match(/^\d\. /gm) || []).length === 7, rep.split("\n")[0]);
+    await p.click('[data-dlg="ok"]');
+    // volume sliders: music and voice only (effects and scares always full)
+    await p.click('[data-cv="go"]'); await p.waitForTimeout(300); await p.click('[data-top="settings"]'); await p.waitForTimeout(200);
+    const sliders = await p.$$eval("#dialog input[data-vol]", (x) => x.map((i) => i.dataset.vol));
+    ok("volume sliders are music and voice only", JSON.stringify(sliders) === JSON.stringify(["music", "voice"]), sliders.join(","));
+    await p.fill('#dialog input[data-vol="music"]', "40"); await p.dispatchEvent('#dialog input[data-vol="music"]', "input"); await p.waitForTimeout(100);
+    ok("music volume is saved", await p.evaluate(() => JSON.parse(localStorage.getItem("hsnd.settings")).vol.music === 0.4));
+    await p.click('[data-dlg="ok"]');
+    // first-time guides (tests normally skip them; ?guides=1 turns them on)
+    await p.evaluate(() => { const s = JSON.parse(localStorage.getItem("hsnd.settings") || "{}"); s.guides = {}; localStorage.setItem("hsnd.settings", JSON.stringify(s)); localStorage.setItem("hsnd.case.08", JSON.stringify({ started: true, stage: 0, timeLeft: 9000 })); });
+    await p.goto(H + "?case=08&preview=1&guides=1"); await p.waitForTimeout(400); await p.click('[data-cv="go"]'); await p.waitForTimeout(500);
+    await p.click('[data-doc="ban_do"]'); await p.waitForTimeout(800);
+    ok("map guide appears the first time", /Bản đồ/.test(await p.textContent("#dialog").catch(() => "")) && await p.isVisible("#dialog"));
+    await p.click('[data-dlg="ok"]'); await p.click('[data-doc="lenh_cu"]'); await p.click('[data-doc="ban_do"]'); await p.waitForTimeout(800);
+    ok("map guide does not come back", !(await p.isVisible("#dialog")));
+    // offline: a case opened once keeps working when the connection drops
+    await p.goto(H + "?case=07&preview=1"); await p.waitForTimeout(2500);
+    await p.reload(); await p.waitForTimeout(1500);   // the service worker now controls the page
+    await ctx.setOffline(true);
+    await p.reload().catch(() => {}); await p.waitForTimeout(1500);
+    ok("offline: the case still opens from the cache", await p.evaluate(() => !!document.querySelector('[data-cv="go"]')).catch(() => false));
+    await ctx.setOffline(false);
+    ok("shared features: no page errors", errs.length === 0, [...new Set(errs)].join("; "));
+    await ctx.close();
+  }
   console.log(bad ? `${bad} problem(s)` : "deep tests ok"); await b.close(); process.exit(bad ? 1 : 0);
 })();

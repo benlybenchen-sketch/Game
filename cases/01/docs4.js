@@ -8,13 +8,13 @@ export default [
     <div class="doc doc--letter">
       <p class="note">Tổ công tác của chị Nga khám phòng ở tập thể giáo viên lúc 01 giờ 30 ngày 20/8. Quyển sổ bìa xanh nhét dưới đệm.</p>
       ${hand(`
-      <p><b>20/4.</b> Tùng mang tới một quyển vở ướt nhặt ở nền nhà cũ lộ ra vì hồ cạn. Vở của Nguyễn Thị Lụa, năm 1989. Chữ đẹp quá, đẹp hơn chữ mình.</p>
-      <p><b>27/7.</b> Bà Thoa. Sổ chi thật. Sáu nhà “chưa chi”. Mình photo rồi trả bà bản gốc.</p>
-      <p><b>3/8.</b> Buổi lên đồng. Mình không tin. Nhưng làm sao bà Gấm biết áo mưa của mình màu xanh? Hôm qua mình mới mua, chưa mặc lần nào.</p>
-      <p><b>9/8.</b> Lên UBND xin xem hồ sơ di dân 1989. Ông Khánh tiếp, cười rất lâu, nói “chuyện cũ rồi cô ạ”. Chiều, anh Hùng công an xã chặn ở cổng trường hỏi mình xin giấy tờ cũ làm gì.</p>
-      <p><b>10/8.</b> Đi đò của Lực. Lực bảo: “Chú Khánh muốn nói chuyện phải trái với cô. Chú có bản gốc công văn đóng cống. Giấy tờ ban di dân ngày xưa cất ở <b>trạm bơm cũ trên Gò Miếu</b>, hồi ấy là kho.”</p>
-      <p><b>11/8.</b> Hẹn tối mai, <b>19 giờ 50 ở bến Mới</b>, Lực đón đi Gò Miếu. Mình sẽ mang máy ghi âm. Gói băng số 1 đưa cho Tùng, phòng khi.</p>
-      <p><b>11/8, khuya.</b> Mơ thấy một bé gái áo đỏ đứng ở chân giường, tóc nhỏ nước xuống sàn. Nó bảo: “Cô đừng đi.” Sáng ra sàn nhà ướt một vệt.</p>
+      <p>20/4. Tùng mang tới một quyển vở ướt nhặt ở nền nhà cũ lộ ra vì hồ cạn. Vở của Nguyễn Thị Lụa, năm 1989. Chữ đẹp quá, đẹp hơn chữ mình.</p>
+      <p>27/7. Bà Thoa. Sổ chi thật. Sáu nhà “chưa chi”. Mình photo rồi trả bà bản gốc.</p>
+      <p>3/8. Buổi lên đồng. Mình không tin. Nhưng làm sao bà Gấm biết áo mưa của mình màu xanh? Hôm qua mình mới mua, chưa mặc lần nào.</p>
+      <p>9/8. Lên UBND xin xem hồ sơ di dân 1989. Ông Khánh tiếp, cười rất lâu, nói “chuyện cũ rồi cô ạ”. Chiều, anh Hùng công an xã chặn ở cổng trường hỏi mình xin giấy tờ cũ làm gì.</p>
+      <p>10/8. Đi đò của Lực. Lực bảo: “Chú Khánh muốn nói chuyện phải trái với cô. Chú có bản gốc công văn đóng cống. Giấy tờ ban di dân ngày xưa cất ở trạm bơm cũ trên Gò Miếu, hồi ấy là kho.”</p>
+      <p>11/8. Hẹn tối mai, 19 giờ 50 ở bến Mới, Lực đón đi Gò Miếu. Mình sẽ mang máy ghi âm. Gói băng số 1 đưa cho Tùng, phòng khi.</p>
+      <p>11/8, khuya. Mơ thấy một bé gái áo đỏ đứng ở chân giường, tóc nhỏ nước xuống sàn. Nó bảo: “Cô đừng đi.” Sáng ra sàn nhà ướt một vệt.</p>
       ${dread(4, '<p class="ghost-ink">cô ở chỗ nước không tới. nhưng nước sắp tới rồi.</p>')}`)}
     </div>`,
   },
@@ -38,8 +38,8 @@ export default [
     id: "loi_nhan", stage: 4, kind: "Tin nhắn thoại", icon: "☏", label: "Máy trả lời tự động của đài, 03:12",
     html: () => `
     <div class="doc doc--plain">
-      <p class="note">Hộp thư thoại số 2 của chương trình ghi được lúc <b>03:12</b>. Màn hình máy: <b>“Không hiển thị số”</b>.
-        Lúc 03:30 bưu điện huyện xác nhận: <b>không có cuộc gọi nào vào số máy của đài từ 03:00 tới 03:20</b>.</p>
+      <p class="note">Hộp thư thoại số 2 của chương trình ghi được lúc 03:12. Màn hình máy: “Không hiển thị số”.
+        Lúc 03:30 bưu điện huyện xác nhận: không có cuộc gọi nào vào số máy của đài từ 03:00 tới 03:20.</p>
       ${media("tape", "loi_nhan")}
     </div>`,
   },
@@ -48,13 +48,13 @@ export default [
     id: "thong_bao_tich_nuoc", stage: 4, kind: "Thông báo", icon: "§", label: "Thông báo tích nước của nhà máy, 18/8/2003",
     html: () => `
     <div class="doc doc--form">
-      <div class="form-head"><div>TỔNG CÔNG TY ĐIỆN LỰC<br><b>NHÀ MÁY THỦY ĐIỆN NẬM KHÊ</b><br>Số: 112/TB-NK</div><div><b>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</b><br>Độc lập – Tự do – Hạnh phúc<br><i>Nậm Khê, ngày 18 tháng 8 năm 2003</i></div></div>
+      <div class="form-head"><div>TỔNG CÔNG TY ĐIỆN LỰC<br>NHÀ MÁY THỦY ĐIỆN NẬM KHÊ<br>Số: 112/TB-NK</div><div>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM<br>Độc lập – Tự do – Hạnh phúc<br>Nậm Khê, ngày 18 tháng 8 năm 2003</div></div>
       <h2 class="form-title">THÔNG BÁO<br><small>Về việc tích nước hồ chứa sau mùa khô</small></h2>
       <p>Do mưa lớn đầu nguồn, Nhà máy thủy điện Nậm Khê thông báo:</p>
       <ol>
-        <li>Bắt đầu tích nước từ <b>12 giờ 00 ngày 19/8/2003</b>.</li>
-        <li>Mực nước lúc bắt đầu: <b>180,00 m</b>.</li>
-        <li>Tốc độ dâng dự kiến: <b>0,25 m mỗi giờ</b>, liên tục cả ngày đêm, cho tới cao trình <b>187,00 m</b>.</li>
+        <li>Bắt đầu tích nước từ 12 giờ 00 ngày 19/8/2003.</li>
+        <li>Mực nước lúc bắt đầu: 180,00 m.</li>
+        <li>Tốc độ dâng dự kiến: 0,25 m mỗi giờ, liên tục cả ngày đêm, cho tới cao trình 187,00 m.</li>
         <li>Đề nghị UBND các xã thông báo cho nhân dân di chuyển người, tài sản, gia súc ở dưới cao trình 187 m.</li>
       </ol>
       <p class="small muted">Nơi nhận: UBND các xã ven hồ (đã fax cho UBND xã Vọng Thủy lúc 15 giờ 05 ngày 18/8).</p>
@@ -70,8 +70,8 @@ export default [
       <table class="tbl">
         <tr><td>Vị trí</td><td>Lưng chừng sườn Gò Miếu, phía cửa nhận nước nhà máy (sau năm 1989, Gò Miếu thành đảo)</td></tr>
         <tr><td>Kết cấu</td><td>Nhà bê tông một gian 4 × 5 m, mái bằng</td></tr>
-        <tr><td><b>Cao trình sàn máy</b></td><td><b>184,50 m</b></td></tr>
-        <tr><td>Cửa</td><td>Cửa thép một cánh, then cài và khóa <b>phía ngoài</b></td></tr>
+        <tr><td>Cao trình sàn máy</td><td>184,50 m</td></tr>
+        <tr><td>Cửa</td><td>Cửa thép một cánh, then cài và khóa phía ngoài</td></tr>
         <tr><td>Ô thoáng</td><td>01 ô 20 × 40 cm, có song sắt, cao 2,2 m tính từ sàn</td></tr>
         <tr><td>Thiết bị</td><td>01 máy bơm điện 75 kW (đã tháo động cơ năm 1990, còn vỏ máy)</td></tr>
         <tr><td>Tình trạng</td><td>Ngừng dùng từ 1989. Năm 1989–1990 Ban di dân xã mượn làm kho giấy tờ.</td></tr>
@@ -95,7 +95,7 @@ export default [
         <tr><td>16/8</td><td>17h40</td><td>Lực (ra Gò Miếu)</td><td>xăng 3 lít</td><td>ô. Khánh</td></tr>
         <tr><td>17/8</td><td>18h05</td><td>Lực (ra Gò Miếu)</td><td>xăng 3 lít</td><td>ô. Khánh</td></tr>
         <tr><td>18/8</td><td>17h55</td><td>Lực (ra Gò Miếu)</td><td>xăng 3 lít</td><td>ô. Khánh</td></tr>
-        <tr><td>19/8</td><td></td><td colspan="3"><i>(không có)</i></td></tr>
+        <tr><td>19/8</td><td></td><td colspan="3">(không có)</td></tr>
       </table>
       <p class="small muted">Bà Nương: “Thằng Lực bảo thả lưới quanh Gò Miếu. Nhưng cả tuần tôi chẳng thấy nó bán con cá nào.”</p>
     </div>`,
@@ -114,7 +114,7 @@ export default [
         <tr><td>18/8</td><td>16:05</td><td>8 300 (phòng điều độ nhà máy thủy điện)</td><td class="n">3'12"</td></tr>
         <tr><td>19/8</td><td>22:58</td><td>0912 4.. 077</td><td class="n">0'18"</td></tr>
       </table>
-      <p class="small">Ghi chú của chị Nga: <i>“Phòng điều độ nhà máy xác nhận chiều 18/8 ông Khánh gọi hỏi rất kỹ <b>mấy giờ thì nước lên tới cao trình 184,5</b>. Ông ta nói để ‘báo bà con chuyển trâu bò’.”</i></p>
+      <p class="small">Ghi chú của chị Nga: “Phòng điều độ nhà máy xác nhận chiều 18/8 ông Khánh gọi hỏi rất kỹ mấy giờ thì nước lên tới cao trình 184,5. Ông ta nói để ‘báo bà con chuyển trâu bò’.”</p>
     </div>`,
   },
 
@@ -128,8 +128,8 @@ export default [
       <h1 class="news-head">Giải cứu cô giáo bị giam bảy ngày trên đảo giữa hồ. Bắt Chủ tịch xã</h1>
       ${pic("tram_bom", "Bên trong trạm bơm cũ Gò Miếu, sáng 20/8", "")}
       <p class="dropcap">5 giờ 20 sáng 20/8, tổ công tác Phòng Cảnh sát hình sự công an tỉnh cắt khóa cửa thép trạm bơm cũ trên Gò Miếu,
-        đưa cô <b>Trịnh Thu Hà</b> ra ngoài. Lúc đó nước hồ chỉ còn cách sàn trạm bơm chưa đầy 20 cm. Cô Hà kiệt sức, mất nước nhẹ nhưng tỉnh táo.</p>
-      <p>Cùng sáng, công an tỉnh bắt <b>Đỗ Văn Khánh</b> (Chủ tịch UBND xã) và <b>Đỗ Văn Lực</b>, đình chỉ công tác trưởng công an xã <b>Đinh Công Hùng</b>.
+        đưa cô Trịnh Thu Hà ra ngoài. Lúc đó nước hồ chỉ còn cách sàn trạm bơm chưa đầy 20 cm. Cô Hà kiệt sức, mất nước nhẹ nhưng tỉnh táo.</p>
+      <p>Cùng sáng, công an tỉnh bắt Đỗ Văn Khánh (Chủ tịch UBND xã) và Đỗ Văn Lực, đình chỉ công tác trưởng công an xã Đinh Công Hùng.
         Hồ sơ vụ bé Nguyễn Thị Lụa chết năm 1989 và vụ ông Phạm Văn Bổng chết năm 1996 được mở lại.</p>
       <p>Theo lời khai ban đầu, Khánh sai Lực đón cô Hà ra Gò Miếu “để nói chuyện”, rồi nhốt cô trong trạm bơm, đặt đồ của cô ở bến Vọng cho giống chết đuối.
         Khánh tính rằng khi nhà máy tích nước, trạm bơm sẽ ngập và “cái hồ sẽ làm nốt phần còn lại”.</p>
@@ -142,19 +142,19 @@ export default [
     html: () => `
     <div class="doc doc--form">
       <h2 class="form-title">GHI CHÉP CỦA ĐẠI ÚY VI THỊ NGA<br><small>Bệnh viện đa khoa tỉnh, 14 giờ ngày 20/8/2003</small></h2>
-      <p><b>Cô Hà:</b> “Bảy đêm. Lực chỉ đến đứng ngoài cửa, gõ vào then sắt xem khóa còn chắc không rồi đi. Hắn không mở cửa, không đưa gì vào.”</p>
+      <p>Cô Hà: “Bảy đêm. Lực chỉ đến đứng ngoài cửa, gõ vào then sắt xem khóa còn chắc không rồi đi. Hắn không mở cửa, không đưa gì vào.”</p>
       <p>“Nhưng đêm nào cũng có một bát nước và một nắm cơm gói lá dong đặt trên gờ ô thoáng. Ô thoáng cao hơn hai mét. Tôi không thấy ai.
-        Chỉ một lần tôi thấy <b>một bàn tay nhỏ, rất lạnh</b>, thò qua song sắt. Có cái <b>tay áo màu đỏ</b>.”</p>
+        Chỉ một lần tôi thấy một bàn tay nhỏ, rất lạnh, thò qua song sắt. Có cái tay áo màu đỏ.”</p>
       <p>${pic("tay", "", "")}</p>
-      <p><b>Lực khai:</b> hắn không đưa đồ ăn nước uống, vì “chú Khánh dặn để mặc”. <b>Bà Gấm:</b> bà chỉ ra gò đúng một đêm rằm.
+      <p>Lực khai: hắn không đưa đồ ăn nước uống, vì “chú Khánh dặn để mặc”. Bà Gấm: bà chỉ ra gò đúng một đêm rằm.
         Gò Miếu là đảo, không có đường bộ, không ai khác có thuyền ra đó trong tuần.</p>
       <hr>
-      <p><b>Bé Tùng</b> (hỏi thêm về phong bì): “Cháu không viết địa chỉ. Lúc cô Hà đưa gói giấy thì phong bì <b>chưa có chữ</b>. Sáng thứ Năm cháu mở ra định nhờ chú bưu điện viết, thì chữ đã có sẵn rồi. Mực tím. Cháu không có mực tím.”</p>
-      <p><b>Cô Hà:</b> “Tôi chưa kịp viết địa chỉ. Tôi định tối 12 về rồi mới viết.”</p>
+      <p>Bé Tùng (hỏi thêm về phong bì): “Cháu không viết địa chỉ. Lúc cô Hà đưa gói giấy thì phong bì chưa có chữ. Sáng thứ Năm cháu mở ra định nhờ chú bưu điện viết, thì chữ đã có sẵn rồi. Mực tím. Cháu không có mực tím.”</p>
+      <p>Cô Hà: “Tôi chưa kịp viết địa chỉ. Tôi định tối 12 về rồi mới viết.”</p>
       <p class="muted small">Chị Nga đối chiếu chữ trên phong bì với trang vở năm 1989 của bé Nguyễn Thị Lụa. Chị không ghi kết luận vào hồ sơ.</p>
       <hr>
-      <p><i>Rằm tháng Bảy năm sau, bà con Vọng Thủy thả bốn mươi bảy chiếc đèn hoa đăng, mỗi hộ di dân năm ấy một chiếc.
-        Người ta đếm được bốn mươi tám chiếc trôi ra giữa hồ.</i></p>
+      <p>Rằm tháng Bảy năm sau, bà con Vọng Thủy thả bốn mươi bảy chiếc đèn hoa đăng, mỗi hộ di dân năm ấy một chiếc.
+        Người ta đếm được bốn mươi tám chiếc trôi ra giữa hồ.</p>
       ${pic("ending", "", "")}
     </div>`,
   },
