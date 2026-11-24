@@ -93,7 +93,7 @@ Aspect ratio 16:9. Realistic film photograph in early morning in the small open 
 Aspect ratio 4:3. Realistic film photograph inside a tiny family chapel of mud brick in an ancient Egyptian village, around 1150 BC. 50mm lens at the height of the table top, close. On a low stone offering table stand two plain shallow red unglazed pottery bowls side by side, each about the width of two hands. The inside of each bowl is covered with a spiral of faint black handwritten ink running round and round toward the centre, blurred and unreadable; the left bowl's ink is older and fainter, the right bowl's ink darker and fresher. To the left: a small round loaf of bread and a wilted blue lotus flower lying on its side. To the right: a clay oil lamp with a weak flame, the only light. Behind the table, a whitewashed wall with a small dark rectangular niche. Warm low light, heavy soft shadows, a quiet, grieving mood. Fine film grain. Do not include: people, porcelain, glazed or painted bowls, readable text, readable hieroglyphs, watermark.
 ```
 
-### 06. `kho_ben.jpg` (kho lúa ở bến sông)
+### 06. `kho_ben.jpg` (ĐÃ CÓ · kho lúa ở bến sông)
 **Bố cục:** sân kho nhìn ra sông. Trái: dãy silo gạch bùn tròn mái vòm. Giữa tiền cảnh: ghế gạch với cái đấu kho (đáy gỗ sạch). Phải: chồng bao có thẻ buộc. Hậu cảnh: sông Nile, thuyền buồm vuông, cọ.
 **Kiểm tra:** cái đấu kho **cùng kiểu thùng gỗ tròn đai dây** như ảnh `cong_lang`, nhưng **lòng đáy là gỗ sạch, không có lớp vữa**; thẻ gỗ nhỏ buộc dây vào miệng bao, vết mực mờ; người (nếu có) chỉ là bóng xa quay lưng.
 **Nếu sai:**
@@ -103,7 +103,7 @@ Aspect ratio 4:3. Realistic film photograph inside a tiny family chapel of mud b
 Aspect ratio 16:9. Realistic film photograph in late afternoon at a riverside granary on the west bank of the Nile, ancient Egypt, around 1150 BC. 35mm lens at eye level. On the left, a row of four round domed mud-brick grain silos with small square hatches near the top. In the centre foreground, on a low mud-brick bench, a low round wooden grain measure made of wooden staves, bound with two bands of twisted palm-fibre rope, tilted slightly toward the camera so its inside is visible: the bottom inside is bare, clean, light-brown wood. On the right, a stack of coarse woven sacks of emmer and barley; small flat wooden tags the size of a thumb are tied with string to the necks of several sacks, each with faint unreadable ink marks. Behind everything, the wide Nile, a wooden boat with a single square sail, date palms and bright green fields on the far bank. If any people appear, they are tiny distant silhouettes with their backs turned. Warm golden light, floating dust. Do not include: faces, plaster or white layer inside the measure, paper labels, readable text, watermark.
 ```
 
-### 07. `dau_cong.jpg` (đáy cái đấu ở cổng, nhìn từ trên xuống)
+### 07. `dau_cong.jpg` (ĐÃ CÓ · đáy cái đấu ở cổng, nhìn từ trên xuống)
 **Bố cục:** ảnh vuông, nhìn **thẳng từ trên xuống**. Cái đấu chiếm gần hết khung, lệch trái; chén gốm đỏ ở góc dưới phải để so cỡ.
 **Kiểm tra:** lòng đấu có **lớp vữa vôi trắng ngà dày chừng một đốt ngón tay**, phẳng, **nứt một đường dọc mép** chỗ giáp thành gỗ, có **một chỗ mẻ lộ gỗ sẫm** bên dưới; vài hạt lúa; chén gốm đỏ nhỏ **có vết mẻ chữ V ở miệng**.
 **Nếu sai:**
@@ -113,7 +113,7 @@ Aspect ratio 16:9. Realistic film photograph in late afternoon at a riverside gr
 Aspect ratio 1:1. Realistic film photograph, exact top-down view, camera directly above. A low round wooden grain measure from ancient Egypt fills most of the frame, slightly left of centre: wooden staves, bound outside with two bands of twisted palm-fibre rope, the rim worn smooth. Looking straight into it: the bottom inside is covered by a pale off-white lime plaster layer about a finger thick, clearly a separate layer laid on top of the wood, smoothed flat, with a fine dark crack running along its edge where it meets the wooden wall, and one small chipped spot where the plaster has broken away to show the darker wood underneath. A few grains of emmer wheat and a little grain dust lie on the plaster. In the lower right corner, on the reed mat, for scale, a small red clay cup with a flared rim and a small V-shaped chip in its rim. Soft even daylight, sharp detail, fine film grain. Do not include: people, hands, text, watermark.
 ```
 
-### 08. `hop_but.jpg` (hộp bút của ký lục và con rắn)
+### 08. `hop_but.jpg` (ĐÃ CÓ · hộp bút của ký lục và con rắn)
 **Bố cục:** ban đêm, máy thấp sát chiếu, gần. Giữa: hộp bút mở, con rắn cuộn một nửa trong hộp, đầu hướng về máy. Trái: bảng mực hai lỗ, bút sậy. Phải: đèn chén gần cạn.
 **Kiểm tra:** rắn là **rắn hổ mang sừng**: thân **to ngắn**, màu **cát vàng nhạt có đốm nâu nhạt**, đầu tam giác, **đồng tử dọc**, **hai cái sừng nhọn nhỏ dựng ngay trên hai mắt**, thấy rõ. **Không bành mang.** Bảng mực gỗ có **hai lỗ: đỏ và đen**. Hộp gỗ dài hẹp nắp trượt. Không người.
 **Nếu sai:**
@@ -124,7 +124,7 @@ Aspect ratio 1:1. Realistic film photograph, exact top-down view, camera directl
 Aspect ratio 4:3. Realistic film photograph at night, lit only by a nearly burnt-out clay oil lamp, inside a mud-brick room in ancient Egypt, around 1150 BC. 50mm macro-style lens, camera low, close to a reed mat on the floor. In the centre lies a scribe's long narrow wooden writing box, its sliding lid pulled half open. Coiled half inside the open box, among small rolled scraps of papyrus, is a horned viper facing the camera: a short, thick body, pale sandy yellow with faint light brown blotches, a broad triangular head, vertical slit pupils, and two small sharp horns standing straight up directly above its eyes, clearly visible and lit by the lamp. It has no hood. On the left, a flat wooden scribe's palette with exactly two round wells of dry ink cake, one red and one black, and four or five reed pens scattered across the mat. On the right, the clay lamp with a tiny dying flame, its oil almost gone. The flame glints in the snake's eyes. Everything beyond the lamp light is deep shadow. Do not include: people, hands, cobra, hooded snake, readable writing, text, watermark.
 ```
 
-### 09. `leu_deo.jpg` (dãy lều thợ trên đèo lúc nửa đêm)
+### 09. `leu_deo.jpg` (ĐÃ CÓ · dãy lều thợ trên đèo lúc nửa đêm)
 **Bố cục:** máy đứng ở đầu dãy, trên cao, nhìn dọc theo sống núi. Dãy lều chạy chéo từ tiền cảnh trái sang hậu cảnh phải. Bên phải dưới: khe Thung lũng các Vua tối đen.
 **Kiểm tra:** khoảng hai mươi **lều đá thấp xếp khan**, không mái hoặc mái chiếu sậy, chạy dọc yên ngựa núi; **phần lớn cửa có ánh đèn dầu vàng cam, chỉ một hai lều tối**; trời đầy sao, trăng lưỡi liềm; lối mòn đi xuống thung lũng. Không người.
 **Nếu sai:**
@@ -134,7 +134,7 @@ Aspect ratio 4:3. Realistic film photograph at night, lit only by a nearly burnt
 Aspect ratio 16:9. Realistic film photograph at midnight on a high rocky mountain pass above the Valley of the Kings, ancient Egypt, around 1150 BC. 24mm lens, camera standing at the head of the row, slightly above it, looking along the ridge. About twenty tiny huts built of rough dry-stacked limestone blocks, each only big enough for one man to sleep, some roofless, some with reed-mat roofs, run in a single line diagonally from the left foreground to the right distance along a narrow saddle of the ridge. Most hut doorways glow with the warm orange light of a small oil lamp inside; only one or two huts in the row are completely dark. A narrow footpath winds down from the ridge into the black valley on the lower right. Above, a sky thick with stars and a thin crescent moon, cold blue light on the rocks. Do not include: people, large houses, temples, torches, modern lights, text, watermark.
 ```
 
-### 10. `gio_ran.jpg` (sân nhà thầy bắt rắn)
+### 10. `gio_ran.jpg` (ĐÃ CÓ · sân nhà thầy bắt rắn)
 **Bố cục:** sân đất nhỏ buổi chiều, nhìn vào góc tường. Giữa: dãy giỏ có nắp buộc dây. Trái: chum gốm phủ vải. Phải: gậy chẻ đôi dựa tường, bùa và thảo dược treo.
 **Kiểm tra:** giỏ tròn đan lá cọ **có nắp buộc dây**, một giỏ **hé nắp**, bên trong tối; gậy gỗ dài **chẻ đôi ở đầu**; chuỗi bùa sứ xanh nhỏ. Không người, không thấy rắn.
 **Nếu sai:**
