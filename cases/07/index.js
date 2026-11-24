@@ -25,7 +25,7 @@ export const MEDIA = {
   sticks: (el) => blocks(el, STICKS),
 };
 /** Stand-in when a scare picture is missing: a cobra sign, no human figure. */
-export const ART = { cobra: () => `<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="300" fill="#060403"/><text x="150" y="215" text-anchor="middle" font-size="180" fill="#d9cdb4" font-family="Noto Sans Egyptian Hieroglyphs, serif">\u{13193}</text></svg>` };
+export const ART = { get ghostFace() { return ART.cobra; }, cobra: () => `<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="300" fill="#060403"/><text x="150" y="215" text-anchor="middle" font-size="180" fill="#d9cdb4" font-family="Noto Sans Egyptian Hieroglyphs, serif">\u{13193}</text></svg>` };
 
 /** Which ending each wrong choice on day 7 leads to. */
 const ROUTE = { A: "ba_ran", B: "im_lang", C: "im_lang", E: "im_lang", F: "mot_nua" };
@@ -106,7 +106,7 @@ export const META = {
     open: () => "bb_xau",
     lost: "Việc bạn chọn đã được làm. Đọc thư mục cuối cùng, rồi mở lại hồ sơ nếu bạn muốn đi tuyến khác. Những kết thúc đã mở được giữ lại.",
   },
-  scares: { 3: ["cobra", "ran_scare", 3200] },
+  scares: { 2: ["cobra", "thu_den_scare", 3000], 3: ["cobra", "ran_scare", 3200], 5: ["cobra", "ba_ran_scare", 3200, { main: true, hold: 5000 }] },
   dreadLevels: [0, 1, 2, 3, 3, 4, 4],
   dread: {
     phrases: ["Bà Rắn", "lúa của thần", "đong một đấu", "anh không thề gian", "người yêu sự im lặng", "cái chén mẻ", "ipet"],

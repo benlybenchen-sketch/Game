@@ -4,6 +4,8 @@ import { ln, pic, hand, media } from "../../js/kit.js";
 import { gom } from "./docs0.js";
 import { hn, strip } from "./egypt.js";
 import { GATE_HIN } from "./data.js";
+import { state, save } from "../../js/store.js";
+import { jumpScare } from "../../js/dread.js";
 
 // Grain tags tied to the sacks at the river: who wrote each one (handwriting of the stroke "one") and the number.
 const TAGS = [
@@ -45,7 +47,13 @@ export default [
 
   {
     id: "thanh_go", stage: 5, kind: "Vật chứng", icon: "▥", label: "Bốn thanh gỗ khắc chữ trong bụng con búp bê",
-    html: () => `<div class="doc doc--plain"><p class="note">Nhét chung với mảnh gốm trong bụng con búp bê của bé Tuy. Bốn thanh gỗ vuông, mỗi thanh khắc một cột bảy hình nhỏ, nét như chữ số ký lục. Thanh nào cũng có một đầu sơn đen.</p>${media("sticks", "hay")}</div>`,
+    html: () => {
+      if (typeof document !== "undefined" && document.body.dataset.screen === "desk" && !state.scared.bupbe_seen) {   // the first time the sticks are opened, the doll
+        state.scared.bupbe_seen = 1; save();
+        setTimeout(() => jumpScare("bupbe", "bup_be_scare", { hold: 3200 }), 1800);
+      }
+      return `<div class="doc doc--plain"><p class="note">Nhét chung với mảnh gốm trong bụng con búp bê của bé Tuy. Bốn thanh gỗ vuông, mỗi thanh khắc một cột bảy hình nhỏ, nét như chữ số ký lục. Thanh nào cũng có một đầu sơn đen.</p>${media("sticks", "hay")}</div>`;
+    },
   },
 
   {

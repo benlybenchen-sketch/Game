@@ -1,4 +1,4 @@
-# Ảnh cho Hồ sơ 07 "Thư gửi người chết" · bản chi tiết
+# Ảnh cho Hồ sơ 07 "Thư gửi người chết" · bản chi tiết (17 ảnh: 13 ảnh cảnh, 4 ảnh doạ)
 
 ## Cách dùng
 1. Tạo theo đúng thứ tự từ trên xuống, trong một cuộc trò chuyện AI Studio duy nhất, để màu và chất ảnh đồng đều.
@@ -115,4 +115,25 @@ Aspect ratio 4:3. Realistic film photograph on a reed mat on the earthen floor o
 **Kiểm tra:** cổng làng mở; hai con lừa chở bao lúa đi vào; ghế gạch cạnh cổng trống trơn (cái đấu cũ đã bị mang đi); nắng sớm. Không thấy mặt người.
 ```
 Aspect ratio 16:9. Realistic film photograph at sunrise at the open gate of an ancient Egyptian walled workmen's village, around 1150 BC. The low thick wooden door stands wide open in the whitewashed mud-brick wall. Two grey donkeys loaded with full coarse woven sacks of grain walk in through the gate along the dirt street, seen from behind. Beside the gate, the mud-brick bench is empty: only a pale round mark in the dust where a grain measure used to stand. Golden first light, long shadows, a few birds, thin smoke rising inside the village. Peaceful but melancholic. No faces visible, no readable text, no watermark.
+```
+
+### 15. `thu_den_scare.jpg` (ảnh doạ, mở ở ngày thứ ba)
+**Kiểm tra:** bát gốm đỏ trên bàn cúng đá trong nhà nguyện, mực trong lòng bát còn ướt, chảy thành giọt; cây bút sậy ướt mực đặt cạnh; dấu bàn tay đầy cát ướt in trên mặt đá; chén đèn vừa tắt còn khói. Không người, không chữ đọc được.
+**Nếu sai:** *"No person at all. The ink must be blurred and dripping, unreadable. Keep the sandy handprint on the stone."*
+```
+Aspect ratio 16:9. Realistic film photograph at night inside a tiny mud-brick family chapel in an ancient Egyptian village, around 1150 BC, lit only by the last glow of a clay oil lamp that has just gone out, a thin thread of smoke rising from its wick. On a low stone offering table stands one shallow red pottery bowl; the spiral of black ink inside it is still wet, glistening, running in small drips down the inner wall, blurred and unreadable. A reed pen wet with black ink lies beside the bowl. On the stone surface next to it, a single handprint pressed in wet sand and grit, fingers long and thin. Everything else falls into black shadow. Sudden, silent, wrong. No people, no readable text, no watermark.
+```
+
+### 16. `ba_ran_scare.jpg` (ảnh doạ chính, mở ở ngày thứ sáu)
+**Kiểm tra:** hình Bà Rắn vẽ trên vách hành lang (rắn hổ mang dựng đứng, mang bành, đội đĩa mặt trời đỏ, nền vữa trắng có lưới kẻ đỏ) nhìn rất gần; mắt hình vẽ ánh lên như mắt thật; sơn đỏ của đĩa mặt trời chảy xuống thành vệt. Không người.
+**Nếu sai:** *"It must stay a painting on plaster, not a real snake. Only the eyes look alive. Keep the red grid lines and the red sun disc."*
+```
+Aspect ratio 16:9. Extreme close-up realistic photograph in an unfinished ancient Egyptian royal tomb corridor, around 1150 BC, lit from below by a single flickering clay oil lamp. On white plaster ruled with a faint red grid, a half-finished wall painting of an upright cobra with its hood spread wide and a red sun disc on its head, painted in flat Egyptian style with black outlines. The painted eyes catch the lamplight and glisten wet like real eyes, staring straight into the camera. Fresh red paint from the sun disc runs down the plaster in long thin streaks, like tears. A spilled bowl of red paint and a reed brush on the stone floor at the bottom edge. Deep black all around. Uncanny, holy, terrifying. No people, no readable text, no watermark.
+```
+
+### 17. `bup_be_scare.jpg` (ảnh doạ, khi mở bốn thanh gỗ)
+**Kiểm tra:** con búp bê gỗ trẻ con kiểu Ai Cập (thân dẹt như mái chèo, tóc bằng chuỗi hạt đất sét) ngồi dựa vách trong bóng tối, đầu ngoảnh về ống kính; bụng búp bê có ngăn rỗng đã mở; cát chảy ra từ ngăn ấy, và đuôi một con rắn màu cát vừa trườn vào trong. Không người.
+**Nếu sai:** *"The doll is a flat paddle-shaped wooden doll with clay-bead hair, not a modern doll. Show only the tail of a sand-coloured snake slipping into its open belly."*
+```
+Aspect ratio 4:3. Realistic film photograph in near darkness inside a mud-brick house in an ancient Egyptian village, around 1150 BC. A child's flat paddle-shaped wooden doll, painted with simple black eyes and a red dress pattern, with hair made of strings of small clay beads, sits propped against the whitewashed wall on a reed mat. Its head is turned toward the camera at an unnatural angle. A small hollow compartment in its belly stands open and empty; a thin stream of pale sand spills out of it onto the mat, and the tail of a short thick sand-coloured snake is just slipping into the hollow. Cold blue moonlight from a doorway on one side, a dead clay lamp on the floor. Quiet, wrong, frightening. No people, no readable text, no watermark.
 ```
