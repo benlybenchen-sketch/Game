@@ -38,27 +38,35 @@ const STEMS = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "�
   await mount("06", "hop_son");
   const ok06 = await setRings(["庚", "戊", "庚", "己"], STEMS);
   console.log("06 box, the card's stems 庚戊庚己 opens:", ok06, "(should be true)", ok06 ? `· deed shown: ${await p.evaluate(() => /QUÁ KẾ THƯ/.test(document.body.textContent))}` : "");
-  // 07 sticks: found order = [1-groove, black, 3-groove (upside down), red]; target = [3-groove turned, red, black, 1-groove]
+  // 07 sticks: found order = [1-groove, black, 3-groove (upside down), red]; target = [3-groove turned, red, black, 1-groove].
+  // The sticks carry hieratic numerals (no reading panel); read the digits behind the glyphs from data-v.
   await mount("07", "sticks");
-  const read = () => p.evaluate(() => [...document.querySelectorAll(".pz-read div")].map((d) => d.textContent).join(""));
-  console.log("07 sticks as found read:", (await read()).slice(0, 24) + "…");
-  await p.click('[data-turn="2"]');                                  // turn the 3-groove stick
+  const read = () => p.evaluate(() => { const g = [...document.querySelectorAll(".pz-block")].map((b) => [...b.querySelectorAll(".pz-grid > span")].map((x) => x.dataset.v)); return g[0].map((_, r) => g.map((c) => c[r]).join("")).join(""); });
   const caps = async () => p.evaluate(() => [...document.querySelectorAll(".pz-cap")].map((c) => c.textContent));
   const moveTo = async (want, pos) => { let at = (await caps()).findIndex((c) => c.includes(want)); while (at > pos) { await p.click(`[data-mv="${at}"][data-d="-1"]`); at--; } };
+  console.log("07 sticks: reading panel hidden:", await p.evaluate(() => !document.querySelector(".pz-read")), "| glyphs drawn:", await p.evaluate(() => document.querySelectorAll(".pz-grid .hn").length));
+  console.log("07 sticks: the three-groove stick is drawn upside down as found:", await p.evaluate(() => [...document.querySelectorAll(".pz-block")].some((b) => b.textContent.includes("ba rãnh") && b.querySelector(".pz-up"))));
+  await p.click('[data-turn="2"]');                                  // turn the 3-groove stick
   await moveTo("ba rãnh", 0); await moveTo("chấm đỏ", 1); await moveTo("chấm đen", 2);
   const got = await read();
-  console.log("07 sticks arranged read:", got, got === "CAIDAUOCONGTHIEUHAICHENRUOINUOCDUNGDONGLUAOCONGNUAHAYNHO" ? "(ok)" : "(WRONG)");
+  console.log("07 sticks arranged read:", got, got === "1305071203120804120105140903" ? "(ok)" : "(WRONG)");
   // 04 torn strips: target = Dải 2, Dải 4, Dải 1 (turned), Dải 3
   await mount("04", "giay_xe");
   await p.click('[data-turn="0"]');
   await moveTo("Dải 2", 0); await moveTo("Dải 4", 1); await moveTo("Dải 1", 2);
-  const g04 = await read();
-  console.log("04 strips arranged read:", g04, g04 === "TOAXUXONGBANNHAVUONROIVESAIGON" ? "(ok)" : "(WRONG)");
-  // 05 darkroom card: lay it on, read the holes, turn three times
+  const g04 = await p.evaluate(() => [...document.querySelectorAll(".pz-read div")].map((d) => d.textContent).join(""));
+  console.log("04 strips arranged read:", g04, g04 === "862989664226642886676483724466" ? "(ok)" : "(WRONG)");
+  // 05 darkroom card: sheet one (purple dot), card face down, inked corner bottom-left, read and turn; sheet two face up is a trap
   await mount("05", "grille");
-  await p.click('[data-g="on"]'); let g05 = "";
-  for (let t = 0; t < 4; t++) { g05 += await p.evaluate(() => [...document.querySelectorAll(".pz-hole")].map((x) => x.textContent).join("")); if (t < 3) await p.click('[data-g="turn"]'); }
-  console.log("05 card read:", g05, g05 === "CONNOIDOIBOCONHOTHAYMECONSOLAMBOOIXX" ? "(ok)" : "(WRONG)");
+  const readCard = async () => { let t = ""; for (let k = 0; k < 4; k++) { t += await p.evaluate(() => [...document.querySelectorAll(".pz-hole")].map((x) => x.textContent).join("")); await p.click('[data-g="turn"]'); } return t; };
+  await p.click('[data-g="on"]'); await p.click('[data-g="flip"]');
+  while (!/dưới trái/.test(await p.textContent(".pz-grille"))) await p.click('[data-g="turn"]');
+  const g05 = await readCard();
+  console.log("05 card read:", g05, g05.startsWith("CONNOIDOIBOCONHOTHAYMECONSOLAMBOOI") ? "(ok)" : "(WRONG)");
+  await p.click('[data-pg="1"]'); await p.click('[data-g="flip"]');
+  while (!/trên trái/.test(await p.textContent(".pz-grille"))) await p.click('[data-g="turn"]');
+  const t05 = await readCard();
+  console.log("05 card, sheet two face up reads the trap:", t05, t05.startsWith("BOBATCON") ? "(ok)" : "(WRONG)");
   console.log(errs.length ? "errors: " + errs.join("; ") : "no errors");
   await b.close();
 })();

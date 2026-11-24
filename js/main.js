@@ -39,7 +39,7 @@ function paintTimer() {
   const left = state.timeLeft ?? TIME_TOTAL();
   el.textContent = state.timeout ? "⏳ HẾT GIỜ" : `⏳ ${fmtT(left)}`;
   el.classList.toggle("low", left <= 600 || !!state.timeout);
-  el.title = "Thời gian còn lại của hồ sơ. Nộp sai bị trừ 3, 5, rồi 10 phút mỗi lần.";
+  el.title = "Thời gian còn lại của hồ sơ. Nộp sai bị trừ 3, 5, rồi 10 phút mỗi lần; thử sai mã hộp khoá bị trừ 3 phút.";
 }
 function tickTimer() {
   const now = performance.now(), dt = (now - lastTick) / 1000; lastTick = now;
@@ -62,6 +62,16 @@ function penalize() {
   state.timeLeft = Math.max(0, (state.timeLeft ?? TIME_TOTAL()) - min * 60);
   return min;
 }
+// A wrong code on a lock box (js/puzzles.js) costs LOCK_MIN minutes, flat.
+const LOCK_MIN = 3;
+document.addEventListener("pz-fail", (e) => {
+  if (!timerOn()) return;
+  state.timeLeft = Math.max(0, (state.timeLeft ?? TIME_TOTAL()) - LOCK_MIN * 60);
+  state.lockFails = (state.lockFails || 0) + 1; save(); paintTimer();
+  if (e.detail?.msg) e.detail.msg.textContent += ` Đồng hồ bị trừ ${LOCK_MIN} phút.`;
+  sfx.wrong();
+  if (state.timeLeft <= 0) gameOver();
+});
 function gameOver() {
   if (state.timeout) return;
   state.timeout = true; state.timeouts = (state.timeouts || 0) + 1; picking = null; save();
@@ -202,7 +212,7 @@ function showCover() {
         <li>Một số câu hỏi bắt bạn <b>chỉ ra câu nói dối</b>: bấm “Chọn câu”, rồi bấm vào đúng câu trong lời khai.</li>
         <li>Trả lời đúng thì hồ sơ mới mở ra. Mỗi lần như thế, đêm lại khuya hơn… và quanh bạn có thêm thứ gì đó.</li>
         ${META.strict
-          ? `<li><b>Bạn có ${TIME_TOTAL_MIN()} phút</b> cho cả hồ sơ (đồng hồ chỉ chạy khi bàn làm việc đang mở). <b>Không ai báo bạn đúng mấy mục.</b> Lần nộp sai đầu tiên bị trừ 3 phút, lần thứ hai 5 phút, từ lần thứ ba mỗi lần 10 phút, tính chung cả hồ sơ. Hết giờ là thua, phải chơi lại từ đầu.</li>
+          ? `<li><b>Bạn có ${TIME_TOTAL_MIN()} phút</b> cho cả hồ sơ (đồng hồ chỉ chạy khi bàn làm việc đang mở). <b>Không ai báo bạn đúng mấy mục.</b> Lần nộp sai đầu tiên bị trừ 3 phút, lần thứ hai 5 phút, từ lần thứ ba mỗi lần 10 phút, tính chung cả hồ sơ. Thử sai mã một hộp khoá bị trừ 3 phút. Hết giờ là thua, phải chơi lại từ đầu.</li>
         <li><b>Gợi ý</b> chỉ mở sau ${HINT_AFTER} lần nộp sai, <b>lời giải</b> sau ${SOLVE_AFTER} lần. Dùng chúng là tụt hạng thám tử và mất kết thúc ẩn.</li>`
           : `<li>Bí quá thì dùng <b>gợi ý</b>. Đến lúc tuyệt vọng thì có <b>lời giải</b>.</li>`}
       </ol><p class="small muted">Tiến trình được lưu trên trình duyệt này.</p></details>

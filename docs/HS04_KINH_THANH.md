@@ -208,6 +208,6 @@ Bìa, bệnh viện Cam Ly trong sương, phòng 7 qua ô kính, ảnh Tết 199
 |---|---|---|---|---|---|
 | 4 | Hộp thiếc khoá số trong tủ Thảo (`thu_sg_2`); trong hộp là hai lá thư Sài Gòn tháng 5–6 | 12 hộp khoá số | 0507: “ngày con mất mẹ” = tối 5/7, lần đầu Thảo nói “bà không phải mẹ” | 1502 (ngày chấn thương), 0204 (ngày bà đi), 1806 (ngày chết thật, chưa ai biết) | Đáp án TĐ 1 |
 | 5 | Hai chân dung: ảnh trong gương | 21 gương | (như cũ) | | |
-| 6 | Tờ giấy xé bốn dải trong giỏ rác phòng thăm (`giay_xe`), ghép theo mép rách; một dải bị ngược | 2 giấy xé dọc | Dải 2, dải 4, dải 1 (lật), dải 3: TOÀ XỬ XONG BÁN NHÀ VƯỜN RỒI VỀ SÀI GÒN | Không lật dải 1 thì mép không khớp; ghép cả tờ ngược thì đọc ra chữ ngược | Củng cố động cơ ở TĐ 6 |
+| 6 | Tờ giấy xé bốn dải trong giỏ rác phòng thăm (`giay_xe`), kín chữ số; ghép theo mép rách, một dải bị ngược. Bà Hoa có máy nhắn tin chỉ hiện số (`so_dien_thoai`, kèm bàn phím ở trang cuối sổ) | 2 giấy xé dọc + mã phím điện thoại (mới) | Dải 2, dải 4, dải 1 (lật), dải 3: 8629896642 2664288667 6483724466 = phím của TOÀ XỬ XONG BÁN NHÀ VƯỜN RỒI VỀ SÀI GÒN | Ghép cả tờ ngược vẫn khớp mép nhưng không ra phương án nào; phương án “… về Đà Nẵng” (quê họ Lê) chỉ khác ở phím S/D gần cuối | Củng cố động cơ ở TĐ 6. Kết quả trung gian là dãy số, không tự báo đúng sai |
 
 `tools/solve04.mjs` kiểm: mã hộp, chỉ một cách ghép đọc ra câu (cách còn lại là cả tờ lộn ngược).

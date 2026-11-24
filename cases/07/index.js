@@ -48,7 +48,7 @@ export const META = {
     { n: 6, q: "q5", tool: "fragments", media: "fragments", name: "Ghép mảnh dấu niêm với mẫu ấn" },
     { n: 12, q: "q5", tool: "lockbox", media: "ruong", chain: "q1", name: "Hòm bốn then số của Userhat" },
     { n: 23, q: "q6", tool: "pour", media: "pour", name: "Đổ nước bằng chén hin vào ba cái đấu" },
-    { n: 1, q: "q6", tool: "blocks", media: "sticks", chain: "q3", name: "Bốn thanh gỗ khắc chữ, xếp theo bài ru" },
+    { n: 1, q: "q6", tool: "blocks", media: "sticks", chain: "q3", name: "Bốn thanh gỗ khắc chữ số ký lục, xếp theo bài ru, mỗi hàng chỉ dòng và chữ trong bài Amenemope Hay chép" },
   ],          // minutes on the countdown (default 150)
   series: "Hồ sơ Nửa Đêm",
   number: "Hồ sơ số 07",

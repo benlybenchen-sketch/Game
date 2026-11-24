@@ -1,5 +1,6 @@
 // Case 04, night shift 2 (Wednesday 16/10/1996): two kinds of "not her".
 import { ln, stamp, pic, hand } from "../../js/kit.js";
+import { KEYPAD } from "./docs5.js";
 import { tranh, tape } from "./docs0.js";
 
 export default [
@@ -67,8 +68,11 @@ export default [
         <tr><td>3/9 · 19:10</td><td>Bà Hoa (mẹ BN P7)</td><td>${ln("dt_hoa", "Cho BN nghe máy theo đề nghị của bà Hoa. BN nghe khoảng 10 giây thì hét: “Không phải giọng mẹ!” rồi buông máy.")}</td></tr>
         <tr><td>7/9 · 20:30</td><td>Anh Khoa (bạn BN P7)</td><td>${ln("dt_khoa", "BN nghe máy, khóc, nói chuyện bình thường với anh Khoa gần 15 phút.")}</td></tr>
         <tr><td>12/9 · 08:00</td><td>Bà Hoa</td><td>Hỏi thăm, không cho nghe máy (BS. Kha dặn).</td></tr>
+        <tr><td>14/9 · 16:20</td><td>Bà Hoa</td><td>Để lại số máy nhắn tin, dặn khoa có việc thì nhắn. Máy của bà chỉ hiện số, không hiện chữ.</td></tr>
       </table>
       <p class="note">Ký trực: Lâm Thị Sương.</p>
+      <p class="note">Trang cuối sổ: bàn phím máy điện thoại phòng trực, vẽ lại để ghi số nội bộ.</p>
+      <table class="tbl keypad">${KEYPAD.map(([d, l], i) => `${i % 3 ? "" : "<tr>"}<td><span class="kp-d">${d}</span> <span class="small">${l}</span></td>${i % 3 === 2 ? "</tr>" : ""}`).join("")}</table>
     </div>`,
   },
 

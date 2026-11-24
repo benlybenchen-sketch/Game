@@ -68,7 +68,7 @@ export const QUESTIONS = [
         { id: "n_ho", text: "Ngân: “Đêm qua mẹ ho nhiều.”" },
       ] },
       { id: "kp", type: "choice", label: "Người khởi phát hoang tưởng", options: ["Ông Khải", "Cháu Ngân", "Bà Lụa", "Không có ai, bà Hằng còn sống"] },
-      { id: "mask", type: "text", label: "Câu đọc được qua tấm bìa đen, trên trang giấy ô li của Ngân", placeholder: "" },
+      { id: "mask", type: "text", label: "Câu đọc được qua tấm bìa đen", placeholder: "" },
       { id: "ho", type: "choice", label: "Tiếng ho sau cửa buồng trong băng đêm là", options: ["Tiếng ho thật, khàn và có đờm", "Tiếng ho giả, có giọng nói xen giữa", "Tiếng ho của đàn ông, giọng trầm", "Tiếng gió rít qua khe cửa dán kín", "Tiếng ho thu sẵn, phát lại từ băng"] },
       { id: "cham", type: "text", label: "Câu cuối cùng nghe được khi băng chạy ×0,6 (chép lại nguyên câu)", placeholder: "" },
       { id: "tach", type: "choice", label: "Tách hai người ra thì người tiếp nhận thường", options: ["Hoang tưởng nặng thêm trong vài tuần đầu", "Tự tỉnh dần sau vài ngày đến vài tuần", "Không thay đổi gì sau nhiều tháng", "Chuyển hoang tưởng sang một người thân khác", "Phải dùng thuốc liều cao mới đỡ"] },

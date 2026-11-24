@@ -34,7 +34,7 @@ export const META = {
   // Escape-room puzzles (rule 25, numbers from docs/CAU_DO.md).
   puzzles: [
     { n: 4, q: "q4", name: "Xếp sáu dòng ghi chép theo thứ tự thật" },
-    { n: 7, q: "q4", tool: "grille", media: "grille", name: "Tấm bìa đen đục lỗ của buồng tối đặt lên trang giấy ô li của Ngân" },
+    { n: 7, q: "q4", tool: "grille", media: "grille", name: "Tấm bìa đen đục lỗ của buồng tối và ba tờ giấy ô li: chọn tờ và mặt theo vết mực thấm, hai tờ còn lại là bẫy" },
     { n: 25, q: "q5", name: "Ngày âm lịch của đêm bà Hằng mất, tra lịch vạn niên" },
     { n: 12, q: "q6", tool: "lockbox", media: "hop_ngan", chain: "q5", name: "Hộp sắt của Ngân, mã là ngày của mẹ theo âm lịch" },
   ],

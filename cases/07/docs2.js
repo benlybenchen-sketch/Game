@@ -2,7 +2,8 @@
 // alphabet on the last page), letters to the dead on bowls from many houses, and three "answers from Hay".
 import { hand } from "../../js/kit.js";
 import { gom } from "./docs0.js";
-import { SIGNS, sign, WRITERS, strip } from "./egypt.js";
+import { SIGNS, sign, WRITERS, strip, hn } from "./egypt.js";
+import { AMENEMOPE } from "./media.js";
 
 const OTHER = { iyneferti: [1, 2, 0, 1, 2, 0], baki: [2, 0, 2, 1, 0, 2], seba: [1, 1, 0, 2, 1, 0] };
 const stripOf = (v) => `<span class="strip">${v.map((x, i) => sign(i, x)).join('<span class="hg dim">·</span>')}</span>`;
@@ -38,6 +39,8 @@ export default [
     html: () => gom(`<h4>Mảnh 1–3</h4><div class="strip-wrap">${strip("hay")}</div>
       ${hand(`<p>Chép đi chép lại bài “Lời dạy của Amenemope”. Bên lề Hay vẽ mấy con rắn, mấy bông sen.</p>
         <p>Một mảnh có hai nét chữ: dòng trên của Hay, dòng dưới chữ non tay hơn, chép lại y hệt. Bên cạnh Hay ghi: “Nebet viết.”</p>`)}
+      <h4>Mảnh 4</h4>
+      ${hand(`<table class="tbl amen">${AMENEMOPE.map((l, i) => `<tr><td class="small">${hn(i + 1)}</td><td>${l}</td></tr>`).join("")}</table>`)}
       <h4>Mảnh cuối</h4>
       ${hand(`<p>Trò của thợ vẽ trong Lăng: vẽ một vật thay cho âm đầu tên của nó. Người ngoài nhìn chỉ thấy hình, người trong nghề đọc được chữ.</p>`)}
       <table class="tbl">${PICTURE_ALPHABET.map(([g, name, vn]) => `<tr><td><span class="hg big">${g}</span></td><td>${name}</td><td>${vn}</td></tr>`).join("")}</table>`,

@@ -4,17 +4,22 @@ import { tranh, tape } from "./docs0.js";
 import { state, save } from "../../js/store.js";
 import { jumpScare } from "../../js/dread.js";
 
-// The note torn into four strips, found in the bin of the visiting room on 19/10 (rows read "TOA XU XONG BAN NHA VUON ROI VE SAI GON").
+// The note torn into four strips, found in the bin of the visiting room on 19/10. It is all digits: the phone keys of each
+// letter (her pager shows only digits; the keypad is drawn in the ward's phone book, docs1 "so_dien_thoai").
+// Message: TOA XU XONG BAN NHA VUON ROI VE SAI GON. Strip 1 lay upside down.
+export const KEYPAD = [["1", ""], ["2", "ABC"], ["3", "DEF"], ["4", "GHI"], ["5", "JKL"], ["6", "MNO"], ["7", "PQRS"], ["8", "TUV"], ["9", "WXYZ"], ["*", ""], ["0", ""], ["#", ""]];
+export const keyOf = (s) => [...s].map((c) => KEYPAD.find(([, l]) => l.includes(c))[0]).join("");
 export const STRIPS = {
   id: "giay_xe",
   blocks: [   // as found in the bin: strip 1 is upside down
-    { name: "Dải 1", rows: ["IA", "UV", "OX"] },
-    { name: "Dải 2", rows: ["TO", "AN", "OI"] },
-    { name: "Dải 3", rows: ["NGB", "ONR", "GON"] },
-    { name: "Dải 4", rows: ["AXU", "NHA", "VES"] },
+    { name: "Dải 1", upside: true, rows: ["42", "88", "69"] },
+    { name: "Dải 2", rows: ["86", "26", "64"] },
+    { name: "Dải 3", rows: ["642", "667", "466"] },
+    { name: "Dải 4", rows: ["298", "642", "837"] },
   ],
 };
-export const STRIPS_SOLUTION = "TOAXUXONGBANNHAVUONROIVESAIGON";
+export const STRIPS_TEXT = "TOAXUXONGBANNHAVUONROIVESAIGON";
+export const STRIPS_SOLUTION = keyOf(STRIPS_TEXT);
 
 export default [
   {
@@ -74,7 +79,7 @@ export default [
   {
     id: "giay_xe", stage: 5, kind: "Vật chứng", icon: "✂", label: "Tờ giấy xé trong giỏ rác phòng thăm",
     html: () => `<div class="doc doc--plain">
-      <p class="note">Y tá Sương nhặt trong giỏ rác phòng thăm sau buổi thăm 19/10, chỗ bà Hoa ngồi. Một tờ giấy học trò xé dọc thành bốn dải, chữ in hoa không dấu bằng bút bi. Mép rách của từng dải, đọc từ trên xuống, khi dải nằm như lúc nhặt lên:</p>
+      <p class="note">Y tá Sương nhặt trong giỏ rác phòng thăm sau buổi thăm 19/10, chỗ bà Hoa ngồi. Một tờ giấy học trò xé dọc thành bốn dải, kín chữ số viết bằng bút bi. Mép rách của từng dải, đọc từ trên xuống, khi dải nằm như lúc nhặt lên:</p>
       <table class="tbl"><tr><th>Dải</th><th>Mép trái</th><th>Mép phải</th></tr>
         <tr><td>1</td><td>▼▲▲</td><td>▲▼▼</td></tr>
         <tr><td>2</td><td>mép giấy thẳng</td><td>▲▼▲</td></tr>

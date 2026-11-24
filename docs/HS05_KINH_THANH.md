@@ -269,7 +269,7 @@ Bìa (cửa buồng dán băng keo, ánh lò than đỏ dưới khe cửa), toà
 
 | TĐ | Câu đố | Loại (CAU_DO.md) | Lời giải | Bẫy | Chuỗi |
 |---|---|---|---|---|---|
-| 4 | Tờ giấy ô li kín chữ của Ngân và tấm bìa đen đục chín lỗ trong buồng tối (`mat_na`) | 7 lưới đục lỗ | Chấm mực tím trùng góc trên trái, đọc qua lỗ, xoay bốn lần: “Con nói dối bố, con ho thay mẹ, con sợ lắm bố ơi” | Đặt bìa từ góc khác thì ra chữ vô nghĩa | Củng cố TĐ 4 (người khởi phát) |
+| 4 | Ba tờ giấy ô li kín chữ và tấm bìa đen đục chín lỗ trong buồng tối (`mat_na`) | 7 lưới đục lỗ, nhiều tờ, lật mặt | Mực tím ở mặt trước tấm bìa đã thấm sang tờ vở Văn (chấm tím góc dưới trái): úp tấm bìa, góc mực lên chấm, đọc và xoay bốn lần: “Con nói dối bố, con ho thay mẹ, con sợ lắm bố ơi” | Tờ vở Toán đặt bìa ngửa: “Bố bắt con ho thay mẹ, con không dám cãi” (dẫn sai sang ông Khải khởi phát); tờ trong cặp đặt bìa úp: “Mẹ vẫn ho trong buồng, con nghe thấy mỗi đêm” (dẫn sai sang bà Hằng còn sống) | Củng cố TĐ 4 (người khởi phát) |
 | 6 | Hộp sắt kẹo dưới gối Ngân, khoá số bốn vòng (`hop_ngan`), “chỉ mở vào ngày của mẹ” | 12 hộp khoá số | 2511: đêm mẹ mất là 25 tháng Một âm lịch | 2212 (ngày dương) | Đáp án TĐ 5 |
 
-`tools/solve05.mjs` kiểm: tấm bìa phủ đủ 36 ô, chỉ góc có chấm mực đọc ra câu; mã hộp suy từ lịch vạn niên.
+`tools/solve05.mjs` kiểm: tấm bìa phủ đủ 36 ô; trong 24 cách đặt (3 tờ × 2 mặt × 4 góc) chỉ ba cách đọc ra câu (sự thật và hai bẫy), sự thật ứng đúng vết mực; hai câu bẫy không được chấp nhận; mã hộp suy từ lịch vạn niên. Dữ liệu ba tờ sinh bằng `tools/gen/grille05.mjs`.

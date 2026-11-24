@@ -206,15 +206,17 @@ export function hand(el) {
   });
 }
 
-// Ngân's squared page and the darkroom's black card with nine holes (js/puzzles.js grille).
-// Read through the holes, turning the card four times from the inked corner top-left:
-// "CON NOI DOI BO CON HO THAY ME CON SO LAM BO OI" (+ XX).
+// Three squared sheets from Ngân's things and the darkroom's black card with nine holes (js/puzzles.js grille), built by
+// tools/gen/grille05.mjs. Purple ink on a corner of the card's front has soaked into the first sheet (dot bottom-left):
+// card face down, inked corner on the dot, read and turn -> "CON NOI DOI BO CON HO THAY ME CON SO LAM BO OI".
+// Traps: sheet two, card face up -> "BO BAT CON HO THAY ME..."; sheet three, face down -> "ME VAN HO TRONG BUONG...".
 export const MASK = {
-  id: "mat_na",
-  grid: ["LAMACO", "BYBOON", "OMEICN", "OOCIDX", "NONXOH", "SOIOTH"],
+  id: "mat_na", flip: true,
   holes: [[0, 5], [1, 5], [2, 5], [0, 4], [4, 4], [3, 1], [5, 2], [3, 4], [3, 3]],
+  pages: [{"name":"Tờ kẹp trong vở Văn","grid":["AYCLAM","MBOBOO","ENINOO","MCOCNI","OSENHD","OTHOOI"]},{"name":"Tờ kẹp trong vở Toán","grid":["CAINBO","BKOIHB","THODNA","GTHCOH","DAYLNM","AMHECO"]},{"name":"Tờ trong cặp sách","grid":["YMOMEV","OANONH","IGOBUN","TDENMO","GORHEN","THAHGC"]}],
 };
-export const MASK_SOLUTION = "CONNOIDOIBOCONHOTHAYMECONSOLAMBOOIXX";
+export const MASK_SOLUTION = "CONNOIDOIBOCONHOTHAYMECONSOLAMBOOI";
+export const MASK_TRAPS = ["BOBATCONHOTHAYMECONKHONGDAMCAI", "MEVANHOTRONGBUONGCONNGHETHAYMOIDEM"];
 
 /** What Ngân keeps in her sweet tin (sealed into locks.js by tools/lockbox.mjs). */
 export const tinHtml = () => `<div class="doc doc--memo"><div class="hand">

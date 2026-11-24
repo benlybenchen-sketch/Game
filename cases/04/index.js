@@ -37,7 +37,7 @@ export const META = {
   puzzles: [
     { n: 12, q: "q4", tool: "lockbox", media: "hop_thiec", chain: "q1", name: "Hộp thiếc khoá số của Thảo, mã là ngày Thảo nói “bà không phải mẹ” lần đầu" },
     { n: 21, q: "q5", name: "Hai chân dung: ảnh trong gương" },
-    { n: 2, q: "q6", tool: "blocks", media: "giay_xe", name: "Tờ giấy xé dọc thành bốn dải, ghép theo mép rách" },
+    { n: 2, q: "q6", tool: "blocks", media: "giay_xe", name: "Tờ giấy xé dọc thành bốn dải chữ số, ghép theo mép rách, đọc theo phím điện thoại (máy nhắn tin chỉ hiện số)" },
     { n: 23, q: "q6", name: "Phân loại vân tay theo tài liệu công an" },
   ],
   series: "Hồ sơ Nửa Đêm",

@@ -9,8 +9,10 @@ const esc = (s) => String(s).replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt
 
 // ------------------------------------------------------------------ 1. letter blocks
 /**
- * cfg = { id, blocks: [{ name, mark?, rows: ["AB", "CD", ...] }] }  (every block has the same number of rows)
+ * cfg = { id, blocks: [{ name, mark?, upside?, rows: ["AB", "CD", ...] }] }  (every block has the same number of rows)
  * The player reorders the blocks and turns any of them 180°. The joined grid is shown row by row.
+ * Options: cfg.cell(ch, blockIndex) -> html draws one cell (default: the character); a block with upside: true lay upside
+ * down when found, so its cells are drawn rotated until the player turns it; cfg.noRead hides the joined reading.
  */
 export function blocks(el, cfg) {
   const st = P(cfg.id);
@@ -22,11 +24,11 @@ export function blocks(el, cfg) {
     el.innerHTML = `<div class="pz-blocks">
       <div class="pz-row">${st.order.map((i, pos) => `<div class="pz-block ${st.turned[i] ? "turned" : ""}">
           <div class="pz-cap">${esc(cfg.blocks[i].name)}${cfg.blocks[i].mark ? ` <span class="pz-mark">${cfg.blocks[i].mark}</span>` : ""}</div>
-          <div class="pz-grid" style="grid-template-columns:repeat(${cfg.blocks[i].rows[0].length},1.6em)">${rowsOf(i).map((r) => [...r].map((c) => `<span>${esc(c)}</span>`).join("")).join("")}</div>
+          <div class="pz-grid ${!!cfg.blocks[i].upside !== !!st.turned[i] ? "pz-up" : ""}" style="grid-template-columns:repeat(${cfg.blocks[i].rows[0].length},${cfg.cellW || "1.6em"})">${rowsOf(i).map((r) => [...r].map((c) => `<span data-v="${esc(c)}">${cfg.cell ? cfg.cell(c, i) : esc(c)}</span>`).join("")).join("")}</div>
           <div class="pz-btns"><button class="btn btn--small" data-mv="${pos}" data-d="-1" ${pos === 0 ? "disabled" : ""} title="Sang trái">◀</button><button class="btn btn--small" data-turn="${i}" title="Xoay 180°">⟲</button><button class="btn btn--small" data-mv="${pos}" data-d="1" ${pos === st.order.length - 1 ? "disabled" : ""} title="Sang phải">▶</button></div>
         </div>`).join("")}</div>
-      <p class="small muted">Đọc ngang từng hàng khi đã xếp:</p>
-      <div class="pz-read">${Array.from({ length: h }, (_, r) => `<div>${st.order.map((i) => rowsOf(i)[r]).join("")}</div>`).join("")}</div>
+      ${cfg.noRead ? "" : `<p class="small muted">Đọc ngang từng hàng khi đã xếp:</p>
+      <div class="pz-read">${Array.from({ length: h }, (_, r) => `<div>${st.order.map((i) => rowsOf(i)[r]).join("")}</div>`).join("")}</div>`}
     </div>`;
   };
   draw();
@@ -117,7 +119,10 @@ export function lockbox(el, cfg) {
     if (e.target.closest("[data-open]")) {
       const code = st.pos.map((p, i) => cfg.rings[i][p]);
       if (openContent(cfg.content, code) != null) { st.code = code; save(); draw(); }
-      else { const m = el.querySelector(".pz-msg"); if (m) m.textContent = "Không mở được. Các vòng kẹt lại."; }
+      else {   // the game (js/main.js) listens for pz-fail and takes time off the clock
+        const m = el.querySelector(".pz-msg"); if (m) m.textContent = "Không mở được. Các vòng kẹt lại.";
+        el.dispatchEvent(new CustomEvent("pz-fail", { bubbles: true, detail: { id: cfg.id, msg: m } }));
+      }
     }
   });
 }

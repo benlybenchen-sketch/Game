@@ -108,7 +108,7 @@ export const QUESTIONS = [
       { id: "fp_form", type: "choice", label: "Dấu điểm chỉ trên giấy cam đoan nhập viện (20/8/1996)", options: ["Cung", "Móc", "Xoáy"] },
       { id: "cake", type: "choice", label: "Nhân thật của bánh trong hộp", options: ["Đậu xanh", "Tôm chấy", "Ruốc thịt heo", "Đậu phộng rang", "Dừa", "Thuốc an thần nghiền"] },
       { id: "why", type: "choice", label: "Động cơ", options: ["Trả thù vì năm 1945 bị gia đình cho đi làm con nuôi", "Làm người giám hộ để bán nhà và vườn của Thảo", "Muốn được sống bên đứa cháu gái duy nhất của mình", "Lấy lại phần đất hương hoả họ Lê ở làng Phong Lệ"] },
-      { id: "xe", type: "choice", label: "Tờ giấy xé trong giỏ rác phòng thăm viết", options: ["Toà xử xong bán nhà vườn rồi về Sài Gòn", "Toà xử xong đưa con bé về Sài Gòn chữa", "Toà xử xong trả nhà vườn lại cho con bé", "Toà xử xong ở lại Đà Lạt trông con bé"] },
+      { id: "xe", type: "choice", label: "Tờ giấy xé trong giỏ rác phòng thăm viết", options: ["Toà xử xong bán nhà vườn rồi về Đà Nẵng", "Toà xử xong đưa con bé về Sài Gòn chữa", "Toà xử xong bán nhà vườn rồi về Sài Gòn", "Toà xử xong bán nhà vườn chia đôi cho Thảo"] },
       { id: "capgras", type: "choice", label: "Kết luận 1 · Hội chứng Capgras ở Trần Ngọc Thảo", options: ["Không có", "Có, đối với một số người quen", "Có, đối với tất cả người thân"] },
       { id: "nangluc", type: "choice", label: "Kết luận 2 · Năng lực hành vi dân sự", options: ["Mất năng lực hành vi dân sự", "Hạn chế năng lực hành vi dân sự", "Đủ năng lực hành vi dân sự"] },
       { id: "loikhai", type: "choice", label: "Kết luận 3 · Lời khai của Thảo về mẹ", options: ["Hoang tưởng hoàn toàn", "Một phần đúng, một phần hoang tưởng", "Đúng sự thật", "Chưa đủ cơ sở kết luận"] },

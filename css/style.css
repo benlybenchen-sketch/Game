@@ -685,8 +685,9 @@ td.han { font-size: 24px; }
 .pz-block.turned { box-shadow: inset 0 0 0 2px #a2281c55; }
 .pz-cap { font-size: 12px; margin-bottom: 4px; } .pz-mark { color: #6b5a44; }
 .pz-grid { display: grid; gap: 2px; font: 600 15px var(--mono); }
-.pz-grid span { width: 1.6em; height: 1.6em; display: flex; align-items: center; justify-content: center; background: #f7f0de; border: 1px solid #d7c8a6; }
+.pz-grid > span { min-width: 1.6em; min-height: 1.6em; display: flex; align-items: center; justify-content: center; background: #f7f0de; border: 1px solid #d7c8a6; }
 .pz-btns { display: flex; gap: 4px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+.pz-grid.pz-up > span { transform: rotate(180deg); }
 .pz-read { font: 600 15px var(--mono); letter-spacing: .25em; background: #efe4c9; color: #2b2116; padding: 8px; border-radius: 3px; display: inline-block; }
 .pz-grille .pz-grid.g span.pz-cov { background: #3a2f25; color: transparent; border-color: #3a2f25; }
 .pz-grille .pz-grid.g span.pz-hole { background: #fffbe9; color: #2b2116; outline: 2px solid #a2281c; }
@@ -696,3 +697,4 @@ td.han { font-size: 24px; }
 .pz-sym { min-width: 2.2em; min-height: 2.2em; display: flex; align-items: center; justify-content: center; background: #eadfc6; color: #2b2116; border-radius: 3px; font-size: 20px; }
 .pz-sym .hn-g path { stroke: #2b2116; }
 .pz-open { animation: pzopen .6s ease; } @keyframes pzopen { from { opacity: 0; transform: translateY(-6px); } }
+.keypad td { text-align: center; width: 4em; } .kp-d { font-size: 1.15em; }

@@ -35,6 +35,12 @@ const CASE = process.env.CASE || "07";
   }
   console.log("minutes taken per wrong answer:", taken.join(", "), taken.join(",") === "3,5,10,10" ? "(ok)" : "(WRONG)");
   console.log("timer shown:", await p.textContent(".top-timer"));
+  // a wrong lock-box code (the widget fires pz-fail) costs 3 minutes, flat
+  const before = await left();
+  await p.evaluate(() => { const d = document.createElement("div"); document.body.appendChild(d); d.dispatchEvent(new CustomEvent("pz-fail", { bubbles: true, detail: {} })); d.remove(); });
+  await p.waitForTimeout(300);
+  const lockCost = Math.round((before - (await left())) / 60);
+  console.log("wrong lock code cost:", lockCost, lockCost === 3 ? "(ok)" : "(WRONG)");
   await p.evaluate((k) => { const s = JSON.parse(localStorage.getItem(k)); s.timeLeft = 3; localStorage.setItem(k, JSON.stringify(s)); }, key);
   await p.reload(); await p.waitForTimeout(600); await p.click('[data-cv="go"]'); await p.waitForTimeout(5500);
   const dlg = await p.textContent("#dialog").catch(() => "");

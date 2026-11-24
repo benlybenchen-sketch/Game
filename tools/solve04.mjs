@@ -2,7 +2,8 @@
 //   node tools/solve04.mjs
 globalThis.localStorage = { getItem: () => null, setItem: () => {} };
 import { execSync } from "node:child_process";
-const { STRIPS, STRIPS_SOLUTION } = await import("../cases/04/docs5.js");
+const { STRIPS, STRIPS_SOLUTION, KEYPAD, keyOf } = await import("../cases/04/docs5.js");
+const Q = (await import("../cases/04/questions.js")).QUESTIONS;
 const S = JSON.parse(execSync("node tools/secret.mjs decode 04", { cwd: new URL("..", import.meta.url) }).toString());
 let bad = 0; const check = (what, got, want) => { const ok = JSON.stringify(got) === JSON.stringify(want); if (!ok) bad++; console.log(`${ok ? "ok " : "BAD"} ${what}: ${JSON.stringify(got)}${ok ? "" : ` (want ${JSON.stringify(want)})`}`); };
 
@@ -34,8 +35,13 @@ for (const p of perm([0, 1, 2, 3])) for (let m = 0; m < 16; m++) {
 const reads = fits.map(([p, m]) => { const rows = p.map((k, j) => ((m >> j) & 1 ? turnR(STRIPS.blocks[k].rows) : STRIPS.blocks[k].rows)); return rows[0].map((_, r) => rows.map((x) => x[r]).join("")).join(""); });
 check("q6 torn strips: edge fits (the sheet and the same sheet upside down)", fits.length, 2);
 check("q6 the second fit is the message turned upside down", reads.includes([...STRIPS_SOLUTION].reverse().join("")), true);
-check("q6 torn strips read", reads.filter((r) => r === STRIPS_SOLUTION).length, 1);
-check("q6 answer names the sale and Sài Gòn", /bán nhà vườn/.test(S.q6.xe) && /Sài Gòn/.test(S.q6.xe), true);
-
+check("q6 torn strips read (phone keys)", reads.filter((r) => r === STRIPS_SOLUTION).length, 1);
+// the digits are phone keys: exactly one of the offered sentences types to them; the upside-down sheet types to none
+const opts = Q.find((q) => q.id === "q6").parts.find((p) => p.id === "xe").options;
+const plain = (t) => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/gi, "d").toUpperCase().replace(/[^A-Z]/g, "");
+check("q6 keypad has every letter once", KEYPAD.map(([, l]) => l).join(""), "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+check("q6 options that type to the strips", opts.filter((o) => keyOf(plain(o)) === STRIPS_SOLUTION), [S.q6.xe]);
+check("q6 options that type to the sheet upside down", opts.filter((o) => reads.some((r) => r !== STRIPS_SOLUTION && keyOf(plain(o)) === r)).length, 0);
+check("q6 options differ from the truth only late (a guess from the first words fails)", opts.filter((o) => keyOf(plain(o)).slice(0, 9) === STRIPS_SOLUTION.slice(0, 9)).length, 4);
 console.log(bad ? `\n${bad} mismatch(es)` : "\nall answers re-derived from the data");
 process.exit(bad ? 1 : 0);

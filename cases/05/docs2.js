@@ -96,9 +96,10 @@ export default [
   tape("bang_hang", 3, "Băng cũ: cô Hằng đọc thơ cho lớp 7A, 1988", "Cô Hà chủ nhiệm cho mượn, băng giữ ở thư viện trường. Đây là giọng thật của cô Hằng."),
 
   {
-    id: "mat_na", stage: 3, kind: "Vật chứng", icon: "▦", label: "Tờ giấy ô li kín chữ và tấm bìa đen trong buồng tối",
+    id: "mat_na", stage: 3, kind: "Vật chứng", icon: "▦", label: "Ba tờ giấy ô li kín chữ và tấm bìa đen trong buồng tối",
     html: () => `<div class="doc doc--plain">
-      <p class="note">Tờ giấy ô li Vân thấy kẹp trong vở bài tập của Ngân: sáu hàng, mỗi hàng sáu chữ cái in hoa, không dấu, không cách. Góc trên bên trái có một chấm mực tím. Trong buồng tối, trên bàn in ảnh, có một tấm bìa đen cỡ đúng tờ giấy ấy, đục chín lỗ vuông; một góc tấm bìa có vết mực tím.</p>
+      <p class="note">Ba tờ giấy ô li xé từ cùng một quyển vở, mỗi tờ sáu hàng, mỗi hàng sáu chữ cái in hoa, không dấu, không cách. Tờ thứ nhất Vân thấy kẹp trong vở Văn của Ngân, góc dưới bên trái có một chấm mực tím loang. Tờ thứ hai kẹp trong vở Toán, góc trên bên phải có một chấm bút chì. Tờ thứ ba nằm trong cặp sách, không có dấu gì.</p>
+      <p class="note">Trong buồng tối, trên bàn in ảnh, có một tấm bìa đen cỡ đúng tờ giấy ấy, đục chín lỗ vuông. Mặt trước tấm bìa có một vết mực tím ở một góc, mực chưa khô hẳn khi bị ép lên giấy.</p>
       ${media("grille", "mat_na")}
     </div>`,
   },
