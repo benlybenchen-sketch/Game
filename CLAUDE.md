@@ -82,4 +82,5 @@ Thêm lỗi mới vào bảng này ngay khi gặp, kèm kiểm tra tự động 
 | Thời gian trên thẻ hồ sơ khác đồng hồ trong game | `time` = `timeLimit` phút | audit |
 | Người dùng sửa META trên GitHub, vô tình xoá dòng | Sau mỗi lần merge, đối chiếu META | rà tay khi merge (CLAUDE.md mục 5.9) |
 | Tự đặt ra luật không có (ảnh doạ "không người, không máu") | Chỉ theo luật đã ghi; hỏi lại nếu chưa rõ | rà tay |
+| Thua mà vẫn mở hết tài liệu (lộ phần chưa tìm, lộ nhánh chưa đi) | Thắng: mở toàn bộ tài liệu. Thua (chọn sai ở câu quyết định hay hết giờ): chỉ còn tài liệu đã tìm được tới lúc thua, cộng biên bản kết thúc xấu | flow_test (sau mỗi kết thúc xấu: không tài liệu nào chưa tìm được hiện ra; sau kết thúc đúng: đủ mọi tài liệu); `docVisible` trong `js/main.js` |
 | Nhạc mất trên iPhone (công tắc im lặng) | `navigator.audioSession` + mở khoá âm thanh | thử trên trình duyệt, xem `js/audio.js` |

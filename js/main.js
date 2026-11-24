@@ -108,7 +108,7 @@ function gradeHtml() {
 // d.fail may also be a list of ending ids (META.endings): then the doc shows only after a lost run that reached one of them.
 const lostEnding = () => state.failed ? (META.fatal?.ending ? META.fatal.ending(state.failed.choice || "") : "bad") : null;
 const failShows = (d) => !!state.failed && (d.fail === true || (Array.isArray(d.fail) && d.fail.includes(lostEnding())));
-// The run is over (case closed or lost): every document the run could have found is open for reading.
+// The run is over (case closed or lost): no more visits or cross-examinations.
 const over = () => finished() || !!state.failed;
 /**
  * Is a document in the folder? Besides its stage (d.stage), a case may ask for more (case 08 on):
@@ -117,12 +117,15 @@ const over = () => finished() || !!state.failed;
  *  d.via    (an id)    only after that cross-examination was won (state.confronted);
  *  d.needs  (an id)    only once that puzzle widget was opened (state.puzzles[id].code).
  */
+// A won case shows every document (both routes too); a lost run (wrong last choice, or the clock ran out) keeps only what the
+// player had found when it was lost, plus the report of that ending (d.fail).
+const won = () => finished() && !state.failed && !state.timeout;
 function docVisible(d) {
   if (d.fail) return failShows(d);
   if (d.secret) return finished() && flawless();
   if (d.stage > state.stage) return false;
-  if (d.branch && (state.branch ? state.branch !== d.branch : !over())) return false;
-  if (over()) return true;
+  if (won()) return true;
+  if (d.branch && state.branch !== d.branch) return false;
   if (d.via && !state.confronted?.[d.via]) return false;
   if (d.needs && !state.puzzles?.[d.needs]?.code) return false;
   if (META.map && d.place && d.place !== META.map.home && !((state.visits?.[d.place] ?? -1) >= d.stage)) return false;

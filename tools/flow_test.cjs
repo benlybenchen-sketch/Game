@@ -19,7 +19,9 @@ let bad = 0; const ok = (what, cond, extra = "") => { if (!cond) bad++; console.
     return { Q: C.QUESTIONS.map((q) => ({ id: q.id, fatal: !!q.fatal, parts: q.parts })), S, fatal: !!C.META.fatal, endings: C.META.endings || [],
       routes: C.META.fatal ? Object.fromEntries((C.QUESTIONS.find((q) => q.fatal)?.parts.find((x) => x.type === "choice")?.options || []).map((o) => [o, C.META.fatal.ending(o)])) : {},
       failDocs: C.DOCS.filter((d) => d.fail).map((d) => ({ id: d.id, fail: d.fail })), secretDocs: C.DOCS.filter((d) => d.secret).map((d) => d.id),
-      locks: Object.keys(S.locks || {}), media: Object.keys(C.MEDIA || {}), hintCost: C.META.hintCost || null };
+      locks: Object.keys(S.locks || {}), media: Object.keys(C.MEDIA || {}), hintCost: C.META.hintCost || null,
+      all: C.DOCS.filter((d) => !d.fail).map((d) => d.id),
+      hidden: C.DOCS.filter((d) => !d.fail && !d.secret && (d.branch || d.via || d.needs || (C.META.map && d.place && d.place !== C.META.map.home))).map((d) => d.id) };
   }, CASE);
   const seed = async (st) => { await p.evaluate(([k, st]) => { localStorage.setItem(k, JSON.stringify(st)); }, [key, st]); await p.reload(); await p.waitForTimeout(500); await p.click('[data-cv="go"]'); await p.waitForTimeout(500); if (await p.isVisible("input[data-sign]")) { await p.fill("input[data-sign]", "Thử"); await p.click('[data-dlg="ok"]'); await p.waitForTimeout(300); } };
   const base = { started: true, signed: true, player: "Thử", stage: 0, resp: {}, tries: {}, hints: {}, peeked: {}, seen: {}, endings: [], timeLeft: 9000 };
@@ -102,6 +104,8 @@ let bad = 0; const ok = (what, cond, extra = "") => { if (!cond) bad++; console.
       if (hidden) ok(`${label}: hidden ending unlocked on a flawless run`, (st.endings || []).includes(hidden));
       const shown = await p.evaluate(() => [...document.querySelectorAll("[data-doc]")].map((x) => x.dataset.doc));
       for (const d of info.secretDocs) ok(`${label}: secret doc ${d} shown`, shown.includes(d));
+      const missing = info.all.filter((d) => !shown.includes(d));
+      ok(`${label}: every document is open after winning`, missing.length === 0, missing.slice(0, 5).join(","));
     } else {
       const want = info.routes[o];
       ok(`${label}: run failed`, !!st.failed);
@@ -109,6 +113,9 @@ let bad = 0; const ok = (what, cond, extra = "") => { if (!cond) bad++; console.
       const shown = await p.evaluate(() => [...document.querySelectorAll("[data-doc]")].map((x) => x.dataset.doc));
       const need = info.failDocs.filter((d) => d.fail === true || (Array.isArray(d.fail) && d.fail.includes(want))).map((d) => d.id);
       ok(`${label}: its report shown`, need.length > 0 && need.every((d) => shown.includes(d)), need.join(","));
+      // a lost run keeps only what was found: the seeded run visited no place, won no cross-examination, chose no route
+      const leak = info.hidden.filter((d) => shown.includes(d));
+      ok(`${label}: nothing unfound is opened after losing`, leak.length === 0, leak.slice(0, 5).join(","));
     }
   }
   ok("no page errors", errs.length === 0, errs.join("; "));
