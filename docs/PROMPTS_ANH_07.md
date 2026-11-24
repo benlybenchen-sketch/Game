@@ -143,7 +143,7 @@ Aspect ratio 16:9. Realistic film photograph at midnight on a high rocky mountai
 Aspect ratio 4:3. Realistic film photograph in the small dusty courtyard of a snake catcher's house in an ancient Egyptian village, around 1150 BC, mid-afternoon. 35mm lens at standing height, looking into the corner of two mud-brick walls. In the centre, five or six round lidded baskets woven from palm leaves, of different sizes, sit in a row against the wall, their lids tied down tightly with cord; one basket's lid is slightly lifted, a thin black gap of darkness inside. On the left, two tall clay jars with cloth tied over their mouths. On the right, a long wooden stick with a forked end leans against the wall, and from a wooden peg hang strings of small blue faience amulets and bundles of dried herbs. Hard afternoon sun, sharp shadows, flies in the light. Do not include: people, visible snakes, text, watermark.
 ```
 
-### 11. `dinh_cong.jpg` (thợ ngồi sau tường đền, ngày thứ bảy)
+### 11. `dinh_cong.jpg` (ĐÃ CÓ · thợ ngồi sau tường đền, ngày thứ bảy)
 **Bố cục:** máy ở xa, thấp, nhìn chéo dọc chân tường đền. Tường đền khổng lồ chiếm hai phần ba khung, bên phải. Thợ ngồi thành hàng dài dọc chân tường, nhỏ, quay lưng.
 **Kiểm tra:** tường bao và cổng tháp đền đá khổng lồ trong nắng chiều; chừng bốn mươi thợ mặc khố trắng **ngồi bệt quay lưng**, thấy từ xa, không rõ mặt; vài bếp lửa nhỏ. Cảm giác đói, im lặng.
 **Nếu sai:**
@@ -153,7 +153,7 @@ Aspect ratio 4:3. Realistic film photograph in the small dusty courtyard of a sn
 Aspect ratio 16:9. Realistic film photograph in late afternoon on the west bank of Thebes, ancient Egypt, around 1150 BC. 50mm lens from far away and low, looking diagonally along the foot of a temple wall. On the right two-thirds of the frame, the massive sloping sandstone enclosure wall and gate tower of a royal mortuary temple rise high, its carved reliefs worn and half in deep shadow, unreadable. Along the foot of the wall, small in the frame, about forty workmen in plain white linen kilts sit on the dust in a long ragged line, all with their backs to the camera, some with heads bowed on their knees, a few small cooking fires with thin smoke and no food on them. Long orange light, dust haze in the air, a mood of hunger and silent protest. Do not include: faces, soldiers, chariots, readable inscriptions, text, watermark.
 ```
 
-### 12. `ran_scare.jpg` (ảnh doạ)
+### 12. `ran_scare.jpg` (ĐÃ CÓ · ảnh doạ)
 **Bố cục:** cận cực sát, gần như toàn bộ khung là đầu và mang rắn lao vào ống kính. Hậu cảnh: bóng tối, xa xa một đĩa mặt trời đỏ vẽ trên tường trắng.
 **Kiểm tra:** rắn hổ mang Ai Cập màu nâu sẫm **bành mang hết cỡ**, miệng hé, **lao thẳng về ống kính**; mắt bắt ánh đèn dầu cam; mép mang nhoè chuyển động, mắt và vảy sắc nét.
 **Nếu sai:**
@@ -162,7 +162,7 @@ Aspect ratio 16:9. Realistic film photograph in late afternoon on the west bank 
 Aspect ratio 16:9. Extreme close-up realistic horror photograph in near total darkness inside an ancient Egyptian tomb corridor, around 1150 BC. Wide-angle lens almost touching the subject. A large dark brown Egyptian cobra rears up out of the black and lunges straight at the camera: its head and fully spread hood fill most of the frame, mouth open showing pale pink inside and fangs, forked tongue out. Its eyes catch the orange reflection of a small oil lamp just below the frame. Motion blur on the edges of the hood, the eyes and the scales on the head razor sharp. Far behind it, barely visible in the dark, a painted red sun disc on a white plastered wall. Sudden, terrifying, claustrophobic. Do not include: people, text, watermark.
 ```
 
-### 13. `chen_hin.jpg` (chén hin và mảnh gốm của Hay)
+### 13. `chen_hin.jpg` (ĐÃ CÓ · chén hin và mảnh gốm của Hay)
 **Bố cục:** máy hơi từ trên xuống, gần, trên chiếu cói. Trái: con búp bê nằm nghiêng. Giữa: chén gốm đỏ, vết mẻ chữ V quay về máy. Phải: mảnh gốm có cột vạch mực.
 **Kiểm tra:** chén gốm đỏ nhỏ miệng loe, **vết mẻ hình chữ V ở miệng, quay về phía máy, thấy rõ**; mảnh gốm cỡ bàn tay có **mấy cột vạch mực ngắn**, mờ; **con búp bê giống hệt búp bê trong ảnh `bup_be_scare`** (gỗ dẹt hình mái chèo, tóc chuỗi hạt đất sét, mặt vẽ mắt đen, cổ áo đỏ), bụng có ngăn rỗng **đang đóng**. Không người.
 **Nếu sai:**
@@ -172,7 +172,7 @@ Aspect ratio 16:9. Extreme close-up realistic horror photograph in near total da
 Aspect ratio 4:3. Realistic film photograph on a reed mat on the earthen floor of a poor house in an ancient Egyptian village, around 1150 BC. 50mm lens, camera slightly above, close. In the centre, a small red pottery cup with a flared rim, about the size of a fist, turned so that a clear V-shaped chip in its rim faces the camera. On the right, a broken pottery sherd the size of a palm, covered with four or five short columns of faint black ink tally strokes, blurred and unreadable. On the left, lying on its side, a child's flat paddle-shaped wooden doll painted with simple black eyes, a red patterned collar and dress, with hair made of strings of small brown clay beads; a small hollow compartment in its belly is closed with a wooden plug. Soft side light from a small window, dust in the air, quiet mood. Do not include: people, hands, modern toys, readable text, watermark.
 ```
 
-### 14. `lang_sang.jpg` (kết thúc đúng: buổi sáng sau cùng)
+### 14. `lang_sang.jpg` (ĐÃ CÓ · kết thúc đúng: buổi sáng sau cùng)
 **Bố cục:** cùng góc nhìn với ảnh `cong_lang` (đính kèm làm tham chiếu). Cổng mở toang, hai con lừa chở bao lúa đi vào, thấy từ phía sau. Ghế gạch cạnh cổng trống trơn, chỉ còn vệt tròn trên bụi.
 **Kiểm tra:** cổng, tường, ghế gạch **giống ảnh `cong_lang`**; **cái đấu không còn trên ghế**, chỉ còn một vệt tròn nhạt trong bụi; lừa chở bao đầy đi vào làng; nắng sớm vàng, chim bay. Không thấy mặt người.
 **Nếu sai:**
