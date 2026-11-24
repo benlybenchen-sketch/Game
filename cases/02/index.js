@@ -29,6 +29,7 @@ export const META = {
   narrator: "Ông Tám Kỷ",
   solver: "ông Tám Kỷ",
   firstDoc: "thu_tam_ky",
+  coverFocus: "42% 58%",   // phone banner crop: the part of the cover that must stay visible
   cover: "cover",
   folders: ["Gói đồ của ông Tám", "Hồ sơ công an huyện", "Cuộn phim và lời khai", "Rương của Ba Thông", "Sổ thuốc độc", "Trước khi trời sáng", "Kết thúc"],
   wrong: [

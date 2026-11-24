@@ -58,6 +58,7 @@ export const META = {
   narrator: "Sổ tay của Lục Đình",
   solutionLabel: "Lời giải",
   firstDoc: "thu_moi",
+  coverFocus: "50% 52%",   // phone banner crop: the part of the cover that must stay visible
   cover: "cover",
   // Portrait cover: show it whole on the right (bride, coffin and paper groom stay in view).
   coverStyle: "background-size:auto 100%;background-position:right center;background-repeat:no-repeat;background-color:#07090a",

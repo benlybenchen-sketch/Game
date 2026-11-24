@@ -27,6 +27,7 @@ export const META = {
   level: "Khó, tăng dần",
   boss: "Anh Quân",
   firstDoc: "giao_viec",
+  coverFocus: "62% 45%",   // phone banner crop: the part of the cover that must stay visible
   cover: "cover",
   folders: ["Phong bì gửi tới đài", "Chị Nga gửi · lần 1", "Túi giấy của bà Thoa", "Hồ sơ năm 1996", "Gần sáng", "Kết thúc"],
   wrong: [

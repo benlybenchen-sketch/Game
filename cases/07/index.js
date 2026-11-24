@@ -65,6 +65,7 @@ export const META = {
   solutionLabel: "Lời giải",
   solver: "bà Meryt",
   firstDoc: "thu_moi",
+  coverFocus: "70% 84%",   // phone banner crop: the part of the cover that must stay visible
   cover: "cover",
   coverStyle: "background-size:auto 100%;background-position:right center;background-repeat:no-repeat;background-color:#07090a",
   music: "thu_nguoi_chet.mp3",   // original score, rendered by tools/compose07.py (reed, harp, frame drum, sistrum, chant)

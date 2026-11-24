@@ -199,7 +199,7 @@ function showCover() {
   const resume = state.started && !finished() && !state.failed;
   c.innerHTML = `
   <div class="cover">
-    <div class="cover-art" style="background-image:url(${base.img}${META.cover}.jpg)${META.coverStyle ? `;${META.coverStyle}` : ""}"></div>
+    <div class="cover-art" style="background-image:url(${base.img}${META.cover}.jpg)${META.coverStyle ? `;${META.coverStyle}` : ""};--focus:${META.coverFocus || "center"}"></div>
     <div class="cover-card">
       <button class="link back-home" data-cv="home">← Tất cả hồ sơ</button>
       <div class="cover-series">${META.series} · ${META.number}</div>

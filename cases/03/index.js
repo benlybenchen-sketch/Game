@@ -45,6 +45,7 @@ export const META = {
   solutionLabel: "Bản giải trong sổ tay",
   solveIntro: "Bản giải đầy đủ sẽ hiện ra trong sổ tay của bạn, và bạn đi tiếp.",
   firstDoc: "giao_keo",
+  coverFocus: "50% 38%",   // phone banner crop: the part of the cover that must stay visible
   cover: "cover",
   contract: { html: () => contractHtml(true) },
   folders: ["Đêm thứ nhất · Chủ Nhật 7/11", "Đêm thứ hai · Thứ Hai 8/11", "Đêm thứ ba · Thứ Ba 9/11", "Đêm thứ tư · Thứ Tư 10/11", "Đêm thứ năm · Thứ Năm 11/11", "Đêm thứ sáu · Thứ Sáu 12/11", "Đêm thứ bảy · Thứ Bảy 13/11", "Rạng sáng 14/11"],

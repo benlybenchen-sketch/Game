@@ -55,6 +55,7 @@ export const META = {
   solutionLabel: "Bản kết luận mẫu",
   solveIntro: "Bản kết luận mẫu cho trọng điểm này sẽ hiện ra, và bạn trực tiếp đêm sau.",
   firstDoc: "loi_dan",
+  coverFocus: "62% 42%",   // phone banner crop: the part of the cover that must stay visible
   cover: "cover",
   folders: ["Đêm trực 1 · Hồ sơ phòng 7", "Đêm trực 2 · Thứ Tư 16/10", "Đêm trực 3 · Thứ Sáu 18/10", "Đêm trực 4 · Tiếng ru", "Đêm trực 5 · Thứ Ba 22/10", "Đêm trực 6 · Bản giám định", "Tháng 11/1996"],
   wrong: [

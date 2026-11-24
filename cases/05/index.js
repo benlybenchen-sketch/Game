@@ -53,6 +53,7 @@ export const META = {
   solutionLabel: "Ghi chép đúng",
   solveIntro: "Ghi chép đúng của trọng điểm này sẽ hiện ra, và bạn sang lần thăm sau.",
   firstDoc: "loi_dan",
+  coverFocus: "62% 74%",   // phone banner crop: the part of the cover that must stay visible
   cover: "cover",
   // Portrait cover: show it whole on the right, so the spoon and the hair from under the door stay in view.
   coverStyle: "background-size:auto 100%;background-position:right center;background-repeat:no-repeat;background-color:#07090a",
