@@ -39,6 +39,7 @@ export const META = {
   strict: true,   // no x/y feedback, countdown with time penalties, gated hints, grade (js/main.js)
   timeLimit: 240, // minutes on the countdown (default 150)
   // Escape-room puzzles (rule 25, numbers from docs/CAU_DO.md).
+  pinRoles: false,   // evidence slots without role labels: the player works out what to prove (harder)
   puzzles: [
     { n: 15, q: "q3", name: "Mật áp theo Thiên Tự Văn (bảng chữ thay số)" },
     { n: 27, q: "q6", name: "Câu đố chiết tự" },

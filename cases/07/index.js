@@ -42,6 +42,7 @@ export const META = {
   strict: true,
   timeLimit: 240,
   // Escape-room puzzles (rule 25, numbers from docs/CAU_DO.md).
+  pinRoles: false,   // evidence slots without role labels: the player works out what to prove (harder)
   puzzles: [
     { n: 15, q: "q2", name: "Tự dựng chữ số hieratic và phân số mắt Horus từ vở học trò" },
     { n: 26, q: "q4", name: "Dòng chữ đố trên vách, đọc bằng bảng hình của Hay" },

@@ -32,6 +32,7 @@ const LOST_LINE = {
 export const META = {
   strict: true,   // no x/y feedback, countdown with time penalties, gated hints, grade (js/main.js)
   // Escape-room puzzles (rule 25, numbers from docs/CAU_DO.md).
+  pinRoles: false,   // evidence slots without role labels: the player works out what to prove (harder)
   puzzles: [
     { n: 4, q: "q4", name: "Xếp sáu dòng ghi chép theo thứ tự thật" },
     { n: 7, q: "q4", tool: "grille", media: "grille", name: "Tấm bìa đen đục lỗ của buồng tối và ba tờ giấy ô li: chọn tờ và mặt theo vết mực thấm, hai tờ còn lại là bẫy" },
