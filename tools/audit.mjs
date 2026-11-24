@@ -153,4 +153,31 @@ if (Number(id) >= 8) {
       if (p.type === "line" && !a.some((l) => can(lineHome.get(l)?.id))) bad(`rule 28: ${q.id}.${p.id} has no line on route ${b}`); }
   }
 }
+
+// ---------------------------------------------------------------- content sanity for every case (all states a document can be read in)
+{
+  const { existsSync } = await import("node:fs");
+  const { CASES } = await import("../cases/list.js");
+  const soon = CASES.find((x) => x.id === id)?.soon;
+  const variants = [{ stage: 99 }, { stage: 99, branch: "A", confronted: {}, puzzles: {} }, { stage: 99, branch: "B", confronted: Object.fromEntries(C.DOCS.filter((d) => d.confront).map((d) => [d.confront.id, true])), puzzles: {} }];
+  const pics = new Set();
+  for (const d of C.DOCS) for (const v of variants) {
+    Object.assign(state, v); state.failed = null; let h = "";
+    try { h = d.html(); } catch (e) { bad(`doc ${d.id} html() threw with ${JSON.stringify(v).slice(0, 40)}: ${e.message}`); continue; }
+    const t = h.replace(/<[^>]+>/g, " ");
+    const m = t.match(/\bundefined\b|\bNaN\b|\[object |\$\{/); if (m) bad(`doc ${d.id} shows "${m[0]}"`);
+    for (const g of h.matchAll(/data-goto="([^"]+)"/g)) if (!docs.has(g[1])) bad(`doc ${d.id} links to missing doc ${g[1]}`);
+    for (const g of h.matchAll(/src="[^"]*img\/\d+\/([^".]+)\.jpg"/g)) pics.add(g[1]);
+  }
+  for (const pname of pics) if (!existsSync(new URL(`../img/${id}/${pname}.jpg`, import.meta.url))) (soon ? () => {} : bad)(`picture img/${id}/${pname}.jpg is missing`);
+  for (const k of ["cover", ...Object.values(C.META.scares || {}).map((x) => x[1]), ...Object.values(C.META.docScares || {}).map((x) => x[1])])
+    if (!soon && !existsSync(new URL(`../img/${id}/${k}.jpg`, import.meta.url))) bad(`picture img/${id}/${k}.jpg (cover or scare) is missing`);
+  for (const q of C.QUESTIONS) {
+    for (const p of q.parts) if (p.options && new Set(p.options).size !== p.options.length) bad(`${q.id}.${p.id} has the same option twice`);
+    const memo = typeof q.memo === "function" ? (() => { try { return q.memo(); } catch { return "undefined"; } })() : q.memo;
+    if (/undefined|NaN/.test(String(memo))) bad(`${q.id} memo shows undefined`);
+    const sq = S[q.id]; if (sq) for (const h of [...(sq.hints || []), sq.solution]) if (/undefined|NaN|\$\{/.test(String(h))) bad(`${q.id} hint or solution shows undefined`);
+  }
+  if (C.META.music && !existsSync(new URL(`../audio/${id}/${C.META.music}`, import.meta.url))) bad(`music file audio/${id}/${C.META.music} is missing`);
+}
 console.log(problems.length ? problems.map((p) => "  ! " + p).join("\n") : "  ok");

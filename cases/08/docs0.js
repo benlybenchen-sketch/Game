@@ -38,7 +38,7 @@ export default [
       <p>Tôi ngủ quên lúc nào không biết. Giờ Mão bị đánh thức bởi tiếng chuông và tiếng thằng bé trên đỉnh gào: tiên tích, tiên tích.</p>`),
   },
   {
-    id: "ban_do", stage: 0, kind: "Bản đồ", icon: "🗺", label: "Bản đồ núi Vân Khư",
+    id: "ban_do", stage: 0, noPin: true, kind: "Bản đồ", icon: "🗺", label: "Bản đồ núi Vân Khư",
     html: () => `<div class="doc doc--plain">
       <p class="note">Minh Kính vẽ cho bạn. Khách xá là chỗ bạn ở: giấy tờ người ta mang tới đó, không mất công đi. Nơi khác thì phải đi bộ, hỏi han, lục lọi, mỗi lần chừng một nén hương. Từ khách xá xuống Hạ Khê dưới chân núi thì mất gấp đôi.</p>
       <div class="mapnav"></div>

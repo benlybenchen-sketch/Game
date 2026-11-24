@@ -346,7 +346,7 @@ function openDoc(id) {
   const pinned = q ? (resp(q.id).pins || []).includes(id) : false;
   $(".reader-head").innerHTML = `
     <div><span class="kind">${d.kind}${META.map && d.place && d.place !== META.map.home ? ` · ${placeName(d.place)}` : ""}</span><h2>${d.label}</h2></div>
-    ${pinPart && !state.failed && d.stage < QUESTIONS.length ? `<button class="btn ${pinned ? "btn--on" : ""}" data-pin="${id}">📌 ${pinned ? "Bỏ ghim" : "Ghim làm bằng chứng"}</button>` : ""}`;
+    ${pinPart && !state.failed && !d.noPin && d.stage < QUESTIONS.length ? `<button class="btn ${pinned ? "btn--on" : ""}" data-pin="${id}">📌 ${pinned ? "Bỏ ghim" : "Ghim làm bằng chứng"}</button>` : ""}`;
   const body = $(".reader-body");
   body.innerHTML = d.html();
   body.querySelectorAll(".dread-only").forEach((e) => { if (Number(e.dataset.min) > level()) e.remove(); });

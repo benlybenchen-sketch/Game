@@ -24,6 +24,7 @@ for c in "$@"; do
   grep -q "(WRONG)\|MISSING\|errors:" "$OUT/timer$c.log" && { row "$c" timer FAIL; cat "$OUT/timer$c.log"; fail=1; } || row "$c" timer ok
   CASE=$c timeout 900 node tools/flow_test.cjs > "$OUT/flow$c.log" 2>&1 && row "$c" flow "ok ($(grep -c '^ok' "$OUT/flow$c.log") kiểm)" || { row "$c" flow FAIL; grep "^BAD" "$OUT/flow$c.log"; fail=1; }
 done
+dp=$(timeout 1800 node tools/deep_test.cjs "$@" 2>&1); [[ "$(echo "$dp" | tail -1)" == "deep tests ok" ]] && row all deep "ok ($(echo "$dp" | grep -c '^ok') kiểm: lưu và tải lại, thua vì hết giờ, bản đồ, đối chất, nhánh, khoá tài liệu, điện thoại)" || { row all deep FAIL; echo "$dp" | grep "^BAD\|^=="; fail=1; }
 pz=$(timeout 600 node tools/puzzle_test.cjs 2>&1)
 echo "$pz" | grep -q "should be false)\|WRONG\|errors:" && { echo "$pz" | grep -v "(ok)" ; } >/dev/null
 if echo "$pz" | grep -q "(WRONG)\|errors:" || echo "$pz" | grep -q "opens: true (should be false)\|opens.*: false (should be true)"; then row all puzzles FAIL; echo "$pz"; fail=1; else row all puzzles "ok ($(echo "$pz" | grep -c "ok)\|(should") kiểm, trên trình duyệt)"; fi
