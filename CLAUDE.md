@@ -25,6 +25,7 @@ Tên thư mục chỉ ghi đêm/ngày (ví dụ "Đêm thứ hai · Thứ Hai 8/
 Lời nhắn sau mỗi trọng điểm không được hé câu sau ("sáng mai tôi đi xem sổ phát tang", "ai buộc chỉ đỏ?", "bác sĩ dặn để ý bà ăn uống ra sao").
 Tên nhân vật gặp ngay từ trang đầu mà cũng là đáp án thì khai trong `META.publicNames`, kèm lý do.
 Hồ sơ 02 giữ nguyên như đã phát hành, chỉ sửa khi người dùng yêu cầu.
+Tài liệu sau khi kết thúc (luật 29, mọi hồ sơ cũ và mới): thắng thì mở toàn bộ tài liệu; thua (câu quyết định sai hay hết giờ) thì chỉ còn tài liệu đã tìm được tới lúc thua và biên bản kết thúc xấu, không mở sạch toàn bộ.
 
 ## 2. Trước khi mở một hồ sơ (bắt buộc, nhất là sau mỗi đợt ảnh mới)
 `python3 -m http.server 8063` ở thư mục repo, rồi:
@@ -50,7 +51,7 @@ Mỗi khi người dùng gửi đủ bộ ảnh: chạy lại toàn bộ danh s�
 ## 5. Danh sách tự kiểm cho mọi hồ sơ mới (bắt buộc từ hồ sơ 08; người dùng yêu cầu độ chỉn chu tối đa, không để phải test đi test lại)
 Trước khi báo "xong" một hồ sơ hay một đợt sửa, tự đi hết danh sách này:
 1. Kinh thánh có đủ: nhân vật và sự thật, lịch tính lại (can chi, tiết khí đúng năm), dòng thời gian, từng trọng điểm (câu, phương án, đáp án, cách giải, bẫy, ghim, điều người chơi sẽ tin sai), bảng đủ tài liệu (từng nhánh nếu có nhánh), danh sách tài liệu và nhiễu, kết thúc, điều không ai giải thích, ảnh, nhạc.
-2. Luật độ khó 1–28 (`docs/KE_HOACH.md`), kể cả: phương án dài ngang nhau; tên tài liệu, thư mục, trọng điểm, memo không lộ đáp án; không in đậm, nghiêng, gạch chân, tô màu, ngoặc kép mỉa mai trong tài liệu; ≥ 5 câu bấm (hồ sơ 08 trở đi ≥ 10).
+2. Luật độ khó 1–29 (`docs/KE_HOACH.md`), kể cả: phương án dài ngang nhau; tên tài liệu, thư mục, trọng điểm, memo không lộ đáp án; không in đậm, nghiêng, gạch chân, tô màu, ngoặc kép mỉa mai trong tài liệu; ≥ 5 câu bấm (hồ sơ 08 trở đi ≥ 10).
 3. META: `strict: true`, `timeLimit`, `hintCost: { hint: 10, solve: 20 }` (không có cơ chế sai 2 lần mở gợi ý), `pinRoles: false`, `coverFocus` (bìa trên điện thoại), `coverStyle` nếu bìa dọc, `music` + `ambience` dự phòng, `scares`, `puzzles`.
 4. `cases/list.js`: `time` đúng bằng đồng hồ trong game ("<timeLimit> phút"), `diff` và `fear` 1–5 sao, `endings` đúng số kết thúc kể cả kết thúc ẩn, `soon: true` khi chưa đủ ảnh. Audit kiểm.
 5. Câu đố: không tự báo đúng sai; thử sai mã hay trận bị trừ 3 phút; bẫy ở các cách đi tắt; `tools/solveXX.mjs` giải lại từ dữ liệu; `node tools/lockbox.mjs <id>` niêm nội dung hộp khoá.
