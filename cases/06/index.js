@@ -62,7 +62,7 @@ export const META = {
   cover: "cover",
   // Portrait cover: show it whole on the right (bride, coffin and paper groom stay in view).
   coverStyle: "background-size:auto 100%;background-position:right center;background-repeat:no-repeat;background-color:#07090a",
-  music: "Minh hon.m4A",        // original theme, rendered by tools/compose06c.py (suona procession, drum rolls, wail)
+  music: "Minh hon.m4a",        // original theme, rendered by tools/compose06c.py (suona procession, drum rolls, wail)
   ambience: "ghostWedding",   // fallback if the file fails: synthesized procession in js/audio.js
   folders: ["Đêm 17 · Canh thiếp", "Đêm 18 · Ngõ Liễu", "Đêm 19 · Phiếu hiệu", "Đêm 20 · Phiếu khám xác", "Sáng 21 · Lễ phát tang",
     "Đêm 21 · Trang sổ cuối", "Đêm 22 · Giờ Hợi", "Rạng sáng 23", "Sau đêm 22"],
