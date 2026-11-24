@@ -26,5 +26,5 @@ export const CASES = [
     level: "Cực khó (mức 5) · Ai Cập cổ", time: "240 phút", questions: 7, endings: 5 },
   { id: "08", diff: 5, fear: 5, number: "Hồ sơ 08", title: "Độ Kiếp", place: "Núi Vân Khư, Bắc Tống, Tuyên Hoà năm thứ hai", cover: "cover",
     short: "Chín tiếng sét đánh xuống Lôi Đài, chưởng môn hoá tro, tông môn tâu về triều là đã phi thăng. Hồn đăng của ông trong Tổ sư điện vẫn cháy. Bạn có bảy ngày để ký xác nhận tiên tích.",
-    level: "Cực khó (mức 5) · tu tiên, Trung Hoa cổ", time: "300 phút", questions: 8, endings: 6, soon: true },
+    level: "Cực khó (mức 5) · tu tiên, Trung Hoa cổ", time: "300 phút", questions: 8, endings: 7, soon: true },
 ];

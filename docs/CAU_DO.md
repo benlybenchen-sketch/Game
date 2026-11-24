@@ -42,6 +42,12 @@ Mỗi loại ghi: cách chơi · cách làm khó · bẫy gợi ý · công cụ
 24. **Đồng hồ và kim.** Mặt đồng hồ có chữ thay số; mỗi giờ ghi trong nhật ký cho ra hai chữ.
 25. **Thiên văn.** Vị trí trăng, sao, giờ thuỷ triều cho ra ngày giờ thật.
 
+## E0. Trận pháp và cân (thêm từ hồ sơ 08)
+
+31. **Trận cửu cung.** Lưới 3×3 đĩa đá, mỗi đĩa xoay 8 quẻ. Lời giải theo Lạc Thư và phi tinh: số trung cung lấy từ một ngày, thuận hay nghịch theo tiết (dương độn, âm độn), số đổi ra quẻ bằng thứ tự Hậu thiên, Nam ở trên. Làm khó: số ngày hay số can chi; Tiên thiên hay Hậu thiên; lật Bắc lên trên. Công cụ: `tran` (hồ sơ 08). Sai trừ 3 phút, không báo đĩa nào sai.
+32. **Cân đan.** Cân hai đĩa, quả cân theo một hệ đơn vị, công thức viết theo hệ khác (thù, lũy, thử với lạng, tiền, phân). Cán chỉ nghiêng hay thăng bằng, không hiện số. Kết quả là dãy số trông vô nghĩa, dùng làm mã ở bước sau. Công cụ: `can` (hồ sơ 08).
+33. **Mã theo sổ người.** Mỗi ký hiệu chỉ một người trong một sổ (ví dụ cảnh giới tu luyện), số đi kèm chỉ chữ cái thứ mấy trong tên. Có hai bản sổ; bản sai ra một câu đọc được mà sai.
+
 ## E. Chữ và thơ
 
 26. **Thơ tàng chữ nhiều tầng.** Chữ đầu câu ra câu bẫy; chữ thứ n của câu n ra câu thật.
