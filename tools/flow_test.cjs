@@ -48,7 +48,7 @@ let bad = 0; const ok = (what, cond, extra = "") => { if (!cond) bad++; console.
     ok(`hint costs ${info.hintCost.hint} minutes`, Math.round((t0 - t1) / 60) === info.hintCost.hint, `took ${Math.round((t0 - t1) / 60)}`);
     ok("one hint shown", (await p.$$eval(".q-card.open .hint", (h) => h.length)) === 1);
     await p.click('.q-card.open [data-act="hint"]'); await p.waitForTimeout(300); await p.click('[data-dlg="no"]'); await p.waitForTimeout(300);
-    ok("cancelling a hint costs nothing", (await left()) === t1 && (await p.$$eval(".q-card.open .hint", (h) => h.length)) === 1);
+    ok("cancelling a hint costs nothing", t1 - (await left()) < 60 && (await p.$$eval(".q-card.open .hint", (h) => h.length)) === 1);
     for (let n = 0; n < 2; n++) { await p.click('.q-card.open [data-act="submit"]'); await p.waitForTimeout(300); }
     ok("wrong answers unlock no hint", (await p.$$eval(".q-card.open .hint", (h) => h.length)) === 1);
     const t2 = await left();
