@@ -106,6 +106,8 @@ let bad = 0; const ok = (what, cond, extra = "") => { if (!cond) bad++; console.
     }
     // music: plays on the cover and the desk, stops on the case list
     await p.goto(U); await p.waitForTimeout(400); await p.click('[data-cv="go"]').catch(() => {}); await p.waitForTimeout(800);
+    if (await p.isVisible("input[data-sign]")) { await p.fill("input[data-sign]", "Thử"); await p.click('[data-dlg="ok"]'); await p.waitForTimeout(400); }
+    for (let k = 0; k < 3; k++) { const d = await p.$('#dialog:not([hidden]) [data-dlg="ok"]'); if (!d) break; await d.click(); await p.waitForTimeout(200); }
     const inCase = await p.evaluate(() => window.__hdn.ambState());
     await p.evaluate(() => document.querySelector('[data-top="cover"]')?.click()); await p.waitForTimeout(300);
     await p.click('[data-cv="home"]'); await p.waitForTimeout(500);

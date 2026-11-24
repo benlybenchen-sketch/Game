@@ -11,12 +11,13 @@ const CASE = process.env.CASE || "07";
   await p.click('[data-cv="go"]'); await p.waitForTimeout(500);
   if (await p.isVisible("input[data-sign]")) { await p.fill("input[data-sign]", "Thử"); await p.click('[data-dlg="ok"]'); await p.waitForTimeout(300); }
   // A complete but wrong answer: write the junk straight into the saved responses of the open question, then reload.
-  const S = await p.evaluate(async (c) => { const m = await import(`/cases/${c}/questions.js`); return m.QUESTIONS[0]; }, CASE);
+  const S = await p.evaluate(async (c) => { const m = await import(`/cases/${c}/index.js`); const { decode } = await import("/js/answer.js"); const q = m.QUESTIONS[0]; q.answer = decode(m.SECRET, m.SECRET_KEY)[q.id]; return q; }, CASE);
   await p.evaluate(([k, q]) => {
     const s = JSON.parse(localStorage.getItem(k)); const r = {};
     for (const part of q.parts) {
-      if (part.type === "choice") r[part.id] = part.options[part.options.length - 1];
+      if (part.type === "choice") r[part.id] = part.options.find((o) => o !== q.answer[part.id]);
       else if (part.type === "number" || part.type === "text") r[part.id] = "999";
+      else if (part.type === "time") r[part.id] = "01:01";
       else if (part.type === "line") { r[part.id] = "zz"; r[part.id + "Text"] = "zz"; }
       else if (part.type === "pins") r.pins = Array.from({ length: part.count }, (_, i) => `x${i}`);
       else if (part.type === "order") r[part.id] = (part.items || []).map((x) => x.id);
@@ -54,8 +55,9 @@ const CASE = process.env.CASE || "07";
   await p.evaluate(([k, q]) => {
     const s = JSON.parse(localStorage.getItem(k)); const r = {};
     for (const part of q.parts) {
-      if (part.type === "choice") r[part.id] = part.options[part.options.length - 1];
+      if (part.type === "choice") r[part.id] = part.options.find((o) => o !== q.answer[part.id]);
       else if (part.type === "number" || part.type === "text") r[part.id] = "999";
+      else if (part.type === "time") r[part.id] = "01:01";
       else if (part.type === "line") { r[part.id] = "zz"; r[part.id + "Text"] = "zz"; }
       else if (part.type === "pins") r.pins = Array.from({ length: part.count }, (_, i) => `x${i}`);
       else if (part.type === "order") r[part.id] = (part.items || []).map((x) => x.id);
