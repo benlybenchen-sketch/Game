@@ -9,6 +9,13 @@ export function ctx() {
   if (!ac) {
     const AC = window.AudioContext || window.webkitAudioContext;
     if (!AC) return null;
+    // iPhone: with the ring/silent switch on silent, Safari mutes Web Audio unless the page asks for "playback"
+    // (the way a music app does). Safari 16.4+ has navigator.audioSession; older iOS needs a silent <audio> played once.
+    try { if (navigator.audioSession) navigator.audioSession.type = "playback"; } catch { /* not supported */ }
+    try {
+      const unlock = new Audio("data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=");
+      unlock.setAttribute("playsinline", ""); unlock.volume = 0; unlock.play().catch(() => {});
+    } catch { /* no HTMLAudio */ }
     ac = new AC();
     master = ac.createGain();
     master.gain.value = state.sound ? 1 : 0;
