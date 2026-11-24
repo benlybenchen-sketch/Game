@@ -22,6 +22,7 @@ done
 pz=$(timeout 600 node tools/puzzle_test.cjs 2>&1)
 echo "$pz" | grep -q "should be false)\|WRONG\|errors:" && { echo "$pz" | grep -v "(ok)" ; } >/dev/null
 if echo "$pz" | grep -q "(WRONG)\|errors:" || echo "$pz" | grep -q "opens: true (should be false)\|opens.*: false (should be true)"; then row all puzzles FAIL; echo "$pz"; fail=1; else row all puzzles "ok ($(echo "$pz" | grep -c "ok)\|(should") kiểm, trên trình duyệt)"; fi
+node tools/solve_demo.mjs > "$OUT/demo.log" 2>&1 && timeout 300 node tools/demo_test.cjs >> "$OUT/demo.log" 2>&1 && row all "trang thử" ok || { row all "trang thử" FAIL; grep "^BAD" "$OUT/demo.log"; fail=1; }
 [[ "$traps" == "all traps behave" ]] && row all traps ok || { row all traps "FAIL: $traps"; fail=1; }
 [ $fail = 0 ] && echo "TẤT CẢ ĐẠT" || echo "CÓ LỖI"
 exit $fail

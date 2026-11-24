@@ -43,21 +43,31 @@ export function blocks(el, cfg) {
  * The player lays the grille on the page and turns it a quarter at a time.
  */
 export function grille(el, cfg) {
-  const st = P(cfg.id); st.turn ??= 0; st.on ??= false;
-  const n = cfg.grid.length;
+  // Optional: cfg.pages = [{ name, grid }] (several pages to lay the card on), cfg.flip = true (the card can be laid face down,
+  // which mirrors it left-right before turning).
+  const st = P(cfg.id); st.turn ??= 0; st.on ??= false; st.flip ??= false; st.page ??= 0;
+  const pages = cfg.pages || [{ grid: cfg.grid }];
+  const n = pages[0].grid.length;
   const rot = ([r, c], k) => { for (let i = 0; i < k; i++) [r, c] = [c, n - 1 - r]; return [r, c]; };
+  const tf = ([r, c]) => rot(st.flip ? [r, n - 1 - c] : [r, c], st.turn);
+  const CORNER = { "0,0": "trên trái", [`0,${n - 1}`]: "trên phải", [`${n - 1},${n - 1}`]: "dưới phải", [`${n - 1},0`]: "dưới trái" };
   const draw = () => {
-    const open = new Set(cfg.holes.map((h) => rot(h, st.turn).join(",")));
+    const open = new Set(cfg.holes.map((h) => tf(h).join(",")));
+    const grid = pages[st.page].grid;
     el.innerHTML = `<div class="pz-grille">
-      <div class="pz-grid g" style="grid-template-columns:repeat(${n},1.7em)">${cfg.grid.map((row, r) => [...row].map((ch, c) => `<span class="${st.on ? (open.has(`${r},${c}`) ? "pz-hole" : "pz-cov") : ""}">${esc(ch)}</span>`).join("")).join("")}</div>
+      ${cfg.pages ? `<div class="pz-btns">${pages.map((p, i) => `<button class="btn btn--small ${i === st.page ? "btn--on" : ""}" data-pg="${i}">${esc(p.name)}</button>`).join("")}</div>` : ""}
+      <div class="pz-grid g" style="grid-template-columns:repeat(${n},1.7em)">${grid.map((row, r) => [...row].map((ch, c) => `<span class="${st.on ? (open.has(`${r},${c}`) ? "pz-hole" : "pz-cov") : ""}">${esc(ch)}</span>`).join("")).join("")}</div>
       <div class="pz-btns"><button class="btn btn--small ${st.on ? "btn--on" : ""}" data-g="on">${st.on ? "Nhấc tấm bìa ra" : "Đặt tấm bìa lên"}</button>
       <button class="btn btn--small" data-g="turn" ${st.on ? "" : "disabled"}>Xoay tấm bìa một góc vuông</button>
-      <span class="small muted">${st.on ? `Góc có vết mực đang ở ${["trên trái", "trên phải", "dưới phải", "dưới trái"][st.turn]}.` : ""}</span></div></div>`;
+      ${cfg.flip ? `<button class="btn btn--small" data-g="flip">Lật tấm bìa</button>` : ""}
+      <span class="small muted">${st.on ? `Góc có vết mực đang ở ${CORNER[tf([0, 0]).join(",")]}${cfg.flip ? (st.flip ? ", mặt sau lên trên" : ", mặt trước lên trên") : ""}.` : ""}</span></div></div>`;
   };
   draw();
   el.addEventListener("click", (e) => {
+    const pg = e.target.closest("[data-pg]");
+    if (pg) { st.page = +pg.dataset.pg; save(); draw(); return; }
     const b = e.target.closest("[data-g]"); if (!b) return;
-    if (b.dataset.g === "on") st.on = !st.on; else st.turn = (st.turn + 1) % 4;
+    if (b.dataset.g === "on") st.on = !st.on; else if (b.dataset.g === "flip") st.flip = !st.flip; else st.turn = (st.turn + 1) % 4;
     save(); draw();
   });
 }

@@ -57,3 +57,7 @@ Mỗi loại ghi: cách chơi · cách làm khó · bẫy gợi ý · công cụ
 - Mỗi câu đố có ít nhất một bẫy cho ra một kết quả trông đúng mà sai.
 - Kết quả câu đố phải được dùng: hoặc làm đáp án tự nhập, hoặc làm chìa mở tài liệu cần cho bước sau.
 - Mỗi câu đố có công cụ trong game thì `tools/solveXX.mjs` phải giải lại nó từ dữ liệu.
+- Không cho câu đố tự kiểm được bằng mắt. Nếu xếp thử đến đâu chữ hiện thành câu đến đó thì người chơi chỉ cần mò (bài học từ bản thử đầu, giải trong 2 phút). Kết quả trung gian nên là thứ trông vô nghĩa (dãy số, toạ độ, chữ đã mã hoá) và chỉ kiểm được ở bước sau.
+- Câu đố phải nằm trong chuỗi: thứ tự lấy từ tài liệu khác (sổ sách, lịch, thư), không từ chính câu đố. Bài thơ là câu đố, không phải lời chỉ dẫn: phải cần thêm ít nhất hai tài liệu mới hiểu được.
+- Đi tắt phải bị phạt: nếu có ít cách thử (ví dụ 6 cách đặt tấm bìa), đặt bẫy ở các cách sai để người bỏ bước trước nhận về nhiều câu mâu thuẫn.
+- Mẫu chuẩn: trang `thu-cau-do.html` (dữ liệu `tools/demo_gen.mjs`, giải lại `tools/solve_demo.mjs`, chơi thử `tools/demo_test.cjs`).

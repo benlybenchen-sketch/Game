@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Thử câu đố</title>
+<title>Gác xép xóm Đình</title>
 <link rel="stylesheet" href="css/style.css">
 <style>
   body { background: #0d0b09; color: #eadfc6; font-family: Georgia, serif; margin: 0; padding: 16px; }
@@ -11,50 +11,115 @@
   section { background: #1a1511; border: 1px solid #3a2f25; padding: 14px 16px; margin: 16px 0; border-radius: 4px; }
   h1 { font-size: 22px; } h2 { font-size: 17px; margin: 0 0 8px; }
   .hint { color: #b9ab8f; font-size: 14px; }
-  .poem { background: #e9dfc8; color: #2b2116; padding: 10px 14px; border-radius: 3px; font-style: normal; }
+  .paper { background: #e9dfc8; color: #2b2116; padding: 10px 14px; border-radius: 3px; overflow-x: auto; }
+  .paper table { border-collapse: collapse; font-size: 14px; width: 100%; }
+  .paper td, .paper th { border: 1px solid #b5a688; padding: 3px 6px; text-align: left; vertical-align: top; }
+  .letter { font-size: 15px; line-height: 1.7; }
+  .letter span { display: inline-block; width: 2.2em; color: #8a7a5e; font-size: 12px; }
+  .cal { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 2px 10px; font-size: 13px; }
   details { margin-top: 8px; } summary { cursor: pointer; color: #c9b48a; }
+  .tier { margin: 6px 0 6px 14px; }
 </style>
 </head>
 <body>
 <main>
-  <h1>Thử ba loại câu đố mới</h1>
-  <p class="hint">Trang thử, không thuộc hồ sơ nào. Mỗi câu đố có lời giải giấu bên dưới.</p>
+  <h1>Gác xép xóm Đình</h1>
+  <p class="hint">Trang thử, không thuộc hồ sơ nào. Cháu nội bà Huệ nhờ bạn mở cái hòm sắt trên gác xép. Không ai trong nhà còn nhớ mã. Dưới đây là những thứ tìm được trên gác, theo thứ tự nhặt lên.</p>
 
   <section>
-    <h2>1. Khối chữ xếp hàng</h2>
-    <div class="poem">Người cao lớn nhất đứng sau cùng.<br>Hai chị em đứng trước, chị mang chấm trắng đứng đầu.<br>Đứa nhỏ một mình đứng thứ ba, mà đứng trồng cây chuối.</div>
-    <div id="pz1" style="margin-top:10px"></div>
-    <details><summary>Lời giải</summary><p class="hint">Chấm trắng, chấm xám, khối một cột (xoay ngược), khối ba cột. Đọc từng hàng: DƯỚI GỐC SUNG SAU NHÀ CÓ MỘT CÁI HỘP SẮT, CHÔN SÂU BA GANG TAY.</p></details>
+    <h2>Hòm sắt</h2>
+    <p class="hint">Hòm tôn sơn xanh, khoá bốn vòng số. Bên trong có tiếng giấy sột soạt.</p>
+    <div id="hom"></div>
   </section>
 
   <section>
-    <h2>2. Lưới đục lỗ</h2>
-    <p class="hint">Đặt tấm bìa lên trang chữ, đọc các chữ lộ ra từ trái sang phải, trên xuống dưới, rồi xoay một góc vuông và đọc tiếp. Góc có vết mực phải ở trên bên trái lúc bắt đầu.</p>
-    <div id="pz2"></div>
-    <details><summary>Lời giải</summary><p class="hint">Bốn lần xoay đọc ra: GẶP NHAU Ở GIẾNG CŨ LÚC NỬA ĐÊM, MANG ĐÈN THEO (chữ X cuối là chữ đệm).</p></details>
+    <h2>Tấm bìa và ba tờ giấy kẻ ô</h2>
+    <p class="hint">Một tấm bìa cứng đục lỗ, một góc dính vết mực. Kẹp cùng ba tờ giấy học trò, chữ in hoa viết kín ô, nét trẻ con.</p>
+    <div id="bia"></div>
   </section>
 
   <section>
-    <h2>3. Hộp khoá chữ</h2>
-    <p class="hint">Hộp khoá bằng bốn chữ cái. Trên nắp: “Tên người trong ảnh, bỏ hết dấu, bốn chữ đầu.” Người trong ảnh là bà Lành.</p>
-    <div id="pz3"></div>
-    <details><summary>Lời giải</summary><p class="hint">L · A · N · H.</p></details>
+    <h2>Sổ hộ khẩu, trang 2</h2>
+    <div class="paper"><table>
+      <tr><th>Họ và tên</th><th>Quan hệ với chủ hộ</th><th>Năm sinh</th><th>Ghi chú</th></tr>
+      <tr><td>Trần Văn Thìn</td><td>Chủ hộ</td><td>1928</td><td>Mất 1979</td></tr>
+      <tr><td>Phạm Thị Lụa</td><td>Mẹ</td><td>1907</td><td>Mất 1966</td></tr>
+      <tr><td>Ngô Thị Huệ</td><td>Vợ</td><td>1931</td><td></td></tr>
+      <tr><td>Trần Văn Khải</td><td>Con</td><td>1952</td><td>Nhập ngũ 3/1971. Mất tích 1972</td></tr>
+      <tr><td>Trần Thị Nguyệt</td><td>Con</td><td>1954</td><td>Mất 1968</td></tr>
+      <tr><td>Trần Văn Lộc</td><td>Con</td><td>1960</td><td></td></tr>
+      <tr><td>Trần Văn Hiếu</td><td>Cháu</td><td>1964</td><td>Con ông Trần Văn Tỵ. Ở nhờ từ 1968</td></tr>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Hộp gỗ nhỏ</h2>
+    <div class="paper">Trên nắp khắc:<br><br>
+      Mẹ đứng trước, các con theo sau,<br>
+      đứa lớn kề mẹ, đứa út cuối hàng.<br>
+      Đứa nào bỏ mẹ đi trước,<br>
+      mẹ đặt nằm ngược mà thương.<br><br>
+      Kỷ Dậu, tháng Chạp.</div>
+    <p class="hint">Trong hộp có bốn thanh tre vót vuông, mỗi thanh khắc một con vật ở đầu và một cột chữ số. Lúc mở hộp, chúng nằm theo thứ tự này.</p>
+    <div id="thanh"></div>
+  </section>
+
+  <section>
+    <h2>Giấy báo tử</h2>
+    <div class="paper">
+      <p>GIẤY BÁO TỬ. Số 117/BT</p>
+      <p>Ban Chỉ huy quân sự huyện trân trọng báo tin cùng gia đình: đồng chí Trần Văn Khải, sinh năm 1952, quê xóm Đình, nhập ngũ tháng 3 năm 1971, đã hy sinh ngày 14 tháng 3 năm 1972 tại mặt trận phía Nam.</p>
+      <p>Tổ quốc ghi công đồng chí. Xin chia buồn cùng gia đình.</p>
+      <p>Ngày 20 tháng 7 năm 1975<br>T/M Ban Chỉ huy (đã ký, đóng dấu)</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Lá thư không gửi</h2>
+    <p class="hint">Kẹp trong cuốn sổ bìa xanh. Người chép lại đánh số dòng bên lề.</p>
+    <div class="paper letter" id="thu"></div>
+  </section>
+
+  <section>
+    <h2>Tờ lịch cũ</h2>
+    <p class="hint">Xé từ cuối một cuốn lịch, bị gián gặm mất phần đầu.</p>
+    <div class="paper cal" id="lich"></div>
+  </section>
+
+  <section>
+    <h2>Gợi ý</h2>
+    <p class="hint">Chỉ mở khi bí. Mỗi tầng nói nhiều hơn tầng trước.</p>
+    <details><summary>Hộp gỗ</summary>
+      <details class="tier"><summary>Gợi ý 1</summary><p class="hint">Con vật trên mỗi thanh là một con giáp. Mỗi người trong sổ hộ khẩu tuổi con gì?</p></details>
+      <details class="tier"><summary>Gợi ý 2</summary><p class="hint">Hộp là của bà Huệ, nên "mẹ" và "các con" tính theo bà. Kỷ Dậu là năm nào, và đến năm đó ai đã "đi trước"?</p></details>
+      <details class="tier"><summary>Gợi ý 3</summary><p class="hint">Dê, rồng, ngựa lật ngược, chuột. Mỗi hàng ra một số bốn chữ số.</p></details>
+    </details>
+    <details><summary>Các con số</summary>
+      <details class="tier"><summary>Gợi ý 1</summary><p class="hint">Thứ duy nhất trong đống đồ có đánh số là lá thư.</p></details>
+      <details class="tier"><summary>Gợi ý 2</summary><p class="hint">Hai chữ số đầu là dòng, hai chữ số sau là chữ thứ mấy trong dòng đó.</p></details>
+    </details>
+    <details><summary>Tấm bìa</summary>
+      <details class="tier"><summary>Gợi ý 1</summary><p class="hint">Tám chữ lấy từ lá thư chỉ chỗ đặt tấm bìa và cách đặt.</p></details>
+      <details class="tier"><summary>Gợi ý 2</summary><p class="hint">Lật tấm bìa, đặt lên tờ thứ ba, đọc chữ qua lỗ, xoay một góc vuông, đọc tiếp. Câu đọc được ở tờ thứ nhất và tờ thứ hai là bẫy.</p></details>
+    </details>
+    <details><summary>Hòm sắt</summary>
+      <details class="tier"><summary>Gợi ý 1</summary><p class="hint">Câu đọc qua tấm bìa nói mã là năm nào. Ai là "anh cả"?</p></details>
+      <details class="tier"><summary>Gợi ý 2</summary><p class="hint">Năm ghi trên giấy báo tử, không phải năm anh hy sinh hay năm sổ ghi mất tích.</p></details>
+      <details class="tier"><summary>Lời giải</summary><p class="hint">1 9 7 5.</p></details>
+    </details>
   </section>
 </main>
 <script type="module">
   import { blocks, grille, lockbox } from "./js/puzzles.js";
-  // Configs computed by a script (each puzzle has exactly one solution).
-  blocks(document.getElementById("pz1"), { id: "demo_blocks", blocks: [
-    { name: "Khối ba cột", rows: ["OCS", "UNH", "TCA", "ATC", "UBA", "AYX"] },
-    { name: "Khối một cột", rows: ["T", "A", "S", "O", "A", "G"] },
-    { name: "Khối hai cột", mark: "chấm xám", rows: ["OI", "GS", "OM", "OP", "NS", "NG"] },
-    { name: "Khối hai cột", mark: "chấm trắng", rows: ["DU", "UN", "AC", "IH", "HO", "GA"] },
-  ] });
-  grille(document.getElementById("pz2"), { id: "demo_grille",
-    grid: ["NGIDEE", "GAPNGN", "UHNACA", "UTDUEO", "MHEMAN", "LOUXCG"],
-    holes: [[5, 5], [1, 5], [3, 0], [1, 0], [1, 1], [1, 2], [3, 5], [2, 1], [2, 3]] });
-  const AZ = "ABCDEFGHIKLMNOPQRSTUVXY".split("");
-  lockbox(document.getElementById("pz3"), { id: "demo_lock", rings: [AZ, AZ, AZ, AZ], content: "KKpdBnUkK2FX9ZyZCU6FNfU9Ls5/67vU1rbVR2Miuvh2alni3ynUUZ/r+vxIZIgZWUI4xVPx/nPFZbnJdodVJHE2d0tiO/tX6uXNFkErKYaaV2fpbNlBuR1+CgAr7c8HopMsDNPVwIpW+xqW3Sa3QECnaaQxseLYvYQKU96LtoMQTudUctJzRERvIZanTYFJLVnuQJ2ibi3xGFDO2/Gu7odfgY8oPL1GjxRn1D6lupojNz/CGoBhzQ==" });
+  import { LETTER, STICKS, HOLES, PAGES, SEALED } from "./demo/data.js";
+  const DIG = "0123456789".split("");
+  lockbox(document.getElementById("hom"), { id: "demo_hom", rings: [DIG, DIG, DIG, DIG], content: SEALED });
+  grille(document.getElementById("bia"), { id: "demo_bia", holes: HOLES, pages: PAGES, flip: true });
+  blocks(document.getElementById("thanh"), { id: "demo_thanh", blocks: STICKS });
+  document.getElementById("thu").innerHTML = LETTER.map((l, i) => `<div><span>${i + 1}</span>${l}</div>`).join("");
+  const CAN = ["Giáp", "Ất", "Bính", "Đinh", "Mậu", "Kỷ", "Canh", "Tân", "Nhâm", "Quý"], CHI = ["Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi", "Thân", "Dậu", "Tuất", "Hợi"];
+  const years = []; for (let y = 1903; y <= 1980; y++) years.push(`<div>${y} · ${CAN[(y - 4) % 10]} ${CHI[(y - 4) % 12]}</div>`);
+  document.getElementById("lich").innerHTML = years.join("");
 </script>
 </body>
 </html>
