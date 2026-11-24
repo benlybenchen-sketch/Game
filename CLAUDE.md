@@ -25,7 +25,7 @@ Tên thư mục chỉ ghi đêm/ngày (ví dụ "Đêm thứ hai · Thứ Hai 8/
 Lời nhắn sau mỗi trọng điểm không được hé câu sau ("sáng mai tôi đi xem sổ phát tang", "ai buộc chỉ đỏ?", "bác sĩ dặn để ý bà ăn uống ra sao").
 Tên nhân vật gặp ngay từ trang đầu mà cũng là đáp án thì khai trong `META.publicNames`, kèm lý do.
 Hồ sơ 02 giữ nguyên như đã phát hành, chỉ sửa khi người dùng yêu cầu.
-Tài liệu sau khi kết thúc (luật 29, mọi hồ sơ cũ và mới): thắng thì mở toàn bộ tài liệu; thua (câu quyết định sai hay hết giờ) thì chỉ còn tài liệu đã tìm được tới lúc thua và biên bản kết thúc xấu, không mở sạch toàn bộ.
+Tài liệu sau khi kết thúc (luật 29, mọi hồ sơ cũ và mới): thắng thì mở mọi tài liệu của nhánh đã chọn; tài liệu nhánh không chọn hiện khoá 🔒, bấm vào thì hỏi có muốn chơi lại theo nhánh khác không; hồ sơ không có nhánh thì mở toàn bộ. Thua (câu quyết định sai hay hết giờ) thì chỉ còn tài liệu đã tìm được tới lúc thua và biên bản kết thúc xấu, không mở sạch toàn bộ.
 
 ## 2. Trước khi mở một hồ sơ (bắt buộc, nhất là sau mỗi đợt ảnh mới)
 `python3 -m http.server 8063` ở thư mục repo, rồi:
@@ -83,5 +83,5 @@ Thêm lỗi mới vào bảng này ngay khi gặp, kèm kiểm tra tự động 
 | Thời gian trên thẻ hồ sơ khác đồng hồ trong game | `time` = `timeLimit` phút | audit |
 | Người dùng sửa META trên GitHub, vô tình xoá dòng | Sau mỗi lần merge, đối chiếu META | rà tay khi merge (CLAUDE.md mục 5.9) |
 | Tự đặt ra luật không có (ảnh doạ "không người, không máu") | Chỉ theo luật đã ghi; hỏi lại nếu chưa rõ | rà tay |
-| Thua mà vẫn mở hết tài liệu (lộ phần chưa tìm, lộ nhánh chưa đi) | Thắng: mở toàn bộ tài liệu. Thua (chọn sai ở câu quyết định hay hết giờ): chỉ còn tài liệu đã tìm được tới lúc thua, cộng biên bản kết thúc xấu | flow_test (sau mỗi kết thúc xấu: không tài liệu nào chưa tìm được hiện ra; sau kết thúc đúng: đủ mọi tài liệu); `docVisible` trong `js/main.js` |
+| Thua mà vẫn mở hết tài liệu (lộ phần chưa tìm, lộ nhánh chưa đi) | Thắng: mở mọi tài liệu của nhánh đã chọn, nhánh kia khoá 🔒 và mời chơi lại. Thua (chọn sai ở câu quyết định hay hết giờ): chỉ còn tài liệu đã tìm được tới lúc thua, cộng biên bản kết thúc xấu | flow_test (sau mỗi kết thúc xấu: không tài liệu nào chưa tìm được hiện ra; sau kết thúc đúng: đủ tài liệu nhánh đã chọn, nhánh kia hiện khoá); `docVisible` trong `js/main.js` |
 | Nhạc mất trên iPhone (công tắc im lặng) | `navigator.audioSession` + mở khoá âm thanh | thử trên trình duyệt, xem `js/audio.js` |

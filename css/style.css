@@ -739,3 +739,5 @@ body[data-case="08"] .doc--plain > .doc--notebook { margin-top: 14px; }
 .tri { font-size: 1.35em; line-height: 1; }
 ol.ngoc { columns: 2; column-gap: 28px; font-family: var(--serif); }
 @media (max-width: 600px) { ol.ngoc { columns: 1; } }
+.fold-item--locked { opacity: .55; }
+.fold-item--locked .lbl { font-style: normal; }

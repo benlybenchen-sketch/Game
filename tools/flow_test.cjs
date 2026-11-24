@@ -21,7 +21,9 @@ let bad = 0; const ok = (what, cond, extra = "") => { if (!cond) bad++; console.
       failDocs: C.DOCS.filter((d) => d.fail).map((d) => ({ id: d.id, fail: d.fail })), secretDocs: C.DOCS.filter((d) => d.secret).map((d) => d.id),
       locks: Object.keys(S.locks || {}), media: Object.keys(C.MEDIA || {}), hintCost: C.META.hintCost || null,
       all: C.DOCS.filter((d) => !d.fail).map((d) => d.id),
-      hidden: C.DOCS.filter((d) => !d.fail && !d.secret && (d.branch || d.via || d.needs || (C.META.map && d.place && d.place !== C.META.map.home))).map((d) => d.id) };
+      otherRoute: C.QUESTIONS.some((q) => q.branch) ? C.DOCS.filter((d) => d.branch === "A").map((d) => d.id) : [],
+      branched: C.QUESTIONS.some((q) => q.branch),
+      hidden: C.DOCS.filter((d) => !d.fail && !d.secret && (d.branch === "A" || d.via || d.needs || (C.META.map && d.place && d.place !== C.META.map.home))).map((d) => d.id) };
   }, CASE);
   const seed = async (st) => { await p.evaluate(([k, st]) => { localStorage.setItem(k, JSON.stringify(st)); }, [key, st]); await p.reload(); await p.waitForTimeout(500); await p.click('[data-cv="go"]'); await p.waitForTimeout(500); if (await p.isVisible("input[data-sign]")) { await p.fill("input[data-sign]", "Thử"); await p.click('[data-dlg="ok"]'); await p.waitForTimeout(300); } };
   const base = { started: true, signed: true, player: "Thử", stage: 0, resp: {}, tries: {}, hints: {}, peeked: {}, seen: {}, endings: [], timeLeft: 9000 };
@@ -91,7 +93,7 @@ let bad = 0; const ok = (what, cond, extra = "") => { if (!cond) bad++; console.
   for (const o of opts) {
     await p.goto(URL); await p.waitForTimeout(300);
     const r = o == null ? right(last) : { [last.parts.find((x) => x.type === "choice").id]: o };
-    await seed({ ...base, stage: li, resp: { [last.id]: r } });
+    await seed({ ...base, stage: li, resp: { [last.id]: r }, ...(info.branched ? { branch: "B" } : {}) });
     await p.click('.q-card.open [data-act="submit"]'); await p.waitForTimeout(400);
     if (last.fatal) { await p.click('[data-dlg="ok"]'); await p.waitForTimeout(400); }
     await p.waitForTimeout(9000);
@@ -104,8 +106,15 @@ let bad = 0; const ok = (what, cond, extra = "") => { if (!cond) bad++; console.
       if (hidden) ok(`${label}: hidden ending unlocked on a flawless run`, (st.endings || []).includes(hidden));
       const shown = await p.evaluate(() => [...document.querySelectorAll("[data-doc]")].map((x) => x.dataset.doc));
       for (const d of info.secretDocs) ok(`${label}: secret doc ${d} shown`, shown.includes(d));
-      const missing = info.all.filter((d) => !shown.includes(d));
-      ok(`${label}: every document is open after winning`, missing.length === 0, missing.slice(0, 5).join(","));
+      const missing = info.all.filter((d) => !shown.includes(d) && !info.otherRoute.includes(d));
+      ok(`${label}: every document of the route taken is open after winning`, missing.length === 0, missing.slice(0, 5).join(","));
+      if (info.otherRoute.length) {
+        const locked = await p.evaluate(() => [...document.querySelectorAll("[data-locked]")].map((x) => x.dataset.locked));
+        ok(`${label}: documents of the other route are shown locked`, info.otherRoute.every((d) => locked.includes(d)) && !info.otherRoute.some((d) => shown.includes(d)));
+        await p.click(`[data-locked="${info.otherRoute[0]}"]`); await p.waitForTimeout(300);
+        ok(`${label}: a locked document offers to play the other route`, /nhánh khác/.test(await p.textContent("#dialog").catch(() => "")));
+        await p.click('[data-dlg="no"]').catch(() => {}); await p.waitForTimeout(200);
+      }
     } else {
       const want = info.routes[o];
       ok(`${label}: run failed`, !!st.failed);

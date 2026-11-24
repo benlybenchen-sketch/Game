@@ -117,14 +117,16 @@ const over = () => finished() || !!state.failed;
  *  d.via    (an id)    only after that cross-examination was won (state.confronted);
  *  d.needs  (an id)    only once that puzzle widget was opened (state.puzzles[id].code).
  */
-// A won case shows every document (both routes too); a lost run (wrong last choice, or the clock ran out) keeps only what the
-// player had found when it was lost, plus the report of that ending (d.fail).
+// Rule 29. A won case shows every document of the route the player took (places not visited and cross-examinations not
+// won included); the documents of the other route stay locked so the case can be played again the other way. A lost run
+// (wrong last choice, or the clock ran out) keeps only what the player had found, plus the report of that ending (d.fail).
 const won = () => finished() && !state.failed && !state.timeout;
+const otherRoute = (d) => !!(d.branch && state.branch && d.branch !== state.branch);
 function docVisible(d) {
   if (d.fail) return failShows(d);
   if (d.secret) return finished() && flawless();
   if (d.stage > state.stage) return false;
-  if (won()) return true;
+  if (won()) return !otherRoute(d);
   if (d.branch && state.branch !== d.branch) return false;
   if (d.via && !state.confronted?.[d.via]) return false;
   if (d.needs && !state.puzzles?.[d.needs]?.code) return false;
@@ -132,6 +134,8 @@ function docVisible(d) {
   return true;
 }
 const visibleDocs = () => DOCS.filter(docVisible);
+/** Documents shown with a lock after a win: those of the route not taken. */
+const lockedDocs = () => (won() ? DOCS.filter((d) => !d.fail && !d.secret && d.stage <= state.stage && otherRoute(d)) : []);
 
 // ---------------------------------------------------------------- endings (cases with several routes: META.endings)
 /** Records an ending as reached; endings survive "play again". */
@@ -321,10 +325,12 @@ function renderTop() {
 function renderFolder() {
   const pins = currentQ() ? resp(currentQ().id).pins || [] : [];
   const groups = new Map();
-  for (const d of visibleDocs()) { if (!groups.has(d.stage)) groups.set(d.stage, []); groups.get(d.stage).push(d); }
-  $("#folder").innerHTML = `<h2>Hồ sơ</h2>` + [...groups.entries()].map(([s, docs]) => `
+  const locked = new Set(lockedDocs().map((d) => d.id));
+  for (const d of DOCS.filter((d) => docVisible(d) || locked.has(d.id))) { if (!groups.has(d.stage)) groups.set(d.stage, []); groups.get(d.stage).push(d); }
+  $("#folder").innerHTML = `<h2>Hồ sơ</h2>` + [...groups.entries()].sort((a, b) => a[0] - b[0]).map(([s, docs]) => `
     <div class="fold"><div class="fold-name">${FOLDERS[s]}</div>
-      ${docs.map((d) => `<button class="fold-item ${state.lastDoc === d.id ? "cur" : ""}" data-doc="${d.id}">
+      ${docs.map((d) => locked.has(d.id) ? `<button class="fold-item fold-item--locked" data-locked="${d.id}" title="Tài liệu của nhánh bạn chưa đi">
+        <span class="ico">🔒</span><span class="lbl">${d.label}</span></button>` : `<button class="fold-item ${state.lastDoc === d.id ? "cur" : ""}" data-doc="${d.id}">
         <span class="ico">${d.icon}</span><span class="lbl">${d.label}</span>
         ${!state.seen[d.id] ? '<span class="badge">mới</span>' : ""}${pins.includes(d.id) ? '<span class="pin">📌</span>' : ""}
       </button>`).join("")}
@@ -691,6 +697,9 @@ function bindChrome() {
     if (kc && kc.dataset.case && document.body.dataset.screen === "home") { ctx(); openCase(kc.dataset.case); return; }
     const set = t.closest("[data-set]"); if (set) { ctx(); applySetting(set.dataset.set, Number(set.dataset.v)); return; }
     const doc = t.closest("[data-doc]"); if (doc) return openDoc(doc.dataset.doc);
+    const lk = t.closest("[data-locked]");
+    if (lk) return dialog(`<h3>🔒 Tài liệu bị khoá</h3><p>“${esc(byId.get(lk.dataset.locked)?.label || "")}” thuộc nhánh bạn chưa đi trong lượt này.</p><p>Bạn có muốn chơi lại từ đầu và chọn nhánh khác để mở nó không? Kết thúc đã mở và hạng cao nhất vẫn được giữ.</p>`,
+      "Chơi lại theo nhánh khác", () => { resetAll(); setLevel(0, { quiet: true }); document.querySelector(".ghost-note").innerHTML = ""; showCover(); }, "Để sau");
     const go = t.closest("[data-goto]"); if (go) return openDoc(go.dataset.goto);
     const pin = t.closest("[data-pin]"); if (pin) return togglePin(pin.dataset.pin);
     const un = t.closest("[data-unpin]"); if (un) return togglePin(un.dataset.unpin);
