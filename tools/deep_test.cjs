@@ -104,6 +104,17 @@ let bad = 0; const ok = (what, cond, extra = "") => { if (!cond) bad++; console.
       ok("08 phone: no page errors", perr.length === 0, perr.join("; "));
       await ph.close();
     }
+    // music: plays on the cover and the desk, stops on the case list
+    await p.goto(U); await p.waitForTimeout(400); await p.click('[data-cv="go"]').catch(() => {}); await p.waitForTimeout(800);
+    const inCase = await p.evaluate(() => window.__hdn.ambState());
+    await p.evaluate(() => document.querySelector('[data-top="cover"]')?.click()); await p.waitForTimeout(300);
+    await p.click('[data-cv="home"]'); await p.waitForTimeout(500);
+    const onHome = await p.evaluate(() => window.__hdn.ambState());
+    ok("music plays inside the case", inCase.on && inCase.style !== "none", JSON.stringify(inCase));
+    ok("no music on the case list", onHome.style === "none" && !onHome.on, JSON.stringify(onHome));
+    await p.click(`.case-card[data-case="${c === "08" ? "07" : c}"]`).catch(() => {}); await p.waitForTimeout(500);
+    const back = await p.evaluate(() => window.__hdn.ambState());
+    ok("music comes back when a case is opened again", back.style !== "none", JSON.stringify(back));
     ok(`${c}: no page errors`, errs.length === 0, [...new Set(errs)].join("; "));
     await p.close();
   }

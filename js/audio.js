@@ -226,7 +226,8 @@ export const sfx = {
 };
 
 // ---------- ambience ----------
-/** Picks the background of the open case: "rain" (default: rain + low drone) or "ghostWedding" (case 06). */
+/** Picks the background of the open case: "rain" (default: rain + low drone), "ghostWedding" (case 06), "file:<url>"
+ * (a case's own music) or "none" (the case list: no music at all). */
 export function setAmbience(style = "rain", fallback = "rain") {
   amb.fallback = fallback;
   if (amb.style === style) return;
@@ -234,6 +235,7 @@ export function setAmbience(style = "rain", fallback = "rain") {
   if (amb.on) {
     (amb.nodes?.all || []).forEach((n) => { try { n.stop(); } catch { /* already stopped */ } });
     amb.timers.forEach(clearTimeout); amb.timers = [];
+    try { amb.nodes?.out?.gain?.cancelScheduledValues(0); } catch { /* no gain */ }
     amb.nodes?.out?.disconnect();
     amb.on = false; amb.nodes = null;
   }
@@ -244,6 +246,7 @@ export function setAmbience(style = "rain", fallback = "rain") {
 export function ambience(level) {
   amb.level = level;
   if (!ac || !ctx()) return;          // wait for the first click (browser autoplay rules)
+  if (amb.style === "none") return;   // the case list: silence
   if (amb.style?.startsWith("file:")) return musicFile(amb.style.slice(5), level);
   if (amb.style === "ghostWedding") return ghostWedding(level);
   if (!amb.on) {
@@ -502,6 +505,8 @@ export function tapeOut() {
 }
 
 export const now = () => (ac ? ac.currentTime : 0);
+/** For tests: what background is playing ("none" on the case list) and whether its nodes are live. */
+export const ambState = () => ({ style: amb.style || null, on: !!amb.on });
 
 /**
  * Plays Morse code ("-.. / .") as knocks: a dot is one tap, a dash a tap and a drag. kind "heel" | "cup".

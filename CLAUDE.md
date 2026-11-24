@@ -84,4 +84,5 @@ Thêm lỗi mới vào bảng này ngay khi gặp, kèm kiểm tra tự động 
 | Người dùng sửa META trên GitHub, vô tình xoá dòng | Sau mỗi lần merge, đối chiếu META | rà tay khi merge (CLAUDE.md mục 5.9) |
 | Tự đặt ra luật không có (ảnh doạ "không người, không máu") | Chỉ theo luật đã ghi; hỏi lại nếu chưa rõ | rà tay |
 | Thua mà vẫn mở hết tài liệu (lộ phần chưa tìm, lộ nhánh chưa đi) | Thắng: mở mọi tài liệu của nhánh đã chọn, nhánh kia khoá 🔒 và mời chơi lại. Thua (chọn sai ở câu quyết định hay hết giờ): chỉ còn tài liệu đã tìm được tới lúc thua, cộng biên bản kết thúc xấu | flow_test (sau mỗi kết thúc xấu: không tài liệu nào chưa tìm được hiện ra; sau kết thúc đúng: đủ tài liệu nhánh đã chọn, nhánh kia hiện khoá); `docVisible` trong `js/main.js` |
+| Ra màn chọn hồ sơ mà nhạc của hồ sơ vừa mở vẫn chạy (phải F5 mới tắt) | Màn chọn hồ sơ im lặng hoàn toàn; vào hồ sơ thì nhạc của hồ sơ ấy chạy lại | deep_test (nhạc chạy trong hồ sơ, tắt ở màn chọn, chạy lại khi mở hồ sơ), mọi hồ sơ |
 | Nhạc mất trên iPhone (công tắc im lặng) | `navigator.audioSession` + mở khoá âm thanh | thử trên trình duyệt, xem `js/audio.js` |

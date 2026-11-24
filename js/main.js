@@ -5,7 +5,7 @@ import { C, loadCase, CASE_ID, base } from "./case.js";
 import { CASES } from "../cases/list.js";
 import { decode, checkQuestion } from "./answer.js";
 import { mountMedia } from "./media.js";
-import { ctx, sfx, setSound, ambience, setAmbience } from "./audio.js";
+import { ctx, sfx, setSound, ambience, setAmbience, hush, ambState } from "./audio.js";
 import { setLevel, level, jumpScare } from "./dread.js";
 
 // Data of the open case (set by openCase).
@@ -191,6 +191,7 @@ async function openCase(id) {
 // ---------------------------------------------------------------- case list
 function showHome() {
   cleanupMedia();
+  setAmbience("none"); hush(); setLevel(0, { quiet: true });   // the case list is silent: no case music, no dread sounds
   document.body.dataset.screen = "home";
   document.body.dataset.case = "";
   document.title = "Hồ sơ Nửa Đêm";
@@ -772,6 +773,6 @@ function onField(e) {
 }
 
 // expose for the smoke test only
-window.__hdn = { state };
+window.__hdn = { state, ambState };
 
 boot();
