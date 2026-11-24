@@ -1,6 +1,6 @@
 // Case 07, day 3 (Peret II, 18): the scribal school's model signs, Hay's practice book (with his picture
 // alphabet on the last page), letters to the dead on bowls from many houses, and three "answers from Hay".
-import { hand } from "../../js/kit.js";
+import { hand, pic } from "../../js/kit.js";
 import { gom } from "./docs0.js";
 import { SIGNS, sign, WRITERS, strip, hn } from "./egypt.js";
 import { AMENEMOPE } from "./media.js";
@@ -70,7 +70,7 @@ export default [
 
   {
     id: "loi_nebet", stage: 2, kind: "Lời kể", icon: "✍", label: "Vợ góa của Hay nói ở nhà nguyện",
-    html: () => `<div class="doc doc--memo">${hand(`
+    html: () => `<div class="doc doc--memo">${pic("bat_thu", "Bàn cúng trong nhà nguyện, tối 16.")}${hand(`
       <p>“Tôi biết chữ. Anh Hay dạy tôi từ hồi mới cưới.”</p>
       <p>“Thư trả lời à? Anh ấy về thì anh ấy viết. Bà hỏi làm gì.”</p>
       <p>“Người lấy lừa ấy ghét anh tôi. Tượng thần đã nghiêng về ông ta rồi.”</p>

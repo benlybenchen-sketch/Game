@@ -76,7 +76,7 @@ export default [
         <p>${ln("on_thach", "“Thằng Thạch? Nó đi làm đêm Thất tịch, rồi không về. Chắc nó cũng bỏ tôi mà đi như mẹ nó. Mẹ nó chết năm Dân Quốc thứ mười chín, ba năm tang tôi để đủ rồi.”")}</p>
         <p>${ln("on_tay", "“Thằng ấy theo nghề tôi từ năm mười hai tuổi. Bàn tay nó cứng như đế giày.”")}</p>
         <p>${ln("on_chi", "“Sáng Thất tịch con bé Tú Nương còn chạy về nhà, ngồi buộc buộc cái gì vào tay anh nó. Trò con gái. Tôi chửi, nó không nghe.”")}</p>
-        <p>“Mẹ chúng nó chết năm Dân Quốc 19. Tôi chẳng để tang ai được ba ngày.”</p>`)}
+        <p>“Con bé Tú Nương thì để tang mẹ đủ ngày, mãn tang từ mấy năm trước rồi.”</p>`)}
       ${pic("ben_do", "Bến đò Hoè Âm trên sông Phần. Bên kia sông là miếu Ngưu Lang.")}
     </div>`,
   },

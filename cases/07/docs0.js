@@ -80,16 +80,16 @@ export default [
 
   {
     id: "so_bac", stage: 0, kind: "Sổ sách", icon: "🕯", label: "Sổ cấp bấc đèn cho lều trên đèo, đêm 12–14",
-    html: () => gom(`<p class="small">Mỗi chiều người giữ lều phát bấc; sáng hôm sau thợ trả lại phần bấc chưa cháy.</p>
+    html: () => `<div class="doc doc--plain">${pic("leu_deo", "Dãy lều trên đèo lúc nửa đêm, nhìn từ trạm gác.")}${gom(`<p class="small">Mỗi chiều người giữ lều phát bấc; sáng hôm sau thợ trả lại phần bấc chưa cháy.</p>
       ${[12, 13, 14].map((n) => `<h4>Đêm ${n}</h4><table class="tbl">
         <tr><th>Lều</th><th>Phát</th><th>Sáng ra trả lại</th></tr>
         ${HUTS.map((h) => { const [i, r] = WICKS[n][h]; return `<tr><td>${h}</td><td>${i ? `${WORDS[i]} bấc` : "không phát"}</td><td>${i ? quarters(r) : "—"}</td></tr>`; }).join("")}
-      </table>`).join("")}`, "Ông Ptahmose, người giữ lều trên đèo, đọc cho bà ghi."),
+      </table>`).join("")}`, "Ông Ptahmose, người giữ lều trên đèo, đọc cho bà ghi.")}</div>`,
   },
 
   {
     id: "loi_khonsu", stage: 0, kind: "Lời kể", icon: "✍", label: "Khonsu, người giữ cổng làng, nói chuyện khi mở cổng",
-    html: () => `<div class="doc doc--memo">${hand(`
+    html: () => `<div class="doc doc--memo">${pic("cong_lang", "Cổng làng lúc rạng sáng, ngày 16.")}${hand(`
       <p>“Bà vào đi. Cổng này tôi giữ mười hai năm rồi. Sáng mở, tối đóng, lúa về thì đong, thư thì đưa.”</p>
       <p>“Lúa trễ mười tám ngày rồi bà ạ. Kho đền bên sông cứ bảo tuần sau. Tuần nào cũng tuần sau.”</p>
       <p>“Trên đèo ông Ptahmose già rồi, đêm nào cũng kêu thợ xin thêm bấc. Một bấc cháy đúng bốn giờ, thắp từ chạng vạng, ai thức khuya thì xin hai. Thắp làm gì cho phí.”</p>

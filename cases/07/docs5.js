@@ -66,11 +66,11 @@ export default [
 
   {
     id: "so_kho_ben", stage: 5, kind: "Sổ sách", icon: "📓", label: "Sổ giao lúa của kho bến cho làng Lăng",
-    html: () => gom(hand(`<p>Akhet III: giao đủ. Người nhận: người cổng làng Lăng. Đếm bao, buộc thẻ, ký nhận.</p>
+    html: () => `<div class="doc doc--plain">${pic("kho_ben", "Kho lúa ở bến sông, chiều 21.")}${gom(hand(`<p>Akhet III: giao đủ. Người nhận: người cổng làng Lăng. Đếm bao, buộc thẻ, ký nhận.</p>
       <p>Akhet IV: giao đủ. Người nhận: người cổng làng. Thuyền đến muộn một ngày.</p>
       <p>Peret I: giao đủ. Người nhận: người cổng làng, đi cùng thợ trẻ Tjay.</p>
       <p>Lúa riêng của người giữ cổng và người giữ lều lĩnh tại kho, đong bằng đấu kho.</p>
-      <p>Ấn kho bến đóng lên miệng bao trước khi chở. Người nhận được giữ ấn để niêm lại bao rách dọc đường.</p>`), "Ký lục kho bến chép cho bà, sáng 21."),
+      <p>Ấn kho bến đóng lên miệng bao trước khi chở. Người nhận được giữ ấn để niêm lại bao rách dọc đường.</p>`), "Ký lục kho bến chép cho bà, sáng 21.")}</div>`,
   },
 
   {

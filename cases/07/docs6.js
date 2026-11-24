@@ -28,10 +28,10 @@ export default [
   // ---- after the choice (stage 7): the true ending and the others
   {
     id: "bb_cuoi", stage: 7, kind: "Biên bản", icon: "⚖", label: "Văn phòng tể tướng xử ở đền phía Tây, ngày 23",
-    html: () => gom(hand(`<p>Cái đấu của cổng làng Lăng, niêm bằng ấn nhà nguyện, mở trước tể tướng. Lòng đấu lót một lớp vữa vôi dày một finger. Đong nước: ba mươi bảy chén hin rưỡi, thiếu một phần mười sáu.</p>
-      <p>Mảnh gốm của thợ vẽ Hay, sổ của thầy bắt rắn Hori, thẻ bao lúa ở kho bến và thư trả lời số ba ở nhà nguyện cùng một nét tay.</p>
+    html: () => `<div class="doc doc--plain">${gom(hand(`<p>Cái đấu của cổng làng Lăng, niêm bằng ấn nhà nguyện, mở trước tể tướng. Lòng đấu lót một lớp vữa vôi dày một finger. Đong nước: ba mươi bảy chén hin rưỡi, thiếu một phần mười sáu.</p>
+      <p>Mảnh gốm của thợ vẽ Hay và sổ của thầy bắt rắn Hori được trình lên. Thẻ bao lúa ở kho bến và thư trả lời số ba ở nhà nguyện cùng một nét tay.</p>
       <p>Người giữ cổng Khonsu nhận. Ba tháng lấy hai mươi tám khar và nửa hekat lúa, em trai đem đổi ở chợ bờ Đông. Hay đong lại lương nhà mình, hỏi Khonsu ở cổng; đêm 14 Khonsu mang ấn lên đèo, theo Hay vào hành lang C. Userhat cộng sổ thấy khớp mà nhà nào cũng đói; Khonsu đặt con rắn mua ngày 17 vào hộp bút.</p>
-      <p>Lúa của làng về ngày 24. Thợ lên Lăng ngày 25.</p>`)),
+      <p>Lúa của làng về ngày 24. Thợ lên Lăng ngày 25.</p>`))}${pic("lang_sang", "Cổng làng, sáng 24.")}</div>`,
   },
   {
     id: "bb_xau", stage: 8, fail: ["ba_ran", "im_lang", "mot_nua"], kind: "Biên bản", icon: "⚖", label: "Văn phòng tể tướng xử ở đền phía Tây, ngày 23 (bản khác)",

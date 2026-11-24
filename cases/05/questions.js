@@ -112,7 +112,7 @@ export const QUESTIONS = [
     ask: "Đêm Ngân chọn là đêm nào trên lịch bloc năm 1991? Khoanh tờ lịch đó. Nếu chỉ thu than ở gian giữa thì còn bao nhiêu than trong nhà, nằm ở đâu, và Ngân vào đó bằng lối nào?",
     parts: [
       { id: "ngay", type: "spot", label: "Tờ lịch của đêm Ngân chọn", doc: "lich", how: "Mở lịch bloc, lật tới tờ cần tìm rồi bấm “Khoanh tờ này”." },
-      { id: "ke", type: "choice", label: "Theo tờ giấy trong hộp sắt, đêm nay Ngân định", options: ["Cả nhà ngủ cùng mẹ trong buồng", "Đưa bố lên trạm cho mẹ ở nhà", "Mở cửa buồng cho mẹ ra ngoài", "Trả lại than cho hàng than chợ"] },
+      { id: "ke", type: "choice", label: "Theo tờ giấy trong hộp sắt, phần than của Ngân đang ở đâu", options: ["Trong bao mười cân ở gian giữa", "Trong buồng của mẹ", "Dưới gầm chạn bát trong bếp", "Ngân đã trả lại hàng than"] },
       { id: "than2", type: "number", label: "Số cân than trong nhà ông Khải mà cán bộ không thể thu nếu không mở buồng", unit: "cân" },
       { id: "loi", type: "choice", label: "Lối Ngân vào buồng trong mà không bóc băng keo", options: ["Qua cửa sổ gian giữa, gỡ một song gỗ", "Qua cửa ngách sau chạn bát trong bếp", "Qua lỗ thông gió trên mái, bằng thang tre", "Qua buồng tối rửa ảnh, có vách thông sang", "Ngân không vào được, chỉ đứng ngoài cửa"] },
     ],

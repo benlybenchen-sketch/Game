@@ -66,8 +66,8 @@ export default [
     <div class="doc doc--memo">
       <p class="note">Y tá Sương ghi lại khi về thăm nhà Thảo theo lời nhờ của bác sĩ Vân.</p>
       ${hand(`<p>Bà Tư, nhà sát vách: ${ln("bt_sua", "“Từ hôm chị Hoa ở Sài Gòn về, con Mực sủa chỉ suốt, gầm gừ, không cho lại gần. Con chó đó theo chỉ mười năm, chỉ đi đâu nó theo đó.”")}</p>
-        <p>${ln("bt_ba", "“Hồi tháng Bảy nhà tui có rải bả chuột ngoài vườn, mà tui dọn sạch từ bữa mười lăm tháng Bảy rồi, con Mực không có qua vườn tui.”")}</p>
-        <p>${ln("bt_thit", "“Tối mồng tám tháng Tám tui thấy chỉ ra sau hè, ngồi chồm hổm chỗ con Mực nằm một hồi lâu. Sáng ra nó chết, ói bọt trắng.”")}</p>
+        <p>${ln("bt_ba", "“Hồi tháng Bảy nhà tui có rải bả chuột ngoài vườn, mà tui dọn sạch từ bữa mười lăm tây tháng Bảy rồi, con Mực không có qua vườn tui.”")}</p>
+        <p>${ln("bt_thit", "“Tối mùng tám tây tháng Tám tui thấy chỉ ra sau hè, ngồi chồm hổm chỗ con Mực nằm một hồi lâu. Sáng ra nó chết, ói bọt trắng.”")}</p>
         <p>“Tết nào chỉ cũng làm một mâm bánh ít nhân tôm chấy biếu xóm: tôm khô giã tơi, rang khô, màu hồng cam, ăn mằn mặn. Chỉ làm chứ chỉ không đụng miếng nào.”</p>
         <p>“Chỉ về rồi chỉ nói chuyện lạ lắm, có bữa chỉ gọi tui là ‘chị Tư’, trước giờ chỉ kêu tui là ‘o Tư’.”</p>`, "")}
       ${pic("cho_muc", "Ảnh bà Tư chụp sáng 9/8/1996.")}

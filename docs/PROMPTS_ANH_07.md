@@ -82,9 +82,9 @@ Aspect ratio 4:3. Realistic film photograph at night by the light of a nearly bu
 ```
 
 ### 09. `leu_deo.jpg` (dãy lều thợ trên đèo lúc nửa đêm)
-**Kiểm tra:** dãy lều đá thấp trên yên ngựa núi; vài cửa có ánh đèn, phần lớn tối; trời sao; xa xa là khe Thung lũng các Vua chìm trong bóng tối.
+**Kiểm tra:** dãy lều đá thấp trên yên ngựa núi; phần lớn cửa có ánh đèn, chỉ một hai lều tối; trời sao; xa xa là khe Thung lũng các Vua chìm trong bóng tối.
 ```
-Aspect ratio 16:9. Realistic film photograph at midnight on a high rocky mountain pass above the Valley of the Kings, ancient Egypt around 1150 BC. A row of about twenty small low stone huts built of rough limestone blocks, without roofs or with reed mat roofs, strung along a narrow saddle of the ridge. Only three or four doorways show the warm orange glow of a small oil lamp; the rest are completely dark. A narrow path winds down into the black valley below. Sky full of stars, thin crescent moon, cold blue light on the rocks. No people visible, no text, no watermark.
+Aspect ratio 16:9. Realistic film photograph at midnight on a high rocky mountain pass above the Valley of the Kings, ancient Egypt around 1150 BC. A row of about twenty small low stone huts built of rough limestone blocks, without roofs or with reed mat roofs, strung along a narrow saddle of the ridge. Most doorways show the warm orange glow of a small oil lamp; only one or two are completely dark. A narrow path winds down into the black valley below. Sky full of stars, thin crescent moon, cold blue light on the rocks. No people visible, no text, no watermark.
 ```
 
 ### 10. `gio_ran.jpg` (sân nhà thầy bắt rắn)
@@ -112,7 +112,7 @@ Aspect ratio 4:3. Realistic film photograph on a reed mat on the earthen floor o
 ```
 
 ### 14. `lang_sang.jpg` (kết thúc đúng: buổi sáng sau cùng)
-**Kiểm tra:** cổng làng mở; cái đấu trên ghế gạch được buộc dây và niêm cục đất sét; nắng sớm. Không người.
+**Kiểm tra:** cổng làng mở; hai con lừa chở bao lúa đi vào; ghế gạch cạnh cổng trống trơn (cái đấu cũ đã bị mang đi); nắng sớm. Không thấy mặt người.
 ```
-Aspect ratio 16:9. Realistic film photograph at sunrise at the open gate of an ancient Egyptian walled workmen's village, around 1150 BC. On the mud-brick bench by the gate stands the low round wooden grain measure, now tied across with cord and closed with a lump of grey clay pressed with a seal impression, the impression blurred. Golden first light floods the dirt street, a few birds, smoke rising from one chimney-less roof. Peaceful but melancholic. No people, no readable text, no watermark.
+Aspect ratio 16:9. Realistic film photograph at sunrise at the open gate of an ancient Egyptian walled workmen's village, around 1150 BC. The low thick wooden door stands wide open in the whitewashed mud-brick wall. Two grey donkeys loaded with full coarse woven sacks of grain walk in through the gate along the dirt street, seen from behind. Beside the gate, the mud-brick bench is empty: only a pale round mark in the dust where a grain measure used to stand. Golden first light, long shadows, a few birds, thin smoke rising inside the village. Peaceful but melancholic. No faces visible, no readable text, no watermark.
 ```
