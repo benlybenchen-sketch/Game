@@ -179,5 +179,12 @@ if (Number(id) >= 8) {
     const sq = S[q.id]; if (sq) for (const h of [...(sq.hints || []), sq.solution]) if (/undefined|NaN|\$\{/.test(String(h))) bad(`${q.id} hint or solution shows undefined`);
   }
   if (C.META.music && !existsSync(new URL(`../audio/${id}/${C.META.music}`, import.meta.url))) bad(`music file audio/${id}/${C.META.music} is missing`);
+  // A fragmented MP4 (brand "dash", moof boxes; typical of downloaded files) plays in Chrome but Safari, iPhone and
+  // Firefox cannot decode it, so the game falls back to the synthesized ambience. Remux: ffmpeg -i in -c copy -movflags +faststart out
+  if (C.META.music && /\.(m4a|mp4|aac)$/i.test(C.META.music) && existsSync(new URL(`../audio/${id}/${C.META.music}`, import.meta.url))) {
+    const d = readFileSync(new URL(`../audio/${id}/${C.META.music}`, import.meta.url)); const top = [];
+    for (let i = 0; i + 8 <= d.length && top.length < 50;) { const n = d.readUInt32BE(i); top.push(d.toString("latin1", i + 4, i + 8)); if (n < 8) break; i += n; }
+    if (top.includes("moof") || d.toString("latin1", 8, 12) === "dash") bad(`music file audio/${id}/${C.META.music} is a fragmented MP4 (Safari and iPhone cannot play it); remux with ffmpeg -c copy -movflags +faststart`);
+  }
 }
 console.log(problems.length ? problems.map((p) => "  ! " + p).join("\n") : "  ok");
