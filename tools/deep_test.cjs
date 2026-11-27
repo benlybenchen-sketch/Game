@@ -126,6 +126,9 @@ let bad = 0; const ok = (what, cond, extra = "") => { if (!cond) bad++; console.
       await t.click('[data-doc="bang_dem"]').catch(() => {}); await t.waitForTimeout(600);
       if (await t.$('[data-t="speed"]')) {
         await t.click('[data-t="speed"]'); await t.click('[data-t="play"]'); await t.waitForTimeout(4000); await t.click('[data-t="play"]');
+        await t.click('[data-t="rev"]'); const revOn = await t.evaluate(() => { const b = document.querySelector('[data-t="rev"]'); return b.classList.contains("btn--on") && /Đang/.test(b.textContent); });
+        await t.click('[data-t="rev"]'); const revOff = await t.evaluate(() => { const b = document.querySelector('[data-t="rev"]'); return !b.classList.contains("btn--on") && !/Đang/.test(b.textContent); });
+        ok("05 tape: the reverse button shows when it is on", revOn && revOff);
         ok("05 tape: ×0,6 loads the slowed takes", slowReq.length > 0 && (await t.textContent('[data-t="speed"]')).includes("0,6"), slowReq.length + " slowed files");
       } else ok("05 tape: the night tape opens", false);
       ok("05 torch: no page errors", terr.length === 0, terr.join("; "));

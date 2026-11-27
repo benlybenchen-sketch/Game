@@ -275,7 +275,7 @@ function tapePlayer(el, id) {
       const k = b.dataset.t;
       if (k === "play") playing ? stop() : play();
       if (k === "start") { const was = playing; stop(); pos = 0; renderBar(); if (was) play(); }
-      if (k === "rev") { const was = playing; stop(); mode = mode === "fwd" ? "rev" : "fwd"; pos = tape.dur - pos; renderBar(); renderTranscript(); if (was) play(); }
+      if (k === "rev") { const was = playing; stop(); mode = mode === "fwd" ? "rev" : "fwd"; pos = tape.dur - pos; b.classList.toggle("btn--on", mode === "rev"); b.textContent = mode === "rev" ? "⇄ Đang tua ngược" : "⇄ Tua ngược"; renderBar(); renderTranscript(); if (was) play(); }
       if (k === "speed") { const was = playing; stop(); const sp = tape.slow ? [1, 0.6, 1.5, 2] : [1, 1.5, 2]; speed = sp[(sp.indexOf(speed) + 1) % sp.length]; b.textContent = `×${String(speed).replace(".", ",")}`; if (was) play(); }
       if (k === "spec") { specOn = !specOn; $(".spec-wrap").hidden = !specOn; renderBar(); }
       return;
