@@ -139,7 +139,7 @@ export default [
   },
   {
     id: "so_do_duong", stage: 0, place: "tang_kinh", kind: "Sổ đo", icon: "📐", label: "Sổ đo đường núi",
-    html: () => giay(`<p class="note">Sổ của người đo đất năm Tuyên Hoà nguyên niên, khi quán xin ruộng. Đo bằng bộ, hướng ghi theo quẻ. Có trang đo từ chòi canh trên Lôi Đài:</p>
+    html: () => giay(`<p class="note">Sổ của người đo đất năm Tuyên Hoà nguyên niên, khi quán xin ruộng. Có trang đo từ chòi canh trên Lôi Đài:</p>
       ${bang(["Tới", "Hướng", "Bộ"], SURVEY.map(([p, h, b]) => [p, h, b]))}
       <p class="note">Trang sau: từ sơn môn xuống làng Hạ Khê ba nghìn bộ, từ Hạ Khê sang Thượng Khê một nghìn hai trăm bộ, các bờ ruộng, các cột mốc.</p>`),
   },

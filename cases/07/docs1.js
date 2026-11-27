@@ -30,7 +30,7 @@ const rankOf = (n) => (n === SCRIBE ? "scribe" : n === RIGHT.foreman || n === LE
 
 export default [
   {
-    id: "vo_hoc_tro", stage: 1, kind: "Vở học trò", icon: "📒", label: "Vở bài tập của Kenna, con ký lục Userhat",
+    id: "vo_hoc_tro", stage: 1, exercise: true, kind: "Vở học trò", icon: "📒", label: "Vở bài tập của Kenna, con ký lục Userhat",
     html: () => `<div class="doc doc--gom">
       <p class="note">Mười mảnh đá vôi nhỏ buộc dây thành tập. Thằng Kenna mười một tuổi tập viết số với thầy ở nhà nguyện. Mực đen là của trò, mực đỏ là thầy sửa.</p>
       <h4>Mảnh 1</h4>

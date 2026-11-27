@@ -55,7 +55,7 @@ export default [
     id: "tran_cua", stage: 3, branch: "B", kind: "Trận", icon: "☯", label: "Chín đĩa đá trên cửa động",
     html: () => `<div class="doc doc--plain">
       ${soTay(`<p>Canh ba. Hai người gác ngồi ngủ dưới mái đá. Tôi rạch tờ niêm bằng dao, cất vào tay áo.</p>
-      <p>Chín đĩa đá, ba hàng ba. Mỗi đĩa xoay được tám nấc, mỗi nấc một quẻ. Mặt cửa quay về hướng Bắc, nhưng chạm trên khung cửa là chữ "Nam" ở trên, "Bắc" ở dưới, "Đông" bên trái, "Tây" bên phải.</p>
+      <p>Chín đĩa đá, ba hàng ba. Mỗi đĩa xoay được tám nấc, mỗi nấc một quẻ. Mặt cửa quay về hướng Bắc. Trên khung cửa chạm bốn chữ: "Nam" ở trên, "Bắc" ở dưới, "Đông" bên trái, "Tây" bên phải.</p>
       <p>Đẩy thử mà sai, các đĩa kẹt lại, phải chờ một lúc mới xoay tiếp được.</p>`)}
       ${media("tran", "door")}
     </div>`,

@@ -124,12 +124,12 @@ export const META = {
     open: "ket_do_kiep",
   },
   endings: [
-    { id: "do_kiep", good: true, name: "Độ Kiếp", how: "Không ký; tang vật được niêm bằng ấn Viện trước khi ai kịp đụng tới; ngọc giản tới tay triều đình.", hint: "Luật Tống cần một thứ mà lời nói không thay được." },
-    { id: "tien_tich", name: "Tiên tích", how: "Bạn ký. Ruộng Thượng Khê được cấp ngay.", hint: "Đọc lại lệnh cử của Viện." },
-    { id: "gioi_luat", name: "Giới luật", how: "Bạn tố người có động cơ, không phải người có mặt.", hint: "Ai ngồi chép sách cả đêm mưa?" },
-    { id: "nghia_nu", name: "Nghĩa nữ", how: "Bạn tố người dựng tiên tích là người giết.", hint: "Đêm 18 tháng Ba, tiếng khánh vẫn đủ năm canh." },
-    { id: "than_nguoi", name: "Than nguội", how: "Bạn bắt đúng người, nhưng tay không.", hint: "Tang vật không niêm thì không thành chứng." },
-    { id: "dan_doc", name: "Đan độc", how: "Bạn tin vào lò đan.", hint: "Chuột chết, hạc chết: vì đâu?" },
+    { id: "do_kiep", good: true, name: "Độ Kiếp", how: "Không ký; tang vật được niêm bằng ấn Viện trước khi ai kịp đụng tới; ngọc giản tới tay triều đình." },
+    { id: "tien_tich", name: "Tiên tích", how: "Bạn ký. Ruộng Thượng Khê được cấp ngay." },
+    { id: "gioi_luat", name: "Giới luật", how: "Bạn tố người có động cơ, không phải người có mặt." },
+    { id: "nghia_nu", name: "Nghĩa nữ", how: "Bạn tố người dựng tiên tích là người giết." },
+    { id: "than_nguoi", name: "Than nguội", how: "Bạn bắt đúng người, nhưng tay không." },
+    { id: "dan_doc", name: "Đan độc", how: "Bạn tin vào lò đan." },
     { id: "hon_dang", hidden: true, name: "Hồn đăng không tắt", how: "Đi tuyến đúng không sai lần nào, không xem gợi ý: ngồi lại đêm cuối trong Tổ sư điện.", hint: "Kết thúc ẩn. Chỉ dành cho người không sai lần nào." },
   ],
   fatal: {

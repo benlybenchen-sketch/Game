@@ -18,7 +18,7 @@ export default [
     html: () => `
     <div class="doc doc--notebook">
       ${hand(`<p>Đêm Rằm. Buồn ngủ quá. Mắt mở không lên.</p>
-        <p>Nếu tôi không dậy được, Đình nhớ lấy mấy dòng này.</p>
+        <p>Nếu tôi không dậy được, Đình nhớ giùm tôi.</p>
         <p>Tôi không dám viết thẳng. Nhà ấy có người đọc được chữ. Đình là học trò tôi, Đình giải được:</p>
         <p class="riddle">“${ln("kc_1", "Người đứng trên cây, cây tựa lưỡi rìu.")}<br>${ln("kc_2", "Dưới một cánh cửa, có một phương.")}”</p>
         <p>Hai chữ. Ghép lại là chỗ cần mở.</p>`, "shaky")}

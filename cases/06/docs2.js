@@ -29,7 +29,7 @@ export default [
         <p class="small">Người lập phiếu: ${hand("Triệu", "sign")} (chưởng quỹ) · Người đặt tiền: ${ln("hp_dat", "Tiết thị, tự đến quầy, trả bằng bạc trắng của mình")}.</p>
         ${stamp("密押<br>MẬT ÁP", "right:20px;top:18px")}
       </div>
-      <p class="note">${ln("hp_doi", "Mặt sau: dấu đã lĩnh tiền, kèm điểm chỉ của Ôn Tam, ngày mồng 9.")} Theo lệ phiếu hiệu, ngày tháng và số tiền trên hối phiếu không bao giờ viết bằng số: chỉ người giữ khoá mật áp của năm ấy mới đọc được.</p>
+      <p class="note">${ln("hp_doi", "Mặt sau: dấu đã lĩnh tiền, kèm điểm chỉ của Ôn Tam, ngày mồng 9.")}</p>
     </div>`,
   },
 

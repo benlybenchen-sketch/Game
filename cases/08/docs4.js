@@ -43,8 +43,7 @@ export default [
   {
     id: "tui_dan", stage: 4, via: "tieu_tung", kind: "Vật chứng", icon: "🟡", label: "Túi vải của hạc đồng",
     html: () => giay(`<p class="note">Túi vải xanh, trong có bảy viên tròn cỡ hạt sen, thếp vàng, nặng tay. Mỗi viên buộc một sợi chỉ đỏ với một thẻ tre nhỏ ghi tên một con hạc:</p>
-      ${hand(`<p>${CRANES_DEAD.map(([n]) => n).sort().join(" · ")}</p>`)}
-      <p class="note">Bằng mắt không phân biệt được viên nào nặng viên nào nhẹ.</p>`),
+      ${hand(`<p>${CRANES_DEAD.map(([n]) => n).sort().join(" · ")}</p>`)}`),
   },
   // ---------------------------------------------------------------- Đan phòng
   {

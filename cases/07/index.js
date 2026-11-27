@@ -88,10 +88,10 @@ export const META = {
     open: "bb_cuoi",
   },
   endings: [
-    { id: "that", good: true, name: "Thư gửi người chết", how: "Cái đấu được niêm bằng con ấn kẻ gian không chạm tới, và đến tay tể tướng nguyên vẹn.", hint: "Chỉ một con ấn trong làng không qua tay người giữ cổng." },
-    { id: "mot_nua", name: "Một nửa", how: "Có giấy tờ mà không có vật chứng. Kẻ giết người được tha.", hint: "Giấy tờ thôi chưa đủ." },
-    { id: "im_lang", name: "Người yêu sự im lặng", how: "Cái đấu bị cạo sạch trước khi tới tay tể tướng.", hint: "Niêm bằng ấn nào thì người cầm ấn ấy mở được." },
-    { id: "ba_ran", name: "Bà Rắn", how: "Kho đền bị đổ tội. Hai cái chết là thần phạt.", hint: "Đừng để vật chứng đi trong tay kẻ gian." },
+    { id: "that", good: true, name: "Thư gửi người chết", how: "Cái đấu được niêm bằng con ấn kẻ gian không chạm tới, và đến tay tể tướng nguyên vẹn." },
+    { id: "mot_nua", name: "Một nửa", how: "Có giấy tờ mà không có vật chứng. Kẻ giết người được tha." },
+    { id: "im_lang", name: "Người yêu sự im lặng", how: "Cái đấu bị cạo sạch trước khi tới tay tể tướng." },
+    { id: "ba_ran", name: "Bà Rắn", how: "Kho đền bị đổ tội. Hai cái chết là thần phạt." },
     { id: "than", hidden: true, name: "Lời của thần", how: "Đi tuyến đúng không sai lần nào, không xem gợi ý: lật lại đống gốm trong nhà nguyện.", hint: "Kết thúc ẩn. Chỉ dành cho người không sai lần nào." },
   ],
   fatal: {

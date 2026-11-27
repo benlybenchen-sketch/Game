@@ -81,9 +81,9 @@ export const META = {
     open: "bb_dong_vien",
   },
   endings: [
-    { id: "that", good: true, name: "Chân tướng", how: "Phá cửa Đông viện trước giờ Tý, giữ cô dâu bên mình. Người sống bước ra, người chết được gọi đúng tên.", hint: "Chỉ có một cách cứu được cả hai người." },
-    { id: "cuu", name: "Cứu dâu", how: "Tú Nương sống. Nhưng quan tài chôn dưới tên người khác, và “cậu Thừa An” về phủ.", hint: "Cứu được một người, để mất một người." },
-    { id: "hitang", name: "Hỉ tang", how: "Giờ Tý, rượu hợp cẩn. Hai anh em họ Ôn nằm chung một huyệt, làm vợ chồng.", hint: "Đám cưới vẫn diễn ra." },
+    { id: "that", good: true, name: "Chân tướng", how: "Phá cửa Đông viện trước giờ Tý, giữ cô dâu bên mình. Người sống bước ra, người chết được gọi đúng tên." },
+    { id: "cuu", name: "Cứu dâu", how: "Tú Nương sống. Nhưng quan tài chôn dưới tên người khác, và “cậu Thừa An” về phủ." },
+    { id: "hitang", name: "Hỉ tang", how: "Giờ Tý, rượu hợp cẩn. Hai anh em họ Ôn nằm chung một huyệt, làm vợ chồng." },
     { id: "an", hidden: true, name: "Huynh muội về nhà", how: "Đi tuyến Chân tướng không sai lần nào, không xem gợi ý: trang sổ cuối của thầy Khâu.", hint: "Kết thúc ẩn. Chỉ dành cho người không sai lần nào." },
   ],
   fatal: {

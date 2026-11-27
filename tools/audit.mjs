@@ -125,14 +125,19 @@ if (Number(id) >= 3 || id === "01") {
     if (new Set(cl).size > 1) bad(`rule 1: ${q.id} options have different numbers of clauses (${cl.join(",")})`);
   }
 }
-if (Number(id) >= 8) {
+if (Number(id) >= 6) {
   const strip = (x) => String(x ?? "").replace(/<svg[\s\S]*?<\/svg>/g, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
   // rule 7: documents never explain how to solve; the narrator never points at a line ("nét khác", "mực đậm hơn")
-  const EXPLAIN = /nghĩa là|tức là|đừng nhầm|lưu ý|ghép chữ|chữ cái đầu|chữ đầu mỗi|cách giải|cách đọc|mẹo |gợi ý|chú ý:|để ý/i;
+  const EXPLAIN = /bằng mắt (không|chẳng)|mới đọc được|phải soi|phải cân|phải đếm|nghĩa là|tức là|đừng nhầm|lưu ý|ghép chữ|chữ cái đầu|chữ đầu mỗi|cách giải|cách đọc|mẹo |gợi ý|chú ý:|để ý/i;
   const MARK = /mực (khác|đậm hơn|mới hơn|còn ướt)|nét (khác|đậm hơn)|khác mực|viết đè|tô đậm|gạch dưới|khoanh tròn|đánh dấu|dòng này/i;
   for (const d of C.DOCS) { const t = strip(htmlOf(d)); let m;
     if ((m = t.match(EXPLAIN)) && !d.exercise) bad(`rule 7: doc ${d.id} explains ("${t.slice(Math.max(0, m.index - 30), m.index + 30)}")`);
     if ((m = t.match(MARK))) bad(`rule 6: doc ${d.id} points at a line ("${t.slice(Math.max(0, m.index - 30), m.index + 30)}")`); }
+  // rule 31: nothing on screen explains or hints; an ending not yet reached shows no hint (only the hidden ending may say it is hidden)
+  for (const e of C.META.endings || []) if (e.hint && !e.hidden) bad(`rule 31: ending ${e.id} shows a hint before it is reached ("${e.hint}")`);
+}
+if (Number(id) >= 8) {
+  const strip = (x) => String(x ?? "").replace(/<svg[\s\S]*?<\/svg>/g, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
   // map, branch, cross-examination wiring (rules 26-28)
   const M = C.META, places = new Set((M.map?.places || []).map((p) => p.id).concat(M.map ? [M.map.home] : []));
   for (const d of C.DOCS) {
