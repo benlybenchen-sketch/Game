@@ -187,4 +187,14 @@ if (Number(id) >= 8) {
     if (top.includes("moof") || d.toString("latin1", 8, 12) === "dash") bad(`music file audio/${id}/${C.META.music} is a fragmented MP4 (Safari and iPhone cannot play it); remux with ffmpeg -c copy -movflags +faststart`);
   }
 }
+// Rule 30 (from case 06): an observation tool (torch, magnifier, clickable spots on a picture) does not write out what the
+// player is looking at ("Dưới đèn: hai bàn tay … không đeo nhẫn"); the player reads the picture. Flags hotspot data that carries a description.
+if (+id >= 6) {
+  const { readdirSync } = await import("node:fs");
+  const dir = new URL(`../cases/${id}/`, import.meta.url);
+  for (const f of readdirSync(dir).filter((f) => f.endsWith(".js") && f !== "secret.js")) {
+    const src = readFileSync(new URL(f, dir), "utf8");
+    for (const m of src.matchAll(/\{\s*id:\s*"([^"]+)",\s*x:\s*[\d.]+,\s*y:\s*[\d.]+[^}\n]*\b(text|label|note|desc):/g)) bad(`rule 30: spot "${m[1]}" in cases/${id}/${f} describes what the player sees (${m[2]}); let the player read the picture`);
+  }
+}
 console.log(problems.length ? problems.map((p) => "  ! " + p).join("\n") : "  ok");
