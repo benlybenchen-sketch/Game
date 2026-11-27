@@ -118,6 +118,16 @@ let bad = 0; const ok = (what, cond, extra = "") => { if (!cond) bad++; console.
       ok("05 torch: clicking the photo holds the light while the pointer goes to the button", (await t.evaluate((k) => localStorage.getItem(k), key)).includes('"nhan"'));
       await t.mouse.move(...at(80, 48), { steps: 4 });
       ok("05 torch: back on the photo, the light follows the mouse again", /Chén trà/.test(await t.textContent(".torch-under")));
+      // the night tape at ×0,6 plays the slowed takes (the whisper under the cough, the last line at the microphone)
+      const slowReq = []; t.on("request", (q) => { if (/bang_dem_\d+_slow\.mp3/.test(q.url())) slowReq.push(q.url()); });
+      await t.evaluate((k) => localStorage.setItem(k, JSON.stringify({ started: true, stage: 3, timeLeft: 9000, seen: {}, signed: true, player: "T" })), key);
+      await t.goto(U); await t.waitForTimeout(400); await t.click('[data-cv="go"]'); await t.waitForTimeout(600);
+      for (let k = 0; k < 4; k++) { const d = await t.$('#dialog:not([hidden]) [data-dlg="ok"]'); if (!d) break; await d.click(); await t.waitForTimeout(200); }
+      await t.click('[data-doc="bang_dem"]').catch(() => {}); await t.waitForTimeout(600);
+      if (await t.$('[data-t="speed"]')) {
+        await t.click('[data-t="speed"]'); await t.click('[data-t="play"]'); await t.waitForTimeout(4000); await t.click('[data-t="play"]');
+        ok("05 tape: ×0,6 loads the slowed takes", slowReq.length > 0 && (await t.textContent('[data-t="speed"]')).includes("0,6"), slowReq.length + " slowed files");
+      } else ok("05 tape: the night tape opens", false);
       ok("05 torch: no page errors", terr.length === 0, terr.join("; "));
       await t.close();
     }
