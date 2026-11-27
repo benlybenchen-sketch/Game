@@ -24,7 +24,7 @@ export default [
     id: "vo_toi", stage: 2, kind: "Ảnh", icon: "🔦", label: "Ảnh “Vợ tôi, Tết 1991” (soi đèn pin)",
     html: () => `
     <div class="doc doc--plain">
-      <p class="note">Hiệu ảnh tắt điện để tiết kiệm. Vân soi đèn pin lên tấm ảnh lồng kính. Rê chuột hoặc chạm vào ảnh để soi; khi vòng sáng rọi đúng một chi tiết, bấm “Ghi vào sổ”.</p>
+      <p class="note">Hiệu ảnh tắt điện để tiết kiệm. Vân soi đèn pin lên tấm ảnh lồng kính. Rê chuột hoặc chạm vào ảnh để soi; bấm vào ảnh để giữ đèn đứng yên ở chỗ đang rọi, rồi bấm “Ghi vào sổ”.</p>
       ${media("torch", "vo_toi")}
     </div>`,
   },

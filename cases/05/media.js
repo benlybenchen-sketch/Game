@@ -82,18 +82,19 @@ export function torch(el) {
   el.innerHTML = `
   <div class="torch">
     <div class="torch-stage">${img("vo_toi_tet_1991", photoFallback())}<div class="torch-dark"></div></div>
-    <div class="torch-ctl"><span class="torch-under">Rê chuột hoặc chạm vào ảnh để soi.</span>
+    <div class="torch-ctl"><span class="torch-under">Rê chuột hoặc chạm vào ảnh để soi. Bấm vào ảnh để giữ đèn đứng yên.</span>
       <button class="btn btn--small" data-torch="note" disabled>Ghi vào sổ</button></div>
   </div>`;
   fallbacks(el);
   const stage = el.querySelector(".torch-stage"), under = el.querySelector(".torch-under"), btn = el.querySelector('[data-torch="note"]');
-  let spot = null;
+  let spot = null, held = false;   // held: a click on the photo keeps the light still, so the pointer can go to the button
   const found = () => current("ct") || [];
   const show = (x, y) => {
     stage.style.setProperty("--x", `${x}%`); stage.style.setProperty("--y", `${y}%`);
     stage.classList.add("lit");
     spot = SPOTS.find((s) => x >= s.x && x <= s.x + s.w && y >= s.y && y <= s.y + s.h) || null;
-    under.textContent = spot ? `Dưới đèn: ${spot.text}${found().includes(spot.id) ? " (đã ghi)" : ""}` : "Dưới đèn: không có gì đặc biệt.";
+    under.textContent = (spot ? `Dưới đèn: ${spot.text}${found().includes(spot.id) ? " (đã ghi)" : ""}` : "Dưới đèn: không có gì đặc biệt.") + (held ? " · Đèn đang giữ yên." : "");
+    stage.classList.toggle("held", held);
     btn.disabled = !spot;
     btn.textContent = spot && found().includes(spot.id) ? "Bỏ khỏi sổ" : "Ghi vào sổ";
   };
@@ -101,8 +102,9 @@ export function torch(el) {
     const r = stage.getBoundingClientRect(), p = e.touches?.[0] || e;
     show(Math.max(0, Math.min(100, ((p.clientX - r.left) / r.width) * 100)), Math.max(0, Math.min(100, ((p.clientY - r.top) / r.height) * 100)));
   };
-  stage.addEventListener("pointermove", move);
-  stage.addEventListener("pointerdown", (e) => { ctx(); move(e); });
+  stage.addEventListener("pointermove", (e) => { if (!held) move(e); });
+  stage.addEventListener("pointerenter", (e) => { if (e.pointerType === "mouse") held = false; });   // coming back to the photo: the light follows the mouse again
+  stage.addEventListener("pointerdown", (e) => { ctx(); held = true; move(e); });
   btn.addEventListener("click", () => {
     if (!spot) return;
     answer("ct", spot.id, spot.text);

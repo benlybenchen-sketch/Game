@@ -104,6 +104,23 @@ let bad = 0; const ok = (what, cond, extra = "") => { if (!cond) bad++; console.
       ok("08 phone: no page errors", perr.length === 0, perr.join("; "));
       await ph.close();
     }
+    // case 05 torch: a click on the photo holds the light, so the pointer can reach "Ghi vào sổ" without the light wandering off
+    if (c === "05") {
+      const t = await b.newPage(); const terr = []; t.on("pageerror", (e) => terr.push(e.message));
+      await t.goto(U); await t.evaluate((k) => localStorage.setItem(k, JSON.stringify({ started: true, stage: 2, timeLeft: 9000, seen: {}, signed: true, player: "T" })), key);
+      await t.goto(U); await t.waitForTimeout(400); await t.click('[data-cv="go"]'); await t.waitForTimeout(600);
+      for (let k = 0; k < 4; k++) { const d = await t.$('#dialog:not([hidden]) [data-dlg="ok"]'); if (!d) break; await d.click(); await t.waitForTimeout(200); }
+      await t.click('[data-doc="vo_toi"]'); await t.waitForTimeout(500);
+      const r = await t.locator(".torch-stage").boundingBox(); const at = (x, y) => [r.x + (r.width * x) / 100, r.y + (r.height * y) / 100];
+      await t.mouse.move(...at(54, 53)); await t.mouse.down(); await t.mouse.up();
+      for (const y of [60, 75, 95]) await t.mouse.move(...at(30, y), { steps: 3 });
+      await t.click('[data-torch="note"]'); await t.waitForTimeout(300);
+      ok("05 torch: clicking the photo holds the light while the pointer goes to the button", (await t.evaluate((k) => localStorage.getItem(k), key)).includes('"nhan"'));
+      await t.mouse.move(...at(80, 48), { steps: 4 });
+      ok("05 torch: back on the photo, the light follows the mouse again", /Chén trà/.test(await t.textContent(".torch-under")));
+      ok("05 torch: no page errors", terr.length === 0, terr.join("; "));
+      await t.close();
+    }
     // music: plays on the cover and the desk, stops on the case list
     await p.goto(U); await p.waitForTimeout(400); await p.click('[data-cv="go"]').catch(() => {}); await p.waitForTimeout(800);
     if (await p.isVisible("input[data-sign]")) { await p.fill("input[data-sign]", "Thử"); await p.click('[data-dlg="ok"]'); await p.waitForTimeout(400); }
